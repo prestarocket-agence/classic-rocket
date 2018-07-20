@@ -1,0 +1,37 @@
+.account-links{
+  @extend .align-items-stretch;
+  > a{
+    margin-bottom: $spacer;
+  }
+  .link-item{
+    @extend .card;
+    @extend .shadow;
+    padding: $spacer;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    height: 100%;
+    i{
+      margin: 0 auto $spacer;
+      font-size: $font-size-base*3;
+
+    }
+  }
+}
+
+.address{
+  @extend .card;
+}
+.address-header{
+  @extend .card-header;
+  background-color: transparent;
+}
+.address-body{
+  @extend .card-body;
+}
+.address-footer{
+  @extend .card-footer;
+  display: flex;
+  justify-content: space-between;
+
+}

@@ -1,0 +1,21 @@
+
+.col-xs-12{
+  @extend .col-12;
+}
+
+.float-xs-left  { @extend .float-left; }
+.float-xs-right { @extend .float-right; }
+.float-xs-none  { @extend .float-none; }
+
+@each $bp in map-keys($grid-breakpoints) {
+  .hidden-#{$bp}-up {
+    @include media-breakpoint-up($bp) {
+      display: none !important;
+    }
+  }
+  .hidden-#{$bp}-down {
+    @include media-breakpoint-down($bp) {
+      display: none !important;
+    }
+  }
+}

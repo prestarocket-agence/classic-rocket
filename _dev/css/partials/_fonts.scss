@@ -1,0 +1,51 @@
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: $font-size-base*$line-height-base;  /* Preferred icon size */
+  display: inline-block;
+  vertical-align: top;
+  //width: 1em;
+  //height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+//fix height
+.material-icons + span{
+  display: inline-block;
+}
+.small .material-icons,
+.btn-sm .material-icons{
+  font-size: $small-font-size;
+  line-height: $line-height-base;
+}
+.btn-lg .material-icons{
+  font-size: $font-size-lg*$btn-line-height-lg;
+}
+
+.pagination .material-icons{
+  font-size: $font-size-base*$pagination-line-height;
+}
+.material-icons.md-18,
+{ font-size: 18px; line-height: 1}
+.material-icons.md-24,
+{ font-size: 24px; line-height: 1}
+.material-icons.md-36,
+{ font-size: 36px; line-height: 1}
+.material-icons.md-48,
+{ font-size: 48px; line-height: 1}

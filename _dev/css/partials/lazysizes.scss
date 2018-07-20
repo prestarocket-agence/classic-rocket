@@ -1,0 +1,38 @@
+.no-js img.lazyload {
+  display: none;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+
+}
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+//lazysizes with slick slider
+.slick-slide{
+  &.lazyload{
+    display: none!important;
+  }
+  & .lazyload{
+    display: none!important;
+  }
+}
+
+.slick-active,
+//weird bug slick slider don t add slick active sometimes
+.slick-current,
+.slick-current + .slick-slide{
+  &.lazyload{
+    display: block!important;
+  }
+  & .lazyload{
+    display: block!important;
+  }
+}
+
+
+

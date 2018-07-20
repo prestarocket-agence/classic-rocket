@@ -1,0 +1,44 @@
+.slick-arrow {
+    position: absolute;
+    top:0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 2;
+
+    & > i{
+        font-size: 2*$font-size-base;
+        line-height: 1;
+        background: #fff;
+        border-radius: 50%;
+    }
+
+ }
+.slick-prev {
+    left:0;
+}
+.slick-next{
+    right:0;
+}
+.slick-slide figure{
+    margin: 0;
+}
+.slick__arrow-outside {
+    .slick-prev {
+        transform:translateX(-50px);
+    }
+    .slick-next{
+        transform:translateX(50px);
+    }
+}
+.slick__arrow-large{
+    .slick-arrow i{
+        font-size: 3*$font-size-base;
+        text-shadow: 0 1px 2px rgba(0,0,0,.6);
+        background: transparent;
+        color: #fff;
+    }
+}

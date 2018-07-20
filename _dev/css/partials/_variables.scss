@@ -1,0 +1,75 @@
+//
+// Color system
+//
+$white:         #fff;
+$primary:       #2fb5d2;
+$black:         #000;
+$gray-200:      #e9ecef;
+$gray-300 : #f1f1f1;
+$gray-400: #ced4da;
+
+// Options
+$enable-rounded:            false;
+$enable-shadows:            true;
+
+//
+// Links
+//
+// Style anchor elements.
+
+
+$link-hover-decoration:     none;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$headings-font-family:        'Noto Sans',$font-family-sans-serif;
+
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+
+
+$h1-font-size:                $font-size-base * 1.375;
+$h2-font-size:                $font-size-base * 1.25;
+$h3-font-size:                $font-size-base * 1.125;
+$h4-font-size:                $font-size-base * 1.125;
+$h5-font-size:                $font-size-base;
+$h6-font-size:                $font-size-base * 0.9375;
+
+$display1-size: 3.125rem;
+$display1-weight: 600;
+$display2-size: 2.188rem;
+$display2-weight: 400;
+$display3-size: 1.563rem;
+$display3-weight: 400;
+$display4-size: 1.25rem;
+$display4-weight: 400;
+
+$small-font-size:             $font-size-base * 0.875;
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$box-shadow:                  2px 2px 8px 0 rgba($black,.2);
+
+// Navs
+
+$nav-tabs-border-width:             2px;
+$nav-tabs-border-color:             $gray-300 !default;
+$nav-tabs-link-hover-border-color:  transparent transparent $nav-tabs-border-color;
+$nav-tabs-link-active-color:        $primary;
+$nav-tabs-link-active-border-color: transparent transparent $primary;
+// Pagination
+
+$pagination-border-color:           $gray-400;
+$pagination-disabled-border-color:  $gray-400;
+$pagination-hover-border-color:     $gray-400;
+
+// Modals
+$modal-lg:                          990px;
+
+//tables
+$table-bg : $white;
+

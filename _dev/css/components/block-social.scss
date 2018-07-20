@@ -1,0 +1,156 @@
+.social-sharing{
+  @extend .d-flex;
+  @extend .flex-wrap;
+}
+.social-sharing--product{
+  margin: $spacer 0;
+  @extend .align-items-center;
+}
+.modal .social-sharing--product{
+  margin: 0;
+}
+
+.social-share-btn{
+  width: $social-share-size;
+  height: $social-share-size;
+  display: block;
+  margin: 0 $spacer/2;
+  background-color: $social-share-bg-color;
+  background-repeat: no-repeat;
+  background-position: center center;
+  &.facebook {
+    background-image: url(../img/facebook.svg);
+
+  }
+  &.twitter {
+    background-image: url(../img/twitter.svg);
+  }
+  &.googleplus {
+    background-image: url(../img/gplus.svg);
+  }
+  &.pinterest {
+    background-image: url(../img/pinterest.svg);
+  }
+  &.rss {
+    background-image: url(../img/rss.svg);
+  }
+  &.youtube {
+    background-image: url(../img/youtube.svg);
+  }
+  &.vimeo{
+    background-image: url(../img/vimeo.svg);
+
+  }
+  &.instagram{
+    background-image: url(../img/instagram.svg);
+  }
+}
+.social-share-btn--product{
+  background-size:80%;
+  background-color: #fff;
+  @extend .shadow-sm;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease-in-out;
+  &:hover{
+    @extend .shadow;
+
+  }
+
+  &.facebook {
+    background-image: url(../img/facebook-gray.svg);
+    &:hover{
+    background-image: url(../img/facebook-blue.svg);
+    }
+  }
+  &.twitter {
+    background-image: url(../img/twitter-gray.svg);
+    &:hover{
+      background-image: url(../img/twitter-blue.svg);
+    }
+  }
+  &.googleplus {
+    background-image: url(../img/gplus-gray.svg);
+    &:hover{
+      background-image: url(../img/gplus-blue.svg);
+    }
+  }
+  &.pinterest {
+    background-image: url(../img/pinterest-gray.svg);
+    &:hover{
+      background-image: url(../img/pinterest-blue.svg);
+    }
+  }
+
+}
+.social-share-btn--footer {
+  transition: background-color 0.3s ease-in-out;
+  &:hover{
+    background-color: theme-color('primary');
+  }
+}
+//
+//.facebook {
+//    background-image: url(../img/facebook.svg);
+//  &::before{
+//    content:"";
+//    background-image: url(../img/facebook-blue.svg);
+//  }
+//  &.icon-gray {
+//    background-image: url(../img/facebook-gray.svg);
+//    &:hover {
+//      background-image: url(../img/facebook-blue.svg);
+//    }
+//  }
+//}
+//.twitter {
+//  background-image: url(../img/twitter.svg);
+//  &::before{
+//    content:"";
+//    background-image: url(../img/twitter-blue.svg);
+//  }
+//  &.icon-gray {
+//    background-image: url(../img/twitter-gray.svg);
+//    &:hover {
+//      background-image: url(../img/twitter-blue.svg);
+//    }
+//  }
+//}
+//.rss {
+//  background-image: url(../img/rss.svg);
+//}
+//.youtube {
+//  background-image: url(../img/youtube.svg);
+//}
+//.googleplus {
+//  background-image: url(../img/gplus.svg);
+//  //&::before{
+//  //  content:"";
+//  //  background-image: url(../img/gplus-blue.svg);
+//  //}
+//  &.icon-gray {
+//    background-image: url(../img/gplus-gray.svg);
+//    &:hover {
+//      background-image: url(../img/gplus-blue.svg);
+//    }
+//  }
+//}
+//
+//.pinterest {
+//  background-image: url(../img/pinterest.svg);
+//  &::before{
+//    content:"";
+//    background-image: url(../img/pinterest-blue.svg);
+//  }
+//  &.icon-gray {
+//    background-image: url(../img/pinterest-gray.svg);
+//    &:hover {
+//      background-image: url(../img/pinterest-blue.svg);
+//    }
+//  }
+//}
+//.vimeo {
+//  background-image: url(../img/vimeo.svg);
+//}
+//.instagram {
+//  background-image: url(../img/instagram.svg);
+//}

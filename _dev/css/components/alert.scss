@@ -1,0 +1,49 @@
+.ps-alert-error {
+  margin-bottom: 0;
+}
+
+.ps-alert-error,
+.ps-alert-success {
+  .item {
+    align-items: center;
+    border: 2px theme-color('danger') solid;
+    display: flex;
+    background-color: theme-color('danger');
+    margin-bottom: $spacer;
+
+    i {
+      border: 15px theme-color('danger') solid;
+      display: flex;
+
+      svg {
+        background-color: theme-color('danger');
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    p {
+      background-color: $body-bg;
+      margin: 0;
+      padding: $spacer;
+      width: 100%;
+    }
+  }
+}
+
+.ps-alert-success {
+  padding: 0.25rem 0.25rem 2.75rem 0.25rem;
+
+  .item {
+    border-color: theme-color('success');
+    background-color: theme-color('success');
+
+    i {
+      border-color: theme-color('success');
+
+      svg {
+        background-color: theme-color('success');
+      }
+    }
+  }
+}

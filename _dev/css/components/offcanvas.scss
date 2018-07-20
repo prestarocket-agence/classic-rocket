@@ -1,0 +1,43 @@
+.modal.fade .modal-dialog__offcanvas
+{
+  width: 350px;
+  height: 100%;
+  margin: 0;
+  max-width: 90%;
+  position: absolute;
+  top: 0;
+  //left:0;
+  transform: translateX(-100%);
+  transition: transform .3s ease-out;
+}
+.modal.show .modal-dialog__offcanvas
+{
+  transform: translateX(0);
+}
+.modal.fade .modal-dialog__offcanvas.modal-dialog__offcanvas--right
+{
+  right: 0;
+  transform: translateX(100%);
+}
+.modal.show .modal-dialog__offcanvas.modal-dialog__offcanvas--right
+{
+  transform: translateX(0);
+}
+
+.modal-dialog__offcanvas .modal-content
+{
+  height: inherit;
+
+  border-width: 0;
+  border-radius: 0;
+}
+.modal-dialog__offcanvas .modal-header
+{
+  border-radius: inherit;
+}
+.modal-dialog__offcanvas .modal-body
+{
+  overflow-y: auto;
+
+  height: inherit;
+}
