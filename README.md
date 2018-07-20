@@ -110,7 +110,7 @@ Filter
 ```
 
 ## Compatibility
-PrestaShop 1.7.3.3 to 1.7.4.x
+PrestaShop 1.7.3.2 to 1.7.4.x
 
 ## To do (you can help!):
 - test rtl
