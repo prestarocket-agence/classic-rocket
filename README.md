@@ -112,9 +112,14 @@ Filter
 ## Compatibility
 PrestaShop 1.7.3.2 to 1.7.4.x
 
+## Download
+- For PrestaShop 1.7.3.x (version 1.0.0): [classic-rocket](https://github.com/PrestaShop/classic-rocket/releases/download/1.0.0/classic-rocket.zip)
+
+
 ## To do (you can help!):
 - test rtl
 - form validation
+- more BEM
 - add more custom scss variables
 - more data in jsonld
 - PWA
