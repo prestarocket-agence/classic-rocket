@@ -38,7 +38,7 @@ $product-thumb-wrap-height:     $product-thumb-height + $product-thumb-margin * 
 //prices
 $regular-price-font-size:       $font-size-base * .875;
 $regular-price-font-weight:       700;
-$regular-price-color:           $gray-600;
+$regular-price-color:           $gray-700;
 $price-color:                   $black;
 $product-price-discount-color:           $tertiary;
 $product-regular-price-font-size:       $font-size-base * 1.25;
@@ -53,7 +53,7 @@ $social-share-bg-color:         $gray-300;
 
 //main menu
 $menu-topitem-font-size:            $font-size-base;
-$menu-topitem-color:            #7a7a7a;
+$menu-topitem-color:            $gray-800;
 $menu-item-padding:             $spacer/2;
 $menu-item-border-color:        $border-color;
 $menu-sub-mobile-bg-color:      $wrapper-bg;

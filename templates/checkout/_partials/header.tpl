@@ -29,7 +29,7 @@
         <div class="row">
           <div class="col-md-6 d-none d-md-block" id="_desktop_logo">
             <a href="{$urls.base_url}">
-              <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name} {l s='logo' d='Shop.Theme.Global'}">
+              <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name} {l s='logo' d='Shop.Theme.Global'}">
             </a>
           </div>
           <div class="col-md-6 text-right d-none d-md-block">

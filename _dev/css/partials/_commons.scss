@@ -51,6 +51,17 @@ sup{
 .l-header{
   background-color: $header-bg;
   margin-bottom: $spacer;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+}
+@include media-breakpoint-down(sm) {
+  .header__container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .logo{
+    width:100%;
+    max-width: 115px;
+  }
 }
 /* FOOTER */
 .l-footer{
@@ -314,3 +325,4 @@ custom-file-label.selected:after{
 .page-home > *{
   margin-bottom: $spacer * .75;
 }
+

@@ -57,6 +57,27 @@
   top:0;
   margin-bottom: 0;
   z-index: 2;
+  left:-$spacer/4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.page-content--product .product-flags{
+  left:0;
+}
+.product-flag{
+  top:0;
+  margin-top: $spacer/2;
+  padding: $spacer/4;
+  color: #fff;
+  background: theme-color('primary');
+  text-transform: uppercase;
+  font-weight: 600;
+  box-shadow: 2px 2px 4px 0 rgba(0,0,0,.2);
+
+  &.discount-product{
+    background: $tertiary;
+  }
 }
 .color{
   width: 1.25rem;

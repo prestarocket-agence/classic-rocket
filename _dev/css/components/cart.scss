@@ -3,3 +3,10 @@
   background-color: theme-color('primary');
   padding:$spacer/2;
 }
+.blockcart.inactive{
+  color:$gray-600;
+  background-color: $gray-200;
+  .material-icons{
+    color:$gray-600;
+  }
+}

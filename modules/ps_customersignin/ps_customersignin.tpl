@@ -26,7 +26,7 @@
   <div class="user-info">
     {if $logged}
       <a
-        class="logout d-none d-md-inline-block"
+        class="logout d-none d-md-inline-block text-body"
         href="{$logout_url}"
         rel="nofollow"
       >
@@ -34,7 +34,7 @@
         {l s='Sign out' d='Shop.Theme.Actions'}
       </a>
       <a
-        class="account"
+        class="account text-body"
         href="{$my_account_url}"
         title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
         rel="nofollow"
@@ -45,6 +45,7 @@
     {else}
       <a
         href="{$my_account_url}"
+        class="text-body"
         title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
         rel="nofollow"
       >

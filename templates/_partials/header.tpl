@@ -30,7 +30,7 @@
 
 {block name='header_nav'}
   <nav class="header-nav border-bottom">
-    <div class="container">
+    <div class="container header__container">
       <div class="row d-none d-md-flex align-items-center">
         <div class="col-md-4">
             {hook h='displayNav1'}
@@ -40,14 +40,19 @@
         </div>
       </div>
       <div class="d-md-none d-flex justify-content-between align-items-center w-100 mobile no-gutters">
-        <button id="menu-icon" class="btn" data-toggle="modal" data-target="#mobile_top_menu_wrapper">
-          <i class="material-icons d-inline">&#xE5D2;</i>
-        </button>
-        <div class="flex-grow-1 top-logo text-center" id="_mobile_logo"></div>
-        <div class="col d-flex align-items-center justify-content-end right-nav">
+        <div class="col-4">
+          <button id="menu-icon" class="btn" data-toggle="modal" data-target="#mobile_top_menu_wrapper">
+            <i class="material-icons d-inline">&#xE5D2;</i>
+          </button>
+        </div>
+        <div class="col-4">
+          <div class="top-logo text-center" id="_mobile_logo"></div>
+        </div>
+        <div class="col-4 d-flex align-items-center justify-content-end right-nav">
           <div id="_mobile_user_info"></div>
           <div id="_mobile_cart" class="mobile-cart"></div>
         </div>
+
       </div>
     </div>
   </nav>
@@ -61,12 +66,12 @@
           {if $page.page_name == 'index'}
             <h1>
               <a href="{$urls.base_url}">
-                <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
+                <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
               </a>
             </h1>
           {else}
             <a href="{$urls.base_url}">
-              <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
+              <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
             </a>
           {/if}
         </div>
