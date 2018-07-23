@@ -2,7 +2,7 @@
 
 Classic Rocket is a rework of "classic theme". It has been built keeping in  mind : performance, accessibility and SEO.
 
-Made by [Prestarocket](//www.prestarocket.com/blog/) (Twitter: [@prestarocket](https://twitter.com/prestarocket))
+Contributed by [Prestarocket](//www.prestarocket.com/blog/) (Twitter: [@prestarocket](https://twitter.com/prestarocket))
 
 Main features :
 - last version of Twitter Bootstrap
