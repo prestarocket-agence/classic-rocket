@@ -87,6 +87,26 @@ $(document).ready(function () {
       return false;
     });
   }
+    function createProductSpin()
+    {
+        const $quantityInput = $('#quantity_wanted');
+
+        $quantityInput.TouchSpin({
+            buttondown_class: 'btn js-touchspin',
+            buttonup_class: 'btn js-touchspin',
+            min: parseInt($quantityInput.attr('min'), 10),
+            max: 1000000
+        });
+
+        $('body').on('change keyup', '#quantity_wanted', (e) => {
+            $(e.currentTarget).trigger('touchspin.stopspin');
+            prestashop.emit('updateProduct', {
+                eventType: 'updatedProductQuantity',
+                event: e
+            });
+        });
+
+    }
 
 });
 
