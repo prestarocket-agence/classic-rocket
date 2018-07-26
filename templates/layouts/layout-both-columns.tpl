@@ -51,8 +51,8 @@
       {block name='notifications'}
         {include file='_partials/notifications.tpl'}
       {/block}
-
-      <section id="wrapper" class="{block name='layoutWrapperClass'}l-wrapper{/block}">
+        {block name='wrapper'}
+        <section id="wrapper" class="{block name='layoutWrapperClass'}l-wrapper{/block}">
         {hook h="displayWrapperTop"}
           {block name='breadcrumb'}
             {include file='_partials/breadcrumb.tpl'}
@@ -90,6 +90,7 @@
         </div>
         {hook h="displayWrapperBottom"}
       </section>
+        {/block}
 
       <footer id="footer" class="l-footer">
         {block name="footer"}
