@@ -150,10 +150,13 @@ h1,.h1{
   padding-top: 75%;
 }
 .ratio16_9{
-  padding-top: 56.25%;
+  padding-top: percentage(9/16);
 }
 .ratio1_1{
   padding-top: 100%;
+}
+.ratio3_2{
+  padding-top: percentage(1-2/3);
 }
 
 /* collapse icons */
