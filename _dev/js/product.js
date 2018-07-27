@@ -63,30 +63,6 @@ $(document).ready(function () {
     });
   }
 
-  function createProductSpin()
-  {
-    let quantityInput = $('#quantity_wanted');
-    quantityInput.TouchSpin({
-      buttondown_class: 'btn js-touchspin',
-      buttonup_class: 'btn js-touchspin',
-      min: parseInt(quantityInput.attr('min'), 10),
-      max: 1000000
-    });
-
-    var quantity = quantityInput.val();
-    quantityInput.on('keyup change', function (event) {
-      const newQuantity = $(this).val();
-      if (newQuantity !== quantity) {
-        quantity = newQuantity;
-        let $productRefresh = $('.product-refresh');
-        $(event.currentTarget).trigger('touchspin.stopspin');
-        $productRefresh.trigger('click', {eventType: 'updatedProductQuantity'});
-      }
-      event.preventDefault();
-
-      return false;
-    });
-  }
     function createProductSpin()
     {
         const $quantityInput = $('#quantity_wanted');
