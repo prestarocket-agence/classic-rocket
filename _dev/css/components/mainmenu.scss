@@ -1,12 +1,9 @@
-
 .header-top{
   position: relative;
-
 }
 .menu-top{
   @extend .d-flex;
   margin: 0;
-
 }
 .menu__item-link--top{
   color: $menu-topitem-color;
@@ -14,45 +11,45 @@
   text-transform: uppercase;
   display: block;
   padding: $spacer/2;
-
 }
 
 @include media-breakpoint-up(md) {
-    .menu-sub{
-      position: absolute;
-      opacity: 0;
-      width: 100%;
-      left: 0;
-      top: 70px;
-      z-index: -1;
-      transition: all .5s ease;
+  .menu__item-header {
+    height: 100%;
+  }
+  .menu-sub {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    left: 0;
+    top: 60px;
+    z-index: -1;
+    transition: all .5s ease;
+  }
+  .menu-sub__content > ul {
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: $box-shadow;
+  }
+  .menu__item--active .menu-sub {
+    z-index: 2;
+    opacity: 1;
+  }
+  .menu-sub__list--1 {
+    display: flex;
+  }
+  .menu__item--1 {
+    padding-right: 10px;
+    padding-left: 10px;
 
+  }
+  .menu__item-link--1 {
+    text-transform: uppercase;
+    color: $black;
+    .menu__item-link {
+      color: $body-color;
     }
-    .menu-sub__content{
-      padding: 10px;
-      background-color: #fff;
-      box-shadow:$box-shadow;
-    }
-    .menu__item--active .menu-sub {
-      z-index: 2;
-      opacity: 1;
-    }
-    .menu-sub__list--1{
-      display: flex;
-    }
-    .menu__item--1{
-      padding-right: 10px;
-      padding-left: 10px;
-
-    }
-    .menu__item-link--1{
-      text-transform: uppercase;
-      color:$black;
-      .menu__item-link{
-        color: $body-color  ;
-      }
-    }
-
+  }
 }
 
 //mobile
@@ -92,7 +89,6 @@
     display: flex;
     justify-content: space-between;
     padding: $menu-item-padding;
-
   }
   .menu__item-link--nosubmenu{
     padding: $menu-item-padding;
@@ -121,8 +117,17 @@
       margin-left: 30px;
     }
   }
+}
 
-
+#mobile_top_menu_wrapper{
+  &.modal{
+    .modal-header{
+      border-bottom:0;
+    }
+    .modal-body{
+      padding-top:0;
+    }
+  }
 }
 
 .menu__collapseicon{
