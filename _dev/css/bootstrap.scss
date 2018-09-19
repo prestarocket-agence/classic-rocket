@@ -60,14 +60,6 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 //@import "~bootstrap/scss/carousel";
 $theme-colors: (
         "primary":    $primary,
-        "light":      $light,
-        "dark":       $dark,
-        "success":    $success
-);
-@import "~bootstrap/scss/utilities";
-@import "~bootstrap/scss/print";
-$theme-colors: (
-        "primary":    $primary,
         "secondary":  $secondary,
         "success":    $success,
         "info":       $info,
@@ -76,4 +68,7 @@ $theme-colors: (
         "light":      $light,
         "dark":       $dark
 );
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/print";
+
 

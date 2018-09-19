@@ -52,6 +52,7 @@
                     <label class="custom-file-label" for="field-{$field.id_customization_field}">{l s='Choose file' d='Shop.Theme.Actions'}</label>
                   </div>
                   <small class="form-text text-muted">{l s='.png .jpg .gif' d='Shop.Forms.Help'}</small>
+            </div>
                 {/if}
             {/foreach}
             <button class="btn btn-primary float-right" type="submit" name="submitCustomizedData">{l s='Save Customization' d='Shop.Theme.Actions'}</button>
