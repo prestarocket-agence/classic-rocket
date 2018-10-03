@@ -22,15 +22,14 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-{extends file=$layout}
+
 
 {block name='content'}
 
   <section id="main">
     <div class="cart-grid row">
-
       <!-- Left Block: cart product informations & shpping -->
-      <div class="cart-grid-body col-12 col-lg-8">
+      <div class="cart-grid-body col-12">
 
         <!-- cart products detailed -->
         <div class="card cart-container shadow mb-3">
@@ -53,36 +52,30 @@
           {hook h='displayShoppingCartFooter'}
         {/block}
       </div>
-
+    </div>
       <!-- Right Block: cart subtotal & cart total -->
-      <div class="cart-grid-right col-12 col-lg-4 mt-3 mt-lg-0">
+    <div class="cart-grid row">
+        <div class="cart-grid-body col-12">
 
-        {block name='cart_summary'}
-          <div class="card cart-summary shadow mb-5">
-            <div class="card-body">
-            {block name='hook_shopping_cart'}
-              {hook h='displayShoppingCart'}
-            {/block}
+          {block name='cart_summary'}
+            <div class="card cart-summary shadow mb-5">
+              <div class="card-body">
+              {block name='hook_shopping_cart'}
+                {hook h='displayShoppingCart'}
+              {/block}
 
-            {block name='cart_totals'}
-              {include file='checkout/_partials/cart-detailed-totals.tpl' cart=$cart}
-            {/block}
+              {block name='cart_totals'}
+                {include file='checkout/_partials/cart-detailed-totals.tpl' cart=$cart}
+              {/block}
+              </div>
             </div>
-            <div class="card-footer">
-            {block name='cart_actions'}
-              {include file='checkout/_partials/cart-detailed-actions.tpl' cart=$cart}
-            {/block}
-            </div>
+          {/block}
 
-          </div>
-        {/block}
-
-        {block name='hook_reassurance'}
-          {hook h='displayReassurance'}
-        {/block}
+          {block name='hook_reassurance'}
+            {hook h='displayReassurance'}
+          {/block} 
 
       </div>
-
     </div>
   </section>
 {/block}

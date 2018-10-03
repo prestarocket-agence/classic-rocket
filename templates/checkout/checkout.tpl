@@ -53,18 +53,14 @@
       {block name='content'}
         <section id="content">
           <div class="row">
-            <div id="js-checkout-process" class="col-md-8 accordion mb-4">
+            <div id="js-checkout-process" class=" ">
+              {block name='cart_overview'}
+                 {include file='checkout/cart.tpl' cart=$cart}
+              {/block}
+              
               {block name='cart_summary'}
                 {render file='checkout/checkout-process.tpl' ui=$checkout_process}
               {/block}
-            </div>
-            <div class="col-md-4 order-checkout">
-
-              {block name='cart_summary'}
-                {include file='checkout/_partials/cart-summary.tpl' cart = $cart}
-              {/block}
-
-              {hook h='displayReassurance'}
             </div>
           </div>
         </section>
