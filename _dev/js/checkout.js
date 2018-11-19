@@ -80,7 +80,7 @@ $(document).on('change','.js-input-delivery:checked', (event) => {
 });
 
 $(document).on('click','.js-checkout-step-header', (event) => {
-    let stepIdentifier = $(this).data('identifier');
+    let stepIdentifier = $(event.currentTarget).data('identifier');
     $('#'+stepIdentifier).addClass('-current');
     $('#content-'+stepIdentifier).collapse('show').scrollTop();
 });
