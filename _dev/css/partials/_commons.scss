@@ -328,3 +328,18 @@ custom-file-label.selected:after{
   margin-bottom: $spacer * .75;
 }
 
+@include media-breakpoint-down(sm) {
+  .modal-footer{
+    flex-direction: column;
+    flex-direction:column-reverse;
+    & > .btn{
+      margin: 0;
+      width : 100%
+    }
+    & .btn:not(:last-child){
+      margin-top: $spacer/2;
+    }
+
+  }
+}
+
