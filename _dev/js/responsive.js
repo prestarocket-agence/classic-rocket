@@ -51,7 +51,6 @@ function toggleMobileStyles()
 
     } else {
 		$("*[id^='_mobile_']").each(function(idx, el) {
-			console.log(el);
 			var target = $('#' + el.id.replace('_mobile_', '_desktop_'));
 			if (target.length) {
 				swapChildren($(el), target);
