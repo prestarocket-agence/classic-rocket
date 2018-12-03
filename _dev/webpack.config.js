@@ -26,7 +26,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const autoprefixer = require('autoprefixer');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
@@ -125,26 +125,27 @@ module.exports = (env, argv) => {
     },
     optimization: {
       minimizer: [
-        new UglifyJSPlugin({
+        new TerserPlugin({
           parallel: true,
           test: /\.js($|\?)/i,
           sourceMap: IS_DEV,
-          uglifyOptions: {
+          terserOptions: {
             compress: {
-              sequences: IS_PROD,
-              conditionals: IS_PROD,
               booleans: IS_PROD,
+              conditionals: IS_PROD,
+              drop_console: IS_PROD,
+              drop_debugger: IS_PROD,
               if_return: IS_PROD,
               join_vars: IS_PROD,
-              drop_console: IS_PROD,
               keep_classnames: IS_DEV,
               keep_fnames: IS_DEV,
+              reduce_vars: IS_PROD,
+              sequences: IS_PROD,
               warnings: IS_DEV
             },
             output: {
               comments: IS_DEV
-            },
-            minimize: IS_PROD
+            }
           }
         }),
         new OptimizeCSSAssetsPlugin({})
