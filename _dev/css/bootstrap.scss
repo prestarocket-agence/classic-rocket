@@ -54,6 +54,7 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 @import "~bootstrap/scss/media";
 @import "~bootstrap/scss/list-group";
 @import "~bootstrap/scss/close";
+@import "~bootstrap/scss/toasts";
 @import "~bootstrap/scss/modal";
 @import "~bootstrap/scss/tooltip";
 @import "~bootstrap/scss/popover";
@@ -68,6 +69,7 @@ $theme-colors: (
         "light":      $light,
         "dark":       $dark
 );
+@import "~bootstrap/scss/spinners";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/print";
 
