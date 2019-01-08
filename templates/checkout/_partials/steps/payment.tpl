@@ -100,7 +100,7 @@
                     value = "1"
                     class = "ps-shown-by-js custom-control-input"
             >
-            <label class="custom-control-label" for="conditions_to_approve[{$condition_name}]">{$condition nofilter}</label>
+            <label class="custom-control-label js-terms" for="conditions_to_approve[{$condition_name}]">{$condition nofilter}</label>
           </div>
         {/foreach}
     </form>
