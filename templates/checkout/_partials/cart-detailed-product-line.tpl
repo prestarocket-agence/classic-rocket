@@ -68,7 +68,7 @@
       </div>
     {/foreach}
 
-    {if $product.customizations|count}
+    {if is_array($product.customizations) && $product.customizations|count}
       {block name='cart_detailed_product_line_customization'}
         {foreach from=$product.customizations item="customization"}
           <a href="#" data-toggle="modal" data-target="#product-customizations-modal-{$customization.id_customization}">{l s='Product customization' d='Shop.Theme.Catalog'}</a>

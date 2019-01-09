@@ -28,7 +28,7 @@
   <section id="main">
 
     {block name='product_list_header'}
-      <h2 class="h2">{$listing.label}</h2>
+      <h1 id="js-product-list-header">{$listing.label}</h1>
     {/block}
 
     <section id="products">

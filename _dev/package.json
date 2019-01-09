@@ -4,8 +4,8 @@
   "description": "Tools to help while developing the Classic theme",
   "main": "index.js",
   "scripts": {
-    "watch": "webpack -w",
-    "build": "webpack"
+    "build": "NODE_ENV=production webpack --progress --colors --debug --display-chunks",
+    "watch": "webpack --progress --colors --debug --display-chunks --watch"
   },
   "author": "Prestarocket",
   "license": "AFL-3.0",
