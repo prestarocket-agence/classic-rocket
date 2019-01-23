@@ -66,12 +66,12 @@
                 -
               {/if}
             </td>
-            <td class="text-sm-center order-actions">
-              <a href="{$order.details.details_url}" data-link-action="view-order-details">
+            <td class="order-actions">
+              <a class="btn btn-sm btn-block btn-outline-primary" href="{$order.details.details_url}" data-link-action="view-order-details">
                 {l s='Details' d='Shop.Theme.Customeraccount'}
               </a>
               {if $order.details.reorder_url}
-                <a href="{$order.details.reorder_url}">{l s='Reorder' d='Shop.Theme.Actions'}</a>
+                <a class="btn btn-sm btn-block btn-outline-primary" href="{$order.details.reorder_url}">{l s='Reorder' d='Shop.Theme.Actions'}</a>
               {/if}
             </td>
           </tr>
@@ -98,13 +98,13 @@
             </div>
             <div class="col-2 text-right">
                 <div>
-                  <a href="{$order.details.details_url}" data-link-action="view-order-details" title="{l s='Details' d='Shop.Theme.Customeraccount'}">
+                  <a class="btn btn-outline-primary" href="{$order.details.details_url}" data-link-action="view-order-details" title="{l s='Details' d='Shop.Theme.Customeraccount'}">
                     <i class="material-icons">&#xE8B6;</i>
                   </a>
                 </div>
                 {if $order.details.reorder_url}
                   <div>
-                    <a href="{$order.details.reorder_url}" title="{l s='Reorder' d='Shop.Theme.Actions'}">
+                    <a class="btn btn-outline-primary" href="{$order.details.reorder_url}" title="{l s='Reorder' d='Shop.Theme.Actions'}">
                       <i class="material-icons">&#xE863;</i>
                     </a>
                   </div>
