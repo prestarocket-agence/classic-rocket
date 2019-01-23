@@ -113,7 +113,7 @@ Filter
 PrestaShop 1.7.3.2 to 1.7.4.x
 
 ## Download
-- For PrestaShop 1.7.3.x (version 1.0.0): [classic-rocket](https://github.com/PrestaShop/classic-rocket/releases/download/1.0.0/classic-rocket.zip)
+- For PrestaShop 1.7.4.x (version 2.0.5): [classic-rocket](https://github.com/PrestaShop/classic-rocket/releases/download/2.0.5/classic-rocket.zip)
 
 
 ## To do (you can help!):
