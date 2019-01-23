@@ -23,13 +23,17 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='order_products_table'}
-  <form id="order-return-form" action="{$urls.pages.order_follow}" method="post">
+  <form class="w-100 mw-100 needs-validation" id="order-return-form" action="{$urls.pages.order_follow}" method="post" novalidate autocomplete="false">
 
     <div class="box d-none d-md-block">
       <table id="order-products" class="table table-bordered return">
         <thead class="thead-default">
           <tr>
-            <th class="head-checkbox"><input type="checkbox"/></th>
+            <th class="head-checkbox">
+              <div class="custom-control custom-checkbox">
+                <input class="custom-control-input" type="checkbox" id="cb_check_all">
+                <label class="custom-control-label" for="cb_check_all"></label>
+              </div></th>
             <th>{l s='Product' d='Shop.Theme.Catalog'}</th>
             <th>{l s='Quantity' d='Shop.Theme.Catalog'}</th>
             <th>{l s='Returned' d='Shop.Theme.Customeraccount'}</th>
@@ -42,13 +46,19 @@
             <td>
               {if !$product.customizations}
                 <span id="_desktop_product_line_{$product.id_order_detail}">
-                <input type="checkbox" id="cb_{$product.id_order_detail}" name="ids_order_detail[{$product.id_order_detail}]" value="{$product.id_order_detail}">
-              </span>
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="cb_{$product.id_order_detail}" name="ids_order_detail[{$product.id_order_detail}]" value="{$product.id_order_detail}">
+                    <label class="custom-control-label" for="cb_{$product.id_order_detail}"></label>
+                  </div>
+                </span>
               {else}
                 {foreach $product.customizations  as $customization}
                   <span id="_desktop_product_customization_line_{$product.id_order_detail}_{$customization.id_customization}">
-                  <input type="checkbox" id="cb_{$product.id_order_detail}" name="customization_ids[{$product.id_order_detail}][]" value="{$customization.id_customization}">
-                </span>
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" type="checkbox" id="cb_{$product.id_order_detail}" name="customization_ids[{$product.id_order_detail}][]" value="{$customization.id_customization}">
+                  <label class="custom-control-label" for="cb_{$product.id_order_detail}"></label>
+              </div>
+                  </span>
                 {/foreach}
               {/if}
             </td>
@@ -106,7 +116,7 @@
                 </div>
                 {if $product.quantity > $product.qty_returned}
                   <div class="select" id="_desktop_return_qty_{$product.id_order_detail}">
-                    <select name="order_qte_input[{$product.id_order_detail}]" class="form-control form-control-select">
+                    <select name="order_qte_input[{$product.id_order_detail}]" class="custom-select">
                       {section name=quantity start=1 loop=$product.quantity+1-$product.qty_returned}
                         <option value="{$smarty.section.quantity.index}">{$smarty.section.quantity.index}</option>
                       {/section}
@@ -157,7 +167,7 @@
     <div class="order-items d-md-none box">
       {foreach from=$order.products item=product}
         <div class="order-item">
-          <div class="row">
+          <div class="">
             <div class="checkbox">
               {if !$product.customizations}
                 <span id="_mobile_product_line_{$product.id_order_detail}"></span>
@@ -170,7 +180,7 @@
             <div class="content">
               <div class="row">
                 <div class="col-sm-5 desc">
-                  <div class="name">{$product.name}</div>
+                  <div class="name"><label for="cb_{$product.id_order_detail}">{$product.name}</label></div>
                   {if $product.reference}
                     <div class="ref">{l s='Reference' d='Shop.Theme.Catalog'}: {$product.reference}</div>
                   {/if}
@@ -238,7 +248,8 @@
       </header>
       <section class="form-fields">
         <div class="form-group">
-          <textarea cols="67" rows="3" name="returnText" class="form-control"></textarea>
+          <textarea cols="67" rows="3" name="returnText" class="form-control" required></textarea>
+          <div class="invalid-feedback js-invalid-feedback-browser"></div>
         </div>
       </section>
       <footer class="form-footer">

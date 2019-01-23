@@ -4,18 +4,20 @@
 @import "partials/fonts";
 @import "partials/commons";
 @import "partials/lazysizes";
+
 @import "components/alert";
+@import "components/block-social";
 @import "components/cart";
+@import "components/categories";
+@import "components/customer";
+@import "components/footer";
+@import "components/imageslider";
+@import "components/mainmenu";
+@import "components/offcanvas";
+@import "components/products";
 @import "components/slick";
 @import "components/slick-theme";
-@import "components/customer";
-@import "components/imageslider";
-@import "components/products";
-@import "components/categories";
 @import "components/utilities";
-@import "components/offcanvas";
-@import "components/footer";
-@import "components/block-social";
-@import "components/mainmenu";
+
 @import "partials/bs_alpha";
 

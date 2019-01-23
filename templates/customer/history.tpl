@@ -32,7 +32,7 @@
   <h6>{l s='Here are the orders you\'ve placed since your account was created.' d='Shop.Theme.Customeraccount'}</h6>
 
   {if $orders}
-    <table class="table table-striped table-bordered table-labeled d-none d-md-table">
+    <table class="table table-striped table-bordered d-none d-md-table">
       <thead class="thead-default">
         <tr>
           <th>{l s='Order reference' d='Shop.Theme.Checkout'}</th>
@@ -53,7 +53,7 @@
             <td class="d-none d-none d-lg-table-cell">{$order.details.payment}</td>
             <td>
               <span
-                class="label label-pill {$order.history.current.contrast}"
+                class="badge badge-pill {$order.history.current.contrast}"
                 style="background-color:{$order.history.current.color}"
               >
                 {$order.history.current.ostate_name}
