@@ -33,7 +33,7 @@
     <div id="order-infos">
       <div class="box">
           <div class="row">
-            <div class="col-{if $order.details.reorder_url}9{else}12{/if}">
+            <div class="col-md-{if $order.details.reorder_url}9{else}12{/if}">
               <strong>
                 {l
                   s='Order Reference %reference% - placed on %date%'
@@ -43,14 +43,13 @@
               </strong>
             </div>
             {if $order.details.reorder_url}
-              <div class="col-3 text-right">
-                <a href="{$order.details.reorder_url}" class="button-primary">{l s='Reorder' d='Shop.Theme.Actions'}</a>
+              <div class="col-md-3 text-md-right">
+                <a href="{$order.details.reorder_url}" class="btn btn-outline-primary">{l s='Reorder' d='Shop.Theme.Actions'}</a>
               </div>
             {/if}
-            <div class="clearfix"></div>
           </div>
       </div>
-
+      <hr>
       <div class="box">
           <ul>
             <li><strong>{l s='Carrier' d='Shop.Theme.Checkout'}</strong> {$order.carrier.name}</li>
@@ -78,11 +77,11 @@
       </div>
     </div>
   {/block}
-
+  <hr>
   {block name='order_history'}
     <section id="order-history" class="box">
-      <h3>{l s='Follow your order\'s status step-by-step' d='Shop.Theme.Customeraccount'}</h3>
-      <table class="table table-striped table-bordered table-labed-none d-sm-table">
+      <h3><strong>{l s='Follow your order\'s status step-by-step' d='Shop.Theme.Customeraccount'}</strong></h3>
+      <table class="table table-striped table-bordered d-none d-sm-table">
         <thead class="thead-default">
           <tr>
             <th>{l s='Date' d='Shop.Theme.Global'}</th>
@@ -94,7 +93,7 @@
             <tr>
               <td>{$state.history_date}</td>
               <td>
-                <span class="label label-pill {$state.contrast}" style="background-color:{$state.color}">
+                <span class="badge badge-pill {$state.contrast}" style="background-color:{$state.color}">
                   {$state.ostate_name}
                 </span>
               </td>
@@ -107,7 +106,7 @@
           <div class="history-line">
             <div class="date">{$state.history_date}</div>
             <div class="state">
-              <span class="label label-pill {$state.contrast}" style="background-color:{$state.color}">
+              <span class="badge badge-pill {$state.contrast}" style="background-color:{$state.color}">
                 {$state.ostate_name}
               </span>
             </div>
@@ -123,28 +122,27 @@
       <a href="{$order.follow_up}">{$order.follow_up}</a>
     </div>
   {/if}
-
+  <hr>
   {block name='addresses'}
-    <div class="addresses">
+    <div class="addresses row">
       {if $order.addresses.delivery}
-        <div class="col-lg-6 col-md-6 col-sm-6">
-          <article id="delivery-address" class="box">
-            <h4>{l s='Delivery address %alias%' d='Shop.Theme.Checkout' sprintf=['%alias%' => $order.addresses.delivery.alias]}</h4>
-            <address>{$order.addresses.delivery.formatted nofilter}</address>
+        <div class="col-md-6 col-xl-4 mb-3 mb-md-0">
+          <article id="delivery-address" class="address">
+            <p class="address-header"><strong>{l s='Delivery address %alias%' d='Shop.Theme.Checkout' sprintf=['%alias%' => $order.addresses.delivery.alias]}</strong></p>
+            <address class="address-body">{$order.addresses.delivery.formatted nofilter}</address>
           </article>
         </div>
       {/if}
 
-      <div class="col-lg-6 col-md-6 col-sm-6">
-        <article id="invoice-address" class="box">
-          <h4>{l s='Invoice address %alias%' d='Shop.Theme.Checkout' sprintf=['%alias%' => $order.addresses.invoice.alias]}</h4>
-          <address>{$order.addresses.invoice.formatted nofilter}</address>
+      <div class="col-md-6 col-xl-4">
+        <article id="invoice-address" class="address">
+          <p class="address-header"><strong>{l s='Invoice address %alias%' d='Shop.Theme.Checkout' sprintf=['%alias%' => $order.addresses.invoice.alias]}</strong></p>
+          <address class="address-body">{$order.addresses.invoice.formatted nofilter}</address>
         </article>
       </div>
-      <div class="clearfix"></div>
     </div>
   {/block}
-
+  <hr>
   {$HOOK_DISPLAYORDERDETAIL nofilter}
 
   {block name='order_detail'}
@@ -154,11 +152,11 @@
       {include file='customer/_partials/order-detail-no-return.tpl'}
     {/if}
   {/block}
-
+  <hr>
   {block name='order_carriers'}
     {if $order.shipping}
       <div class="box">
-        <table class="table table-striped d-none d-md-table">
+        <table class="table table-bordered table-striped d-none d-md-table">
           <thead class="thead-default">
             <tr>
               <th>{l s='Date' d='Shop.Theme.Global'}</th>
@@ -206,7 +204,7 @@
       </div>
     {/if}
   {/block}
-
+  <hr>
   {block name='order_messages'}
     {include file='customer/_partials/order-messages.tpl'}
   {/block}

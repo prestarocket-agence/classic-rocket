@@ -29,7 +29,7 @@
 {/block}
 
 {block name='page_content'}
-    <form action="{$urls.pages.password}" method="post">
+    <form action="{$urls.pages.password}" method="post" class="needs-validation" novalidate autocomplete="false">
     <ul class="ps-alert-error">
       {foreach $errors as $error}
         <li class="item">
@@ -44,40 +44,36 @@
     </ul>
       <section class="form-fields renew-password">
 
-        <div class="email">
+        <div class="email form-group">
           {l
             s='Email address: %email%'
             d='Shop.Theme.Customeraccount'
             sprintf=['%email%' => $customer_email|stripslashes]}
         </div>
 
-        <div class="container-fluid">
-          <div class="row form-group">
-            <label class="form-control-label col-md-3 offset-md-2">{l s='New password' d='Shop.Forms.Labels'}</label>
-            <div class="col-md-4">
-              <input class="form-control" type="password" data-validate="isPasswd" name="passwd" value="">
-            </div>
+          <div class="form-group">
+            <label for="new_password">{l s='New password' d='Shop.Forms.Labels'}</label>
+              <input id="new_password" class="form-control" type="password" data-validate="isPasswd" name="passwd" value="" required pattern=".{literal}{{/literal}5,{literal}}{/literal}">
+            <small class="form-text text-muted">{l s='Your password must be at least %min% characters long.' d='Shop.Forms.Help' sprintf=['%min%' => 5]}</small>
+            <div class="invalid-feedback js-invalid-feedback-browser"></div>
+
+
           </div>
 
-          <div class="row form-group">
-            <label class="form-control-label col-md-3 offset-md-2">{l s='Confirmation' d='Shop.Forms.Labels'}</label>
-            <div class="col-md-4">
-              <input class="form-control" type="password" data-validate="isPasswd" name="confirmation" value="">
-            </div>
+          <div class="form-group">
+            <label for="new_password_validation">{l s='Confirmation' d='Shop.Forms.Labels'}</label>
+              <input id="new_password_validation" class="form-control" type="password" data-validate="isPasswd" name="confirmation" value="" required pattern=".{literal}{{/literal}5,{literal}}{/literal}">
+            <small class="form-text text-muted">{l s='Your password must be at least %min% characters long.' d='Shop.Forms.Help' sprintf=['%min%' => 5]}</small>
+            <div class="invalid-feedback js-invalid-feedback-browser"></div>
           </div>
 
           <input type="hidden" name="token" id="token" value="{$customer_token}">
           <input type="hidden" name="id_customer" id="id_customer" value="{$id_customer}">
           <input type="hidden" name="reset_token" id="reset_token" value="{$reset_token}">
 
-          <div class="row form-group">
-            <div class="offset-md-5">
-              <button class="btn btn-primary" type="submit" name="submit">
-                {l s='Change Password' d='Shop.Theme.Actions'}
-              </button>
-            </div>
-          </div>
-        </div>
+          <button class="btn btn-primary" type="submit" name="submit">
+            {l s='Change Password' d='Shop.Theme.Actions'}
+          </button>
 
       </section>
     </form>

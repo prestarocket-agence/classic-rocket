@@ -25,7 +25,7 @@
 
 <div id="gdpr_consent" class="gdpr_module_{$psgdpr_id_module|escape:'htmlall':'UTF-8'}">
     <div class="custom-control custom-checkbox">
-        <input class="custom-control-input" id="psgdpr_consent_checkbox_{$psgdpr_id_module|escape:'htmlall':'UTF-8'}" name="psgdpr_consent_checkbox" type="checkbox" value="1">
+        <input class="custom-control-input" id="psgdpr_consent_checkbox_{$psgdpr_id_module|escape:'htmlall':'UTF-8'}" name="psgdpr_consent_checkbox" type="checkbox" value="1" required>
         <label class="custom-control-label" for="psgdpr_consent_checkbox_{$psgdpr_id_module|escape:'htmlall':'UTF-8'}">{$psgdpr_consent_message nofilter}</label>
     </div>
 </div>

@@ -27,7 +27,7 @@
     {include file='_partials/form-errors.tpl' errors=$errors['']}
   {/block}
 
-<form action="{block name='customer_form_actionurl'}{$action}{/block}" id="customer-form" class="js-customer-form" method="post">
+<form action="{block name='customer_form_actionurl'}{$action}{/block}" id="customer-form" class="js-customer-form needs-validation" method="post" novalidate autocomplete="false">
   <section>
     {block "form_fields"}
       {foreach from=$formFields item="field"}
@@ -43,7 +43,7 @@
     <footer class="form-footer clearfix">
       <input type="hidden" name="submitCreate" value="1">
       {block "form_buttons"}
-        <button class="btn btn-primary form-control-submit float-right" data-link-action="save-customer" type="submit">
+        <button class="btn btn-primary form-control-submit" data-link-action="save-customer" type="submit">
           {l s='Save' d='Shop.Theme.Actions'}
         </button>
       {/block}

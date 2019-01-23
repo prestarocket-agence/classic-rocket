@@ -30,14 +30,13 @@
        <div class="rc">
            {if $product.cover}
 
-           <img class="img-fluid lazyload"
-            data-sizes="auto"
-         data-srcset="{$product.cover.bySize.medium_default.url} 452w,
+           <img class="img-fluid"
+         srcset="{$product.cover.bySize.medium_default.url} 452w,
            {$product.cover.bySize.pdt_180.url} 180w,
            {$product.cover.bySize.pdt_300.url} 300w,
            {$product.cover.bySize.pdt_360.url} 360w,
            {$product.cover.bySize.pdt_540.url} 540w"
-         data-src="{$product.cover.bySize.medium_default.url}"
+         src="{$product.cover.bySize.medium_default.url}"
          alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">
            {elseif isset($urls.no_picture_image)}
            <img class="img-fluid" src="{$urls.no_picture_image.bySize.large_default.url}">
@@ -53,24 +52,24 @@
        </div>
    </div>
 
-      {foreach from=$product.images item=image}
+      {foreach from=$product.images item=image name="images"}
           {if $image.id_image != $product.cover.id_image}
 
       <div class="product-img">
           <div class="rc">
-          <img
-                    class="img-fluid lazyload"
-                    data-sizes="auto"
-                    data-srcset="{$image.bySize.medium_default.url} 452w,
+              <img
+                      class="img-fluid lazyload"
+                      {if !$smarty.foreach.images.first && !$product.cover}data-sizes="auto"{/if}
+                      {if !$smarty.foreach.images.first && !$product.cover}data-{/if}srcset="{$image.bySize.medium_default.url} 452w,
                    {$image.bySize.pdt_180.url} 180w,
                    {$image.bySize.pdt_300.url} 300w,
                    {$image.bySize.pdt_360.url} 360w,
                    {$image.bySize.pdt_540.url} 540w"
-                    data-src="{$image.bySize.medium_default.url}"
-                    alt="{$image.legend}"
-                    title="{$image.legend}"
-                    itemprop="image"
-            >
+                      {if !$smarty.foreach.images.first && !$product.cover}data-{/if}src="{$image.bySize.medium_default.url}"
+                      alt="{$image.legend}"
+                      title="{$image.legend}"
+                      itemprop="image"
+              >
               <noscript>
                   <img src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" itemprop="image">
               </noscript>
