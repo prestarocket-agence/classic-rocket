@@ -37,7 +37,7 @@
 
 {block name='page_content' append}
   {block name='guest_to_customer'}
-    <form action="{$urls.pages.guest_tracking}" method="post">
+    <form class="needs-validation" action="{$urls.pages.guest_tracking}" method="post" autocomplete="false" novalidate>
       <header>
         <h1 class="h3">{l s='Transform your guest account into a customer account and enjoy:' d='Shop.Theme.Customeraccount'}</h1>
         <ul>
@@ -48,11 +48,13 @@
       </header>
 
       <section class="form-fields">
+        <div class="form-group">
+        <label for="password">{l s='Set your password:' d='Shop.Forms.Labels'}</label>
+          <input id="password" class="form-control" type="password" data-validate="isPasswd" name="password" value="" pattern=".{literal}{{/literal}5,{literal}}{/literal}" required>
+          <small class="form-text text-muted">{l s='Your password must be at least %min% characters long.' d='Shop.Forms.Help' sprintf=['%min%' => 5]}</small>
+          <div class="invalid-feedback js-invalid-feedback-browser"></div>
+        </div>
 
-        <label>
-          <span>{l s='Set your password:' d='Shop.Forms.Labels'}</span>
-          <input type="password" data-validate="isPasswd" name="password" value="">
-        </label>
 
       </section>
 
