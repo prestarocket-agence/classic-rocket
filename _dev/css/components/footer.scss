@@ -1,0 +1,18 @@
+.l-footer {
+  color: $text-muted;
+
+  .title{
+    color:$black;
+    text-transform: uppercase;
+    display: block;
+    @extend .h3;
+  }
+  .cms-page-link,
+  .account-list a{
+    color: $text-muted;
+    &:hover{
+      color: theme-color('primary');
+
+    }
+  }
+}
