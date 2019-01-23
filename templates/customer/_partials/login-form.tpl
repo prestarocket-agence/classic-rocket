@@ -28,7 +28,7 @@
     {include file='_partials/form-errors.tpl' errors=$errors['']}
   {/block}
 
-  <form id="login-form" action="{block name='login_form_actionurl'}{$action}{/block}" method="post">
+  <form class="needs-validation" id="login-form" action="{block name='login_form_actionurl'}{$action}{/block}" method="post" novalidate autocomplete="false">
 
     <section>
       {block name='login_form_fields'}
@@ -38,21 +38,18 @@
           {/block}
         {/foreach}
       {/block}
-      <div class="form-group row form-group_forgot-password">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-        <div class="forgot-password text-right">
+      <div class="form-group form-group_forgot-password">
+        <div class="forgot-password">
           <a href="{$urls.pages.password}" rel="nofollow" class="small">
               {l s='Forgot your password?' d='Shop.Theme.Customeraccount'}
           </a>
-        </div>
         </div>
       </div>
 
     </section>
 
     {block name='login_form_footer'}
-      <footer class="form-footer text-sm-center clearfix">
+      <footer class="form-footer">
         <input type="hidden" name="submitLogin" value="1">
         {block name='form_buttons'}
           <button id="submit-login" class="btn btn-primary" data-link-action="sign-in" type="submit" class="form-control-submit">

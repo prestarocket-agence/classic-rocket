@@ -61,19 +61,11 @@
 {block name='header_top'}
   <div class="header-top border-bottom">
     <div class="container">
-      <div class="row align-items-stretch">
+      <div class="row align-items-center">
         <div class="col-md-2 d-none d-md-block" id="_desktop_logo">
-          {if $page.page_name == 'index'}
-            <h1 class="m-0 h-100">
-              <a href="{$urls.base_url}" class="d-md-flex h-100">
-                <img class="logo img-fluid align-self-center" src="{$shop.logo}" alt="{$shop.name}">
-              </a>
-            </h1>
-          {else}
-            <a href="{$urls.base_url}">
-              <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
-            </a>
-          {/if}
+          <a href="{$urls.base_url}">
+            <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
+          </a>
         </div>
         <div class="col-md-10 col-sm-12 d-flex justify-content-between position-static">
             {hook h='displayTop'}

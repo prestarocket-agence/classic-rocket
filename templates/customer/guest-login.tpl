@@ -29,48 +29,53 @@
 {/block}
 
 {block name='page_content'}
-  <form id="guestOrderTrackingForm" action="{$urls.pages.guest_tracking}" method="get">
-    <header>
+  <form class="js-customer-form needs-validation" id="guestOrderTrackingForm" action="{$urls.pages.guest_tracking}" method="get" novalidate autocomplete="false">
+    <header class="alert alert-info">
       <p>{l s='To track your order, please enter the following information:' d='Shop.Theme.Customeraccount'}</p>
     </header>
 
     <section class="form-fields">
 
-      <div class="form-group row">
-        <label class="col-md-3 form-control-label required">
+      <div class="form-group">
+        <label for="order_reference">
           {l s='Order Reference:' d='Shop.Forms.Labels'}
         </label>
-        <div class="col-md-6">
           <input
             class="form-control"
             name="order_reference"
             type="text"
             size="8"
             value="{if isset($smarty.request.order_reference)}{$smarty.request.order_reference}{/if}"
+            id="order_reference"
+            required
           >
-          <div class="form-control-comment">
+          <small class="form-control-comment">
             {l s='For example: QIIXJXNUI or QIIXJXNUI#1' d='Shop.Theme.Customeraccount'}
-          </div>
-        </div>
+          </small>
+        <div class="invalid-feedback js-invalid-feedback-browser"></div>
+
       </div>
 
-      <div class="form-group row">
-        <label class="col-md-3 form-control-label required">
+      <div class="form-group">
+        <label for="email_guest">
           {l s='Email:' d='Shop.Forms.Labels'}
         </label>
-        <div class="col-md-6">
           <input
             class="form-control"
             name="email"
             type="email"
             value="{if isset($smarty.request.email)}{$smarty.request.email}{/if}"
+            id="email_guest"
+            autocomplete="email"
+            required
           >
-        </div>
+        <div class="invalid-feedback js-invalid-feedback-browser"></div>
+
       </div>
 
     </section>
 
-    <footer class="form-footer text-sm-center clearfix">
+    <footer class="form-footer">
       <button class="btn btn-primary" type="submit">
         {l s='Send' d='Shop.Theme.Actions'}
       </button>

@@ -37,6 +37,7 @@
                   value="{$value}"
                   placeholder="{l s='Your email address' d='Shop.Forms.Labels'}"
                   aria-labelledby="block-newsletter-label"
+                  autocomplete="email"
           >
           <div class="input-group-append">
             <button class="btn btn-primary" type="submit" name="submitNewsletter"><span class="d-none d-sm-inline">{l s='Subscribe' d='Shop.Theme.Actions'}</span><span class="d-inline d-sm-none">{l s='OK' d='Shop.Theme.Actions'}</span></button>

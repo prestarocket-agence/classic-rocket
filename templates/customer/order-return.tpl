@@ -97,6 +97,7 @@
                     {$customization.quantity}
                   {/foreach}
                 {/if}
+                {$product.product_quantity}
               </td>
             </tr>
           {/foreach}

@@ -104,6 +104,7 @@ h1,.h1{
     position: relative;
     z-index: 2;
     color:$input-color;
+    background-color: $white;
 
   }
   .input-group-btn{
@@ -343,3 +344,64 @@ custom-file-label.selected:after{
   }
 }
 
+.nav-tabs {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-link {
+    white-space: nowrap;
+  }
+}
+
+//forms
+main > .notifications-container{
+  @extend .l-wrapper;
+}
+.notifications-container{
+  ul{
+    margin-bottom: 0;
+  }
+}
+.js-invalid-feedback-browser:empty{
+  display: none;
+}
+.form-group{
+  label,.label{
+  small,
+  .small{
+    font-size: .75 * $font-size-base;
+  }
+  }
+}
+@include media-breakpoint-up(md){
+
+.page-content,
+.checkout-form,
+.page-wrapper--order-confirmation{
+  form{
+    width: 75%;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
+.page-wrapper--order-detail{
+  form{
+    margin: unset;
+  }
+}
+}
+.form-footer{
+  margin-top: $spacer;
+}
+
+// badge order history
+.badge.dark{
+  color:#fff;
+  mix-blend-mode: difference;
+
+}
