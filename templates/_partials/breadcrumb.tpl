@@ -29,7 +29,7 @@
       {foreach from=$breadcrumb.links item=path name=breadcrumb}
       {block name='breadcrumb_item'}
         <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a href="{$path.url}">
+          <a itemprop="item" href="{$path.url}">
             <span itemprop="name">{$path.title}</span>
           </a>
           <meta itemprop="position" content="{$smarty.foreach.breadcrumb.iteration}">
