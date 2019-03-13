@@ -25,9 +25,9 @@
 {extends file='page.tpl'}
 
 {block name='page_header_container'}{/block}
-
+{block name='contentWrapperClass'}left-column right-column col-lg-9 order-0 order-lg-1{/block}
 {block name='left_column'}
-  <div id="left-column" class="col-12 col-sm-3">
+  <div id="left-column" class="col-lg-3 order-1 order-lg-0 mt-4 mt-lg-0">
     {widget name="ps_contactinfo" hook='displayLeftColumn'}
   </div>
 {/block}

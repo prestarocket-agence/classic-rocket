@@ -23,14 +23,14 @@ function createSpin()
          max: 1000000
     });
   });
-  
+
   CheckUpdateQuantityOperations.switchErrorStat();
 }
 
 
 $(document).ready(() => {
-  let productLineInCartSelector = '.js-cart-line-product-quantity';
-  let promises = [];
+  const productLineInCartSelector = '.js-cart-line-product-quantity';
+  const promises = [];
 
   prestashop.on('updateCart', () => {
     $('.quickview').modal('hide');
@@ -42,7 +42,7 @@ $(document).ready(() => {
 
   createSpin();
 
-  let $body = $('body');
+  const $body = $('body');
 
   function isTouchSpin(namespace) {
     return namespace === 'on.startupspin' || namespace === 'on.startdownspin';
@@ -57,9 +57,9 @@ $(document).ready(() => {
 
     if ($input.is(':focus')) {
       return null;
-    } else {
-      return $input;
     }
+    return $input;
+
   }
 
   function camelize(subject) {
@@ -221,12 +221,12 @@ $(document).ready(() => {
 
   function updateProductQuantityInCart(event)
   {
-    let $target = $(event.currentTarget);
-    let updateQuantityInCartUrl = $target.data('update-url');
-    let baseValue = $target.attr('value');
+    const $target = $(event.currentTarget);
+    const updateQuantityInCartUrl = $target.data('update-url');
+    const baseValue = $target.attr('value');
 
     // There should be a valid product quantity in cart
-    let targetValue = $target.val();
+    const targetValue = $target.val();
     if (targetValue != parseInt(targetValue) || targetValue < 0 || isNaN(targetValue)) {
       $target.val(baseValue);
 
@@ -234,57 +234,55 @@ $(document).ready(() => {
     }
 
     // There should be a new product quantity in cart
-    let qty = targetValue - baseValue;
-    if (qty == 0) {
+    const qty = targetValue - baseValue;
+    if (qty === 0) {
       return;
     }
 
-    var requestData = getRequestData(qty);
+    $target.attr('value', targetValue);
+    sendUpdateQuantityInCartRequest(updateQuantityInCartUrl, getRequestData(qty), $target);
 
-    sendUpdateQuantityInCartRequest(updateQuantityInCartUrl, requestData, $target);
   }
 
   $body.on(
-    'focusout',
-    productLineInCartSelector,
-    (event) => {
-      updateProductQuantityInCart(event);
-    }
-  );
+      'focusout keyup',
+      productLineInCartSelector,
+      (event) => {
+          if (event.type === 'keyup') {
+              if (event.keyCode === 13) {
+                  updateProductQuantityInCart(event);
+              }
+              return false;
+          }
 
-  $body.on(
-    'keyup',
-    productLineInCartSelector,
-    (event) => {
-      if (event.keyCode == 13) {
-        updateProductQuantityInCart(event);
+          updateProductQuantityInCart(event);
       }
-    }
   );
 
+
   $body.on(
-    'click',
-    '.js-discount .code',
-    (event) => {
-      event.stopPropagation();
+      'click',
+      '.js-discount .code',
+      (event) => {
+          event.stopPropagation();
 
-      var $code = $(event.currentTarget);
-      var $discountInput = $('[name=discount_name]');
+          const $code = $(event.currentTarget);
+          const $discountInput = $('[name=discount_name]');
 
-      $discountInput.val($code.text());
+          $discountInput.val($code.text());
 
-      return false;
-    }
+          return false;
+      }
   )
 });
 
 const CheckUpdateQuantityOperations = {
   'switchErrorStat': () => {
-    /*
-    if errorMsg is not empty or if notifications are shown, we have error to display
-    if hasError is true, quantity was not updated : we don't disable checkout button
+    /**
+     * resp.hasError can be not defined but resp.errors not empty: quantity is updated but order cannot be placed
+     * when resp.hasError=true, quantity is not updated
      */
-    let $checkoutBtn = $('.checkout a');
+    const $checkoutBtn = $('.checkout a');
     if ($("#notifications article.alert-danger").length || ('' !== errorMsg && !hasError)) {
       $checkoutBtn.addClass('disabled');
     }
@@ -306,9 +304,9 @@ const CheckUpdateQuantityOperations = {
     }
   },
   'checkUpdateOpertation': (resp) => {
-    /*
-    resp.hasError can be not defined but resp.errors not empty: quantity is updated but order cannot be placed
-    when resp.hasError=true, quantity is not updated
+    /**
+     * resp.hasError can be not defined but resp.errors not empty: quantity is updated but order cannot be placed
+     * when resp.hasError=true, quantity is not updated
      */
     hasError = resp.hasOwnProperty('hasError');
     let errors = resp.errors || "";
@@ -318,6 +316,7 @@ const CheckUpdateQuantityOperations = {
     } else {
       errorMsg = errors;
     }
+
     isUpdateOperation = true;
   }
 };

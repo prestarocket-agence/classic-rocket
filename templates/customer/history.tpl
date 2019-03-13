@@ -32,7 +32,7 @@
   <h6>{l s='Here are the orders you\'ve placed since your account was created.' d='Shop.Theme.Customeraccount'}</h6>
 
   {if $orders}
-    <table class="table table-striped table-bordered table-labeled d-none d-md-table">
+    <table class="table table-striped table-bordered d-none d-md-table">
       <thead class="thead-default">
         <tr>
           <th>{l s='Order reference' d='Shop.Theme.Checkout'}</th>
@@ -53,7 +53,7 @@
             <td class="d-none d-none d-lg-table-cell">{$order.details.payment}</td>
             <td>
               <span
-                class="label label-pill {$order.history.current.contrast}"
+                class="badge badge-pill {$order.history.current.contrast}"
                 style="background-color:{$order.history.current.color}"
               >
                 {$order.history.current.ostate_name}
@@ -66,12 +66,12 @@
                 -
               {/if}
             </td>
-            <td class="text-sm-center order-actions">
-              <a href="{$order.details.details_url}" data-link-action="view-order-details">
+            <td class="order-actions">
+              <a class="btn btn-sm btn-block btn-outline-primary" href="{$order.details.details_url}" data-link-action="view-order-details">
                 {l s='Details' d='Shop.Theme.Customeraccount'}
               </a>
               {if $order.details.reorder_url}
-                <a href="{$order.details.reorder_url}">{l s='Reorder' d='Shop.Theme.Actions'}</a>
+                <a class="btn btn-sm btn-block btn-outline-primary" href="{$order.details.reorder_url}">{l s='Reorder' d='Shop.Theme.Actions'}</a>
               {/if}
             </td>
           </tr>
@@ -98,13 +98,13 @@
             </div>
             <div class="col-2 text-right">
                 <div>
-                  <a href="{$order.details.details_url}" data-link-action="view-order-details" title="{l s='Details' d='Shop.Theme.Customeraccount'}">
+                  <a class="btn btn-outline-primary" href="{$order.details.details_url}" data-link-action="view-order-details" title="{l s='Details' d='Shop.Theme.Customeraccount'}">
                     <i class="material-icons">&#xE8B6;</i>
                   </a>
                 </div>
                 {if $order.details.reorder_url}
                   <div>
-                    <a href="{$order.details.reorder_url}" title="{l s='Reorder' d='Shop.Theme.Actions'}">
+                    <a class="btn btn-outline-primary" href="{$order.details.reorder_url}" title="{l s='Reorder' d='Shop.Theme.Actions'}">
                       <i class="material-icons">&#xE863;</i>
                     </a>
                   </div>

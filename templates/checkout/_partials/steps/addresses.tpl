@@ -30,8 +30,8 @@
       method="POST"
       action="{$urls.pages.order}"
       data-refresh-url="{url entity='order' params=['ajax' => 1, 'action' => 'addressForm']}"
+      {if show_delivery_address_form || ($show_invoice_address_form && !$use_same_address)}class="needs-validation" autocomplete="false" novalidate{/if}
     >
-
       {if !$use_same_address}
         <h2 class="h4">{l s='Shipping Address' d='Shop.Theme.Checkout'}</h2>
       {/if}
@@ -47,7 +47,7 @@
       {/if}
 
       {if $show_delivery_address_form}
-        <div id="delivery-address">
+        <div id="delivery-address" class="form-wrapper">
           {render file                      = 'checkout/_partials/address-form.tpl'
                   ui                        = $address_form
                   use_same_address          = $use_same_address
@@ -95,10 +95,10 @@
 
       {if !$use_same_address}
 
-        <h2 class="h4">{l s='Your Invoice Address' d='Shop.Theme.Checkout'}</h2>
+        <h2 class="h4 mt-3">{l s='Your Invoice Address' d='Shop.Theme.Checkout'}</h2>
 
         {if $show_invoice_address_form}
-          <div id="invoice-address">
+          <div id="invoice-address" class="form-wrapper">
             {render file                      = 'checkout/_partials/address-form.tpl'
                     ui                        = $address_form
                     use_same_address          = $use_same_address
@@ -138,7 +138,7 @@
 
       {if !$form_has_continue_button}
         <div class="clearfix">
-          <button type="submit" class="btn btn-primary btn-lg continue float-right" name="confirm-addresses" value="1">
+          <button type="submit" class="btn btn-primary btn-lg continue" name="confirm-addresses" value="1">
               {l s='Continue' d='Shop.Theme.Actions'}
           </button>
           <input type="hidden" id="not-valid-addresses" value="{$not_valid_addresses}">
