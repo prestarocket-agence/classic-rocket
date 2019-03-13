@@ -64,7 +64,6 @@ module.exports = (env, argv) => {
               loader: 'css-loader',
               options: {
                 sourceMap: IS_DEV,
-                minimize: IS_PROD
               }
             },
             {
@@ -86,7 +85,7 @@ module.exports = (env, argv) => {
         },
         {
           test: /.(woff(2)?|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
-          exclude: [/img/],
+          exclude: /(im(a)?g(e)?)(s\b|\b)/,
           loader: 'file-loader',
           options: {
             name: '../fonts/[hash].[ext]'
