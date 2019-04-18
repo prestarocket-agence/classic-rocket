@@ -24,4 +24,4 @@ gulp.task('move',function(){
 
 gulp.task('watch', function(){
     gulp.watch('css/**/*.scss', gulp.series('sass','move'))
-})
+});
