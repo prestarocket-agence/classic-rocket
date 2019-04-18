@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="blockcart-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="blockcart-modal-label" aria-hidden="true">
+<div id="blockcart-modal" class="modal fade blockcart-modal" tabindex="-1" role="dialog" aria-labelledby="blockcart-modal-label" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">

@@ -247,4 +247,17 @@
   @extend .align-self-stretch;
   padding-left: $spacer;
 }
+@include media-breakpoint-down(md) {
 
+  .blockcart-modal {
+    .modal-footer {
+      position: fixed;
+      bottom: 0;
+      background: #fff;
+      justify-content: center;
+      left: 0;
+      width: 100%;
+      box-shadow: 0px -0.25rem 0.5rem rgba($black, .15);
+    }
+  }
+}
