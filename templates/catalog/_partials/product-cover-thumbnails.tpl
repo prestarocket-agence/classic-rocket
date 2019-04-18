@@ -27,7 +27,7 @@
       <div class="position-relative">
   <div class="products-imagescover mb-2" data-slick='{literal}{"asNavFor":"[data-slick].product-thumbs","rows": 0,"slidesToShow": 1,"arrows":false}{/literal}' data-count="{$product.images|count}">
    <div class="product-img">
-       <div class="rc">
+       <div class="">
            {if $product.cover}
 
            <img class="img-fluid"

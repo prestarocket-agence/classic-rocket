@@ -32,8 +32,8 @@
 "autoplaySpeed":{/literal}{$homeslider.speed}{literal}
 }{/literal}'{/strip}{/if}>
         {foreach from=$homeslider.slides item=slide name='homeslider'}
-            <a href="{$slide.url}" class="position-relative rc" style="padding-top:{$paddingbottom}%">
-                <figure>
+            <a href="{$slide.url}">
+                    <div class="rc" style="padding-top:{$paddingbottom}%">
                     <img data-src="{$slide.image_url}" alt="{$slide.legend|escape}" class="w-100 lazyload img-carousel">
                     <noscript>
                         <img src="{$slide.image_url}" alt="{$slide.legend|escape}">
@@ -44,7 +44,7 @@
                             <div class="caption-description">{$slide.description nofilter}</div>
                         </div>
                     {/if}
-                </figure>
+                    </div>
             </a>
         {/foreach}
     </div>
