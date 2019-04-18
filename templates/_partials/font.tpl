@@ -3,7 +3,7 @@
 <link rel="preconnect" href="//ajax.googleapis.com" crossorigin>
 <script type="text/javascript">
     WebFontConfig = {
-        google: { families: [ 'Material+Icons|Noto+Sans:400,700' ] }
+        google: { families: [ 'Noto+Sans:400,700' ] }
     };
     (function() {
         var wf = document.createElement('script');
