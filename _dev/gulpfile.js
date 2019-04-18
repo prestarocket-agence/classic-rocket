@@ -13,7 +13,7 @@ gulp.task('sass',function(){
             cascade: false
         }))
         .pipe(sourcemaps.write('./maps'))
-        .pipe(replace("node_modules/material-design-icons/iconfont/", "../css/"))
+        .pipe(replace("~material-design-icons/iconfont/", "../css/"))
         .pipe(gulp.dest('../assets/css'));
 })
 
