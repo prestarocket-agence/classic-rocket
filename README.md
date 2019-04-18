@@ -22,7 +22,7 @@ With the same server (gzip, PrestaShop performance settings properly adjusted)
 - JS: 155 Ko (with Classic theme) to 86 Ko
 
 You can also see the web quality and performance comparison report on [Dareboost](https://www.dareboost.com/en/comparison/d_5b51dc70e967906045fd3683/d_5b51dc70e967906045fd3684)
-### Twitter Bootstrap 4.1.x
+### Twitter Bootstrap 4.2.x
 
 - Almost all tpl files are edited to use new BS classes (ex: col-xs-12 => col-12)
 - For retrocompatibility and third modules, we keep some important old classes in bs_alpha.scss      
