@@ -247,9 +247,23 @@
   @extend .align-self-stretch;
   padding-left: $spacer;
 }
-@include media-breakpoint-down(md) {
 
+//modal cart
+.modal-cart__image{
+  margin-right: $spacer;
+  max-width: 200px;
+
+  height: auto;
+}
+@include media-breakpoint-down(md) {
+  .modal-cart__image{
+    max-width: 120px;
+  }
   .blockcart-modal {
+    .divide-right{
+      display: flex;
+      justify-content: center;
+    }
     .modal-footer {
       position: fixed;
       bottom: 0;
@@ -259,5 +273,10 @@
       width: 100%;
       box-shadow: 0px -0.25rem 0.5rem rgba($black, .15);
     }
+  }
+}
+@include media-breakpoint-down(xs) {
+  .modal-cart__image{
+    max-width: 70px;
   }
 }
