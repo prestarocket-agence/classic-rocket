@@ -280,3 +280,22 @@
     max-width: 70px;
   }
 }
+//spinner add to cart
+.btn-add-to-cart {
+  .btn-add-to-cart__spinner {
+    @extend .spinner-border;
+    width: $spinner-width-addtocart;
+    height: $spinner-height-addtocart;
+    border-width: $spinner-borderwidth-addtocart;
+    display: none;
+  }
+  &.is--loading{
+    .btn-add-to-cart__spinner {
+      display: inline-block;
+    }
+    .btn-add-to-cart__icon {
+      display: none;
+    }
+  }
+}
+
