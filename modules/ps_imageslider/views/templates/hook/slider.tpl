@@ -25,24 +25,27 @@
 {if $homeslider.slides}
 
     {assign var=paddingbottom value=($homeslider.slides[0]['sizes'][1]/$homeslider.slides[0]['sizes'][0]*100)}
-
-  <div id="carousel" class="carousel slick__arrow-large" {if $homeslider.slides|count > 1}data-slick{/if} data-interval="{$homeslider.speed}" data-pause="{$homeslider.pause}">
-      {foreach from=$homeslider.slides item=slide name='homeslider'}
-
-      <a href="{$slide.url}" class="position-relative rc" style="padding-top:{$paddingbottom}%">
-              <figure>
-                  <img data-src="{$slide.image_url}" alt="{$slide.legend|escape}" class="w-100 lazyload img-carousel">
-                  <noscript>
-                      <img src="{$slide.image_url}" alt="{$slide.legend|escape}">
-                  </noscript>
-                  {if $slide.title || $slide.description}
-                    <div class="slider-caption">
-                      <p class="display-1 text-uppercase">{$slide.title}</p>
-                      <div class="caption-description">{$slide.description nofilter}</div>
+    <div id="carousel" class="carousel slick__arrow-large" {if $homeslider.slides|count > 1}data-slick={strip}
+    '{literal}{
+"autoplay": true,
+"slidesToShow": 1,
+"autoplaySpeed":{/literal}{$homeslider.speed}{literal}
+}{/literal}'{/strip}{/if}>
+        {foreach from=$homeslider.slides item=slide name='homeslider'}
+            <a href="{$slide.url}">
+                    <div class="rc" style="padding-top:{$paddingbottom}%">
+                    <img data-src="{$slide.image_url}" alt="{$slide.legend|escape}" class="w-100 lazyload img-carousel">
+                    <noscript>
+                        <img src="{$slide.image_url}" alt="{$slide.legend|escape}">
+                    </noscript>
+                    {if $slide.title || $slide.description}
+                        <div class="slider-caption">
+                            <p class="display-1 text-uppercase">{$slide.title}</p>
+                            <div class="caption-description">{$slide.description nofilter}</div>
+                        </div>
+                    {/if}
                     </div>
-                  {/if}
-              </figure>
             </a>
-      {/foreach}
-</div>
+        {/foreach}
+    </div>
 {/if}

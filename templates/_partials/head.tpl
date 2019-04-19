@@ -45,7 +45,7 @@
   {/if}
 
   {if $page.canonical}
-    <link rel="canonical" href="{$page.canonical}{if isset($smarty.get.page) && $smarty.get.page > 1}?page={$smarty.get.page}{/if}">
+    <link rel="canonical" href="{$page.canonical}">
   {/if}
   {block name='head_hreflang'}
       {if isset($urls.alternative_langs)}

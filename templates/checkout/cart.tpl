@@ -35,7 +35,8 @@
         <!-- cart products detailed -->
         <div class="card cart-container shadow mb-3">
             <h1 class="card-header">{l s='Shopping Cart' d='Shop.Theme.Checkout'}</h1>
-          <div class="card-body">
+          <div class="card-body cart__card-body js-cart__card-body">
+            <div class="cart__card-loader"><div class="spinner-border" role="status"><span class="sr-only">{l s='Loading...' d='Shop.Theme.Global'}</span></div></div>
           {block name='cart_overview'}
             {include file='checkout/_partials/cart-detailed.tpl' cart=$cart}
           {/block}

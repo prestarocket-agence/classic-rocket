@@ -41,7 +41,9 @@
         "url":"{$urls.shop_domain_url}{$shop.logo}"
     }
 }
+
 </script>
+
 <script type="application/ld+json">
 {
     "@context":"http://schema.org",
@@ -54,9 +56,11 @@
     "name": "{$page.meta.title}",
     "url":  "{$urls.current_url}"
 }
+
+
 </script>
 {if $page.page_name =='index'}
-<script	type="application/ld+json">
+    <script type="application/ld+json">
 {
 	"@context":	"http://schema.org",
 	"@type": "WebSite",
@@ -71,16 +75,20 @@
      "query-input": "required name=search_term_string"
 	 }
 }
-</script>
+
+
+    </script>
 {/if}
-{if $page.page_name == 'product'}
+{if isset($product) && $page.page_name == 'product'}
     <script type="application/ld+json">
     {
     "@context": "http://schema.org/",
     "@type": "Product",
     "name": "{$product.name}",
     "description": "{$page.meta.description}",
-	{if $product.reference}"mpn": "{$product.id}",{/if}
+    "category": "{$page.category_name}",
+    {if isset($product.cover)}"image" :"{$product.cover.bySize.home_default.url}",{/if}
+	{if $product.reference}"mpn": "{$product.reference}",{/if}
     {if $product_manufacturer->name}"brand": {
         "@type": "Thing",
         "name": "{$product_manufacturer->name|escape:'html':'UTF-8'}"
@@ -103,6 +111,8 @@
         "priceCurrency": "{$currency.iso_code}",
         "name": "{$product.name|strip_tags:false}",
         "price": "{$product.price_amount}",
+        "url": "{$product.url}",
+        "priceValidUntil": "{$smarty.now + (60*60*24*15)|date_format:"%Y-%m-%d"}",
         {if $product.images|count > 0}
         "image": {strip}[
         {foreach from=$product.images item=p_img name="p_img_list"}
@@ -118,8 +128,8 @@
         "sku": "{$product.reference}",
         {if $product.condition == 'new'}"itemCondition": "http://schema.org/NewCondition",{/if}
         {if $product.show_condition > 0}
-            {if $product.condition == 'used'}"itemCondition": "http://schema.org/UsedCondition",{/if}
-            {if $product.condition == 'refurbished'}"itemCondition": "http://schema.org/RefurbishedCondition",{/if}
+        {if $product.condition == 'used'}"itemCondition": "http://schema.org/UsedCondition",{/if}
+        {if $product.condition == 'refurbished'}"itemCondition": "http://schema.org/RefurbishedCondition",{/if}
         {/if}
         "availability":{if $product.quantity > 0 || $product.allow_oosp > 0} "http://schema.org/InStock"{else} "http://schema.org/OutOfStock"{/if},
         "seller": {
@@ -129,5 +139,7 @@
     }
 
 }
-</script>
+
+
+    </script>
 {/if}
