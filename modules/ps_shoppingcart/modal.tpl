@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="blockcart-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="blockcart-modal-label" aria-hidden="true">
+<div id="blockcart-modal" class="modal fade blockcart-modal" tabindex="-1" role="dialog" aria-labelledby="blockcart-modal-label" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -34,23 +34,21 @@
       </div>
       <div class="modal-body">
         <div class="row">
-          <div class="col-md-6 divide-right">
-            <div class="row">
-              <div class="col-md-6">
-                <img class="product-image img-fluid" src="{$product.cover.medium.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">
-              </div>
-              <div class="col-md-6">
-                <h6 class="h6 product-name">{$product.name}</h6>
+          <div class="col-lg-6 divide-right">
+            <div class="media">
+              <img class="product-image modal-cart__image" src="{$product.cover.medium.url}" alt="{$product.cover.legend}" width="{$product.cover.medium.width}" height="{$product.cover.medium.height}">
+              <div class="media-body">
+                <p class="h6 product-name">{$product.name}</p>
                 <p>{$product.price}</p>
-                {hook h='displayProductPriceBlock' product=$product type="unit_price"}
-                {foreach from=$product.attributes item="property_value" key="property"}
-                  <span><strong>{$property}</strong>: {$property_value}</span><br>
-                {/foreach}
+                  {hook h='displayProductPriceBlock' product=$product type="unit_price"}
+                  {foreach from=$product.attributes item="property_value" key="property"}
+                    <span><strong>{$property}</strong>: {$property_value}</span><br>
+                  {/foreach}
                 <p><strong>{l s='Quantity:' d='Shop.Theme.Checkout'}</strong>&nbsp;{$product.cart_quantity}</p>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <div class="cart-content">
               {if $cart.products_count > 1}
                 <p class="cart-products-count">{l s='There are %products_count% items in your cart.' sprintf=['%products_count%' => $cart.products_count] d='Shop.Theme.Checkout'}</p>

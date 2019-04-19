@@ -27,7 +27,7 @@
       <div class="position-relative">
   <div class="products-imagescover mb-2" data-slick='{literal}{"asNavFor":"[data-slick].product-thumbs","rows": 0,"slidesToShow": 1,"arrows":false}{/literal}' data-count="{$product.images|count}">
    <div class="product-img">
-       <div class="rc">
+       <div class="">
            {if $product.cover}
 
            <img class="img-fluid"
@@ -37,7 +37,7 @@
            {$product.cover.bySize.pdt_360.url} 360w,
            {$product.cover.bySize.pdt_540.url} 540w"
          src="{$product.cover.bySize.medium_default.url}"
-         alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">
+         alt="{$product.cover.legend}" title="{$product.cover.legend}">
            {elseif isset($urls.no_picture_image)}
            <img class="img-fluid" src="{$urls.no_picture_image.bySize.large_default.url}">
            {else}
@@ -47,7 +47,7 @@
 
 
            <noscript>
-       <img class="img-fluid" data-src="{$product.cover.bySize.medium_default.url}" alt="{$product.cover.legend}" itemprop="image">
+       <img class="img-fluid" data-src="{$product.cover.bySize.medium_default.url}" alt="{$product.cover.legend}">
    </noscript>
        </div>
    </div>
@@ -67,11 +67,9 @@
                    {$image.bySize.pdt_540.url} 540w"
                       {if !$smarty.foreach.images.first && !$product.cover}data-{/if}src="{$image.bySize.medium_default.url}"
                       alt="{$image.legend}"
-                      title="{$image.legend}"
-                      itemprop="image"
-              >
+                      title="{$image.legend}">
               <noscript>
-                  <img src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" itemprop="image">
+                  <img src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}">
               </noscript>
           </div>
       </div>
@@ -95,7 +93,7 @@
                       class="thumb js-thumb lazyload img-fluid"
                       data-src="{$product.cover.bySize.small_default.url}"
                       alt="{$product.cover.legend}" title="{$product.cover.legend}"
-                      itemprop="image"
+
               >
               </div>
           </div>
@@ -108,7 +106,7 @@
               data-src="{$image.bySize.small_default.url}"
               alt="{$image.legend}"
               title="{$image.legend}"
-              itemprop="image"
+
             >
               </div>
           </div>

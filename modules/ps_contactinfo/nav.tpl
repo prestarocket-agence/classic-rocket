@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div id="_desktop_contact_link">
-  <div id="contact-link" class="small">
+  <div id="contact-link">
     {if $contact_infos.phone}
       {* [1][/1] is for a HTML tag. *}
       {l

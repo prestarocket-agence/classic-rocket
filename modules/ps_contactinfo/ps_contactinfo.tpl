@@ -24,8 +24,11 @@
  *}
 
 <div class="block-contact col-md-3">
-  <div class="d-none d-md-block">
-    <p class="title h3 block-contact-title">{l s='Store information' d='Shop.Theme.Global'}</p>
+    <p class="footer__title footer__title--desktop">{l s='Store information' d='Shop.Theme.Global'}</p>
+    <a href="#footer_store_info" class="footer__title--mobile footer__title" data-toggle="collapse">{l s='Store information' d='Shop.Theme.Global'}</a>
+
+
+  <div id="footer_store_info" class="account-list collapse show" data-collapse-hide-mobile>
       {$contact_infos.address.formatted nofilter}
       {if $contact_infos.phone}
         <br>
@@ -66,9 +69,5 @@
         }
       {/if}
   </div>
-  <div class="d-md-none">
-    <div class="title">
-      <a class="h3" href="{$urls.pages.stores}">{l s='Store information' d='Shop.Theme.Global'}</a>
-    </div>
-  </div>
+
 </div>

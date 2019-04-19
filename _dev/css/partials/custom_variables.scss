@@ -13,6 +13,7 @@ $enable-fluid-layout:            false;
 $header-bg:                     $white;
 $footer-bg:                     $white;
 $wrapper-bg:                    #f1f1f1;
+$footer-container-margin-top:   $spacer;
 //product miniature
 
 $pm-title-color:                $gray-700;
@@ -46,6 +47,12 @@ $product-regular-price-font-size:       $font-size-base * 1.25;
 
 //product color box
 $colorbox-border-color:         #232323;
+
+//product add to cart spinner
+$spinner-width-addtocart:$btn-font-size-lg;
+$spinner-height-addtocart:$btn-font-size-lg;
+$spinner-borderwidth-addtocart:2px;
+
 
 //social share
 $social-share-size:             2.5 * $font-size-base;

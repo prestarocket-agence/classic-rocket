@@ -26,10 +26,8 @@
   {foreach $linkBlocks as $linkBlock}
     <div class="col-md-3">
       {assign var=_expand_id value=10|mt_rand:100000}
-      <div class="title clearfix">
-        <span class="h3">{$linkBlock.title}</span>
-        <i class="material-icons icon-collapse float-right d-md-none" data-target="#footer_sub_menu_{$_expand_id}" data-toggle="collapse">&#xE313;</i>
-      </div>
+        <p class="footer__title footer__title--desktop">{$linkBlock.title}</p>
+        <a href="#footer_sub_menu_{$_expand_id}" class="footer__title--mobile footer__title" data-toggle="collapse">{$linkBlock.title}</a>
       <ul id="footer_sub_menu_{$_expand_id}" class="collapse show" data-collapse-hide-mobile>
         {foreach $linkBlock.links as $link}
           <li>
