@@ -65,3 +65,28 @@
   }
 
 }
+
+.cart__card-body{
+  position: relative;
+ .cart__card-loader{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   left: 0;
+   top: 0;
+   align-items: center;
+   justify-content: center;
+   display: none;
+   background-color: rgba($white, .85);
+   opacity: 0;
+   transition: $transition-fade;
+   z-index: 3;
+ }
+  &.is--loading{
+    .cart__card-loader {
+      display: flex;
+      opacity: 1;
+    }
+
+  }
+}

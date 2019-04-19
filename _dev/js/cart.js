@@ -34,10 +34,16 @@ $(document).ready(() => {
 
   prestashop.on('updateCart', () => {
     $('.quickview').modal('hide');
+    $('.js-cart__card-body').addClass('is--loading');
   });
 
   prestashop.on('updatedCart', () => {
     createSpin();
+    $('.js-cart__card-body.is--loading').removeClass('is--loading');
+  });
+
+  prestashop.on('handleError', function (event) {
+      $('.js-cart__card-body.is--loading').removeClass('is--loading');
   });
 
   createSpin();
