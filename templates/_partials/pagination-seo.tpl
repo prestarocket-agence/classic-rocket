@@ -29,7 +29,7 @@
         {assign page_nb $smarty.get.page|intval}
     {/if}
     {$queryPage = '?page='|cat:$page_nb}
-    {$page.canonical = $page.canonical|replace:$queryPage}
+    {$page.canonical = $page.canonical|replace:$queryPage:''}
 
 
     {assign var="prev" value=false}

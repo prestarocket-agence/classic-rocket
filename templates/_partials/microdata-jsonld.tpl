@@ -86,7 +86,7 @@
     "@type": "Product",
     "name": "{$product.name}",
     "description": "{$page.meta.description}",
-    "category": "{$page.category_name}",
+    "category": "{$product.category_name}",
     {if isset($product.cover)}"image" :"{$product.cover.bySize.home_default.url}",{/if}
 	{if $product.reference}"mpn": "{$product.reference}",{/if}
     {if $product_manufacturer->name}"brand": {
