@@ -116,7 +116,7 @@ Filter
 PrestaShop 1.7.3.2 to 1.7.5.x
 
 ## Download
-- For PrestaShop 1.7.5.x (version 1.0.0): [classic-rocket](https://github.com/PrestaShop/classic-rocket/releases/download/2.1.1/classic-rocket.zip)
+- For PrestaShop 1.7.5.x (version 1.0.0): [classic-rocket](https://github.com/PrestaShop/classic-rocket/releases/download/2.1.2/classic-rocket.zip)
 
 ## Misc
 You can also use gulp to work faster during development (gulpfile.js => gulp watch)
