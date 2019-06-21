@@ -47,7 +47,7 @@
 
 
            <noscript>
-       <img class="img-fluid" data-src="{$product.cover.bySize.medium_default.url}" alt="{$product.cover.legend}">
+       <img class="img-fluid" src="{$product.cover.bySize.medium_default.url}" alt="{$product.cover.legend}">
    </noscript>
        </div>
    </div>
@@ -69,7 +69,7 @@
                       alt="{$image.legend}"
                       title="{$image.legend}">
               <noscript>
-                  <img src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}">
+                  <img class="img-fluid" src="{$image.bySize.medium_default.url}" alt="{$image.legend}">
               </noscript>
           </div>
       </div>
