@@ -105,7 +105,7 @@
         "value": "{$product.weight}",
         "unitCode": "{$product.weight_unit}"
     },{/if}
-    {*{if empty($combinations)}*}
+    {if empty($combinations)}
     "offers": {
         "@type": "Offer",
         "priceCurrency": "{$currency.iso_code}",
@@ -137,9 +137,34 @@
             "name": "{$shop.name}"
         }
     }
-
+    {else}
+    "offers": [
+      {foreach key=prod item=combination from=$combinations}
+        {
+        "@type": "Offer",
+		"priceCurrency": "{$currency.iso_code}",
+        "name": "{$product.name|strip_tags:false} - {$combination.reference}",
+        "price": "{$product.price_amount}",
+		"url": "{$urls.current_url}",
+        "priceValidUntil": "{$smarty.now + (60*60*24*15)|date_format:"%Y-%m-%d"}",
+        "image": "{$combination.cover.bySize.home_default.url}",
+        {if $combination.ean13}
+        "gtin13": "{$combination.ean13|escape:'html':'UTF-8'}",
+        {else if $combination.upc}
+        "gtin13": "0{$combination.upc|escape:'html':'UTF-8'}",
+        {/if}
+        "sku": "{$combination.reference}",
+        {if $combination.condition == 'new'}"itemCondition": "http://schema.org/NewCondition",{/if}
+        {if $combination.condition == 'used'}"itemCondition": "http://schema.org/UsedCondition",{/if}
+        {if $combination.condition == 'refurbished'}"itemCondition": "http://schema.org/RefurbishedCondition",{/if}
+        "availability": {if $combination.quantity > 0}"http://schema.org/InStock"{else}"http://schema.org/OutOfStock"{/if},
+        "seller": {
+            "@type": "Organization",
+            "name": "{$shop_name|escape:'html':'UTF-8'}"}
+        } {if !$combination@last},{/if}          
+     {/foreach}
+    ]
+    {/if}	
 }
-
-
     </script>
 {/if}
