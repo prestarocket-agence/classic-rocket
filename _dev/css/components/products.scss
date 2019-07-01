@@ -246,4 +246,36 @@
   @extend .align-self-stretch;
   padding-left: $spacer;
 }
-
+.pack-miniature-item{
+  margin-bottom: $spacer * 2;
+}
+.ratio1_1{
+  display: block;
+}
+.pack-product-name{
+  margin: 0 $spacer * 4;
+  flex-grow: 1;
+}
+.product-miniature{
+  margin-bottom: $spacer * 3;
+}
+.product__card-img{
+  position: relative;
+}
+.highlighted-informations{
+  text-align: center;
+  padding: $spacer * 2;
+}
+.active_filters{
+  display: flex;
+  align-items: center;
+  padding: $spacer * 3;
+  margin-bottom: $spacer * 3;
+}
+.active_filters_title{
+  margin: 0;
+  margin-right: $spacer * 2;
+}
+.active_filters_item{
+  margin-right: $spacer;
+}
