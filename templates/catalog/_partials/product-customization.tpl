@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section class="product-customization mb-4">
+<section class="product-customization">
     {if !$configuration.is_catalog}
         <div class="card card-block">
             <p class="h4 card-title">{l s='Product customization' d='Shop.Theme.Catalog'}</p>

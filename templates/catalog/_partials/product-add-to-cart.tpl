@@ -28,7 +28,7 @@
     {block name='product_quantity'}
       <div class="product-quantity row align-items-center no-gutters">
         <label for="quantity_wanted" class="mb-0 col-auto mt-2">{l s='Quantity' d='Shop.Theme.Catalog'}</label>
-        <div class="qty mx-3 col-auto mt-2">
+        <div class="qty col-auto">
           <input
             type="text"
             name="qty"
@@ -41,7 +41,7 @@
           >
         </div>
 
-        <div class="add col mt-2">
+        <div class="add col">
           <button
             class="btn btn-primary add-to-cart btn-lg btn-block btn-add-to-cart"
             data-button-action="add-to-cart"

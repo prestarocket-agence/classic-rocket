@@ -23,15 +23,15 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div id="js-product-list-top" class="row justify-content-between products-selection my-3 align-items-center">
-  <div class="col-md-6 d-none d-md-block total-products">
+  <div class="col-md-6 visible--desktop total-products">
     {if $listing.pagination.total_items > 1}
-      <p class="mb-0">{l s='There are %product_count% products.' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}</p>
+      <p class="product__quantity">{l s='There are %product_count% products.' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}</p>
     {else if $listing.pagination.total_items > 0}
-      <p class="mb-0">{l s='There is 1 product.' d='Shop.Theme.Catalog'}</p>
+      <p class="product__quantity">{l s='There is 1 product.' d='Shop.Theme.Catalog'}</p>
     {/if}
   </div>
   <div class="col-md-6">
-    <div class="d-flex sort-by-row w-100 justify-content-between justify-content-md-end align-items-center">
+    <div class="sort-by-row justify-content-md-end">
 
       {block name='sort_by'}
         {include file='catalog/_partials/sort-orders.tpl' sort_orders=$listing.sort_orders}
@@ -44,7 +44,7 @@
       {/if}
     </div>
   </div>
-    <div class="d-md-none text-sm-center mt-1 col-12 ">
+    <div class="total__item-show visible--mobile col-12 ">
         {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=[
         '%from%' => $listing.pagination.items_shown_from ,
         '%to%' => $listing.pagination.items_shown_to,

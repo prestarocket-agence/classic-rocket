@@ -279,3 +279,36 @@
 .active_filters_item{
   margin-right: $spacer;
 }
+.facets__title{
+  text-transform: uppercase;
+}
+.facet__title{
+  justify-content: space-between;
+}
+.qty{
+  margin: 0 $spacer * 3;
+  margin-top: $spacer * 2;
+}
+.add{
+  margin-top: $spacer * 2;
+}
+.product-customization{
+  margin-bottom: $spacer * 4;
+}
+.product-discounts{
+  margin-bottom: $spacer * 4;
+}
+.product__quantity{
+  margin-bottom: 0;
+}
+.sort-by-row{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.total__item-show{
+  text-align: center;
+  font-size: $font-size-sm;
+  margin-top: $spacer;
+}
