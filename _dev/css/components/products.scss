@@ -312,3 +312,29 @@
   font-size: $font-size-sm;
   margin-top: $spacer;
 }
+.variant-links{
+  display: flex;
+  justify-content: center;
+}
+.product__download{
+  text-transform: uppercase;
+}
+.delivery-address{
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+}
+.invoice__address{
+  margin-top: $spacer * 3;
+}
+.invoice-address{
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+}
+.step-number{
+  padding: $spacer * 2;
+}
+.nav-tabs{
+  justify-content: center;
+}

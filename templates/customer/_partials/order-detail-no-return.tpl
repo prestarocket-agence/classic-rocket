@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='order_products_table'}
-  <div class="box d-none d-md-block">
+  <div class="box visible--desktop">
     <table id="order-products" class="table table-bordered">
       <thead class="thead-default">
         <tr>

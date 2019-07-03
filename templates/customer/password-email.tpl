@@ -56,7 +56,7 @@
       </div>
       <button class="form-control-submit btn btn-primary d-none d-sm-block" name="submit" type="submit">
         <span class="d-none d-sm-inline">{l s='Send reset link' d='Shop.Theme.Actions'}</span>
-        <span class="d-sm-none">{l s='Send' d='Shop.Theme.Actions'}</span>
+        <span class="visible--desktop">{l s='Send' d='Shop.Theme.Actions'}</span>
       </button>
 
     </section>
