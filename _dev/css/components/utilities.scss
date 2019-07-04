@@ -20,3 +20,7 @@ img[data-lazy] {
 .d--none{
   display: none;
 }
+.header-nav__container{
+  display: flex;
+  justify-content: space-between;
+}

@@ -25,11 +25,11 @@
   <div id="search_filters" class="search_filters">
 
     {block name='facets_title'}
-      <p class="text-uppercase h6 d--none visible--desktop">{l s='Filter By' d='Shop.Theme.Actions'}</p>
+      <p class="text-uppercase h6 visible--desktop">{l s='Filter By' d='Shop.Theme.Actions'}</p>
     {/block}
 
     {block name='facets_clearall_button'}
-      <div id="_desktop_search_filters_clear_all" class="d--none visible--desktop clear-all-wrapper">
+      <div id="_desktop_search_filters_clear_all" class="visible--desktop clear-all-wrapper">
         <button data-search-url="{$clear_all_link}" class="btn btn-secondary btn-block js-search-filters-clear-all mb-3">
           <i class="material-icons">&#xE14C;</i>
           {l s='Clear all' d='Shop.Theme.Actions'}

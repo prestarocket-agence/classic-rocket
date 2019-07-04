@@ -22,8 +22,8 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="js-product-list-top" class="row justify-content-between products-selection my-3 align-items-center">
-  <div class="col-md-6 d--none visible--desktop total-products">
+<div id="js-product-list-top" class="row products-selection my-3">
+  <div class="col-md-6 visible--desktop total-products">
     {if $listing.pagination.total_items > 1}
       <p class="mb-0">{l s='There are %product_count% products.' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}</p>
     {else if $listing.pagination.total_items > 0}
@@ -31,7 +31,7 @@
     {/if}
   </div>
   <div class="col-md-6">
-    <div class="d-flex sort-by-row w-100 justify-content-between justify-content-md-end align-items-center">
+    <div class="sort-by-row justify-content-md-end">
 
       {block name='sort_by'}
         {include file='catalog/_partials/sort-orders.tpl' sort_orders=$listing.sort_orders}
