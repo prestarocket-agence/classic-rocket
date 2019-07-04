@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {if isset($breadcrumb.links[1])}
-<nav data-depth="{$breadcrumb.count}" class="d-none d-md-block">
+<nav data-depth="{$breadcrumb.count}" class="d--none visible--desktop">
   <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb">
       {block name='breadcrumb'}
       {foreach from=$breadcrumb.links item=path name=breadcrumb}

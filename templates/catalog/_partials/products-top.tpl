@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div id="js-product-list-top" class="row justify-content-between products-selection my-3 align-items-center">
-  <div class="col-md-6 d-none d-md-block total-products">
+  <div class="col-md-6 d--none visible--desktop total-products">
     {if $listing.pagination.total_items > 1}
       <p class="mb-0">{l s='There are %product_count% products.' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}</p>
     {else if $listing.pagination.total_items > 0}
@@ -38,13 +38,13 @@
       {/block}
 
       {if !empty($listing.rendered_facets)}
-          <button type="button" id="search_filter_toggler" class="btn btn-secondary d-md-none" data-target="#offcanvas_search_filter" data-toggle="modal">
+          <button type="button" id="search_filter_toggler" class="btn btn-secondary visible--mobile" data-target="#offcanvas_search_filter" data-toggle="modal">
             {l s='Filter' d='Shop.Theme.Actions'}
           </button>
       {/if}
     </div>
   </div>
-    <div class="d-md-none text-sm-center mt-1 col-12 ">
+    <div class="visible--mobile text-sm-center mt-1 col-12 ">
         {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=[
         '%from%' => $listing.pagination.items_shown_from ,
         '%to%' => $listing.pagination.items_shown_to,

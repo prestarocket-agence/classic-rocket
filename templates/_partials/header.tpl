@@ -31,7 +31,7 @@
 {block name='header_nav'}
   <nav class="header-nav border-bottom">
     <div class="container header__container">
-      <div class="row d-none d-md-flex align-items-center">
+      <div class="row d--none d-md-flex align-items-center">
         <div class="col-md-4">
             {hook h='displayNav1'}
         </div>
@@ -39,7 +39,7 @@
             {hook h='displayNav2'}
         </div>
       </div>
-      <div class="d-md-none d-flex justify-content-between align-items-center w-100 mobile no-gutters">
+      <div class="visible--mobile d-flex justify-content-between align-items-center w-100 mobile no-gutters">
         <div class="col-4">
           <button id="menu-icon" class="btn" data-toggle="modal" data-target="#mobile_top_menu_wrapper">
             <i class="material-icons d-inline">&#xE5D2;</i>
@@ -62,7 +62,7 @@
   <div class="header-top border-bottom">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-2 d-none d-md-block" id="_desktop_logo">
+        <div class="col-md-2 d--none visible--desktop" id="_desktop_logo">
           <a href="{$urls.base_url}">
             <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
           </a>

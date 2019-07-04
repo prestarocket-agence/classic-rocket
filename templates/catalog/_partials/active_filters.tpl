@@ -25,7 +25,7 @@
 
 <div id="js-active-search-filters" class="{if $activeFilters|count}active_filters mb-3 p-3 d-flex align-items-center{else}hide{/if}">
   {block name='active_filters_title'}
-    <span class="h5 m-0 mr-2 {if $activeFilters|count}active-filter-title{else}d-none{/if}">{l s='Active filters' d='Shop.Theme.Global'}</span>
+    <span class="h5 m-0 mr-2 {if $activeFilters|count}active-filter-title{else}d--none{/if}">{l s='Active filters' d='Shop.Theme.Global'}</span>
   {/block}
 
   {if $activeFilters|count}
