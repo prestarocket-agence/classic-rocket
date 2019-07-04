@@ -7,3 +7,13 @@ img[data-lazy] {
 .cursor-pointer{
   cursor: pointer;
 }
+.visible--desktop{
+  @include media-breakpoint-mobile(){
+    display: none;
+  }
+}
+.visible--mobile{
+  @include media-breakpoint-desktop(){
+    display: none;
+  }
+}
