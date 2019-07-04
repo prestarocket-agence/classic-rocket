@@ -190,7 +190,7 @@
                          {foreach from=$product.attachments item=attachment}
                            <div class="attachment">
                              <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a>
-                             <p class="small">{$attachment.description}</p
+                             <p class="small">{$attachment.description}</p>
                              <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
                                {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
                              </a>
