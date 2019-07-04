@@ -41,7 +41,7 @@
 .product-line__img{
   margin-right: $spacer;
 }
-@include media-breakpoint-down(md) {
+@include media-breakpoint-mobile {
   .product-line__img{
     width: 100px;
     height: auto;

@@ -46,7 +46,7 @@
   }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-mobile {
   .footer__title{
     &--desktop{
 
