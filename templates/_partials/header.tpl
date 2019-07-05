@@ -31,7 +31,6 @@
 {block name='header_nav'}
   <nav class="header-nav border-bottom">
     <div class="container header__container">
-<<<<<<< HEAD
       <div class="row visible--desktop displayNav1">
         <div class="col-md-4">
             {hook h='displayNav1'}
@@ -41,17 +40,6 @@
         </div>
       </div>
       <div class="visible--mobile mobile no-gutters">
-=======
-      <div class="row visible--desktop header__nav">
-        <div class="col-md-4">
-            {hook h='displayNav1'}
-        </div>
-        <div class="col-md-8 header-nav__nav2 right-nav">
-            {hook h='displayNav2'}
-        </div>
-      </div>
-      <div class="visible--mobile header-mobile mobile no-gutters">
->>>>>>> 69e62a512c76de44444416e7e84b9b776698aa37
         <div class="col-4">
           <button id="menu-icon" class="btn" data-toggle="modal" data-target="#mobile_top_menu_wrapper">
             <i class="material-icons d-inline">&#xE5D2;</i>
@@ -60,11 +48,7 @@
         <div class="col-4">
           <div class="top-logo" id="_mobile_logo"></div>
         </div>
-<<<<<<< HEAD
         <div class="col-4 mobile-user right-nav">
-=======
-        <div class="col-4 header-mobile__user-cart right-nav">
->>>>>>> 69e62a512c76de44444416e7e84b9b776698aa37
           <div id="_mobile_user_info"></div>
           <div id="_mobile_cart" class="mobile-cart"></div>
         </div>
@@ -83,11 +67,7 @@
             <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
           </a>
         </div>
-<<<<<<< HEAD
         <div class="col-md-10 col-sm-12 displayTop">
-=======
-        <div class="col-md-10 col-sm-12 header__top">
->>>>>>> 69e62a512c76de44444416e7e84b9b776698aa37
             {hook h='displayTop'}
         </div>
       </div>

@@ -23,11 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='product_miniature_item'}
-<<<<<<< HEAD
     <article class="product-miniature js-product-miniature mb-3" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}">
-=======
-    <article class="product-miniature js-product-miniature" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemscope itemtype="http://schema.org/Product">
->>>>>>> 69e62a512c76de44444416e7e84b9b776698aa37
         <div class="card card-product">
 
             <div class="card-img-top product__card-img">
@@ -47,11 +43,7 @@
                         {/if}
                     </a>
                 {/block}
-<<<<<<< HEAD
                 <div class="highlighted-informations text-center p-2{if !$product.main_variants} no-variants{/if} d--none visible--desktop">
-=======
-                <div class="highlighted-informations{if !$product.main_variants} no-variants{/if} visible--desktop">
->>>>>>> 69e62a512c76de44444416e7e84b9b776698aa37
                     {block name='quick_view'}
                         <span class="quick-view" data-link-action="quickview">
                       <i class="material-icons search">&#xE8B6;</i> {l s='Quick view' d='Shop.Theme.Actions'}

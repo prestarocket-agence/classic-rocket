@@ -247,7 +247,6 @@
   @extend .align-self-stretch;
   padding-left: $spacer;
 }
-<<<<<<< HEAD
 
 //modal cart
 .modal-cart__image{
@@ -306,7 +305,6 @@
 .products-selection{
   justify-content: space-between;
   align-items: center; 
-=======
 .pack-miniature-item{
   margin-bottom: $spacer * 2;
 }
@@ -361,15 +359,12 @@
 }
 .product__quantity{
   margin-bottom: 0;
->>>>>>> 69e62a512c76de44444416e7e84b9b776698aa37
 }
 .sort-by-row{
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-<<<<<<< HEAD
-=======
 }
 .total__item-show{
   text-align: center;
@@ -401,5 +396,4 @@
 }
 .nav-tabs{
   justify-content: center;
->>>>>>> 69e62a512c76de44444416e7e84b9b776698aa37
 }

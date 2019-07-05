@@ -32,11 +32,7 @@
 
   {else}
 
-<<<<<<< HEAD
     <ul class="nav nav-tabs nav-tabs--center my-2 nav-tabs-info" role="tablist">
-=======
-    <ul class="nav nav-tabs my-2 nav-tabs-info" role="tablist">
->>>>>>> 69e62a512c76de44444416e7e84b9b776698aa37
       <li class="nav-item">
         <a
           class="nav-link {if !$show_login_form}active{/if}"

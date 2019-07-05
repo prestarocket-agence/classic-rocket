@@ -7,8 +7,6 @@ img[data-lazy] {
 .cursor-pointer{
   cursor: pointer;
 }
-<<<<<<< HEAD
-=======
 @mixin media-breakpoint-desktop() {
 
   @include media-breakpoint-up(lg) {
@@ -21,7 +19,6 @@ img[data-lazy] {
     @content;
   }
 }
->>>>>>> 69e62a512c76de44444416e7e84b9b776698aa37
 .visible--desktop{
   @include media-breakpoint-mobile(){
     display: none;
@@ -32,7 +29,6 @@ img[data-lazy] {
     display: none;
   }
 }
-<<<<<<< HEAD
 .d--none{
   display: none;
 }
@@ -40,11 +36,9 @@ img[data-lazy] {
   display: flex;
   justify-content: space-between;
 }
-=======
 
 .full-bleed {
   width: 100vw;
   margin-left: 50%;
   transform: translateX(-50%);
 }
->>>>>>> 69e62a512c76de44444416e7e84b9b776698aa37

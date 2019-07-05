@@ -22,11 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<<<<<<< HEAD
 <div id="js-product-list-top" class="row products-selection my-3">
-=======
-<div id="js-product-list-top" class="row justify-content-between products-selection my-3 align-items-center">
->>>>>>> 69e62a512c76de44444416e7e84b9b776698aa37
   <div class="col-md-6 visible--desktop total-products">
     {if $listing.pagination.total_items > 1}
       <p class="product__quantity">{l s='There are %product_count% products.' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}</p>
@@ -48,11 +44,7 @@
       {/if}
     </div>
   </div>
-<<<<<<< HEAD
     <div class="visible--mobile text-sm-center mt-1 col-12 ">
-=======
-    <div class="total__item-show visible--mobile col-12 ">
->>>>>>> 69e62a512c76de44444416e7e84b9b776698aa37
         {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=[
         '%from%' => $listing.pagination.items_shown_from ,
         '%to%' => $listing.pagination.items_shown_to,

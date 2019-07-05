@@ -33,11 +33,7 @@
      </div>
      <div class="modal-body">
       <div class="row">
-<<<<<<< HEAD
         <div class="col col-sm-6 d--none d-sm-block">
-=======
-        <div class="col col-sm-6 visible--mobile">
->>>>>>> 69e62a512c76de44444416e7e84b9b776698aa37
           {block name='product_cover_thumbnails'}
             {include file='catalog/_partials/product-cover-thumbnails.tpl'}
           {/block}
