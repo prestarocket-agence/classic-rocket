@@ -19,8 +19,13 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
     "flexibility": "^1.0.5",
+<<<<<<< HEAD
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
+=======
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+>>>>>>> 69e62a512c76de44444416e7e84b9b776698aa37
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",

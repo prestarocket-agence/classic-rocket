@@ -25,7 +25,11 @@
   <div id="search_filters" class="search_filters">
 
     {block name='facets_title'}
+<<<<<<< HEAD
       <p class="text-uppercase h6 visible--desktop">{l s='Filter By' d='Shop.Theme.Actions'}</p>
+=======
+      <p class="facets__title h6 visible--desktop">{l s='Filter By' d='Shop.Theme.Actions'}</p>
+>>>>>>> 69e62a512c76de44444416e7e84b9b776698aa37
     {/block}
 
     {block name='facets_clearall_button'}
@@ -39,13 +43,21 @@
     {foreach from=$facets item="facet"}
       {if $facet.displayed}
         <div class="facet clearfix facet-block">
+<<<<<<< HEAD
           <p class="h6 facet-title d--none visible--desktop">{$facet.label}</p>
+=======
+          <p class="h6 facet-title visible--desktop">{$facet.label}</p>
+>>>>>>> 69e62a512c76de44444416e7e84b9b776698aa37
           {assign var=_expand_id value=10|mt_rand:100000}
           {assign var=_collapse value=true}
           {foreach from=$facet.filters item="filter"}
             {if $filter.active}{assign var=_collapse value=false}{/if}
           {/foreach}
+<<<<<<< HEAD
           <div class="title visible--mobile d-flex justify-content-between" data-target="#facet_{$_expand_id}" data-toggle="collapse"{if !$_collapse} aria-expanded="true"{/if}>
+=======
+          <div class="facet__title visible--mobile" data-target="#facet_{$_expand_id}" data-toggle="collapse"{if !$_collapse} aria-expanded="true"{/if}>
+>>>>>>> 69e62a512c76de44444416e7e84b9b776698aa37
             <p class="h6 facet-title">{$facet.label}</p>
             <span>
               <span class="navbar-toggler collapse-icons">
