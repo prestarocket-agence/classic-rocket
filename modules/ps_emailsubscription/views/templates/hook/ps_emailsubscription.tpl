@@ -32,7 +32,7 @@
         <div class="input-group">
           <input
                   name="email"
-                  class="form-control{if isset($nw_error)} is-invalid{/if}"
+                  class="form-control{if isset($nw_error) and $nw_error} is-invalid{/if}"
                   type="email"
                   value="{$value}"
                   placeholder="{l s='Your email address' d='Shop.Forms.Labels'}"
