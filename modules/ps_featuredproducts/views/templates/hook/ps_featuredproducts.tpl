@@ -33,6 +33,7 @@
     "slidesToScroll": 1,
     "mobileFirst":true,
     "arrows":true,
+    "rows":0,
     "responsive": [
       {ldelim}
         "breakpoint": 992,
