@@ -32,14 +32,14 @@
   <h6>{l s='Here are the orders you\'ve placed since your account was created.' d='Shop.Theme.Customeraccount'}</h6>
 
   {if $orders}
-    <table class="table table-striped table-bordered d--none d-md-table">
+    <table class="table table-striped table-bordered visible--desktop">
       <thead class="thead-default">
         <tr>
           <th>{l s='Order reference' d='Shop.Theme.Checkout'}</th>
           <th>{l s='Date' d='Shop.Theme.Checkout'}</th>
           <th>{l s='Total price' d='Shop.Theme.Checkout'}</th>
-          <th class="d--none d-lg-table-cell">{l s='Payment' d='Shop.Theme.Checkout'}</th>
-          <th class="d--none d-lg-table-cell">{l s='Status' d='Shop.Theme.Checkout'}</th>
+          <th class="visible--desktop">{l s='Payment' d='Shop.Theme.Checkout'}</th>
+          <th class="visible--desktop">{l s='Status' d='Shop.Theme.Checkout'}</th>
           <th>{l s='Invoice' d='Shop.Theme.Checkout'}</th>
           <th>&nbsp;</th>
         </tr>

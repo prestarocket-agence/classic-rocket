@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='order_products_table'}
-  <form class="needs-validation" id="order-return-form" action="{$urls.pages.order_follow}" method="post" novalidate autocomplete="false">
+  <form class="w-100 mw-100 form--100" id="order-return-form" action="{$urls.pages.order_follow}" method="post" novalidate autocomplete="false">
 
     <div class="box visible--desktop">
       <table id="order-products" class="table table-bordered return">
