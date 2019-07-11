@@ -25,7 +25,7 @@
 {block name='order_products_table'}
   <form class="needs-validation" id="order-return-form" action="{$urls.pages.order_follow}" method="post" novalidate autocomplete="false">
 
-    <div class="box d--none visible--desktop">
+    <div class="box visible--desktop">
       <table id="order-products" class="table table-bordered return">
         <thead class="thead-default">
           <tr>

@@ -34,7 +34,7 @@
 
     <h6>{l s='Here is a list of pending merchandise returns' d='Shop.Theme.Customeraccount'}</h6>
 
-    <table class="table table-striped d--none d-md-table">
+    <table class="table table-striped visible--desktop">
       <thead class="thead-default">
         <tr>
           <th>{l s='Order' d='Shop.Theme.Customeraccount'}</th>

@@ -50,7 +50,7 @@
             <th scope="row">{$order.details.reference}</th>
             <td>{$order.details.order_date}</td>
             <td class="text-right">{$order.totals.total.value}</td>
-            <td class="d--none d--none d-lg-table-cell">{$order.details.payment}</td>
+            <td class="d--none d-lg-table-cell">{$order.details.payment}</td>
             <td>
               <span
                 class="badge badge-pill {$order.history.current.contrast}"
