@@ -7,7 +7,7 @@
   @extend .col-6;
 
 }
-@include media-breakpoint-desktop {
+@include media-breakpoint-up(lg) {
   .product-miniature{
     @include make-col(4);
   }
@@ -255,7 +255,7 @@
 
   height: auto;
 }
-@include media-breakpoint-mobile {
+@include media-breakpoint-down(md) {
   .modal-cart__image{
     max-width: 120px;
   }
@@ -309,6 +309,7 @@
 .pack-miniature-item{
   margin-bottom: $spacer * 2;
 }
+<<<<<<< HEAD
 .ratio1_1{
   display: block;
 }
@@ -361,6 +362,8 @@
 .product__quantity{
   margin-bottom: 0;
 }
+=======
+>>>>>>> f/removeBSflexclass
 .sort-by-row{
   display: flex;
   width: 100%;
@@ -379,7 +382,11 @@
 .product__download{
   text-transform: uppercase;
 }
+<<<<<<< HEAD
 .delivery-address{
+=======
+.card--address{
+>>>>>>> f/removeBSflexclass
   height: 100%;
   text-align: center;
   justify-content: center;
