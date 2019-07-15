@@ -41,7 +41,7 @@
 .product-line__img{
   margin-right: $spacer;
 }
-@include media-breakpoint-down(md) {
+@include media-breakpoint-mobile {
   .product-line__img{
     width: 100px;
     height: auto;
@@ -88,5 +88,22 @@
       opacity: 1;
     }
 
+  }
+}
+.nav-tabs--center{
+  justify-content: center;
+}
+@include media-breakpoint-mobile{
+  .checkout {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    padding: 1rem;
+    background-color: rgba(0,0,0,.4);
+    a{
+      width: 100%;
+    }
   }
 }

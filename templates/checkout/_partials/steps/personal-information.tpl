@@ -32,7 +32,7 @@
 
   {else}
 
-    <ul class="nav nav-tabs my-2 nav-tabs-info justify-content-center" role="tablist">
+    <ul class="nav nav-tabs nav-tabs--center my-2 nav-tabs-info" role="tablist">
       <li class="nav-item">
         <a
           class="nav-link {if !$show_login_form}active{/if}"

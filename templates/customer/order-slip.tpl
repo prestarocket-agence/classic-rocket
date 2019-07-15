@@ -31,7 +31,7 @@
 {block name='page_content'}
   <h6>{l s='Credit slips you have received after canceled orders.' d='Shop.Theme.Customeraccount'}</h6>
   {if $credit_slips}
-    <table class="table table-striped d-none d-md-table">
+    <table class="table table-striped visible--desktop">
       <thead class="thead-default">
         <tr>
           <th>{l s='Order' d='Shop.Theme.Customeraccount'}</th>
@@ -53,7 +53,7 @@
         {/foreach}
       </tbody>
     </table>
-    <div class="credit-slips d-md-none">
+    <div class="credit-slips visible--mobile">
       {foreach from=$credit_slips item=slip}
         <div class="credit-slip">
           <ul>
