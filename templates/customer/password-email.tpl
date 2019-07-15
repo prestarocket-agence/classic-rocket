@@ -54,8 +54,8 @@
           <input type="email" name="email" id="email" value="{if isset($smarty.post.email)}{$smarty.post.email|stripslashes}{/if}" class="form-control" required autocomplete="email">
           <div class="invalid-feedback js-invalid-feedback-browser"></div>
       </div>
-      <button class="form-control-submit btn btn-primary d-none d-sm-block" name="submit" type="submit">
-        <span class="d-none d-sm-inline">{l s='Send reset link' d='Shop.Theme.Actions'}</span>
+      <button class="form-control-submit btn btn-primary visible--mobile" name="submit" type="submit">
+        <span class="visible--mobile">{l s='Send reset link' d='Shop.Theme.Actions'}</span>
         <span class="d-sm-none">{l s='Send' d='Shop.Theme.Actions'}</span>
       </button>
 

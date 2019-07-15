@@ -41,7 +41,7 @@
               {block name='product_flags'}
                 <ul class="product-flags">
                   {foreach from=$product.flags item=flag}
-                    <li class="product-flag {$flag.type}{if $flag.type == "discount"} d-none{/if}">{$flag.label}</li>
+                    <li class="product-flag {$flag.type}{if $flag.type == "discount"} d--none{/if}">{$flag.label}</li>
                   {/foreach}
                 </ul>
               {/block}
@@ -186,7 +186,7 @@
                    {if $product.attachments}
                     <div class="tab-pane fade" id="attachments" role="tabpanel">
                        <section class="product-attachments">
-                         <p class="h4 text-uppercase">{l s='Download' d='Shop.Theme.Actions'}</p>
+                         <p class="h4 product__download">{l s='Download' d='Shop.Theme.Actions'}</p>
                          {foreach from=$product.attachments item=attachment}
                            <div class="attachment">
                              <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a>

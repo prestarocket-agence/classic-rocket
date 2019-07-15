@@ -26,7 +26,7 @@
   <section class="checkout-step -unreachable card" id="{$identifier}">
     <div class="card-header">
     <h1 class="step-title h3">
-      <span class="step-number p-2">{$position}</span> {$title}
+      <span class="step-number">{$position}</span> {$title}
     </h1>
     </div>
   </section>

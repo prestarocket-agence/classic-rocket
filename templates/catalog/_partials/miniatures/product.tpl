@@ -26,9 +26,9 @@
     <article class="product-miniature js-product-miniature mb-3" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}">
         <div class="card card-product">
 
-            <div class="card-img-top position-relative">
+            <div class="card-img-top product__card-img">
                 {block name='product_thumbnail'}
-                    <a href="{$product.url}" class="thumbnail product-thumbnail rc ratio1_1 d-block">
+                    <a href="{$product.url}" class="thumbnail product-thumbnail rc ratio1_1">
                         {if $product.cover}
                             <img
                                     data-src = "{$product.cover.bySize.home_default.url}"
@@ -43,7 +43,7 @@
                         {/if}
                     </a>
                 {/block}
-                <div class="highlighted-informations text-center p-2{if !$product.main_variants} no-variants{/if} d-none d-md-block">
+                <div class="highlighted-informations text-center p-2{if !$product.main_variants} no-variants{/if} visible--desktop">
                     {block name='quick_view'}
                         <span class="quick-view" data-link-action="quickview">
                       <i class="material-icons search">&#xE8B6;</i> {l s='Quick view' d='Shop.Theme.Actions'}

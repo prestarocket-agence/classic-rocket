@@ -25,11 +25,11 @@
   <div id="search_filters" class="search_filters">
 
     {block name='facets_title'}
-      <p class="text-uppercase h6 d-none d-md-block">{l s='Filter By' d='Shop.Theme.Actions'}</p>
+      <p class="text-uppercase h6 visible--desktop">{l s='Filter By' d='Shop.Theme.Actions'}</p>
     {/block}
 
     {block name='facets_clearall_button'}
-      <div id="_desktop_search_filters_clear_all" class="d-none d-md-block clear-all-wrapper">
+      <div id="_desktop_search_filters_clear_all" class="visible--desktop clear-all-wrapper">
         <button data-search-url="{$clear_all_link}" class="btn btn-secondary btn-block js-search-filters-clear-all mb-3">
           <i class="material-icons">&#xE14C;</i>
           {l s='Clear all' d='Shop.Theme.Actions'}
@@ -39,13 +39,13 @@
     {foreach from=$facets item="facet"}
       {if $facet.displayed}
         <div class="facet clearfix facet-block">
-          <p class="h6 facet-title d-none d-md-block">{$facet.label}</p>
+          <p class="h6 facet-title d--none visible--desktop">{$facet.label}</p>
           {assign var=_expand_id value=10|mt_rand:100000}
           {assign var=_collapse value=true}
           {foreach from=$facet.filters item="filter"}
             {if $filter.active}{assign var=_collapse value=false}{/if}
           {/foreach}
-          <div class="title d-md-none d-flex justify-content-between" data-target="#facet_{$_expand_id}" data-toggle="collapse"{if !$_collapse} aria-expanded="true"{/if}>
+          <div class="title visible--mobile d-flex justify-content-between" data-target="#facet_{$_expand_id}" data-toggle="collapse"{if !$_collapse} aria-expanded="true"{/if}>
             <p class="h6 facet-title">{$facet.label}</p>
             <span>
               <span class="navbar-toggler collapse-icons">
