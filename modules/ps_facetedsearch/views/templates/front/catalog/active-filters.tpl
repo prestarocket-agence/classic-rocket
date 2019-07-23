@@ -24,20 +24,17 @@
   *}
 <section id="js-active-search-filters" class="{if $activeFilters|count}active_filters{else}hide{/if}">
   {block name='active_filters_title'}
-    <h1 class="h6 {if $activeFilters|count}active-filter-title{else}hidden-xs-up{/if}">{l s='Active filters' d='Shop.Theme.Global'}</h1>
+    <p class="h6 {if $activeFilters|count}active-filter__title{else}d--none{/if}">{l s='Active filters' d='Shop.Theme.Global'}</p>
   {/block}
 
   {if $activeFilters|count}
-    <ul>
+    <div class="active_filters__list">
       {foreach from=$activeFilters item="filter"}
         {block name='active_filters_item'}
-          <li class="filter-block">
-            {l s='%1$s: ' d='Shop.Theme.Catalog' sprintf=[$filter.facetLabel]}
-            {$filter.label}
-            <a class="js-search-link" href="{$filter.nextEncodedFacetsURL}"><i class="material-icons close">&#xE5CD;</i></a>
-          </li>
+            <a class="js-search-link active_filters__list-item btn btn-sm btn-light" href="{$filter.nextEncodedFacetsURL}"><i class="material-icons">&#xE5CD;</i> {l s='%1$s: ' d='Shop.Theme.Catalog' sprintf=[$filter.facetLabel]}
+                <strong>{$filter.label}</strong></a>
         {/block}
       {/foreach}
-    </ul>
+    </div>
   {/if}
 </section>

@@ -23,15 +23,15 @@
   * International Registered Trademark & Property of PrestaShop SA
   *}
 {if $displayedFacets|count}
-  <div id="search_filters">
+  <div id="search_filters" class="search_filters">
     {block name='facets_title'}
-      <p class="text-uppercase h6 hidden-sm-down">{l s='Filter By' d='Shop.Theme.Actions'}</p>
+      <p class="text-uppercase h6 visible--desktop">{l s='Filter By' d='Shop.Theme.Actions'}</p>
     {/block}
 
     {block name='facets_clearall_button'}
       {if $activeFilters|count}
-        <div id="_desktop_search_filters_clear_all" class="hidden-sm-down clear-all-wrapper">
-          <button data-search-url="{$clear_all_link}" class="btn btn-tertiary js-search-filters-clear-all">
+        <div class="clear-all-wrapper">
+          <button data-search-url="{$clear_all_link}" class="btn--clearfilter btn btn-sm btn-block btn-outline-secondary js-search-filters-clear-all">
             <i class="material-icons">&#xE14C;</i>
             {l s='Clear all' d='Shop.Theme.Actions'}
           </button>
@@ -40,121 +40,69 @@
     {/block}
 
     {foreach from=$displayedFacets item="facet"}
-      <section class="facet clearfix">
-        <p class="h6 facet-title hidden-sm-down">{$facet.label}</p>
+
         {assign var=_expand_id value=10|mt_rand:100000}
         {assign var=_collapse value=true}
         {foreach from=$facet.filters item="filter"}
-          {if $filter.active}{assign var=_collapse value=false}{/if}
+            {if $filter.active}{assign var=_collapse value=false}{/if}
         {/foreach}
+      <section class="facet__block">
+          <div class="facet__header">
+              <p class="facet__title">{$facet.label}</p>
+              <a href="#facet_{$_expand_id}" class="icon-collapse visible--mobile stretched-link" data-toggle="collapse"{if !$_collapse} aria-expanded="true"{/if}>
+                  <i class="material-icons">&#xE313;</i>
+              </a>
+          </div>
 
-        <div class="title hidden-md-up" data-target="#facet_{$_expand_id}" data-toggle="collapse"{if !$_collapse} aria-expanded="true"{/if}>
-          <p class="h6 facet-title">{$facet.label}</p>
-          <span class="float-xs-right">
-            <span class="navbar-toggler collapse-icons">
-              <i class="material-icons add">&#xE313;</i>
-              <i class="material-icons remove">&#xE316;</i>
-            </span>
-          </span>
-        </div>
 
         {if in_array($facet.widgetType, ['radio', 'checkbox'])}
           {block name='facet_item_other'}
-            <ul id="facet_{$_expand_id}" class="collapse{if !$_collapse} in{/if}">
+            <div id="facet_{$_expand_id}" class="collpase--facet collapse{if !$_collapse} show{/if}">
               {foreach from=$facet.filters key=filter_key item="filter"}
                 {if !$filter.displayed}
                   {continue}
                 {/if}
-
-                <li>
-                  <label class="facet-label{if $filter.active} active {/if}" for="facet_input_{$_expand_id}_{$filter_key}">
-                    {if $facet.multipleSelectionAllowed}
-                      <span class="custom-checkbox">
-                        <input
-                          id="facet_input_{$_expand_id}_{$filter_key}"
-                          data-search-url="{$filter.nextEncodedFacetsURL}"
-                          type="checkbox"
-                          {if $filter.active }checked{/if}
-                        >
-                        {if isset($filter.properties.color)}
-                          <span class="color" style="background-color:{$filter.properties.color}"></span>
-                        {elseif isset($filter.properties.texture)}
-                          <span class="color texture" style="background-image:url({$filter.properties.texture})"></span>
-                        {else}
-                          <span {if !$js_enabled} class="ps-shown-by-js" {/if}><i class="material-icons rtl-no-flip checkbox-checked">&#xE5CA;</i></span>
-                        {/if}
-                      </span>
-                    {else}
-                      <span class="custom-radio">
-                        <input
-                          id="facet_input_{$_expand_id}_{$filter_key}"
-                          data-search-url="{$filter.nextEncodedFacetsURL}"
-                          type="radio"
-                          name="filter {$facet.label}"
-                          {if $filter.active }checked{/if}
-                        >
-                        <span {if !$js_enabled} class="ps-shown-by-js" {/if}></span>
-                      </span>
-                    {/if}
-
-                    <a
-                      href="{$filter.nextEncodedFacetsURL}"
-                      class="_gray-darker search-link js-search-link"
-                      rel="nofollow"
-                    >
-                      {$filter.label}
-                      {if $filter.magnitude and $show_quantities}
-                        <span class="magnitude">({$filter.magnitude})</span>
-                      {/if}
-                    </a>
-                  </label>
-                </li>
+                  <div class="custom-control custom-{if $facet.multipleSelectionAllowed}checkbox{else}radio{/if}{if isset($filter.properties.color) || isset($filter.properties.texture)} custom-color{/if}{if $filter.active} custom-control--active{/if}">
+                      <input
+                              id="facet_input_{$_expand_id}_{$filter_key}"
+                              data-search-url="{$filter.nextEncodedFacetsURL}"
+                              type="{if $facet.multipleSelectionAllowed}checkbox{else}radio{/if}"
+                              class="custom-control-input"
+                              {if $filter.active } checked{/if}
+                      >
+                      <label class="custom-control-label" for="facet_input_{$_expand_id}_{$filter_key}">
+                          {if isset($filter.properties.color)}
+                              <span class="color" style="background-color:{$filter.properties.color}"></span>
+                          {elseif isset($filter.properties.texture)}
+                              <span class="color texture" style="background-image:url({$filter.properties.texture})"></span>
+                          {/if}
+                          <span class="color__label">{$filter.label}
+                          {*{if $filter.magnitude and $show_quantities}*}
+                              {*<span class="magnitude">({$filter.magnitude})</span>*}
+                          {*{/if}*}
+                          </span>
+                      </label>
+                  </div>
               {/foreach}
-            </ul>
+            </div>
           {/block}
 
         {elseif $facet.widgetType == 'dropdown'}
           {block name='facet_item_dropdown'}
-            <ul id="facet_{$_expand_id}" class="collapse{if !$_collapse} in{/if}">
-              <li>
-                <div class="col-sm-12 col-xs-12 col-md-12 facet-dropdown dropdown">
-                  <a class="select-title" rel="nofollow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {$active_found = false}
-                    <span>
-                      {foreach from=$facet.filters item="filter"}
-                        {if $filter.active}
-                          {$filter.label}
-                          {if $filter.magnitude and $show_quantities}
-                            ({$filter.magnitude})
-                          {/if}
-                          {$active_found = true}
-                        {/if}
-                      {/foreach}
-                      {if !$active_found}
-                        {l s='(no filter)' d='Shop.Theme.Global'}
-                      {/if}
-                    </span>
-                    <i class="material-icons float-xs-right">&#xE5C5;</i>
-                  </a>
-                  <div class="dropdown-menu">
-                    {foreach from=$facet.filters item="filter"}
-                      {if !$filter.active}
-                        <a
-                          rel="nofollow"
-                          href="{$filter.nextEncodedFacetsURL}"
-                          class="select-list"
-                        >
-                          {$filter.label}
-                          {if $filter.magnitude and $show_quantities}
-                            ({$filter.magnitude})
-                          {/if}
-                        </a>
-                      {/if}
-                    {/foreach}
+                  <div id="facet_{$_expand_id}" class="collpase--facet collapse{if !$_collapse} show{/if}">
+                      <select class="custom-select">
+                          <option value="">---</option>
+                          {foreach from=$facet.filters item="filter"}
+                              <option value="{$filter.nextEncodedFacetsURL}" {if $filter.active} selected="selected"{/if}>
+                                  {$filter.label}
+                                  {if $filter.magnitude and $show_quantities}
+                                      ({$filter.magnitude})
+                                  {/if}
+                              </option>
+                          {/foreach}
+                      </select>
+
                   </div>
-                </div>
-              </li>
-            </ul>
           {/block}
 
         {elseif $facet.widgetType == 'slider'}
