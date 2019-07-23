@@ -1,6 +1,6 @@
 @mixin media-breakpoint-desktop() {
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     @content;
   }
 }
