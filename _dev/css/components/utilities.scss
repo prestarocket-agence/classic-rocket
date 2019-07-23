@@ -7,18 +7,7 @@ img[data-lazy] {
 .cursor-pointer{
   cursor: pointer;
 }
-@mixin media-breakpoint-desktop() {
 
-  @include media-breakpoint-up(lg) {
-    @content;
-  }
-}
-@mixin media-breakpoint-mobile() {
-
-  @include media-breakpoint-down(md) {
-    @content;
-  }
-}
 .visible--desktop{
   @include media-breakpoint-mobile(){
     display: none;

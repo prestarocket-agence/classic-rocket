@@ -41,12 +41,12 @@
         </div>
 
         {block name='product_list_active_filters'}
-          <div id="" class="visible--desktop">
+          <div class="visible--desktop">
             {$listing.rendered_active_filters nofilter}
           </div>
         {/block}
 
-        <div id="">
+        <div>
           {block name='product_list'}
             {include file='catalog/_partials/products.tpl' listing=$listing}
           {/block}
