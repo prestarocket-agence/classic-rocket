@@ -27,7 +27,7 @@
 
     {block name='product_quantity'}
       <div class="product-quantity row align-items-center no-gutters">
-        <label for="quantity_wanted" class="mb-0 col-auto mt-2">{l s='Quantity' d='Shop.Theme.Catalog'}</label>
+        <label for="quantity_wanted" class="quantity__label col-auto">{l s='Quantity' d='Shop.Theme.Catalog'}</label>
         <div class="qty col-auto">
           <input
             type="text"

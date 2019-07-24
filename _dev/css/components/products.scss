@@ -326,13 +326,24 @@
   text-align: center;
   padding: $spacer * 2;
 }
+.quantity__label{
+  margin-bottom: 0;
+  margin-top: $spacer;
 
+}
+.product-add-to-cart{
+  .product-quantity{
+  margin-top: -($spacer);
+  }
 .qty{
-  margin: 0 $spacer * 3;
-  margin-top: $spacer * 2;
+  margin: 0 $spacer;
+  margin-top: $spacer;
+
 }
 .add{
-  margin-top: $spacer * 2;
+  margin-top: $spacer;
+
+}
 }
 .product-customization{
   margin-bottom: $spacer * 4;
