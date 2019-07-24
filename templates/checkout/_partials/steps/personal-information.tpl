@@ -1,7 +1,9 @@
 {extends file='checkout/_partials/steps/checkout-step.tpl'}
 
 {block name='step_content'}
-  {if $customer.is_logged && !$customer.is_guest}
+    {hook h='displayPersonalInformationTop' customer=$customer}
+
+    {if $customer.is_logged && !$customer.is_guest}
 
     <p class="identity">
       {* [1][/1] is for a HTML tag. *}
@@ -29,6 +31,20 @@
     {if !isset($empty_cart_on_logout) || $empty_cart_on_logout}
       <p><small>{l s='If you sign out now, your cart will be emptied.' d='Shop.Theme.Checkout'}</small></p>
     {/if}
+
+    <div class="clearfix">
+      <form method="GET" action="{$urls.pages.order}">
+        <button
+                class="continue btn btn-primary btn-lg"
+                name="controller"
+                type="submit"
+                value="order"
+        >
+            {l s='Continue' d='Shop.Theme.Actions'}
+        </button>
+      </form>
+
+    </div>
 
   {else}
 
