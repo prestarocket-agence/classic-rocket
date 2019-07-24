@@ -110,3 +110,14 @@
 .product-line__body{
   padding-right: $spacer/4;
 }
+
+//order confirmation table
+.total-value{
+  background-color: $gray-300;
+  font-weight: 700;
+}
+.table__title-head{
+  margin-bottom: 0;
+  font-size: $font-size-base;
+
+}

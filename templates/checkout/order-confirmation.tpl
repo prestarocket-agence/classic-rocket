@@ -37,11 +37,9 @@
 
 {block name='page_content_container'}
   <section id="content" class="page-content page-order-confirmation card mb-3 shadow">
-    <div class="card-body">
-      <div class="row">
-        <div class="col-12 col-lg-9">
         {block name='order_confirmation_table'}
-          {include
+        <div>
+      {include
             file='checkout/_partials/order-confirmation-table.tpl'
             products=$order.products
             subtotals=$order.subtotals
@@ -49,8 +47,8 @@
             labels=$order.labels
             add_product_link=false
           }
-        {/block}
         </div>
+        {/block}
         {block name='order_details'}
           <div id="order-details" class="col-12 col-lg-3">
             <h3 class="h3 card-title">{l s='Order details' d='Shop.Theme.Checkout'}:</h3>
@@ -67,8 +65,6 @@
           </div>
         {/block}
 
-      </div>
-    </div>
   </section>
 
   {block name='hook_payment_return'}
