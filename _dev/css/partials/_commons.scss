@@ -181,39 +181,7 @@ h1,.h1{
 .icon-collapse[aria-expanded=true]{
   transform: rotateZ(180deg);
 }
-/* CART */
-.promo-code{
-  margin-left: -$card-spacer-x;
-  margin-right: -$card-spacer-x;
-  padding: $card-spacer-x;
-  background-color: $promo-code-bg;
-}
-.promo-code-alert {
-  display: none;
-}
-.card-body .separator{
-  margin-left: -$card-spacer-x;
-  margin-right: -$card-spacer-x;
-}
 
-.cart-summary-line{
-  display: flex;
-  justify-content: space-between;
-}
-.media-list__item:not(:last-child){
-  margin-bottom: $spacer/2;
-
-}
-
-//cart summary
-.cart-item:not(:last-child){
-  border-bottom: 1px solid $border-color;
-  margin-bottom: $spacer;
-  padding-bottom: $spacer;
-}
-.product-line-info{
-  margin-bottom: $spacer/2;
-}
 /* CHECKOUT STEP */
 .order-checkout .card-body{
   padding-bottom: 0;

@@ -121,3 +121,92 @@
   font-size: $font-size-base;
 
 }
+/* CART */
+.promo-code{
+  margin-left: -$card-spacer-x;
+  margin-right: -$card-spacer-x;
+}
+.promo-code-alert {
+  display: none;
+}
+.cancel-promo{
+  text-align: center;
+}
+.card-body .separator{
+  margin-left: -$card-spacer-x;
+  margin-right: -$card-spacer-x;
+}
+
+.cart-summary-line{
+  display: flex;
+  justify-content: space-between;
+
+}
+.cart-total{
+font-weight: bold;
+}
+.card-body--summary{
+.cart-total{
+  @extend .total-value;
+  padding: $spacer/4;
+  .label{
+    margin-bottom: 0;
+  }
+}
+  &.card-body{
+    padding-bottom: 0;
+  }
+}
+.media-list__item:not(:last-child){
+  margin-bottom: $spacer/2;
+
+}
+
+//cart summary
+.cart-item:not(:last-child){
+  border-bottom: 1px solid $border-color;
+  margin-bottom: $spacer;
+  padding-bottom: $spacer;
+}
+.product-line-info{
+  margin-bottom: $spacer/2;
+}
+.promo-code-button{
+  text-align: center;
+  .collapse-button[aria-expanded=true] {
+    display: none;
+  }
+}
+.with-discounts{
+
+
+}
+.promo-highlighted{
+  text-align: center;
+  font-size: $font-size-sm;
+  margin-top: $spacer;
+  margin-bottom: $spacer/2;
+}
+.promo-discounts{
+  font-weight: $font-weight-bold;
+  text-align: center;
+  color: $gray-700;
+  .code{
+    color: $tertiary;
+  }
+}
+.form__add-voucher{
+  margin-bottom: $spacer;
+}
+.promo-code{
+  &__content{
+
+    padding: $card-spacer-x;
+    background-color: $promo-code-bg;
+  }
+ .collapse-button{
+   text-align: center;
+   display: block;
+   color: $primary;
+ }
+}

@@ -60,7 +60,7 @@
 
         {block name='cart_summary'}
           <div class="card cart-summary shadow mb-5">
-            <div class="card-body">
+            <div class="card-body card-body--summary">
             {block name='hook_shopping_cart'}
               {hook h='displayShoppingCart'}
             {/block}
