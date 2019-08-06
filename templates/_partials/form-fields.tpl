@@ -177,9 +177,7 @@
                 {l s='Show' d='Shop.Theme.Actions'}
               </button>
             </span>
-                        <small class="form-text text-muted">{l s='Your password must be at least %min% characters long.' d='Shop.Forms.Help' sprintf=['%min%' => 5]}</small>
-
-
+                        <small class="form-text text-muted">{l s='At least 5 characters long' d='Shop.Forms.Help'}</small>
                         {include file='_partials/form-errors.tpl' errors=$field.errors required=$field.required label=$field.label}
 
                     </div>
