@@ -23,22 +23,18 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<div class="card-block cart-summary-subtotals-container">
+<div class="cart-summary-subtotals-container">
 
-  {foreach from=$cart.subtotals item="subtotal"}
-    {if $subtotal.value && $subtotal.type !== 'tax'}
-      <div class="cart-summary-line cart-summary-subtotals" id="cart-subtotal-{$subtotal.type}">
-
-        <span class="label">
-            {$subtotal.label}
-        </span>
-
-        <span class="value">
-          {$subtotal.value}
-        </span>
-      </div>
-    {/if}
-  {/foreach}
+    {foreach from=$cart.subtotals item="subtotal"}
+        {if $subtotal && $subtotal.type !== 'tax'}
+          <div class="cart-summary-line cart-summary-subtotals mt-2" id="cart-subtotal-{$subtotal.type}">
+            <span class="label">{$subtotal.label}</span>
+            <span class="value">{$subtotal.value}</span>
+          </div>
+        {/if}
+    {/foreach}
 
 </div>
+
+
 

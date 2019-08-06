@@ -33,10 +33,12 @@
 
         <p class="mb-0">{$cart.summary_string}</p>
 
+        <p>
+          <a class="link__showsummary" href="#" data-toggle="collapse" data-target="#cart-summary-product-list">
+            <span class="small">{l s='show details' d='Shop.Theme.Actions'} </span><i class="material-icons">expand_more</i>
 
-          <a class="small" href="#" data-toggle="collapse" data-target="#cart-summary-product-list">
-            {l s='show details' d='Shop.Theme.Actions'}
           </a>
+        </p>
 
 
         {block name='cart_summary_product_list'}
@@ -52,14 +54,7 @@
     {/block}
 
     {block name='cart_summary_subtotals'}
-      {foreach from=$cart.subtotals item="subtotal"}
-        {if $subtotal && $subtotal.type !== 'tax'}
-          <div class="cart-summary-line cart-summary-subtotals mt-2" id="cart-subtotal-{$subtotal.type}">
-            <span class="label">{$subtotal.label}</span>
-            <span class="value">{$subtotal.value}</span>
-          </div>
-        {/if}
-      {/foreach}
+        {include file='checkout/_partials/cart-summary-subtotals.tpl' cart=$cart}
     {/block}
       {block name='cart_summary_voucher'}
           {include file='checkout/_partials/cart-voucher.tpl'}

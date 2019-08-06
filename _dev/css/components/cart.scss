@@ -163,6 +163,15 @@ font-weight: bold;
 }
 
 //cart summary
+.link__showsummary{
+  .material-icons{
+    @extend .icon-collapse;
+  }
+  &[aria-expanded=true] .material-icons{
+    transform: rotateZ(180deg);
+
+  }
+}
 .cart-item:not(:last-child){
   border-bottom: 1px solid $border-color;
   margin-bottom: $spacer;
