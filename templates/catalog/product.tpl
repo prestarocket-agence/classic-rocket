@@ -39,11 +39,7 @@
           <section class="page-content--product" id="content">
             {block name='page_content'}
               {block name='product_flags'}
-                <ul class="product-flags">
-                  {foreach from=$product.flags item=flag}
-                    <li class="product-flag {$flag.type}{if $flag.type == "discount"} d--none{/if}">{$flag.label}</li>
-                  {/foreach}
-                </ul>
+                  {include file='catalog/_partials/product-flags.tpl'}
               {/block}
 
               {block name='product_cover_thumbnails'}
