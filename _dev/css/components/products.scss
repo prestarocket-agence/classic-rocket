@@ -255,6 +255,18 @@
 
   height: auto;
 }
+.modal-cart__name{
+  color: $primary;
+  font-weight: $font-weight-bold;
+}
+.product-total{
+  font-weight: $font-weight-bold;
+}
+.cart-content{
+  > p:not(:last-child){
+    margin-bottom: $spacer/2;
+  }
+}
 @include media-breakpoint-mobile {
   .modal-cart__image{
     max-width: 120px;
