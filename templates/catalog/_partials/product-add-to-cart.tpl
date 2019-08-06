@@ -30,7 +30,7 @@
         <label for="quantity_wanted" class="quantity__label col-auto">{l s='Quantity' d='Shop.Theme.Catalog'}</label>
         <div class="qty col-auto">
           <input
-            type="text"
+            type="number"
             name="qty"
             id="quantity_wanted"
             value="{$product.quantity_wanted}"
@@ -54,6 +54,7 @@
             {l s='Add to cart' d='Shop.Theme.Actions'}
           </button>
         </div>
+          {hook h='displayProductActions' product=$product}
       </div>
     {/block}
 
