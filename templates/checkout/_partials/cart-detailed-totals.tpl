@@ -37,7 +37,9 @@
             {/if}
           </span>
           <div>
-          <span class="value">{if 'discount' == $subtotal.type}-&nbsp;{/if}{$subtotal.value}</span>
+          <span class="value">
+              {if 'discount' == $subtotal.type}-&nbsp;{/if}{$subtotal.value}
+          </span>
           {if $subtotal.type === 'shipping'}
               <small class="value">{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}</small>
           {/if}
