@@ -28,7 +28,7 @@
             <ul{if !isset($label)} class="ps-alert-error alert alert-danger"{/if}>
                 <li class="js-invalid-feedback-browser"></li>
                 {foreach $errors as $error}
-                    <li>{$error}</li>
+                    <li>{$error|nl2br nofilter}</li>
                 {/foreach}
             </ul>
         {/block}
