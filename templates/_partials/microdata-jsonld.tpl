@@ -106,6 +106,7 @@
         "unitCode": "{$product.weight_unit}"
     },{/if}
     {*{if empty($combinations)}*}
+  {if $product.show_price}
     "offers": {
         "@type": "Offer",
         "priceCurrency": "{$currency.iso_code}",
@@ -137,6 +138,7 @@
             "name": "{$shop.name}"
         }
     }
+    {/if}
 
 }
 
