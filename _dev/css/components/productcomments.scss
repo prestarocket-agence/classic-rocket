@@ -1,0 +1,15 @@
+.star{
+  color: #f1ab00;
+}
+/** product list **/
+.product-list-reviews{
+  .grade-stars{
+  display: flex;
+ justify-content: center;
+  }
+  .star{
+    .material-icons{
+      font-size: $font-size-base;
+    }
+  }
+}
