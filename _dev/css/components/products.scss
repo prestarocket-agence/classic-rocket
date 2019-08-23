@@ -334,6 +334,12 @@
 .product__card-img{
   position: relative;
 }
+.product__card-desc{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
 .highlighted-informations{
   text-align: center;
   padding: $spacer * 2;
