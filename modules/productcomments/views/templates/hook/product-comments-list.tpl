@@ -28,14 +28,12 @@
   var productCommentAbuseReportErrorMessage = '{l s='Sorry, your abuse report cannot be sent.' d='Modules.Productcomments.Shop' js=1}';
 </script>
 
-<div class="row">
-  <div class="col-md-12 col-sm-12" id="product-comments-list-header">
+<div class="comments__header" id="product-comments-list-header">
     <div class="comments-nb">
       <i class="material-icons shopping-cart">chat</i>
       {l s='Comments' d='Modules.Productcomments.Shop'} ({$nb_comments})
     </div>
     {include file='module:productcomments/views/templates/hook/average-grade-stars.tpl' grade=$average_grade}
-  </div>
 </div>
 
 {include file='module:productcomments/views/templates/hook/product-comment-item-prototype.tpl' assign="comment_prototype"}

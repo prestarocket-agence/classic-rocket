@@ -1,10 +1,14 @@
+.grade-stars,
+.comments-note{
+  display: flex;
+}
 .star{
   color: #f1ab00;
 }
+
 /** product list **/
 .product-list-reviews{
   .grade-stars{
-  display: flex;
  justify-content: center;
   }
   .star{
@@ -12,4 +16,19 @@
       font-size: $font-size-base;
     }
   }
+}
+/** product page **/
+.product-comments-additional-info{
+  margin: $spacer 0;
+}
+.comments-note{
+  .grade-stars{
+    margin-left: $spacer/4;
+  }
+  margin-bottom: $spacer/2;
+}
+.comments__header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

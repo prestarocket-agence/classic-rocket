@@ -33,7 +33,7 @@ jQuery(document).ready(function () {
   const commentPrototype = commentsList.data('comment-item-prototype');
 
   emptyProductComment.hide();
-  $('.grade-stars').rating();
+  // $('.grade-stars').rating();
 
   const updateCommentPostErrorModal = $('#update-comment-usefulness-post-error');
 
@@ -101,9 +101,20 @@ jQuery(document).ready(function () {
     commentTemplate = commentTemplate.replace(/@COMMENT_TOTAL_ADVICES@/, comment.total_usefulness);
 
     const $comment = $(commentTemplate);
-    $('.grade-stars', $comment).rating({
-      grade: comment.grade
-    });
+    var grade_html = '';
+      for (i = 0; i < 5; i++) {
+          grade_html +='<div class="star"><i class="material-icons">';
+          if (comment.grade <= i) {
+              grade_html +='&#xE83A;';
+          }else if (comment.grade>i && comment.grade < (i + 1)){
+              grade_html +='&#xE839;';
+          }
+          else{
+              grade_html +='&#xE838;';
+          }
+          grade_html +='</i></div>';
+      }
+    $('.grade-stars', $comment).html(grade_html);
     $('.useful-review', $comment).click(function() {
       updateCommentUsefulness($comment, comment.id_product_comment, 1);
     });
