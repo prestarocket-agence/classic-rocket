@@ -32,3 +32,22 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+/** comment list **/
+.product-comments__pagination{
+  ul{
+    @extend .pagination;
+    @extend .pagination-sm;
+  }
+    li{
+      @extend .page-item;
+      span{
+        @extend .page-link;
+      }
+      &:not(.disabled){
+        span:not(.current){
+          cursor: pointer;
+        }
+      }
+    }
+}

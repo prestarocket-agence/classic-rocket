@@ -49,7 +49,7 @@
 </div>
 <div class="row">
   <div class="col-md-12 col-sm-12" id="product-comments-list-footer">
-    <div id="product-comments-list-pagination"></div>
+    <div id="product-comments-list-pagination" class="product-comments__pagination"></div>
     {if $post_allowed && $nb_comments != 0}
       <button class="btn btn-comment btn-comment-big post-product-comment">
         <i class="material-icons shopping-cart">edit</i>
