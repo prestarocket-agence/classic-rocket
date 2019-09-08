@@ -1,3 +1,8 @@
+@include media-breakpoint-up(lg) {
+  .product-comment-modal .modal-dialog{
+    max-width: 774px;
+  }
+}
 .grade-stars,
 .comments-note{
   display: flex;
@@ -51,3 +56,31 @@
       }
     }
 }
+/* MODAL COMMENT */
+/* radio input star ratig */
+@import 'starability/variables';
+//$star-size: 24px;
+
+@import 'starability/starability-base';
+
+.starability-basic {
+  @include starability-base;
+  min-height: auto;
+}
+
+.product-criterion{
+  display: flex;
+  justify-items: center;
+  justify-content: flex-end;
+  margin-bottom: $spacer;
+  &__name{
+    width: auto;
+    font-size: $font-size-base;
+    margin-bottom: 0;
+    margin-right: $spacer/4;
+  }
+  label{
+    margin-bottom: 0;
+  }
+}
+

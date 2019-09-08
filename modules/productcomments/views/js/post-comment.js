@@ -69,7 +69,7 @@ jQuery(document).ready(function () {
   }
 
   function initCommentModal() {
-    $('#post-product-comment-modal .grade-stars').rating();
+    // $('#post-product-comment-modal .grade-stars').rating();
     $('body').on('click', '.post-product-comment', function (event) {
       event.preventDefault();
       showPostCommentModal();
