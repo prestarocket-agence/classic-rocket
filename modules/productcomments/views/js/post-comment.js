@@ -120,12 +120,12 @@ jQuery(document).ready(function () {
     formData.forEach(function(formField) {
       const fieldSelector = '#post-product-comment-form [name="'+formField.name+'"]';
       if (!formField.value) {
-        $(fieldSelector).addClass('error');
-        $(fieldSelector).removeClass('valid');
+        $(fieldSelector).addClass('is-invalid');
+        $(fieldSelector).removeClass('is-valid');
         isValid = false;
       } else {
-        $(fieldSelector).removeClass('error');
-        $(fieldSelector).addClass('valid');
+        $(fieldSelector).removeClass('is-invalid');
+        $(fieldSelector).addClass('is-valid');
       }
     });
 
