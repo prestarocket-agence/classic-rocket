@@ -35,14 +35,14 @@
   });
 </script>
 
-<div id="{$modal_id}" class="modal fade product-comment-modal" role="dialog" aria-hidden="true">
+<div id="{$modal_id}" class="modal fade product-comment-modal modal--{$modal_id}" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2>
+        <p class="h2">
           <i class="material-icons {$icon}">{$icon}</i>
           {$modal_title}
-        </h2>
+        </p>
       </div>
       <div class="modal-body">
         <div class="row">
@@ -50,14 +50,13 @@
             {$modal_message}
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12  col-sm-12 post-comment-buttons">
-            <button type="button" class="btn btn-comment btn-comment-huge" data-dismiss="modal" aria-label="{l s='OK' d='Modules.Productcomments.Shop'}">
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-comment btn-comment-huge" data-dismiss="modal" aria-label="{l s='OK' d='Modules.Productcomments.Shop'}">
               {l s='OK' d='Modules.Productcomments.Shop'}
-            </button>
-          </div>
+          </button>
         </div>
       </div>
+
     </div>
   </div>
 </div>

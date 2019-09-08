@@ -3,6 +3,25 @@
     max-width: 774px;
   }
 }
+.product-comment-modal{
+  .modal-footer{
+    margin-right: -$modal-inner-padding;
+    margin-left: -$modal-inner-padding;
+  }
+  .modal-body{
+    padding-bottom: 0;
+  }
+}
+.modal--product-comment-posted-modal{
+  .modal-header{
+    color:$success
+  }
+}
+.product-comment-post-error-message{
+  .modal-header{
+    color:$danger
+  }
+}
 .grade-stars,
 .comments-note{
   display: flex;

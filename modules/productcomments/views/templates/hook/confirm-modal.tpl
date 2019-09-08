@@ -46,27 +46,23 @@
 <div id="{$modal_id}" class="modal fade product-comment-modal" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h2>
+      <div class="modal-header modal-header--{$icon}">
+        <p class="h2">
           <i class="material-icons {$icon}">{$icon}</i>
           {$modal_title}
-        </h2>
+        </p>
       </div>
       <div class="modal-body">
-        <div class="row">
-          <div class="col-md-12  col-sm-12" id="{$modal_id}-message">
+          <div id="{$modal_id}-message">
             {$modal_message}
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12  col-sm-12 post-comment-buttons">
-            <button type="button" class="btn btn-comment-inverse btn-comment-huge refuse-button" data-dismiss="modal" aria-label="{l s='No' d='Modules.Productcomments.Shop'}">
+        <div class="modal-footer">
+          <button type="button" class="btn btn-comment-inverse btn-comment-huge refuse-button btn-outline-secondary" data-dismiss="modal" aria-label="{l s='No' d='Modules.Productcomments.Shop'}">
               {l s='No' d='Modules.Productcomments.Shop'}
-            </button>
-            <button type="button" class="btn btn-comment btn-comment-huge confirm-button" data-dismiss="modal" aria-label="{l s='Yes' d='Modules.Productcomments.Shop'}">
+          </button>
+          <button type="button" class="btn btn-comment btn-comment-huge confirm-button btn-primary" data-dismiss="modal" aria-label="{l s='Yes' d='Modules.Productcomments.Shop'}">
               {l s='Yes' d='Modules.Productcomments.Shop'}
-            </button>
-          </div>
+          </button>
         </div>
       </div>
     </div>

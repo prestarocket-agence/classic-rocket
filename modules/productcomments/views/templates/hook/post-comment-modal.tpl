@@ -120,17 +120,18 @@
                     <div>
                     </div>
                     <p class="required small"><sup>*</sup> {l s='Required fields' d='Modules.Productcomments.Shop'}</p>
+                    <div class="modal-footer post-comment-buttons">
+                        <button type="button" class="btn btn-comment-inverse btn-comment-big btn-outline-secondary" data-dismiss="modal"
+                                aria-label="{l s='Cancel' d='Modules.Productcomments.Shop'}">
+                            {l s='Cancel' d='Modules.Productcomments.Shop'}
+                        </button>
+                        <button type="submit" class="btn btn-comment btn-comment-big btn-primary">
+                            {l s='Send' d='Modules.Productcomments.Shop'}
+                        </button>
+                    </div>
                 </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-comment-inverse btn-comment-big btn-outline-secondary" data-dismiss="modal"
-                        aria-label="{l s='Cancel' d='Modules.Productcomments.Shop'}">
-                    {l s='Cancel' d='Modules.Productcomments.Shop'}
-                </button>
-                <button type="submit" class="btn btn-comment btn-comment-big btn-primary">
-                    {l s='Send' d='Modules.Productcomments.Shop'}
-                </button>
-            </div>
+
         </div>
     </div>
 </div>
