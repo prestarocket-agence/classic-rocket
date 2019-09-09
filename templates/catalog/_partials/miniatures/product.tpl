@@ -60,7 +60,7 @@
             {* end card-img-top*}
 
             <div class="card-body">
-                <div class="product-description">
+                <div class="product-description product__card-desc">
                     {block name='product_name'}
                         {if in_array($page.page_name, ['best-sales','category','manufacturer','new-products','prices-drop','product-list','search','supplier'])}
                         <h2 class="h3 product-title"><a href="{$product.url}">{$product.name|truncate:30:'...'}</a></h2>
@@ -68,7 +68,9 @@
                             <p class="h3 product-title"><a href="{$product.url}">{$product.name|truncate:30:'...'}</a></p>
                         {/if}
                     {/block}
-
+                    {block name='product_reviews'}
+                        {hook h='displayProductListReviews' product=$product}
+                    {/block}
                     {block name='product_price_and_shipping'}
                         {if $product.show_price}
                             <div class="product-price-and-shipping text-center">
@@ -95,11 +97,6 @@
 
 
                 </div>
-
-                {block name='product_reviews'}
-                    {hook h='displayProductListReviews' product=$product}
-                {/block}
-
 
             </div>
             {* end card body*}
