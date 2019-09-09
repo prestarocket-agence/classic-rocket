@@ -26,9 +26,9 @@
     <article class="product-miniature js-product-miniature mb-3" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}">
         <div class="card card-product">
 
-            <div class="card-img-top position-relative">
+            <div class="card-img-top product__card-img">
                 {block name='product_thumbnail'}
-                    <a href="{$product.url}" class="thumbnail product-thumbnail rc ratio1_1 d-block">
+                    <a href="{$product.url}" class="thumbnail product-thumbnail rc ratio1_1">
                         {if $product.cover}
                             <img
                                     data-src = "{$product.cover.bySize.home_default.url}"
@@ -43,7 +43,7 @@
                         {/if}
                     </a>
                 {/block}
-                <div class="highlighted-informations text-center p-2{if !$product.main_variants} no-variants{/if} d-none d-md-block">
+                <div class="highlighted-informations text-center p-2{if !$product.main_variants} no-variants{/if} visible--desktop">
                     {block name='quick_view'}
                         <span class="quick-view" data-link-action="quickview">
                       <i class="material-icons search">&#xE8B6;</i> {l s='Quick view' d='Shop.Theme.Actions'}
@@ -60,7 +60,7 @@
             {* end card-img-top*}
 
             <div class="card-body">
-                <div class="product-description">
+                <div class="product-description product__card-desc">
                     {block name='product_name'}
                         {if in_array($page.page_name, ['best-sales','category','manufacturer','new-products','prices-drop','product-list','search','supplier'])}
                         <h2 class="h3 product-title"><a href="{$product.url}">{$product.name|truncate:30:'...'}</a></h2>
@@ -68,7 +68,9 @@
                             <p class="h3 product-title"><a href="{$product.url}">{$product.name|truncate:30:'...'}</a></p>
                         {/if}
                     {/block}
-
+                    {block name='product_reviews'}
+                        {hook h='displayProductListReviews' product=$product}
+                    {/block}
                     {block name='product_price_and_shipping'}
                         {if $product.show_price}
                             <div class="product-price-and-shipping text-center">
@@ -95,11 +97,6 @@
 
 
                 </div>
-
-                {block name='product_reviews'}
-                    {hook h='displayProductListReviews' product=$product}
-                {/block}
-
 
             </div>
             {* end card body*}

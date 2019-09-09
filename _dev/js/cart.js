@@ -276,7 +276,7 @@ $(document).ready(() => {
           const $discountInput = $('[name=discount_name]');
 
           $discountInput.val($code.text());
-
+          $('#promo-code').collapse('show');
           return false;
       }
   )
@@ -295,7 +295,7 @@ const CheckUpdateQuantityOperations = {
 
     if ('' !== errorMsg) {
       let strError = ' <article class="alert alert-danger" role="alert" data-alert="danger"><ul><li>' + errorMsg + '</li></ul></article>';
-      $('#notifications .container').html(strError);
+      $('#notifications.notifications-container').html(strError);
       errorMsg = '';
       isUpdateOperation = false;
       if (hasError) {
@@ -305,7 +305,7 @@ const CheckUpdateQuantityOperations = {
     } else if (!hasError && isUpdateOperation) {
       hasError = false;
       isUpdateOperation = false;
-      $('#notifications .container').html('');
+      $('#notifications.notifications-container').html('');
       $checkoutBtn.removeClass('disabled');
     }
   },

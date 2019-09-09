@@ -28,8 +28,16 @@
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="{$urls.current_url}"/>
 <meta property="og:site_name" content="{$shop.name}"/>
-<meta property="og:image" content="{$urls.shop_domain_url}{$shop.logo}"/>
 
+{if isset($product) && $page.page_name == 'product'}
+    {if $product.images|count > 0}
+        {foreach from=$product.images item=p_img name="p_img_list"}
+            <meta property="og:image" content="{$p_img.large.url}"/>
+        {/foreach}
+    {/if}
+{else}
+    <meta property="og:image" content="{$urls.shop_domain_url}{$shop.logo}"/>
+{/if}
 <script type="application/ld+json">
 {
     "@context" : "http://schema.org",
@@ -106,6 +114,7 @@
         "unitCode": "{$product.weight_unit}"
     },{/if}
     {*{if empty($combinations)}*}
+  {if $product.show_price}
     "offers": {
         "@type": "Offer",
         "priceCurrency": "{$currency.iso_code}",
@@ -137,6 +146,7 @@
             "name": "{$shop.name}"
         }
     }
+    {/if}
 
 }
 

@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="shadow">
+<div class="checkout-process">
 {foreach from=$steps item="step" key="index"}
   {render identifier  =  $step.identifier
           position    =  ($index + 1)

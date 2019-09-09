@@ -28,7 +28,7 @@
             <img src="{$product.cover.bySize.cart_default.url}" alt="{$product.name|escape:'quotes'}"
                  class="product-line__img" width="{$product.cover.bySize.cart_default.width}"
                  height="{$product.cover.bySize.cart_default.height}">
-            <div class="media-body">
+            <div class="media-body product-line__body">
                 <a class="h5 product-line__title" href="{$product.url}"
                    data-id_customization="{$product.id_customization|intval}">{$product.name}</a>
 
@@ -121,7 +121,7 @@
                             data-up-url="{$product.up_quantity_url}"
                             data-update-url="{$product.update_quantity_url}"
                             data-product-id="{$product.id_product}"
-                            type="text"
+                            type="number"
                             value="{$product.quantity}"
                             name="product-quantity-spin"
                             min="{$product.minimal_quantity}"

@@ -1,5 +1,6 @@
 @import "partials/variables";
 @import "bootstrap";
+@import "partials/mixins";
 @import "partials/custom_variables";
 @import "partials/fonts";
 @import "partials/commons";
@@ -15,9 +16,11 @@
 @import "components/mainmenu";
 @import "components/offcanvas";
 @import "components/products";
+@import "components/facet";
 @import "components/slick";
 @import "components/slick-theme";
+@import "components/header";
+@import "components/productcomments";
 @import "components/utilities";
-
 @import "partials/bs_alpha";
 

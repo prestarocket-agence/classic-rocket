@@ -23,9 +23,9 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='order_products_table'}
-  <form class="w-100 mw-100 needs-validation" id="order-return-form" action="{$urls.pages.order_follow}" method="post" novalidate autocomplete="false">
+  <form class="w-100 mw-100 form--100" id="order-return-form" action="{$urls.pages.order_follow}" method="post" novalidate autocomplete="false">
 
-    <div class="box d-none d-md-block">
+    <div class="box visible--desktop">
       <table id="order-products" class="table table-bordered return">
         <thead class="thead-default">
           <tr>
@@ -164,7 +164,7 @@
       </table>
     </div>
 
-    <div class="order-items d-md-none box">
+    <div class="order-items visible--mobile box">
       {foreach from=$order.products item=product}
         <div class="order-item">
           <div class="">
@@ -226,7 +226,7 @@
         </div>
       {/foreach}
     </div>
-    <div class="order-totals d-md-none box">
+    <div class="order-totals visible--mobile box">
       {foreach $order.subtotals as $line}
         {if $line.value}
           <div class="order-total row">

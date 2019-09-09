@@ -26,11 +26,60 @@
   <p class="products-section-title">
     {l s='Popular Products' d='Shop.Theme.Catalog'}
   </p>
-  <div class="products">
+  {assign var="productscount" value=$products|count}
+  <div class="products products-slick spacing-md-top{if $productscount > 1} products--slickmobile{/if}" data-slick='{strip}
+    {ldelim}
+    "slidesToShow": 1,
+    "slidesToScroll": 1,
+    "mobileFirst":true,
+    "arrows":true,
+    "rows":0,
+    "responsive": [
+      {ldelim}
+        "breakpoint": 992,
+        "settings":
+        {if $productscount > 4}
+        {ldelim}
+        "arrows":true,
+        "slidesToShow": 4,
+        "slidesToScroll": 4,
+        "arrows":true
+        {rdelim}
+        {else}
+        "unslick"
+        {/if}
+      {rdelim},
+      {ldelim}
+        "breakpoint": 720,
+        "settings":
+        {if $productscount > 3}
+        {ldelim}
+        "arrows":true,
+        "slidesToShow": 3,
+        "slidesToScroll": 3
+        {rdelim}
+        {else}
+        "unslick"
+        {/if}
+      {rdelim},
+      {ldelim}
+        "breakpoint": 540,
+        "settings":
+        {if $productscount > 2}
+        {ldelim}
+        "arrows":true,
+        "slidesToShow": 2,
+        "slidesToScroll": 2
+        {rdelim}
+        {else}
+        "unslick"
+        {/if}
+      {rdelim}
+    ]{rdelim}{/strip}'>
     {foreach from=$products item="product"}
       {include file="catalog/_partials/miniatures/product.tpl" product=$product}
     {/foreach}
-  </div>
+    </div>
   <a class="all-product-link float-left float-md-right" href="{$allProductsLink}">
     {l s='All products' d='Shop.Theme.Catalog'}<i class="material-icons">&#xE315;</i>
   </a>

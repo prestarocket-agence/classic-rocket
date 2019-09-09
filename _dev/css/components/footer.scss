@@ -46,7 +46,7 @@
   }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-mobile {
   .footer__title{
     &--desktop{
 
@@ -56,4 +56,32 @@
       display: block;
     }
   }
+}
+.footer__copyright{
+  text-align: center;
+  font-size: $font-size-sm;
+}
+.header__nav{
+  align-items: center;
+}
+.header-nav__nav2{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-mobile{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.header-mobile__user-cart{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header__top{
+  display: flex;
+  justify-content: space-between;
+  position: static;
 }

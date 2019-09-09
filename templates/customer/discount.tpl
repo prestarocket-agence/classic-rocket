@@ -30,7 +30,7 @@
 
 {block name='page_content'}
   {if $cart_rules}
-    <table class="table table-striped d-none d-md-table">
+    <table class="table table-striped visible--desktop">
       <thead class="thead-default">
         <tr>
           <th>{l s='Code' d='Shop.Theme.Checkout'}</th>
@@ -56,7 +56,7 @@
         {/foreach}
       </tbody>
     </table>
-    <div class="cart-rules d-md-none">
+    <div class="cart-rules visible--mobile">
       {foreach from=$cart_rules item=cart_rule}
         <div class="cart-rule">
           <ul>

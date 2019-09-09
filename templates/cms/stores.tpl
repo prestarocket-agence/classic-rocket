@@ -32,10 +32,10 @@
   <section id="content" class="page-content page-stores">
 
     {foreach $stores as $store}
-      <article id="store-{$store.id}" class="store-item card shadow mb-3">
+      <article id="store-{$store.id}" class="store-item card mb-3">
         <div class="store-item-container card-body">
           <div class="row">
-          <div class="col-md-3 col-lg-4 store-picture d-none d-md-block">
+          <div class="col-md-3 col-lg-4 store-picture visible--desktop">
             <img src="{$store.image.bySize.stores_default.url}" alt="{$store.image.legend}" title="{$store.image.legend}" class="img-fluid">
           </div>
           <div class="col-md-5 col-sm-7 col-12 col-lg-4 store-description">

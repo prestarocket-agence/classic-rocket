@@ -22,29 +22,29 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="js-product-list-top" class="row justify-content-between products-selection my-3 align-items-center">
-  <div class="col-md-6 d-none d-md-block total-products">
+<div id="js-product-list-top" class="row products-selection my-3">
+  <div class="col-md-6 visible--desktop total-products">
     {if $listing.pagination.total_items > 1}
-      <p class="mb-0">{l s='There are %product_count% products.' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}</p>
-    {else if $listing.pagination.total_items > 0}
-      <p class="mb-0">{l s='There is 1 product.' d='Shop.Theme.Catalog'}</p>
+      <p class="product__quantity">{l s='There are %product_count% products.' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}</p>
+    {elseif $listing.pagination.total_items > 0}
+      <p class="product__quantity">{l s='There is 1 product.' d='Shop.Theme.Catalog'}</p>
     {/if}
   </div>
   <div class="col-md-6">
-    <div class="d-flex sort-by-row w-100 justify-content-between justify-content-md-end align-items-center">
+    <div class="sort-by-row justify-content-md-end">
 
       {block name='sort_by'}
         {include file='catalog/_partials/sort-orders.tpl' sort_orders=$listing.sort_orders}
       {/block}
 
       {if !empty($listing.rendered_facets)}
-          <button type="button" id="search_filter_toggler" class="btn btn-secondary d-md-none" data-target="#offcanvas_search_filter" data-toggle="modal">
+          <button type="button" id="search_filter_toggler" class="btn btn-secondary visible--mobile" data-target="#offcanvas_search_filter" data-toggle="modal">
             {l s='Filter' d='Shop.Theme.Actions'}
           </button>
       {/if}
     </div>
   </div>
-    <div class="d-md-none text-sm-center mt-1 col-12 ">
+    <div class="visible--mobile text-sm-center mt-1 col-12 ">
         {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=[
         '%from%' => $listing.pagination.items_shown_from ,
         '%to%' => $listing.pagination.items_shown_to,

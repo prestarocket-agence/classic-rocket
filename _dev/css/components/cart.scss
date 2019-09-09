@@ -41,7 +41,7 @@
 .product-line__img{
   margin-right: $spacer;
 }
-@include media-breakpoint-down(md) {
+@include media-breakpoint-mobile {
   .product-line__img{
     width: 100px;
     height: auto;
@@ -89,4 +89,133 @@
     }
 
   }
+}
+.nav-tabs--center{
+  justify-content: center;
+}
+@include media-breakpoint-mobile{
+  .checkout {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    padding: 1rem;
+    background-color: rgba(0,0,0,.4);
+    a{
+      width: 100%;
+    }
+  }
+}
+.product-line__body{
+  padding-right: $spacer/4;
+}
+
+//order confirmation table
+.total-value{
+  background-color: $gray-300;
+  font-weight: 700;
+}
+.table__title-head{
+  margin-bottom: 0;
+  font-size: $font-size-base;
+
+}
+/* CART */
+.promo-code{
+  margin-left: -$card-spacer-x;
+  margin-right: -$card-spacer-x;
+}
+.promo-code-alert {
+  display: none;
+}
+.cancel-promo{
+  text-align: center;
+}
+.card-body .separator{
+  margin-left: -$card-spacer-x;
+  margin-right: -$card-spacer-x;
+}
+
+.cart-summary-line{
+  display: flex;
+  justify-content: space-between;
+
+}
+.cart-total{
+font-weight: bold;
+}
+.card-body--summary{
+.cart-total{
+  @extend .total-value;
+  padding: $spacer/4;
+  .label{
+    margin-bottom: 0;
+  }
+}
+  &.card-body{
+    padding-bottom: 0;
+  }
+}
+.media-list__item:not(:last-child){
+  margin-bottom: $spacer/2;
+
+}
+
+//cart summary
+.link__showsummary{
+  .material-icons{
+    @extend .icon-collapse;
+  }
+  &[aria-expanded=true] .material-icons{
+    transform: rotateZ(180deg);
+
+  }
+}
+.cart-item:not(:last-child){
+  border-bottom: 1px solid $border-color;
+  margin-bottom: $spacer;
+  padding-bottom: $spacer;
+}
+.product-line-info{
+  margin-bottom: $spacer/2;
+}
+.promo-code-button{
+  text-align: center;
+  .collapse-button[aria-expanded=true] {
+    display: none;
+  }
+}
+.with-discounts{
+
+
+}
+.promo-highlighted{
+  text-align: center;
+  font-size: $font-size-sm;
+  margin-top: $spacer;
+  margin-bottom: $spacer/2;
+}
+.promo-discounts{
+  font-weight: $font-weight-bold;
+  text-align: center;
+  color: $gray-700;
+  .code{
+    color: $tertiary;
+  }
+}
+.form__add-voucher{
+  margin-bottom: $spacer;
+}
+.promo-code{
+  &__content{
+
+    padding: $card-spacer-x;
+    background-color: $promo-code-bg;
+  }
+ .collapse-button{
+   text-align: center;
+   display: block;
+   color: $primary;
+ }
 }
