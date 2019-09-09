@@ -91,7 +91,7 @@ $(document).on('shown.bs.modal','#product-modal', function (e) {
 });
 
 //add to cart loader
-$(document).on('click','.js-add-to-cart:enabled:not(is--loading)',function(){
+$(document).on('click','.js-add-to-cart:enabled:not(.is--loading)',function(){
     $(this).addClass('is--loading');
 });
 prestashop.on('updateCart', function (event) {
