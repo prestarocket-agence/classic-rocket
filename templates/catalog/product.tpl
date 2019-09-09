@@ -31,8 +31,6 @@
 {block name='content'}
 
   <section id="main">
-    <meta itemprop="url" content="{$product.url}">
-
     <div class="row">
       <div class="col-md-6">
         {block name='page_content_container'}
