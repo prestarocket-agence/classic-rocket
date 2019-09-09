@@ -27,7 +27,7 @@
 {block name='left_column'}{/block}
 
 {block name='content_wrapper'}
-  <div id="content-wrapper" class="{block name='contentWrapperClass'}right-column col-12 col-md-9{/block}">
+  <div id="content-wrapper" class="{block name='contentWrapperClass'}right-column col-12 col-md-8 col-lg-9{/block}">
     {hook h="displayContentWrapperTop"}
     {block name='content'}
       <p>Hello world! This is HTML5 Boilerplate.</p>
