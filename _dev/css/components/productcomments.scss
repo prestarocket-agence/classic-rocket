@@ -12,7 +12,8 @@
     padding-bottom: 0;
   }
 }
-.modal--product-comment-posted-modal{
+.modal--product-comment-posted-modal,
+.modal--report-comment-posted{
   .modal-header{
     color:$success
   }
@@ -31,6 +32,7 @@
 }
 
 /** product list **/
+
 .product-list-reviews{
   .grade-stars{
  justify-content: center;
@@ -42,6 +44,10 @@
   }
 }
 /** product page **/
+.product-comments{
+  margin-top: $spacer*2;
+  margin-bottom: $spacer*2;
+}
 .product-comments-additional-info{
   margin: $spacer 0;
 }
@@ -56,8 +62,22 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.product-comment-list-item{
+  background: $white;
+  margin-bottom: $spacer;
+  padding: $spacer;
+}
+.comment-infos{
+  .grade-stars{
+    margin-bottom: $spacer;
+  }
+  .comment-date,
+  .comment-author{
+    font-size: $font-size-sm;
+  }
+}
 
-/** comment list **/
+/* comment list */
 .product-comments__pagination{
   ul{
     @extend .pagination;

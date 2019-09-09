@@ -23,7 +23,8 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<div class="product-comment-list-item row" data-product-comment-id="@COMMENT_ID@" data-product-id="@PRODUCT_ID@">
+<div class="product-comment-list-item" data-product-comment-id="@COMMENT_ID@" data-product-id="@PRODUCT_ID@">
+  <div class="row">
   <div class="col-md-3 col-sm-3 comment-infos">
     <div class="grade-stars"></div>
     <div class="comment-date">
@@ -35,22 +36,23 @@
   </div>
 
   <div class="col-md-9 col-sm-9 comment-content">
-    <h4>@COMMENT_TITLE@</h4>
+    <p class="h4 comment__title">@COMMENT_TITLE@</ph4>
     <p>@COMMENT_COMMENT@</p>
-    <div class="comment-buttons btn-group">
+    <div class="comment-buttons btn-group btn-group-sm">
       {if $usefulness_enabled}
-        <a class="useful-review">
+        <button role="button" class="useful-review btn btn-link">
           <i class="material-icons thumb_up">thumb_up</i>
           <span class="useful-review-value">@COMMENT_USEFUL_ADVICES@</span>
-        </a>
-        <a class="not-useful-review">
+        </button>
+        <button role="button" class="not-useful-review btn btn-link">
           <i class="material-icons thumb_down">thumb_down</i>
           <span class="not-useful-review-value">@COMMENT_NOT_USEFUL_ADVICES@</span>
-        </a>
+        </button>
       {/if}
-      <a class="report-abuse" title="{l s='Report abuse' d='Modules.Productcomments.Shop'}">
+      <button role="button" class="report-abuse btn btn-link" title="{l s='Report abuse' d='Modules.Productcomments.Shop'}">
         <i class="material-icons outlined_flag">flag</i>
-      </a>
+      </button>
     </div>
+  </div>
   </div>
 </div>
