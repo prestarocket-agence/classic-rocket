@@ -39,7 +39,7 @@
             {hook h='displayNav2'}
         </div>
       </div>
-      <div class="visible--mobile mobile no-gutters">
+      <div class="visible--mobile header--mobile no-gutters">
         <div class="col-4">
           <button id="menu-icon" class="btn" data-toggle="modal" data-target="#mobile_top_menu_wrapper">
             <i class="material-icons d-inline">&#xE5D2;</i>
