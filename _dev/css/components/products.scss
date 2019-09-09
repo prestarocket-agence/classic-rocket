@@ -16,6 +16,13 @@
     @include make-col(3);
   }
 }
+
+@media (max-width: 320px) {
+  .product-miniature{
+    @include make-col(12);
+  }
+}
+
 .slick-slide .product-miniature{
   max-width: 100%;
 }
