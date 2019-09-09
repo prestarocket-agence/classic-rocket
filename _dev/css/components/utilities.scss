@@ -21,6 +21,9 @@ img[data-lazy] {
 .d--none{
   display: none;
 }
+.d--block{
+  display: block;
+}
 .header-nav__container{
   display: flex;
   justify-content: space-between;

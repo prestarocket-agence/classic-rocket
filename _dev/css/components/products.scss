@@ -319,17 +319,17 @@
   align-items: center; 
 }
 .pack-miniature-item{
-  margin-bottom: $spacer * 2;
+  margin-bottom: $spacer / 2;
 }
 .ratio1_1{
   display: block;
 }
 .pack-product-name{
-  margin: 0 $spacer * 4;
+  margin: 0 $spacer * 1.5;
   flex-grow: 1;
 }
 .product-miniature{
-  margin-bottom: $spacer * 3;
+  margin-bottom: $spacer ;
 }
 .product__card-img{
   position: relative;
@@ -342,7 +342,7 @@
 }
 .highlighted-informations{
   text-align: center;
-  padding: $spacer * 2;
+  padding: $spacer / 2;
 }
 .quantity__label{
   margin-bottom: 0;
@@ -364,10 +364,10 @@
 }
 }
 .product-customization{
-  margin-bottom: $spacer * 4;
+  margin-bottom: $spacer * 1.5;
 }
 .product-discounts{
-  margin-bottom: $spacer * 4;
+  margin-bottom: $spacer * 1.5;
 }
 .product__quantity{
   margin-bottom: 0;
@@ -396,7 +396,7 @@
   justify-content: center;
 }
 .invoice__address{
-  margin-top: $spacer * 3;
+  margin-top: $spacer;
 }
 .invoice-address{
   height: 100%;
