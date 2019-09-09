@@ -1,5 +1,5 @@
-# PrestaShop Classic Rocket
 
+# PrestaShop Classic Rocket
 Classic Rocket is a rework of "classic theme". It has been built keeping in  mind : performance, accessibility and SEO.
 
 Contributed by [Prestarocket](//www.prestarocket.com/blog/) (Twitter: [@prestarocket](https://twitter.com/prestarocket))
@@ -17,6 +17,8 @@ Main features :
 - better responsive
 
 We use [Dareboost](https://www.dareboost.com/) to test and improve our work.
+## Contributing
+PR on branch develop please
 
 ## Main differences with Classic Theme
 ### Performance
@@ -123,7 +125,6 @@ You can also use gulp to work faster during development (gulpfile.js => gulp wat
 
 ## To do (you can help!):
 - test rtl
-- form validation
 - more BEM
 - add more custom scss variables
 - more data in jsonld
