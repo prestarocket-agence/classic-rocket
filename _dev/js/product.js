@@ -92,7 +92,7 @@ $(document).on('shown.bs.modal','#product-modal', function (e) {
 
 //add to cart loader
 $(document).on('click','.js-add-to-cart:enabled:not(.is--loading)',function(){
-    $(this).addClass('is--loading');
+    $(this).addClass('is--loading').attr("disabled", true);
 });
 prestashop.on('updateCart', function (event) {
     removeAddToCartLoader();
@@ -100,6 +100,8 @@ prestashop.on('updateCart', function (event) {
 });
 prestashop.on('handleError', function (event) {
     removeAddToCartLoader();
+    $('.js-add-to-cart').attr("disabled", false);
+
 });
 function removeAddToCartLoader(){
     $('.js-add-to-cart.is--loading').removeClass('is--loading');
