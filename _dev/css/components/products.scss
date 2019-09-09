@@ -110,7 +110,7 @@
 /* PRODUCT PAGE */
 
 .products-imagescover{
-  @extend .shadow;
+  box-shadow:$card-box-shadow;;
 }
 .product-img:not(:first-child) .rc {
   display: none;
@@ -208,10 +208,10 @@
   }
   //@extend .card;
   //@extend .card-block
-  //@extend .shadow;
+  //box-shadow:$card-box-shadow;;
 }
 .card--reassurance{
-  @extend .shadow;
+  box-shadow:$card-box-shadow;;
 }
 
 // modal add to cart

@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section id="js-checkout-summary" class="card js-cart mb-5 shadow" data-refresh-url="{$urls.pages.cart}?ajax=1&action=refresh">
+<section id="js-checkout-summary" class="card js-cart mb-5" data-refresh-url="{$urls.pages.cart}?ajax=1&action=refresh">
   <div class="card-body card__summary">
     {block name='hook_checkout_summary_top'}
       {hook h='displayCheckoutSummaryTop'}

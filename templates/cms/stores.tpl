@@ -32,7 +32,7 @@
   <section id="content" class="page-content page-stores">
 
     {foreach $stores as $store}
-      <article id="store-{$store.id}" class="store-item card shadow mb-3">
+      <article id="store-{$store.id}" class="store-item card mb-3">
         <div class="store-item-container card-body">
           <div class="row">
           <div class="col-md-3 col-lg-4 store-picture visible--desktop">

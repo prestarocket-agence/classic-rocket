@@ -5,7 +5,7 @@
   }
   .link-item{
     @extend .card;
-    @extend .shadow;
+    box-shadow:$card-box-shadow;;
     padding: $spacer;
     text-align: center;
     text-transform: uppercase;
