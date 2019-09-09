@@ -249,6 +249,20 @@ display: inline-block;
     }
   }
   // SHipping
+.delivery-option{
+  padding: $spacer;
+  margin-bottom: $spacer;
+  background-color: $gray-200;
+}
+.carrier-extra-content:not(:empty){
+  margin-bottom: $spacer*2;
+  &:empty{
+    display: none;
+  }
+}
+.carrier-name{
+  font-weight: $font-weight-bold;
+}
   .carrier-price{
     font-weight: bold;
     font-size: $font-size-lg;
