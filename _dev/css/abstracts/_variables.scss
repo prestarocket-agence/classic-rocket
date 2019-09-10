@@ -1,19 +1,9 @@
-//color
-
-$bg-dark :                      #dededd;
-$tertiary:                      #f39d72;
+@import "variables/layout";
+@import "variables/searchbar";
 
 //BS touchspin
 $bs-touchspin-boxshadow:        2px 2px 4px 0 rgba(0,0,0,.2);
 
-//option
-$enable-fluid-layout:            false;
-
-// main layout
-$header-bg:                     $white;
-$footer-bg:                     $white;
-$wrapper-bg:                    #f1f1f1;
-$footer-container-margin-top:   $spacer;
 //product miniature
 
 $pm-title-color:                $gray-700;
