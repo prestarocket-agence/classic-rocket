@@ -2,7 +2,9 @@
     .search-widget{
         .search-widget__searchbar{
             border-radius: $search-radius;
+            border: $search-border;
             padding-right: 3 * $font-size-base;
+            color: $search-text-color;
             &:active .search-widget__search-icon{
                 transform: scale(0.9);
 
