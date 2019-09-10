@@ -24,18 +24,18 @@
  *}
 {if $product.show_price}
   <div class="product-prices">
-    {block name='product_discount'}
-      {if $product.has_discount}
-        <div class="product-discount">
-          {hook h='displayProductPriceBlock' product=$product type="old_price"}
-          <span class="regular-price">{$product.regular_price}</span>
-        </div>
-      {/if}
-    {/block}
+
 
     {block name='product_price'}
-      <div class="product-price {if $product.has_discount}has-discount{/if}">
-
+      <div class="product__product-price product-price {if $product.has_discount}has-discount{/if}">
+      {block name='product_discount'}
+          {if $product.has_discount}
+              <span class="product-discount">
+                  {hook h='displayProductPriceBlock' product=$product type="old_price"}
+                  <span class="regular-price">{$product.regular_price}</span>
+              </span>
+          {/if}
+      {/block}
 
         <div class="current-price">
           <span class="current-price-display{if $product.has_discount} current-price-discount{/if}">{$product.price}</span>

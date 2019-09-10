@@ -177,6 +177,11 @@
 }
 
 //product prices
+.product__product-price.has-discount{
+  .current-price{
+    display: inline-block;
+  }
+}
 .current-price-display{
   font-size: $product-regular-price-font-size;
   font-weight: $regular-price-font-weight;
