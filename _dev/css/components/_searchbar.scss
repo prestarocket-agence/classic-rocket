@@ -1,0 +1,24 @@
+.l-header{
+    .search-widget{
+        .search-widget__searchbar{
+            border-radius: $search-radius;
+            padding-right: 3 * $font-size-base;
+            &:active .search-widget__search-icon{
+                transform: scale(0.9);
+
+                }
+        }
+        .search-widget__search-icon{
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .material-icons{
+                font-size: $search-icon-size
+            }
+        }
+    }
+}
