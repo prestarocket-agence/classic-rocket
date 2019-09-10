@@ -1,16 +1,37 @@
 .l-header{
     .search-widget{
-        .search-widget__searchbar{
+        position: relative;
+        .search-widget__label{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: transparent;
+            overflow: hidden;
+            padding: 0;
+            border: 0;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            z-index: 2;
+            cursor: pointer;
+        }
+        .search-widget__input{
+            width: 2em;
+            position: relative;
             border-radius: $search-radius;
             border: $search-border;
-            padding-right: 3 * $font-size-base;
+            padding-right: $search-padding-extra;
             color: $search-text-color;
-            &:active .search-widget__search-icon{
-                transform: scale(0.9);
-
-                }
+            transition: width .2s ease-in;
+            &:focus{
+                width: $search-width;
+            }
         }
-        .search-widget__search-icon{
+        .search-widget__btn{
             position: absolute;
             right: 0;
             top: 0;
@@ -18,9 +39,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            .material-icons{
-                font-size: $search-icon-size
-            }
         }
     }
 }

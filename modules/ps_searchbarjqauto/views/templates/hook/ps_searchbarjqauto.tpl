@@ -25,14 +25,13 @@
 <!-- Block search module TOP -->
 <div class="search-widget align-self-center py-3" data-search-widget data-search-controller-url="{$search_controller_url}">
 	<form method="get" action="{$search_controller_url}">
+		<label for="search-widget__input" class="search-widget__label" aria-hidden="true"></label>
 		<input type="hidden" name="controller" value="search">
-		<div class="input-group">
-			<input class="form-control search-widget__searchbar" type="text" name="s" value="{$search_string}" placeholder="{l s='Search our catalog' d='Shop.Theme.Catalog'}" aria-label="{l s='Search' d='Shop.Theme.Catalog'}">
-			<button type="submit" class="btn btn-link search-widget__search-icon">
+			<input class="form-control search-widget__input {if $search_string}search-widget__input--expended{/if}" id="search-widget__input" type="text" name="s" value="{$search_string}" placeholder="{l s='Search our catalog' d='Shop.Theme.Catalog'}" aria-label="{l s='Search' d='Shop.Theme.Catalog'}">
+			<button type="submit" class="btn btn-link search-widget__btn">
 				<i class="material-icons search">&#xE8B6;</i>
 				<span class="d-none">{l s='Search' d='Shop.Theme.Catalog'}</span>
 			</button>
-		</div>
 	</form>
 </div>
 <!-- /Block search module TOP -->
