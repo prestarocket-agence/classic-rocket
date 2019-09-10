@@ -1,5 +1,7 @@
 $search-radius: null;
-$search-icon-size: 1.5rem;
+$search-icon-width: 1.5rem;
+$search-width: 18rem;
 $search-text-color: null;
 $search-border: null;
+$search-padding-extra: ($btn-padding-x * 2) + $search-icon-width;
 
