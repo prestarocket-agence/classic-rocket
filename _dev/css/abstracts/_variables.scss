@@ -1,14 +1,9 @@
 @import "variables/layout";
+@import "variables/product-miniature";
 @import "variables/searchbar";
 
 //BS touchspin
 $bs-touchspin-boxshadow:        2px 2px 4px 0 rgba(0,0,0,.2);
-
-//product miniature
-
-$pm-title-color:                $gray-700;
-$pm-title-font-size:            $font-size-base;
-$pm-title-font-weight:          400;
 
 //cart
 $promo-code-bg:                 darken($body-bg,10%);
