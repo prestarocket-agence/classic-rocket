@@ -38,9 +38,7 @@
     .highlighted-informations{
       transform:translateY(0);
     }
-    .product-title, .product-title a{
-      color: $pm-name-hover-color;
-    }
+
   }
 
   .discount{
@@ -60,12 +58,15 @@
   position: absolute;
   bottom: 0;
   width:100%;
-  background: #fff;
+  background-color: $pm-highlight-bg-color;
   transform:translateY(100%);
   transition:transform .3s;
+  .card-product:hover & {
+    transform:translateY($pm-highlight-translateY);
+  }
 }
 .quick-view{
-  cursor:pointer
+  cursor:pointer;
 }
 
 .product-flags{
@@ -115,8 +116,15 @@
     color: $pm-name-color;
     &:hover{
       color: $pm-name-hover-color;
+      border-bottom: $pm-name-hover-border-width solid $pm-name-hover-border-color;
     }
 
+  }
+  .card-product:hover & {
+    color: $pm-name-hover-color;
+    & a {
+      color: $pm-name-hover-color;
+    }
   }
 }
 
