@@ -29,7 +29,7 @@
 {/block}
 
 {block name='header_nav'}
-  <nav class="header-nav border-bottom">
+  <nav class="header-nav">
     <div class="container header__container">
       <div class="row visible--desktop displayNav1">
         <div class="col-md-4">
@@ -59,7 +59,7 @@
 {/block}
 
 {block name='header_top'}
-  <div class="header-top border-bottom">
+  <div class="header-top">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-2 visible--desktop" id="_desktop_logo">
