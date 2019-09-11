@@ -5,6 +5,11 @@
 }
 .header-nav{
   border-bottom: 1px solid $header-nav-border-color;
+  background-color: $header-nav-bg-color;
+  color:$header-nav-color;
+  & a:not(.dropdown-item), .btn{
+    color: $header-nav-color;
+  }
 }
 .header-top{
   border-bottom: 1px solid $header-top-border-color;

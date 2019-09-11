@@ -9,6 +9,8 @@ $enable-fluid-layout:            false;
 
 /* HEADER */
 $header-bg:                     $white;
+$header-nav-bg-color:           null;
+$header-nav-color:              $body-color;
 $header-nav-border-color:       $border-color;
 $header-top-border-color:       $header-nav-border-color;
 /* MAIN */
