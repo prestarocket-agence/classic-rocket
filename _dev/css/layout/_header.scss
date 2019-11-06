@@ -1,0 +1,26 @@
+.l-header{
+  background-color: $header-bg;
+  margin-bottom: $spacer;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+}
+.header-nav{
+  border-bottom: 1px solid $header-nav-border-color;
+  background-color: $header-nav-bg-color;
+  color:$header-nav-color;
+  & a:not(.dropdown-item), .btn{
+    color: $header-nav-color;
+  }
+}
+.header-top{
+  border-bottom: 1px solid $header-top-border-color;
+}
+@include media-breakpoint-mobile {
+  .header__container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .logo{
+    width:100%;
+    max-width: 115px;
+  }
+}

@@ -1,0 +1,38 @@
+@import '../variables';
+@import '../starability-base';
+@import '../starability-result';
+
+@keyframes fade {
+
+  0% {
+    transform: translateY($star-size);
+  }
+
+  80% {
+    opacity: 100%;
+  }
+
+  100% {
+    transform: none;
+    opacity: 0;
+  }
+}
+
+.starability-fade {
+  @include starability-base;
+  will-change: contents;
+
+  > label::after {
+    @include starability-animation-base;
+    background-position: 0 (-$star-size);
+    bottom: $star-size;
+    left: 0;
+  }
+
+  > input:checked + label::after {
+    opacity: 1;
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+}

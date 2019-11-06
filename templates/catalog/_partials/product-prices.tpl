@@ -24,18 +24,18 @@
  *}
 {if $product.show_price}
   <div class="product-prices">
-    {block name='product_discount'}
-      {if $product.has_discount}
-        <div class="product-discount">
-          {hook h='displayProductPriceBlock' product=$product type="old_price"}
-          <span class="regular-price">{$product.regular_price}</span>
-        </div>
-      {/if}
-    {/block}
+
 
     {block name='product_price'}
-      <div class="product-price {if $product.has_discount}has-discount{/if}">
-
+      <div class="product__product-price product-price {if $product.has_discount}has-discount{/if}">
+      {block name='product_discount'}
+          {if $product.has_discount}
+              <span class="product-discount">
+                  {hook h='displayProductPriceBlock' product=$product type="old_price"}
+                  <span class="regular-price">{$product.regular_price}</span>
+              </span>
+          {/if}
+      {/block}
 
         <div class="current-price">
           <span class="current-price-display{if $product.has_discount} current-price-discount{/if}">{$product.price}</span>
@@ -83,9 +83,11 @@
     {hook h='displayProductPriceBlock' product=$product type="weight" hook_origin='product_sheet'}
 
     <div class="tax-shipping-delivery-label">
-      {if $configuration.display_taxes_label}
-        {$product.labels.tax_long}
-      {/if}
+        {if !$configuration.taxes_enabled}
+            {l s='No tax' d='Shop.Theme.Catalog'}
+        {elseif $configuration.display_taxes_label}
+            {$product.labels.tax_long}
+        {/if}
       {hook h='displayProductPriceBlock' product=$product type="price"}
       {hook h='displayProductPriceBlock' product=$product type="after_price"}
       {if $product.additional_delivery_times == 1}

@@ -7,3 +7,44 @@ img[data-lazy] {
 .cursor-pointer{
   cursor: pointer;
 }
+
+.visible--desktop{
+  @include media-breakpoint-mobile(){
+    display: none;
+  }
+}
+.visible--mobile{
+  @include media-breakpoint-desktop(){
+    display: none;
+  }
+}
+.d--none{
+  display: none;
+}
+.d--block{
+  display: block;
+}
+.header-nav__container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.d--flex-between{
+  display: flex;
+  justify-content: space-between;
+}
+.mb--0{
+  margin-bottom: 0;
+}
+.text--center{
+  text-align: center;
+}
+.text--right{
+  text-align: right;
+
+}

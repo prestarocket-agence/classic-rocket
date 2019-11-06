@@ -5,7 +5,7 @@
   }
   .link-item{
     @extend .card;
-    @extend .shadow;
+    box-shadow:$card-box-shadow;;
     padding: $spacer;
     text-align: center;
     text-transform: uppercase;
@@ -34,4 +34,9 @@
   display: flex;
   justify-content: space-between;
 
+}
+
+.form--100{
+  min-width: 100%;
+  width: 100%;
 }

@@ -7,44 +7,10 @@
 }
 
 .block-categories {
-  @extend .shadow;
+  box-shadow:$card-box-shadow;;
 }
 
 
-.left-column .search_filters {
-  @extend .card-block;
-}
-
-//facets  colors
-.custom-color{
-  &.custom-control{
-    padding-left: 0;
-  }
-  .custom-control-label:before,
-  .custom-control-label:after
-  {
-    display:none
-  }
-.color{
-  margin-right: $custom-control-gutter - $custom-control-spacer-x;
-
-}
-}
-
-.facet-block:not(:last-child){
-  margin-bottom: $spacer;
-  border-bottom: 1px solid $card-border-color;
-  padding-bottom: $spacer;
-}
-.facet-block{
-  .remove{
-    display: none;
-  }
-}
-
-.active_filters{
-  background-color: $bg-dark;
-}
 
 //block categories
 .block-categories a{

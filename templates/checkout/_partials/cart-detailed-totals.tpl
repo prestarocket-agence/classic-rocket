@@ -37,7 +37,9 @@
             {/if}
           </span>
           <div>
-          <span class="value">{$subtotal.value}</span>
+          <span class="value">
+              {if 'discount' == $subtotal.type}-&nbsp;{/if}{$subtotal.value}
+          </span>
           {if $subtotal.type === 'shipping'}
               <small class="value">{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}</small>
           {/if}
@@ -47,23 +49,14 @@
     {/foreach}
   </div>
 
-  {block name='cart_voucher'}
-    {include file='checkout/_partials/cart-voucher.tpl'}
+  {block name='cart_summary_totals'}
+      {include file='checkout/_partials/cart-summary-totals.tpl' cart=$cart}
   {/block}
-
   <hr class="separator mt-0">
 
-  <div class="">
-    <div class="cart-summary-line cart-total">
-      <span class="label">{$cart.totals.total.label} {$cart.labels.tax_short}</span>
-      <span class="value">{$cart.totals.total.value}</span>
-    </div>
-
-    <div class="cart-summary-line">
-      <small class="label">{$cart.subtotals.tax.label}</small>
-      <small class="value">{$cart.subtotals.tax.value}</small>
-    </div>
-  </div>
-
+    {block name='cart_voucher'}
+    {include file='checkout/_partials/cart-voucher.tpl'}
+  {/block}
 </div>
+
 {/block}

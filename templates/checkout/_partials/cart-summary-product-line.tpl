@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='cart_summary_product_line'}
-    <a href="{$product.url}" title="{$product.name}" class="mr-3"">
+    <a href="{$product.url}" title="{$product.name}" class="mr-3">
       <img class="media-object" src="{$product.cover.small.url}" alt="{$product.name}" width="50">
     </a>
   <div class="media-body small">
@@ -39,6 +39,6 @@
           <span class="value">{$value}</span>
       </div>
   {/foreach}
-  <br/>
+
   </div>
 {/block}

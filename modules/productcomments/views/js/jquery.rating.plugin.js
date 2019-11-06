@@ -1,0 +1,3 @@
+/**
+* jquery.rating.plugin.js
+ */

@@ -1,0 +1,30 @@
+.displayNav1{
+    display: flex;
+    align-items: center;
+}
+.displayNav2{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header--mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.top-logo{
+    text-align: center;
+}
+.mobile-user{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.displayTop{
+    display: flex;
+    justify-content: space-between;
+    position: static;
+}
+
+//checkout part

@@ -1,24 +1,9 @@
-//color
-
-$bg-dark :                      #dededd;
-$tertiary:                      #f39d72;
+@import "variables/layout";
+@import "variables/product-miniature";
+@import "variables/searchbar";
 
 //BS touchspin
 $bs-touchspin-boxshadow:        2px 2px 4px 0 rgba(0,0,0,.2);
-
-//option
-$enable-fluid-layout:            false;
-
-// main layout
-$header-bg:                     $white;
-$footer-bg:                     $white;
-$wrapper-bg:                    #f1f1f1;
-$footer-container-margin-top:   $spacer;
-//product miniature
-
-$pm-title-color:                $gray-700;
-$pm-title-font-size:            $font-size-base;
-$pm-title-font-weight:          400;
 
 //cart
 $promo-code-bg:                 darken($body-bg,10%);
@@ -71,5 +56,11 @@ $h1-text-transform: uppercase;
 //footer
 $footer-margin-top:             $spacer;
 $footer-padding-top:             $spacer;
+
+//util
+//$card-box-shadow : $box-shadow !default;
+$card-box-shadow : null !default;
+
+
 
 

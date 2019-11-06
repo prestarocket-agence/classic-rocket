@@ -22,8 +22,8 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section class="product-discounts mb-4">
-  {if $product.quantity_discounts}
+{if $product.quantity_discounts}
+<section class="product-discounts">
     <p class="h4 product-discounts-title">{l s='Volume discounts' d='Shop.Theme.Catalog'}</p>
     {block name='product_discount_table'}
       <table class="table-product-discounts table table-bordered text-center">
@@ -45,5 +45,5 @@
         </tbody>
       </table>
     {/block}
-  {/if}
 </section>
+{/if}

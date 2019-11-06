@@ -14,7 +14,7 @@
     {if $is_free}
         <p>{l s='No payment needed for this order' d='Shop.Theme.Checkout'}</p>
     {/if}
-    <div class="payment-options {if $is_free}d-none{/if}">
+    <div class="payment-options {if $is_free}d--none{/if}">
         {foreach from=$payment_options item="module_options"}
             {foreach from=$module_options item="option"}
                 <div>

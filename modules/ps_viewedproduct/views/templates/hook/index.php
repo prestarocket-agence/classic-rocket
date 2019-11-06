@@ -1,4 +1,5 @@
-{**
+<?php
+/**
  * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
@@ -21,19 +22,14 @@
  * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
- *}
+ */
 
-<div id="js-active-search-filters" class="{if $activeFilters|count}active_filters mb-3 p-3 d-flex align-items-center{else}hide{/if}">
-  {block name='active_filters_title'}
-    <span class="h5 m-0 mr-2 {if $activeFilters|count}active-filter-title{else}d-none{/if}">{l s='Active filters' d='Shop.Theme.Global'}</span>
-  {/block}
+header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');
 
-  {if $activeFilters|count}
-      {foreach from=$activeFilters item="filter"}
-        {block name='active_filters_item'}
-            <a class="js-search-link btn btn-sm btn-outline btn-light mr-1" href="{$filter.nextEncodedFacetsURL}">{l s='%1$s: ' d='Shop.Theme.Catalog' sprintf=[$filter.facetLabel]}
-                {$filter.label} <i class="material-icons close">&#xE5CD;</i></a>
-        {/block}
-      {/foreach}
-  {/if}
-</div>
+header('Cache-Control: no-store, no-cache, must-revalidate');
+header('Cache-Control: post-check=0, pre-check=0', false);
+header('Pragma: no-cache');
+
+header('Location: ../');
+exit;

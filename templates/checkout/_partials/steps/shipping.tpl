@@ -39,37 +39,45 @@
       >
         <div class="form-fields">
           {block name='delivery_options'}
-            <div class="delivery-options row">
-              {foreach from=$delivery_options item=carrier key=carrier_id}
-                  <div class="col-12 col-md-6 col-lg-4 mb-3 js-label-delivery{if $delivery_option == $carrier_id} selected{/if}" id="js-delivery_option_{$carrier.id}">
-                    <label for="delivery_option_{$carrier.id}" class="card h-100" >
-                      <span class="card-header">
-                                  <span class="custom-control custom-radio">
-                                    <input class="custom-control-input js-input-delivery" type="radio" name="delivery_option[{$id_address}]" id="delivery_option_{$carrier.id}" value="{$carrier_id}"{if $delivery_option == $carrier_id} checked{/if}>
+              <div class="delivery-options">
+                  {foreach from=$delivery_options item=carrier key=carrier_id}
+                      <div class="delivery-option">
+                          <div class="row">
+                          <div class="col-sm-1">
 
-                     <span class="custom-control-label d-inline-block font-weight-bold">{$carrier.name}</span>
-                      </span>
-                      </span>
-                      <span class="card-body text-center">
-                        <span class="carrier-price d-inline-block">{$carrier.price}</span>
-                          <span class="carrier-delay d-inline-block small">{$carrier.delay}</span>
-                          {if $carrier.logo}
-
-                            <img src="{$carrier.logo}" alt="{$carrier.name}" class="img-fluid mt-2"/>
-
-                          {/if}
-                        <span class="d-block carrier-extra-content"{if $delivery_option != $carrier_id} style="display:none;"{/if}>
-                            {$carrier.extraContent nofilter}
-                        </span>
-
-                      </span>
-
-                    </label>
-
-                  </div>
-
-              {/foreach}
-            </div>
+                      <div class="custom-control custom-radio">
+                          <input class="custom-control-input" type="radio" name="delivery_option[{$id_address}]" id="delivery_option_{$carrier.id}" value="{$carrier_id}"{if $delivery_option == $carrier_id} checked{/if}>
+                          <label class="custom-control-label" for="delivery_option_{$carrier.id}"><span class="sr-only">{$carrier.name}</span></label>
+                      </div>
+                          </div>
+                          <label for="delivery_option_{$carrier.id}" class="col-sm-11 delivery-option-2">
+                              <div class="row">
+                                  <div class="col-sm-5 col-12">
+                                      <div class="row">
+                                          {if $carrier.logo}
+                                              <div class="col-3">
+                                                  <img src="{$carrier.logo}" alt="{$carrier.name}" />
+                                              </div>
+                                          {/if}
+                                          <div class="{if $carrier.logo}col-9{else}col-12{/if}">
+                                              <span class="h6 carrier-name">{$carrier.name}</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-4 col-12">
+                                      <span class="carrier-delay">{$carrier.delay}</span>
+                                  </div>
+                                  <div class="col-sm-3 col-12 text--right">
+                                      <span class="carrier-price">{$carrier.price}</span>
+                                  </div>
+                              </div>
+                          </label>
+                          </div>
+                      </div>
+                      <div class="carrier-extra-content"{if $delivery_option != $carrier_id} style="display:none;"{/if}>{$carrier.extraContent nofilter}</div>
+                      <div class="clearfix"></div>
+                  {/foreach}
+              </div>
           {/block}
           <div class="order-options">
             <div id="delivery" class="form-group">

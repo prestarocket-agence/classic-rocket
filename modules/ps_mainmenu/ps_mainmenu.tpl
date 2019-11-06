@@ -24,7 +24,7 @@
             {if $node.children|count}
             {* Cannot use page identifier as we can have the same page several times *}
             {assign var=_expand_id value=10|mt_rand:100000}
-            <span class="d-block d-md-none">
+            <span class="visible--mobile">
                 <span data-target="#top_sub_menu_{$_expand_id}" data-toggle="collapse"
                       class="d-block navbar-toggler icon-collapse">
                   <i class="material-icons menu__collapseicon">&#xE313;</i>
