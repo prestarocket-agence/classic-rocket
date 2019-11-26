@@ -24,13 +24,13 @@
  *}
 <div id="_desktop_cart" class="ml-3">
   <div class="blockcart cart-preview {if $cart.products_count > 0}active{else}inactive{/if}" data-refresh-url="{$refresh_url}">
-    <div class="header">
+    <div class="shopping-cart">
       {if $cart.products_count > 0}
         <a rel="nofollow" href="{$cart_url}" class="text-white">
       {/if}
-        <i class="material-icons shopping-cart">shopping_cart</i>
-        <span class="d-none d-md-inline">{l s='Cart' d='Shop.Theme.Checkout'}</span>
-        <span class="cart-products-count small">({$cart.products_count})</span>
+        <span><i class="material-icons blockcart__icon">shopping_cart</i></span>
+        <span class="visible--desktop blockcart__label">{l s='Cart' d='Shop.Theme.Checkout'}</span>
+        <span class="cart-products-count small blockcart__count">({$cart.products_count})</span>
       {if $cart.products_count > 0}
         </a>
       {/if}
