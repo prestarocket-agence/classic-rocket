@@ -1,13 +1,13 @@
 .blockcart{
-  color:#fff;
-  background-color: theme-color('primary');
-  padding:$spacer/2;
+  color:$blockcart-color;
+  background-color: $blockcart-background-color;
+  padding:$blockcart-padding;
 }
 .blockcart.inactive{
-  color:$gray-600;
-  background-color: $gray-200;
+  color:$blockcart-inactive-color;
+  background-color: $blockcart-background-color;
   .material-icons{
-    color:$gray-600;
+    color:$blockcart-inactive-color;
   }
 }
 .product-line-actions{
