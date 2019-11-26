@@ -22,12 +22,23 @@ $product-thumb-wrap-width-2:    2 * ($product-thumb-width + 2 * $product-thumb-m
 $product-thumb-wrap-height:     $product-thumb-height + $product-thumb-margin * 2;
 
 //prices
-$regular-price-font-size:       $font-size-base * .875;
-$regular-price-font-weight:       700;
-$regular-price-color:           $gray-700;
-$price-color:                   $black;
-$product-price-discount-color:           $tertiary;
-$product-regular-price-font-size:       $font-size-base * 1.25;
+$product-price-current-color:             null;
+$product-price-current-font-size:         null;
+$product-price-current-font-weight:       700;
+$product-price-current-font-family:       null;
+
+$product-price-regular-color:             #7a7a7a;
+$product-price-regular-font-size:         $font-size-base * .875;
+$product-price-regular-font-weight:       700;
+$product-price-regular-font-family:       null;
+
+
+$product-price-discount-color:         $tertiary;
+$product-price-discount-font-size:         null;
+$product-price-discount-font-weight:       700;
+$product-price-discount-font-family:       null;
+
+
 
 
 //product color box
@@ -45,7 +56,15 @@ $social-share-bg-color:         $gray-300;
 
 //main menu
 $menu-topitem-font-size:            $font-size-base;
+$menu-topitem-font-weight:            600;
 $menu-topitem-color:            $gray-800;
+$menu-topitem-text-transform:   uppercase;
+$menu-topitem-padding:          $spacer/2;
+$menu-topitem-margin-left:          $spacer*2;
+
+$menu-sub-top: 60px;
+
+  //main menu mobile
 $menu-item-padding:             $spacer/2;
 $menu-item-border-color:        $border-color;
 $menu-sub-mobile-bg-color:      $wrapper-bg;
@@ -60,6 +79,27 @@ $footer-padding-top:             $spacer;
 //util
 //$card-box-shadow : $box-shadow !default;
 $card-box-shadow : null !default;
+
+//product section
+
+$section-title-font-family: null;
+$section-title-color: null;
+$section-title-size: null;
+$section-title-font-weight: null;
+$section-title-text-align: center;
+$section-title-text-transform: uppercase;
+$section-title-margin-bottom: $spacer;
+
+//blockcart
+$blockcart-color: $white;
+$blockcart-background-color: $primary;
+$blockcart-inactive-color: $gray-600;
+$blockcart-inactive-background-color: $gray-200;
+$blockcart-padding:$spacer/2;
+
+
+//block left column
+$block-border-color: null;
 
 
 
