@@ -195,7 +195,7 @@
                     <input
                             class="form-control{if !empty($field.errors)} is-invalid{/if}"
                             name="{$field.name}"
-                            type="{if $field.name === "phone"}tel{else}{$field.type}{/if}"
+                            type="{if $field.name === "phone" || $field.name === "phone_mobile"}tel{else}{$field.type}{/if}"
                             value="{$field.value}"
                             id="f-{$field.name}_{$uniqId}"
                             {if isset($field.availableValues.placeholder)}placeholder="{$field.availableValues.placeholder}"{/if}

@@ -37,9 +37,9 @@
                                     class="lazyload"
                             >
                         {elseif isset($urls.no_picture_image)}
-                                <img src = "{$urls.no_picture_image.bySize.home_default.url}">
+                            <img class="lazyload" src="{$urls.no_picture_image.bySize.home_default.url}">
                         {else}
-                                <img src = "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
+                            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
                         {/if}
                     </a>
                 {/block}

@@ -25,8 +25,7 @@
 {if isset($breadcrumb.links[1])}
 <nav data-depth="{$breadcrumb.count}" class="visible--desktop">
   <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb">
-      {block name='breadcrumb'}
-      {foreach from=$breadcrumb.links item=path name=breadcrumb}
+    {foreach from=$breadcrumb.links item=path name=breadcrumb}
       {block name='breadcrumb_item'}
         <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
           <a itemprop="item" href="{$path.url}">
@@ -36,7 +35,6 @@
         </li>
       {/block}
     {/foreach}
-    {/block}
   </ol>
 </nav>
 {/if}
