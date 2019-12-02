@@ -23,32 +23,35 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='customer_form'}
+
   {block name='customer_form_errors'}
     {include file='_partials/form-errors.tpl' errors=$errors['']}
   {/block}
 
-<form action="{block name='customer_form_actionurl'}{$action}{/block}" id="customer-form" class="js-customer-form needs-validation" method="post" novalidate autocomplete="false">
-  <section>
-    {block "form_fields"}
-      {foreach from=$formFields item="field"}
-        {block "form_field"}
-          {form_field field=$field}
+  <form class="js-customer-form needs-validation" id="customer-form" action="{block name='customer_form_actionurl'}{$action}{/block}" method="post" novalidate autocomplete="false">
+    {block name='customer_form_fields'}
+      <section class="form-fields">
+        {block name='form_fields'}
+          {foreach from=$formFields item="field"}
+            {block name='form_field'}
+              {form_field field=$field}
+            {/block}
+          {/foreach}
+          {$hook_create_account_form nofilter}
         {/block}
-      {/foreach}
-      {$hook_create_account_form nofilter}
+      </section>
     {/block}
-  </section>
 
-  {block name='customer_form_footer'}
-    <footer class="form-footer clearfix">
-      <input type="hidden" name="submitCreate" value="1">
-      {block "form_buttons"}
-        <button class="btn btn-primary form-control-submit" data-link-action="save-customer" type="submit">
-          {l s='Save' d='Shop.Theme.Actions'}
-        </button>
-      {/block}
-    </footer>
-  {/block}
+    {block name='customer_form_footer'}
+      <footer class="form-footer">
+        <input type="hidden" name="submitCreate" value="1">
+        {block name='form_buttons'}
+          <button class="btn btn-primary form-control-submit" type="submit" data-link-action="save-customer">
+            {l s='Save' d='Shop.Theme.Actions'}
+          </button>
+        {/block}
+      </footer>
+    {/block}
+  </form>
 
-</form>
 {/block}
