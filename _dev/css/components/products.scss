@@ -27,13 +27,20 @@
   max-width: 100%;
 }
 /* Product miniature*/
-.card-product{
+.card-product.card{
   height:100%;
   position: relative;
-  &:hover .highlighted-informations{
-    transform:translateY(0);
+  background-color: $pm-bg-color;
+  border-width: $pm-border-width;
+  border-color: $pm-border-color;
+  &:hover
+  {
+    .highlighted-informations{
+      transform:translateY(0);
+    }
 
   }
+
   .discount{
     display:none;
   }
@@ -51,19 +58,22 @@
   position: absolute;
   bottom: 0;
   width:100%;
-  background: #fff;
+  background-color: $pm-highlight-bg-color;
   transform:translateY(100%);
   transition:transform .3s;
+  .card-product:hover & {
+    transform:translateY($pm-highlight-translateY);
+  }
 }
 .quick-view{
-  cursor:pointer
+  cursor:pointer;
 }
 
 .product-flags{
   position:absolute;
   top:0;
   margin-bottom: 0;
-  z-index: 2;
+  z-index: 1;
   left:-$spacer/4;
   display: flex;
   flex-direction: column;
@@ -97,13 +107,24 @@
 }
 
 .product-title{
-  color: $pm-title-color;
-  font-size: $pm-title-font-size;
+  color: $pm-name-color;
+  font-size: $pm-name-font-size;
   text-decoration: none;
   text-align: center;
-  font-weight: $pm-title-font-weight;
+  font-weight: $pm-name-font-weight;
   & a {
-    color: $pm-title-color;
+    color: $pm-name-color;
+    &:hover{
+      color: $pm-name-hover-color;
+      border-bottom: $pm-name-hover-border-width solid $pm-name-hover-border-color;
+    }
+
+  }
+  .card-product:hover & {
+    color: $pm-name-hover-color;
+    & a {
+      color: $pm-name-hover-color;
+    }
   }
 }
 
@@ -177,12 +198,29 @@
 }
 
 //product prices
-.current-price-display{
-  font-size: $product-regular-price-font-size;
-  font-weight: $regular-price-font-weight;
+.product__product-price.has-discount{
+  .current-price{
+    display: inline-block;
+  }
 }
-.current-price-discount{
-  color:$product-price-discount-color;
+.price{
+  color:$product-price-current-color;
+  font-size:$product-price-current-font-size;
+  font-weight:$product-price-current-font-weight;
+  font-family: $product-price-current-font-family;
+  &.current-price-discount{
+    color:$product-price-discount-color;
+    font-size:$product-price-discount-font-size;
+    font-weight:$product-price-discount-font-weight;
+    font-family: $product-price-discount-font-family;
+  }
+}
+.regular-price{
+  color:$product-price-regular-color;
+  font-size:$product-price-regular-font-size;
+  font-weight:$product-price-regular-font-weight;
+  font-family: $product-price-regular-font-family;
+  text-decoration: line-through;
 }
 .discount{
   text-transform: uppercase;

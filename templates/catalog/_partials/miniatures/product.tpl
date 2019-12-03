@@ -37,9 +37,9 @@
                                     class="lazyload"
                             >
                         {elseif isset($urls.no_picture_image)}
-                                <img src = "{$urls.no_picture_image.bySize.home_default.url}">
+                            <img class="lazyload" src="{$urls.no_picture_image.bySize.home_default.url}">
                         {else}
-                                <img src = "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
+                            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
                         {/if}
                     </a>
                 {/block}
@@ -85,7 +85,7 @@
                                 {hook h='displayProductPriceBlock' product=$product type="before_price"}
 
                                 <span class="sr-only">{l s='Price' d='Shop.Theme.Catalog'}</span>
-                                <span class="price">{$product.price}</span>
+                                <span class="price{if $product.has_discount} current-price-discount{/if}">{$product.price}</span>
 
 
                                 {hook h='displayProductPriceBlock' product=$product type='unit_price'}

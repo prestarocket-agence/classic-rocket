@@ -1,0 +1,28 @@
+.l-header{
+  background-color: $header-bg;
+  margin-bottom: $spacer;
+  box-shadow: $header-box-shadow;
+}
+.header-nav{
+  border-bottom: 1px solid $header-nav-border-color;
+  background-color: $header-nav-bg-color;
+  color:$header-nav-color;
+  padding-top: $header-nav-padding-y;
+  padding-bottom: $header-nav-padding-y;
+  & a:not(.dropdown-item), .btn{
+    color: $header-nav-color;
+  }
+}
+.header-top{
+  border-bottom: 1px solid $header-top-border-color;
+}
+@include media-breakpoint-mobile {
+  .header__container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .logo{
+    width:100%;
+    max-width: 115px;
+  }
+}

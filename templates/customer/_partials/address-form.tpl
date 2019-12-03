@@ -22,11 +22,14 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-{block name="address_form"}
+{block name='address_form'}
   <div class="js-address-form">
-    {include file='_partials/form-errors.tpl' errors=$errors['']}
 
-    {block name="address_form_url"}
+    {block name='address_form_errors'}
+      {include file='_partials/form-errors.tpl' errors=$errors['']}
+    {/block}
+
+    {block name='address_form_url'}
     <form
       method="POST"
       class="needs-validation"
@@ -38,7 +41,7 @@
     >
     {/block}
 
-      {block name="address_form_fields"}
+      {block name='address_form_fields'}
         <section class="form-fields">
           {block name='form_fields'}
             {foreach from=$formFields item="field"}
@@ -50,17 +53,17 @@
         </section>
       {/block}
 
-      {block name="address_form_footer"}
-      <footer class="form-footer clearfix">
-        <input type="hidden" name="submitAddress" value="1">
-        {block name='form_buttons'}
-          <button class="btn btn-primary" type="submit" class="form-control-submit">
-            {l s='Save' d='Shop.Theme.Actions'}
-          </button>
-        {/block}
-      </footer>
+      {block name='address_form_footer'}
+        <footer class="form-footer">
+          <input type="hidden" name="submitAddress" value="1">
+          {block name='form_buttons'}
+            <button class="btn btn-primary form-control-submit" type="submit">
+              {l s='Save' d='Shop.Theme.Actions'}
+            </button>
+          {/block}
+        </footer>
       {/block}
-
     </form>
+    
   </div>
 {/block}

@@ -1,11 +1,25 @@
-@import "partials/variables";
+@import "abstracts/variables-bootstrap";
 @import "bootstrap";
-@import "partials/mixins";
-@import "partials/custom_variables";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 @import "partials/fonts";
+
+/** LAYOUT **/
+@import "layout/header";
+@import "layout/footer";
+@import "layout/mainmenu";
+
+
+/** PAGES **/
+@import "pages/cart";
+@import "pages/category";
+@import "pages/home";
+@import "pages/order";
+@import "pages/product";
+
 @import "partials/commons";
 @import "partials/lazysizes";
-
+/** COMPONENT **/
 @import "components/alert";
 @import "components/block-social";
 @import "components/cart";
@@ -13,9 +27,10 @@
 @import "components/customer";
 @import "components/footer";
 @import "components/imageslider";
-@import "components/mainmenu";
 @import "components/offcanvas";
 @import "components/products";
+@import "components/searchbar";
+
 @import "components/facet";
 @import "components/slick";
 @import "components/slick-theme";
