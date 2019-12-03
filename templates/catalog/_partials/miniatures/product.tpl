@@ -85,7 +85,7 @@
                                 {hook h='displayProductPriceBlock' product=$product type="before_price"}
 
                                 <span class="sr-only">{l s='Price' d='Shop.Theme.Catalog'}</span>
-                                <span class="price">{$product.price}</span>
+                                <span class="price{if $product.has_discount} current-price-discount{/if}">{$product.price}</span>
 
 
                                 {hook h='displayProductPriceBlock' product=$product type='unit_price'}

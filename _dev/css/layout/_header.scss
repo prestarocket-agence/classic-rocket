@@ -1,12 +1,14 @@
 .l-header{
   background-color: $header-bg;
   margin-bottom: $spacer;
-  box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+  box-shadow: $header-box-shadow;
 }
 .header-nav{
   border-bottom: 1px solid $header-nav-border-color;
   background-color: $header-nav-bg-color;
   color:$header-nav-color;
+  padding-top: $header-nav-padding-y;
+  padding-bottom: $header-nav-padding-y;
   & a:not(.dropdown-item), .btn{
     color: $header-nav-color;
   }

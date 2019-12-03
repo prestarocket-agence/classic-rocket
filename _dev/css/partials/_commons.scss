@@ -263,17 +263,7 @@ display: inline-block;
   border: 3px solid $card-border-color;
 }
 
-//prices
-.regular-price{
-  text-decoration: line-through;
-  font-size: $regular-price-font-size;
-  color: $regular-price-color;
-  font-weight: 700;
-}
-.price{
-  font-weight: 700;
-  color:$black;
-}
+
 //forms
 custom-file-label.selected:after{
   content: "" !important;
@@ -298,17 +288,20 @@ custom-file-label.selected:after{
 }
 //products-section-title
 .products-section-title{
-  text-transform: uppercase;
-  text-align: center;
+  text-transform: $section-title-text-transform;
+  text-align: $section-title-text-align;
   display: block;
-  margin-bottom: $spacer;
+  margin-bottom: $section-title-margin-bottom;
   @extend .h1;
-  font-weight: 700;
+  font-family: $section-title-font-family;
+  color:$section-title-color;
+  font-size:$section-title-size;
+  font-weight:$section-title-font-weight;
 }
 
 //home content spacing
 .page-home > *{
-  margin-bottom: $spacer * .75;
+  margin-bottom: $spacer-y;
 }
 
 @include media-breakpoint-down(sm) {

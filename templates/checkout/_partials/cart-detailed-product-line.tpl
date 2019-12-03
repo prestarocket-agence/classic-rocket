@@ -49,7 +49,7 @@
                     {/if}
 
                     <div class="current-price">
-                        <span class="price current-price">{$product.price}</span>
+                        <span class="current-price-display price{if $product.has_discount} current-price-discount{/if}">{$product.price}</span>
                         {if $product.unit_price_full}
                             <div class="unit-price-cart">{$product.unit_price_full}</div>
                         {/if}

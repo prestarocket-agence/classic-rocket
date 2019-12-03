@@ -39,7 +39,9 @@
         title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
         rel="nofollow"
       >
-        <i class="material-icons visible--mobile logged">&#xE7FF;</i>
+          <span>
+            <i class="material-icons visible--mobile logged">&#xE7FF;</i>
+          </span>
         <span class="visible--desktop pl-2">{$customerName}</span>
       </a>
     {else}
@@ -49,7 +51,7 @@
         title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
         rel="nofollow"
       >
-        <i class="material-icons">&#xE7FF;</i>
+      <span><i class="material-icons">&#xE7FF;</i></span>
         <span class="visible--desktop">{l s='Sign in' d='Shop.Theme.Actions'}</span>
       </a>
     {/if}
