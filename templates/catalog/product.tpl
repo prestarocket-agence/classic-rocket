@@ -120,14 +120,13 @@
               {hook h='displayReassurance'}
             {/block}
 
-          {block name='product_tabs'}
-              {include file='catalog/_partials/product-tabs.tpl'}
-          {/block}
-
-
           </div>
       </div>
     </div>
+
+    {block name='product_tabs'}
+      {include file='catalog/_partials/product-tabs.tpl'}
+    {/block}
 
     {block name='product_accessories'}
       {if $accessories}
