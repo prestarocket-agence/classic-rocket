@@ -93,7 +93,7 @@
             <tr>
               <td>{$state.history_date}</td>
               <td>
-                <span class="badge badge-pill {$state.contrast}" style="background-color:{$state.color}">
+                <span class="badge badge-pill" style="color:#fff;background-color:{$state.color}">
                   {$state.ostate_name}
                 </span>
               </td>
@@ -106,7 +106,7 @@
           <div class="history-line">
             <div class="date">{$state.history_date}</div>
             <div class="state">
-              <span class="badge badge-pill {$state.contrast}" style="background-color:{$state.color}">
+              <span class="badge badge-pill" style="color:#fff;background-color:{$state.color}">
                 {$state.ostate_name}
               </span>
             </div>
