@@ -54,13 +54,3 @@
     </div>
   </div>
 </div>
-
-
-
-{literal}
-<style>
-  .custom-file-label::after{
-    content:"{/literal}{l s='Choose file' d='Shop.Theme.Actions'}"{literal}
-  }
-</style>
-{/literal}
