@@ -187,7 +187,7 @@
             {elseif $field.type === 'file'}
                 <div class="custom-file">
                     <input name="{$field.name}" type="file" class="custom-file-input{if !empty($field.errors)} is-invalid{/if}" id="f-{$field.name}_{$uniqId}"{if $field.required} required{/if}>
-                    <label class="custom-file-label" for="f-{$field.name}_{$uniqId}">{l s='Choose file' d='Shop.Theme.Actions'}</label>
+                    <label class="custom-file-label" for="f-{$field.name}_{$uniqId}" data-browse="{l s='Choose file' d='Shop.Theme.Actions'}">{l s='Choose file' d='Shop.Theme.Actions'}</label>
                 </div>
             {else}
 

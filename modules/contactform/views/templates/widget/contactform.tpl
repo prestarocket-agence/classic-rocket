@@ -83,16 +83,9 @@
                 </label>
                   <div class="custom-file">
                     <input name="fileUpload" type="file" class="custom-file-input" id="fileUpload">
-                    <label class="custom-file-label" for="fileUpload"><span class="sr-only">{l s='Choose file' d='Shop.Theme.Actions'}</span></label>
+                    <label class="custom-file-label" for="fileUpload" data-browse="{l s='Choose file' d='Shop.Theme.Actions'}"><span class="sr-only">{l s='Choose file' d='Shop.Theme.Actions'}</span></label>
                   </div>
               </div>
-            {literal}
-              <style>
-                    .custom-file-label::after{
-                    content:"{/literal}{l s='Choose file' d='Shop.Theme.Actions'}"{literal}
-                    }
-              </style>
-            {/literal}
             {/if}
 
           <div class="form-group">
