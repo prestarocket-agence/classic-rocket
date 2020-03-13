@@ -98,13 +98,13 @@
     {if isset($product.cover)}"image" :"{$product.cover.bySize.home_default.url}",{/if}
     {if $product.reference}"sku": "{$product.reference}",{/if}
     {if $product.ean13}
-    "gtin13": "{$product.ean13}",
+      "gtin13": "{$product.ean13}",
     {else if $product.upc}
-    "gtin13": "0{$product.upc}",
+      "gtin13": "0{$product.upc}",
     {else if $product.isbn}
-    "isbn": "{$product.isbn}",
+      "isbn": "{$product.isbn}",
     {else if $product.reference}
-    "mpn": "{$product.reference}",
+      "mpn": "{$product.reference}",
     {/if}    
     {if $product_manufacturer->name OR $shop.name}"brand": {
         "@type": "Thing",
