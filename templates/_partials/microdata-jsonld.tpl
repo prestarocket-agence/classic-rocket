@@ -143,9 +143,9 @@
         {else if $product.upc}
         "gtin13": "0{$product.upc}",
         {else if $product.isbn}
-        "isbn": "{$product.isbn}",
+          "isbn": "{$product.isbn}",
         {else if $product.reference}
-        "mpn": "{$product.reference}",
+          "mpn": "{$product.reference}",
         {/if}
         "sku": "{$product.reference}",
         {if $product.condition == 'new'}"itemCondition": "http://schema.org/NewCondition",{/if}
