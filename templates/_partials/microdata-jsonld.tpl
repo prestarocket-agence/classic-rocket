@@ -35,6 +35,8 @@
             <meta property="og:image" content="{$p_img.large.url}"/>
         {/foreach}
     {/if}
+{elseif $page.page_name == 'category'}
+    <meta property="og:image" content="{$category.image.large.url}"/>
 {else}
     <meta property="og:image" content="{$urls.shop_domain_url}{$shop.logo}"/>
 {/if}
