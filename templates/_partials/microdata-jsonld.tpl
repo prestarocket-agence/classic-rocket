@@ -121,7 +121,7 @@
         "name": "{$product.name|strip_tags:false}",
         "price": "{$product.price_amount}",
         "url": "{$product.url}",
-        "priceValidUntil": "{$smarty.now + (60*60*24*15)|date_format:"%Y-%m-%d"}",
+        "priceValidUntil": "{$smarty.now + (int) (60*60*24*15)|date_format:"%Y-%m-%d"}",
         {if $product.images|count > 0}
         "image": {strip}[
         {foreach from=$product.images item=p_img name="p_img_list"}
