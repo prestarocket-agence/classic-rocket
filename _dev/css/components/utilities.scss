@@ -24,10 +24,6 @@ img[data-lazy] {
 .d--block{
   display: block;
 }
-.header-nav__container{
-  display: flex;
-  justify-content: space-between;
-}
 
 .full-bleed {
   width: 100vw;
@@ -47,4 +43,7 @@ img[data-lazy] {
 .text--right{
   text-align: right;
 
+}
+.u-a-i-c{
+  align-items: center;
 }

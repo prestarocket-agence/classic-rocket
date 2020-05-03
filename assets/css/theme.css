@@ -6351,30 +6351,28 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 1rem;
   box-shadow: "0 2px 6px 0 rgba(0,0,0,.2)"; }
 
-.header-nav {
-  border-bottom: 1px solid #f1f1f1;
-  color: #212529; }
-  .header-nav a:not(.dropdown-item), .header-nav .btn {
-    color: #212529; }
+.header__up {
+  align-content: center; }
 
 .header-top {
-  border-bottom: 1px solid #f1f1f1; }
+  flex-wrap: wrap; }
+
+.header__search {
+  flex: 1;
+  padding-right: 15px;
+  padding-left: 15px; }
 
 @media (max-width: 767.98px) {
-  .header__container {
-    padding-left: 0;
-    padding-right: 0; }
-  .logo {
+  .header__search {
     width: 100%;
-    max-width: 115px; } }
+    padding: 0;
+    flex: auto;
+    order: 10; } }
 
 .l-footer {
   background-color: #fff;
   margin-top: 1rem;
   padding-top: 1rem; }
-
-.header-top {
-  position: relative; }
 
 .menu-top {
   margin: 0; }
@@ -7712,6 +7710,21 @@ custom-file-label.selected:after {
  * International Registered Trademark & Property of PrestaShop SA
  */
 /*# sourceMappingURL=front.css.map*/
+.search-widget {
+  max-width: 450px;
+  margin: 0 auto; }
+
+.search-widget__group {
+  position: relative; }
+
+.search-widget__input-right {
+  padding-right: 50px; }
+
+.search-widget__btn {
+  position: absolute;
+  right: 0;
+  top: 0; }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -7817,34 +7830,6 @@ custom-file-label.selected:after {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   background: transparent;
   color: #fff; }
-
-.displayNav1 {
-  display: flex;
-  align-items: center; }
-
-.displayNav2 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; }
-
-.header--mobile {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%; }
-
-.top-logo {
-  text-align: center; }
-
-.mobile-user {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center; }
-
-.displayTop {
-  display: flex;
-  justify-content: space-between;
-  position: static; }
 
 @media (min-width: 992px) {
   .product-comment-modal .modal-dialog {
@@ -8052,10 +8037,6 @@ img[data-lazy] {
 .d--block {
   display: block; }
 
-.header-nav__container {
-  display: flex;
-  justify-content: space-between; }
-
 .full-bleed {
   width: 100vw;
   margin-left: 50%;
@@ -8073,6 +8054,9 @@ img[data-lazy] {
 
 .text--right {
   text-align: right; }
+
+.u-a-i-c {
+  align-items: center; }
 
 .hidden-xs-up {
   display: none !important; }
