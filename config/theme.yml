@@ -62,11 +62,11 @@ global_settings:
       displayNav2:
         - ps_languageselector
         - ps_currencyselector
+      displayTop:
         - ps_customersignin
         - ps_shoppingcart
-      displayTop:
+      displayNavFullWidth:
         - ps_mainmenu
-        - ps_searchbarjqauto
       displayHome:
         - ps_imageslider
         - ps_featuredproducts
