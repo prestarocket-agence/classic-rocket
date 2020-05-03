@@ -29,7 +29,7 @@
         <button data-target="#" data-toggle="dropdown" class="btn btn-sm dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-label="{l s='Currency dropdown' d='Shop.Theme.Global'}">
             {$current_currency.iso_code} {$current_currency.sign}
         </button>
-        <div class="dropdown-menu" aria-labelledby="currency-selector-label">
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="currency-selector-label">
             {foreach from=$currencies item=currency}
                     <a title="{$currency.name}" rel="nofollow" href="{$currency.url}" class="dropdown-item small">{$currency.iso_code} {$currency.sign}</a>
             {/foreach}
