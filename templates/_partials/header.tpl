@@ -44,17 +44,17 @@
 {/block}
 
 {block name='header_top'}
-    <div class="container d--flex-between header-top">
+    <div class="container header-top d--flex-between u-a-i-c">
         <button class="visible--mobile btn" id="menu-icon" data-toggle="modal" data-target="#mobile_top_menu_wrapper">
             <i class="material-icons d-inline">&#xE5D2;</i>
         </button>
-        <a href="{$urls.base_url}" class="logo__link">
+        <a href="{$urls.base_url}" class="header__logo">
             <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
         </a>
         <div class="header__search">
             {hook h='displaySearch'}
         </div>
-        <div>
+        <div class="header__right">
             {hook h='displayTop'}
         </div>
     </div>

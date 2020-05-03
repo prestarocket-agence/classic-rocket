@@ -22,38 +22,38 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="_desktop_user_info" class="ml-4">
-  <div class="user-info">
-    {if $logged}
-      <a
-        class="logout visible--desktop"
-        href="{$logout_url}"
-        rel="nofollow"
-      >
+<div class="user-info header__rightitem">
+  {if $logged}
+    <a
+      class="logout visible--desktop u-link-body"
+      href="{$logout_url}"
+      rel="nofollow"
+    >
+        <span>
         <i class="material-icons md-24">&#xE7FF;</i>
-        {l s='Sign out' d='Shop.Theme.Actions'}
-      </a>
-      <a
-        class="account"
-        href="{$my_account_url}"
-        title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
-        rel="nofollow"
-      >
+        </span>
+      <span class="small">{l s='Sign out' d='Shop.Theme.Actions'}</span>
+    </a>
+    <a
+      class="account u-link-body"
+      href="{$my_account_url}"
+      title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
+      rel="nofollow"
+    >
           <span>
             <i class="material-icons visible--mobile logged">&#xE7FF;</i>
           </span>
-        <span class="visible--desktop pl-2">{$customerName}</span>
-      </a>
-    {else}
-      <a
-        href="{$my_account_url}"
-        class=""
-        title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
-        rel="nofollow"
-      >
+      <span class="visible--desktop small">{$customerName}</span>
+    </a>
+  {else}
+    <a
+      href="{$my_account_url}"
+      class="u-link-body"
+      title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
+      rel="nofollow"
+    >
       <span><i class="material-icons">&#xE7FF;</i></span>
-        <span class="visible--desktop">{l s='Sign in' d='Shop.Theme.Actions'}</span>
-      </a>
-    {/if}
-  </div>
+      <span class="visible--desktop small">{l s='Sign in' d='Shop.Theme.Actions'}</span>
+    </a>
+  {/if}
 </div>

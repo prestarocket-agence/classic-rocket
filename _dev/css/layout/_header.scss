@@ -9,18 +9,24 @@
 .header-top{
   flex-wrap: wrap;
 }
-.logo__link{
-  //max-width: percentage(3/12);
+.header__logo{
+  max-width: 20%;
 }
 .header__search{
   flex: 1;
   padding-right: $grid-gutter-width/2;
   padding-left: $grid-gutter-width/2;
 }
+.header__right{
+  display: flex;
+  align-items: center;
+}
+.header__rightitem:not(:last-child){
+  margin-right: $spacer/2;
+}
 @include media-breakpoint-mobile{
-  .logo__link{
-    //max-width: 50%;
-    //flex: 1;
+  .header__logo{
+    max-width: none;
   }
   .header__search {
     width: 100%;
