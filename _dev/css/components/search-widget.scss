@@ -1,0 +1,30 @@
+
+.search-widget{
+  flex: 1;
+  padding-right: $grid-gutter-width/2;
+  padding-left: $grid-gutter-width/2;
+}
+
+.search-widget__form{
+  max-width: 450px;
+  margin: 0 auto;
+}
+.search-widget__group{
+  position: relative;
+}
+.search-widget__input-right{
+  padding-right: 50px ;
+}
+.search-widget__btn{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+@include media-breakpoint-mobile{
+  .search-widget {
+    width: 100%;
+    padding: 0;
+    flex: auto;
+    order: 10;
+  }
+}
