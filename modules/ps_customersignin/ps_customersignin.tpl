@@ -25,23 +25,13 @@
 <div class="user-info header__rightitem">
   {if $logged}
     <a
-      class="logout visible--desktop u-link-body"
-      href="{$logout_url}"
-      rel="nofollow"
-    >
-        <span>
-        <i class="material-icons md-24">&#xE7FF;</i>
-        </span>
-      <span class="small">{l s='Sign out' d='Shop.Theme.Actions'}</span>
-    </a>
-    <a
       class="account u-link-body"
       href="{$my_account_url}"
       title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
       rel="nofollow"
     >
           <span>
-            <i class="material-icons visible--mobile logged">&#xE7FF;</i>
+            <i class="material-icons logged">&#xE7FF;</i>
           </span>
       <span class="visible--desktop small">{$customerName}</span>
     </a>
