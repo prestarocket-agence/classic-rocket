@@ -89,7 +89,7 @@
               <div class="total">{$order.totals.total.value}</div>
               <div class="status">
                 <span
-                  class="label label-pill {$order.history.current.contrast}"
+                  class="badge label-badge {$order.history.current.contrast}"
                   style="background-color:{$order.history.current.color}"
                 >
                   {$order.history.current.ostate_name}

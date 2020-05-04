@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<div id="block_myaccount_infos" class="col-md-3 links wrapper">
+<div id="block_myaccount_infos" class="col-lg-3 links wrapper">
     <p class="footer__title footer__title--desktop">{l s='Your account' d='Shop.Theme.Customeraccount'}</p>
     <a href="#footer_account_list" class="footer__title--mobile footer__title" data-toggle="collapse">{l s='Your account' d='Shop.Theme.Customeraccount'}</a>
   <ul class="account-list collapse show" data-collapse-hide-mobile id="footer_account_list">

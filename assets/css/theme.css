@@ -6772,9 +6772,8 @@ custom-file-label.selected:after {
 .form-footer {
   margin-top: 1rem; }
 
-.badge.dark {
-  color: #fff;
-  mix-blend-mode: difference; }
+.badge.bright {
+  color: #fff; }
 
 .no-js img.lazyload {
   display: none; }
@@ -7093,6 +7092,9 @@ custom-file-label.selected:after {
   .account-links .link-item i {
     margin: 0 auto 1rem;
     font-size: 3rem; }
+
+.address {
+  height: 100%; }
 
 .address-header {
   background-color: transparent; }

@@ -33,7 +33,7 @@
     <div id="order-infos">
       <div class="box">
           <div class="row">
-            <div class="col-md-{if $order.details.reorder_url}9{else}12{/if}">
+            <div class="col-lg-{if $order.details.reorder_url}9{else}12{/if}">
               <strong>
                 {l
                   s='Order Reference %reference% - placed on %date%'
@@ -43,7 +43,7 @@
               </strong>
             </div>
             {if $order.details.reorder_url}
-              <div class="col-md-3 text-md-right">
+              <div class="col-lg-3 text-md-right">
                 <a href="{$order.details.reorder_url}" class="btn btn-outline-primary">{l s='Reorder' d='Shop.Theme.Actions'}</a>
               </div>
             {/if}
@@ -93,7 +93,7 @@
             <tr>
               <td>{$state.history_date}</td>
               <td>
-                <span class="badge badge-pill" style="color:#fff;background-color:{$state.color}">
+                <span class="badge badge-pill {$state.contrast}" style="background-color:{$state.color}">
                   {$state.ostate_name}
                 </span>
               </td>
@@ -101,7 +101,7 @@
           {/foreach}
         </tbody>
       </table>
-      <div class="d-sm-none history-lines">
+      <div class="visible--mobile history-lines">
         {foreach from=$order.history item=state}
           <div class="history-line">
             <div class="date">{$state.history_date}</div>
@@ -126,7 +126,7 @@
   {block name='addresses'}
     <div class="addresses row">
       {if $order.addresses.delivery}
-        <div class="col-md-6 col-xl-4 mb-3 mb-md-0">
+        <div class="col-lg-6 col-xl-4 mb-3 mb-md-0">
           <article id="delivery-address" class="address">
             <p class="address-header"><strong>{l s='Delivery address %alias%' d='Shop.Theme.Checkout' sprintf=['%alias%' => $order.addresses.delivery.alias]}</strong></p>
             <address class="address-body">{$order.addresses.delivery.formatted nofilter}</address>
@@ -134,7 +134,7 @@
         </div>
       {/if}
 
-      <div class="col-md-6 col-xl-4">
+      <div class="col-lg-6 col-xl-4">
         <article id="invoice-address" class="address">
           <p class="address-header"><strong>{l s='Invoice address %alias%' d='Shop.Theme.Checkout' sprintf=['%alias%' => $order.addresses.invoice.alias]}</strong></p>
           <address class="address-body">{$order.addresses.invoice.formatted nofilter}</address>
