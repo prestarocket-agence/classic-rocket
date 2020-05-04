@@ -36,13 +36,14 @@
 }
 @include media-breakpoint-mobile{
   .header__logo{
-    max-width: 50%;
+    max-width: 200px;
   }
   .header__search {
     width: 100%;
     padding: 0;
     flex: auto;
     order: 10;
+    margin-top: 10px;
   }
   .header__logo--checkout{
     margin: 0 auto;
