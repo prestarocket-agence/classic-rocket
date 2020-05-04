@@ -56,7 +56,7 @@
 }
 
 //mobile
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-mobile() {
   .menu-top{
     flex-direction: column;
     margin-bottom: $spacer;

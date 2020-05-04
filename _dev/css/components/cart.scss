@@ -54,7 +54,7 @@
     }
   }
 }
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-mobile() {
   .product-line__img{
     width: 50px;
   }

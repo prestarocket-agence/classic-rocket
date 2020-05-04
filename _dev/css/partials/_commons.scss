@@ -304,7 +304,7 @@ custom-file-label.selected:after{
   margin-bottom: $spacer-y;
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-mobile() {
   .modal-footer{
     flex-direction: column;
     flex-direction:column-reverse;
@@ -353,7 +353,7 @@ main > .notifications-container{
   }
   }
 }
-@include media-breakpoint-up(md){
+@include media-breakpoint-desktop{
 
 .page-content,
 .checkout-form,
