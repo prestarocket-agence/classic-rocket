@@ -25,7 +25,7 @@
 
 <div class="product-comment-list-item" data-product-comment-id="@COMMENT_ID@" data-product-id="@PRODUCT_ID@">
   <div class="row">
-  <div class="col-md-3 col-sm-3 comment-infos">
+  <div class="col-sm-3 comment-infos">
     <div class="grade-stars"></div>
     <div class="comment-date">
       @COMMENT_DATE@
@@ -35,7 +35,7 @@
     </div>
   </div>
 
-  <div class="col-md-9 col-sm-9 comment-content">
+  <div class="col-sm-9 comment-content">
     <p class="h4 comment__title">@COMMENT_TITLE@</ph4>
     <p>@COMMENT_COMMENT@</p>
     <div class="comment-buttons btn-group btn-group-sm">

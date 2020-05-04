@@ -6379,7 +6379,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding-top: 1rem;
   padding-bottom: 1rem; }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .header__logo {
     max-width: 50%; }
   .header__search {
@@ -6390,7 +6390,7 @@ a.text-dark:hover, a.text-dark:focus {
   .header__logo--checkout {
     margin: 0 auto; } }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .header-top__col {
     width: 30%; } }
 
@@ -6419,7 +6419,7 @@ a.text-dark:hover, a.text-dark:focus {
   display: block;
   padding: 0.5rem; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .menu__item-header {
     height: 100%; }
   .menu-sub {
@@ -6448,7 +6448,7 @@ a.text-dark:hover, a.text-dark:focus {
     .menu__item-link--1 .menu__item-link {
       color: #212529; } }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .menu-top {
     flex-direction: column;
     margin-bottom: 1rem; }
@@ -6723,7 +6723,7 @@ custom-file-label.selected:after {
 .page-home > * {
   margin-bottom: 2rem; }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .modal-footer {
     flex-direction: column;
     flex-direction: column-reverse; }
@@ -6759,7 +6759,7 @@ custom-file-label.selected:after {
 .form-group .label .quick-view {
   font-size: 0.75rem; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .page-content form,
   .checkout-form form,
   .page-wrapper--order-confirmation form {
@@ -6772,9 +6772,8 @@ custom-file-label.selected:after {
 .form-footer {
   margin-top: 1rem; }
 
-.badge.dark {
-  color: #fff;
-  mix-blend-mode: difference; }
+.badge.bright {
+  color: #fff; }
 
 .no-js img.lazyload {
   display: none; }
@@ -6923,7 +6922,7 @@ custom-file-label.selected:after {
 .product-line__img {
   margin-right: 1rem; }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .product-line__img {
     width: 100px;
     height: auto; }
@@ -6933,7 +6932,7 @@ custom-file-label.selected:after {
     .product-line-actions .product-price {
       margin: 0 2rem; } }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .product-line__img {
     width: 50px; }
   .product-line-actions .product-price {
@@ -6961,7 +6960,7 @@ custom-file-label.selected:after {
 .nav-tabs--center {
   justify-content: center; }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .checkout {
     position: fixed;
     bottom: 0;
@@ -7094,6 +7093,9 @@ custom-file-label.selected:after {
     margin: 0 auto 1rem;
     font-size: 3rem; }
 
+.address {
+  height: 100%; }
+
 .address-header {
   background-color: transparent; }
 
@@ -7141,7 +7143,7 @@ custom-file-label.selected:after {
     .footer__title--mobile[data-toggle="collapse"][aria-expanded="true"]:after {
       transform: rotate(180deg); }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .footer__title--desktop {
     display: none; }
   .footer__title--mobile {
@@ -7230,7 +7232,7 @@ custom-file-label.selected:after {
 .products {
   align-items: stretch; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .product-miniature {
     flex: 0 0 33.33333%;
     max-width: 33.33333%; }
@@ -7446,7 +7448,7 @@ custom-file-label.selected:after {
 .cart-content > p:not(:last-child) {
   margin-bottom: 0.5rem; }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .modal-cart__image {
     max-width: 120px; }
   .blockcart-modal .divide-right {
@@ -7566,13 +7568,13 @@ custom-file-label.selected:after {
 .nav-tabs {
   justify-content: center; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .collpase--facet.collapse {
     display: block; }
   .facet__block:not(:last-child) {
     padding-bottom: 1rem; } }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .facet__block:not(.show) {
     padding-bottom: 0; } }
 
@@ -7749,7 +7751,7 @@ custom-file-label.selected:after {
   right: 0;
   top: 0; }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .search-widget {
     max-width: unset; } }
 
@@ -8051,11 +8053,11 @@ img[data-lazy] {
 .cursor-pointer {
   cursor: pointer; }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .visible--desktop {
     display: none; } }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .visible--mobile {
     display: none; } }
 

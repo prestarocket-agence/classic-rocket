@@ -39,7 +39,7 @@
             <div class="modal-body">
                 <form id="post-product-comment-form" action="{$post_comment_url nofilter}" method="POST">
                     <div class="row">
-                        <div class="col-md-2 col-sm-2">
+                        <div class="col-sm-2">
                             {if isset($product) && $product}
                                 {block name='product_flags'}
                                     <ul class="product-flags">
@@ -64,10 +64,10 @@
                                 {/block}
                             {/if}
                         </div>
-                        <div class="col-md-4 col-sm-4">
+                        <div class="col-sm-4">
                             <p class="h3">{$product.name}</p>
                         </div>
-                        <div class="col-md-6 col-sm-6">
+                        <div class="col-sm-6">
                             {if $criterions|@count > 0}
                                 <div id="criterions_list">
                                     {foreach from=$criterions item='criterion' name="criterion_list"}

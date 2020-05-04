@@ -45,10 +45,8 @@
         </p>
       </div>
       <div class="modal-body">
-        <div class="row">
-          <div class="col-md-12  col-sm-12" id="{$modal_id}-message">
-            {$modal_message}
-          </div>
+        <div id="{$modal_id}-message">
+          {$modal_message}
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary btn-comment btn-comment-huge" data-dismiss="modal" aria-label="{l s='OK' d='Modules.Productcomments.Shop'}">

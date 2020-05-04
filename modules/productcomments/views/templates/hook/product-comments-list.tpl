@@ -39,7 +39,7 @@
 {include file='module:productcomments/views/templates/hook/product-comment-item-prototype.tpl' assign="comment_prototype"}
 {include file='module:productcomments/views/templates/hook/empty-product-comment.tpl'}
 <div class="row">
-  <div class="col-md-12 col-sm-12"
+  <div class="col-12"
        id="product-comments-list"
        data-list-comments-url="{$list_comments_url nofilter}"
        data-update-comment-usefulness-url="{$update_comment_usefulness_url nofilter}"

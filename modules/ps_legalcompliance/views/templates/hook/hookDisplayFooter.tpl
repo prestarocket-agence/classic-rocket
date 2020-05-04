@@ -23,9 +23,9 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<div class="col-md-2 links wrapper">
-  <h3 class="d-none d-md-block">{l s='Information' d='Modules.Legalcompliance.Shop'}</h3>
-  <div class="title clearfix d-md-none" data-target="#footer_eu_about_us_list" data-toggle="collapse">
+<div class="col-lg-2 links wrapper">
+  <p class="visible--desktop">{l s='Information' d='Modules.Legalcompliance.Shop'}</p>
+  <div class="title clearfix visible--mobile" data-target="#footer_eu_about_us_list" data-toggle="collapse">
     <span class="h3">{l s='Information' d='Modules.Legalcompliance.Shop'}</span>
     <span class="float-right">
       <span class="navbar-toggler collapse-icons">

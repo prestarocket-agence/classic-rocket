@@ -32,7 +32,7 @@
 
   <section id="main">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-lg-6">
         {block name='page_content_container'}
           <section class="page-content--product" id="content">
             {block name='page_content'}
@@ -49,7 +49,7 @@
           </section>
         {/block}
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6">
           {block name='page_header_container'}
             {block name='page_header'}
               <h1 class="h1">{block name='page_title'}{$product.name}{/block}</h1>
