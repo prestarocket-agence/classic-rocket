@@ -105,7 +105,7 @@
       "isbn": "{$product.isbn}",
     {else if $product.reference}
       "mpn": "{$product.reference}",
-    {/if}    
+    {/if}
     {if $product_manufacturer->name OR $shop.name}"brand": {
         "@type": "Thing",
         "name": "{if $product_manufacturer->name}{$product_manufacturer->name|escape:'html':'UTF-8'}{else}$shop.name{/if}"
@@ -130,7 +130,7 @@
         "name": "{$product.name|strip_tags:false}",
         "price": "{$product.price_amount}",
         "url": "{$product.url}",
-        "priceValidUntil": "{($smarty.now + (60*60*24*15))|date_format:"%Y-%m-%d"}",
+        "priceValidUntil": "{($smarty.now + (int) (60*60*24*15))|date_format:"%Y-%m-%d"}",
         {if $product.images|count > 0}
         "image": {strip}[
         {foreach from=$product.images item=p_img name="p_img_list"}
