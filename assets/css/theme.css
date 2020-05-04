@@ -3991,7 +3991,7 @@ button.bg-dark:focus {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, .menu-top, .social-sharing, .pack-product-container, .pack-product-quantity {
+.d-flex, .social-sharing, .pack-product-container, .pack-product-quantity {
   display: flex !important; }
 
 .d-inline-flex {
@@ -6349,35 +6349,68 @@ a.text-dark:hover, a.text-dark:focus {
 .l-header {
   background-color: #fff;
   margin-bottom: 1rem;
-  box-shadow: "0 2px 6px 0 rgba(0,0,0,.2)"; }
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2); }
 
-.header-nav {
-  border-bottom: 1px solid #f1f1f1;
-  color: #212529; }
-  .header-nav a:not(.dropdown-item), .header-nav .btn {
-    color: #212529; }
+.header__up {
+  align-content: center; }
 
 .header-top {
-  border-bottom: 1px solid #f1f1f1; }
+  flex-wrap: wrap;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem; }
+
+.header__search {
+  flex: 1;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.header__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+
+.header__rightitem:not(:last-child) {
+  margin-right: 0.5rem; }
+
+.header__logo--checkout {
+  max-width: 200px; }
+
+.header-nav--checkout {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
 
 @media (max-width: 767.98px) {
-  .header__container {
-    padding-left: 0;
-    padding-right: 0; }
-  .logo {
+  .header__logo {
+    max-width: 50%; }
+  .header__search {
     width: 100%;
-    max-width: 115px; } }
+    padding: 0;
+    flex: auto;
+    order: 10; }
+  .header__logo--checkout {
+    margin: 0 auto; } }
+
+@media (min-width: 768px) {
+  .header-top__col {
+    width: 30%; } }
+
+@media (min-width: 1200px) {
+  .header-top__col {
+    width: 25%; } }
 
 .l-footer {
   background-color: #fff;
   margin-top: 1rem;
   padding-top: 1rem; }
 
-.header-top {
-  position: relative; }
+.menu {
+  padding-bottom: 1rem; }
 
 .menu-top {
-  margin: 0; }
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  position: relative; }
 
 .menu__item-link--top {
   color: #343a40;
@@ -6394,7 +6427,7 @@ a.text-dark:hover, a.text-dark:focus {
     opacity: 0;
     width: 100%;
     left: 0;
-    top: 60px;
+    top: 100%;
     z-index: -1;
     transition: all .5s ease; }
   .menu-sub__content > ul {
@@ -6864,17 +6897,6 @@ custom-file-label.selected:after {
   transition: background-color 0.3s ease-in-out; }
   .social-share-btn--footer:hover {
     background-color: #2fb5d2; }
-
-.blockcart {
-  color: #fff;
-  background-color: #2fb5d2;
-  padding: 0.5rem; }
-
-.blockcart.inactive {
-  color: #6c757d;
-  background-color: #2fb5d2; }
-  .blockcart.inactive .material-icons {
-    color: #6c757d; }
 
 .product-line-actions {
   display: flex;
@@ -7712,6 +7734,25 @@ custom-file-label.selected:after {
  * International Registered Trademark & Property of PrestaShop SA
  */
 /*# sourceMappingURL=front.css.map*/
+.search-widget {
+  max-width: 450px;
+  margin: 0 auto; }
+
+.search-widget__group {
+  position: relative; }
+
+.search-widget__input-right {
+  padding-right: 50px; }
+
+.search-widget__btn {
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+@media (max-width: 767.98px) {
+  .search-widget {
+    max-width: unset; } }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -7817,34 +7858,6 @@ custom-file-label.selected:after {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   background: transparent;
   color: #fff; }
-
-.displayNav1 {
-  display: flex;
-  align-items: center; }
-
-.displayNav2 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; }
-
-.header--mobile {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%; }
-
-.top-logo {
-  text-align: center; }
-
-.mobile-user {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center; }
-
-.displayTop {
-  display: flex;
-  justify-content: space-between;
-  position: static; }
 
 @media (min-width: 992px) {
   .product-comment-modal .modal-dialog {
@@ -8052,10 +8065,6 @@ img[data-lazy] {
 .d--block {
   display: block; }
 
-.header-nav__container {
-  display: flex;
-  justify-content: space-between; }
-
 .full-bleed {
   width: 100vw;
   margin-left: 50%;
@@ -8073,6 +8082,18 @@ img[data-lazy] {
 
 .text--right {
   text-align: right; }
+
+.u-a-i-c {
+  align-items: center; }
+
+.u-m-l-2 {
+  margin-left: 0.5rem; }
+
+.u-link-body {
+  color: #212529; }
+
+.u-bor-bot {
+  border-bottom: 1px solid #f1f1f1; }
 
 .hidden-xs-up {
   display: none !important; }
