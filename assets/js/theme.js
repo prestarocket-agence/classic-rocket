@@ -2147,7 +2147,7 @@ __webpack_require__.r(__webpack_exports__);
 
 prestashop__WEBPACK_IMPORTED_MODULE_1___default.a.responsive = prestashop__WEBPACK_IMPORTED_MODULE_1___default.a.responsive || {};
 prestashop__WEBPACK_IMPORTED_MODULE_1___default.a.responsive.current_width = window.innerWidth;
-prestashop__WEBPACK_IMPORTED_MODULE_1___default.a.responsive.min_width = 768;
+prestashop__WEBPACK_IMPORTED_MODULE_1___default.a.responsive.min_width = 992;
 prestashop__WEBPACK_IMPORTED_MODULE_1___default.a.responsive.mobile = prestashop__WEBPACK_IMPORTED_MODULE_1___default.a.responsive.current_width < prestashop__WEBPACK_IMPORTED_MODULE_1___default.a.responsive.min_width;
 
 function swapChildren(obj1, obj2) {
