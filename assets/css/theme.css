@@ -6349,10 +6349,7 @@ a.text-dark:hover, a.text-dark:focus {
 .l-header {
   background-color: #fff;
   margin-bottom: 1rem;
-  box-shadow: "0 2px 6px 0 rgba(0,0,0,.2)"; }
-
-.header-nav {
-  border-bottom: 1px solid; }
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2); }
 
 .header__up {
   align-content: center; }
@@ -6375,6 +6372,13 @@ a.text-dark:hover, a.text-dark:focus {
 .header__rightitem:not(:last-child) {
   margin-right: 0.5rem; }
 
+.header__logo--checkout {
+  max-width: 200px; }
+
+.header-nav--checkout {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
 @media (max-width: 767.98px) {
   .header__logo {
     max-width: 50%; }
@@ -6382,7 +6386,9 @@ a.text-dark:hover, a.text-dark:focus {
     width: 100%;
     padding: 0;
     flex: auto;
-    order: 10; } }
+    order: 10; }
+  .header__logo--checkout {
+    margin: 0 auto; } }
 
 @media (min-width: 768px) {
   .header-top__col {

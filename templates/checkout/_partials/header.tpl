@@ -24,16 +24,14 @@
  *}
 {block name='header'}
   {block name='header_nav'}
-      <nav class="header-nav border-bottom py-2 container">
-        <div class="header-nav__container">
-        <a href="{$urls.base_url}">
+      <div class="header-nav header-nav--checkout container d--flex-between u-a-i-c">
+        <a href="{$urls.base_url}" class="header__logo header__logo--checkout">
           <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name} {l s='logo' d='Shop.Theme.Global'}">
         </a>
-        <div>
+        <div class="small">
           {widget name="ps_contactinfo" hook="displayNav"}
         </div>
-        </div>
-      </nav>
+      </div>
   {/block}
   {block name='header_top'}
   {/block}

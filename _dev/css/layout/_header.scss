@@ -3,9 +3,7 @@
   margin-bottom: $spacer;
   box-shadow: $header-box-shadow;
 }
-.header-nav{
-  border-bottom: 1px solid;
-}
+
 .header__up{
   align-content: center;
 }
@@ -29,7 +27,13 @@
 .header__rightitem:not(:last-child){
   margin-right: $spacer/2;
 }
-
+.header__logo--checkout{
+  max-width: 200px;
+}
+.header-nav--checkout{
+  padding-top: $spacer;
+  padding-bottom: $spacer;
+}
 @include media-breakpoint-mobile{
   .header__logo{
     max-width: 50%;
@@ -39,6 +43,9 @@
     padding: 0;
     flex: auto;
     order: 10;
+  }
+  .header__logo--checkout{
+    margin: 0 auto;
   }
 }
 @include media-breakpoint-desktop(){
