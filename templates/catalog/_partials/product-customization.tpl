@@ -59,7 +59,7 @@
                                 <input class="custom-file-input" {if $field.required} required {/if} type="file"
                                        name="{$field.input_name}" id="field-{$field.id_customization_field}">
                                 <label class="custom-file-label"
-                                       for="field-{$field.id_customization_field}">{l s='Choose file' d='Shop.Theme.Actions'}</label>
+                                       for="field-{$field.id_customization_field}" data-browse="{l s='Choose file' d='Shop.Theme.Actions'}">{l s='Choose file' d='Shop.Theme.Actions'}</label>
                                 <div class="invalid-feedback js-invalid-feedback-browser"></div>
 
                             </div>

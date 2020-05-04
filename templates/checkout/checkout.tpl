@@ -77,7 +77,7 @@
         {include file='checkout/_partials/footer.tpl'}
     {/block}
 </footer>
-{block name='offcanvas_madals'}
+{block name='offcanvas_modals'}
     {* offcanvas search filter *}
   <div class="modal fade" id="offcanvas_search_filter" tabindex="-1" role="dialog" data-modal-hide-mobile>
     <div class="modal-dialog modal-dialog__offcanvas modal-dialog__offcanvas--right" role="document">

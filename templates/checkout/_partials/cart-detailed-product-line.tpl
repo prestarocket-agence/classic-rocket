@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="product-line-grid row no-gutters">
-    <div class="col-12 col-md-7">
+    <div class="col-12 col-lg-7">
         <div class="media">
             <img src="{$product.cover.bySize.cart_default.url}" alt="{$product.name|escape:'quotes'}"
                  class="product-line__img" width="{$product.cover.bySize.cart_default.width}"
@@ -108,7 +108,7 @@
         </div>
     </div>
     {* end first col *}
-    <div class="col-md-5 col-12">
+    <div class="col-lg-5 col-12">
         {*d-flex align-items-start justify-content-between*}
         <div class="product-line-grid-right product-line-actions">
             {if isset($product.is_gift) && $product.is_gift}

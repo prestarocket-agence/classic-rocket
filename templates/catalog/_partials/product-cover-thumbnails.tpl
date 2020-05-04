@@ -77,7 +77,7 @@
       {/foreach}
   </div>
       {if $product.cover}
-      <button type="button" class="btn btn-link btn-zoom hidden-sm-down product-layer-zoom" data-toggle="modal" data-target="#product-modal">
+      <button type="button" class="btn btn-link btn-zoom visible-desktop product-layer-zoom" data-toggle="modal" data-target="#product-modal">
           <i class="material-icons zoom-in">&#xE8FF;</i>
       </button>
       {/if}
@@ -86,7 +86,7 @@
 
   {block name='product_images'}
       {if $product.images|count > 1}
-      <div class="product-thumbs js-qv-product-images hidden-sm-down slick__arrow-outside" data-slick='{literal}{"asNavFor":"[data-slick].products-imagescover","slidesToShow": {/literal}{if $product.images|count > 2}3{else}2{/if}{literal}, "slidesToScroll": 1,"focusOnSelect": true,"centerMode":false,"rows": 0,"variableWidth": true}{/literal}' data-count="{$product.images|count}">
+      <div class="product-thumbs js-qv-product-images visible-desktop slick__arrow-outside" data-slick='{literal}{"asNavFor":"[data-slick].products-imagescover","slidesToShow": {/literal}{if $product.images|count > 2}3{else}2{/if}{literal}, "slidesToScroll": 1,"focusOnSelect": true,"centerMode":false,"rows": 0,"variableWidth": true}{/literal}' data-count="{$product.images|count}">
           <div class="product-thumb slick-active">
               <div class="rc">
                   <img

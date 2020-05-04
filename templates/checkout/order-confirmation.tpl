@@ -50,7 +50,7 @@
         </div>
         {/block}
         {block name='order_details'}
-          <div id="order-details" class="col-12 col-lg-3">
+          <div id="order-details" class="mt-4">
             <h3 class="h3 card-title">{l s='Order details' d='Shop.Theme.Checkout'}:</h3>
             <ul>
               <li>{l s='Order reference: %reference%' d='Shop.Theme.Checkout' sprintf=['%reference%' => $order.details.reference]}</li>

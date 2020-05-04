@@ -36,7 +36,7 @@
             <div class="{if $depth === 0}menu-sub {/if}clearfix collapse show" data-collapse-hide-mobile
                  id="top_sub_menu_{$_expand_id}" role="group" aria-labelledby="{$node.page_identifier}"
                  aria-expanded="false" aria-hidden="true">
-              <div{if $depth === 0} class="menu-sub__content container"{/if}>
+              <div{if $depth === 0} class="menu-sub__content"{/if}>
                 {menu nodes=$node.children depth=$node.depth parent=$node}
               </div>
             </div>
@@ -47,6 +47,6 @@
   {/if}
 {/function}
 
-<div class="menu d-none d-md-block" id="_desktop_top_menu">
+<nav class="menu visible--desktop" id="_desktop_top_menu">
   {menu nodes=$menu.children}
-</div>
+</nav>

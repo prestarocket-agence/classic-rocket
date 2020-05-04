@@ -29,12 +29,14 @@
 <meta property="og:url" content="{$urls.current_url}"/>
 <meta property="og:site_name" content="{$shop.name}"/>
 
-{if isset($product) && $page.page_name == 'product'}
+{if isset($product) && $page.page_name === 'product'}
     {if $product.images|count > 0}
         {foreach from=$product.images item=p_img name="p_img_list"}
             <meta property="og:image" content="{$p_img.large.url}"/>
         {/foreach}
     {/if}
+{elseif $page.page_name === 'category' && isset($category) && $category.image.large.url}
+    <meta property="og:image" content="{$category.image.large.url}"/>
 {else}
     <meta property="og:image" content="{$urls.shop_domain_url}{$shop.logo}"/>
 {/if}
@@ -96,10 +98,19 @@
     "description": "{$page.meta.description}",
     "category": "{$product.category_name}",
     {if isset($product.cover)}"image" :"{$product.cover.bySize.home_default.url}",{/if}
-	{if $product.reference}"mpn": "{$product.reference}",{/if}
-    {if $product_manufacturer->name}"brand": {
+    {if $product.reference}"sku": "{$product.reference}",{/if}
+    {if $product.ean13}
+      "gtin13": "{$product.ean13}",
+    {else if $product.upc}
+      "gtin13": "0{$product.upc}",
+    {else if $product.isbn}
+      "isbn": "{$product.isbn}",
+    {else if $product.reference}
+      "mpn": "{$product.reference}",
+    {/if}
+    {if $product_manufacturer->name OR $shop.name}"brand": {
         "@type": "Thing",
-        "name": "{$product_manufacturer->name|escape:'html':'UTF-8'}"
+        "name": "{if $product_manufacturer->name}{$product_manufacturer->name|escape:'html':'UTF-8'}{else}$shop.name{/if}"
     },{/if}
     {if isset($nbComments) && $nbComments && $ratings.avg}"aggregateRating": {
         "@type": "AggregateRating",
@@ -121,7 +132,7 @@
         "name": "{$product.name|strip_tags:false}",
         "price": "{$product.price_amount}",
         "url": "{$product.url}",
-        "priceValidUntil": "{$smarty.now + (60*60*24*15)|date_format:"%Y-%m-%d"}",
+        "priceValidUntil": "{($smarty.now + (int) (60*60*24*15))|date_format:"%Y-%m-%d"}",
         {if $product.images|count > 0}
         "image": {strip}[
         {foreach from=$product.images item=p_img name="p_img_list"}
@@ -133,6 +144,10 @@
         "gtin13": "{$product.ean13}",
         {else if $product.upc}
         "gtin13": "0{$product.upc}",
+        {else if $product.isbn}
+          "isbn": "{$product.isbn}",
+        {else if $product.reference}
+          "mpn": "{$product.reference}",
         {/if}
         "sku": "{$product.reference}",
         {if $product.condition == 'new'}"itemCondition": "http://schema.org/NewCondition",{/if}

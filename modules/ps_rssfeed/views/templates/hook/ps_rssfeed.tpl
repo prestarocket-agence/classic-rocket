@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<div class="block-contact col-md-2 links wrapper">
+<div class="block-contact col-lg-2 links wrapper">
   <p class="h3 d-none d-md-block">{$title}</p>
   <div>
     {if $rss_links}
