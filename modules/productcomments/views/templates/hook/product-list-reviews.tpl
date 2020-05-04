@@ -27,9 +27,7 @@
 
 {if $nb_comments != 0}
 {* Rich snippet rating is displayed via php/smarty meaning it will be cached (for example on homepage) *}
-<div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope>
-
-
+<div>
   <div id="product-list-reviews-{$product.id}" class="product-list-reviews">
     <div class="grade-stars small-stars">
       {** full icon **}
@@ -53,7 +51,7 @@
         {/section}
     </div>
   </div>
-  <meta itemprop="reviewCount" content="{$nb_comments}" />
-  <meta itemprop="ratingValue" content="{$average_grade}" />
+  {*<meta itemprop="reviewCount" content="{$nb_comments}" />*}
+  {*<meta itemprop="ratingValue" content="{$average_grade}" />*}
 </div>
 {/if}
