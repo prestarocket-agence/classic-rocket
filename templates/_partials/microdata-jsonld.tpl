@@ -29,12 +29,14 @@
 <meta property="og:url" content="{$urls.current_url}"/>
 <meta property="og:site_name" content="{$shop.name}"/>
 
-{if isset($product) && $page.page_name == 'product'}
+{if isset($product) && $page.page_name === 'product'}
     {if $product.images|count > 0}
         {foreach from=$product.images item=p_img name="p_img_list"}
             <meta property="og:image" content="{$p_img.large.url}"/>
         {/foreach}
     {/if}
+{elseif $page.page_name === 'category' && isset($category) && $category.image.large.url}
+    <meta property="og:image" content="{$category.image.large.url}"/>
 {else}
     <meta property="og:image" content="{$urls.shop_domain_url}{$shop.logo}"/>
 {/if}
