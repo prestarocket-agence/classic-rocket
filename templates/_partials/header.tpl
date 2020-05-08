@@ -35,7 +35,7 @@
                 <div class="small">
                     {hook h='displayNav1'}
                 </div>
-                <div>
+                <div class="header-nav__right">
                     {hook h='displayNav2'}
                 </div>
             </div>
