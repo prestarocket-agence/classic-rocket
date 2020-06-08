@@ -55,12 +55,14 @@ module.exports = (env, argv) => {
         module: {
             rules: [
                 {
-                    test: /\.(js|jsx)$/,
-                    exclude: /(node_modules|bower_components)/,
+                    test: /\.js$/,
+                    // exclude: /(node_modules|bower_components)/,
                     include: [
                         path.join(__dirname, '')
                     ],
-                    use: ['babel-loader']
+                  use: {
+                    loader: 'babel-loader'
+                  }
                 },
                 {
                     test: /\.s[ac]ss/,
@@ -129,7 +131,8 @@ module.exports = (env, argv) => {
             jquery: 'jQuery'
         },
         optimization: {
-            minimizer: [
+          minimize: true,
+          minimizer: [
                 new TerserPlugin({
                     parallel: true,
                     test: /\.js($|\?)/i,
@@ -146,7 +149,9 @@ module.exports = (env, argv) => {
                             keep_fnames: IS_DEV,
                             reduce_vars: IS_PROD,
                             sequences: IS_PROD,
-                            warnings: IS_DEV
+                            warnings: IS_DEV,
+                          ecma: 5,
+
                         },
                         output: {
                             comments: IS_DEV
