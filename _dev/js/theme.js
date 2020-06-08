@@ -25,6 +25,7 @@
 import 'bootstrap/js/src/util';
 import 'bootstrap/js/src/alert';
 import 'bootstrap/js/src/button';
+import  '../node_modules/bootstrap/js/src/collapse.js';
 import 'bootstrap/js/src/collapse';
 import 'bootstrap/js/src/dropdown';
 import 'bootstrap/js/src/modal';
@@ -61,6 +62,7 @@ for (var i in EventEmitter.prototype) {
 }
 
 $(document).ready(() => {
+  const test = 270479;
   const form = new Form();
   let slickSlider = new SlickSlider();
   let topMenuEl = $('#_desktop_top_menu #top-menu');
