@@ -3,7 +3,10 @@
     [
       "@babel/preset-env",
       {
-        "forceAllTransforms": true
+        "forceAllTransforms": true,
+        "targets": {
+          "browsers": ["ie >= 10", "last 1 version"]
+        }
       }
     ]
   ]
