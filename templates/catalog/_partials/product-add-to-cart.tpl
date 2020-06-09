@@ -41,7 +41,7 @@
           >
         </div>
 
-        <div class="add col">
+        <div class="add col-auto">
           <button
             class="btn btn-primary add-to-cart btn-lg btn-block btn-add-to-cart js-add-to-cart"
             data-button-action="add-to-cart"
@@ -72,7 +72,7 @@
         {/if}
       </span>
     {/block}
-    
+
     {block name='product_minimal_quantity'}
       <p class="product-minimal-quantity">
         {if $product.minimal_quantity > 1}
