@@ -19,7 +19,8 @@
   padding-right: $grid-gutter-width/2;
   padding-left: $grid-gutter-width/2;
 }
-.header__right{
+.header__right,
+.header-nav__right{
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -35,8 +36,9 @@
   padding-bottom: $spacer;
 }
 @include media-breakpoint-mobile{
-  .header__logo{
-    max-width: 200px;
+  .header__logo,
+  .header__logo--checkout{
+    max-width: 50%;
   }
   .header__search {
     width: 100%;
