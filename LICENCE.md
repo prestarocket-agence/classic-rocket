@@ -8,6 +8,7 @@ The use of the Theme is permitted provided that the following conditions are met
 You can:
 - Customize the Theme
 - Use the Theme for personal and client projects
+
 You cannot:
 - Use in derivative PrestaShop themes that anyone can download for sale or for free.
 - Use any of the components included in the Theme in a project that is not built upon the Theme
