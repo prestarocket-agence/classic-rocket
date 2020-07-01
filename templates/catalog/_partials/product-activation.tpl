@@ -28,7 +28,7 @@
       <div class="row">
         {foreach $page.admin_notifications as $notif}
           <div class="col-sm-12">
-            <i class="material-icons float-left">&#xE001;</i>
+              {include file='_partials/svg/exclamation-circle.svg'}
             <p class="alert-text">{$notif.message}</p>
           </div>
         {/foreach}

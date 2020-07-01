@@ -46,7 +46,7 @@
 {block name='header_top'}
     <div class="container header-top d--flex-between u-a-i-c">
         <button class="visible--mobile btn" id="menu-icon" data-toggle="modal" data-target="#mobile_top_menu_wrapper">
-            <i class="material-icons d-inline">&#xE5D2;</i>
+            {include file='_partials/svg/menu.svg'}
         </button>
         <a href="{$urls.base_url}" class="header__logo header-top__col">
             <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">

@@ -34,7 +34,7 @@
                                     <span class="label small">{$voucher.name}</span>
                                     <div class="">
                                         <span>{$voucher.reduction_formatted}</span>
-                                        <a href="{$voucher.delete_url}" data-link-action="remove-voucher"><i class="material-icons">&#xE872;</i></a>
+                                        <a href="{$voucher.delete_url}" data-link-action="remove-voucher">{include file='_partials/svg/thrash-fill.svg'}</a>
                                     </div>
                                 </li>
                             {/foreach}
@@ -65,7 +65,7 @@
 
                         {block name='cart_voucher_notifications'}
                             <div class="alert alert-danger js-error promo-code-alert" role="alert">
-                                <i class="material-icons">&#xE001;</i><span class="ml-1 js-error-text"></span>
+                                {include file='_partials/svg/exclamation-circle.svg'}<span class="ml-1 js-error-text"></span>
                             </div>
                         {/block}
 

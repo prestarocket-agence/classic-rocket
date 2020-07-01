@@ -41,7 +41,7 @@
 
   <div class="addresses-footer">
     <a class="btn btn-outline-primary" href="{$urls.pages.address}" data-link-action="add-address">
-      <i class="material-icons">&#xE145;</i>
+      {include file='_partials/svg/plus.svg'}
       <span>{l s='Create new address' d='Shop.Theme.Actions'}</span>
     </a>
   </div>

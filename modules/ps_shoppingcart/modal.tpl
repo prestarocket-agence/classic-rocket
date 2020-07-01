@@ -29,7 +29,9 @@
         <h3 class="modal-title text-center text-success w-100" id="blockcart-modal-label"><i class="material-icons rtl-no-flip">&#xE876;</i>{l s='Product successfully added to your shopping cart' d='Shop.Theme.Checkout'}</h3>
 
         <button type="button" class="close" data-dismiss="modal" aria-label="{l s='Close' d='Shop.Theme.Global'}">
-          <span aria-hidden="true"><i class="material-icons">close</i></span>
+          <span aria-hidden="true">
+            {include file='_partials/svg/x.svg'}
+          </span>
         </button>
       </div>
       <div class="modal-body">

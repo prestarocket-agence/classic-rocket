@@ -61,7 +61,7 @@
             </td>
             <td class="text-sm-center">
               {if $order.details.invoice_url}
-                <a href="{$order.details.invoice_url}"><i class="material-icons">&#xE415;</i></a>
+                <a href="{$order.details.invoice_url}">{include file='_partials/svg/pdf.svg'}</a>
               {else}
                 -
               {/if}
@@ -99,13 +99,13 @@
             <div class="col-2 text-right">
                 <div>
                   <a class="btn btn-outline-primary" href="{$order.details.details_url}" data-link-action="view-order-details" title="{l s='Details' d='Shop.Theme.Customeraccount'}">
-                    <i class="material-icons">&#xE8B6;</i>
+                    {include file='_partials/svg/search.svg'}
                   </a>
                 </div>
                 {if $order.details.reorder_url}
                   <div>
                     <a class="btn btn-outline-primary" href="{$order.details.reorder_url}" title="{l s='Reorder' d='Shop.Theme.Actions'}">
-                      <i class="material-icons">&#xE863;</i>
+                      {include file='_partials/svg/arrow-repeat.svg'}
                     </a>
                   </div>
                 {/if}

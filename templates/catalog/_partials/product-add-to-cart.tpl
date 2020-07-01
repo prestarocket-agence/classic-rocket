@@ -50,7 +50,8 @@
               disabled
             {/if}
           >
-            <i class="material-icons shopping-cart btn-add-to-cart__icon">&#xE547;</i><span class="btn-add-to-cart__spinner" role="status" aria-hidden="true"></span>
+            <i class="shopping-cart btn-add-to-cart__icon">{include file='_partials/svg/chevron-left.svg'}</i>
+            <span class="btn-add-to-cart__spinner" role="status" aria-hidden="true"></span>
             {l s='Add to cart' d='Shop.Theme.Actions'}
           </button>
         </div>
@@ -62,11 +63,11 @@
       <span id="product-availability">
         {if $product.show_availability && $product.availability_message}
           {if $product.availability == 'available'}
-            <i class="material-icons rtl-no-flip product-available text-success">&#xE5CA;</i>
+            <i class="rtl-no-flip product-available text-success">{include file='_partials/svg/check2.svg'}</i>
           {elseif $product.availability == 'last_remaining_items'}
-            <i class="material-icons product-last-itemstext-warning">&#xE002;</i>
+            <i class="product-last-itemstext-warning">{include file='_partials/svg/exclamation-triangle-fill.svg'}</i>
           {else}
-            <i class="material-icons product-unavailable text-danger">&#xE14B;</i>
+            <i class="product-unavailable text-danger">{include file='_partials/svg/slash-circle.svg'}</i>
           {/if}
           {$product.availability_message}
         {/if}

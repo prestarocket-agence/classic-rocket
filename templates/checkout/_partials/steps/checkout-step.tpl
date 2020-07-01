@@ -34,13 +34,13 @@
   >
     <div class="card-header js-checkout-step-header" id="heading-{$identifier}" data-identifier="{$identifier}">
     <h1 class="step-title h3">
-      <i class="material-icons rtl-no-flip done text-success">&#xE876;</i>
+      {include file='_partials/svg/check2.svg'}
       <span class="step-number">{$position}</span>
       {$title}
 
       {if $step_is_reachable}
       <button class="step-edit text-muted btn btn-sm btn-link float-right py-0" data-toggle="collapse" data-target="#content-{$identifier}" aria-expanded="{if $step_is_current}true{else}false{/if}" aria-controls="content-{$identifier}">
-        <i class="material-icons edit small">mode_edit</i> {l s='Edit' d='Shop.Theme.Actions'}
+        {include file='_partials/svg/pencil-fill.svg'} {l s='Edit' d='Shop.Theme.Actions'}
       </button>
       {/if}
     </h1>

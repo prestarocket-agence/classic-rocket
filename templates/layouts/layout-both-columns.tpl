@@ -114,7 +114,7 @@
                     </div>
                     <div class="modal-footer">
                     <button class="btn_close-filter btn btn-outline-success btn-block ok" data-dismiss="modal" aria-label="{l s='Close' d='Shop.Theme.Global'}">
-                        <i class="material-icons rtl-no-flip">&#xE876;</i>
+                        {include file='_partials/svg/check2.svg'}
                         {l s='OK' d='Shop.Theme.Actions'}
                     </button>
                     </div>

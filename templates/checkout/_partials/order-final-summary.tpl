@@ -31,7 +31,7 @@
       <h4 class="h4">
       {l s='Addresses' d='Shop.Theme.Checkout'}
         <button class="step-edit text-muted btn btn-sm btn-link py-0" data-toggle="collapse" data-target="#content-checkout-addresses-step" aria-expanded="false" aria-controls="content-checkout-addresses-step">
-          <i class="material-icons edit small">mode_edit</i> {l s='Edit' d='Shop.Theme.Actions'}
+            {include file='_partials/svg/pencil-fill.svg'} {l s='Edit' d='Shop.Theme.Actions'}
         </button>
       </h4>
 
@@ -64,7 +64,7 @@
       <h4 class="h4 mt-3">
       {l s='Shipping Method' d='Shop.Theme.Checkout'}
         <button class="step-edit text-muted btn btn-sm btn-link py-0" data-toggle="collapse" data-target="#content-checkout-delivery-step" aria-expanded="false" aria-controls="content-checkout-delivery-step">
-          <i class="material-icons edit small">mode_edit</i> {l s='Edit' d='Shop.Theme.Actions'}
+            {include file='_partials/svg/pencil-fill.svg'} {l s='Edit' d='Shop.Theme.Actions'}
         </button>
       </h4>
   <table class="table table-bordered">

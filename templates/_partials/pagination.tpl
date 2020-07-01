@@ -45,9 +45,9 @@
                 >
                   {if $page.type === 'previous'}
                       <span class="sr-only">{l s='Previous' d='Shop.Theme.Actions'}</span>
-                      <i class="material-icons" aria-hidden="true">&#xE314;</i>
+                      {include file='_partials/svg/chevron-left.svg'}
                   {elseif $page.type === 'next'}
-                      <span class="sr-only">{l s='Next' d='Shop.Theme.Actions'}</span><i class="material-icons" aria-hidden="true">&#xE315;</i>
+                      <span class="sr-only">{l s='Next' d='Shop.Theme.Actions'}</span>{include file='_partials/svg/chevron-right.svg'}
                   {else}
                     {$page.page}
                   {/if}

@@ -23,10 +23,10 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <a href="{$urls.pages.my_account}" class="account-link">
-  <i class="material-icons">&#xE5CB;</i>
+  {include file='_partials/svg/chevron-left.svg'}
   <span>{l s='Back to your account' d='Shop.Theme.Customeraccount'}</span>
 </a>
 <a href="{$urls.pages.index}" class="account-link">
-  <i class="material-icons">&#xE88A;</i>
+  {include file='_partials/svg/house-door-fill.svg'}
   <span>{l s='Home' d='Shop.Theme.Global'}</span>
 </a>

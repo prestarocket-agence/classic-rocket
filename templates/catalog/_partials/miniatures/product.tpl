@@ -46,7 +46,7 @@
                 <div class="highlighted-informations text-center p-2{if !$product.main_variants} no-variants{/if} visible--desktop">
                     {block name='quick_view'}
                         <span class="quick-view" data-link-action="quickview">
-                      <i class="material-icons search">&#xE8B6;</i> {l s='Quick view' d='Shop.Theme.Actions'}
+                      {include file='_partials/svg/search.svg'} {l s='Quick view' d='Shop.Theme.Actions'}
                   </span>
                     {/block}
 

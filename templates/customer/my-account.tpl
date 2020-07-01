@@ -38,7 +38,7 @@
 
       <a class="col-lg-4 col-md-6 col-sm-6 col-12" id="identity-link" href="{$urls.pages.identity}">
         <span class="link-item">
-          <i class="material-icons">&#xE853;</i>
+          {include file='_partials/svg/person-circle.svg'}
           {l s='Information' d='Shop.Theme.Customeraccount'}
         </span>
       </a>
@@ -46,14 +46,14 @@
       {if $customer.addresses|count}
         <a class="col-lg-4 col-md-6 col-sm-6 col-12" id="addresses-link" href="{$urls.pages.addresses}">
           <span class="link-item">
-            <i class="material-icons">&#xE56A;</i>
+            {include file='_partials/svg/person-address.svg'}
             {l s='Addresses' d='Shop.Theme.Customeraccount'}
           </span>
         </a>
       {else}
         <a class="col-lg-4 col-md-6 col-sm-6 col-12" id="address-link" href="{$urls.pages.address}">
           <span class="link-item">
-            <i class="material-icons">&#xE567;</i>
+            {include file='_partials/svg/geo-alt.svg'}
             {l s='Add first address' d='Shop.Theme.Customeraccount'}
           </span>
         </a>
@@ -62,7 +62,7 @@
       {if !$configuration.is_catalog}
         <a class="col-lg-4 col-md-6 col-sm-6 col-12" id="history-link" href="{$urls.pages.history}">
           <span class="link-item">
-            <i class="material-icons">&#xE916;</i>
+            {include file='_partials/svg/calendar.svg'}
             {l s='Order history and details' d='Shop.Theme.Customeraccount'}
           </span>
         </a>
@@ -71,7 +71,7 @@
       {if !$configuration.is_catalog}
         <a class="col-lg-4 col-md-6 col-sm-6 col-12" id="order-slips-link" href="{$urls.pages.order_slip}">
           <span class="link-item">
-            <i class="material-icons">&#xE8B0;</i>
+            {include file='_partials/svg/ticket.svg'}
             {l s='Credit slips' d='Shop.Theme.Customeraccount'}
           </span>
         </a>
@@ -80,7 +80,7 @@
       {if $configuration.voucher_enabled && !$configuration.is_catalog}
         <a class="col-lg-4 col-md-6 col-sm-6 col-12" id="discounts-link" href="{$urls.pages.discount}">
           <span class="link-item">
-            <i class="material-icons">&#xE54E;</i>
+            {include file='_partials/svg/tag-fill.svg'}
             {l s='Vouchers' d='Shop.Theme.Customeraccount'}
           </span>
         </a>

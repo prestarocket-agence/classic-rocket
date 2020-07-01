@@ -35,7 +35,7 @@
 
         <p>
           <a class="link__showsummary" href="#" data-toggle="collapse" data-target="#cart-summary-product-list">
-            <span class="small">{l s='show details' d='Shop.Theme.Actions'} </span><i class="material-icons">expand_more</i>
+            <span class="small">{l s='show details' d='Shop.Theme.Actions'} </span>{include file='_partials/svg/chevron-down.svg'}
 
           </a>
         </p>

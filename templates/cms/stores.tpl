@@ -42,7 +42,7 @@
             <p class="h3 card-title">{$store.name}</p>
             <address>{$store.address.formatted nofilter}</address>
             {if $store.note || $store.phone || $store.fax || $store.email}
-              <a data-toggle="collapse" href="#about-{$store.id}" aria-expanded="false" aria-controls="about-{$store.id}"><strong>{l s='About and Contact' d='Shop.Theme.Global'}</strong><i class="material-icons">&#xE409;</i></a>
+              <a data-toggle="collapse" href="#about-{$store.id}" aria-expanded="false" aria-controls="about-{$store.id}"><strong>{l s='About and Contact' d='Shop.Theme.Global'}</strong>{include file='_partials/svg/chevron-right.svg'}</a>
             {/if}
           </div>
           <div class="col-md-4 col-sm-5 col-12 col-lg-3 border-left">
@@ -71,13 +71,13 @@
             </div>
             <ul class="card-block">
               {if $store.phone}
-                <li><i class="material-icons">&#xE0B0;</i>{$store.phone}</li>
+                <li>{include file='_partials/svg/telephone-fill.svg'}{$store.phone}</li>
               {/if}
               {if $store.fax}
-                <li><i class="material-icons">&#xE8AD;</i>{$store.fax}</li>
+                <li>{include file='_partials/svg/printer-fill.svg'}{$store.fax}</li>
               {/if}
               {if $store.email}
-                <li><i class="material-icons">&#xE0BE;</i>{$store.email}</li>
+                <li>{include file='_partials/svg/envelope-fill.svg'}{$store.email}</li>
               {/if}
             </ul>
           </div>

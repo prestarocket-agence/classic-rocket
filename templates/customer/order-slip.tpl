@@ -47,7 +47,7 @@
             <td scope="row">{$slip.credit_slip_number}</td>
             <td>{$slip.credit_slip_date}</td>
             <td class="text-sm-center">
-              <a href="{$slip.url}"><i class="material-icons">&#xE415;</i></a>
+              <a href="{$slip.url}">{include file='_partials/svg/pdf.svg'}</a>
             </td>
           </tr>
         {/foreach}

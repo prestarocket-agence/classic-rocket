@@ -45,7 +45,7 @@
 
         {block name='continue_shopping'}
           <a class="label btn btn-outline-primary" href="{$urls.pages.index}">
-            <i class="material-icons">chevron_left</i>{l s='Continue shopping' d='Shop.Theme.Actions'}
+            {include file='_partials/svg/chevron-left.svg'}{l s='Continue shopping' d='Shop.Theme.Actions'}
           </a>
         {/block}
 
