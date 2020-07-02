@@ -81,6 +81,6 @@
     {/foreach}
     </div>
   <a class="all-product-link float-left float-md-right" href="{$allProductsLink}">
-    {l s='All products' d='Shop.Theme.Catalog'}<i class="material-icons">&#xE315;</i>
+    {l s='All products' d='Shop.Theme.Catalog'}{include file='_partials/svg/chevron-right.svg'}
   </a>
 </section>

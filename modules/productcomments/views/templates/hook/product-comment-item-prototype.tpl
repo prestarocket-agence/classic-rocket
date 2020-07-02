@@ -41,16 +41,16 @@
     <div class="comment-buttons btn-group btn-group-sm">
       {if $usefulness_enabled}
         <button role="button" class="useful-review btn btn-link">
-          <i class="material-icons thumb_up">thumb_up</i>
+          {include file='_partials/svg/hand-thumbs-up-fill.svg'}
           <span class="useful-review-value">@COMMENT_USEFUL_ADVICES@</span>
         </button>
         <button role="button" class="not-useful-review btn btn-link">
-          <i class="material-icons thumb_down">thumb_down</i>
+          {include file='_partials/svg/hand-thumbs-down-fill.svg'}
           <span class="not-useful-review-value">@COMMENT_NOT_USEFUL_ADVICES@</span>
         </button>
       {/if}
       <button role="button" class="report-abuse btn btn-link" title="{l s='Report abuse' d='Modules.Productcomments.Shop'}">
-        <i class="material-icons outlined_flag">flag</i>
+        {include file='_partials/svg/flag-fill.svg'}
       </button>
     </div>
   </div>

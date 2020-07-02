@@ -32,7 +32,7 @@
       {if $activeFilters|count}
         <div class="clear-all-wrapper">
           <button data-search-url="{$clear_all_link}" class="btn--clearfilter btn btn-sm btn-block btn-outline-secondary js-search-filters-clear-all">
-            <i class="material-icons">&#xE14C;</i>
+              {include file='_partials/svg/x.svg'}
             {l s='Clear all' d='Shop.Theme.Actions'}
           </button>
         </div>
@@ -50,7 +50,7 @@
           <div class="facet__header">
               <p class="facet__title">{$facet.label}</p>
               <a href="#facet_{$_expand_id}" class="icon-collapse visible--mobile stretched-link" data-toggle="collapse"{if !$_collapse} aria-expanded="true"{/if}>
-                  <i class="material-icons">&#xE313;</i>
+                  {include file='_partials/svg/chevron-down.svg'}
               </a>
           </div>
 

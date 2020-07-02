@@ -31,7 +31,7 @@
     <div class="active_filters__list">
       {foreach from=$activeFilters item="filter"}
         {block name='active_filters_item'}
-            <a class="js-search-link active_filters__list-item btn btn-sm btn-light" href="{$filter.nextEncodedFacetsURL}"><i class="material-icons">&#xE5CD;</i> {l s='%1$s: ' d='Shop.Theme.Catalog' sprintf=[$filter.facetLabel]}
+            <a class="js-search-link active_filters__list-item btn btn-sm btn-light" href="{$filter.nextEncodedFacetsURL}">{include file='_partials/svg/x.svg'} {l s='%1$s: ' d='Shop.Theme.Catalog' sprintf=[$filter.facetLabel]}
                 <strong>{$filter.label}</strong></a>
         {/block}
       {/foreach}

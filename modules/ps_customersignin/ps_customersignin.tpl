@@ -31,7 +31,7 @@
       rel="nofollow"
     >
           <span>
-            <i class="material-icons logged">&#xE7FF;</i>
+            {include file='_partials/svg/person.svg'}
           </span>
       <span class="visible--desktop small">{$customerName}</span>
     </a>
@@ -42,7 +42,7 @@
       title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
       rel="nofollow"
     >
-      <span><i class="material-icons">&#xE7FF;</i></span>
+      <span>{include file='_partials/svg/person.svg'}</span>
       <span class="visible--desktop small">{l s='Sign in' d='Shop.Theme.Actions'}</span>
     </a>
   {/if}

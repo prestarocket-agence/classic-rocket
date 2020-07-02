@@ -27,7 +27,7 @@
             <span class="visible--mobile">
                 <span data-target="#top_sub_menu_{$_expand_id}" data-toggle="collapse"
                       class="d-block navbar-toggler icon-collapse">
-                  <i class="material-icons menu__collapseicon">&#xE313;</i>
+                  {include file='_partials/svg/chevron-down.svg'}
                 </span>
               </span>
           </div>

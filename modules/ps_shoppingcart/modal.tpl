@@ -26,7 +26,7 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title text-center text-success w-100" id="blockcart-modal-label"><i class="material-icons rtl-no-flip">&#xE876;</i>{l s='Product successfully added to your shopping cart' d='Shop.Theme.Checkout'}</h3>
+        <h3 class="modal-title text-center text-success w-100" id="blockcart-modal-label">{include file='_partials/svg/check2.svg'}{l s='Product successfully added to your shopping cart' d='Shop.Theme.Checkout'}</h3>
 
         <button type="button" class="close" data-dismiss="modal" aria-label="{l s='Close' d='Shop.Theme.Global'}">
           <span aria-hidden="true">
@@ -79,7 +79,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">{l s='Continue shopping' d='Shop.Theme.Actions'}</button>
-        <a href="{$cart_url}" class="btn btn-primary"><i class="material-icons rtl-no-flip">&#xE876;</i>{l s='Proceed to checkout' d='Shop.Theme.Actions'}</a>
+        <a href="{$cart_url}" class="btn btn-primary">{include file='_partials/svg/check2.svg'}{l s='Proceed to checkout' d='Shop.Theme.Actions'}</a>
       </div>
     </div>
   </div>

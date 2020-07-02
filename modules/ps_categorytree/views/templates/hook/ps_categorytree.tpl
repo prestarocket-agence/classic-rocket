@@ -33,8 +33,8 @@
               <a href="{$node.link}" {if $node.children}class="float-left"{/if}>{$node.name}</a>
               {if $node.children}
                 <div class="float-right navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar{$node.id}">
-                  <i class="material-icons add">&#xE145;</i>
-                  <i class="material-icons remove">&#xE15B;</i>
+                  <i class="add">{include file='_partials/svg/plus.svg'}</i>
+                  <i class="remove">{include file='_partials/svg/dash.svg'}</i>
                 </div>
                 <div class="collapse float-left clearfix w-100" id="exCollapsingNavbar{$node.id}">
                   {categories nodes=$node.children depth=$depth+1}
@@ -43,7 +43,7 @@
             {else}
               <a class="category-sub-link" href="{$node.link}">{$node.name}</a>
               {if $node.children}
-                <i class="material-icons icon-collapse cursor-pointer" data-toggle="collapse" data-target="#exCollapsingNavbar{$node.id}">&#xE313;</i>
+                <i class="icon-collapse cursor-pointer" data-toggle="collapse" data-target="#exCollapsingNavbar{$node.id}">{include file='_partials/svg/chevron-down.svg'}</i>
                 <div class="collapse float-left clearfix w-100" id="exCollapsingNavbar{$node.id}">
                   {categories nodes=$node.children depth=$depth+1}
                 </div>

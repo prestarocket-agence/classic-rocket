@@ -28,7 +28,7 @@
   {if $nb_comments == 0}
     {if $post_allowed}
       <button class="btn btn-sm btn-secondary btn-comment post-product-comment">
-        <i class="material-icons shopping-cart">edit</i>
+          {include file='_partials/svg/pencil-fill.svg'}
         {l s='Write your review' d='Modules.Productcomments.Shop'}
       </button>
     {/if}
@@ -36,13 +36,13 @@
     {include file='module:productcomments/views/templates/hook/average-grade-stars.tpl' grade=$average_grade}
     <div class="additional-links">
       <a class="link-comment btn btn-sm" href="#product-comments-list-header">
-        <i class="material-icons shopping-cart">chat</i>
+          {include file='_partials/svg/chat-left-text-fill.svg'}
         {l s='Read user reviews' d='Modules.Productcomments.Shop'} ({$nb_comments})
       </a>
       {if $post_allowed}
           &#124;
         <a class="link-comment post-product-comment btn btn-sm" href="#product-comments-list-header">
-          <i class="material-icons shopping-cart">edit</i>
+            {include file='_partials/svg/pencil-fill.svg'}
           {l s='Write your review' d='Modules.Productcomments.Shop'}
         </a>
       {/if}

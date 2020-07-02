@@ -26,7 +26,7 @@
 <a class="col-lg-4 col-sm-6 col-12" id="emailsalerts"
    href="{url entity='module' name='ps_emailalerts' controller='account'}" title="{l s='My alerts' d='Shop.Theme.Catalog'}">
   <span class="link-item">
-  <i class="material-icons">&#xE151;</i>
+  {include file='_partials/svg/envelope-open-fill.svg'}
     {l s='My alerts' d='Shop.Theme.Catalog'}
   </span>
 </a>
