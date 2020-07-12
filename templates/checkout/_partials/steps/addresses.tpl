@@ -30,7 +30,7 @@
       method="POST"
       action="{url entity='order' params=['id_address' => $id_address]}"
       data-refresh-url="{url entity='order' params=['ajax' => 1, 'action' => 'addressForm']}"
-      {if show_delivery_address_form || ($show_invoice_address_form && !$use_same_address)}class="needs-validation" autocomplete="false" novalidate{/if}
+      {if $show_delivery_address_form || ($show_invoice_address_form && !$use_same_address)}class="needs-validation" autocomplete="false" novalidate{/if}
     >
       {if !$use_same_address}
         <h2 class="h4">{l s='Shipping Address' d='Shop.Theme.Checkout'}</h2>
