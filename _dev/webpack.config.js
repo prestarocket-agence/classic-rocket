@@ -160,13 +160,13 @@ module.exports = (env, argv) => {
                 }),
 
                 new OptimizeCSSAssetsPlugin({
-                   cssProcessorOptions: {
-					   map: {
-						  annotation: true,
-						  inline: IS_DEV
-					  }
-				   }
-				}),
+                    cssProcessorOptions: {
+                        map: {
+                            annotation: true,
+                            inline: IS_DEV
+                        }
+                    }
+               }),
             ]
         },
         plugins: [
