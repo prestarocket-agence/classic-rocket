@@ -158,7 +158,15 @@ module.exports = (env, argv) => {
                         }
                     }
                 }),
-                new OptimizeCSSAssetsPlugin({})
+
+                new OptimizeCSSAssetsPlugin({
+                   cssProcessorOptions: {
+					   map: {
+						  annotation: true,
+						  inline: IS_DEV
+					  }
+				   }
+				}),
             ]
         },
         plugins: [
