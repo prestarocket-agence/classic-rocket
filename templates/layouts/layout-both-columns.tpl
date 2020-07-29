@@ -37,7 +37,7 @@
       {hook h='displayAfterBodyOpeningTag'}
     {/block}
 
-    <main>
+
       {block name='product_activation'}
         {include file='catalog/_partials/product-activation.tpl'}
       {/block}
@@ -52,7 +52,7 @@
         {include file='_partials/notifications.tpl'}
       {/block}
         {block name='wrapper'}
-        <section id="wrapper" class="{block name='layoutWrapperClass'}o-wrapper{/block}">
+        <div id="wrapper" class="{block name='layoutWrapperClass'}o-wrapper{/block}">
         {hook h="displayWrapperTop"}
           {block name='breadcrumb'}
             {include file='_partials/breadcrumb.tpl'}
@@ -61,39 +61,39 @@
             {* if need to wrap in row *}
             {/block}
           {block name="left_column"}
-            <div id="left-column" class="{block name='leftColumnClass'}{/block}">
+            <aside id="left-column" class="{block name='leftColumnClass'}{/block}">
               {if $page.page_name == 'product'}
                 {hook h='displayLeftColumnProduct'}
               {else}
                 {hook h="displayLeftColumn"}
               {/if}
-            </div>
+            </aside>
           {/block}
 
           {block name="content_wrapper"}
-            <div id="content-wrapper" class="center-column{block name='contentWrapperClass'}{/block}">
+            <main id="content-wrapper" class="center-column{block name='contentWrapperClass'}{/block}">
               {hook h="displayContentWrapperTop"}
               {block name="content"}
                 <p>Hello world! This is HTML5 Boilerplate.</p>
               {/block}
               {hook h="displayContentWrapperBottom"}
-            </div>
+            </main>
           {/block}
 
           {block name="right_column"}
-            <div id="right-column" class="">
+            <aside id="right-column" class="">
               {if $page.page_name == 'product'}
                 {hook h='displayRightColumnProduct'}
               {else}
                 {hook h="displayRightColumn"}
               {/if}
-            </div>
+            </aside>
           {/block}
                 {block name="endWrapperBottom"}
                     {* if need to wrap in row => close div row*}
                     {/block}
         {hook h="displayWrapperBottom"}
-      </section>
+      </div>
         {/block}
 
       <footer id="footer" class="o-wrapper">
@@ -102,7 +102,6 @@
         {/block}
       </footer>
 
-    </main>
     {block name='offcanvas_modals'}
         {* offcanvas search filter *}
         <div class="modal fade" id="offcanvas_search_filter" tabindex="-1" role="dialog" data-modal-hide-mobile>
