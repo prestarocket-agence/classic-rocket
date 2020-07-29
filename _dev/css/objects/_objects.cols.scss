@@ -1,0 +1,33 @@
+/* Columns
+  ========================================================================== */
+
+
+@if $enable-grid-classes {
+
+
+
+} @else {
+  %grid-column {
+    position: relative;
+    width: 100%;
+    padding-right: $grid-gutter-width / 2;
+    padding-left: $grid-gutter-width / 2;
+  }
+  .col,
+  .col-auto {
+    @extend %grid-column;
+  }
+  .col-auto {
+    @include make-col-auto();
+  }
+
+  //.col-3{
+  //  @extend .col;
+  //  @include make-col(3);
+  //
+  //}
+
+
+
+}
+
