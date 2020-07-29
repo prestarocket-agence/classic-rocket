@@ -28,11 +28,11 @@
 {block name='right_column'}{/block}
 
 {block name='content_wrapper'}
-  <div id="content-wrapper" class="{block name='contentWrapperClass'}col-12{/block}">
+  <main id="content-wrapper" class="{block name='contentWrapperClass'}{/block}">
     {hook h="displayContentWrapperTop"}
     {block name='content'}
       <p>Hello world! This is HTML5 Boilerplate.</p>
     {/block}
     {hook h="displayContentWrapperBottom"}
-  </div>
+  </main>
 {/block}
