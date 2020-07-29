@@ -1,0 +1,56 @@
+/* Wrapper and container
+  ========================================================================== */
+
+/**
+* Page-level constraining and wrapping elements.
+*/
+
+@if $enable-grid-classes {
+
+  [class].o-wrapper {
+    width: 100%;
+    max-width: 100%;
+    @media (min-width: 1500px) {
+      max-width: 1440px;
+    }
+    @extend .container;
+  }
+
+} @else {
+
+  .container {
+    @include make-container();
+  }
+
+  // 100% wide container at all breakpoints
+  .container-fluid,
+  .o-wrapper {
+    @include make-container();
+  }
+  .o-wrapper {
+    @extend .container;
+    width: 100%;
+    max-width: 100%;
+    @media (min-width: 1500px) {
+      max-width: 1440px;
+    }
+  }
+
+  .row {
+    @include make-row();
+  }
+
+  // Remove the negative margin from default .row, then the horizontal padding
+  // from all immediate children columns (to prevent runaway style inheritance).
+  .no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+
