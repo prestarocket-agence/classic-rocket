@@ -19,6 +19,11 @@
 /*
 /*
 /* ELEMENTS */
+$theme-colors: map-remove($theme-colors,"primary","secondary","success","info","warning","danger","light","dark");
+@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/tables";
+@import "node_modules/bootstrap/scss/type";
 
 /*
 /*
