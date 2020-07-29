@@ -57,9 +57,11 @@
           {block name='breadcrumb'}
             {include file='_partials/breadcrumb.tpl'}
           {/block}
-            <div class="row">
+            {block name="afterBreadCrumb"}
+            {* if need to wrap in row *}
+            {/block}
           {block name="left_column"}
-            <div id="left-column" class="left-column col-12 col-lg-3">
+            <div id="left-column" class="{block name='leftColumnClass'}{/block}">
               {if $page.page_name == 'product'}
                 {hook h='displayLeftColumnProduct'}
               {else}
@@ -69,7 +71,7 @@
           {/block}
 
           {block name="content_wrapper"}
-            <div id="content-wrapper" class="center-column{block name='contentWrapperClass'}left-column right-column col-lg-9{/block}">
+            <div id="content-wrapper" class="center-column{block name='contentWrapperClass'}{/block}">
               {hook h="displayContentWrapperTop"}
               {block name="content"}
                 <p>Hello world! This is HTML5 Boilerplate.</p>
@@ -79,7 +81,7 @@
           {/block}
 
           {block name="right_column"}
-            <div id="right-column" class="right-column col-12 col-lg-3">
+            <div id="right-column" class="">
               {if $page.page_name == 'product'}
                 {hook h='displayRightColumnProduct'}
               {else}
@@ -87,12 +89,14 @@
               {/if}
             </div>
           {/block}
-        </div>
+                {block name="endWrapperBottom"}
+                    {* if need to wrap in row => close div row*}
+                    {/block}
         {hook h="displayWrapperBottom"}
       </section>
         {/block}
 
-      <footer id="footer" class="l-footer">
+      <footer id="footer" class="o-wrapper">
         {block name="footer"}
           {include file="_partials/footer.tpl"}
         {/block}
