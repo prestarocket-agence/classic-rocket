@@ -42,7 +42,7 @@
         {include file='catalog/_partials/product-activation.tpl'}
       {/block}
 
-      <header id="header" class="l-header">
+      <header id="header" class="o-wrapper">
         {block name='header'}
           {include file='_partials/header.tpl'}
         {/block}
