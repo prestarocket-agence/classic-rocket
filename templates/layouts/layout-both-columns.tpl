@@ -63,7 +63,7 @@
 
 
           {block name="content_wrapper"}
-            <main id="content-wrapper" class="center-column{block name='contentWrapperClass'}{/block}">
+            <main id="content-wrapper" class="center-column{block name='contentWrapperClass'}col-lg-6{/block}">
               {hook h="displayContentWrapperTop"}
               {block name="content"}
                 <p>Hello world! This is HTML5 Boilerplate.</p>
@@ -73,7 +73,7 @@
           {/block}
 
             {block name="left_column"}
-                <aside id="left-column" class="{block name='leftColumnClass'}{/block}">
+                <aside id="left-column" class="{block name='leftColumnClass'}col-lg-3{/block}">
                     {if $page.page_name == 'product'}
                         {hook h='displayLeftColumnProduct'}
                     {else}
@@ -83,7 +83,7 @@
             {/block}
 
           {block name="right_column"}
-            <aside id="right-column" class="">
+            <aside id="right-column" class="col-lg-3">
               {if $page.page_name == 'product'}
                 {hook h='displayRightColumnProduct'}
               {else}
