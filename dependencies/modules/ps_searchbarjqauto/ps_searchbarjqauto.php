@@ -54,7 +54,6 @@ class Ps_Searchbarjqauto extends Module implements WidgetInterface
     public function install()
     {
         return parent::install()
-            && $this->registerHook('top')
             && $this->registerHook('displaySearch')
             && $this->registerHook('header')
             ;
