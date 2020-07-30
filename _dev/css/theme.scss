@@ -30,6 +30,7 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 /* OBJECTS */
 @import "node_modules/bootstrap/scss/grid";
 @import "objects/objects.cols";
+@import "objects/objects.layout";
 @import "objects/objects.wrapper";
 
 /*
@@ -43,3 +44,11 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 /*
 /*
 /* UTILITIES */
+
+//if you want to include BS utlities (not recommanded), uncomment this following line
+/*
+@import "node_modules/bootstrap/scss/utilities";
+
+*/
+
+

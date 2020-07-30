@@ -57,21 +57,13 @@
           {block name='breadcrumb'}
             {include file='_partials/breadcrumb.tpl'}
           {/block}
-            {block name="afterBreadCrumb"}
+            {block name="displayBeforeColumns"}
             {* if need to wrap in row *}
             {/block}
-          {block name="left_column"}
-            <aside id="left-column" class="{block name='leftColumnClass'}{/block}">
-              {if $page.page_name == 'product'}
-                {hook h='displayLeftColumnProduct'}
-              {else}
-                {hook h="displayLeftColumn"}
-              {/if}
-            </aside>
-          {/block}
+
 
           {block name="content_wrapper"}
-            <main id="content-wrapper" class="center-column{block name='contentWrapperClass'}{/block}">
+            <main id="content-wrapper" class="center-column{block name='contentWrapperClass'}col-lg-6{/block}">
               {hook h="displayContentWrapperTop"}
               {block name="content"}
                 <p>Hello world! This is HTML5 Boilerplate.</p>
@@ -80,8 +72,18 @@
             </main>
           {/block}
 
+            {block name="left_column"}
+                <aside id="left-column" class="{block name='leftColumnClass'}col-lg-3{/block}">
+                    {if $page.page_name == 'product'}
+                        {hook h='displayLeftColumnProduct'}
+                    {else}
+                        {hook h="displayLeftColumn"}
+                    {/if}
+                </aside>
+            {/block}
+
           {block name="right_column"}
-            <aside id="right-column" class="">
+            <aside id="right-column" class="col-lg-3">
               {if $page.page_name == 'product'}
                 {hook h='displayRightColumnProduct'}
               {else}
@@ -89,7 +91,7 @@
               {/if}
             </aside>
           {/block}
-                {block name="endWrapperBottom"}
+                {block name="displayAfterColumns"}
                     {* if need to wrap in row => close div row*}
                     {/block}
         {hook h="displayWrapperBottom"}

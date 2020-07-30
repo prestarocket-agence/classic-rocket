@@ -25,13 +25,8 @@
 {extends file='layouts/layout-both-columns.tpl'}
 
 {block name='right_column'}{/block}
+{block name='displayBeforeColumns'}<div class="row">{/block}
+{block name='displayAfterColumns'}</div>{/block}
+{block name='leftColumnClass'} u-order-0@lg order-0{/block}
+{block name='contentWrapperClass'} col-lg-9 u-order-1@lg order-lg-1{/block}
 
-{block name='content_wrapper'}
-  <main id="content-wrapper" class="{block name='contentWrapperClass'}left-column col-12 col-lg-9{/block}">
-    {hook h="displayContentWrapperTop"}
-    {block name='content'}
-      <p>Hello world! This is HTML5 Boilerplate.</p>
-    {/block}
-    {hook h="displayContentWrapperBottom"}
-  </main>
-{/block}
