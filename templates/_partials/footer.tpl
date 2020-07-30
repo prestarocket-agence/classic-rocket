@@ -23,30 +23,24 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="container">
-  <div class="row">
-    {block name='hook_footer_before'}
-      {hook h='displayFooterBefore'}
-    {/block}
-  </div>
-</div>
-<div class="footer-container">
-  <div class="container">
     <div class="row">
-      {block name='hook_footer'}
-        {hook h='displayFooter'}
-      {/block}
+        {block name='hook_footer_before'}
+            {hook h='displayFooterBefore'}
+        {/block}
+        {block name='hook_footer'}
+            {hook h='displayFooter'}
+        {/block}
     </div>
     <div class="row">
-      {block name='hook_footer_after'}
-        {hook h='displayFooterAfter'}
-      {/block}
+        {block name='hook_footer_after'}
+            {hook h='displayFooterAfter'}
+        {/block}
     </div>
     <p class="text-center mb-0 pb-3">
-      {block name='copyright_link'}
-        <a class="_blank" href="https://prestarocket.com/" target="_blank" rel="nofollow">
-          {l s='%copyright% %year% - Theme by %prestashop%' sprintf=['%prestashop%' => 'Prestarocket™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
-        </a>
-      {/block}
+        {block name='copyright_link'}
+            <a class="_blank" href="https://prestarocket.com/" target="_blank" rel="nofollow">
+                {l s='%copyright% %year% - Theme by %prestashop%' sprintf=['%prestashop%' => 'Prestarocket™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
+            </a>
+        {/block}
     </p>
-  </div>
 </div>

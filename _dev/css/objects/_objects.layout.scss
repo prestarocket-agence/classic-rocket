@@ -21,7 +21,6 @@
       padding-left: 0;
     }
   }
-
 }
 
 .o-layout {
@@ -30,4 +29,15 @@
   width: 100%;
 }
 
+.o-layout--center {
+  &-x {
+    justify-content: center;
+  }
+  &-y {
+    align-items: center;
+  }
+}
 
+.o-layout--start {
+  justify-content: start;
+}

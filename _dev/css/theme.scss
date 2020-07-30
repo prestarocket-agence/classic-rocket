@@ -44,6 +44,7 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 /*
 /*
 /* UTILITIES */
+@import "utilities/utilities.flex";
 
 //if you want to include BS utlities (not recommanded), uncomment this following line
 /*
