@@ -34,25 +34,21 @@
   @each $column- in $columns- {
     .col-#{$column-} {
       @include make-col($column-);
-      @extend %grid-column;
     }
   }
   @each $column-sm in $columns-sm {
     .col-lg-#{$column-sm} {
       @include make-col($column-sm);
-      @extend %grid-column;
     }
   }
   @each $column-md in $columns-md {
     .col-lg-#{$column-md} {
       @include make-col($column-md);
-      @extend %grid-column;
     }
   }
   @each $column-lg in $columns-lg {
     .col-lg-#{$column-lg} {
       @include make-col($column-lg);
-      @extend %grid-column;
     }
   }
 }
