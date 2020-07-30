@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div id="js-product-list">
-  <div class="products">
+  <div class="row products">
     {foreach from=$listing.products item="product"}
       {block name='product_miniature'}
         {include file='catalog/_partials/miniatures/product.tpl' product=$product}

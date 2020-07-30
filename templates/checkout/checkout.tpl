@@ -47,7 +47,7 @@
     {include file='_partials/notifications.tpl'}
 {/block}
 
-<section id="wrapper" class="l-wrapper l-wrapper--boxed">
+<section id="wrapper" class="o-wrapper">
     {hook h="displayWrapperTop"}
 
     {block name='content'}

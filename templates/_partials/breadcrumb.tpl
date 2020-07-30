@@ -24,7 +24,7 @@
  *}
 {if isset($breadcrumb.links[1])}
 <nav data-depth="{$breadcrumb.count}" class="visible--desktop">
-  <ol class="breadcrumb">
+  <ul class="o-layout o-layout--start breadcrumb">
     {foreach from=$breadcrumb.links item=path name=breadcrumb}
         {block name='breadcrumb_item'}
             {if $smarty.foreach.breadcrumb.last}
@@ -40,6 +40,6 @@
             </li>
         {/block}
     {/foreach}
-  </ol>
+  </ul>
 </nav>
 {/if}
