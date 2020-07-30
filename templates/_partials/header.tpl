@@ -48,7 +48,7 @@
 {/block}
 
 {block name='header_top'}
-    <div class="o-layout">
+    <div class="o-layout o-layout--center-y">
         <a href="{$urls.base_url}" class="header__logo header-top__col">
             <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
         </a>

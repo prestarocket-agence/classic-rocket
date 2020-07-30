@@ -23,41 +23,39 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<div class="block_newsletter col-lg-8 col-12">
-  <div class="row">
-    <p id="block-newsletter-label" class="col-lg-5 col-12">{l s='Get our latest news and special sales' d='Shop.Theme.Global'}</p>
-    <div class="col-lg-7 col-12">
-      <form action="{$urls.pages.index}#footer" method="post" class="needs-validation">
+<div class="block_newsletter col-lg-5">
+    <p id="block-newsletter-label" class="">{l s='Get our latest news and special sales' d='Shop.Theme.Global'}</p>
+    <form action="{$urls.pages.index}#footer" method="post" class="needs-validation">
         <input type="hidden" name="action" value="0">
         <div class="input-group">
-          <input
-                  name="email"
-                  class="form-control{if isset($nw_error) and $nw_error} is-invalid{/if}"
-                  type="email"
-                  value="{$value}"
-                  placeholder="{l s='Your email address' d='Shop.Forms.Labels'}"
-                  aria-labelledby="block-newsletter-label"
-                  autocomplete="email"
-          >
-          <div class="input-group-append">
-            <button class="btn btn-primary" type="submit" name="submitNewsletter"><span class="d-none d-sm-inline">{l s='Subscribe' d='Shop.Theme.Actions'}</span><span class="d-inline d-sm-none">{l s='OK' d='Shop.Theme.Actions'}</span></button>
-          </div>
+            <input
+                    name="email"
+                    class="form-control{if isset($nw_error) and $nw_error} is-invalid{/if}"
+                    type="email"
+                    value="{$value}"
+                    placeholder="{l s='Your email address' d='Shop.Forms.Labels'}"
+                    aria-labelledby="block-newsletter-label"
+                    autocomplete="email"
+            >
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" name="submitNewsletter"><span
+                            class="d-none d-sm-inline">{l s='Subscribe' d='Shop.Theme.Actions'}</span><span
+                            class="d-inline d-sm-none">{l s='OK' d='Shop.Theme.Actions'}</span></button>
+            </div>
         </div>
 
         <div class="clearfix">
             {if $msg}
-              <p class="alert mt-2 {if $nw_error}alert-danger{else}alert-success{/if}">
-                  {$msg}
-              </p>
+                <p class="alert mt-2 {if $nw_error}alert-danger{else}alert-success{/if}">
+                    {$msg}
+                </p>
             {/if}
             {if $conditions}
-              <p class="small mt-2">{$conditions}</p>
+                <p class="small mt-2">{$conditions}</p>
             {/if}
             {if isset($id_module)}
                 {hook h='displayGDPRConsent' id_module=$id_module}
             {/if}
         </div>
-      </form>
-    </div>
-  </div>
+    </form>
 </div>

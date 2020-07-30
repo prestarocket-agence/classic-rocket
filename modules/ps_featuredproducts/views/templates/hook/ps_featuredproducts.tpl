@@ -22,12 +22,12 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section class="featured-products clearfix">
+<section class="o-wrapper featured-products clearfix">
   <p class="products-section-title">
     {l s='Popular Products' d='Shop.Theme.Catalog'}
   </p>
   {assign var="productscount" value=$products|count}
-  <div class="products products-slick spacing-md-top{if $productscount > 1} products--slickmobile{/if}" data-slick='{strip}
+  <div class="row o-layout products products-slick spacing-md-top{if $productscount > 1} products--slickmobile{/if}" data-slick='{strip}
     {ldelim}
     "slidesToShow": 1,
     "slidesToScroll": 1,
