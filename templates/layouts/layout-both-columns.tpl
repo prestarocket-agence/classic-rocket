@@ -83,7 +83,7 @@
             {/block}
 
           {block name="right_column"}
-            <aside id="right-column" class="col-lg-3">
+            <aside id="right-column" class="{block name='rightColumnClass'}col-lg-3{/block}">
               {if $page.page_name == 'product'}
                 {hook h='displayRightColumnProduct'}
               {else}

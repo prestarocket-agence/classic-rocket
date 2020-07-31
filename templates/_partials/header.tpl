@@ -52,7 +52,7 @@
         <a href="{$urls.base_url}" class="header__logo header-top__col">
             <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
         </a>
-        <div class="header__search">
+        <div class="header__search u-order-sm-2">
             {hook h='displaySearch'}
         </div>
         <div class="header__right header-top__col">

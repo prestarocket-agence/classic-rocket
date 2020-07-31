@@ -22,17 +22,17 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
 * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="row u-a-i-c">
-  <div class="small col-lg-4">
-    {block name='pagination_summary'}
-      {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=['%from%' => $pagination.items_shown_from ,'%to%' => $pagination.items_shown_to, '%total%' => $pagination.total_items]}
-    {/block}
-  </div>
+<div class="u-a-i-c">
+{*  <div class="small col-lg-4">*}
+{*    {block name='pagination_summary'}*}
+{*      {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=['%from%' => $pagination.items_shown_from ,'%to%' => $pagination.items_shown_to, '%total%' => $pagination.total_items]}*}
+{*    {/block}*}
+{*  </div>*}
 
-  <nav class="col-lg-8">
+  <nav class="">
     {block name='pagination_page_list'}
      {if $pagination.should_be_displayed}
-        <ul class="page-list pagination justify-content-center justify-content-lg-end mt-3 mt-lg-0 mb-0">
+        <ul class="page-list pagination o-layout o-layout--center-x">
           {foreach from=$pagination.pages item="page"}
             <li class="page-item{if $page.current} active{/if}{if !$page.clickable && !$page.current} disabled{/if}">
               {if $page.type === 'spacer'}

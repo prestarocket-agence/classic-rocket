@@ -1,7 +1,19 @@
-.u-order-0 {
-  order: 0;
+/* Orders
+  ========================================================================== */
+
+
+$orders: 0, 1;
+@each $order in $orders {
+  .u-order-#{$order} {
+    order: $order;
+  }
 }
 
-.u-order-1 {
-  order: 1;
+$orders-sm: 2;
+@include media-breakpoint-down(sm) {
+  @each $order-sm in $orders-sm {
+    .u-order-sm-#{$order-sm} {
+      order: $order-sm;
+    }
+  }
 }

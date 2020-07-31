@@ -30,6 +30,7 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 /* OBJECTS */
 @import "node_modules/bootstrap/scss/grid";
 @import "objects/objects.cols";
+@import "objects/objects.offsets";
 @import "objects/objects.layout";
 @import "objects/objects.wrapper";
 
