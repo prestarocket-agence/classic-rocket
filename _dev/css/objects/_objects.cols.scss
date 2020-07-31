@@ -22,9 +22,9 @@
 
 
   //$columns-xs: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
-  $columns-sm: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11;
-  $columns-md: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11;
-  $columns-lg: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11;
+  //$columns-sm: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11;
+  //$columns-md: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11;
+  $columns-lg: 3,4,9;
 
   //@each $column- in $columns-xs {
   //  .col-#{$column-} {
@@ -41,10 +41,11 @@
   //    @include make-col($column-md);
   //  }
   //}
-  //@each $column-lg in $columns-lg {
-  //  .col-lg-#{$column-lg} {
-  //    @include make-col($column-lg);
-  //  }
-  //}
+  @each $column-lg in $columns-lg {
+    .col-lg-#{$column-lg} {
+      @include make-col($column-lg);
+      @extend .col;
+    }
+  }
 }
 
