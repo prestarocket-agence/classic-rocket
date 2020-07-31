@@ -20,23 +20,23 @@
     @include make-col-auto();
   }
 
-  //$columns-: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+  //$columns-xs: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
   //$columns-sm: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11;
   //$columns-md: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11;
-  $columns-lg: 3, 9;
+  $columns-lg: 3,4,9;
 
-  //@each $column- in $columns- {
+  //@each $column- in $columns-xs {
   //  .col-#{$column-} {
   //    @include make-col($column-);
   //  }
   //}
   //@each $column-sm in $columns-sm {
-  //  .col-lg-#{$column-sm} {
+  //  .col-sm-#{$column-sm} {
   //    @include make-col($column-sm);
   //  }
   //}
   //@each $column-md in $columns-md {
-  //  .col-lg-#{$column-md} {
+  //  .col-md-#{$column-md} {
   //    @include make-col($column-md);
   //  }
   //}
