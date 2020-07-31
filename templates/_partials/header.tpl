@@ -48,14 +48,14 @@
 {/block}
 
 {block name='header_top'}
-    <div class="o-layout o-layout--center-y">
-        <a href="{$urls.base_url}" class="header__logo header-top__col">
+    <div class="row o-layout o-layout--center-y">
+        <a href="{$urls.base_url}" class="col-lg-2 c-header__logo">
             <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
         </a>
-        <div class="header__search u-order-sm-2">
+        <div class="col-12 col-lg-7 c-header__searchbar u-order-sm-2">
             {hook h='displaySearch'}
         </div>
-        <div class="header__right header-top__col">
+        <div class="col-lg-3 c-header__shortcut">
             {hook h='displayTop'}
         </div>
     </div>

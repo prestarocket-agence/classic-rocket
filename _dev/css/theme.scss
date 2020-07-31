@@ -37,6 +37,9 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 /*
 /*
 /* COMPONENTS */
+@import "node_modules/bootstrap/scss/forms";
+@import "components/components.header";
+@import "components/components.searchbar";
 
 /*
 /*

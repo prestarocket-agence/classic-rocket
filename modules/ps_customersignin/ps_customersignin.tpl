@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="user-info header__rightitem">
+<div class="c-header__shortcut-item">
   {if $logged}
     <a
       class="account u-link-body"

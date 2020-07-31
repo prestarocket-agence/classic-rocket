@@ -1,0 +1,17 @@
+.c-header__logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.c-header__shortcut {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.c-header__shortcut-item {
+  margin-left: $spacer;
+
+  &:first-of-type {
+    margin: 0;
+  }
+}

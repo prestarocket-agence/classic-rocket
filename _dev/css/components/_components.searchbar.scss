@@ -1,0 +1,23 @@
+.c-header__searchbar-widget {
+  margin: 0 auto;
+}
+
+.c-header__searchbar-group {
+  position: relative;
+  border-radius: 19px;
+}
+
+.c-header__searchbar-input-right {
+  padding-right: 50px;
+}
+
+.c-header__searchbar-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: none;
+  border: none;
+}

@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div>
-  <div class="blockcart cart-preview header__rightitem {if $cart.products_count > 0}active{else}inactive{/if}" data-refresh-url="{$refresh_url}">
+  <div class="c-header__shortcut-item /js blockcart {if $cart.products_count > 0}active{else}inactive{/if}" data-refresh-url="{$refresh_url}">
     <div class="shopping-cart">
       {if $cart.products_count > 0}
         <a rel="nofollow" href="{$cart_url}" class="u-link-body">
