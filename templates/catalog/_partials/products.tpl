@@ -26,7 +26,7 @@
   <div class="row products">
     {foreach from=$listing.products item="product"}
       {block name='product_miniature'}
-        {include file='catalog/_partials/miniatures/product.tpl' product=$product}
+        {include file='catalog/_partials/miniatures/product.tpl' product=$product col="col-lg-4"}
       {/block}
     {/foreach}
   </div>

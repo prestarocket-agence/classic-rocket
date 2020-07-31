@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='product_miniature_item'}
-    <article class="col-lg-3 product-miniature js-product-miniature mb-3" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}">
+    <article class="{if isset($col)}{$col}{else}col-lg-3{/if} product-miniature js-product-miniature" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}">
         <div class="card card-product">
 
             <div class="card-img-top product__card-img">
