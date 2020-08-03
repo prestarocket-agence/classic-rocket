@@ -20,24 +20,22 @@
   }
 
   $columns-base: 12;
+  $columns-sm: 12;
   $columns-lg: 2, 3, 4, 5, 7, 8, 9;
 
-  @include media-breakpoint-down(sm) {
     @each $column-base in $columns-base {
       .col-#{$column-base} {
         @include make-col($column-base);
-        @extend .col;
       }
     }
-  }
 
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-up(md) {
     @each $column-lg in $columns-lg {
       .col-lg-#{$column-lg} {
         @include make-col($column-lg);
-        @extend .col;
       }
     }
   }
 }
+
 
