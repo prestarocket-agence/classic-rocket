@@ -19,13 +19,16 @@
     @include make-col-auto();
   }
 
-  $columns-base: 12;
-  $columns-sm: 12;
+  $col-gutter-width: $grid-gutter-width/2;
+
+  $columns-base: 6, 12;
   $columns-lg: 2, 3, 4, 5, 7, 8, 9;
 
     @each $column-base in $columns-base {
       .col-#{$column-base} {
         @include make-col($column-base);
+        padding-left: $col-gutter-width;
+        padding-right: $col-gutter-width;
       }
     }
 

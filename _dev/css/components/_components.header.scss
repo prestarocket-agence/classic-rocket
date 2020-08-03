@@ -1,3 +1,13 @@
+.c-top-header {
+  padding-top: $spacer*.5;
+  padding-bottom: $spacer*.5;
+}
+
+.c-header {
+  margin-top: $spacer*1.5;
+  margin-bottom: $spacer*1.5;
+}
+
 .c-header__logo {
   max-width: 100%;
   height: auto;
@@ -14,4 +24,8 @@
   &:first-of-type {
     margin: 0;
   }
+}
+
+.c-nav {
+  margin-bottom: $spacer*2;
 }
