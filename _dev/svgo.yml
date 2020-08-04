@@ -36,7 +36,7 @@ plugins:
   - removeUnknownsAndDefaults
   - removeNonInheritableGroupAttrs
   - removeUselessStrokeAndFill
-  - removeViewBox
+  - removeViewBox: true
   - cleanupEnableBackground
   - removeHiddenElems
   - removeEmptyText
@@ -55,7 +55,7 @@ plugins:
   - sortDefsChildren
   - removeTitle
   - removeDesc
-  - removeDimensions
+  - removeDimensions: true
   - removeAttrs
   - removeAttributesBySelector
   - removeElementsByAttr

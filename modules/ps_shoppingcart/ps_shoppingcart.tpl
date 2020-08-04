@@ -29,7 +29,7 @@
             {if $cart.products_count > 0}
             <a rel="nofollow" href="{$cart_url}" class="u-link-body">
                 {/if}
-                <img src="{$urls.img_url}cart.svg" alt="{l s='Cart' d='Shop.Theme.Checkout'}" width="28" height="28">
+                {include file="_partials/icon.tpl" icon="cart" class="c-icon--lg"}
 {*                <span class="visible--desktop blockcart__label small">{l s='Cart' d='Shop.Theme.Checkout'}</span>*}
                 <span class="cart-products-count small blockcart__count">{$cart.products_count}</span>
                 {if $cart.products_count > 0}
