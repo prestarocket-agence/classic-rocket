@@ -23,28 +23,28 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="c-header__shortcut-item">
-  {if $logged}
-    <a
-      class="account u-link-body"
-      href="{$my_account_url}"
-      title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
-      rel="nofollow"
-    >
-      {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--lg"}
-      <span class="visible--desktop small">{$customerName}</span>
+    {if $logged}
+        <a
+                class="account u-link-body"
+                href="{$my_account_url}"
+                title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
+                rel="nofollow"
+        >
+            {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--lg"}
+            <span class="visible--desktop small">{$customerName}</span>
 
-      <span>{l s='Mon Compte' d='Shop.Theme.Customeraccount'}</span>
-      {include file="_partials/icon.tpl" icon="chevron-down-sharp" class="c-icon--sm"}
-    </a>
-  {else}
-    <a
-      href="{$my_account_url}"
-      class="u-link-body"
-      title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
-      rel="nofollow"
-    >
-      {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--lg"}
-      <span class="visible--desktop small">{l s='Sign in' d='Shop.Theme.Actions'}</span>
-    </a>
-  {/if}
+            <span>{l s='Mon Compte' d='Shop.Theme.Customeraccount'}</span>
+            {include file="_partials/icon.tpl" icon="chevron-down-sharp" class="c-icon--sm"}
+        </a>
+    {else}
+        <a
+                href="{$my_account_url}"
+                class="u-link-body"
+                title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
+                rel="nofollow"
+        >
+            {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--lg"}
+            <span class="visible--desktop small">{l s='Sign in' d='Shop.Theme.Actions'}</span>
+        </a>
+    {/if}
 </div>

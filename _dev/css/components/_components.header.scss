@@ -1,7 +1,18 @@
+//Top Header
+
 .c-top-header {
   padding-top: $spacer*.5;
   padding-bottom: $spacer*.5;
+  background-color: $secondary;
 }
+
+.c-top-header__btn {
+  color: $dark;
+  background: none;
+  border: none;
+}
+
+//Header
 
 .c-header {
   margin-top: $spacer*1.5;
@@ -25,6 +36,8 @@
     margin: 0;
   }
 }
+
+//Nav
 
 .c-nav {
   margin-bottom: $spacer*2;

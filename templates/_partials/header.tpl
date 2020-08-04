@@ -29,10 +29,14 @@
 {/block}
 
 {block name='header_nav'}
-    <div class="o-layout o-layout--center-y c-top-header">
-        {hook h='displayNav1'}
-        <div class="o-layout o-layout--center-y o-layout--end">
-            {hook h='displayNav2'}
+    <div class="c-top-header">
+        <div class="o-wrapper">
+            <div class="o-layout o-layout--center-y">
+                {hook h='displayNav1'}
+                <div class="o-layout o-layout--center-y o-layout--end">
+                    {hook h='displayNav2'}
+                </div>
+            </div>
         </div>
     </div>
     {*<div class="header-nav u-bor-bot">*}
@@ -48,19 +52,20 @@
 {/block}
 
 {block name='header_top'}
-    <div class="row o-layout--center-y c-header">
-        <a href="{$urls.base_url}" class="col-6 col-lg-2 c-header__logo">
-            <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
-        </a>
-        <div class="col-12 col-lg-7 c-header__searchbar u-order-sm-2">
-            {hook h='displaySearch'}
+    <div class="o-wrapper">
+        <div class="row o-layout--center-y c-header">
+            <a href="{$urls.base_url}" class="col-6 col-lg-2 c-header__logo">
+                <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
+            </a>
+            <div class="col-12 col-lg-7 c-header__searchbar u-order-sm-2">
+                {hook h='displaySearch'}
+            </div>
+            <div class="col-6 col-lg-3 c-header__shortcut">
+                {hook h='displayTop'}
+            </div>
         </div>
-        <div class="col-6 col-lg-3 c-header__shortcut">
-            {hook h='displayTop'}
-        </div>
+        {hook h='displayNavFullWidth'}
     </div>
-    {hook h='displayNavFullWidth'}
-
     {*<div class="container header-top d--flex-between u-a-i-c">*}
     {*<button class="visible--mobile btn" id="menu-icon" data-toggle="modal" data-target="#mobile_top_menu_wrapper">*}
     {*<i class="material-icons d-inline">&#xE5D2;</i>*}

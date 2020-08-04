@@ -6,3 +6,35 @@
 */
 
 $enable-grid-classes : false;
+
+/**
+* Colors
+*/
+
+$primary: #007BFF;
+$secondary: #ECEDEE;
+$dark: #595959;
+
+/**
+* Typography
+ */
+
+$font-family-sans-serif:      Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-base:            $font-family-sans-serif;
+
+$font-size-base:              1rem;
+
+$h1-font-size:                $font-size-base * 2.75;
+$h2-font-size:                $font-size-base * 1.75;
+$h3-font-size:                $font-size-base * 1.5;
+$h4-font-size:                $font-size-base * 1.25;
+$h5-font-size:                $font-size-base * 1.125;
+$h6-font-size:                $font-size-base;
+
+$headings-font-weight:        700;
+
+$lead-font-size:              $font-size-base * 1.25;
+$lead-font-weight:            400;
+
+$small-font-size:             $font-size-base * .875;
+$extra-small-font-size:       $font-size-base * .75;
