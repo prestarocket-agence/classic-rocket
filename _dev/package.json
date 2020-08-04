@@ -4,7 +4,7 @@
   "description": "Tools to help while developing the Classic theme",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p",
+    "build": "webpack -p && svgo ../assets/img --config=svgo.yml && svgo ../templates/_partials/svg --config=svgo.yml",
     "start": "webpack -p -w",
     "debug": "webpack --mode development --devtool source-map --watch",
     "sass": "webpack --mode development --onlysass true --devtool source-map --watch",
