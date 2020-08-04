@@ -30,10 +30,11 @@
       title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
       rel="nofollow"
     >
-          <span>
-            <i class="material-icons logged">&#xE7FF;</i>
-          </span>
+      {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--lg"}
       <span class="visible--desktop small">{$customerName}</span>
+
+      <span>{l s='Mon Compte' d='Shop.Theme.Customeraccount'}</span>
+      {include file="_partials/icon.tpl" icon="chevron-down-sharp" class="c-icon--sm"}
     </a>
   {else}
     <a
@@ -42,7 +43,7 @@
       title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
       rel="nofollow"
     >
-      <span><i class="material-icons">&#xE7FF;</i></span>
+      {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--lg"}
       <span class="visible--desktop small">{l s='Sign in' d='Shop.Theme.Actions'}</span>
     </a>
   {/if}
