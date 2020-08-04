@@ -23,17 +23,18 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div>
-  <div class="c-header__shortcut-item /js blockcart {if $cart.products_count > 0}active{else}inactive{/if}" data-refresh-url="{$refresh_url}">
-    <div class="shopping-cart">
-      {if $cart.products_count > 0}
-        <a rel="nofollow" href="{$cart_url}" class="u-link-body">
-      {/if}
-        <span><i class="material-icons blockcart__icon">shopping_cart</i></span>
-        <span class="visible--desktop blockcart__label small">{l s='Cart' d='Shop.Theme.Checkout'}</span>
-        <span class="cart-products-count small blockcart__count">({$cart.products_count})</span>
-      {if $cart.products_count > 0}
-        </a>
-      {/if}
+    <div class="c-header__shortcut-item /js blockcart {if $cart.products_count > 0}active{else}inactive{/if}"
+         data-refresh-url="{$refresh_url}">
+        <div class="shopping-cart">
+            {if $cart.products_count > 0}
+            <a rel="nofollow" href="{$cart_url}" class="u-link-body">
+                {/if}
+                <img src="{$urls.img_url}cart.svg" alt="{l s='Cart' d='Shop.Theme.Checkout'}" width="28" height="28">
+{*                <span class="visible--desktop blockcart__label small">{l s='Cart' d='Shop.Theme.Checkout'}</span>*}
+                <span class="cart-products-count small blockcart__count">{$cart.products_count}</span>
+                {if $cart.products_count > 0}
+            </a>
+            {/if}
+        </div>
     </div>
-  </div>
 </div>
