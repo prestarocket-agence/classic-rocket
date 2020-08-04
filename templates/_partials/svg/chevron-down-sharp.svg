@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
-    <title>chevron-down-sharp</title>
-    <desc>Created with Sketch.</desc>
-    <g id="_SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Nav/Desktop" transform="translate(-1169.000000, -86.000000)" fill="#595959" fill-rule="nonzero">
-            <g id="Group" transform="translate(1042.000000, 64.000000)">
-                <g id="chevron-down-sharp" transform="translate(127.000000, 22.000000)">
-                    <polygon id="Path" points="14 0.585786438 15.4142136 2 8 9.41421356 0.585786438 2 2 0.585786438 8 6.58579167"></polygon>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 10"><path d="M14 .586L15.414 2 8 9.414.586 2 2 .586l6 6z" fill="#595959" fill-rule="nonzero"/></svg>
