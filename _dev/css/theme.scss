@@ -6,6 +6,7 @@
 @import "node_modules/bootstrap/scss/functions";
 @import "settings/settings.bootstrap";
 @import "node_modules/bootstrap/scss/variables";
+@import "settings/settings.fonts";
 /*
 /*
 /* TOOLS */
@@ -52,6 +53,7 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 /*
 /* UTILITIES */
 @import "utilities/utilities.flex";
+@import "utilities/utilities.text";
 
 //if you want to include BS utlities (not recommanded), uncomment this following line
 /*
