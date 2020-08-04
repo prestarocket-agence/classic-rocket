@@ -1,0 +1,54 @@
+[class].u-f-base {
+  font-family: $font-family-base;
+}
+
+[class^="u-h"] {
+  font-family: $headings-font-family;
+}
+
+.u-h1{
+  @extend h1;
+}
+
+.u-h2 {
+  @extend h2;
+}
+
+.u-h3 {
+  @extend h3;
+}
+
+.u-h4 {
+  @extend h4;
+}
+
+.u-h1 > a,
+h4 > a {
+  color: $headings-color;
+}
+
+.u-txt-c {
+@extend .u-txt-center;
+}
+.u-txt-sm{
+  font-size: $font-size-sm;
+}
+.u-txt-upp {
+  text-transform: uppercase;
+}
+
+.u-txt-under {
+  text-decoration: underline;
+}
+.u-l-o{
+  cursor: pointer;
+}
+.u-link-white{
+  color: #fff;
+  &:hover{
+    color: $turbo;
+  }
+}
+.u-font--sm{
+  font-size: $font-size-sm;
+}

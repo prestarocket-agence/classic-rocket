@@ -31,18 +31,19 @@
 {block name='header_nav'}
     <div class="o-layout o-layout--center-y c-top-header">
         {hook h='displayNav1'}
-        {hook h='displayNav2'}
+        <div class="o-layout o-layout--center-y o-layout--end">
+            {hook h='displayNav2'}
+        </div>
     </div>
-
     {*<div class="header-nav u-bor-bot">*}
-        {*<div class="header__container container">*}
-            {*<div class="u-a-i-c d--flex-between visible--desktop">*}
-                {*<div class="small">*}
-                {*</div>*}
-                {*<div class="header-nav__right">*}
-                {*</div>*}
-            {*</div>*}
-        {*</div>*}
+    {*<div class="header__container container">*}
+    {*<div class="u-a-i-c d--flex-between visible--desktop">*}
+    {*<div class="small">*}
+    {*</div>*}
+    {*<div class="header-nav__right">*}
+    {*</div>*}
+    {*</div>*}
+    {*</div>*}
     {*</div>*}
 {/block}
 
@@ -61,20 +62,20 @@
     {hook h='displayNavFullWidth'}
 
     {*<div class="container header-top d--flex-between u-a-i-c">*}
-        {*<button class="visible--mobile btn" id="menu-icon" data-toggle="modal" data-target="#mobile_top_menu_wrapper">*}
-            {*<i class="material-icons d-inline">&#xE5D2;</i>*}
-        {*</button>*}
-        {*<a href="{$urls.base_url}" class="header__logo header-top__col">*}
-            {*<img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">*}
-        {*</a>*}
-        {*<div class="header__search">*}
-            {*{hook h='displaySearch'}*}
-        {*</div>*}
-        {*<div class="header__right header-top__col">*}
-            {*{hook h='displayTop'}*}
-        {*</div>*}
+    {*<button class="visible--mobile btn" id="menu-icon" data-toggle="modal" data-target="#mobile_top_menu_wrapper">*}
+    {*<i class="material-icons d-inline">&#xE5D2;</i>*}
+    {*</button>*}
+    {*<a href="{$urls.base_url}" class="header__logo header-top__col">*}
+    {*<img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">*}
+    {*</a>*}
+    {*<div class="header__search">*}
+    {*{hook h='displaySearch'}*}
+    {*</div>*}
+    {*<div class="header__right header-top__col">*}
+    {*{hook h='displayTop'}*}
+    {*</div>*}
     {*</div>*}
     {*<div class="container">*}
-        {*{hook h='displayNavFullWidth'}*}
+    {*{hook h='displayNavFullWidth'}*}
     {*</div>*}
 {/block}
