@@ -32,10 +32,12 @@
       }
     }
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     @each $column-lg in $columns-lg {
       .col-lg-#{$column-lg} {
         @include make-col($column-lg);
+        padding-left: $col-gutter-width;
+        padding-right: $col-gutter-width;
       }
     }
   }

@@ -30,7 +30,7 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.5.1",
     "bootstrap-touchspin": "^4.2.5",
     "lazysizes": "^5.2.0",
     "material-design-icons": "^3.0.1",

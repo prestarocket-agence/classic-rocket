@@ -22,6 +22,16 @@
   @extend h6;
 }
 
-.u-lead {
+.u-txt-lead {
   @extend .lead;
+}
+
+.u-txt-sm {
+  @extend .small;
+  font-size: $small-font-size;
+}
+
+.u-txt-xs {
+  @extend .small;
+  font-size: $extra-small-font-size;
 }

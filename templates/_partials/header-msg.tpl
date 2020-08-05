@@ -1,0 +1,1 @@
+<p class="c-top-header__msg">Message en bannière — Bienvenue dans la boutique de démo</p>

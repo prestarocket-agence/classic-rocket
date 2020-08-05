@@ -1,5 +1,8 @@
-.c-header__searchbar-widget {
+.c-header__searchbar {
   margin: 0 auto;
+  @include media-breakpoint-mobile {
+    margin-top: $spacer;
+  }
 }
 
 .c-header__searchbar-group {
@@ -7,14 +10,21 @@
 }
 
 .c-header__searchbar-input {
-  padding-right: 50px;
+  padding-left: $spacer;
+  padding-right: $spacer*3;
   border-radius: $spacer*1.25;
+  border: none;
+  background-color: $secondary;
+  &::placeholder{
+    color: $black;
+  }
 }
 
 .c-header__searchbar-btn {
   position: absolute;
   display: flex;
   align-items: center;
+  margin-right: $spacer*.5;
   top: 0;
   right: 0;
   height: 100%;

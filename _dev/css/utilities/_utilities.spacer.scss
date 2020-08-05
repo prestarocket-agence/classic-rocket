@@ -1,0 +1,31 @@
+$spaces: 0, 8, 16, 24, 32, 40, 56;
+
+@each $space in $spaces {
+  $step: $space  / 8;
+
+  //[class].u-mt-#{$step} {
+  //  margin-top: $spacer*($space/16);
+  //}
+  //
+  //[class].u-mb-#{$step} {
+  //  margin-bottom: $spacer*($space/16);
+  //}
+
+  [class].u-ml-#{$step} {
+    margin-left: $spacer*($space/16);
+  }
+
+  [class].u-mr-#{$step} {
+    margin-right: $spacer*($space/16);
+  }
+
+  //[class].u-mx-#{$step} {
+  //  margin-left: $spacer*($space/16);
+  //  margin-right: $spacer*($space/16);
+  //}
+  //
+  //[class].u-my-#{$step} {
+  //  margin-top: $spacer*($space/16);
+  //  margin-bottom: $spacer*($space/16);
+  //}
+}

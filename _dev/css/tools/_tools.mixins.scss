@@ -1,17 +1,11 @@
-//@mixin media-breakpoint-lg() {
-//  @include media-breakpoint-up(lg) {
-//    @content;
-//  }
-//}
-//
-//@mixin media-breakpoint-md() {
-//  @include media-breakpoint-down(md) {
-//    @content;
-//  }
-//}
-//
-//@mixin media-breakpoint-sm() {
-//  @include media-breakpoint-down(sm) {
-//    @content;
-//  }
-//}
+@mixin media-breakpoint-desktop() {
+  @include media-breakpoint-up(lg) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-mobile() {
+  @include media-breakpoint-down(md) {
+    @content;
+  }
+}

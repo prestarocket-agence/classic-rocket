@@ -29,7 +29,7 @@
             <button data-toggle="dropdown" class="c-top-header__btn /js dropdown-toggle" aria-haspopup="true" aria-expanded="false"
                     aria-label="{l s='Language dropdown' d='Shop.Theme.Global'}">
                 {$current_language.name_simple}
-                {include file="_partials/icon.tpl" icon="chevron-down-sharp" class="c-icon--sm"}
+                {include file="_partials/icon.tpl" icon="chevron-down-sharp" class="c-icon--sm u-ml-1"}
             </button>
             <div class="dropdown-menu" aria-labelledby="language-selector-label">
                 {foreach from=$languages item=language}

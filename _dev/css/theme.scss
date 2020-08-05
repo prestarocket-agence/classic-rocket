@@ -7,6 +7,8 @@
 @import "settings/settings.bootstrap";
 @import "node_modules/bootstrap/scss/variables";
 @import "settings/settings.fonts";
+@import "settings/settings.prices";
+@import "settings/settings.tags";
 /*
 /*
 /* TOOLS */
@@ -33,8 +35,8 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 /* OBJECTS */
 @import "node_modules/bootstrap/scss/grid";
 @import "objects/objects.cols";
-@import "objects/objects.offsets";
 @import "objects/objects.layout";
+@import "objects/objects.offsets";
 @import "objects/objects.wrapper";
 
 /*
@@ -42,8 +44,10 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 /* COMPONENTS */
 @import "node_modules/bootstrap/scss/forms";
 @import "components/components.header";
-@import "components/components.searchbar";
 @import "components/components.icons";
+@import "components/components.prices";
+@import "components/components.searchbar";
+@import "components/components.tags";
 
 /*
 /*
@@ -53,7 +57,10 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 /*
 /* UTILITIES */
 @import "utilities/utilities.flex";
+@import "utilities/utilities.img";
+@import "utilities/utilities.spacer";
 @import "utilities/utilities.text";
+@import "utilities/utilities.visible";
 
 //if you want to include BS utlities (not recommanded), uncomment this following line
 /*

@@ -33,7 +33,11 @@
         <div class="o-wrapper">
             <div class="o-layout o-layout--center-y">
                 {hook h='displayNav1'}
-                <div class="o-layout o-layout--center-y o-layout--end">
+
+                {* To replace / not dynamic *}
+                {include "_partials/header-msg.tpl"}
+
+                <div class="c-top-header__selects">
                     {hook h='displayNav2'}
                 </div>
             </div>
@@ -53,11 +57,11 @@
 
 {block name='header_top'}
     <div class="o-wrapper">
-        <div class="row o-layout--center-y c-header">
+        <div class="row o-layout--center-y c-header__content">
             <a href="{$urls.base_url}" class="col-6 col-lg-2 c-header__logo">
                 <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
             </a>
-            <div class="col-12 col-lg-7 c-header__searchbar u-order-sm-2">
+            <div class="col-12 col-lg-7 c-header__searchbar u-order-mobile-2">
                 {hook h='displaySearch'}
             </div>
             <div class="col-6 col-lg-3 c-header__shortcut">

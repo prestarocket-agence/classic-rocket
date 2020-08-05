@@ -1,0 +1,20 @@
+.c-price-sm {
+  font-size: $price-sm-font-size;
+
+  &--regular {
+    font-weight: 700;
+    color: $black;
+  }
+
+  &--discount {
+    font-weight: 700;
+    color: red;
+  }
+
+  &--ancient {
+    font-weight: 400;
+    color: $dark;
+    text-decoration: line-through;
+  }
+}
+

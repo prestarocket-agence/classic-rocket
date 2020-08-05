@@ -20,7 +20,9 @@
 
   .container {
     @include make-container();
-    @include make-container-max-widths();
+
+    // Version 4.0
+    //@include make-container-max-widths();
   }
 
   // 100% wide container at all breakpoints

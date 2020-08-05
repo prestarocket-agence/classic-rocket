@@ -62,7 +62,9 @@ plugins:
   - addClassesToSVGElement
   - removeStyleElement
   - removeScriptElement
-  - addAttributesToSVGElement
+  - addAttributesToSVGElement:
+      attributes:
+      - aria-hidden: true
   - removeOffCanvasPaths
   - reusePaths
 
