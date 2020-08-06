@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <section class="o-wrapper /js clearfix">
-    <p class="u-h2">
+    <p class="u-h2 u-mb-2">
         {l s='Popular Products' d='Shop.Theme.Catalog'}
     </p>
     {assign var="productscount" value=$products|count}

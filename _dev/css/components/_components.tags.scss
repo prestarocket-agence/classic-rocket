@@ -1,0 +1,8 @@
+.c-tag {
+  font-size: $tag-font-size;
+
+  &--discount {
+    color: $white;
+    background-color: $red;
+  }
+}

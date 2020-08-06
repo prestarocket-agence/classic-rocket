@@ -1,20 +1,26 @@
-.c-price-sm {
-  font-size: $price-sm-font-size;
-
-  &--regular {
+.c-price {
+  &--current {
     font-weight: 700;
     color: $black;
   }
 
   &--discount {
     font-weight: 700;
-    color: red;
+    color: $red;
   }
 
-  &--ancient {
+  &--old {
     font-weight: 400;
     color: $dark;
     text-decoration: line-through;
   }
+}
+
+.c-price-sm {
+  font-size: $price-sm-font-size;
+}
+
+.c-price-lg {
+  font-size: $price-lg-font-size;
 }
 

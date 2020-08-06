@@ -23,11 +23,10 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='product_miniature_item'}
-    <article class="{if isset($col)}{$col}{else}col-lg-3{/if} /js js-product-miniature"
+    <article class="{if isset($col)}{$col}{else}col-lg-3{/if} c-pdt-mini__card /js js-product-miniature"
              data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}">
-        <div>
             {block name='product_thumbnail'}
-                <a href="{$product.url}" class="/js rc">
+                <a href="{$product.url}" class=" /js rc">
                     {if $product.cover}
                         <img
                                 data-src="{$product.cover.bySize.home_default.url}"
@@ -41,6 +40,14 @@
                         <img class="u-img-fluid lazyload"
                              src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
                     {/if}
+
+                    {block name='product_flags'}
+                        <ul>
+                            {if $product.has_discount && $product.discount_type === 'percentage'}
+                                <li class="c-tag c-tag--discount">{$product.discount_percentage}</li>
+                            {/if}
+                        </ul>
+                    {/block}
                 </a>
             {/block}
             {*                <div class="highlighted-informations text-center p-2{if !$product.main_variants} no-variants{/if} visible--desktop">*}
@@ -74,19 +81,19 @@
                 {*                        {hook h='displayProductListReviews' product=$product}*}
                 {*                    {/block}*}
 
+
                 {block name='product_price_and_shipping'}
                     {if $product.show_price}
                         <div class="">
-                            {if $product.has_discount}
+                            {if !$product.has_discount}
+                                {hook h='displayProductPriceBlock' product=$product type="before_price"}
+                                <span class="c-price-sm c-price--current">{$product.price}</span>
+                            {else}
+                                {hook h='displayProductPriceBlock' product=$product type="before_price"}
+                                <span class="c-price-sm c-price--discount">{$product.price}</span>
                                 {hook h='displayProductPriceBlock' product=$product type="old_price"}
-                                <span class="c-price--regular">{$product.regular_price}</span>
+                                <span class="c-price-sm c-price--old">{$product.regular_price}</span>
                             {/if}
-
-                            {hook h='displayProductPriceBlock' product=$product type="before_price"}
-
-                            <span class="/js sr-only">{l s='Price' d='Shop.Theme.Catalog'}</span>
-                            <span class="{if $product.has_discount}{/if}">{$product.price}</span>
-
 
                             {hook h='displayProductPriceBlock' product=$product type='unit_price'}
 
@@ -97,21 +104,20 @@
             </div>
             {* end card body*}
 
-            {block name='product_flags'}
-                <ul class="/js product-flags">
-                    {foreach from=$product.flags item=flag}
-                        <li class="{$flag.type}">{$flag.label}</li>
-                    {/foreach}
-                    {if $product.has_discount}
-                        {if $product.discount_type === 'percentage'}
-                            <li class="">{$product.discount_percentage}</li>
-                        {elseif $product.discount_type === 'amount'}
-                            <li class="">{$product.discount_amount_to_display}</li>
-                        {/if}
-                    {/if}
-                </ul>
-            {/block}
-        </div>
+            {*            {block name='product_flags'}*}
+            {*                <ul>*}
+            {*                    {foreach from=$product.flags item=flag}*}
+            {*                        <li class="{$flag.type}">{$flag.label}</li>*}
+            {*                    {/foreach}*}
+            {*                    {if $product.has_discount}*}
+            {*                        {if $product.discount_type === 'percentage'}*}
+            {*                            <li class="">{$product.discount_percentage}</li>*}
+            {*                        {elseif $product.discount_type === 'amount'}*}
+            {*                            <li class="">{$product.discount_amount_to_display}</li>*}
+            {*                        {/if}*}
+            {*                    {/if}*}
+            {*                </ul>*}
+            {*            {/block}*}
         {* end card product*}
 
     </article>
