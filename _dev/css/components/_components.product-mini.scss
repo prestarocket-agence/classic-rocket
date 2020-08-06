@@ -1,0 +1,10 @@
+.c-pdt-mini__thumbnail {
+  position: relative;
+  margin-bottom: $spacer;
+}
+
+.c-pdt-mini__tag {
+  position: absolute;
+  bottom: $spacer*.5;
+  left: $spacer*.5;
+}

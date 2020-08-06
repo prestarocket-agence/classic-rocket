@@ -34,7 +34,7 @@
             <div class="o-layout o-layout--center-y">
                 {hook h='displayNav1'}
 
-                {* To replace / not dynamic *}
+                {* Not dynamic *}
                 {include "_partials/header-msg.tpl"}
 
                 <div class="c-top-header__selects">

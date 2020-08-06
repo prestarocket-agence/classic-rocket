@@ -25,8 +25,9 @@
 {block name='product_miniature_item'}
     <article class="{if isset($col)}{$col}{else}col-lg-3{/if} c-pdt-mini__card /js js-product-miniature"
              data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}">
+        <a href="{$product.url}" class="/js rc">
             {block name='product_thumbnail'}
-                <a href="{$product.url}" class=" /js rc">
+                <div class="c-pdt-mini__thumbnail">
                     {if $product.cover}
                         <img
                                 data-src="{$product.cover.bySize.home_default.url}"
@@ -42,13 +43,11 @@
                     {/if}
 
                     {block name='product_flags'}
-                        <ul>
-                            {if $product.has_discount && $product.discount_type === 'percentage'}
-                                <li class="c-tag c-tag--discount">{$product.discount_percentage}</li>
-                            {/if}
-                        </ul>
+                        {if $product.has_discount && $product.discount_type === 'percentage'}
+                            <div class="c-tag c-tag--discount c-pdt-mini__tag">{$product.discount_percentage}</div>
+                        {/if}
                     {/block}
-                </a>
+                </div>
             {/block}
             {*                <div class="highlighted-informations text-center p-2{if !$product.main_variants} no-variants{/if} visible--desktop">*}
             {*                    {block name='quick_view'}*}
@@ -68,13 +67,7 @@
 
             <div>
                 {block name='product_name'}
-                    {if in_array($page.page_name, ['best-sales','category','manufacturer','new-products','prices-drop','product-list','search','supplier'])}
-                        <p class="u-txt-small"><a
-                                    href="{$product.url}">{$product.name|truncate:30:'...'}</a></p>
-                    {else}
-                        <p class="u-txt-small"><a
-                                    href="{$product.url}">{$product.name|truncate:30:'...'}</a></p>
-                    {/if}
+                    <p class="u-txt-sm u-mb-1 c-txt-black">{$product.name|truncate:40:'...'}</p>
                 {/block}
 
                 {*                    {block name='product_reviews'}*}
@@ -118,7 +111,8 @@
             {*                    {/if}*}
             {*                </ul>*}
             {*            {/block}*}
-        {* end card product*}
+            {* end card product*}
 
+        </a>
     </article>
 {/block}

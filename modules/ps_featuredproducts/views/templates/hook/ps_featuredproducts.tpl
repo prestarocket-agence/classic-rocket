@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section class="o-wrapper /js clearfix">
+<section class="c-featured-pdt /js clearfix">
     <p class="u-h2 u-mb-2">
         {l s='Popular Products' d='Shop.Theme.Catalog'}
     </p>
@@ -81,7 +81,7 @@
             {include file="catalog/_partials/miniatures/product.tpl" product=$product}
         {/foreach}
     </div>
-    <a class="all-product-link float-left float-md-right" href="{$allProductsLink}">
-        {l s='All products' d='Shop.Theme.Catalog'}<i class="material-icons">&#xE315;</i>
-    </a>
+{*    <a class="all-product-link float-left float-md-right" href="{$allProductsLink}">*}
+{*        {l s='All products' d='Shop.Theme.Catalog'}<i class="material-icons">&#xE315;</i>*}
+{*    </a>*}
 </section>
