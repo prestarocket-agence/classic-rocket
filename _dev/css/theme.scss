@@ -44,9 +44,12 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 /*
 /* COMPONENTS */
 @import "node_modules/bootstrap/scss/forms";
+@import "components/components.banner";
+@import "components/components.catalog";
 @import "components/components.colors";
 @import "components/components.header";
 @import "components/components.icons";
+@import "components/components.media";
 @import "components/components.prices";
 @import "components/components.product-mini";
 @import "components/components.searchbar";

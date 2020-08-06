@@ -22,12 +22,12 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section class="c-featured-pdt /js clearfix">
+<section class="o-wrapper c-featured-pdt /js clearfix">
     <p class="u-h2 u-mb-2">
         {l s='Popular Products' d='Shop.Theme.Catalog'}
     </p>
     {assign var="productscount" value=$products|count}
-    <div class="row o-layout"
+    <div class="row"
          data-slick='{strip}
     {ldelim}
     "slidesToShow": 1,

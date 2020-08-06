@@ -1,3 +1,5 @@
+// Sizes
+
 .u-h1{
   @extend h1;
 }
@@ -34,4 +36,10 @@
 .u-txt-xs {
   @extend .small;
   font-size: $extra-small-font-size;
+}
+
+// Styles
+
+.u-txt-uppercase {
+  text-transform: uppercase;
 }

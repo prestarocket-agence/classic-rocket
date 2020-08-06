@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {if isset($breadcrumb.links[1])}
-<nav data-depth="{$breadcrumb.count}" class="visible--desktop">
+<nav data-depth="{$breadcrumb.count}" class="">
   <ul class="o-layout o-layout--start breadcrumb">
     {foreach from=$breadcrumb.links item=path name=breadcrumb}
         {block name='breadcrumb_item'}

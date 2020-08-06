@@ -52,11 +52,11 @@
     {include file='_partials/notifications.tpl'}
 {/block}
 {block name='wrapper'}
-    <div id="wrapper" class="{block name='layoutWrapperClass'}o-wrapper{/block}">
+    <div id="wrapper">
         {hook h="displayWrapperTop"}
-        {block name='breadcrumb'}
-            {include file='_partials/breadcrumb.tpl'}
-        {/block}
+{*        {block name='breadcrumb'}*}
+{*            {include file='_partials/breadcrumb.tpl'}*}
+{*        {/block}*}
         {block name="displayBeforeColumns"}
             {* if need to wrap in row *}
         {/block}
@@ -98,7 +98,7 @@
     </div>
 {/block}
 
-<footer id="footer" class="o-wrapper">
+<footer id="footer">
     {block name="footer"}
         {include file="_partials/footer.tpl"}
     {/block}
