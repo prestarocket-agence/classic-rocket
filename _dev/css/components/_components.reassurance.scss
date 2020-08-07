@@ -1,0 +1,12 @@
+.c-reassurance {
+  padding: $spacer*2.5;
+  background-color: $secondary;
+}
+
+.c-reassurance__row {
+  margin-bottom: $spacer*1.5;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
