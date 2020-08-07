@@ -23,23 +23,18 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {if isset($breadcrumb.links[1])}
-<nav data-depth="{$breadcrumb.count}" class="">
-  <ul class="o-layout o-layout--start breadcrumb">
-    {foreach from=$breadcrumb.links item=path name=breadcrumb}
-        {block name='breadcrumb_item'}
-            {if $smarty.foreach.breadcrumb.last}
-                <li class="breadcrumb-item active">
+    <nav data-depth="{$breadcrumb.count}" class="">
+        <div class="o-layout o-layout--start o-layout--center-y c-catalog-breadcrumb">
+            {foreach from=$breadcrumb.links item=path name=breadcrumb}
+                {block name='breadcrumb_item'}
+                    {if $smarty.foreach.breadcrumb.last}
+                        <p class="c-catalog-breadcrumb__item">{$path.title}</p>
                     {else}
-                <li class="breadcrumb-item">
-                <a itemprop="item" href="{$path.url}">
-            {/if}
-            <span itemprop="name">{$path.title}</span>
-        {if !$smarty.foreach.breadcrumb.last}
-            </a>
-        {/if}
-            </li>
-        {/block}
-    {/foreach}
-  </ul>
-</nav>
+                        <a class="c-catalog-breadcrumb__item" itemprop="item" href="{$path.url}">{$path.title}</a>
+                        {include "_partials/icon.tpl" icon="chevron-right-sharp" class="c-icon--xs u-ml-1 u-mr-1"}
+                    {/if}
+                {/block}
+            {/foreach}
+        </div>
+    </nav>
 {/if}

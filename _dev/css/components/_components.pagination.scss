@@ -1,0 +1,11 @@
+.c-pagination {
+  margin: $spacer*2 auto;
+}
+
+.c-pagination__item {
+  margin-right: $spacer*2.5;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}

@@ -23,21 +23,21 @@
   * International Registered Trademark & Property of PrestaShop SA
   *}
 {if $displayedFacets|count}
-  <div id="search_filters" class="search_filters">
-    {block name='facets_title'}
-      <p class="text-uppercase h6 visible--desktop">{l s='Filter By' d='Shop.Theme.Actions'}</p>
-    {/block}
+  <div id="search_filters" class="">
+{*    {block name='facets_title'}*}
+{*      <p class="u-h6 u-visible-desktop">{l s='Filter By' d='Shop.Theme.Actions'}</p>*}
+{*    {/block}*}
 
-    {block name='facets_clearall_button'}
-      {if $activeFilters|count}
-        <div class="clear-all-wrapper">
-          <button data-search-url="{$clear_all_link}" class="btn--clearfilter btn btn-sm btn-block btn-outline-secondary js-search-filters-clear-all">
-            <i class="material-icons">&#xE14C;</i>
-            {l s='Clear all' d='Shop.Theme.Actions'}
-          </button>
-        </div>
-      {/if}
-    {/block}
+{*    {block name='facets_clearall_button'}*}
+{*      {if $activeFilters|count}*}
+{*        <div class="clear-all-wrapper">*}
+{*          <button data-search-url="{$clear_all_link}" class="btn--clearfilter btn btn-sm btn-block btn-outline-secondary js-search-filters-clear-all">*}
+{*            <i class="material-icons">&#xE14C;</i>*}
+{*            {l s='Clear all' d='Shop.Theme.Actions'}*}
+{*          </button>*}
+{*        </div>*}
+{*      {/if}*}
+{*    {/block}*}
 
     {foreach from=$displayedFacets item="facet"}
 
@@ -46,18 +46,18 @@
         {foreach from=$facet.filters item="filter"}
             {if $filter.active}{assign var=_collapse value=false}{/if}
         {/foreach}
-      <section class="facet__block">
-          <div class="facet__header">
-              <p class="facet__title">{$facet.label}</p>
-              <a href="#facet_{$_expand_id}" class="icon-collapse visible--mobile stretched-link" data-toggle="collapse"{if !$_collapse} aria-expanded="true"{/if}>
-                  <i class="material-icons">&#xE313;</i>
-              </a>
+      <section class="c-filter">
+          <div>
+              <p class="u-h6 u-mb-1">{$facet.label}</p>
+{*              <a href="#facet_{$_expand_id}" class="icon-collapse visible--mobile stretched-link" data-toggle="collapse"{if !$_collapse} aria-expanded="true"{/if}>*}
+{*                  <i class="material-icons">&#xE313;</i>*}
+{*              </a>*}
           </div>
 
 
         {if in_array($facet.widgetType, ['radio', 'checkbox'])}
           {block name='facet_item_other'}
-            <div id="facet_{$_expand_id}" class="collpase--facet collapse{if !$_collapse} show{/if}">
+            <div id="facet_{$_expand_id}">
               {foreach from=$facet.filters key=filter_key item="filter"}
                 {if !$filter.displayed}
                   {continue}
@@ -67,7 +67,7 @@
                               id="facet_input_{$_expand_id}_{$filter_key}"
                               data-search-url="{$filter.nextEncodedFacetsURL}"
                               type="{if $facet.multipleSelectionAllowed}checkbox{else}radio{/if}"
-                              class="custom-control-input"
+                              class="custom-control-input c-filter__checkbox"
                               {if $filter.active } checked{/if}
                       >
                       <label class="custom-control-label" for="facet_input_{$_expand_id}_{$filter_key}">
@@ -101,7 +101,6 @@
                               </option>
                           {/foreach}
                       </select>
-
                   </div>
           {/block}
 
