@@ -43,18 +43,24 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 /*
 /*
 /* COMPONENTS */
+@import "node_modules/bootstrap/scss/buttons";
 @import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/custom-forms";
 @import "components/components.banner";
+@import "components/components.button";
 @import "components/components.catalog";
 @import "components/components.colors";
 @import "components/components.filter";
+@import "components/components.form";
 @import "components/components.header";
 @import "components/components.icons";
 @import "components/components.media";
 @import "components/components.pagination";
 @import "components/components.prices";
 @import "components/components.product-mini";
+@import "components/components.radio";
 @import "components/components.searchbar";
+@import "components/components.select";
 @import "components/components.tags";
 
 /*

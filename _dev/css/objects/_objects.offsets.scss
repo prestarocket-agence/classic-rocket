@@ -16,7 +16,7 @@
     @extend %grid-column;
   }
 
-  $offsets-lg: 1;
+  $offsets-lg: 1, 2;
 
   @each $offset-lg in $offsets-lg {
     .offset-lg-#{$offset-lg} {
