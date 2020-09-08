@@ -84,14 +84,13 @@
 
 .c-header__shopcart {
   position: relative;
-
   &-count {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: -$spacer*.8;
-    right: -$spacer;
+    margin-top: -$spacer*2.25;
+    margin-left: $spacer*1.25;
     width: $spacer*1.5;
     height: $spacer*1.5;
     font-size: $small-font-size;
