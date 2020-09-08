@@ -43,14 +43,23 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 /*
 /*
 /* COMPONENTS */
+$theme-colors: (
+        "primary":    $primary,
+        "secondary":  $secondary
+);
 @import "node_modules/bootstrap/scss/buttons";
 @import "node_modules/bootstrap/scss/forms";
 @import "node_modules/bootstrap/scss/custom-forms";
+@import "node_modules/bootstrap/scss/buttons";
+$theme-colors: map-remove($theme-colors,"primary","secondary","success","info","warning","danger","light","dark");
+@import "node_modules/bootstrap/scss/button-group";
+
 @import "components/components.banner";
 @import "components/components.button";
 @import "components/components.catalog";
 @import "components/components.colors";
 @import "components/components.filter";
+@import "components/components.footer";
 @import "components/components.form";
 @import "components/components.header";
 @import "components/components.icons";
