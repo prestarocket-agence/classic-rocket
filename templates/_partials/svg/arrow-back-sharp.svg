@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
-    <title>arrow-back-sharp</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Boutique" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Liste" transform="translate(-735.000000, -1571.000000)" fill="#000000" fill-rule="nonzero">
-            <g id="Group-3" transform="translate(735.000000, 1571.000000)">
-                <g id="arrow-back-sharp" transform="translate(0.000000, 0.000000)">
-                    <path d="M9.62162162,0.00318240557 L11.4562771,1.83783784 L4.96918241,8.32418241 L20,8.32432432 L20,10.9189189 L4.96918241,10.9181824 L11.4562771,17.4054054 L9.62162162,19.2400608 L0.00318240557,9.62162162 L9.62162162,0.00318240557 Z" id="Combined-Shape"></path>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.622.003l1.834 1.835L4.97 8.324H20v2.595H4.97l6.486 6.486-1.834 1.835L.003 9.622 9.622.003z" fill="#000" fill-rule="nonzero"/></svg>
