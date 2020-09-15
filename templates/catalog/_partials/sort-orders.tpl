@@ -22,10 +22,20 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+{assign var="includeEmptySort" value="1"}
+{foreach from=$listing.sort_orders item=sort_order}
+    {if $sort_order.current == '1'}
+        {assign var="includeEmptySort" value="0"}
+    {/if}
+{/foreach}
+
 <div class="form-inline">
     <div class="form-group mb-0">
         <label for="select-sort-order" class="visible--desktop">{l s='Sort by:' d='Shop.Theme.Global'}</label>
         <select class="custom-select ml-sm-2" id="select-sort-order">
+            {if $includeEmptySort == '1'}
+                <option>--</option>
+            {/if}
             {foreach from=$listing.sort_orders item=sort_order}
                 <option value="{$sort_order.url}"{if $sort_order.current} selected="selected"{/if}>{$sort_order.label}</option>
             {/foreach}
