@@ -24,12 +24,12 @@
  *}
 
 <div id="block_myaccount_infos" class="col-lg-3 links wrapper">
-    <p class="footer__title footer__title--desktop">{l s='Your account' d='Shop.Theme.Customeraccount'}</p>
-    <a href="#footer_account_list" class="footer__title--mobile footer__title" data-toggle="collapse">{l s='Your account' d='Shop.Theme.Customeraccount'}</a>
+    <p class="c-footer-item__title">{l s='Your account' d='Shop.Theme.Customeraccount'}</p>
+{*    <a href="#footer_account_list" class="u-txt-black" data-toggle="collapse">{l s='Your account' d='Shop.Theme.Customeraccount'}</a>*}
   <ul class="account-list collapse show" data-collapse-hide-mobile id="footer_account_list">
     {foreach from=$my_account_urls item=my_account_url}
         <li>
-          <a href="{$my_account_url.url}" title="{$my_account_url.title}" rel="nofollow">
+          <a class="u-txt-black" href="{$my_account_url.url}" title="{$my_account_url.title}" rel="nofollow">
             {$my_account_url.title}
           </a>
         </li>

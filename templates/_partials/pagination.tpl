@@ -41,7 +41,7 @@
                 <a
                   rel="{if $page.type === 'previous'}prev{elseif $page.type === 'next'}next{else}nofollow{/if}"
                   href="{if $page.page == 1}{$page.url|replace:'?page=1':''|replace:'&page=1':''}{else}{$page.url}{/if}"
-                  class="c-txt-black u-txt-sm {if $page.type === 'previous'}previous {elseif $page.type === 'next'}next {/if}{['disabled' => !$page.clickable, 'js-search-link' => true]|classnames}"{if !$page.clickable} tabindex="-1"{/if}
+                  class="u-txt-black u-txt-sm {if $page.type === 'previous'}previous {elseif $page.type === 'next'}next {/if}{['disabled' => !$page.clickable, 'js-search-link' => true]|classnames}"{if !$page.clickable} tabindex="-1"{/if}
                 >
                   {if $page.type === 'previous'}
                       {include '_partials/icon.tpl' icon="arrow-back-sharp" class="c-icon--md"}

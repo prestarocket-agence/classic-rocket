@@ -28,10 +28,10 @@
        class="u-txt-bold">{l s='Get our latest news and special sales' d='Shop.Theme.Global'}</p>
     <form action="{$urls.pages.index}#footer" method="post" class="needs-validation">
         <input type="hidden" name="action" value="0">
-        <div class="input-group">
+        <div class="input-group u-d-flex u-mb-4">
             <input
                     name="email"
-                    class="form-control{if isset($nw_error) and $nw_error} is-invalid{/if}"
+                    class="form-control{if isset($nw_error) and $nw_error} is-invalid{/if} u-mr-2"
                     type="email"
                     value="{$value}"
                     placeholder="{l s='Your email address' d='Shop.Forms.Labels'}"
@@ -44,14 +44,14 @@
             </div>
         </div>
 
-        <div class="clearfix c-txt-dark">
+        <div class="clearfix u-txt-dark">
             {if $msg}
-                <p class="u-txt-xs mt-2 {if $nw_error}alert-danger{else}alert-success{/if}">
+                <p class="u-txt-xs u-mb-0 {if $nw_error}alert-danger{else}alert-success{/if}">
                     {$msg}
                 </p>
             {/if}
             {if $conditions}
-                <p class="u-txt-xs mt-2">{$conditions}</p>
+                <p class="u-txt-xs u-mb-0">{$conditions}</p>
             {/if}
             {if isset($id_module)}
                 {hook h='displayGDPRConsent' id_module=$id_module}

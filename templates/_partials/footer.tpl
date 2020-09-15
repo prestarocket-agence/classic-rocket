@@ -22,8 +22,8 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="container">
-    <div class="row">
+<div class="container o-wrapper">
+    <div class="row u-align-items-start">
         {block name='hook_footer_before'}
             {hook h='displayFooterBefore'}
         {/block}

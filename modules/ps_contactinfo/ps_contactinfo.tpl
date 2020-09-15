@@ -23,12 +23,12 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<div class="block-contact">
-    <p class="footer__title footer__title--desktop">{l s='Store information' d='Shop.Theme.Global'}</p>
-    <a href="#footer_store_info" class="footer__title--mobile footer__title" data-toggle="collapse">{l s='Store information' d='Shop.Theme.Global'}</a>
+<div class="">
+    <p class="c-footer-item__title">{l s='Store information' d='Shop.Theme.Global'}</p>
+{*    <a href="#footer_store_info" class="u-txt-black" data-toggle="collapse">{l s='Store information' d='Shop.Theme.Global'}</a>*}
 
 
-  <div id="footer_store_info" class="account-list collapse show" data-collapse-hide-mobile>
+  <div id="footer_store_info" class="u-txt-dark u-mb-3 collapse show" data-collapse-hide-mobile>
       {$contact_infos.address.formatted nofilter}
       {if $contact_infos.phone}
         <br>
@@ -59,9 +59,9 @@
         <br>
         {* [1][/1] is for a HTML tag. *}
         {l
-          s='Email us: [1]%email%[/1]'
+          s='[1]%email%[/1]'
           sprintf=[
-            '[1]' => '<a href="mailto:'|cat:$contact_infos.email|cat:'" class="dropdown">',
+            '[1]' => '<a class="u-txt-dark" href="mailto:'|cat:$contact_infos.email|cat:'" class="dropdown">',
             '[/1]' => '</a>',
             '%email%' => $contact_infos.email
           ]
@@ -69,5 +69,7 @@
         }
       {/if}
   </div>
+
+    {widget name='ps_socialfollow'}
 
 </div>

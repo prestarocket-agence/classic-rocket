@@ -67,7 +67,7 @@
 
             <div>
                 {block name='product_name'}
-                    <p class="u-txt-sm u-mb-1 c-txt-black">{$product.name|truncate:40:'...'}</p>
+                    <p class="u-txt-sm u-mb-1 u-txt-black">{$product.name|truncate:40:'...'}</p>
                 {/block}
 
                 {*                    {block name='product_reviews'}*}
