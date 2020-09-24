@@ -41,26 +41,12 @@
         {hook h='displayFooterAfter'}
       {/block}
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <p class="text-center">
-          {block name='copyright_link'}
-            <a class="_blank" href="http://www.prestashop.com" target="_blank">
-              {l s='%copyright% %year% - Ecommerce software by %prestashop%' sprintf=['%prestashop%' => 'PrestaShop™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
-            </a>
-          {/block}
-        </p>
-      </div>
-    </div>
+    <p class="text-center mb-0 pb-3">
+      {block name='copyright_link'}
+        <a class="_blank" href="https://prestarocket.com/" target="_blank" rel="nofollow">
+          {l s='%copyright% %year% - Theme by %prestashop%' sprintf=['%prestashop%' => 'Prestarocket™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
+        </a>
+      {/block}
+    </p>
   </div>
 </div>
-
-
-
-{literal}
-<style>
-  .custom-file-label::after{
-    content:"{/literal}{l s='Choose file' d='Shop.Theme.Actions'}"{literal}
-  }
-</style>
-{/literal}

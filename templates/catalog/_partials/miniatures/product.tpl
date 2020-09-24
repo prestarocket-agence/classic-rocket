@@ -85,7 +85,7 @@
                                 {hook h='displayProductPriceBlock' product=$product type="before_price"}
 
                                 <span class="sr-only">{l s='Price' d='Shop.Theme.Catalog'}</span>
-                                <span class="price">{$product.price}</span>
+                                <span class="price{if $product.has_discount} current-price-discount{/if}">{$product.price}</span>
 
 
                                 {hook h='displayProductPriceBlock' product=$product type='unit_price'}
@@ -105,10 +105,12 @@
                     {foreach from=$product.flags item=flag}
                         <li class="product-flag {$flag.type}">{$flag.label}</li>
                     {/foreach}
-                    {if $product.discount_type === 'percentage'}
-                        <li class="product-flag discount-percentage discount-product">{$product.discount_percentage}</li>
-                    {elseif $product.discount_type === 'amount'}
-                        <li class="product-flag discount-amount discount-product">{$product.discount_amount_to_display}</li>
+                    {if $product.has_discount}
+                        {if $product.discount_type === 'percentage'}
+                            <li class="product-flag discount-percentage discount-product">{$product.discount_percentage}</li>
+                        {elseif $product.discount_type === 'amount'}
+                            <li class="product-flag discount-amount discount-product">{$product.discount_amount_to_display}</li>
+                        {/if}
                     {/if}
                 </ul>
             {/block}

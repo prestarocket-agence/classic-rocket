@@ -55,8 +55,8 @@
       <div class="icon"><i class="material-icons">&#xE158;</i></div>
       <div class="data email">
         {l s='Email us:' d='Shop.Theme.Global'}<br/>
+        {mailto address=$contact_infos.email encode="javascript"}
        </div>
-       <a href="mailto:{$contact_infos.email}">{$contact_infos.email}</a>
     </div>
   {/if}
 </div>

@@ -21,6 +21,7 @@
 
 .address{
   @extend .card;
+  height: 100%;
 }
 .address-header{
   @extend .card-header;

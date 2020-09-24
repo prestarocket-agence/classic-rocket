@@ -28,9 +28,9 @@
   <div class="js-address-form">
     <form
       method="POST"
-      action="{$urls.pages.order}"
+      action="{url entity='order' params=['id_address' => $id_address]}"
       data-refresh-url="{url entity='order' params=['ajax' => 1, 'action' => 'addressForm']}"
-      {if show_delivery_address_form || ($show_invoice_address_form && !$use_same_address)}class="needs-validation" autocomplete="false" novalidate{/if}
+      {if $show_delivery_address_form || ($show_invoice_address_form && !$use_same_address)}class="needs-validation" autocomplete="false" novalidate{/if}
     >
       {if !$use_same_address}
         <h2 class="h4">{l s='Shipping Address' d='Shop.Theme.Checkout'}</h2>
@@ -65,7 +65,7 @@
                     type        = "delivery"
                     interactive = !$show_delivery_address_form and !$show_invoice_address_form
           }
-            <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="col-12 col-lg-6 col-lg-4 mb-3">
                 <a href="{$new_address_delivery_url}" class="card bg-light card--address">
                     <span class="card-body_add-address">
                         <i class="material-icons md-48">&#xe147;</i><br>{l s='add new address' d='Shop.Theme.Actions'}
@@ -116,7 +116,7 @@
                       interactive = !$show_delivery_address_form and !$show_invoice_address_form
             }
 
-              <div class="col-12 col-md-6 col-lg-4 mb-3">
+              <div class="col-12 col-lg-6 col-lg-4 mb-3">
                   <a href="{$new_address_invoice_url}" class="card bg-light invoice-address">
                     <span class="card-body_add-address">
                         <i class="material-icons md-48">&#xe147;</i><br>{l s='add new address' d='Shop.Theme.Actions'}

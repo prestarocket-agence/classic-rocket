@@ -203,12 +203,24 @@
     display: inline-block;
   }
 }
-.current-price-display{
-  font-size: $product-regular-price-font-size;
-  font-weight: $regular-price-font-weight;
+.price{
+  color:$product-price-current-color;
+  font-size:$product-price-current-font-size;
+  font-weight:$product-price-current-font-weight;
+  font-family: $product-price-current-font-family;
+  &.current-price-discount{
+    color:$product-price-discount-color;
+    font-size:$product-price-discount-font-size;
+    font-weight:$product-price-discount-font-weight;
+    font-family: $product-price-discount-font-family;
+  }
 }
-.current-price-discount{
-  color:$product-price-discount-color;
+.regular-price{
+  color:$product-price-regular-color;
+  font-size:$product-price-regular-font-size;
+  font-weight:$product-price-regular-font-weight;
+  font-family: $product-price-regular-font-family;
+  text-decoration: line-through;
 }
 .discount{
   text-transform: uppercase;
