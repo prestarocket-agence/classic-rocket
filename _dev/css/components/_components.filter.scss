@@ -1,0 +1,26 @@
+.c-filter {
+  margin-bottom: $spacer;
+  padding-bottom: $spacer;
+  border-bottom: solid 1px $secondary;
+}
+
+.c-filter__title {
+  margin-bottom: $spacer*.5;
+
+  & a {
+    color: $black;
+    font-weight: $headings-font-weight;
+  }
+}
+
+.c-filter__row {
+  margin-bottom: $spacer*.5;
+
+  & a {
+    color: $black;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}

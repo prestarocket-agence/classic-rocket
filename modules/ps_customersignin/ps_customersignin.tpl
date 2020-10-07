@@ -22,28 +22,34 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="user-info header__rightitem">
-  {if $logged}
-    <a
-      class="account u-link-body"
-      href="{$my_account_url}"
-      title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
-      rel="nofollow"
-    >
-          <span>
-            <i class="material-icons logged">&#xE7FF;</i>
-          </span>
-      <span class="visible--desktop small">{$customerName}</span>
-    </a>
-  {else}
-    <a
-      href="{$my_account_url}"
-      class="u-link-body"
-      title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
-      rel="nofollow"
-    >
-      <span><i class="material-icons">&#xE7FF;</i></span>
-      <span class="visible--desktop small">{l s='Sign in' d='Shop.Theme.Actions'}</span>
-    </a>
-  {/if}
+<div class="c-header__shortcut-item">
+    {if $logged}
+        <a
+                class="o-layout o-layout--center-y"
+                href="{$my_account_url}"
+                title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
+                rel="nofollow"
+        >
+            {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--lg u-mr-1"}
+
+            <div class="u-hidden-mobile">
+                <p class="c-header__customer-name">{$customerName}</p>
+
+                <div class="o-layout o-layout--start o-layout--center-y">
+                    <p class="c-header__customer-account">{l s='Mon Compte' d='Shop.Theme.Customeraccount'}</p>
+                    {include file="_partials/icon.tpl" icon="chevron-down-sharp" class="c-icon--sm"}
+                </div>
+            </div>
+        </a>
+    {else}
+        <a
+                href="{$my_account_url}"
+                class="u-link-body"
+                title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
+                rel="nofollow"
+        >
+            {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--lg"}
+            <span class="visible--desktop small">{l s='Sign in' d='Shop.Theme.Actions'}</span>
+        </a>
+    {/if}
 </div>

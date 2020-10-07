@@ -39,5 +39,9 @@
 }
 
 .o-layout--start {
-  justify-content: start;
+  justify-content: flex-start;
+}
+
+.o-layout--end {
+  justify-content: flex-end;
 }

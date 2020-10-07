@@ -25,8 +25,8 @@
 {extends file='layouts/layout-both-columns.tpl'}
 
 {block name='right_column'}{/block}
-{block name='displayBeforeColumns'}<div class="row">{/block}
-{block name='displayAfterColumns'}</div>{/block}
+{block name='displayBeforeColumns'}<div class="o-wrapper"><div class="row">{/block}
+{block name='displayAfterColumns'}</div></div>{/block}
 {block name='leftColumnClass'} u-order-0 order-0 col-lg-3{/block}
-{block name='contentWrapperClass'} col-lg-9 u-order-1 order-lg-1 col-lg-9{/block}
+{block name='contentWrapperClass'} u-order-1 order-1 col-lg-9{/block}
 

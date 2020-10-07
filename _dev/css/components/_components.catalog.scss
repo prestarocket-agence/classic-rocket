@@ -1,0 +1,29 @@
+.c-catalog__header {
+  padding: $spacer*2;
+  color: $white;
+  box-shadow: inset 100vw 0 0 0 rgba(0, 0, 0, 0.5);
+  //Not dynamic
+  background: url("../../assets/img/header-vetements.webp") no-repeat center center;
+  background-size: cover;
+}
+
+.c-catalog-breadcrumb {
+  margin-bottom: $spacer;
+}
+
+.c-catalog-breadcrumb__item {
+  font-size: $small-font-size;
+  color: $secondary;
+  margin-bottom: 0;
+}
+
+.c-result {
+  margin-top: $spacer*1.5;
+  margin-bottom: $spacer*1.5;
+}
+
+.c-result__select {
+  padding: $spacer*.375;
+  border-radius: 4px;
+  border: solid 1px $gray;
+}

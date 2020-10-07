@@ -6,15 +6,21 @@
 @import "node_modules/bootstrap/scss/functions";
 @import "settings/settings.bootstrap";
 @import "node_modules/bootstrap/scss/variables";
+@import "settings/settings.colors";
+@import "settings/settings.fonts";
+@import "settings/settings.prices";
+@import "settings/settings.tags";
 /*
 /*
 /* TOOLS */
 @import "node_modules/bootstrap/scss/mixins";
+@import "tools/tools.mixins";
 
 /*
 /*
 /* GENERICS */
 @import "node_modules/bootstrap/scss/reboot";
+@import "generics/generics.reboot";
 
 /*
 /*
@@ -31,11 +37,40 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 @import "node_modules/bootstrap/scss/grid";
 @import "objects/objects.cols";
 @import "objects/objects.layout";
+@import "objects/objects.offsets";
 @import "objects/objects.wrapper";
 
 /*
 /*
 /* COMPONENTS */
+$theme-colors: (
+        "primary":    $primary,
+        "secondary":  $secondary
+);
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/custom-forms";
+@import "node_modules/bootstrap/scss/buttons";
+$theme-colors: map-remove($theme-colors,"primary","secondary","success","info","warning","danger","light","dark");
+@import "node_modules/bootstrap/scss/button-group";
+
+@import "components/components.banner";
+@import "components/components.button";
+@import "components/components.catalog";
+@import "components/components.filter";
+@import "components/components.footer";
+@import "components/components.form";
+@import "components/components.header";
+@import "components/components.icons";
+@import "components/components.media";
+@import "components/components.pagination";
+@import "components/components.prices";
+@import "components/components.product-mini";
+@import "components/components.radio";
+@import "components/components.reassurance";
+@import "components/components.searchbar";
+@import "components/components.select";
+@import "components/components.tags";
 
 /*
 /*
@@ -45,6 +80,10 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 /*
 /* UTILITIES */
 @import "utilities/utilities.flex";
+@import "utilities/utilities.img";
+@import "utilities/utilities.spacer";
+@import "utilities/utilities.text";
+@import "utilities/utilities.visible";
 
 //if you want to include BS utlities (not recommanded), uncomment this following line
 /*

@@ -24,14 +24,17 @@
  *}
 
 <div id="_desktop_currency_selector">
-    <div class="currency-selector dropdown js-dropdown">
-        <span id="currency-selector-label" class="d-inline-block d-md-none">{l s='Currency:' d='Shop.Theme.Global'}</span>
-        <button data-target="#" data-toggle="dropdown" class="btn btn-sm dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-label="{l s='Currency dropdown' d='Shop.Theme.Global'}">
+    <div class=" /js dropdown js-dropdown">
+        {*        <span id="currency-selector-label" class="d-inline-block d-md-none">{l s='Currency:' d='Shop.Theme.Global'}</span>*}
+        <button data-target="#" data-toggle="dropdown" class="c-top-header__btn /js dropdown-toggle" aria-haspopup="true"
+                aria-expanded="false" aria-label="{l s='Currency dropdown' d='Shop.Theme.Global'}">
             {$current_currency.iso_code} {$current_currency.sign}
+            {include file="_partials/icon.tpl" icon="chevron-down-sharp" class="c-icon--sm u-ml-1"}
         </button>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="currency-selector-label">
             {foreach from=$currencies item=currency}
-                    <a title="{$currency.name}" rel="nofollow" href="{$currency.url}" class="dropdown-item small">{$currency.iso_code} {$currency.sign}</a>
+                <a title="{$currency.name}" rel="nofollow" href="{$currency.url}"
+                   class="dropdown-item small">{$currency.iso_code} {$currency.sign}</a>
             {/foreach}
         </div>
     </div>

@@ -1,0 +1,75 @@
+// Sizes
+
+.u-h1{
+  @extend h1;
+}
+
+.u-h2 {
+  @extend h2;
+}
+
+.u-h3 {
+  @extend h3;
+}
+
+.u-h4 {
+  @extend h4;
+}
+
+.u-h5 {
+  @extend h5;
+}
+
+.u-h6 {
+  @extend h6;
+}
+
+.u-txt-lead {
+  @extend .lead;
+}
+
+.u-txt-sm {
+  @extend .small;
+  font-size: $small-font-size;
+}
+
+.u-txt-xs {
+  @extend .small;
+  font-size: $extra-small-font-size;
+}
+
+// Styles
+
+.u-txt-uppercase {
+  text-transform: uppercase;
+}
+
+.u-txt-bold {
+  font-weight: 700;
+}
+
+//Colors
+
+.u-txt-primary {
+  color: $primary;
+}
+
+.u-txt-secondary {
+  color: $secondary;
+}
+
+.u-txt-black {
+  color: $black;
+}
+
+.u-txt-white {
+  color: $white
+}
+
+.u-txt-dark {
+  color: $dark;
+}
+
+.u-txt-gray {
+  color: $gray;
+}

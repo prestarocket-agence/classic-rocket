@@ -1,7 +1,43 @@
-.u-order-0 {
-  order: 0;
+.u-d-flex {
+  display: flex;
 }
 
-.u-order-1 {
-  order: 1;
+.u-align-items-center {
+  align-items: center;
 }
+
+.u-align-items-start {
+  align-items: flex-start;
+}
+
+/* Orders
+  ========================================================================== */
+
+$orders: 0, 1;
+@each $order in $orders {
+  .u-order-#{$order} {
+    order: $order;
+  }
+}
+
+$orders-mobile: 2;
+@include media-breakpoint-mobile {
+  @each $order-mobile in $orders-mobile {
+    .u-order-mobile-#{$order-mobile} {
+      order: $order-mobile;
+    }
+  }
+}
+
+//$order-suffixes: '', 'sm', 'md', 'lg';
+//$order-positions: 0, 1, 2;
+//
+//@each $order-suffix in $order-suffixes {
+//  @include media-breakpoint-down($order-suffix) {
+//    @each $order-position in $order-positions {
+//      .u-order-#{$order-suffix}-#{$order-position} {
+//        order: $order-position;
+//      }
+//    }
+//  }
+//}

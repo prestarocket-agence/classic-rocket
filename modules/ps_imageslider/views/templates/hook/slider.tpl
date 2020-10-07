@@ -33,7 +33,9 @@
 }{/literal}'{/strip}{/if}>
         {foreach from=$homeslider.slides item=slide name='homeslider'}
             <a href="{$slide.url}">
-                <div class="rc" style="padding-top:{$paddingbottom}%">
+                <div class="rc"
+{*                     style="padding-top:{$paddingbottom}%"*}
+                >
                     <img data-src="{$slide.image_url}" alt="{$slide.legend|escape}" class="w-100 lazyload img-carousel">
                     <noscript>
                         <img src="{$slide.image_url}" alt="{$slide.legend|escape}">

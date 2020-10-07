@@ -1,0 +1,11 @@
+@include media-breakpoint-mobile {
+  .u-visible-desktop {
+    display: none;
+  }
+}
+
+@include media-breakpoint-desktop {
+  .u-visible-mobile {
+    display: none;
+  }
+}

@@ -1,0 +1,8 @@
+$icon-dimensions: ("xs": 12px, "sm": 16px, "md": 20px, "lg": 28px, "xl": 64px);
+
+@each $icon-suffix, $icon-size in $icon-dimensions {
+  .c-icon--#{$icon-suffix} > svg {
+    width: $icon-size;
+    height: $icon-size;
+  }
+}

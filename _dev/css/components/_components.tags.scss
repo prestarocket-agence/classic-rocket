@@ -1,0 +1,11 @@
+.c-tag {
+  align-items: flex-start;
+  font-size: $tag-font-size;
+  padding: $spacer*.125 $spacer*.25;
+  border-radius: 4px;
+
+  &--discount {
+    color: $white;
+    background-color: $red;
+  }
+}

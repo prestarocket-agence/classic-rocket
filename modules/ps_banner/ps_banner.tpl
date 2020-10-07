@@ -22,10 +22,21 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<a class="o-layout o-layout--center-x banner d-block" href="{$banner_link}" title="{$banner_desc}">
-  {if isset($banner_img)}
-    <img data-src="{$banner_img}" alt="{$banner_desc}" title="{$banner_desc}" class="img-fluid lazyload">
-  {else}
-    <span>{$banner_desc}</span>
-  {/if}
-</a>
+
+{*<a class="o-layout o-layout--center-x banner d-block" href="{$banner_link}" title="{$banner_desc}">*}
+{*  {if isset($banner_img)}*}
+{*    <img data-src="{$banner_img}" alt="{$banner_desc}" title="{$banner_desc}" class="img-fluid lazyload">*}
+{*  {else}*}
+{*    <span>{$banner_desc}</span>*}
+{*  {/if}*}
+{*</a>*}
+
+<div class="o-wrapper">
+    <div class="o-layout o-layout--center-y c-banner">
+        <div>
+            <p class="u-h1">Méga promotion sur tout</p>
+            <p class="u-h2 u-txt-gray">Profitez de l'été dès aujourd'hui</p>
+        </div>
+        {include file="_partials/icon.tpl" icon="arrow-right-sharp" class="c-icon--xl"}
+    </div>
+</div>

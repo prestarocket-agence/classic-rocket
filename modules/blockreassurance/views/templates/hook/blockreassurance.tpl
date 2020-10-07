@@ -23,14 +23,12 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {if $elements}
-    <div class="card card--reassurance mb-3">
-        <ul class="list-group list-group-flush">
-            {foreach from=$elements item=element}
-            <li class="list-group-item">
+    <ul class="c-reassurance">
+        {foreach from=$elements item=element}
+            <li class="c-reassurance__row">
                 <img src="{$element.image}" alt="{$element.text}">
-                <span class="h6">{$element.text}</span>
+                <span class="u-h6 u-ml-2">{$element.text}</span>
             </li>
-            {/foreach}
-        </ul>
-    </div>
+        {/foreach}
+    </ul>
 {/if}

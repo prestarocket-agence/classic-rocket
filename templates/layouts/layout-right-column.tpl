@@ -26,6 +26,8 @@
 
 {block name='left_column'}{/block}
 
+{*{block name='rightColumnClass'} u-order-2 order-2 col-lg-3{/block}*}
+
 {block name='content_wrapper'}
   <main id="content-wrapper" class="{block name='contentWrapperClass'}right-column col-12 col-lg-9{/block}">
     {hook h="displayContentWrapperTop"}

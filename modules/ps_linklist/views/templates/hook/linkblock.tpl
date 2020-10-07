@@ -23,18 +23,18 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-{foreach $linkBlocks as $linkBlock}
-    <div class="col-lg-3">
+{foreach from=$linkBlocks item=$linkBlock name=linkBlocks}
+    <div class="{if $smarty.foreach.linkBlocks.first}offset-lg-1{/if} col-lg-3">
         {assign var=_expand_id value=10|mt_rand:100000}
-        <p class="footer__title footer__title--desktop">{$linkBlock.title}</p>
-        <a href="#footer_sub_menu_{$_expand_id}" class="footer__title--mobile footer__title"
-           data-toggle="collapse">{$linkBlock.title}</a>
+        <p class="c-footer-item__title">{$linkBlock.title}</p>
+{*        <a href="#footer_sub_menu_{$_expand_id}" class="u-txt-black"*}
+{*           data-toggle="collapse">{$linkBlock.title}</a>*}
         <ul id="footer_sub_menu_{$_expand_id}" class="collapse show" data-collapse-hide-mobile>
             {foreach $linkBlock.links as $link}
                 <li>
                     <a
                             id="{$link.id}-{$linkBlock.id}"
-                            class="{$link.class}"
+                            class="{$link.class} u-txt-black"
                             href="{$link.url}"
                             title="{$link.description}"
                             {if !empty($link.target)} target="{$link.target}" {/if}
