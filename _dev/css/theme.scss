@@ -9,6 +9,7 @@
 @import "node_modules/bootstrap/scss/variables";
 @import "../../../classic-rocket/_dev/css/settings/settings.fonts";
 @import "../../../classic-rocket/_dev/css/settings/settings.prices";
+@import "../../../classic-rocket/_dev/css/settings/settings.search";
 @import "../../../classic-rocket/_dev/css/settings/settings.tags";
 /*
 /*
@@ -61,12 +62,13 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.form";
 @import "../../../classic-rocket/_dev/css/components/components.header";
 @import "../../../classic-rocket/_dev/css/components/components.icons";
+@import "../../../classic-rocket/_dev/css/components/components.inputadd";
 @import "../../../classic-rocket/_dev/css/components/components.media";
 @import "../../../classic-rocket/_dev/css/components/components.pagination";
 @import "../../../classic-rocket/_dev/css/components/components.prices";
 @import "../../../classic-rocket/_dev/css/components/components.product-mini";
 @import "../../../classic-rocket/_dev/css/components/components.reassurance";
-@import "../../../classic-rocket/_dev/css/components/components.searchbar";
+@import "../../../classic-rocket/_dev/css/components/components.search";
 @import "../../../classic-rocket/_dev/css/components/components.select";
 @import "../../../classic-rocket/_dev/css/components/components.tags";
 

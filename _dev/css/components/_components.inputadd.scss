@@ -1,0 +1,25 @@
+.c-inputadd {
+  position: relative;
+}
+
+.c-inputadd__btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.c-inputadd--left {
+  .c-inputadd__input {
+    padding-left: $btn-padding-x*2 + 1.25rem;
+  }
+}
+
+.c-inputadd--right {
+  .c-inputadd__input {
+    padding-right: $btn-padding-x*2 + 1.25rem;
+  }
+  .c-inputadd__btn{
+    left: auto;
+    right:0;
+  }
+}
