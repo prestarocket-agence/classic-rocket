@@ -1,8 +1,13 @@
-$icon-dimensions: ("xs": 12px, "sm": 16px, "md": 20px, "lg": 28px, "xl": 64px);
-
-@each $icon-suffix, $icon-size in $icon-dimensions {
-  .c-icon--#{$icon-suffix} > svg {
-    width: $icon-size;
-    height: $icon-size;
+//$icon-dimensions: ("xs": .75rem, "md": , "lg": 28px, "xl": 64px);
+//
+//@each $icon-suffix, $icon-size in $icon-dimensions {
+//  .c-icon--#{$icon-suffix} > svg {
+//    font-size: $icon-size;
+//  }
+//}
+.c-icon--btn{
+  > svg{
+    display: inline-block;
+    vertical-align: text-bottom;
   }
 }

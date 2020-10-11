@@ -37,7 +37,7 @@
 
                 <div class="o-layout o-layout--start o-layout--center-y">
                     <p class="c-header__customer-account">{l s='Mon Compte' d='Shop.Theme.Customeraccount'}</p>
-                    {include file="_partials/icon.tpl" icon="chevron-down-sharp" class="c-icon--sm"}
+                    {include file="_partials/icon.tpl" icon="chevron-down-sharp"}
                 </div>
             </div>
         </a>
