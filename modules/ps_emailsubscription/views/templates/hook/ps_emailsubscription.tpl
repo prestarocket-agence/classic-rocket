@@ -25,7 +25,7 @@
 
 <div class="col-lg-5 c-footer__newsletter /js block_newsletter">
     <p id="block-newsletter-label"
-       class="u-txt-bold">{l s='Get our latest news and special sales' d='Shop.Theme.Global'}</p>
+       class="u-font-weight-bold">{l s='Get our latest news and special sales' d='Shop.Theme.Global'}</p>
     <form action="{$urls.pages.index}#footer" method="post" class="needs-validation">
         <input type="hidden" name="action" value="0">
         <div class="input-group u-d-flex u-mb-4">
