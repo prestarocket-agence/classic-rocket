@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="container o-wrapper">
-    <div class="row u-align-items-start">
+    <div class="row c-footer">
         {block name='hook_footer_before'}
             {hook h='displayFooterBefore'}
         {/block}
@@ -36,11 +36,14 @@
             {hook h='displayFooterAfter'}
         {/block}
     </div>
-    <p class="text-center mb-0 pb-3">
+    <div class="c-footer__bottom">
+
+        {* To call CMS links block *}
+
         {block name='copyright_link'}
-            <a class="_blank" href="https://prestarocket.com/" target="_blank" rel="nofollow">
+            <a class="u-txt-xs u-txt-dark" href="https://prestarocket.com/" target="_blank" rel="nofollow">
                 {l s='%copyright% %year% - Theme by %prestashop%' sprintf=['%prestashop%' => 'Prestarocket™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
             </a>
         {/block}
-    </p>
+    </div>
 </div>
