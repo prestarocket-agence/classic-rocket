@@ -25,7 +25,7 @@
 {if $homeslider.slides}
 
     {assign var=paddingbottom value=($homeslider.slides[0]['sizes'][1]/$homeslider.slides[0]['sizes'][0]*100)}
-    <div id="carousel" class="o-wrapper carousel slick__arrow-large" {if $homeslider.slides|count > 1}data-slick={strip}
+    <div id="carousel" class="o-wrapper u-mb-10 /js carousel slick__arrow-large" {if $homeslider.slides|count > 1}data-slick={strip}
     '{literal}{
 "autoplay": true,
 "slidesToShow": 1,
@@ -33,17 +33,16 @@
 }{/literal}'{/strip}{/if}>
         {foreach from=$homeslider.slides item=slide name='homeslider'}
             <a href="{$slide.url}">
-                <div class="rc"
-{*                     style="padding-top:{$paddingbottom}%"*}
-                >
-                    <img data-src="{$slide.image_url}" alt="{$slide.legend|escape}" class="w-100 lazyload img-carousel">
+                <div class="u-p-rel">
+                    <img data-src="{$slide.image_url}" alt="{$slide.legend|escape}" class="u-img-fluid lazyload">
                     <noscript>
                         <img src="{$slide.image_url}" alt="{$slide.legend|escape}">
                     </noscript>
                     {if $slide.title || $slide.description}
-                        <div class="slider-caption">
-                            <p class="display-1 text-uppercase">{$slide.title}</p>
-                            <div class="caption-description">{$slide.description nofilter}</div>
+                        <div class="c-carousel__content">
+                            <p class="c-carousel__title">{$slide.title}</p>
+                            <div class="c-carousel__baseline">{$slide.description nofilter}</div>
+                            <a class="btn btn-lg btn-primary" href="{$slide.url}">{l s='Découvrir plus de détails' d='Shop.Theme.Global'}</a>
                         </div>
                     {/if}
                 </div>
