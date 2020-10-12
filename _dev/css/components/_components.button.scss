@@ -1,3 +1,8 @@
+.c-btn--nopad{
+  @extend .btn-link;
+  padding: 0;
+}
+
 //.c-btn {
 //  @extend .btn
 //}
