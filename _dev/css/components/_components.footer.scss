@@ -1,9 +1,27 @@
-.c-footer__newsletter {
-  padding: $spacer*2;
-  background-color: $secondary;
+.c-footer {
+  align-items: flex-start;
+  padding-top: $spacer*4.5;
+  margin-bottom: $spacer*4;
+}
+
+.c-footer-item {
+  @include media-breakpoint-mobile {
+    margin-bottom: $spacer;
+  }
 }
 
 .c-footer-item__title {
   color: $black;
   font-weight: $headings-font-weight;
+  margin-bottom: $spacer*1.5;
+}
+
+.c-footer__newsletter {
+  padding: $spacer*2;
+  background-color: $secondary;
+}
+
+.c-footer__bottom {
+  display: flex;
+  justify-content: space-between;
 }

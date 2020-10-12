@@ -24,14 +24,16 @@
  *}
 
 {foreach from=$linkBlocks item=$linkBlock name=linkBlocks}
-    <div class="{if $smarty.foreach.linkBlocks.first}offset-lg-1{/if} col-lg-3">
+    {if $smarty.foreach.linkBlocks.first}
+
+    <div class="{if $smarty.foreach.linkBlocks.first}offset-0 offset-lg-1{/if} col-12 col-lg-3 c-footer-item">
         {assign var=_expand_id value=10|mt_rand:100000}
         <p class="c-footer-item__title">{$linkBlock.title}</p>
 {*        <a href="#footer_sub_menu_{$_expand_id}" class="u-txt-black"*}
 {*           data-toggle="collapse">{$linkBlock.title}</a>*}
         <ul id="footer_sub_menu_{$_expand_id}" class="collapse show" data-collapse-hide-mobile>
             {foreach $linkBlock.links as $link}
-                <li>
+                <li class="u-mb-2">
                     <a
                             id="{$link.id}-{$linkBlock.id}"
                             class="{$link.class} u-txt-black"
@@ -45,5 +47,6 @@
             {/foreach}
         </ul>
     </div>
+    {/if}
 {/foreach}
 
