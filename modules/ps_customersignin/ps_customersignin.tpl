@@ -44,7 +44,7 @@
     {else}
         <a
                 href="{$my_account_url}"
-                class="u-link-body"
+                class="c-btn--nopad u-lh-1"
                 title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
                 rel="nofollow"
         >
