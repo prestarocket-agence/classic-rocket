@@ -4,7 +4,7 @@
   "description": "Tools to help while developing the Classic theme",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p && svgo ../templates/_partials/svg --config=svgo.yml",
+    "build": "webpack -p && svgo",
     "start": "webpack -p -w",
     "debug": "webpack --mode development --devtool source-map --watch",
     "sass": "webpack --mode development --onlysass true --devtool source-map --watch",
@@ -30,10 +30,9 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "bootstrap": "^4.5.1",
-    "bootstrap-touchspin": "^4.2.5",
-    "lazysizes": "^5.2.0",
-    "material-design-icons": "^3.0.1",
+    "bootstrap": "^4.5.2",
+    "bootstrap-touchspin": "^4.3.0",
+    "lazysizes": "^5.2.2",
     "popper.js": "^1.16.1"
   }
 }

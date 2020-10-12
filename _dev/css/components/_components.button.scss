@@ -1,23 +1,23 @@
-.c-btn {
-  @extend .btn
-}
-
-.c-btn-lg {
-  @extend .btn-lg
-}
-
-.c-btn-sm {
-  @extend .btn-sm
-}
-
-@each $color, $value in $theme-colors {
-  .c-btn-#{$color} {
-    @include button-variant($value, $value);
-  }
-}
-
-@each $color, $value in $theme-colors {
-  .c-btn-outline-#{$color} {
-    @include button-outline-variant($value);
-  }
-}
+//.c-btn {
+//  @extend .btn
+//}
+//
+//.c-btn-lg {
+//  @extend .btn-lg
+//}
+//
+//.c-btn-sm {
+//  @extend .btn-sm
+//}
+//
+//@each $color, $value in $theme-colors {
+//  .c-btn-#{$color} {
+//    @include button-variant($value, $value);
+//  }
+//}
+//
+//@each $color, $value in $theme-colors {
+//  .c-btn-outline-#{$color} {
+//    @include button-outline-variant($value);
+//  }
+//}

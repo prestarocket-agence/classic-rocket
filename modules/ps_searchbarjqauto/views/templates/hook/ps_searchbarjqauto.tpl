@@ -23,12 +23,12 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <!-- Block search module TOP -->
-<form method="get" action="{$search_controller_url}" class="c-header__searchbar /js search-widget" data-search-widget data-search-controller-url="{$search_controller_url}">
+<form method="get" action="{$search_controller_url}" class="c-search /js search-widget" data-search-widget data-search-controller-url="{$search_controller_url}">
     <input type="hidden" name="controller" value="search">
-    <div class="c-header__searchbar-group">
-        <input class="form-control c-header__searchbar-input" type="text" name="s" value="{$search_string}" placeholder="{l s='Rechercher un produit' d='Shop.Theme.Catalog'}" aria-label="{l s='Search' d='Shop.Theme.Catalog'}">
-        <button type="submit" class="c-header__searchbar-btn btn btn-link">
-            {include file="_partials/icon.tpl" icon="search" class="c-icon--md"}
+    <div class="c-inputadd c-inputadd--right">
+        <input class="c-inputadd__input c-search__input form-control" type="text" name="s" value="{$search_string}" placeholder="{l s='Rechercher un produit' d='Shop.Theme.Catalog'}" aria-label="{l s='Search' d='Shop.Theme.Catalog'}">
+        <button type="submit" class="c-inputadd__btn c-search__btnicon btn btn-link">
+            {include file="_partials/icon.tpl" icon="search" class=""}
         </button>
     </div>
 </form>

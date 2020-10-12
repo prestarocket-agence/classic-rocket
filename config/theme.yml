@@ -55,6 +55,8 @@ global_settings:
      - ps_linklist
    to_disable:
      - ps_searchbar
+     - welcome
+     - gamification
   hooks:
     modules_to_hook:
       displayNav1:

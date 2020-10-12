@@ -1,0 +1,17 @@
+.c-search__btnicon{
+  color: $search-color;
+  font-size: 1.25rem;
+  padding-top: $search-padding-x/2;
+  padding-bottom: $search-padding-x/2;
+
+}
+.c-search__input{
+
+  border-radius: $search-border-radius;
+  border-color: $search-border-color;
+  background-color: $search-bg-color;
+  &::placeholder{
+  color: $search-placeholder-color;
+  }
+}
+

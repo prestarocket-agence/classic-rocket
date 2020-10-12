@@ -4,28 +4,28 @@
 /*
 /* SETTINGS */
 @import "node_modules/bootstrap/scss/functions";
-@import "settings/settings.bootstrap";
+@import "../../../classic-rocket/_dev/css/../../../classic-rocket/_dev/css/settings/settings.colors";
+@import "../../../classic-rocket/_dev/css/../../../classic-rocket/_dev/css/settings/settings.bootstrap";
 @import "node_modules/bootstrap/scss/variables";
-@import "settings/settings.colors";
-@import "settings/settings.fonts";
-@import "settings/settings.prices";
-@import "settings/settings.tags";
+@import "../../../classic-rocket/_dev/css/settings/settings.fonts";
+@import "../../../classic-rocket/_dev/css/settings/settings.prices";
+@import "../../../classic-rocket/_dev/css/settings/settings.search";
+@import "../../../classic-rocket/_dev/css/settings/settings.tags";
 /*
 /*
 /* TOOLS */
 @import "node_modules/bootstrap/scss/mixins";
-@import "tools/tools.mixins";
-
+@import "../../../classic-rocket/_dev/css/tools/tools.mixins";
 /*
 /*
 /* GENERICS */
 @import "node_modules/bootstrap/scss/reboot";
-@import "generics/generics.reboot";
+@import "../../../classic-rocket/_dev/css/generics/generics.reboot";
 
 /*
 /*
 /* ELEMENTS */
-$theme-colors: map-remove($theme-colors,"primary","secondary","success","info","warning","danger","light","dark");
+$theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "info", "warning", "danger", "light", "dark");
 @import "node_modules/bootstrap/scss/forms";
 @import "node_modules/bootstrap/scss/images";
 @import "node_modules/bootstrap/scss/tables";
@@ -35,42 +35,42 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 /*
 /* OBJECTS */
 @import "node_modules/bootstrap/scss/grid";
-@import "objects/objects.cols";
-@import "objects/objects.layout";
-@import "objects/objects.offsets";
-@import "objects/objects.wrapper";
+@import "../../../classic-rocket/_dev/css/objects/objects.cols";
+@import "../../../classic-rocket/_dev/css/objects/objects.layout";
+@import "../../../classic-rocket/_dev/css/objects/objects.offsets";
+@import "../../../classic-rocket/_dev/css/objects/objects.wrapper";
 
 /*
 /*
 /* COMPONENTS */
 $theme-colors: (
-        "primary":    $primary,
-        "secondary":  $secondary
+        "primary": $primary,
+        "secondary": $secondary
 );
 @import "node_modules/bootstrap/scss/buttons";
 @import "node_modules/bootstrap/scss/forms";
 @import "node_modules/bootstrap/scss/custom-forms";
 @import "node_modules/bootstrap/scss/buttons";
-$theme-colors: map-remove($theme-colors,"primary","secondary","success","info","warning","danger","light","dark");
+$theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "info", "warning", "danger", "light", "dark");
 @import "node_modules/bootstrap/scss/button-group";
 
-@import "components/components.banner";
-@import "components/components.button";
-@import "components/components.catalog";
-@import "components/components.filter";
-@import "components/components.footer";
-@import "components/components.form";
-@import "components/components.header";
-@import "components/components.icons";
-@import "components/components.media";
-@import "components/components.pagination";
-@import "components/components.prices";
-@import "components/components.product-mini";
-@import "components/components.radio";
-@import "components/components.reassurance";
-@import "components/components.searchbar";
-@import "components/components.select";
-@import "components/components.tags";
+@import "../../../classic-rocket/_dev/css/components/components.banner";
+@import "../../../classic-rocket/_dev/css/components/components.button";
+@import "../../../classic-rocket/_dev/css/components/components.catalog";
+@import "../../../classic-rocket/_dev/css/components/components.filter";
+@import "../../../classic-rocket/_dev/css/components/components.footer";
+@import "../../../classic-rocket/_dev/css/components/components.form";
+@import "../../../classic-rocket/_dev/css/components/components.header";
+@import "../../../classic-rocket/_dev/css/components/components.icons";
+@import "../../../classic-rocket/_dev/css/components/components.inputadd";
+@import "../../../classic-rocket/_dev/css/components/components.media";
+@import "../../../classic-rocket/_dev/css/components/components.pagination";
+@import "../../../classic-rocket/_dev/css/components/components.prices";
+@import "../../../classic-rocket/_dev/css/components/components.product-mini";
+@import "../../../classic-rocket/_dev/css/components/components.reassurance";
+@import "../../../classic-rocket/_dev/css/components/components.search";
+@import "../../../classic-rocket/_dev/css/components/components.select";
+@import "../../../classic-rocket/_dev/css/components/components.tags";
 
 /*
 /*
@@ -79,16 +79,14 @@ $theme-colors: map-remove($theme-colors,"primary","secondary","success","info","
 /*
 /*
 /* UTILITIES */
-@import "utilities/utilities.flex";
-@import "utilities/utilities.img";
-@import "utilities/utilities.spacer";
-@import "utilities/utilities.text";
-@import "utilities/utilities.visible";
+@import "../../../classic-rocket/_dev/css/utilities/utilities.flex";
+@import "../../../classic-rocket/_dev/css/utilities/utilities.img";
+@import "../../../classic-rocket/_dev/css/utilities/utilities.spacer";
+@import "../../../classic-rocket/_dev/css/utilities/utilities.text";
+@import "../../../classic-rocket/_dev/css/utilities/utilities.visible";
 
 //if you want to include BS utlities (not recommanded), uncomment this following line
 /*
 @import "node_modules/bootstrap/scss/utilities";
 
 */
-
-
