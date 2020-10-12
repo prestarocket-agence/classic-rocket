@@ -28,47 +28,46 @@
 {*    <a href="#footer_store_info" class="u-txt-black" data-toggle="collapse">{l s='Store information' d='Shop.Theme.Global'}</a>*}
 
 
-  <div id="footer_store_info" class="u-txt-dark u-mb-3 collapse show" data-collapse-hide-mobile>
+  <ul id="footer_store_info" class="u-txt-dark u-mb-3 collapse show" data-collapse-hide-mobile>
       {$contact_infos.address.formatted nofilter}
       {if $contact_infos.phone}
-        <br>
         {* [1][/1] is for a HTML tag. *}
         {l s='Call us: [1]%phone%[/1]'
           sprintf=[
-          '[1]' => '<span>',
-          '[/1]' => '</span>',
+          '[1]' => '<li>',
+          '[/1]' => '</li>',
           '%phone%' => $contact_infos.phone
           ]
           d='Shop.Theme.Global'
         }
       {/if}
       {if $contact_infos.fax}
-        <br>
+
         {* [1][/1] is for a HTML tag. *}
         {l
           s='Fax: [1]%fax%[/1]'
           sprintf=[
-            '[1]' => '<span>',
-            '[/1]' => '</span>',
+            '[1]' => '<li>',
+            '[/1]' => '</li>',
             '%fax%' => $contact_infos.fax
           ]
           d='Shop.Theme.Global'
         }
       {/if}
       {if $contact_infos.email}
-        <br>
+
         {* [1][/1] is for a HTML tag. *}
         {l
           s='[1]%email%[/1]'
           sprintf=[
-            '[1]' => '<a class="u-txt-dark" href="mailto:'|cat:$contact_infos.email|cat:'" class="dropdown">',
-            '[/1]' => '</a>',
+            '[1]' => '<li><a class="u-txt-dark" href="mailto:'|cat:$contact_infos.email|cat:'" class="dropdown">',
+            '[/1]' => '</a></li>',
             '%email%' => $contact_infos.email
           ]
           d='Shop.Theme.Global'
         }
       {/if}
-  </div>
+  </ul>
 
     {widget name='ps_socialfollow'}
 
