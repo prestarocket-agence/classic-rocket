@@ -26,14 +26,7 @@
 
 {block name='left_column'}{/block}
 
-{*{block name='rightColumnClass'} u-order-2 order-2 col-lg-3{/block}*}
-
-{block name='content_wrapper'}
-  <main id="content-wrapper" class="{block name='contentWrapperClass'}right-column col-12 col-lg-9{/block}">
-    {hook h="displayContentWrapperTop"}
-    {block name='content'}
-      <p>Hello world! This is HTML5 Boilerplate.</p>
-    {/block}
-    {hook h="displayContentWrapperBottom"}
-  </main>
-{/block}
+{block name='displayBeforeColumns'}<div class="o-wrapper"><div class="row">{/block}
+{block name='displayAfterColumns'}</div></div>{/block}
+{block name='leftColumnClass'} col-lg-3{/block}
+{block name='contentWrapperClass'} col-lg-9{/block}

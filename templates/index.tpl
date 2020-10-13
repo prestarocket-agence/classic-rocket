@@ -25,7 +25,7 @@
 {extends file='page.tpl'}
 {block name='pageWrapperClass'}{/block}
 {block name='page_content_container'}
-    <section id="content" class="page-home">
+    <main id="content" class="page-home">
         {block name='page_content_top'}{/block}
 
         {block name='page_content'}
@@ -33,7 +33,7 @@
                 {$HOOK_HOME nofilter}
             {/block}
         {/block}
-    </section>
+    </main>
 {/block}
 {block name='page_footer_container'}
     <footer class="page-footer--home">{block name='page_footer'}{/block}</footer>
