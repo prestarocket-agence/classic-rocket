@@ -48,8 +48,8 @@
                 title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
                 rel="nofollow"
         >
-            {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--lg"}
-            <span class="visible--desktop small">{l s='Sign in' d='Shop.Theme.Actions'}</span>
+            {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--lg c-header__customer-icon"}
+            <span class="visible--desktop c-header__customer-signin">{l s='Sign in' d='Shop.Theme.Actions'}</span>
         </a>
     {/if}
 </div>

@@ -78,7 +78,7 @@
   </div>
       {if $product.cover}
       <button type="button" class="btn btn-link btn-zoom visible-desktop product-layer-zoom" data-toggle="modal" data-target="#product-modal">
-          <i class="material-icons zoom-in">&#xE8FF;</i>
+          {include file="_partials/icon.tpl" icon="zoom-in" class=""}
       </button>
       {/if}
   </div>

@@ -30,18 +30,16 @@
       {section name="i" start=0 loop=5 step=1}
           {strip}
             <div class="star">
-              <i class="material-icons">
                   {if $average_grade lte $smarty.section.i.index}
                       {* empty *}
-                    &#xE83A;
+                      {include file="_partials/icon.tpl" icon="star" class=""}
                   {elseif $average_grade gt $smarty.section.i.index && $average_grade lt ($smarty.section.i.index+1)}
                       {* half *}
-                    &#xE839;
+                      {include file="_partials/icon.tpl" icon="star-half" class=""}
                   {else}
                       {* full *}
-                    &#xE838;
+                      {include file="_partials/icon.tpl" icon="star-fill" class=""}
                   {/if}
-              </i>
             </div>
           {/strip}
       {/section}

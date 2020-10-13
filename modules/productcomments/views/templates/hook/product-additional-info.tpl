@@ -28,7 +28,7 @@
   {if $nb_comments == 0}
     {if $post_allowed}
       <button class="btn btn-sm btn-secondary btn-comment post-product-comment">
-        <i class="material-icons shopping-cart">edit</i>
+          {include file="_partials/icon.tpl" icon="pencil-square" class=""}
         {l s='Write your review' d='Modules.Productcomments.Shop'}
       </button>
     {/if}
