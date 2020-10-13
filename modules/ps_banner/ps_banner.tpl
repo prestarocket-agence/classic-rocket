@@ -37,6 +37,6 @@
             <p class="u-h1">Méga promotion sur tout</p>
             <p class="u-h2 u-txt-gray">Profitez de l'été dès aujourd'hui</p>
         </div>
-        {include file="_partials/icon.tpl" icon="arrow-right-sharp" class="c-icon--xl"}
+        {include file="_partials/icon.tpl" icon="arrow-right-sharp" class=""}
     </div>
 </div>
