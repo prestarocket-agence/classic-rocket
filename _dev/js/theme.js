@@ -22,18 +22,18 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
-import 'bootstrap/js/src/util';
-import 'bootstrap/js/src/alert';
-import 'bootstrap/js/src/button';
-import  '../node_modules/bootstrap/js/src/collapse.js';
-import 'bootstrap/js/src/collapse';
-import 'bootstrap/js/src/dropdown';
-import 'bootstrap/js/src/modal';
-import 'bootstrap/js/src/popover';
-import 'bootstrap/js/src/tab';
-import 'bootstrap/js/src/toast';
-import 'bootstrap/js/src/tooltip';
-import 'bootstrap-touchspin';
+import '../node_modules/bootstrap/js/dist/util';
+import '../node_modules/bootstrap/js/dist/alert';
+import '../node_modules/bootstrap/js/dist/button';
+import '../node_modules/bootstrap/js/dist/collapse.js';
+import '../node_modules/bootstrap/js/dist/collapse';
+import '../node_modules/bootstrap/js/dist/dropdown';
+import '../node_modules/bootstrap/js/dist/modal';
+import '../node_modules/bootstrap/js/dist/popover';
+import '../node_modules/bootstrap/js/dist/tab';
+import '../node_modules/bootstrap/js/dist/toast';
+import '../node_modules/bootstrap/js/dist/tooltip';
+import '../node_modules/bootstrap-touchspin';
 import './lib/slick.min';
 import './lib/jquery.hoverIntent.min';
 import SlickSlider from './components/slick';
