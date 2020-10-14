@@ -54,9 +54,9 @@
 {block name='wrapper'}
     <div id="wrapper">
         {hook h="displayWrapperTop"}
-{*        {block name='breadcrumb'}*}
-{*            {include file='_partials/breadcrumb.tpl'}*}
-{*        {/block}*}
+        {block name='breadcrumb'}
+            {include file='_partials/breadcrumb.tpl'}
+        {/block}
         {block name="displayBeforeColumns"}
             {* if need to wrap in row *}
         {/block}
