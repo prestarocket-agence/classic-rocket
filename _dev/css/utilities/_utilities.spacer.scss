@@ -19,6 +19,10 @@ $spaces: 0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80;
     margin-right: $spacer*($space/16);
   }
 
+  [class].u-mx-auto {
+    margin: auto;
+  }
+
   //[class].u-mx-#{$step} {
   //  margin-left: $spacer*($space/16);
   //  margin-right: $spacer*($space/16);
