@@ -30,9 +30,9 @@
              '-reachable'      => $step_is_reachable,
              '-complete'       => $step_is_complete,
              'js-current-step' => $step_is_current
-             ]|classnames} c-card"
+             ]|classnames} c-panel"
     >
-        <div class="o-layout c-card__head /js js-checkout-step-header" id="heading-{$identifier}" data-identifier="{$identifier}">
+        <div class="o-layout c-panel__head /js js-checkout-step-header" id="heading-{$identifier}" data-identifier="{$identifier}">
             <p class="u-mb-0 /js step-title u-h3">
                 {include file="_partials/icon.tpl" icon="check" class="u-icon--28"}
                 <span class="step-number">{$position}.</span>

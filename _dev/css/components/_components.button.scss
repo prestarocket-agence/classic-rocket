@@ -2,27 +2,3 @@
   @extend .btn-link;
   padding: 0;
 }
-
-//.c-btn {
-//  @extend .btn
-//}
-//
-//.c-btn-lg {
-//  @extend .btn-lg
-//}
-//
-//.c-btn-sm {
-//  @extend .btn-sm
-//}
-//
-//@each $color, $value in $theme-colors {
-//  .c-btn-#{$color} {
-//    @include button-variant($value, $value);
-//  }
-//}
-//
-//@each $color, $value in $theme-colors {
-//  .c-btn-outline-#{$color} {
-//    @include button-outline-variant($value);
-//  }
-//}

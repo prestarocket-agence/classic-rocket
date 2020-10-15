@@ -28,9 +28,9 @@
     {include file='_partials/form-errors.tpl' errors=$errors['']}
   {/block}
 
-  <form class="js-customer-form needs-validation" id="customer-form" action="{block name='customer_form_actionurl'}{$action}{/block}" method="post" novalidate autocomplete="false">
+  <form class="/js js-customer-form needs-validation" id="customer-form" action="{block name='customer_form_actionurl'}{$action}{/block}" method="post" novalidate autocomplete="false">
     {block name='customer_form_fields'}
-      <section class="form-fields">
+      <section class="">
         {block name='form_fields'}
           {foreach from=$formFields item="field"}
             {block name='form_field'}
@@ -43,7 +43,7 @@
     {/block}
 
     {block name='customer_form_footer'}
-      <footer class="form-footer">
+      <footer class="">
         <input type="hidden" name="submitCreate" value="1">
         {block name='form_buttons'}
           <button class="btn btn-primary form-control-submit" type="submit" data-link-action="save-customer">
