@@ -31,7 +31,7 @@
                         <p class="c-catalog-breadcrumb__item">{$path.title}</p>
                     {else}
                         <a class="c-catalog-breadcrumb__item" itemprop="item" href="{$path.url}">{$path.title}</a>
-                        {include "_partials/icon.tpl" icon="chevron-right-sharp" class="c-icon--xs u-ml-1 u-mr-1"}
+                        {include "_partials/icon.tpl" icon="chevron-right-sharp" class="u-icon--16 u-ml-1 u-mr-1"}
                     {/if}
                 {/block}
             {/foreach}
