@@ -30,7 +30,7 @@
             {foreach from=$social_share_links item='social_share_link'}
                 <a href="{$social_share_link.url}" class="" title="{$social_share_link.class}"
                    target="_blank" rel="nofollow noopener">
-                    {*{include "_partials/icon.tpl" icon=$social_share_link.class class="c-icon--lg"}*}
+                    {*{include "_partials/icon.tpl" icon=$social_share_link.class class="u-icon--24"}*}
                 </a>
             {/foreach}
         </div>
