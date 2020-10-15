@@ -121,3 +121,11 @@
   margin-right: $spacer*2.5;
   font-weight: 700;
 }
+
+//Checkout
+
+.c-header-checkout {
+  padding: $spacer*2 0;
+  border-bottom: solid 1px $gray-light;
+  margin-bottom: $spacer*3;
+}

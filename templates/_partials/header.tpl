@@ -34,10 +34,6 @@
             <div class="o-layout o-layout--center-y">
                 {hook h='displayNav1'}
 
-                {* Not dynamic *}
-                {* put content in classic rocket module*}
-                {include "_partials/header-msg.tpl"}
-
                 <div class="c-top-header__selects">
                     {hook h='displayNav2'}
                 </div>

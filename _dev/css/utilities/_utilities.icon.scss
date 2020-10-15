@@ -1,0 +1,11 @@
+.u-icon svg {
+  vertical-align: middle;
+}
+
+$sizes: 16, 20, 24, 28;
+
+@each $size in $sizes {
+  .u-icon--#{$size} {
+    font-size: $font-size-base*($size/16);
+  }
+}
