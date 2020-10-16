@@ -53,6 +53,7 @@ $theme-colors: (
 @import "node_modules/bootstrap/scss/buttons";
 $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "info", "warning", "danger", "light", "dark");
 @import "node_modules/bootstrap/scss/button-group";
+@import "node_modules/bootstrap/scss/alert";
 
 @import "../../../classic-rocket/_dev/css/components/components.banner";
 @import "../../../classic-rocket/_dev/css/components/components.button";
@@ -60,6 +61,8 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.cart";
 @import "../../../classic-rocket/_dev/css/components/components.carousel";
 @import "../../../classic-rocket/_dev/css/components/components.catalog";
+@import "../../../classic-rocket/_dev/css/components/components.checkout";
+@import "../../../classic-rocket/_dev/css/components/components.custom";
 @import "../../../classic-rocket/_dev/css/components/components.filter";
 @import "../../../classic-rocket/_dev/css/components/components.footer";
 @import "../../../classic-rocket/_dev/css/components/components.form";
@@ -67,11 +70,13 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.inputadd";
 @import "../../../classic-rocket/_dev/css/components/components.media";
 @import "../../../classic-rocket/_dev/css/components/components.pagination";
+@import "../../../classic-rocket/_dev/css/components/components.panel";
 @import "../../../classic-rocket/_dev/css/components/components.prices";
 @import "../../../classic-rocket/_dev/css/components/components.product-mini";
 @import "../../../classic-rocket/_dev/css/components/components.reassurance";
 @import "../../../classic-rocket/_dev/css/components/components.search";
 @import "../../../classic-rocket/_dev/css/components/components.select";
+@import "../../../classic-rocket/_dev/css/components/components.separator";
 @import "../../../classic-rocket/_dev/css/components/components.tags";
 
 /*
@@ -88,6 +93,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/utilities/utilities.spacer";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.text";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.visible";
+@import "../../../classic-rocket/_dev/css/utilities/utilities.width";
 
 //if you want to include BS utlities (not recommanded), uncomment this following line
 /*

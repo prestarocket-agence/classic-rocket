@@ -35,7 +35,7 @@
     <a class="js-cancel-address cancel-address btn btn-link" href="{url entity='order' params=['cancelAddress' => {$type}]}">{l s='Cancel' d='Shop.Theme.Actions'}</a>
   {else}
     <form>
-      <button type="submit" class="continue btn btn-primary btn-lg" name="confirm-addresses" value="1">
+      <button type="submit" class="btn btn-primary /js continue" name="confirm-addresses" value="1">
           {l s='Continue' d='Shop.Theme.Actions'}
       </button>
       {if $customer.addresses|count > 0}

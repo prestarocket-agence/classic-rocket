@@ -1,0 +1,32 @@
+.c-checkout-panel__head {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto $spacer*1.5;
+  width: 100%;
+  max-width: 500px;
+}
+
+.c-checkout-panel__form {
+  margin: auto;
+  width: 100%;
+  max-width: 320px;
+
+  &--lg {
+    max-width: 520px;
+  }
+}
+
+.c-checkout-card {
+  padding: $spacer;
+  border: solid $gray-light 2px;
+  border-radius: 4px;
+  margin-bottom: $spacer;
+}
+
+.c-checkout-card__head {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: $gray-light solid 1px;
+  padding-bottom: $spacer;
+  margin-bottom: $spacer;
+}

@@ -51,7 +51,7 @@
         <div class="form-group">
         <label for="password">{l s='Set your password:' d='Shop.Forms.Labels'}</label>
           <input id="password" class="form-control" type="password" data-validate="isPasswd" name="password" value="" pattern=".{literal}{{/literal}5,{literal}}{/literal}" required>
-          <small class="form-text text-muted">{l s='Your password must be at least %min% characters long.' d='Shop.Forms.Help' sprintf=['%min%' => 5]}</small>
+          <span class="u-txt-sm /js form-text text-muted">{l s='Your password must be at least %min% characters long.' d='Shop.Forms.Help' sprintf=['%min%' => 5]}</span>
           <div class="invalid-feedback js-invalid-feedback-browser"></div>
         </div>
 

@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section id="js-checkout-summary" class="c-panel u-mb-2 /js js-cart"
+<section id="js-checkout-summary" class="c-cart-summary c-panel u-mb-2 /js js-cart"
          data-refresh-url="{$urls.pages.cart}?ajax=1&action=refresh">
     <div class="c-panel__head">
         <p class="u-h4 u-mb-0">{l s='Récapitulatif' d='Shop.Theme.Global'}</p>
