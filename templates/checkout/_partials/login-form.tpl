@@ -26,7 +26,7 @@
 
 {block name='form_buttons'}
   <button
-    class="c-form__footer btn btn-primary /js continue"
+    class="btn btn-primary /js continue"
     name="continue"
     data-link-action="sign-in"
     type="submit"
