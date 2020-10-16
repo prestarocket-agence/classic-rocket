@@ -2,3 +2,9 @@
   @extend .btn-link;
   padding: 0;
 }
+
+.c-btn--unstyled {
+  background: none;
+  border: none;
+  padding: 0;
+}
