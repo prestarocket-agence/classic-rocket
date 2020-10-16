@@ -56,7 +56,6 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 
 @import "../../../classic-rocket/_dev/css/components/components.banner";
 @import "../../../classic-rocket/_dev/css/components/components.button";
-@import "../../../classic-rocket/_dev/css/components/components.card";
 @import "../../../classic-rocket/_dev/css/components/components.cart";
 @import "../../../classic-rocket/_dev/css/components/components.carousel";
 @import "../../../classic-rocket/_dev/css/components/components.catalog";
@@ -68,6 +67,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.inputadd";
 @import "../../../classic-rocket/_dev/css/components/components.media";
 @import "../../../classic-rocket/_dev/css/components/components.pagination";
+@import "../../../classic-rocket/_dev/css/components/components.panel";
 @import "../../../classic-rocket/_dev/css/components/components.prices";
 @import "../../../classic-rocket/_dev/css/components/components.product-mini";
 @import "../../../classic-rocket/_dev/css/components/components.reassurance";

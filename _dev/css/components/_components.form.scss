@@ -12,3 +12,9 @@
     font-size: $font-size-sm;
   }
 }
+
+.c-form__footer {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto $spacer*1.5;
+}

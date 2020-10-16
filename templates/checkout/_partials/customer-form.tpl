@@ -39,7 +39,7 @@
 
 {block "form_buttons"}
     <button
-      class="btn btn-primary /js continue"
+      class="c-form__footer btn btn-primary /js continue"
       name="continue"
       data-link-action="register-new-customer"
       type="submit"

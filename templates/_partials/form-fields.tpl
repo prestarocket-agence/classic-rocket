@@ -173,7 +173,7 @@
                             {if $field.required}required{/if}
                     >
 
-                    <span class="o-layout">
+                    <span class="o-layout o-layout--center-y">
                         <span class="u-txt-sm /js form-text text-muted">{l s='At least 5 characters long' d='Shop.Forms.Help'}</span>
                         <button
                                 class="c-btn--unstyled"

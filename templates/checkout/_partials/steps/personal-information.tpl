@@ -33,7 +33,7 @@
         <div class="clearfix">
             <form method="GET" action="{$urls.pages.order}">
                 <button
-                        class="btn btn-primary /js continue"
+                        class="c-form__footer btn btn-primary /js continue"
                         name="controller"
                         type="submit"
                         value="order"
