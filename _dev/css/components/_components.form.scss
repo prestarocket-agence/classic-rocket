@@ -3,3 +3,12 @@
   align-items: center;
   margin-bottom: $spacer*1.5;
 }
+
+.c-form__label {
+  color: $dark;
+  margin-bottom: $spacer*.5;
+
+  &--sm {
+    font-size: $font-size-sm;
+  }
+}

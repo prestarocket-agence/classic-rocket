@@ -1,0 +1,13 @@
+.c-checkout-panel__head {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto $spacer*1.5;
+  width: 100%;
+  max-width: 500px;
+}
+
+.c-checkout-panel__form {
+  margin: auto;
+  width: 100%;
+  max-width: 320px;
+}
