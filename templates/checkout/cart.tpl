@@ -25,65 +25,68 @@
 {extends file=$layout}
 
 {block name='content'}
+    <section id="main">
+        <div class="row">
 
-  <section id="main">
-    <div class="cart-grid row">
+            <!-- Left Block: cart product informations & shpping -->
+            <div class="col-12 col-lg-8">
 
-      <!-- Left Block: cart product informations & shpping -->
-      <div class="cart-grid-body col-12 col-lg-8">
+                <!-- cart products detailed -->
+                <div class="c-panel u-mb-2">
+                    <div class="c-panel__head">
+                        <p class="u-h4 u-mb-0">{l s='Shopping Cart' d='Shop.Theme.Checkout'}</p>
+                    </div>
+                    <div class="/js js-cart__card-body">
+{*                        <div class="" role="status"><span*}
+{*                                    class="sr-only">{l s='Loading...' d='Shop.Theme.Global'}</span>*}
+{*                        </div>*}
+                        {block name='cart_overview'}
+                            {include file='checkout/_partials/cart-detailed.tpl' cart=$cart}
+                        {/block}
+                    </div>
+                </div>
 
-        <!-- cart products detailed -->
-        <div class="card cart-container mb-3">
-            <h1 class="card-header">{l s='Shopping Cart' d='Shop.Theme.Checkout'}</h1>
-          <div class="card-body cart__card-body js-cart__card-body">
-            <div class="cart__card-loader"><div class="spinner-border" role="status"><span class="sr-only">{l s='Loading...' d='Shop.Theme.Global'}</span></div></div>
-          {block name='cart_overview'}
-            {include file='checkout/_partials/cart-detailed.tpl' cart=$cart}
-          {/block}
-          </div>
+                {block name='continue_shopping'}
+                    <a class="label btn btn-outline-primary" href="{$urls.pages.index}">
+                        <i class="material-icons">chevron_left</i>{l s='Continue shopping' d='Shop.Theme.Actions'}
+                    </a>
+                {/block}
+
+                <!-- shipping informations -->
+                {block name='hook_shopping_cart_footer'}
+                    {hook h='displayShoppingCartFooter'}
+                {/block}
+            </div>
+
+            <!-- Right Block: cart subtotal & cart total -->
+            <div class="col-12 col-lg-4">
+
+                {block name='cart_summary'}
+                    <div class="c-cart-summary c-panel u-mb-2">
+                        <div>
+                            {block name='hook_shopping_cart'}
+                                {hook h='displayShoppingCart'}
+                            {/block}
+
+                            {block name='cart_totals'}
+                                {include file='checkout/_partials/cart-detailed-totals.tpl' cart=$cart}
+                            {/block}
+                        </div>
+                        <div>
+                            {block name='cart_actions'}
+                                {include file='checkout/_partials/cart-detailed-actions.tpl' cart=$cart}
+                            {/block}
+                        </div>
+
+                    </div>
+                {/block}
+
+                {block name='hook_reassurance'}
+                    {hook h='displayReassurance'}
+                {/block}
+
+            </div>
+
         </div>
-
-        {block name='continue_shopping'}
-          <a class="label btn btn-outline-primary" href="{$urls.pages.index}">
-            <i class="material-icons">chevron_left</i>{l s='Continue shopping' d='Shop.Theme.Actions'}
-          </a>
-        {/block}
-
-        <!-- shipping informations -->
-        {block name='hook_shopping_cart_footer'}
-          {hook h='displayShoppingCartFooter'}
-        {/block}
-      </div>
-
-      <!-- Right Block: cart subtotal & cart total -->
-      <div class="cart-grid-right col-12 col-lg-4 mt-3 mt-lg-0">
-
-        {block name='cart_summary'}
-          <div class="card cart-summary mb-5">
-            <div class="card-body card-body--summary">
-            {block name='hook_shopping_cart'}
-              {hook h='displayShoppingCart'}
-            {/block}
-
-            {block name='cart_totals'}
-              {include file='checkout/_partials/cart-detailed-totals.tpl' cart=$cart}
-            {/block}
-            </div>
-            <div class="card-footer">
-            {block name='cart_actions'}
-              {include file='checkout/_partials/cart-detailed-actions.tpl' cart=$cart}
-            {/block}
-            </div>
-
-          </div>
-        {/block}
-
-        {block name='hook_reassurance'}
-          {hook h='displayReassurance'}
-        {/block}
-
-      </div>
-
-    </div>
-  </section>
+    </section>
 {/block}
