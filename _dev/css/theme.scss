@@ -53,6 +53,7 @@ $theme-colors: (
 @import "node_modules/bootstrap/scss/buttons";
 $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "info", "warning", "danger", "light", "dark");
 @import "node_modules/bootstrap/scss/button-group";
+@import "node_modules/bootstrap/scss/alert";
 
 @import "../../../classic-rocket/_dev/css/components/components.banner";
 @import "../../../classic-rocket/_dev/css/components/components.button";

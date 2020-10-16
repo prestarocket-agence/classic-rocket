@@ -30,10 +30,10 @@
         {if !isset($empty_cart_on_logout) || $empty_cart_on_logout}
             <p><small>{l s='If you sign out now, your cart will be emptied.' d='Shop.Theme.Checkout'}</small></p>
         {/if}
-        <div class="clearfix">
+        <div class="c-form__footer clearfix">
             <form method="GET" action="{$urls.pages.order}">
                 <button
-                        class="c-form__footer btn btn-primary /js continue"
+                        class="btn btn-primary /js continue"
                         name="controller"
                         type="submit"
                         value="order"

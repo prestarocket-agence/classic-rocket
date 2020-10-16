@@ -25,7 +25,7 @@
 {extends file='checkout/_partials/steps/checkout-step.tpl'}
 
 {block name='step_content'}
-    <div class="/js js-address-form">
+    <div class="c-checkout-panel__form c-checkout-panel__form--lg /js js-address-form">
         <form
                 method="POST"
                 action="{url entity='order' params=['id_address' => $id_address]}"
@@ -57,7 +57,7 @@
                     }
                 </div>
             {elseif $customer.addresses|count > 0}
-                <div id="delivery-addresses" class="/js js-address-selector">
+                <div id="delivery-addresses" class="u-mb-3 /js js-address-selector">
 
                     {include  file        = 'checkout/_partials/address-selector-block.tpl'
                     addresses   = $customer.addresses
@@ -71,7 +71,7 @@
 {*                            {include file="_partials/icon.tpl" icon="plus" class="u-icon--28"}*}
 {*                        </div>*}
 {*                        {l s='Ajouter une nouvelle adresse' d='Shop.Theme.Actions'}*}
-                        <div class="btn btn-sm btn-primary u-mb-2">
+                        <div class="btn btn-sm btn-primary">
                             {include file="_partials/icon.tpl" icon="plus" class=""}
                             {l s='Ajouter une nouvelle adresse' d='Shop.Theme.Actions'}
                         </div>
@@ -101,9 +101,10 @@
             {/if}
 
             {if !$use_same_address}
-                <p class="u-h4 u-mt-2 u-mb-2 invoice__address">{l s='Your Invoice Address' d='Shop.Theme.Checkout'}</p>
+                <div class="c-separator"></div>
+                <p class="u-h4 u-mb-2">{l s='Your Invoice Address' d='Shop.Theme.Checkout'}</p>
                 {if $show_invoice_address_form}
-                    <div id="invoice-address" class="form-wrapper">
+                    <div id="invoice-address" class="form-wrapper u-mb-3">
                         {render file                      = 'checkout/_partials/address-form.tpl'
                         ui                        = $address_form
                         use_same_address          = $use_same_address
@@ -112,7 +113,7 @@
                         }
                     </div>
                 {else}
-                    <div id="invoice-addresses" class="/js js-address-selector">
+                    <div id="invoice-addresses" class="u-mb-3 /js js-address-selector">
                         {include  file        = 'checkout/_partials/address-selector-block.tpl'
                         addresses   = $customer.addresses
                         name        = "id_address_invoice"
@@ -123,7 +124,7 @@
 
                         <div class="">
                             <a href="{$new_address_invoice_url}">
-                        <div class="btn btn-sm btn-primary u-mb-2">
+                        <div class="btn btn-sm btn-primary">
                             {include file="_partials/icon.tpl" icon="plus" class=""}
                             {l s='Ajouter une nouvelle adresse' d='Shop.Theme.Actions'}
                         </div>
