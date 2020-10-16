@@ -24,13 +24,13 @@
  *}
 {block name='step'}
     <section id="{$identifier}"
-             class="{[
+             class="c-panel {[
              'checkout-step'   => true,
              '-current'        => $step_is_current,
              '-reachable'      => $step_is_reachable,
              '-complete'       => $step_is_complete,
              'js-current-step' => $step_is_current
-             ]|classnames} c-panel"
+             ]|classnames}"
     >
         <div class="o-layout c-panel__head /js js-checkout-step-header" id="heading-{$identifier}" data-identifier="{$identifier}">
             <p class="u-mb-0 /js step-title u-h3">

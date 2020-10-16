@@ -27,7 +27,7 @@
 
     {foreach from=$cart.subtotals item="subtotal"}
         {if $subtotal && $subtotal.type !== 'tax'}
-          <div class="o-layout c-cart-summary__row /js cart-summary-subtotals" id="cart-subtotal-{$subtotal.type}">
+          <div class="c-cart-summary__row /js cart-summary-subtotals" id="cart-subtotal-{$subtotal.type}">
             <span class="label">{$subtotal.label}</span>
             <span class="value">{$subtotal.value}</span>
           </div>

@@ -1,4 +1,16 @@
+.c-cart-summary {
+  background-color: $white;
+
+  @media (min-width: 992px) {
+    position: -webkit-sticky;
+    position: sticky;
+    top: $spacer*1.5;
+  }
+}
+
 .c-cart-summary__row {
+  display: flex;
+  justify-content: space-between;
   border-bottom: $gray-light solid 1px;
   padding-bottom: $spacer*.5;
   margin-bottom: $spacer*.5;

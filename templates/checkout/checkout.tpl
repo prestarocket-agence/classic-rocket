@@ -54,13 +54,13 @@
       <section id="content">
         <div class="row">
 
-          <div id="js-checkout-process" class="col-lg-8 /js accordion">
+          <div id="js-checkout-process" class="col-12 col-lg-8 /js accordion">
               {block name='checkout_process'}
                   {render file='checkout/checkout-process.tpl' ui=$checkout_process}
               {/block}
           </div>
 
-          <div class="col-lg-4 order-checkout">
+          <div class="col-12 col-lg-4">
               {block name='cart_summary'}
                   {include file='checkout/_partials/cart-summary.tpl' cart = $cart}
               {/block}
