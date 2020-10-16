@@ -48,10 +48,10 @@
     <div class="form-group">
         {if $field.type == 'checkbox' || $field.type == 'radio-buttons'}
             {if $field.type == 'radio-buttons'}
-                <div class="label mr-3">{$field.label}</div>
+                <div class="c-form__label">{$field.label}</div>
             {/if}
         {else}
-            <label class="{if $field.required}required{/if}" for="f-{$field.name}_{$uniqId}">
+            <label class="c-form__label {if $field.required}/js required{/if}" for="f-{$field.name}_{$uniqId}">
                 {$field.label}
                 {block name='form_field_comment'}
                     {if (!$field.required && !in_array($field.type, ['radio-buttons', 'checkbox']))}
@@ -77,7 +77,7 @@
 
                 {block name='form_field_item_country'}
                     <select
-                            class="custom-select js-country{if !empty($field.errors)} is-invalid{/if}"
+                            class="/js custom-select js-country{if !empty($field.errors)} is-invalid{/if}"
                             name="{$field.name}"
                             id="f-{$field.name}_{$uniqId}"
                             {if $field.required}required{/if}
@@ -104,7 +104,7 @@
                                     {if $value eq $field.value} checked {/if}
                             >
 
-                            <label class="custom-control-label" for="f-{$field.name}_{$uniqId}-{$smarty.foreach.radiolist.iteration}">{$label}</label>
+                            <label class="/js custom-control-label" for="f-{$field.name}_{$uniqId}-{$smarty.foreach.radiolist.iteration}">{$label}</label>
                         </div>
                     {/foreach}
 
@@ -115,7 +115,7 @@
                 {block name='form_field_item_checkbox'}
                     <div class="custom-control custom-checkbox">
                         <input name="{$field.name}" type="checkbox" value="1" id="f-{$field.name}_{$uniqId}" class="custom-control-input{if !empty($field.errors)} is-invalid{/if}"{if $field.value} checked="checked"{/if}{if $field.required} required{/if}>
-                        <label class="custom-control-label" for="f-{$field.name}_{$uniqId}">{$field.label nofilter}</label>
+                        <label class="c-form__label c-form__label--sm /js custom-control-label" for="f-{$field.name}_{$uniqId}">{$field.label nofilter}</label>
                     </div>
                 {/block}
 
