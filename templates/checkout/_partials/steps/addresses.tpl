@@ -101,7 +101,7 @@
             {/if}
 
             {if !$use_same_address}
-                <p class="u-h4 u-mb-2 invoice__address">{l s='Your Invoice Address' d='Shop.Theme.Checkout'}</p>
+                <p class="u-h4 u-mt-2 u-mb-2 invoice__address">{l s='Your Invoice Address' d='Shop.Theme.Checkout'}</p>
                 {if $show_invoice_address_form}
                     <div id="invoice-address" class="form-wrapper">
                         {render file                      = 'checkout/_partials/address-form.tpl'
@@ -112,7 +112,7 @@
                         }
                     </div>
                 {else}
-                    <div id="invoice-addresses" class="address-selector js-address-selector row">
+                    <div id="invoice-addresses" class="/js js-address-selector">
                         {include  file        = 'checkout/_partials/address-selector-block.tpl'
                         addresses   = $customer.addresses
                         name        = "id_address_invoice"
@@ -123,9 +123,10 @@
 
                         <div class="">
                             <a href="{$new_address_invoice_url}">
-                    <span class="">
-                        <i class="material-icons md-48">&#xe147;</i><br>{l s='add new address' d='Shop.Theme.Actions'}
-                    </span>
+                        <div class="btn btn-sm btn-primary u-mb-2">
+                            {include file="_partials/icon.tpl" icon="plus" class=""}
+                            {l s='Ajouter une nouvelle adresse' d='Shop.Theme.Actions'}
+                        </div>
                             </a>
                         </div>
                     </div>
