@@ -47,8 +47,9 @@
                 </div>
 
                 {block name='continue_shopping'}
-                    <a class="label btn btn-outline-primary" href="{$urls.pages.index}">
-                        <i class="material-icons">chevron_left</i>{l s='Continue shopping' d='Shop.Theme.Actions'}
+                    <a class="btn btn-link" href="{$urls.pages.index}">
+                       {include file="_partials/icon.tpl" icon="chevron-left"}
+                        {l s='Continue shopping' d='Shop.Theme.Actions'}
                     </a>
                 {/block}
 
