@@ -66,6 +66,13 @@
   &:first-of-type {
     margin: 0;
   }
+
+  a {
+    color: $black;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .c-header__cart {
