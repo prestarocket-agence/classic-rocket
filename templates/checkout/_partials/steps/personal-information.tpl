@@ -33,7 +33,7 @@
         <div class="clearfix">
             <form method="GET" action="{$urls.pages.order}">
                 <button
-                        class="continue btn btn-primary btn-lg"
+                        class="btn btn-primary /js continue"
                         name="controller"
                         type="submit"
                         value="order"
@@ -44,7 +44,7 @@
 
         </div>
     {else}
-        <ul class="o-layout /js nav nav-tabs" role="tablist">
+        <ul class="c-checkout-panel__head /js nav nav-tabs" role="tablist">
             <li class="/js nav-item">
                 <a
                         class="btn btn-link /js nav-link {if !$show_login_form}active{/if}"
@@ -76,7 +76,7 @@
                 </a>
             </li>
         </ul>
-        <div class="tab-content">
+        <div class="c-checkout-panel__form /js tab-content">
             <div class="checkout-form tab-pane {if !$show_login_form}active{/if}" id="checkout-guest-form"
                  role="tabpanel" {if $show_login_form}aria-hidden="true"{/if}>
                 {render file='checkout/_partials/customer-form.tpl' ui=$register_form guest_allowed=$guest_allowed}
