@@ -42,7 +42,7 @@
     {/block}
 
       {block name='address_form_fields'}
-        <section class="u-mb-2 form-fields">
+        <section class="u-mb-3 form-fields">
           {block name='form_fields'}
             {foreach from=$formFields item="field"}
               {block name='form_field'}
@@ -54,7 +54,7 @@
       {/block}
 
       {block name='address_form_footer'}
-        <footer class="c-form__footer">
+        <footer class="c-form__footer u-flex-column u-align-items-center">
           <input type="hidden" name="submitAddress" value="1">
           {block name='form_buttons'}
             <button class="btn btn-primary form-control-submit" type="submit">

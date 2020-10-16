@@ -23,56 +23,58 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='address_selector_blocks'}
-  {foreach $addresses as $address}
-    <article
-      class="address-item col-12 col-md-6 col-lg-4 mb-3{if $address.id == $selected} selected{/if}"
-      id="{$name|classname}-address-{$address.id}"
-    >
-      <label for="r-{$name|classname}-address-{$address.id}" class="card mb-0">
-        <div class="card-header">
-          <div class="custom-control custom-radio">
-            <input
-                    type="radio"
-                    name="{$name}"
-                    value="{$address.id}"
-                    id="r-{$name|classname}-address-{$address.id}"
-                    class="custom-control-input"
-                    {if $address.id == $selected}checked{/if}
-            >
-            <span class="custom-control-label d-inline-block font-weight-bold">{$address.alias}</span>
-          </div>
+    {foreach $addresses as $address}
+        <article
+                class="c-checkout-card {if $address.id == $selected}/js selected{/if}"
+                id="{$name|classname}-address-{$address.id}"
+        >
+            <label for="r-{$name|classname}-address-{$address.id}" class="u-mb-0 u-w-100">
+                <span class="u-mb-1 u-d-flex /js custom-control custom-radio">
+                    <span class="o-layout o-layout--start o-layout--center-y">
+                        <input
+                                type="radio"
+                                name="{$name}"
+                                value="{$address.id}"
+                                id="r-{$name|classname}-address-{$address.id}"
+                                class="custom-control-input"
+                                {if $address.id == $selected}checked{/if}
+                        >
+                        <span class="u-h6 u-mr-2 /js custom-control-label">{$address.alias}</span>
+                        {if $interactive}
+                            <a
+                                    class="u-txt-sm /js edit-address text-muted"
+                                    data-link-action="edit-address"
+                                    href="{url entity='order' params=['id_address' => $address.id, 'editAddress' => $type, 'token' => $token]}"
+                            >
+                            {l s='Edit' d='Shop.Theme.Actions'}
+                        </a>
+                        {/if}
+                    </span>
+                    {if $interactive}
+                        <span>
+                    <a
+                            class="u-txt-sm /js delete-address text-muted"
+                            data-link-action="delete-address"
+                            href="{url entity='order' params=['id_address' => $address.id, 'deleteAddress' => true, 'token' => $token]}"
+                    >
+                        {l s='Delete' d='Shop.Theme.Actions'}
+                    </a>
+                        </span>
+                    {/if}
+                </span>
 
-        </div>
-      <div class="card-body small">
-          {$address.formatted nofilter}
-      </div>
-          {if $interactive}
-        <div class="card-footer small">
 
-        <a
-                    class="edit-address text-muted"
-                    data-link-action="edit-address"
-                    href="{url entity='order' params=['id_address' => $address.id, 'editAddress' => $type, 'token' => $token]}"
-            >
-              <i class="material-icons edit">&#xE254;</i>{l s='Edit' d='Shop.Theme.Actions'}
-            </a>
-            <a
-                    class="delete-address text-muted"
-                    data-link-action="delete-address"
-                    href="{url entity='order' params=['id_address' => $address.id, 'deleteAddress' => true, 'token' => $token]}"
-            >
-              <i class="material-icons delete">&#xE872;</i>{l s='Delete' d='Shop.Theme.Actions'}
-            </a>
-        </div>
+                <span class="u-txt-sm">
+                    {$address.formatted nofilter}
+                </span>
 
-          {/if}
 
-      </label>
-    </article>
-  {/foreach}
-  {if $interactive}
-    <p>
-      <button class="ps-hidden-by-js form-control-submit center-block" type="submit">{l s='Save' d='Shop.Theme.Actions'}</button>
-    </p>
-  {/if}
+            </label>
+        </article>
+    {/foreach}
+    {if $interactive}
+        <p>
+            <button class="/js ps-hidden-by-js" type="submit">{l s='Save' d='Shop.Theme.Actions'}</button>
+        </p>
+    {/if}
 {/block}
