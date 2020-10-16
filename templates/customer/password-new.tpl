@@ -54,7 +54,7 @@
           <div class="form-group">
             <label for="new_password">{l s='New password' d='Shop.Forms.Labels'}</label>
               <input id="new_password" class="form-control" type="password" data-validate="isPasswd" name="passwd" value="" required pattern=".{literal}{{/literal}5,{literal}}{/literal}">
-            <small class="form-text text-muted">{l s='Your password must be at least %min% characters long.' d='Shop.Forms.Help' sprintf=['%min%' => 5]}</small>
+            <span class="u-txt-sm /js form-text text-muted">{l s='Your password must be at least %min% characters long.' d='Shop.Forms.Help' sprintf=['%min%' => 5]}</span>
             <div class="invalid-feedback js-invalid-feedback-browser"></div>
 
 
@@ -63,7 +63,7 @@
           <div class="form-group">
             <label for="new_password_validation">{l s='Confirmation' d='Shop.Forms.Labels'}</label>
               <input id="new_password_validation" class="form-control" type="password" data-validate="isPasswd" name="confirmation" value="" required pattern=".{literal}{{/literal}5,{literal}}{/literal}">
-            <small class="form-text text-muted">{l s='Your password must be at least %min% characters long.' d='Shop.Forms.Help' sprintf=['%min%' => 5]}</small>
+            <span class="u-txt-sm /js form-text text-muted">{l s='Your password must be at least %min% characters long.' d='Shop.Forms.Help' sprintf=['%min%' => 5]}</span>
             <div class="invalid-feedback js-invalid-feedback-browser"></div>
           </div>
 
