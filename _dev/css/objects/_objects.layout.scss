@@ -1,9 +1,7 @@
 /* Columns
   ========================================================================== */
 
-@if $enable-grid-classes {
-
-} @else {
+@if not $enable-grid-classes {
 
   .row {
     @include make-row();
