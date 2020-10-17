@@ -25,7 +25,7 @@
 {extends file=$layout}
 
 {block name='content'}
-  <section id="main">
+  <div id="main">
 
     {block name='product_list_header'}
       <h1 id="js-product-list-header">{$listing.label}</h1>
@@ -67,5 +67,5 @@
       {/if}
     </section>
 
-  </section>
+  </div>
 {/block}
