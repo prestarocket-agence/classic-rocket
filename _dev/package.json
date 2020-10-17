@@ -4,7 +4,7 @@
   "description": "Tools to help while developing the Classic theme",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p && svgo",
+    "build": "webpack -p",
     "start": "webpack -p -w",
     "debug": "webpack --mode development --devtool source-map --watch",
     "sass": "webpack --mode development --onlysass true --devtool source-map --watch",
@@ -25,6 +25,10 @@
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.2",
+    "stylelint": "^13.7.2",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-scss": "^3.18.0",
+    "stylelint-webpack-plugin": "^2.1.1",
     "terser-webpack-plugin": "^2.3.8",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
