@@ -67,6 +67,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.header";
 @import "../../../classic-rocket/_dev/css/components/components.inputadd";
 @import "../../../classic-rocket/_dev/css/components/components.media";
+@import "node_modules/bootstrap/scss/modal";
 @import "../../../classic-rocket/_dev/css/components/components.pagination";
 @import "../../../classic-rocket/_dev/css/components/components.panel";
 @import "../../../classic-rocket/_dev/css/components/components.prices";
