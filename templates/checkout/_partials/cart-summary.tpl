@@ -38,7 +38,7 @@
                 <a class="" href="#" data-toggle="collapse"
                    data-target="#cart-summary-product-list">
                     <span class="u-txt-sm">{l s='Afficher les détails' d='Shop.Theme.Actions'}</span>
-                    {*                    {include file="_partials/icon.tpl" icon="chevron-bottom" class="u-icon--16"}*}
+                    {*                    {include file="_partials/icon.tpl" icon="chevron-bottom" class="c-icon--16"}*}
                 </a>
                 {*                {block name='cart_summary_product_list'}*}
                 {*                    <div class="collapse" id="cart-summary-product-list">*}

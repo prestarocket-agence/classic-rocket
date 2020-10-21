@@ -65,6 +65,8 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.footer";
 @import "../../../classic-rocket/_dev/css/components/components.form";
 @import "../../../classic-rocket/_dev/css/components/components.header";
+@import "../../../classic-rocket/_dev/css/components/components.icon";
+
 @import "../../../classic-rocket/_dev/css/components/components.inputadd";
 @import "../../../classic-rocket/_dev/css/components/components.media";
 @import "node_modules/bootstrap/scss/modal";
@@ -86,7 +88,6 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 /*
 /* UTILITIES */
 @import "../../../classic-rocket/_dev/css/utilities/utilities.flex";
-@import "../../../classic-rocket/_dev/css/utilities/utilities.icon";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.img";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.position";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.spacer";

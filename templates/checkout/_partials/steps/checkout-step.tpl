@@ -34,7 +34,7 @@
     >
         <div class="o-layout c-panel__head /js js-checkout-step-header" id="heading-{$identifier}" data-identifier="{$identifier}">
             <p class="u-mb-0 /js step-title u-h3">
-                {include file="_partials/icon.tpl" icon="check" class="u-icon--28"}
+                {include file="_partials/icon.tpl" icon="check" class="c-icon--28"}
                 <span class="step-number">{$position}.</span>
                 {$title}
             </p>

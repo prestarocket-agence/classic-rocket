@@ -27,7 +27,7 @@
         <div class="o-wrapper">
             <div class="o-layout o-layout--center-y">
                 <div class="u-d-flex u-align-items-center">
-                    {include file="_partials/icon.tpl" icon="shield-check" class="u-icon--24 u-mr-2"}
+                    {include file="_partials/icon.tpl" icon="shield-check" class="c-icon--24 u-mr-2"}
                     <p class="u-mb-0">{l s='Espace sécurisé' d='Shop.Theme.Global'}</p>
                 </div>
                 <a href="{$urls.base_url}">

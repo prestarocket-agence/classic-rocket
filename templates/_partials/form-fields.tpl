@@ -182,7 +182,7 @@
                                 data-text-show="{l s='Show' d='Shop.Theme.Actions'}"
                                 data-text-hide="{l s='Hide' d='Shop.Theme.Actions'}"
                         >
-                            {include file="_partials/icon.tpl" icon="eye-slash" class="u-icon--20"}
+                            {include file="_partials/icon.tpl" icon="eye-slash" class="c-icon--20"}
                         </button>
                     </span>
 
