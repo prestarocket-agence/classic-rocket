@@ -22,44 +22,46 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-{block name='header_banner'}
-    <div class="c-topbanner">
-        {hook h='displayBanner'}
-    </div>
-{/block}
+<header id="header" class="c-header">
+    {block name='header_banner'}
+        <div class="c-topbanner">
+            {hook h='displayBanner'}
+        </div>
+    {/block}
 
-{block name='header_nav'}
-    <div class="c-top-header">
+    {block name='header_nav'}
+        <div class="c-top-header">
+            <div class="o-wrapper">
+                <div class="o-layout o-layout--center-y">
+                    {hook h='displayNav1'}
+
+                    <div class="c-top-header__selects">
+                        {hook h='displayNav2'}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {/block}
+
+    {block name='header_top'}
         <div class="o-wrapper">
-            <div class="o-layout o-layout--center-y">
-                {hook h='displayNav1'}
-
-                <div class="c-top-header__selects">
-                    {hook h='displayNav2'}
-                </div>
-            </div>
-        </div>
-    </div>
-{/block}
-
-{block name='header_top'}
-    <div class="o-wrapper">
-        <div class="o-layout o-layout--center-y c-header__content">
-            <a href="{$urls.base_url}" class="c-header__logo">
-                <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
-            </a>
-            <div class="c-header__searchbar u-order-mobile-2">
-                {hook h='displaySearch'}
-            </div>
-            <div class="c-header__shortcut">
-                {hook h='displayTop'}
-                <div class="u-d-mobile c-header__shortcut-item">
-                <a class="" href="#">
-                    {include file="_partials/icon.tpl" icon="list" class="c-icon--28"}
+            <div class="o-layout o-layout--center-y c-header__content">
+                <a href="{$urls.base_url}" class="c-header__logo">
+                    <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
                 </a>
+                <div class="c-header__searchbar u-order-mobile-2">
+                    {hook h='displaySearch'}
+                </div>
+                <div class="c-header__shortcut">
+                    {hook h='displayTop'}
+                    <div class="u-d-mobile c-header__shortcut-item">
+                        <a class="" href="#">
+                            {include file="_partials/icon.tpl" icon="list" class="c-icon--28"}
+                        </a>
+                    </div>
                 </div>
             </div>
+            {hook h='displayNavFullWidth'}
         </div>
-        {hook h='displayNavFullWidth'}
-    </div>
-{/block}
+    {/block}
+</header>
