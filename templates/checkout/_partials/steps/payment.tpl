@@ -16,7 +16,7 @@
             <p>{l s='No payment needed for this order' d='Shop.Theme.Checkout'}</p>
         {/if}
 
-        <div class="u-mb-3 {if $is_free}d--none{/if}">
+        <div class="{if $is_free}d--none{/if}">
             {foreach from=$payment_options item="module_options"}
                 {foreach from=$module_options item="option"}
                     <div id="{$option.id}-container" class="c-checkout-card /js payment-option clearfix">
@@ -55,7 +55,7 @@
                                 id="{$option.id}-additional-information"
                                 class="/js js-additional-information{if $option.id != $selected_payment_option} ps-hidden {/if}"
                         >
-                            <div class="alert alert-info">
+                            <div class="alert alert-info u-mb-0">
                                 {$option.additionalInformation nofilter}
                             </div>
                         </div>
