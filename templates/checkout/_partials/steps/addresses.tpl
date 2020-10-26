@@ -65,7 +65,7 @@
                     type        = "delivery"
                     interactive = !$show_delivery_address_form and !$show_invoice_address_form
           }
-            <div class="col-12 col-lg-6 col-lg-4 mb-3">
+            <div class="col-12 col-mg-6 col-lg-4 mb-3">
                 <a href="{$new_address_delivery_url}" class="card bg-light card--address">
                     <span class="card-body_add-address">
                         <i class="material-icons md-48">&#xe147;</i><br>{l s='add new address' d='Shop.Theme.Actions'}
