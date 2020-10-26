@@ -44,14 +44,14 @@
 
 {block name='header_top'}
     <div class="o-wrapper">
-        <div class="row o-layout--center-y c-header__content">
-            <a href="{$urls.base_url}" class="col-6 col-lg-2 c-header__logo">
+        <div class="o-layout o-layout--center-y c-header__content">
+            <a href="{$urls.base_url}" class="c-header__logo">
                 <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
             </a>
-            <div class="col-12 col-lg-7 c-header__searchbar u-order-mobile-2">
+            <div class="c-header__searchbar u-order-mobile-2">
                 {hook h='displaySearch'}
             </div>
-            <div class="col-6 col-lg-3 c-header__shortcut">
+            <div class="c-header__shortcut">
                 {hook h='displayTop'}
             </div>
         </div>

@@ -47,11 +47,19 @@
 .c-header__content {
   margin-top: $spacer*1.5;
   margin-bottom: $spacer*1.5;
+
+  & > *:not(:last-child) {
+    margin-right: $spacer*4;
+  }
 }
 
 .c-header__logo {
   max-width: 100%;
   height: auto;
+}
+
+.c-header__searchbar {
+  flex: 1;
 }
 
 .c-header__shortcut {
@@ -69,6 +77,7 @@
 
   a {
     color: $black;
+
     &:hover {
       text-decoration: none;
     }
