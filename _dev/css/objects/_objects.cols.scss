@@ -2,9 +2,8 @@
   ========================================================================== */
 
 
-@if $enable-grid-classes {
+@if not $enable-grid-classes {
 
-} @else {
   %grid-column {
     position: relative;
     width: 100%;

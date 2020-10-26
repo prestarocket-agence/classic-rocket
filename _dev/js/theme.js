@@ -22,18 +22,9 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
-import '../node_modules/bootstrap/js/dist/util';
-import '../node_modules/bootstrap/js/dist/alert';
-import '../node_modules/bootstrap/js/dist/button';
-import '../node_modules/bootstrap/js/dist/collapse.js';
-import '../node_modules/bootstrap/js/dist/collapse';
-import '../node_modules/bootstrap/js/dist/dropdown';
-import '../node_modules/bootstrap/js/dist/modal';
-import '../node_modules/bootstrap/js/dist/popover';
-import '../node_modules/bootstrap/js/dist/tab';
-import '../node_modules/bootstrap/js/dist/toast';
-import '../node_modules/bootstrap/js/dist/tooltip';
+import './bootstrap/bootstrap-lib';
 import '../node_modules/bootstrap-touchspin';
+
 import './lib/slick.min';
 import './lib/jquery.hoverIntent.min';
 import SlickSlider from './components/slick';

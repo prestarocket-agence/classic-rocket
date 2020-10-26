@@ -3,3 +3,18 @@
   align-items: center;
   margin-bottom: $spacer*1.5;
 }
+
+.c-form__label {
+  color: $dark;
+  margin-bottom: $spacer*.5;
+
+  &--sm {
+    font-size: $font-size-sm;
+  }
+}
+
+.c-form__footer {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto $spacer*1.5;
+}

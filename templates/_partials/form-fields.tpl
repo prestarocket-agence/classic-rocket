@@ -44,181 +44,189 @@
 
 {else}
     {assign var=uniqId value=10|mt_rand:100000}
-
     <div class="form-group">
         {if $field.type == 'checkbox' || $field.type == 'radio-buttons'}
             {if $field.type == 'radio-buttons'}
-                <div class="label mr-3">{$field.label}</div>
+                <div class="c-form__label">{$field.label}</div>
             {/if}
         {else}
-            <label class="{if $field.required}required{/if}" for="f-{$field.name}_{$uniqId}">
+            <label class="c-form__label {if $field.required}/js required{/if}" for="f-{$field.name}_{$uniqId}">
                 {$field.label}
                 {block name='form_field_comment'}
                     {if (!$field.required && !in_array($field.type, ['radio-buttons', 'checkbox']))}
-                            <small class="text-muted">({l s='Optional' d='Shop.Forms.Labels'})</small>
+                        <small class="text-muted">({l s='Optional' d='Shop.Forms.Labels'})</small>
                     {/if}
                 {/block}
             </label>
         {/if}
 
 
-            {if $field.type === 'select'}
+        {if $field.type === 'select'}
 
-                {block name='form_field_item_select'}
-                    <select class="custom-select{if !empty($field.errors)} is-invalid{/if}" name="{$field.name}" id="f-{$field.name}_{$uniqId}"{if $field.required} required{/if}>
-                        <option value disabled selected>{l s='-- please choose --' d='Shop.Forms.Labels'}</option>
-                        {foreach from=$field.availableValues item="label" key="value"}
-                            <option value="{$value}" {if $value eq $field.value} selected {/if}>{$label}</option>
-                        {/foreach}
-                    </select>
-                {/block}
-
-            {elseif $field.type === 'countrySelect'}
-
-                {block name='form_field_item_country'}
-                    <select
-                            class="custom-select js-country{if !empty($field.errors)} is-invalid{/if}"
-                            name="{$field.name}"
-                            id="f-{$field.name}_{$uniqId}"
-                            {if $field.required}required{/if}
-                    >
-                        <option value disabled selected>{l s='-- please choose --' d='Shop.Forms.Labels'}</option>
-                        {foreach from=$field.availableValues item="label" key="value"}
-                            <option value="{$value}" {if $value eq $field.value} selected {/if}>{$label}</option>
-                        {/foreach}
-                    </select>
-                {/block}
-
-            {elseif $field.type === 'radio-buttons'}
-
-                {block name='form_field_item_radio'}
-                    {foreach from=$field.availableValues item="label" key="value" name="radiolist"}
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input
-                                    name="{$field.name}"
-                                    type="radio"
-                                    value="{$value}"
-                                    class="custom-control-input {if !empty($field.errors)} is-invalid{/if}"
-                                    id="f-{$field.name}_{$uniqId}-{$smarty.foreach.radiolist.iteration}"
-                                    {if $field.required}required{/if}
-                                    {if $value eq $field.value} checked {/if}
-                            >
-
-                            <label class="custom-control-label" for="f-{$field.name}_{$uniqId}-{$smarty.foreach.radiolist.iteration}">{$label}</label>
-                        </div>
+            {block name='form_field_item_select'}
+                <select class="custom-select{if !empty($field.errors)} is-invalid{/if}" name="{$field.name}"
+                        id="f-{$field.name}_{$uniqId}"{if $field.required} required{/if}>
+                    <option value disabled selected>{l s='-- please choose --' d='Shop.Forms.Labels'}</option>
+                    {foreach from=$field.availableValues item="label" key="value"}
+                        <option value="{$value}" {if $value eq $field.value} selected {/if}>{$label}</option>
                     {/foreach}
+                </select>
+            {/block}
 
-                {/block}
+        {elseif $field.type === 'countrySelect'}
 
-            {elseif $field.type === 'checkbox'}
+            {block name='form_field_item_country'}
+                <select
+                        class="/js custom-select js-country{if !empty($field.errors)} is-invalid{/if}"
+                        name="{$field.name}"
+                        id="f-{$field.name}_{$uniqId}"
+                        {if $field.required}required{/if}
+                >
+                    <option value disabled selected>{l s='-- please choose --' d='Shop.Forms.Labels'}</option>
+                    {foreach from=$field.availableValues item="label" key="value"}
+                        <option value="{$value}" {if $value eq $field.value} selected {/if}>{$label}</option>
+                    {/foreach}
+                </select>
+            {/block}
 
-                {block name='form_field_item_checkbox'}
-                    <div class="custom-control custom-checkbox">
-                        <input name="{$field.name}" type="checkbox" value="1" id="f-{$field.name}_{$uniqId}" class="custom-control-input{if !empty($field.errors)} is-invalid{/if}"{if $field.value} checked="checked"{/if}{if $field.required} required{/if}>
-                        <label class="custom-control-label" for="f-{$field.name}_{$uniqId}">{$field.label nofilter}</label>
+        {elseif $field.type === 'radio-buttons'}
+
+            {block name='form_field_item_radio'}
+                {foreach from=$field.availableValues item="label" key="value" name="radiolist"}
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input
+                                name="{$field.name}"
+                                type="radio"
+                                value="{$value}"
+                                class="custom-control-input {if !empty($field.errors)} is-invalid{/if}"
+                                id="f-{$field.name}_{$uniqId}-{$smarty.foreach.radiolist.iteration}"
+                                {if $field.required}required{/if}
+                                {if $value eq $field.value} checked {/if}
+                        >
+
+                        <label class="/js custom-control-label"
+                               for="f-{$field.name}_{$uniqId}-{$smarty.foreach.radiolist.iteration}">{$label}</label>
                     </div>
-                {/block}
+                {/foreach}
 
-            {elseif $field.type === 'date'}
+            {/block}
 
-                {block name='form_field_item_date'}
-                    <input name="{$field.name}" class="form-control{if !empty($field.errors)} is-invalid{/if}" type="date" value="{$field.value}" placeholder="{if isset($field.availableValues.placeholder)}{$field.availableValues.placeholder}{/if}" id="f-{$field.name}_{$uniqId}"{if isset($autocomplete[$field.name])} autocomplete="{$autocomplete[$field.name]}"{/if}>
-                    {if isset($field.availableValues.comment)}
-                        <span class="form-text text-muted">
+        {elseif $field.type === 'checkbox'}
+
+            {block name='form_field_item_checkbox'}
+                <div class="custom-control custom-checkbox">
+                    <input name="{$field.name}" type="checkbox" value="1" id="f-{$field.name}_{$uniqId}"
+                           class="custom-control-input{if !empty($field.errors)} is-invalid{/if}"{if $field.value} checked="checked"{/if}{if $field.required} required{/if}>
+                    <label class="c-form__label c-form__label--sm /js custom-control-label"
+                           for="f-{$field.name}_{$uniqId}">{$field.label nofilter}</label>
+                </div>
+            {/block}
+
+        {elseif $field.type === 'date'}
+
+            {block name='form_field_item_date'}
+                <input name="{$field.name}" class="form-control{if !empty($field.errors)} is-invalid{/if}" type="date"
+                       value="{$field.value}"
+                       placeholder="{if isset($field.availableValues.placeholder)}{$field.availableValues.placeholder}{/if}"
+                       id="f-{$field.name}_{$uniqId}"{if isset($autocomplete[$field.name])} autocomplete="{$autocomplete[$field.name]}"{/if}>
+                {if isset($field.availableValues.comment)}
+                    <span class="u-txt-sm /js form-text text-muted">
               {$field.availableValues.comment}
             </span>
-                    {/if}
-                {/block}
-
-            {elseif $field.type === 'birthday'}
-
-                {block name='form_field_item_birthday'}
-                    <div class="js-parent-focus">
-                        {html_select_date
-                        field_order=DMY
-                        time={$field.value}
-                        field_array={$field.name}
-                        prefix=false
-                        reverse_years=true
-                        field_separator='<br>'
-                        day_extra='class="form-control form-control-select"'
-                        month_extra='class="form-control form-control-select"'
-                        year_extra='class="form-control form-control-select"'
-                        day_empty={l s='-- day --' d='Shop.Forms.Labels'}
-                        month_empty={l s='-- month --' d='Shop.Forms.Labels'}
-                        year_empty={l s='-- year --' d='Shop.Forms.Labels'}
-                        start_year={'Y'|date}-100 end_year={'Y'|date}
-                        }
-                    </div>
-                {/block}
-
-            {elseif $field.type === 'password'}
-
-                {block name='form_field_item_password'}
-                    <div class="input-group js-parent-focus">
-                        <input
-                                class="form-control js-child-focus js-visible-password{if !empty($field.errors)} is-invalid{/if}"
-                                name="{$field.name}"
-                                id="f-{$field.name}_{$uniqId}"
-                                type="password"
-                                value=""
-                                pattern=".{literal}{{/literal}5,{literal}}{/literal}"
-                                {if isset($autocomplete[$field.name])} autocomplete="{$autocomplete[$field.name]}"{/if}
-                                {if $field.required}required{/if}
-                        >
-                        <span class="input-group-btn">
-              <button
-                      class="btn btn-light"
-                      type="button"
-                      data-action="show-password"
-                      data-text-show="{l s='Show' d='Shop.Theme.Actions'}"
-                      data-text-hide="{l s='Hide' d='Shop.Theme.Actions'}"
-              >
-                {l s='Show' d='Shop.Theme.Actions'}
-              </button>
-            </span>
-                        {include file='_partials/form-errors.tpl' errors=$field.errors required=$field.required label=$field.label}
-
-                    </div>
-                    <small class="form-text text-muted">{l s='At least 5 characters long' d='Shop.Forms.Help'}</small>
-
-                {/block}
-
-            {elseif $field.type === 'file'}
-                <div class="custom-file">
-                    <input name="{$field.name}" type="file" class="custom-file-input{if !empty($field.errors)} is-invalid{/if}" id="f-{$field.name}_{$uniqId}"{if $field.required} required{/if}>
-                    <label class="custom-file-label" for="f-{$field.name}_{$uniqId}" data-browse="{l s='Choose file' d='Shop.Theme.Actions'}">{l s='Choose file' d='Shop.Theme.Actions'}</label>
-                </div>
-            {else}
-
-                {block name='form_field_item_other'}
-                    <input
-                            class="form-control{if !empty($field.errors)} is-invalid{/if}"
-                            name="{$field.name}"
-                            type="{if $field.name === "phone" || $field.name === "phone_mobile"}tel{else}{$field.type}{/if}"
-                            value="{$field.value}"
-                            id="f-{$field.name}_{$uniqId}"
-                            {if isset($field.availableValues.placeholder)}placeholder="{$field.availableValues.placeholder}"{/if}
-                            {if $field.maxLength}maxlength="{$field.maxLength}"{/if}
-                            {if $field.required}required{/if}
-                            {if isset($autocomplete[$field.name])} autocomplete="{$autocomplete[$field.name]}"{/if}
-                    >
-                    {if isset($field.availableValues.comment)}
-                        <small class="form-text text-muted">
-                            {$field.availableValues.comment}
-                        </small>
-                    {/if}
-                {/block}
-
-            {/if}
-
-            {block name='form_field_errors'}
-                {if $field.type !== 'password'}
-                {include file='_partials/form-errors.tpl' errors=$field.errors required=$field.required label=$field.label}
                 {/if}
             {/block}
 
+        {elseif $field.type === 'birthday'}
+
+            {block name='form_field_item_birthday'}
+                <div class="js-parent-focus">
+                    {html_select_date
+                    field_order=DMY
+                    time={$field.value}
+                    field_array={$field.name}
+                    prefix=false
+                    reverse_years=true
+                    field_separator='<br>'
+                    day_extra='class="form-control form-control-select"'
+                    month_extra='class="form-control form-control-select"'
+                    year_extra='class="form-control form-control-select"'
+                    day_empty={l s='-- day --' d='Shop.Forms.Labels'}
+                    month_empty={l s='-- month --' d='Shop.Forms.Labels'}
+                    year_empty={l s='-- year --' d='Shop.Forms.Labels'}
+                    start_year={'Y'|date}-100 end_year={'Y'|date}
+                    }
+                </div>
+            {/block}
+
+        {elseif $field.type === 'password'}
+
+            {block name='form_field_item_password'}
+                <div class="/js input-group js-parent-focus">
+                    <input
+                            class="/js form-control js-child-focus js-visible-password{if !empty($field.errors)} is-invalid{/if}"
+                            name="{$field.name}"
+                            id="f-{$field.name}_{$uniqId}"
+                            type="password"
+                            value=""
+                            pattern=".{literal}{{/literal}5,{literal}}{/literal}"
+                            {if isset($autocomplete[$field.name])} autocomplete="{$autocomplete[$field.name]}"{/if}
+                            {if $field.required}required{/if}
+                    >
+
+                    <span class="o-layout o-layout--center-y">
+                        <span class="u-txt-sm /js form-text text-muted">{l s='At least 5 characters long' d='Shop.Forms.Help'}</span>
+                        <button
+                                class="c-btn--unstyled"
+                                type="button"
+                                data-action="show-password"
+                                data-text-show="{l s='Show' d='Shop.Theme.Actions'}"
+                                data-text-hide="{l s='Hide' d='Shop.Theme.Actions'}"
+                        >
+                            {include file="_partials/icon.tpl" icon="eye-slash" class="c-icon--20"}
+                        </button>
+                    </span>
+
+                    {include file='_partials/form-errors.tpl' errors=$field.errors required=$field.required label=$field.label}
+                </div>
+            {/block}
+
+        {elseif $field.type === 'file'}
+            <div class="custom-file">
+                <input name="{$field.name}" type="file"
+                       class="custom-file-input{if !empty($field.errors)} is-invalid{/if}"
+                       id="f-{$field.name}_{$uniqId}"{if $field.required} required{/if}>
+                <label class="custom-file-label" for="f-{$field.name}_{$uniqId}"
+                       data-browse="{l s='Choose file' d='Shop.Theme.Actions'}">{l s='Choose file' d='Shop.Theme.Actions'}</label>
+            </div>
+        {else}
+
+            {block name='form_field_item_other'}
+                <input
+                        class="form-control{if !empty($field.errors)} is-invalid{/if}"
+                        name="{$field.name}"
+                        type="{if $field.name === "phone" || $field.name === "phone_mobile"}tel{else}{$field.type}{/if}"
+                        value="{$field.value}"
+                        id="f-{$field.name}_{$uniqId}"
+                        {if isset($field.availableValues.placeholder)}placeholder="{$field.availableValues.placeholder}"{/if}
+                        {if $field.maxLength}maxlength="{$field.maxLength}"{/if}
+                        {if $field.required}required{/if}
+                        {if isset($autocomplete[$field.name])} autocomplete="{$autocomplete[$field.name]}"{/if}
+                >
+                {if isset($field.availableValues.comment)}
+                    <span class="u-txt-sm /js form-text text-muted">
+                        {$field.availableValues.comment}
+                    </span>
+                {/if}
+            {/block}
+
+        {/if}
+
+        {block name='form_field_errors'}
+            {if $field.type !== 'password'}
+                {include file='_partials/form-errors.tpl' errors=$field.errors required=$field.required label=$field.label}
+            {/if}
+        {/block}
+
 
     </div>
-
 {/if}

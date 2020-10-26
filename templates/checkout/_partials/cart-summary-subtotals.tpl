@@ -23,11 +23,11 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<div class="cart-summary-subtotals-container">
+<div class="/js cart-summary-subtotals-container">
 
     {foreach from=$cart.subtotals item="subtotal"}
         {if $subtotal && $subtotal.type !== 'tax'}
-          <div class="cart-summary-line cart-summary-subtotals mt-2" id="cart-subtotal-{$subtotal.type}">
+          <div class="c-cart-summary__row /js cart-summary-subtotals" id="cart-subtotal-{$subtotal.type}">
             <span class="label">{$subtotal.label}</span>
             <span class="value">{$subtotal.value}</span>
           </div>

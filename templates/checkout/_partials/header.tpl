@@ -23,16 +23,22 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='header'}
-  {block name='header_nav'}
-      <div class="header-nav header-nav--checkout container d--flex-between u-a-i-c">
-        <a href="{$urls.base_url}" class="header__logo header__logo--checkout">
-          <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name} {l s='logo' d='Shop.Theme.Global'}">
-        </a>
-        <div class="small">
-          {widget name="ps_contactinfo" hook="displayNav"}
+    {block name='header_nav'}
+        <div class="o-wrapper">
+            <div class="o-layout o-layout--center-y">
+                <div class="u-d-flex u-align-items-center">
+                    {include file="_partials/icon.tpl" icon="shield-check" class="c-icon--24 u-mr-2"}
+                    <p class="u-mb-0">{l s='Espace sécurisé' d='Shop.Theme.Global'}</p>
+                </div>
+                <a href="{$urls.base_url}">
+                    <img class="u-img-fluid" src="{$shop.logo}" alt="{$shop.name} {l s='logo' d='Shop.Theme.Global'}">
+                </a>
+                <div>
+                    {widget name="ps_contactinfo" hook="displayNav"}
+                </div>
+            </div>
         </div>
-      </div>
-  {/block}
-  {block name='header_top'}
-  {/block}
+    {/block}
+    {block name='header_top'}
+    {/block}
 {/block}

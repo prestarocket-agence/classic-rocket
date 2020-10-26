@@ -40,7 +40,7 @@
                                       id="field-{$field.id_customization_field}"></textarea>
                             <div class="invalid-feedback js-invalid-feedback-browser"></div>
 
-                            <small class="form-text text-muted">{l s='250 char. max' d='Shop.Forms.Help'}</small>
+                            <span class="u-txt-sm /js form-text text-muted">{l s='250 char. max' d='Shop.Forms.Help'}</span>
                             {if $field.text !== ''}
                                 <strong class="customization-message">{l s='Your customization:' d='Shop.Theme.Catalog'}
                                     <label>{$field.text}</label>
@@ -63,7 +63,7 @@
                                 <div class="invalid-feedback js-invalid-feedback-browser"></div>
 
                             </div>
-                            <small class="form-text text-muted">{l s='.png .jpg .gif' d='Shop.Forms.Help'}</small>
+                            <span class="u-txt-sm /js form-text text-muted">{l s='.png .jpg .gif' d='Shop.Forms.Help'}</span>
 
                         {/if}
                         </div>

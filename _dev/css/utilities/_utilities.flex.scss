@@ -2,6 +2,14 @@
   display: flex;
 }
 
+.u-flex-column {
+  flex-direction: column;
+}
+
+.u-justify-content-center {
+  justify-content: center;
+}
+
 .u-align-items-center {
   align-items: center;
 }

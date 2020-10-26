@@ -29,6 +29,7 @@ const autoprefixer = require('autoprefixer');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = (env, argv) => {
     const IS_DEV = argv.mode === "development";
@@ -175,7 +176,9 @@ module.exports = (env, argv) => {
             }),
             new webpack.ProvidePlugin({
                 Popper: ['popper.js', 'default']
-            })
+            }),
+            new StylelintPlugin()
+
         ],
         watchOptions: {
             ignored: /node_modules/

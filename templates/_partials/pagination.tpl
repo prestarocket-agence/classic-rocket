@@ -44,9 +44,9 @@
                   class="u-txt-black u-txt-sm {if $page.type === 'previous'}previous {elseif $page.type === 'next'}next {/if}{['disabled' => !$page.clickable, 'js-search-link' => true]|classnames}"{if !$page.clickable} tabindex="-1"{/if}
                 >
                   {if $page.type === 'previous'}
-                      {include '_partials/icon.tpl' icon="arrow-back-sharp" class="c-icon--md"}
+                      {include '_partials/icon.tpl' icon="arrow-back-sharp" class="c-icon--16"}
                   {elseif $page.type === 'next'}
-                      {include '_partials/icon.tpl' icon="arrow-forward-sharp" class="c-icon--md"}
+                      {include '_partials/icon.tpl' icon="arrow-forward-sharp" class="c-icon--16"}
                   {else}
                     {$page.page}
                   {/if}

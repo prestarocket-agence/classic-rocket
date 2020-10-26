@@ -3,26 +3,23 @@
   padding: 0;
 }
 
-//.c-btn {
-//  @extend .btn
-//}
-//
-//.c-btn-lg {
-//  @extend .btn-lg
-//}
-//
-//.c-btn-sm {
-//  @extend .btn-sm
-//}
-//
-//@each $color, $value in $theme-colors {
-//  .c-btn-#{$color} {
-//    @include button-variant($value, $value);
-//  }
-//}
-//
-//@each $color, $value in $theme-colors {
-//  .c-btn-outline-#{$color} {
-//    @include button-outline-variant($value);
-//  }
-//}
+.c-btn--unstyled {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.c-btn-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+
+  & span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -63,7 +63,7 @@
 
 
         {block name="content_wrapper"}
-            <main id="content-wrapper" class="center-column{block name='contentWrapperClass'}col-lg-6{/block}">
+            <main id="content-wrapper" class="o-wrapper {block name='contentWrapperClass'}col-lg-6{/block}">
                 {hook h="displayContentWrapperTop"}
                 {block name="content"}
                     <p>Hello world! This is HTML5 Boilerplate.</p>
