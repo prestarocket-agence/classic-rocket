@@ -2,13 +2,13 @@
 {block name='pageWrapperClass'}{/block}
 {block name='page_content_container' prepend}
     <section id="content-hook_order_confirmation" class="card mb-3 text-white bg-success">
-      <div class="card-body">
-
+      <div class="">
 
             {block name='order_confirmation_header'}
-              <h3 class="h1 card-title">
-                <i class="material-icons rtl-no-flip done">&#xE876;</i>{l s='Your order is confirmed' d='Shop.Theme.Checkout'}
-              </h3>
+              <p class="u-h3">
+                {include file="_partials/icon.tpl" icon="check" class="c-icon--28"}
+                {l s='Your order is confirmed' d='Shop.Theme.Checkout'}
+              </p>
             {/block}
 
             <p>
