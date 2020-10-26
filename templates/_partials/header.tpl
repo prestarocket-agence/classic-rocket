@@ -53,6 +53,11 @@
             </div>
             <div class="c-header__shortcut">
                 {hook h='displayTop'}
+                <div class="u-d-mobile c-header__shortcut-item">
+                <a class="" href="#">
+                    {include file="_partials/icon.tpl" icon="list" class="c-icon--28"}
+                </a>
+                </div>
             </div>
         </div>
         {hook h='displayNavFullWidth'}

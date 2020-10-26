@@ -1,0 +1,11 @@
+.u-d-flex {
+  display: flex;
+}
+
+.u-d-mobile {
+  display: none;
+
+  @include media-breakpoint-mobile {
+    display: flex;
+  }
+}

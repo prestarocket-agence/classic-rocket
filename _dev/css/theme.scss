@@ -87,6 +87,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 /*
 /*
 /* UTILITIES */
+@import "../../../classic-rocket/_dev/css/utilities/utilities.display";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.flex";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.img";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.position";
