@@ -24,8 +24,8 @@
  *}
 
 <script type="text/javascript">
-  var productCommentUpdatePostErrorMessage = '{l s='Sorry, your review appreciation cannot be sent.' d='Modules.Productcomments.Shop' js=1}';
-  var productCommentAbuseReportErrorMessage = '{l s='Sorry, your abuse report cannot be sent.' d='Modules.Productcomments.Shop' js=1}';
+  var productCommentUpdatePostErrorMessage = `{l s='Sorry, your review appreciation cannot be sent.' d='Modules.Productcomments.Shop' js=1}`;
+  var productCommentAbuseReportErrorMessage = `{l s='Sorry, your abuse report cannot be sent.' d='Modules.Productcomments.Shop' js=1}`;
 </script>
 <div class="product-comments">
 <div class="comments__header" id="product-comments-list-header">
