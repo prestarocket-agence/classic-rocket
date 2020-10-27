@@ -30,3 +30,57 @@
   padding-bottom: $spacer;
   margin-bottom: $spacer;
 }
+
+//Carriers estimation
+
+.c-checkout-carrier {
+  overflow: auto;
+
+  & > table {
+    width: 100%;
+    min-width: 400px;
+  }
+}
+
+.c-checkout-carrier__info {
+  display: flex;
+  justify-content: center;
+
+  & div:first-of-type {
+    margin-right: $spacer;
+  }
+
+  @include media-breakpoint-mobile {
+    flex-direction: column;
+
+    & div:first-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.c-checkout-carrier__row {
+  border-bottom: $gray-light solid 1px;
+
+  &:first-of-type {
+    border-top: $gray-light solid 1px;
+  }
+
+  & td {
+    padding: $spacer;
+  }
+}
+
+.c-checkout-carrier__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media-breakpoint-mobile {
+    flex-direction: column;
+
+    & div {
+      margin-right: 0;
+    }
+  }
+}

@@ -46,6 +46,10 @@
                     </div>
                 </div>
 
+                {block name="ps_carriercomparison"}
+                    {widget name="ps_carriercomparison" hook="displayShoppingCart" cart=$cart}
+                {/block}
+
                 {block name='continue_shopping'}
                     <a class="btn btn-link u-mb-2" href="{$urls.pages.index}">
                         {include file="_partials/icon.tpl" icon="chevron-left"}
@@ -57,6 +61,7 @@
                 {block name='hook_shopping_cart_footer'}
                     {hook h='displayShoppingCartFooter'}
                 {/block}
+
             </div>
 
             <!-- Right Block: cart subtotal & cart total -->
