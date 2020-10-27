@@ -57,7 +57,7 @@
                     }
                 </div>
             {elseif $customer.addresses|count > 0}
-                <div id="delivery-addresses" class="u-mb-3 /js js-address-selector">
+                <div id="delivery-addresses" class="u-mb-4 /js js-address-selector">
 
                     {include  file        = 'checkout/_partials/address-selector-block.tpl'
                     addresses   = $customer.addresses
@@ -66,7 +66,7 @@
                     type        = "delivery"
                     interactive = !$show_delivery_address_form and !$show_invoice_address_form
                     }
-                    <a href="{$new_address_delivery_url}">
+                    <a class="u-d-flex u-justify-content-center" href="{$new_address_delivery_url}">
 {*                        <div class="btn btn-primary c-btn-add u-mx-auto">*}
 {*                            {include file="_partials/icon.tpl" icon="plus" class="c-icon--28"}*}
 {*                        </div>*}
@@ -90,7 +90,7 @@
 
 
                 {if $use_same_address && !$cart.is_virtual}
-                    <p>
+                    <p class="u-txt-center">
                         <a class="text-underline text-primary" data-link-action="different-invoice-address"
                            href="{$use_different_address_url}">
                             {l s='Billing address differs from shipping address' d='Shop.Theme.Checkout'}
@@ -122,14 +122,13 @@
                         interactive = !$show_delivery_address_form and !$show_invoice_address_form
                         }
 
-                        <div class="">
-                            <a href="{$new_address_invoice_url}">
-                        <div class="btn btn-sm btn-primary">
-                            {include file="_partials/icon.tpl" icon="plus" class=""}
-                            {l s='Ajouter une nouvelle adresse' d='Shop.Theme.Actions'}
-                        </div>
-                            </a>
-                        </div>
+
+                        <a class="u-d-flex" href="{$new_address_invoice_url}">
+                            <div class="btn btn-sm btn-primary">
+                                {include file="_partials/icon.tpl" icon="plus" class=""}
+                                {l s='Ajouter une nouvelle adresse' d='Shop.Theme.Actions'}
+                            </div>
+                        </a>
                     </div>
                     {if isset($invoice_address_error)}
                         <p class="alert alert-danger js-address-error" name="alert-invoice"
