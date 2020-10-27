@@ -22,106 +22,110 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div>
-    <div class="o-layout">
-        <div class="u-d-flex">
+<div class="c-cart__row u-mb-3">
+    <div class="c-cart__caracts">
+        <div class="u-mr-3">
             <img src="{$product.cover.bySize.cart_default.url}" alt="{$product.name|escape:'quotes'}"
-                 class="u-mr-3" width="{$product.cover.bySize.cart_default.width}"
+                 width="{$product.cover.bySize.cart_default.width}"
                  height="{$product.cover.bySize.cart_default.height}">
-            <div>
-                <a class="u-h5" href="{$product.url}"
-                   data-id_customization="{$product.id_customization|intval}">{$product.name}</a>
+        </div>
+        <div>
+            <a class="u-h5" href="{$product.url}"
+               data-id_customization="{$product.id_customization|intval}">{$product.name}</a>
 
-                {foreach from=$product.attributes key="attribute" item="value"}
-                    <div class="">
-                        <span class="u-txt-dark">{$attribute} :</span>
-                        <span class="">{$value}</span>
-                    </div>
-                {/foreach}
-
-                <div class="{if $product.has_discount} has-discount{/if}">
-                    {if $product.has_discount}
-                        <div class="">
-                            <span class="">{$product.regular_price}</span>
-                            {if $product.discount_type === 'percentage'}
-                                <span class="discount discount-percentage">
-                            -{$product.discount_percentage_absolute}
-                        </span>
-                            {else}
-                                <span class="discount discount-amount">
-                            -{$product.discount_to_display}
-                        </span>
-                            {/if}
-                        </div>
-                    {/if}
-
+            {foreach from=$product.attributes key="attribute" item="value"}
+                <div class="">
+                    <span class="u-txt-dark">{$attribute} :</span>
+                    <span class="">{$value}</span>
                 </div>
+            {/foreach}
 
-                {if is_array($product.customizations) && $product.customizations|count}
-                    {block name='cart_detailed_product_line_customization'}
-                        <div class="">
-                            {foreach from=$product.customizations item="customization"}
-                                <a href="#" data-toggle="modal"
-                                   data-target="#product-customizations-modal-{$customization.id_customization}">{l s='Product customization' d='Shop.Theme.Catalog'}</a>
-                                <div class="modal fade customization-modal"
-                                     id="product-customizations-modal-{$customization.id_customization}" tabindex="-1"
-                                     role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title">{l s='Product customization' d='Shop.Theme.Catalog'}</h4>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="{l s='Close' d='Shop.Theme.Global'}">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                {foreach from=$customization.fields item="field"}
-                                                    <div class="product-customization-line row">
-                                                        <div class="col-sm-3 col-4 label">
-                                                            {$field.label}
-                                                        </div>
-                                                        <div class="col-sm-9 col-8 value">
-                                                            {if $field.type == 'text'}
-                                                                {if (int)$field.id_module}
-                                                                    {$field.text nofilter}
-                                                                {else}
-                                                                    {$field.text}
-                                                                {/if}
-                                                            {elseif $field.type == 'image'}
-                                                                <img src="{$field.image.small.url}">
-                                                            {/if}
-                                                        </div>
-                                                    </div>
-                                                {/foreach}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            {/foreach}
-                        </div>
-                    {/block}
+            <div class="{if $product.has_discount} has-discount{/if}">
+                {if $product.has_discount}
+                    <span>{$product.regular_price}</span>
+                    {if $product.discount_type === 'percentage'}
+                        <span class="discount discount-percentage">
+                                -{$product.discount_percentage_absolute}
+                            </span>
+                    {else}
+                        <span class="discount discount-amount">
+                                -{$product.discount_to_display}
+                            </span>
+                    {/if}
                 {/if}
             </div>
+
+            <a {*id="_desktop_cart_delete_{$product.id_product}"*}
+                    class="u-txt-sm remove-from-cart"
+                    rel="nofollow"
+                    href="{$product.remove_from_cart_url}"
+                    data-link-action="delete-from-cart"
+                    data-id-product="{$product.id_product|escape:'javascript'}"
+                    data-id-product-attribute="{$product.id_product_attribute|escape:'javascript'}"
+                    data-id-customization="{$product.id_customization|escape:'javascript'}"
+            >
+                {if !isset($product.is_gift) || !$product.is_gift}
+                    {l s='Supprimer' d='Shop.Theme.Checkout'}
+                {/if}
+            </a>
         </div>
-        <div class="">
-            <span class="{if $product.has_discount} current-price-discount{/if}">{$product.price}</span>
-            {if $product.unit_price_full}
-                <div class="">{$product.unit_price_full}</div>
-            {/if}
-        </div>
+
+
+        {if is_array($product.customizations) && $product.customizations|count}
+            {block name='cart_detailed_product_line_customization'}
+                <div class="">
+                    {foreach from=$product.customizations item="customization"}
+                        <a href="#" data-toggle="modal"
+                           data-target="#product-customizations-modal-{$customization.id_customization}">{l s='Product customization' d='Shop.Theme.Catalog'}</a>
+                        <div class="modal fade customization-modal"
+                             id="product-customizations-modal-{$customization.id_customization}" tabindex="-1"
+                             role="dialog" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">{l s='Product customization' d='Shop.Theme.Catalog'}</h4>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="{l s='Close' d='Shop.Theme.Global'}">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        {foreach from=$customization.fields item="field"}
+                                            <div class="product-customization-line row">
+                                                <div class="col-sm-3 col-4 label">
+                                                    {$field.label}
+                                                </div>
+                                                <div class="col-sm-9 col-8 value">
+                                                    {if $field.type == 'text'}
+                                                        {if (int)$field.id_module}
+                                                            {$field.text nofilter}
+                                                        {else}
+                                                            {$field.text}
+                                                        {/if}
+                                                    {elseif $field.type == 'image'}
+                                                        <img src="{$field.image.small.url}">
+                                                    {/if}
+                                                </div>
+                                            </div>
+                                        {/foreach}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {/foreach}
+                </div>
+            {/block}
+        {/if}
+        {*<div id="_mobile_cart_delete_{$product.id_product}"></div>*}
     </div>
-    {* end first col *}
-
-
     <div>
-        <div class="">
+        <div class="c-cart__price">
             {if isset($product.is_gift) && $product.is_gift}
-                <span class="">{$product.quantity}</span>
+                <span>{$product.quantity}</span>
             {else}
-                <div>
+                <div class="c-cart-input__quantity">
                     <input
-                            class="js-cart-line-product-quantity"
+                            class="/js js-cart-line-product-quantity"
                             data-down-url="{$product.down_quantity_url}"
                             data-up-url="{$product.up_quantity_url}"
                             data-update-url="{$product.update_quantity_url}"
@@ -133,39 +137,34 @@
                     />
                 </div>
             {/if}
-            <span class="product-price">
-              <strong>
+
+            <span class="u-font-weight-bold u-ml-3">
                 {if isset($product.is_gift) && $product.is_gift}
                     <span class="gift">{l s='Gift' d='Shop.Theme.Checkout'}</span>
                 {else}
                     {$product.total}
                 {/if}
-              </strong>
             </span>
-            <div class="cart-line-product-actions">
-                <a
-                        class="remove-from-cart"
-                        rel="nofollow"
-                        href="{$product.remove_from_cart_url}"
-                        data-link-action="delete-from-cart"
-                        data-id-product="{$product.id_product|escape:'javascript'}"
-                        data-id-product-attribute="{$product.id_product_attribute|escape:'javascript'}"
-                        data-id-customization="{$product.id_customization|escape:'javascript'}"
-                >
-                    {if !isset($product.is_gift) || !$product.is_gift}
-                        {l s='Supprimer' d='Shop.Theme.Checkout'}
-                    {/if}
-                </a>
+        </div>
 
-                {block name='hook_cart_extra_product_actions'}
-                    {hook h='displayCartExtraProductActions' product=$product}
-                {/block}
+        <div class="cart-line-product-actions">
 
-            </div>
+            {block name='hook_cart_extra_product_actions'}
+                {hook h='displayCartExtraProductActions' product=$product}
+            {/block}
 
         </div>
     </div>
+
+
+    {*        <div class="">*}
+    {*            <span class="{if $product.has_discount} current-price-discount{/if}">{$product.price}</span>*}
+    {*            {if $product.unit_price_full}*}
+    {*                <div class="">{$product.unit_price_full}</div>*}
+    {*            {/if}*}
+    {*        </div>*}
 </div>
+{* end first col *}
 
 {* end product-line-grid *}
 
