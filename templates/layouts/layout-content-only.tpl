@@ -27,15 +27,5 @@
 {block name='header'}{/block}
 {block name='left_column'}{/block}
 {block name='right_column'}{/block}
-
-{block name='content_wrapper'}
-  <div id="content-wrapper" class="{block name='contentWrapperClass'}content-only{/block}">
-    {hook h="displayContentWrapperTop"}
-    {block name='content'}
-      <p>Hello world! This is HTML5 Boilerplate.</p>
-    {/block}
-    {hook h="displayContentWrapperBottom"}
-  </div>
-{/block}
-
+{block name='contentWrapperClass'}o-wrapper content-only{/block}
 {block name='footer'}{/block}

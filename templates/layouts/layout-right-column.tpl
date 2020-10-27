@@ -25,8 +25,4 @@
 {extends file='layouts/layout-both-columns.tpl'}
 
 {block name='left_column'}{/block}
-
-{block name='displayBeforeColumns'}<div class="o-wrapper"><div class="row">{/block}
-{block name='displayAfterColumns'}</div></div>{/block}
-{block name='leftColumnClass'} col-lg-3{/block}
 {block name='contentWrapperClass'} col-lg-9{/block}

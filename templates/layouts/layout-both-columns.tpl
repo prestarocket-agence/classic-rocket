@@ -52,15 +52,15 @@
     {include file='_partials/notifications.tpl'}
 {/block}
 {block name='wrapper'}
-    <div id="wrapper" class="o-wrapper">
+    <div id="wrapper" class="{block name='wrapperClass'}o-wrapper{/block}">
         {hook h="displayWrapperTop"}
         {*        {block name='breadcrumb'}*}
         {*            {include file='_partials/breadcrumb.tpl'}*}
         {*        {/block}*}
         {block name="displayBeforeColumns"}
             {* if need to wrap in row *}
+            <div class="row">
         {/block}
-
 
         {block name="content_wrapper"}
             <main id="content-wrapper" class="{block name='contentWrapperClass'}col-lg-6{/block}">
@@ -93,6 +93,7 @@
         {/block}
         {block name="displayAfterColumns"}
             {* if need to wrap in row => close div row*}
+            </div>
         {/block}
         {hook h="displayWrapperBottom"}
     </div>

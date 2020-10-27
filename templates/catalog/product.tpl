@@ -28,9 +28,9 @@
     <link rel="canonical" href="{$product.canonical_url}">
 {/block}
 
+
 {block name='content'}
-    <section id="main" class="o-wrapper">
-        <div class="row">
+    <section id="main" class="row">
             <div class="col-lg-5 offset-lg-2 u-order-1">
                 {block name='page_content_container'}
                     <section class="page-content--product" id="content">
@@ -129,7 +129,6 @@
 
                 </div>
             </div>
-        </div>
 
         {block name='product_accessories'}
             {if $accessories}

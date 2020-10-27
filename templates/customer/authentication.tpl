@@ -28,7 +28,7 @@
     {include file="customer/_partials/header.tpl"}
 {/block}
 
-{block name='contentWrapperClass'}col-12 col-lg-8 offset-lg-2{/block}
+{block name='contentWrapperClass'}{/block}
 
 {block name='page_title'}
   {l s='Log in to your account' d='Shop.Theme.Customeraccount'}
