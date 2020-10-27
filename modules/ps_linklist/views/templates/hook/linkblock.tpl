@@ -25,7 +25,7 @@
 
 {foreach from=$linkBlocks item=$linkBlock name=linkBlocks}
     {if $smarty.foreach.linkBlocks.first}
-        <div class="{if $smarty.foreach.linkBlocks.first}offset-0 offset-lg-1{/if} col-12 col-lg-3 c-footer-item">
+        <div class="offset-0 offset-lg-1 col-12 col-lg-3 c-footer-item">
             {assign var=_expand_id value=10|mt_rand:100000}
 
 

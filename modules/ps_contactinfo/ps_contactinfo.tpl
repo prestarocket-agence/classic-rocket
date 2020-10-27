@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<div class="">
+<div class="col-12 col-lg-3 c-footer-item">
     <a href="#footer_store_info" class="c-footer-item__title" data-toggle="collapse">
         <p class="c-footer-item__title">{l s='Store information' d='Shop.Theme.Global'}</p>
     </a>

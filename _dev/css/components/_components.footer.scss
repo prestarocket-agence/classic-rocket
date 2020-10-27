@@ -1,7 +1,5 @@
 .c-footer {
-  align-items: flex-start;
-  padding-top: $spacer*4.5;
-  margin-bottom: $spacer*4;
+  padding: $spacer*4.5 0 $spacer*4;
 }
 
 .c-footer-item {
@@ -19,9 +17,4 @@
 .c-footer__newsletter {
   padding: $spacer*2;
   background-color: $gray-light;
-}
-
-.c-footer__bottom {
-  display: flex;
-  justify-content: space-between;
 }
