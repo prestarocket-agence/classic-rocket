@@ -23,18 +23,20 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<div class="">
-    <p class="c-footer-item__title">{l s='Store information' d='Shop.Theme.Global'}</p>
-{*    <a href="#footer_store_info" class="u-txt-black" data-toggle="collapse">{l s='Store information' d='Shop.Theme.Global'}</a>*}
+<div class="col-12 col-lg-3 c-footer-item">
+    <a href="#footer_store_info" class="c-footer-item__title" data-toggle="collapse">
+        <p class="c-footer-item__title">{l s='Store information' d='Shop.Theme.Global'}</p>
+    </a>
 
-
-  <ul id="footer_store_info" class="u-txt-dark u-mb-3 collapse show" data-collapse-hide-mobile>
+  <ul id="footer_store_info" class="u-txt-dark collapse show" data-collapse-hide-mobile>
+      <li class="u-mb-1">
       {$contact_infos.address.formatted nofilter}
+      </li>
       {if $contact_infos.phone}
         {* [1][/1] is for a HTML tag. *}
         {l s='Call us: [1]%phone%[/1]'
           sprintf=[
-          '[1]' => '<li>',
+          '[1]' => '<li class="u-mb-1">',
           '[/1]' => '</li>',
           '%phone%' => $contact_infos.phone
           ]
@@ -47,7 +49,7 @@
         {l
           s='Fax: [1]%fax%[/1]'
           sprintf=[
-            '[1]' => '<li>',
+            '[1]' => '<li class="u-mb-1">',
             '[/1]' => '</li>',
             '%fax%' => $contact_infos.fax
           ]
@@ -60,7 +62,7 @@
         {l
           s='[1]%email%[/1]'
           sprintf=[
-            '[1]' => '<li><a class="u-txt-dark" href="mailto:'|cat:$contact_infos.email|cat:'" class="dropdown">',
+            '[1]' => '<li class="u-mb-1"><a class="u-txt-dark" href="mailto:'|cat:$contact_infos.email|cat:'" class="dropdown">',
             '[/1]' => '</a></li>',
             '%email%' => $contact_infos.email
           ]

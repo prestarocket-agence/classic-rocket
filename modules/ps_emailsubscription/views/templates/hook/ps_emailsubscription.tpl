@@ -29,7 +29,7 @@
        class="u-font-weight-bold">{l s='Get our latest news and special sales' d='Shop.Theme.Global'}</p>
     <form action="{$urls.pages.index}#footer" method="post" class="needs-validation">
         <input type="hidden" name="action" value="0">
-        <div class="input-group u-d-flex u-mb-4">
+        <div class="input-group u-d-flex u-mb-2">
             <input
                     name="email"
                     class="form-control{if isset($nw_error) and $nw_error} is-invalid{/if} u-mr-2"

@@ -29,7 +29,7 @@
 {block name='right_column'}{/block}
 
 {block name='content_wrapper'}
-  <div id="content-wrapper" class="o-wrapper {block name='contentWrapperClass'}content-only{/block}">
+  <div id="content-wrapper" class="{block name='contentWrapperClass'}content-only{/block}">
     {hook h="displayContentWrapperTop"}
     {block name='content'}
       <p>Hello world! This is HTML5 Boilerplate.</p>

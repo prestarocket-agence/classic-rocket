@@ -36,7 +36,7 @@
             {hook h='displayFooterAfter'}
         {/block}
     </div>
-    <div class="c-footer__bottom">
+    <div class="o-layout o-layout--center-y">
 
         {* To call CMS links block *}
 

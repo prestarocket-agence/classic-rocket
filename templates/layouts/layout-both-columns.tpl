@@ -42,28 +42,34 @@
     {include file='catalog/_partials/product-activation.tpl'}
 {/block}
 
-<header id="header" class="c-header">
+
+{if $page.page_name !== "authentication"}
     {block name='header'}
         {include file='_partials/header.tpl'}
     {/block}
-</header>
+{else}
+    {block name="header"}
+        {include file="customer/_partials/header.tpl"}
+    {/block}
+{/if}
+
 
 {block name='notifications'}
     {include file='_partials/notifications.tpl'}
 {/block}
 {block name='wrapper'}
-    <div id="wrapper">
+    <div id="wrapper" class="o-wrapper">
         {hook h="displayWrapperTop"}
-        {block name='breadcrumb'}
-            {include file='_partials/breadcrumb.tpl'}
-        {/block}
+        {*        {block name='breadcrumb'}*}
+        {*            {include file='_partials/breadcrumb.tpl'}*}
+        {*        {/block}*}
         {block name="displayBeforeColumns"}
             {* if need to wrap in row *}
         {/block}
 
 
         {block name="content_wrapper"}
-            <main id="content-wrapper" class="o-wrapper {block name='contentWrapperClass'}col-lg-6{/block}">
+            <main id="content-wrapper" class="{block name='contentWrapperClass'}col-lg-6{/block}">
                 {hook h="displayContentWrapperTop"}
                 {block name="content"}
                     <p>Hello world! This is HTML5 Boilerplate.</p>
