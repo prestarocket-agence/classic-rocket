@@ -37,18 +37,22 @@
                         <p class="u-h4 u-mb-0">{l s='Shopping Cart' d='Shop.Theme.Checkout'}</p>
                     </div>
                     <div class="/js js-cart__card-body">
-{*                        <div class="" role="status"><span*}
-{*                                    class="sr-only">{l s='Loading...' d='Shop.Theme.Global'}</span>*}
-{*                        </div>*}
+                        {*                        <div class="" role="status"><span*}
+                        {*                                    class="sr-only">{l s='Loading...' d='Shop.Theme.Global'}</span>*}
+                        {*                        </div>*}
                         {block name='cart_overview'}
                             {include file='checkout/_partials/cart-detailed.tpl' cart=$cart}
                         {/block}
                     </div>
                 </div>
 
+                {block name="ps_carriercomparison"}
+                    {widget name="ps_carriercomparison" hook="displayShoppingCart" cart=$cart}
+                {/block}
+
                 {block name='continue_shopping'}
-                    <a class="btn btn-link" href="{$urls.pages.index}">
-                       {include file="_partials/icon.tpl" icon="chevron-left"}
+                    <a class="btn btn-link u-mb-2" href="{$urls.pages.index}">
+                        {include file="_partials/icon.tpl" icon="chevron-left"}
                         {l s='Continue shopping' d='Shop.Theme.Actions'}
                     </a>
                 {/block}
@@ -57,6 +61,7 @@
                 {block name='hook_shopping_cart_footer'}
                     {hook h='displayShoppingCartFooter'}
                 {/block}
+
             </div>
 
             <!-- Right Block: cart subtotal & cart total -->
@@ -64,20 +69,19 @@
 
                 {block name='cart_summary'}
                     <div class="c-cart-summary c-panel u-mb-2">
-                        <div>
-                            {block name='hook_shopping_cart'}
-                                {hook h='displayShoppingCart'}
-                            {/block}
+                        <div class="c-panel__head">
+                            <p class="u-h4 u-mb-0">{l s='Récapitulatif' d='Shop.Theme.Global'}</p>
+                        </div>
+                        {block name='hook_shopping_cart'}
+                            {hook h='displayShoppingCart'}
+                        {/block}
 
-                            {block name='cart_totals'}
-                                {include file='checkout/_partials/cart-detailed-totals.tpl' cart=$cart}
-                            {/block}
-                        </div>
-                        <div>
-                            {block name='cart_actions'}
-                                {include file='checkout/_partials/cart-detailed-actions.tpl' cart=$cart}
-                            {/block}
-                        </div>
+                        {block name='cart_totals'}
+                            {include file='checkout/_partials/cart-detailed-totals.tpl' cart=$cart}
+                        {/block}
+                        {block name='cart_actions'}
+                            {include file='checkout/_partials/cart-detailed-actions.tpl' cart=$cart}
+                        {/block}
 
                     </div>
                 {/block}
@@ -90,4 +94,18 @@
 
         </div>
     </section>
+    {block name='cart_summary_mobile'}
+        <div class="c-cart-summary__mobile">
+            <div class="o-layout u-font-weight-bold">
+                <span class="label">{l s='Total de votre panier' d='Shop.Theme.Global'}</span>
+                <span class="value">{$cart.totals.total_including_tax.value}</span>
+            </div>
+
+            <hr>
+
+            {block name='cart_actions'}
+                {include file='checkout/_partials/cart-detailed-actions.tpl' cart=$cart}
+            {/block}
+        </div>
+    {/block}
 {/block}

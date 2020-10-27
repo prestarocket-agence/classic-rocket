@@ -28,16 +28,18 @@
         {block name='product_quantity'}
             <div class="row c-form__row">
                 <label class="col-lg-3 u-mb-0" for="quantity_wanted">{l s='Quantity' d='Shop.Theme.Catalog'}</label>
-                <input
-                        type="number"
-                        name="qty"
-                        id="quantity_wanted"
-                        value="{$product.quantity_wanted}"
-                        class="col-lg-3"
-                        min="{$product.minimal_quantity}"
-                        aria-label="{l s='Quantity' d='Shop.Theme.Actions'}"
-                        {if isset($product.product_url)}data-update-url="{$product.product_url}"{/if}
-                >
+                <div class="c-form__quantity">
+                    <input
+                            type="number"
+                            name="qty"
+                            id="quantity_wanted"
+                            value="{$product.quantity_wanted}"
+                            class="col-lg-3"
+                            min="{$product.minimal_quantity}"
+                            aria-label="{l s='Quantity' d='Shop.Theme.Actions'}"
+                            {if isset($product.product_url)}data-update-url="{$product.product_url}"{/if}
+                    >
+                </div>
             </div>
             <button
                     class="btn btn-primary btn-lg /js js-add-to-cart"
@@ -54,17 +56,17 @@
 
         {block name='product_availability'}
             <span id="product-availability">
-        {if $product.show_availability && $product.availability_message}
-            {if $product.availability == 'available'}
-                <i class="material-icons rtl-no-flip product-available text-success">&#xE5CA;</i>
-            {elseif $product.availability == 'last_remaining_items'}
-                <i class="material-icons product-last-itemstext-warning">&#xE002;</i>
-            {else}
-                <i class="material-icons product-unavailable text-danger">&#xE14B;</i>
-            {/if}
-            {$product.availability_message}
-        {/if}
-      </span>
+                {if $product.show_availability && $product.availability_message}
+                    {if $product.availability == 'available'}
+                        <i class="material-icons rtl-no-flip product-available text-success">&#xE5CA;</i>
+                    {elseif $product.availability == 'last_remaining_items'}
+                        <i class="material-icons product-last-itemstext-warning">&#xE002;</i>
+                    {else}
+                        <i class="material-icons product-unavailable text-danger">&#xE14B;</i>
+                    {/if}
+                    {$product.availability_message}
+                {/if}
+            </span>
         {/block}
 
         {block name='product_minimal_quantity'}

@@ -13,6 +13,13 @@
   }
 }
 
+.c-form__quantity {
+  & > div {
+    display: flex;
+    width: 300px;
+  }
+}
+
 .c-form__footer {
   display: flex;
   justify-content: center;

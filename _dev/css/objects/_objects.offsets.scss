@@ -23,4 +23,13 @@
       @extend .offset;
     }
   }
+
+  $offsets: 0;
+
+  @each $offset in $offsets {
+    .offset-#{$offset} {
+      @include make-col-offset($offset);
+      @extend .offset;
+    }
+  }
 }
