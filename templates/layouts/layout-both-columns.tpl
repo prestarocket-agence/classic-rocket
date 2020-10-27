@@ -43,15 +43,9 @@
 {/block}
 
 
-{if $page.page_name !== "authentication"}
-    {block name='header'}
-        {include file='_partials/header.tpl'}
-    {/block}
-{else}
-    {block name="header"}
-        {include file="customer/_partials/header.tpl"}
-    {/block}
-{/if}
+{block name='header'}
+    {include file='_partials/header.tpl'}
+{/block}
 
 
 {block name='notifications'}

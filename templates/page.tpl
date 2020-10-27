@@ -25,29 +25,29 @@
 {extends file=$layout}
 
 {block name='content'}
-  <div id="main" class="{block name='pageWrapperClass'}page-wrapper {/block}page-wrapper--{$page.page_name}">
+    <div id="main" class="{block name='pageWrapperClass'}page-wrapper {/block}page-wrapper--{$page.page_name}">
 
-    {block name='page_header_container'}
-      {block name='page_title' hide}
-        <header class="{block name='pageHeaderClass'}page-header {/block}page-header--{$page.page_name}">
-          <p class="u-h3 u-mb-2">{$smarty.block.child}</p>
-        </header>
-      {/block}
-    {/block}
-
-    {block name='page_content_container'}
-      <div id="content" class="{block name='pageContentClass'}page-content {/block}page-content--{$page.page_name}">
-        {block name='page_content_top'}{/block}
-        {block name='page_content'}
-          <!-- Page content -->
+        {block name='page_header_container'}
+            {block name='page_title' hide}
+                <header class="{block name='pageHeaderClass'}page-header {/block}page-header--{$page.page_name}">
+                    <h1>{$smarty.block.child}</h1>
+                </header>
+            {/block}
         {/block}
-      </div>
-    {/block}
 
-    {block name='page_footer_container'}
-      <footer class="{block name='pageFooterClass'}page-footer {/block}page-footer--{$page.page_name}">{block name='page_footer'}{/block}</footer>
-    {/block}
+        {block name='page_content_container'}
+            <div id="content"
+                 class="{block name='pageContentClass'}page-content {/block}page-content--{$page.page_name}">
+                {block name='page_content_top'}{/block}
+                {block name='page_content'}
+                    <!-- Page content -->
+                {/block}
+            </div>
+        {/block}
 
-  </div>
+        {block name='page_footer_container'}
+            <footer class="{block name='pageFooterClass'}page-footer {/block}page-footer--{$page.page_name}">{block name='page_footer'}{/block}</footer>
+        {/block}
 
+    </div>
 {/block}
