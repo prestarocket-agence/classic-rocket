@@ -27,5 +27,5 @@
 {block name='header'}{/block}
 {block name='left_column'}{/block}
 {block name='right_column'}{/block}
-{block name='contentWrapperClass'}o-wrapper content-only{/block}
+{block name='contentWrapperClass'}content-only{/block}
 {block name='footer'}{/block}
