@@ -1,7 +1,14 @@
 .c-panel {
   padding: $spacer*1.5;
-  border: solid 1px $gray-light;
   margin-bottom: $spacer;
+}
+.c-panel--lg{
+  padding: $spacer*1.5 $spacer*2;
+  background-color: $white;
+}
+.c-panel--border{
+  border: solid 1px $gray-light;
+
 }
 
 .c-panel__head {

@@ -27,8 +27,8 @@
 {block name="header"}
     {include file="customer/_partials/header.tpl"}
 {/block}
-
-{block name='contentWrapperClass'}{/block}
+{block name='bodyClass'} u-bg-light{/block}
+{block name='contentWrapperClass'} c-panel c-panel--lg{/block}
 
 {block name='page_title'}
   {l s='Log in to your account' d='Shop.Theme.Customeraccount'}

@@ -32,7 +32,7 @@
             <div class="col-12 col-lg-8">
 
                 <!-- cart products detailed -->
-                <div class="c-panel u-mb-2">
+                <div class="c-panel c-panel--border u-mb-2">
                     <div class="c-panel__head">
                         <p class="u-h4 u-mb-0">{l s='Shopping Cart' d='Shop.Theme.Checkout'}</p>
                     </div>
@@ -68,7 +68,7 @@
             <div class="col-12 col-lg-4">
 
                 {block name='cart_summary'}
-                    <div class="c-cart-summary c-panel u-mb-2">
+                    <div class="c-cart-summary c-panel c-panel--border u-mb-2">
                         <div class="c-panel__head">
                             <p class="u-h4 u-mb-0">{l s='Récapitulatif' d='Shop.Theme.Global'}</p>
                         </div>
