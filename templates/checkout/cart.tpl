@@ -46,10 +46,6 @@
                     </div>
                 </div>
 
-                {block name="ps_carriercomparison"}
-                    {widget name="ps_carriercomparison" hook="displayShoppingCart" cart=$cart}
-                {/block}
-
                 {block name='continue_shopping'}
                     <a class="btn btn-link u-mb-2" href="{$urls.pages.index}">
                         {include file="_partials/icon.tpl" icon="chevron-left"}
