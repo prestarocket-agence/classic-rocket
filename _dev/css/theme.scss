@@ -5,12 +5,18 @@
 /* SETTINGS */
 @import "node_modules/bootstrap/scss/functions";
 @import "../../../classic-rocket/_dev/css/../../../classic-rocket/_dev/css/settings/settings.colors";
+
 @import "../../../classic-rocket/_dev/css/../../../classic-rocket/_dev/css/settings/settings.bootstrap";
 @import "node_modules/bootstrap/scss/variables";
+
+
 @import "../../../classic-rocket/_dev/css/settings/settings.fonts";
 @import "../../../classic-rocket/_dev/css/settings/settings.prices";
 @import "../../../classic-rocket/_dev/css/settings/settings.search";
 @import "../../../classic-rocket/_dev/css/settings/settings.tags";
+@import "../../../classic-rocket/_dev/css/settings/settings.project";
+
+
 /*
 /*
 /* TOOLS */
@@ -80,6 +86,10 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.select";
 @import "../../../classic-rocket/_dev/css/components/components.separator";
 @import "../../../classic-rocket/_dev/css/components/components.tags";
+
+
+@import "../../../classic-rocket/_dev/css/components/components.project";
+
 
 /*
 /*
