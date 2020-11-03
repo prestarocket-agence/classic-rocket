@@ -15,20 +15,20 @@
     @extend %grid-column;
   }
 
-  $offsets-lg: 1, 2;
-
-  @each $offset-lg in $offsets-lg {
-    .offset-lg-#{$offset-lg} {
-      @include make-col-offset($offset-lg);
-      @extend .offset;
-    }
-  }
-
   $offsets: 0;
 
   @each $offset in $offsets {
     .offset-#{$offset} {
       @include make-col-offset($offset);
+      @extend .offset;
+    }
+  }
+
+  $offsets-lg: 1, 2;
+
+  @each $offset-lg in $offsets-lg {
+    .offset-lg-#{$offset-lg} {
+      @include make-col-offset($offset-lg);
       @extend .offset;
     }
   }
