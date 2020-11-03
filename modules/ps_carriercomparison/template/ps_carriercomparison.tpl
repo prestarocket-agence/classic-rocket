@@ -22,7 +22,7 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-<div class="c-panel u-mb-3 /js js-carrier-compare"
+<div class="c-panel c-panel--border u-mb-3 /js js-carrier-compare"
      data-url="{url entity='module' name='ps_carriercomparison' controller='carrier_comparison'}"
      data-item="{$carrierComparisonInfo|@json_encode}"
      data-method="{$refreshMethod}">

@@ -23,6 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {extends file='page.tpl'}
+{block name='wrapperClass'}{/block}
 {block name='pageWrapperClass'}{/block}
 {block name='page_content_container'}
     <main id="content" class="page-home">

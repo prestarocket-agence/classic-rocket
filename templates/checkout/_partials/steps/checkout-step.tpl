@@ -24,7 +24,7 @@
  *}
 {block name='step'}
     <section id="{$identifier}"
-             class="c-panel {[
+             class="c-panel c-panel--border {[
              'checkout-step'   => true,
              '-current'        => $step_is_current,
              '-reachable'      => $step_is_reachable,

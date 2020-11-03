@@ -31,7 +31,7 @@
     {/block}
 </head>
 
-<body id="{$page.page_name}" class="{$page.body_classes|classnames}">
+<body id="{$page.page_name}" class="{$page.body_classes|classnames}{block name='bodyClass'}{/block}">
 
 {block name='hook_after_body_opening_tag'}
     {hook h='displayAfterBodyOpeningTag'}
@@ -43,30 +43,24 @@
 {/block}
 
 
-{if $page.page_name !== "authentication"}
-    {block name='header'}
-        {include file='_partials/header.tpl'}
-    {/block}
-{else}
-    {block name="header"}
-        {include file="customer/_partials/header.tpl"}
-    {/block}
-{/if}
+{block name='header'}
+    {include file='_partials/header.tpl'}
+{/block}
 
 
 {block name='notifications'}
     {include file='_partials/notifications.tpl'}
 {/block}
 {block name='wrapper'}
-    <div id="wrapper" class="o-wrapper">
+    <div id="wrapper" class="{block name='wrapperClass'}o-wrapper{/block}">
         {hook h="displayWrapperTop"}
         {*        {block name='breadcrumb'}*}
         {*            {include file='_partials/breadcrumb.tpl'}*}
         {*        {/block}*}
         {block name="displayBeforeColumns"}
             {* if need to wrap in row *}
+            <div class="row">
         {/block}
-
 
         {block name="content_wrapper"}
             <main id="content-wrapper" class="{block name='contentWrapperClass'}col-lg-6{/block}">
@@ -99,6 +93,7 @@
         {/block}
         {block name="displayAfterColumns"}
             {* if need to wrap in row => close div row*}
+            </div>
         {/block}
         {hook h="displayWrapperBottom"}
     </div>

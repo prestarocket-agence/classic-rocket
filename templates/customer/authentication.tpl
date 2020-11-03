@@ -23,7 +23,12 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {extends file='page.tpl'}
-{block name='contentWrapperClass'}col-12 col-lg-8 offset-lg-2{/block}
+
+{block name="header"}
+    {include file="customer/_partials/header.tpl"}
+{/block}
+{block name='bodyClass'} u-bg-light{/block}
+{block name='contentWrapperClass'} c-panel c-panel--lg{/block}
 
 {block name='page_title'}
   {l s='Log in to your account' d='Shop.Theme.Customeraccount'}
