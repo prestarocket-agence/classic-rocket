@@ -28,7 +28,6 @@
         <div class="offset-0 offset-lg-1 col-12 col-lg-3 c-footer-item">
             {assign var=_expand_id value=10|mt_rand:100000}
 
-
             <a href="#footer_sub_menu_{$_expand_id}" class=""
                data-toggle="collapse">
                 <p class="c-footer-item__title">{$linkBlock.title}</p>
