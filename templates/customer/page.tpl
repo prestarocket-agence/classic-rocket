@@ -23,28 +23,50 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {extends file='page.tpl'}
+{block name="header"}
+    {include file="customer/_partials/header.tpl"}
+{/block}
+{block name='page_header_container'}{/block}
 
+{block name='bodyClass'} u-bg-light{/block}
+{block name='contentWrapperClass'}{/block}
+{block name='page_title'}
+{/block}
+
+{block name='page_title_account'}
+    <h1><a href="{$urls.pages.my_account}" class="account-link">
+            {l s='Your account' d='Shop.Theme.Customeraccount'}</a></h1>
+{/block}
 {block name='notifications'}{/block}
 
 {block name='page_content_container'}
-  <section id="content" class="{block name='pageContentClass'}page-content {/block}page-content--{$page.page_name}">
-    {block name='page_content_top'}
-      {block name='customer_notifications'}
-        {include file='_partials/notifications.tpl'}
-      {/block}
-    {/block}
-    {block name='page_content'}
-      <!-- Page content -->
-    {/block}
-  </section>
+    <section id="content" class="{block name='pageContentClass'}page-content {/block}page-content--{$page.page_name}">
+
+
+        <div class="row">
+            <div class="col-md-4 col-lg-3">
+                {include file='customer/_partials/my-account-sidebar.tpl'}
+            </div>
+            <div class="col-md-8 col-lg-9">
+                <div class="">
+                    {block name='page_title' hide}
+                        <h2 class="{block name='pageHeaderClass'}{/block}">{$smarty.block.child}</h2>
+                    {/block}
+                    {block name='page_content_top'}
+                        {block name='customer_notifications'}
+                            {include file='_partials/notifications.tpl'}
+                        {/block}
+                    {/block}
+                    {block name='page_content'}
+                        <!-- Page content -->
+                    {/block}
+                </div>
+            </div>
+        </div>
+
+    </section>
 {/block}
 
 {block name='page_footer_container'}
-  <footer class="{block name='pageFooterClass'}page-footer {/block}page-footer--{$page.page_name}">
-      {block name='page_footer'}
-          {block name='my_account_links'}
-              {include file='customer/_partials/my-account-links.tpl'}
-          {/block}
-      {/block}
-  </footer>
+
 {/block}
