@@ -21,7 +21,7 @@
   $col-gutter-width: $grid-gutter-width/2;
 
   $columns-base: 6, 12;
-  $columns-lg: 2, 3, 4, 5, 7, 8, 9;
+  $columns-lg: 2, 3, 4, 5, 7, 8, 9, 10;
 
   @each $column-base in $columns-base {
     .col-#{$column-base} {
