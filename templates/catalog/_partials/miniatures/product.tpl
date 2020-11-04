@@ -29,22 +29,28 @@
             <div class="c-pdt-mini__thumb">
                 {block name='product_thumbnail'}
                     <div class="u-rc u-rc--pdt">
-                    {if $product.cover}
+                        {if $product.cover}
                             <img data-src="{$product.cover.bySize.pdt_540.url}"
-                                    alt="{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}" class="c-pdt-mini__img u-img-fluid /js lazyload" width="{$product.cover.bySize.pdt_540.width}" height="{$product.cover.bySize.pdt_540.height}">
-
-                    {else}
-                            <img data-src="{$urls.no_picture_image.bySize.home_default.url}" alt="{$product.name|truncate:30:'...'}" class="c-pdt-mini__img u-img-fluid /js lazyload">
-                    {/if}
+                                 alt="{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
+                                 class="c-pdt-mini__img u-img-fluid /js lazyload"
+                                 width="{$product.cover.bySize.pdt_540.width}"
+                                 height="{$product.cover.bySize.pdt_540.height}">
+                        {else}
+                            <img data-src="{$urls.no_picture_image.bySize.home_default.url}"
+                                 alt="{$product.name|truncate:30:'...'}"
+                                 class="c-pdt-mini__img u-img-fluid /js lazyload">
+                        {/if}
                     </div>
                 {/block}
             </div>
             <div class="c-pdt-mini__body">
                 {block name='product_brand'}
-                    <p class="">{$product.name}</p>
+                    {if isset($product_manufacturer->id)}
+                        <p class="c-pdt-mini__brand">{$product_manufacturer->name}</p>
+                    {/if}
                 {/block}
                 {block name='product_name'}
-                    <p class="">{$product.name}</p>
+                    <p class="c-pdt-mini__name">{$product.name}</p>
                 {/block}
             </div>
         </div>
