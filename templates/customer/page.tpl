@@ -34,13 +34,13 @@
 {/block}
 
 {block name='page_title_account'}
-    <h1><a href="{$urls.pages.my_account}" class="account-link">
+    <h1 class="u-h3 u-mt-0"><a href="{$urls.pages.my_account}" class="account-link">
             {l s='Your account' d='Shop.Theme.Customeraccount'}</a></h1>
 {/block}
 {block name='notifications'}{/block}
 
 {block name='page_content_container'}
-    <section id="content" class="{block name='pageContentClass'}page-content {/block}page-content--{$page.page_name}">
+    <section id="content" class="u-mb-4 {block name='pageContentClass'}page-content {/block}page-content--{$page.page_name}">
 
 
         <div class="row">
@@ -48,9 +48,9 @@
                 {include file='customer/_partials/my-account-sidebar.tpl'}
             </div>
             <div class="col-md-8 col-lg-9">
-                <div class="">
+                <div class="c-panel c-panel--lg">
                     {block name='page_title' hide}
-                        <h2 class="{block name='pageHeaderClass'}{/block}">{$smarty.block.child}</h2>
+                        <h2 class="u-txt-center{block name='pageHeaderClass'}{/block}">{$smarty.block.child}</h2>
                     {/block}
                     {block name='page_content_top'}
                         {block name='customer_notifications'}

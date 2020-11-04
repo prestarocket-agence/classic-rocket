@@ -1,4 +1,3 @@
-
 <div>
     {$customer.firstname|substr:0:1} {$customer.lastname|substr:0:1}
 
@@ -6,20 +5,34 @@
 </div>
 
 
-<div class="">
+<div class="c-account__link list-group u-mb-3">
 
-  <a class="{if $urls.current_url == $urls.pages.identity} is-active{/if}" id="identity-link" href="{$urls.pages.identity}">
-      {l s='Information' d='Shop.Theme.Customeraccount'}
-  </a>
+    <a class="list-group-item list-group-item-action{if $urls.current_url == $urls.pages.identity} is-active{/if}" id="identity-link"
+       href="{$urls.pages.identity}">
+        {l s='Information' d='Shop.Theme.Customeraccount'}
+    </a>
     {if $customer.addresses|count}
-        <a class="{if $urls.current_url == $urls.pages.addresses} is-active{/if}" id="addresses-link" href="{$urls.pages.addresses}">
+        <a class="list-group-item list-group-item-action{if $urls.current_url == $urls.pages.addresses} is-active{/if}" id="addresses-link"
+           href="{$urls.pages.addresses}">
             {l s='Addresses' d='Shop.Theme.Customeraccount'}
         </a>
     {else}
-        <a class="{if $urls.current_url == $urls.pages.address} is-active{/if}" id="address-link" href="{$urls.pages.address}">
-              {l s='Add first address' d='Shop.Theme.Customeraccount'}
+        <a class="list-group-item list-group-item-action{if $urls.current_url == $urls.pages.address} is-active{/if}" id="address-link"
+           href="{$urls.pages.address}">
+            {l s='Add first address' d='Shop.Theme.Customeraccount'}
         </a>
     {/if}
+
+
+</div>
+
+<div class="c-account__link list-group">
+
+    <a class="list-group-item list-group-item-action" href="{$urls.actions.logout}">
+        {l s='Logout' d='Shop.Theme.Customeraccount'}
+    </a>
+
+
 
 </div>
 {*

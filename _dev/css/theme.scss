@@ -75,6 +75,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.icon";
 
 @import "../../../classic-rocket/_dev/css/components/components.inputadd";
+@import "node_modules/bootstrap/scss/list-group";
 @import "../../../classic-rocket/_dev/css/components/components.media";
 @import "node_modules/bootstrap/scss/modal";
 @import "../../../classic-rocket/_dev/css/components/components.pagination";
