@@ -48,7 +48,7 @@
                 {include file='customer/_partials/my-account-sidebar.tpl'}
             </div>
             <div class="col-md-8 col-lg-9">
-                <div class="c-panel c-panel--lg">
+                <div class="c-panel c-panel--lg"{block name="accountImgBg"}{/block}>
                     {block name='page_title' hide}
                         <h2 class="u-txt-center{block name='pageHeaderClass'}{/block}">{$smarty.block.child}</h2>
                     {/block}
