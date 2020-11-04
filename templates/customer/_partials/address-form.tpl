@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='address_form'}
-  <div class="c-checkout-panel__form /js js-address-form">
+  <div class="{if $page.page_name === "checkout"}c-checkout-panel__form {/if}/js js-address-form">
 
     {block name='address_form_errors'}
       {include file='_partials/form-errors.tpl' errors=$errors['']}
