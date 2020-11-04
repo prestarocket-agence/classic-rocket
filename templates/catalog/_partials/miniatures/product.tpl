@@ -23,96 +23,30 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='product_miniature_item'}
-    <article class="{if isset($col)}{$col}{else}col-lg-3{/if} c-pdt-mini__card /js js-product-miniature"
+    <article class="{if isset($col)}{$col}{else}col-lg-3{/if} c-pdt-mini /js js-product-miniature"
              data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}">
-        <a href="{$product.url}" class="/js rc">
-            {block name='product_thumbnail'}
-                <div class="c-pdt-mini__thumbnail">
+        <div class="c-pdt-mini__card">
+            <div class="c-pdt-mini__thumb">
+                {block name='product_thumbnail'}
+                    <div class="u-rc u-rc--pdt">
                     {if $product.cover}
-                        <img
-                                data-src="{$product.cover.bySize.home_default.url}"
-                                alt="{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
-                                data-full-size-image-url="{$product.cover.large.url}"
-                                class="u-img-fluid lazyload"
-                        >
-                    {elseif isset($urls.no_picture_image)}
-                        <img class="u-img-fluid lazyload" src="{$urls.no_picture_image.bySize.home_default.url}">
+                            <img data-src="{$product.cover.bySize.pdt_540.url}"
+                                    alt="{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}" class="c-pdt-mini__img u-img-fluid /js lazyload" width="{$product.cover.bySize.pdt_540.width}" height="{$product.cover.bySize.pdt_540.height}">
+
                     {else}
-                        <img class="u-img-fluid lazyload"
-                             src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
+                            <img data-src="{$urls.no_picture_image.bySize.home_default.url}" alt="{$product.name|truncate:30:'...'}" class="c-pdt-mini__img u-img-fluid /js lazyload">
                     {/if}
-
-                    {block name='product_flags'}
-                        {if $product.has_discount && $product.discount_type === 'percentage'}
-                            <div class="c-tag c-tag--discount c-pdt-mini__tag">{$product.discount_percentage}</div>
-                        {/if}
-                    {/block}
-                </div>
-            {/block}
-            {*                <div class="highlighted-informations text-center p-2{if !$product.main_variants} no-variants{/if} visible--desktop">*}
-            {*                    {block name='quick_view'}*}
-            {*                        <span class="quick-view" data-link-action="quickview">*}
-            {*                      <i class="material-icons search">&#xE8B6;</i> {l s='Quick view' d='Shop.Theme.Actions'}*}
-            {*                  </span>*}
-            {*                    {/block}*}
-
-            {*                    {block name='product_variants'}*}
-            {*                        {if $product.main_variants}*}
-            {*                            {include file='catalog/_partials/variant-links.tpl' variants=$product.main_variants}*}
-            {*                        {/if}*}
-            {*                    {/block}*}
-            {*                </div>*}
-
-            {* end card-img-top*}
-
-            <div>
-                {block name='product_name'}
-                    <p class="u-txt-sm u-mb-1 u-txt-black">{$product.name|truncate:40:'...'}</p>
-                {/block}
-
-                {*                    {block name='product_reviews'}*}
-                {*                        {hook h='displayProductListReviews' product=$product}*}
-                {*                    {/block}*}
-
-
-                {block name='product_price_and_shipping'}
-                    {if $product.show_price}
-                        <div class="">
-                            {if !$product.has_discount}
-                                {hook h='displayProductPriceBlock' product=$product type="before_price"}
-                                <span class="c-price-sm c-price--current">{$product.price}</span>
-                            {else}
-                                {hook h='displayProductPriceBlock' product=$product type="before_price"}
-                                <span class="c-price-sm c-price--discount">{$product.price}</span>
-                                {hook h='displayProductPriceBlock' product=$product type="old_price"}
-                                <span class="c-price-sm c-price--old">{$product.regular_price}</span>
-                            {/if}
-
-                            {hook h='displayProductPriceBlock' product=$product type='unit_price'}
-
-                            {hook h='displayProductPriceBlock' product=$product type='weight'}
-                        </div>
-                    {/if}
+                    </div>
                 {/block}
             </div>
-            {* end card body*}
-
-            {*            {block name='product_flags'}*}
-            {*                <ul>*}
-            {*                    {foreach from=$product.flags item=flag}*}
-            {*                        <li class="{$flag.type}">{$flag.label}</li>*}
-            {*                    {/foreach}*}
-            {*                    {if $product.has_discount}*}
-            {*                        {if $product.discount_type === 'percentage'}*}
-            {*                            <li class="">{$product.discount_percentage}</li>*}
-            {*                        {elseif $product.discount_type === 'amount'}*}
-            {*                            <li class="">{$product.discount_amount_to_display}</li>*}
-            {*                        {/if}*}
-            {*                    {/if}*}
-            {*                </ul>*}
-            {*            {/block}*}
-            {* end card product*}
-
-        </a>
+            <div class="c-pdt-mini__body">
+                {block name='product_brand'}
+                    <p class="">{$product.name}</p>
+                {/block}
+                {block name='product_name'}
+                    <p class="">{$product.name}</p>
+                {/block}
+            </div>
+        </div>
     </article>
 {/block}

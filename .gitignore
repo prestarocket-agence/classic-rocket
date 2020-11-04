@@ -133,3 +133,4 @@ tools/build/releases/*
 /assets/js/theme.js.LICENSE.txt
 /assets/cache
 /_dev/css_old
+/templates/catalog/_partials/miniatures/product.old.tpl
