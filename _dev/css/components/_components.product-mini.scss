@@ -1,11 +1,40 @@
+$pdt-mini-margin-bottom: $spacer;
+$pm-card-bg-color : red;
+$pm-card-radius : null;
+
+$pm-card-thumb-margin-bottom : $spacer;
+
+$pm-card-body-padding-x: 0;
+$pm-card-body-padding-y: 0;
+$pm-card-body-bg-color: null;
+
+
+$pm-card-img-border : null;
+$pm-card-img-radius : null;
+
+.c-pdt-list .c-pdt-mini {
+  margin-bottom: $pdt-mini-margin-bottom;
+}
 .c-pdt-mini__card {
-  padding-bottom: $spacer;
-  margin-bottom: $spacer;
+  background-color: $pm-card-bg-color;
+  border-radius: $pm-card-radius;
+
 }
 
 .c-pdt-mini__thumbnail {
   position: relative;
-  margin-bottom: $spacer;
+  margin-bottom: $pm-card-thumb-margin-bottom;
+}
+.c-pdt-mini__img {
+  border-radius: $pm-card-img-radius;
+
+  $pm-card-img-border : null;
+  $pm-card-img-radius : null;
+}
+
+.c-pdt-mini__body {
+  background-color:$pm-card-body-bg-color ;
+  padding: $pm-card-body-padding-y $pm-card-body-padding-x;
 }
 
 .c-pdt-mini__tag {

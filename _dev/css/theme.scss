@@ -103,6 +103,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/utilities/utilities.flex";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.img";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.position";
+@import "../../../classic-rocket/_dev/css/utilities/utilities.ratio";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.spacer";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.text";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.visible";
