@@ -16,6 +16,7 @@
   }
 
   $offsets: 0;
+  $offsets-lg: 1, 2;
 
   @each $offset in $offsets {
     .offset-#{$offset} {
@@ -24,12 +25,12 @@
     }
   }
 
-  $offsets-lg: 1, 2;
-
-  @each $offset-lg in $offsets-lg {
-    .offset-lg-#{$offset-lg} {
-      @include make-col-offset($offset-lg);
-      @extend .offset;
+  @include media-breakpoint-up(lg) {
+    @each $offset-lg in $offsets-lg {
+      .offset-lg-#{$offset-lg} {
+        @include make-col-offset($offset-lg);
+        @extend .offset;
+      }
     }
   }
 }
