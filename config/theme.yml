@@ -153,3 +153,4 @@ theme_settings:
 dependencies:
   modules:
     - ps_searchbarjqauto
+    - prestarockettheme
