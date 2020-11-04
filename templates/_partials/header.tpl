@@ -47,7 +47,7 @@
         <div class="o-wrapper">
             <div class="o-layout o-layout--center-y c-header__content">
                 <a href="{$urls.base_url}" class="c-header__logo">
-                    <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
+                    <img class="logo img-fluid" src="{if isset($modules.prestarockettheme.logo_svg)}{$modules.prestarockettheme.logo_svg}{else}{$shop.logo}{/if}" alt="{$shop.name}">
                 </a>
                 <div class="c-header__searchbar u-order-mobile-2">
                     {hook h='displaySearch'}

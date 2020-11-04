@@ -31,7 +31,7 @@
                     <p class="u-mb-0">{l s='Espace sécurisé' d='Shop.Theme.Global'}</p>
                 </div>
                 <a href="{$urls.base_url}">
-                    <img class="u-img-fluid" src="{$shop.logo}" alt="{$shop.name} {l s='logo' d='Shop.Theme.Global'}">
+                    <img class="u-img-fluid" src="{if isset($modules.prestarockettheme.logo_svg)}{$modules.prestarockettheme.logo_svg}{else}{$shop.logo}{/if}" alt="{$shop.name}">
                 </a>
                 <div>
                     {widget name="ps_contactinfo" hook="displayNav"}
