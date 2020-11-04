@@ -8,9 +8,18 @@
 
 <div class="">
 
-  <a class="{if $urls.current_url =="$urls.pages.identity"} is-active{/if}" id="identity-link" href="{$urls.pages.identity}">
+  <a class="{if $urls.current_url == $urls.pages.identity} is-active{/if}" id="identity-link" href="{$urls.pages.identity}">
       {l s='Information' d='Shop.Theme.Customeraccount'}
   </a>
+    {if $customer.addresses|count}
+        <a class="{if $urls.current_url == $urls.pages.addresses} is-active{/if}" id="addresses-link" href="{$urls.pages.addresses}">
+            {l s='Addresses' d='Shop.Theme.Customeraccount'}
+        </a>
+    {else}
+        <a class="{if $urls.current_url == $urls.pages.address} is-active{/if}" id="address-link" href="{$urls.pages.address}">
+              {l s='Add first address' d='Shop.Theme.Customeraccount'}
+        </a>
+    {/if}
 
 </div>
 {*
