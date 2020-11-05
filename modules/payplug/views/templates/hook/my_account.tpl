@@ -21,11 +21,9 @@
 *}
 
 <!-- MODULE Payplug -->
-    <a class="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="savedcards-link" href="{$payplug_cards_url|escape:'htmlall':'UTF-8'}">
-          <span class="link-item">
-            <i class="material-icons">&#xE870;</i>
-              {l s='Saved cards' mod='payplug'}
-              {*{l s='Saved cards' d='Modules.Payplug.Shop'}*}
-          </span>
-    </a>
+<a class="c-account-sidebar__row {if $urls.current_url == $urls.pages} is-active{/if}" id="savedcards-link"
+   href="{$payplug_cards_url|escape:'htmlall':'UTF-8'}">
+    {include file="_partials/icon.tpl" icon="credit-card" class="c-icon--16 u-mr-2"}
+    {l s='Saved cards' mod='payplug'}
+</a>
 <!-- END : MODULE Payplug -->

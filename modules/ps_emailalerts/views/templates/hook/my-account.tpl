@@ -23,10 +23,9 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<a class="col-lg-4 col-sm-6 col-12" id="emailsalerts"
-   href="{url entity='module' name='ps_emailalerts' controller='account'}" title="{l s='My alerts' d='Shop.Theme.Catalog'}">
-  <span class="link-item">
-  {include file="_partials/icon.tpl" icon="envelope-open" class=""}
+<a class="c-account-sidebar__row {if $urls.current_url == $urls.pages} is-active{/if}" id="emailsalerts"
+   href="{url entity='module' name='ps_emailalerts' controller='account'}"
+   title="{l s='My alerts' d='Shop.Theme.Catalog'}">
+    {include file="_partials/icon.tpl" icon="envelope" class="c-icon--16 u-mr-2"}
     {l s='My alerts' d='Shop.Theme.Catalog'}
-  </span>
 </a>

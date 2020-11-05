@@ -37,7 +37,7 @@
         <a class="c-account-sidebar__row {if $urls.current_url == $urls.pages.addresses} is-active{/if}"
            id="addresses-link"
            href="{$urls.pages.addresses}">
-            {include file="_partials/icon.tpl" icon="geo-alt-fill" class="c-icon--16 u-mr-2"}
+            {include file="_partials/icon.tpl" icon="geo-alt" class="c-icon--16 u-mr-2"}
             {l s='Mes adresses' d='Shop.Theme.Customeraccount'}
         </a>
     {else}
@@ -63,6 +63,10 @@
             {l s='Vouchers' d='Shop.Theme.Customeraccount'}
         </a>
     {/if}
+
+    {block name='display_customer_account'}
+        {hook h='displayCustomerAccount'}
+    {/block}
 </div>
 
 <div>
