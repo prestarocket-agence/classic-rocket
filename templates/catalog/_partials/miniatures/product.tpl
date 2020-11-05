@@ -50,7 +50,26 @@
                     {/if}
                 {/block}
                 {block name='product_name'}
-                    <p class="c-pdt-mini__name">{$product.name}</p>
+                    <p class="c-pdt-mini__name"><a href="{$product.url}">{$product.name}</a></p>
+                {/block}
+                {block name='product_price_and_shipping'}
+                    {if $product.show_price}
+                        <div class="">
+                            {if !$product.has_discount}
+                                {hook h='displayProductPriceBlock' product=$product type="before_price"}
+                                <span class="c-price-sm c-price--current">{$product.price}</span>
+                            {else}
+                                {hook h='displayProductPriceBlock' product=$product type="before_price"}
+                                <span class="c-price-sm c-price--discount">{$product.price}</span>
+                                {hook h='displayProductPriceBlock' product=$product type="old_price"}
+                                <span class="c-price-sm c-price--old">{$product.regular_price}</span>
+                            {/if}
+
+                            {hook h='displayProductPriceBlock' product=$product type='unit_price'}
+
+                            {hook h='displayProductPriceBlock' product=$product type='weight'}
+                        </div>
+                    {/if}
                 {/block}
             </div>
         </div>
