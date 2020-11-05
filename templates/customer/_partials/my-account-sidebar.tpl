@@ -15,13 +15,13 @@
                 {l s='Historique de mes commandes' d='Shop.Theme.Customeraccount'}
             </a>
 
-            {if $configuration.return_enabled && !$configuration.is_catalog}
+{*            {if $configuration.return_enabled && !$configuration.is_catalog}*}
                 <a class="c-account-sidebar__row /js list-group-item-action{if $urls.current_url == $urls.pages.order_follow} is-active{/if}"
                    id="returns-link" href="{$urls.pages.order_follow}">
                     {include file="_partials/icon.tpl" icon="arrow-return-left" class="c-icon--16 u-mr-2"}
-                    {l s='Merchandise returns' d='Shop.Theme.Customeraccount'}
+                    {l s='Retours de commandes' d='Shop.Theme.Customeraccount'}
                 </a>
-            {/if}
+{*            {/if}*}
         </div>
     {/if}
 
@@ -64,10 +64,10 @@
 
 </div>
 
-<div class="">
+<div>
     <a class="c-account-sidebar__row /js list-group-item-action" href="{$urls.actions.logout}">
         {include file="_partials/icon.tpl" icon="box-arrow-left" class="c-icon--16 u-mr-2"}
-        {l s='Me déconnecter' d='Shop.Theme.Customeraccount'}
+        {l s='Se déconnecter' d='Shop.Theme.Customeraccount'}
     </a>
 </div>
 {*
