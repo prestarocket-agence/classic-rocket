@@ -44,7 +44,7 @@
 
 
         <div class="row">
-            <div class="col-md-4 col-lg-3">
+            <div class="col-12 col-md-4 col-lg-3">
                 {include file='customer/_partials/my-account-sidebar.tpl'}
             </div>
             <div class="col-md-8 col-lg-9">

@@ -1,0 +1,13 @@
+.c-address__row {
+  padding-bottom: $spacer*1.5;
+  margin-bottom: $spacer*1.5;
+  border-bottom: 1px solid $gray-light;
+}
+
+.c-address__formated {
+  margin-bottom: 0;
+
+  @include media-breakpoint-mobile {
+    margin-bottom: $spacer;
+  }
+}

@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
   padding: $spacer $spacer*2;
+  color: $black;
   background-color: $white;
 
   &.is-active {

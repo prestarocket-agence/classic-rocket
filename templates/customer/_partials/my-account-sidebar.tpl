@@ -2,7 +2,7 @@
     <div class="c-account-sidebar__avatar">
         {$customer.firstname|substr:0:1}{$customer.lastname|substr:0:1}
     </div>
-    <p class="u-mb-0">{l s='Hello' d='Shop.Theme.Global'},
+    <p class="u-mb-0">{l s='Bonjour' d='Shop.Theme.Global'},
         <br><span class="u-font-weight-bold">{$customer.firstname} {$customer.lastname}</span></p>
 </div>
 
@@ -12,7 +12,7 @@
             <a class="c-account-sidebar__row /js list-group-item-action{if $urls.current_url == $urls.pages.history} is-active{/if}"
                id="history-link" href="{$urls.pages.history}">
                 {include file="_partials/icon.tpl" icon="box-seam" class="c-icon--16 u-mr-2"}
-                {l s='Order history' d='Shop.Theme.Customeraccount'}
+                {l s='Historique de mes commandes' d='Shop.Theme.Customeraccount'}
             </a>
 
             {if $configuration.return_enabled && !$configuration.is_catalog}
@@ -42,7 +42,7 @@
         <a class="c-account-sidebar__row /js list-group-item-action{if $urls.current_url == $urls.pages.address} is-active{/if}"
            id="address-link"
            href="{$urls.pages.address}">
-            {l s='Add first address' d='Shop.Theme.Customeraccount'}
+            {l s='Ajouter mon adresse' d='Shop.Theme.Customeraccount'}
         </a>
     {/if}
 
@@ -50,7 +50,7 @@
         <a class="c-account-sidebar__row /js list-group-item-action{if $urls.current_url == $urls.pages.order_slip} is-active{/if}"
            id="order-slips-link" href="{$urls.pages.order_slip}">
             {include file="_partials/icon.tpl" icon="wallet2" class="c-icon--16 u-mr-2"}
-            {l s='Credit slips' d='Shop.Theme.Customeraccount'}
+            {l s='Mes avoirs' d='Shop.Theme.Customeraccount'}
         </a>
     {/if}
 
@@ -67,7 +67,7 @@
 <div class="">
     <a class="c-account-sidebar__row /js list-group-item-action" href="{$urls.actions.logout}">
         {include file="_partials/icon.tpl" icon="box-arrow-left" class="c-icon--16 u-mr-2"}
-        {l s='Logout' d='Shop.Theme.Customeraccount'}
+        {l s='Me déconnecter' d='Shop.Theme.Customeraccount'}
     </a>
 </div>
 {*
