@@ -23,6 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {extends file='customer/page.tpl'}
+{block name="accountImgBg"}{/block}
 
 {block name='page_title'}
   {l s='Your addresses' d='Shop.Theme.Customeraccount'}
