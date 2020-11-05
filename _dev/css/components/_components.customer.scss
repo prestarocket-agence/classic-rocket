@@ -3,6 +3,7 @@
   background-color: $gray-light;
 }
 
+// Sidebar column
 .c-account-sidebar__row {
   position: relative;
   display: flex;
@@ -37,4 +38,37 @@
   color: $white;
   background-color: $black;
   border-radius: 50%;
+}
+
+// Main column
+.c-account-landing {
+  position: relative;
+  color: $white;
+  z-index: 99;
+}
+
+.c-account-landing__title {
+  @extend .u-h1;
+  color: $white;
+  margin-bottom: $spacer*1.5;
+  max-width: 400px;
+}
+
+.c-account-landing__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.c-account-landing__gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
 }

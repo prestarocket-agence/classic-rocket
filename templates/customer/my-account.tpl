@@ -30,20 +30,21 @@
 {block name='bodyClass'} u-bg-light{/block}
 {block name='contentWrapperClass'}{/block}
 
-{block name='page_title'}
-{/block}
+{*{block name='page_title'}*}
+{*{/block}*}
 
 {block name='page_content'}
-
-        <div class="">
-          <p>{l s='Bienvenue dans votre espace' d='Shop.Theme.Global'}</p>
-          <p>{l s='Consultez et ajustez vos informations personnelles' d='Shop.Theme.Global'}</p>
-
+    <div class="c-account-landing">
+        <p class="c-account-landing__title">{l s='Bienvenue dans votre espace' d='Shop.Theme.Global'}</p>
+        <p>{l s='Consultez et ajustez vos informations personnelles' d='Shop.Theme.Global'}</p>
+    </div>
+        <div class="c-account-landing__img">
+            <div class="c-account-landing__gradient"></div>
+            <img class="u-img-fluid" src="{$urls.img_url}account-placeholder.jpg" alt="Votre compte">
         </div>
-
 {/block}
 
 {block name='page_footer'}
-  {block name='my_account_links'}
-  {/block}
+    {block name='my_account_links'}
+    {/block}
 {/block}
