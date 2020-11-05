@@ -2,3 +2,39 @@
   padding: $spacer*2 0;
   background-color: $gray-light;
 }
+
+.c-account-sidebar__row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: $spacer $spacer*2;
+  background-color: $white;
+
+  &.is-active {
+    font-weight: bold;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      width: 3px;
+      height: 100%;
+      background-color: $primary;
+    }
+  }
+}
+
+.c-account-sidebar__avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  margin-right: $spacer;
+  font-weight: $headings-font-weight;
+  font-size: $h4-font-size;
+  color: $white;
+  background-color: $black;
+  border-radius: 50%;
+}

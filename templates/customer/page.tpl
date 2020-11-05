@@ -50,7 +50,7 @@
             <div class="col-md-8 col-lg-9">
                 <div class="c-panel c-panel--lg"{block name="accountImgBg"}{/block}>
                     {block name='page_title' hide}
-                        <h2 class="u-txt-center{block name='pageHeaderClass'}{/block}">{$smarty.block.child}</h2>
+                        <h2 class="{block name='pageHeaderClass'}c-panel__head u-h2 {/block}">{$smarty.block.child}</h2>
                     {/block}
                     {block name='page_content_top'}
                         {block name='customer_notifications'}

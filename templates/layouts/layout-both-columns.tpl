@@ -99,7 +99,7 @@
     </div>
 {/block}
 
-<footer id="footer">
+<footer id="footer" class="c-footer">
     {block name="footer"}
         {include file="_partials/footer.tpl"}
     {/block}

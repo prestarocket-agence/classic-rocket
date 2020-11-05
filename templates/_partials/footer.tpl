@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="container o-wrapper">
-    <div class="row c-footer">
+    <div class="row">
         {block name='hook_footer_before'}
             {hook h='displayFooterBefore'}
         {/block}
