@@ -4,6 +4,10 @@
 }
 
 // Sidebar column
+.c-account-sidebar__col {
+  margin-bottom: $spacer*.5;
+}
+
 .c-account-sidebar__row {
   position: relative;
   display: flex;

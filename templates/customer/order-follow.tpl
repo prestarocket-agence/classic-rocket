@@ -25,7 +25,7 @@
 {extends file='customer/page.tpl'}
 
 {block name='page_title'}
-  {l s='Merchandise returns' d='Shop.Theme.Customeraccount'}
+  {l s='Retours de commandes' d='Shop.Theme.Customeraccount'}
 {/block}
 
 {block name='page_content'}

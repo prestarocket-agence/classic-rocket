@@ -1,45 +1,47 @@
-<div class="c-account-sidebar__row u-mb-1">
-    <div class="c-account-sidebar__avatar">
-        {$customer.firstname|substr:0:1}{$customer.lastname|substr:0:1}
-    </div>
-    <p class="u-mb-0">{l s='Bonjour' d='Shop.Theme.Global'},
-        <br><span class="u-font-weight-bold">{$customer.firstname} {$customer.lastname}</span></p>
+<div class="c-account-sidebar__col">
+    <a class="c-account-sidebar__row" href="{$urls.pages.my_account}">
+        <div class="c-account-sidebar__avatar">
+            {$customer.firstname|substr:0:1}{$customer.lastname|substr:0:1}
+        </div>
+        <p class="u-mb-0">{l s='Bonjour' d='Shop.Theme.Global'},
+            <br><span class="u-font-weight-bold">{$customer.firstname} {$customer.lastname}</span></p>
+    </a>
 </div>
 
-<div class="list-group u-mb-1">
-    {if !$configuration.is_catalog}
-        <div class="u-mb-1">
-            <a class="c-account-sidebar__row /js list-group-item-action{if $urls.current_url == $urls.pages.history} is-active{/if}"
-               id="history-link" href="{$urls.pages.history}">
-                {include file="_partials/icon.tpl" icon="box-seam" class="c-icon--16 u-mr-2"}
-                {l s='Historique de mes commandes' d='Shop.Theme.Customeraccount'}
-            </a>
+{if !$configuration.is_catalog}
+    <div class="c-account-sidebar__col">
+        <a class="c-account-sidebar__row {if $urls.current_url == $urls.pages.history} is-active{/if}"
+           id="history-link" href="{$urls.pages.history}">
+            {include file="_partials/icon.tpl" icon="box-seam" class="c-icon--16 u-mr-2"}
+            {l s='Historique de mes commandes' d='Shop.Theme.Customeraccount'}
+        </a>
 
-{*            {if $configuration.return_enabled && !$configuration.is_catalog}*}
-                <a class="c-account-sidebar__row /js list-group-item-action{if $urls.current_url == $urls.pages.order_follow} is-active{/if}"
-                   id="returns-link" href="{$urls.pages.order_follow}">
-                    {include file="_partials/icon.tpl" icon="arrow-return-left" class="c-icon--16 u-mr-2"}
-                    {l s='Retours de commandes' d='Shop.Theme.Customeraccount'}
-                </a>
-{*            {/if}*}
-        </div>
-    {/if}
+        {*            {if $configuration.return_enabled && !$configuration.is_catalog}*}
+        <a class="c-account-sidebar__row {if $urls.current_url == $urls.pages.order_follow} is-active{/if}"
+           id="returns-link" href="{$urls.pages.order_follow}">
+            {include file="_partials/icon.tpl" icon="arrow-return-left" class="c-icon--16 u-mr-2"}
+            {l s='Retours de commandes' d='Shop.Theme.Customeraccount'}
+        </a>
+        {*            {/if}*}
+    </div>
+{/if}
 
-    <a class="c-account-sidebar__row /js list-group-item-action{if $urls.current_url == $urls.pages.identity} is-active{/if}"
+<div class="c-account-sidebar__col">
+    <a class="c-account-sidebar__row {if $urls.current_url == $urls.pages.identity} is-active{/if}"
        id="identity-link"
        href="{$urls.pages.identity}">
         {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--16 u-mr-2"}
         {l s='Mes informations' d='Shop.Theme.Customeraccount'}
     </a>
     {if $customer.addresses|count}
-        <a class="c-account-sidebar__row /js list-group-item-action{if $urls.current_url == $urls.pages.addresses} is-active{/if}"
+        <a class="c-account-sidebar__row {if $urls.current_url == $urls.pages.addresses} is-active{/if}"
            id="addresses-link"
            href="{$urls.pages.addresses}">
             {include file="_partials/icon.tpl" icon="geo-alt-fill" class="c-icon--16 u-mr-2"}
             {l s='Mes adresses' d='Shop.Theme.Customeraccount'}
         </a>
     {else}
-        <a class="c-account-sidebar__row /js list-group-item-action{if $urls.current_url == $urls.pages.address} is-active{/if}"
+        <a class="c-account-sidebar__row {if $urls.current_url == $urls.pages.address} is-active{/if}"
            id="address-link"
            href="{$urls.pages.address}">
             {l s='Ajouter mon adresse' d='Shop.Theme.Customeraccount'}
@@ -47,7 +49,7 @@
     {/if}
 
     {if !$configuration.is_catalog}
-        <a class="c-account-sidebar__row /js list-group-item-action{if $urls.current_url == $urls.pages.order_slip} is-active{/if}"
+        <a class="c-account-sidebar__row {if $urls.current_url == $urls.pages.order_slip} is-active{/if}"
            id="order-slips-link" href="{$urls.pages.order_slip}">
             {include file="_partials/icon.tpl" icon="wallet2" class="c-icon--16 u-mr-2"}
             {l s='Mes avoirs' d='Shop.Theme.Customeraccount'}
@@ -55,17 +57,16 @@
     {/if}
 
     {if $configuration.voucher_enabled && !$configuration.is_catalog}
-        <a class="c-account-sidebar__row /js list-group-item-action{if $urls.current_url == $urls.pages.discount} is-active{/if}"
+        <a class="c-account-sidebar__row {if $urls.current_url == $urls.pages.discount} is-active{/if}"
            id="discounts-link" href="{$urls.pages.discount}">
             {include file="_partials/icon.tpl" icon="gift" class="c-icon--16 u-mr-2"}
             {l s='Vouchers' d='Shop.Theme.Customeraccount'}
         </a>
     {/if}
-
 </div>
 
 <div>
-    <a class="c-account-sidebar__row /js list-group-item-action" href="{$urls.actions.logout}">
+    <a class="c-account-sidebar__row" href="{$urls.actions.logout}">
         {include file="_partials/icon.tpl" icon="box-arrow-left" class="c-icon--16 u-mr-2"}
         {l s='Se déconnecter' d='Shop.Theme.Customeraccount'}
     </a>
