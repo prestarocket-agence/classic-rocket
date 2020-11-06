@@ -1,104 +1,101 @@
 {extends file='page.tpl'}
 {block name='pageWrapperClass'}{/block}
 {block name='page_content_container' prepend}
-    <section id="content-hook_order_confirmation" class="card mb-3 text-white bg-success">
-      <div class="">
+    <section id="content-hook_order_confirmation" class="mb-3 text-white bg-success">
 
-            {block name='order_confirmation_header'}
-              <p class="u-h3">
+        {block name='order_confirmation_header'}
+            <p class="u-h3">
                 {include file="_partials/icon.tpl" icon="check" class="c-icon--28"}
                 {l s='Your order is confirmed' d='Shop.Theme.Checkout'}
-              </p>
-            {/block}
+            </p>
+        {/block}
 
-            <p>
-              {l s='An email has been sent to your mail address %email%.' d='Shop.Theme.Checkout' sprintf=['%email%' => $customer.email]}
-              {if $order.details.invoice_url}
+        <p>
+            {l s='An email has been sent to your mail address %email%.' d='Shop.Theme.Checkout' sprintf=['%email%' => $customer.email]}
+            {if $order.details.invoice_url}
                 {* [1][/1] is for a HTML tag. *}
                 {l
-                  s='You can also [1]download your invoice[/1]'
-                  d='Shop.Theme.Checkout'
-                  sprintf=[
-                    '[1]' => "<a href='{$order.details.invoice_url}'>",
-                    '[/1]' => "</a>"
-                  ]
+                s='You can also [1]download your invoice[/1]'
+                d='Shop.Theme.Checkout'
+                sprintf=[
+                '[1]' => "<a href='{$order.details.invoice_url}'>",
+                '[/1]' => "</a>"
+                ]
                 }
-              {/if}
-            </p>
+            {/if}
+        </p>
 
-            {block name='hook_order_confirmation'}
-              {$HOOK_ORDER_CONFIRMATION nofilter}
-            {/block}
+        {block name='hook_order_confirmation'}
+            {$HOOK_ORDER_CONFIRMATION nofilter}
+        {/block}
 
-
-      </div>
     </section>
 {/block}
 
 {block name='page_content_container'}
-  <section id="content" class="page-content page-order-confirmation card mb-3">
+    <section id="content" class="page-content page-order-confirmation mb-3">
         {block name='order_confirmation_table'}
-        <div>
-      {include
-            file='checkout/_partials/order-confirmation-table.tpl'
-            products=$order.products
-            subtotals=$order.subtotals
-            totals=$order.totals
-            labels=$order.labels
-            add_product_link=false
-          }
-        </div>
+            <div>
+                {include
+                file='checkout/_partials/order-confirmation-table.tpl'
+                products=$order.products
+                subtotals=$order.subtotals
+                totals=$order.totals
+                labels=$order.labels
+                add_product_link=false
+                }
+            </div>
         {/block}
         {block name='order_details'}
-          <div id="order-details" class="mt-4">
-            <h3 class="h3 card-title">{l s='Order details' d='Shop.Theme.Checkout'}:</h3>
-            <ul>
-              <li>{l s='Order reference: %reference%' d='Shop.Theme.Checkout' sprintf=['%reference%' => $order.details.reference]}</li>
-              <li>{l s='Payment method: %method%' d='Shop.Theme.Checkout' sprintf=['%method%' => $order.details.payment]}</li>
-              {if !$order.details.is_virtual}
-                <li>
-                  {l s='Shipping method: %method%' d='Shop.Theme.Checkout' sprintf=['%method%' => $order.carrier.name]}<br>
-                  <em>{$order.carrier.delay}</em>
-                </li>
-              {/if}
-            </ul>
-          </div>
+            <div id="order-details">
+                <h3 class="h3 card-title">{l s='Order details' d='Shop.Theme.Checkout'}:</h3>
+                <ul>
+                    <li>{l s='Order reference: %reference%' d='Shop.Theme.Checkout' sprintf=['%reference%' => $order.details.reference]}</li>
+                    <li>{l s='Payment method: %method%' d='Shop.Theme.Checkout' sprintf=['%method%' => $order.details.payment]}</li>
+                    {if !$order.details.is_virtual}
+                        <li>
+                            {l s='Shipping method: %method%' d='Shop.Theme.Checkout' sprintf=['%method%' => $order.carrier.name]}
+                            <br>
+                            <em>{$order.carrier.delay}</em>
+                        </li>
+                    {/if}
+                </ul>
+            </div>
         {/block}
 
-  </section>
-
-  {block name='hook_payment_return'}
-    {if ! empty($HOOK_PAYMENT_RETURN)}
-    <section id="content-hook_payment_return" class="card mb-3 definition-list">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-12">
-            {$HOOK_PAYMENT_RETURN nofilter}
-          </div>
-        </div>
-      </div>
     </section>
-    {/if}
-  {/block}
+    {block name='hook_payment_return'}
+        {if ! empty($HOOK_PAYMENT_RETURN)}
+            <section id="content-hook_payment_return" class="card mb-3 definition-list">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            {$HOOK_PAYMENT_RETURN nofilter}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        {/if}
+    {/block}
 
-  {block name='customer_registration_form'}
-    {if $customer.is_guest}
-      <div id="registration-form" class="card mb-3">
-        <div class="card-body">
-          <h4 class="h4">{l s='Save time on your next order, sign up now' d='Shop.Theme.Checkout'}</h4>
-          {render file='customer/_partials/customer-form.tpl' ui=$register_form}
-        </div>
-      </div>
-    {/if}
-  {/block}
+    {block name='customer_registration_form'}
+        {if $customer.is_guest}
+            <div id="registration-form" class="card mb-3">
+                <div class="card-body">
+                    <h4 class="h4">{l s='Save time on your next order, sign up now' d='Shop.Theme.Checkout'}</h4>
+                    {render file='customer/_partials/customer-form.tpl' ui=$register_form}
+                </div>
+            </div>
+        {/if}
+    {/block}
 
-  {block name='hook_order_confirmation_1'}
-    {hook h='displayOrderConfirmation1'}
-  {/block}
+    {block name='hook_order_confirmation_1'}
+        {hook h='displayOrderConfirmation1'}
+    {/block}
 
-  {block name='hook_order_confirmation_2'}
-    <section id="content-hook-order-confirmation-footer">
-      {hook h='displayOrderConfirmation2'}
-    </section>
-  {/block}
+    {block name='hook_order_confirmation_2'}
+        <section id="content-hook-order-confirmation-footer">
+            {hook h='displayOrderConfirmation2'}
+        </section>
+    {/block}
 {/block}
