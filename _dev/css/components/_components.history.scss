@@ -1,3 +1,4 @@
+// Command history
 .c-history {
   display: flex;
   flex-direction: column;
@@ -5,27 +6,49 @@
 
 .c-history__item {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 
   &:not(:last-child) {
-    padding-bottom: $spacer*2;
     margin-bottom: $spacer*2;
     border-bottom: solid 1px $gray-light;
   }
 }
 
-.c-history__info {
+.c-history__infos {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: $spacer;
+
+  @include media-breakpoint-mobile {
+    flex-direction: column;
+  }
+}
+
+.c-history__data {
   display: flex;
   flex-direction: column;
+  margin-bottom: $spacer*1.5;
 
-  &:not(:last-child) {
-    margin-right: $spacer*3;
+  @include media-breakpoint-mobile {
+    &--right {
+      text-align: right;
+    }
   }
 }
 
 .c-history__img {
   position: relative;
   width: 150px;
+
+  @include media-breakpoint-mobile {
+    width: 50%;
+  }
+
+  @include media-breakpoint-desktop {
+    &:first-of-type {
+      margin-left: $spacer;
+    }
+  }
 
   &:not(:last-of-type) {
     margin-right: $spacer;
@@ -45,3 +68,5 @@
     color: $white;
   }
 }
+
+// Details command
