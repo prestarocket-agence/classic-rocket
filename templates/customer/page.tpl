@@ -30,8 +30,7 @@
 
 {block name='bodyClass'} u-bg-light{/block}
 {block name='contentWrapperClass'}{/block}
-{block name='page_title'}
-{/block}
+
 
 {block name='page_title_account'}
     <h1 class="u-h3 u-mt-0"><a href="{$urls.pages.my_account}" class="account-link">
@@ -49,8 +48,10 @@
             </div>
             <div class="col-md-8 col-lg-9">
                 <div class="c-panel c-panel--lg u-p-rel"{block name="accountImgBg"}{/block}>
-                    {block name='page_title' hide}
-                        <h2 class="{block name='pageHeaderClass'}c-panel__head u-h2 {/block}">{$smarty.block.child}</h2>
+                    {block name='page_account_heading'}
+                        {block name='page_title' hide}
+                            <h2 class="{block name='pageHeaderClass'}c-panel__head u-h2 {/block}">{$smarty.block.child}</h2>
+                        {/block}
                     {/block}
                     {block name='page_content_top'}
                         {block name='customer_notifications'}

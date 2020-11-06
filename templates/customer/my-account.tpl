@@ -30,8 +30,8 @@
 {block name='bodyClass'} u-bg-light{/block}
 {block name='contentWrapperClass'}{/block}
 
-{*{block name='page_title'}*}
-{*{/block}*}
+{block name='page_account_heading'}{/block}
+
 
 {block name='page_content'}
     <div class="c-account-landing">
@@ -40,7 +40,6 @@
     </div>
         <div class="c-account-landing__img">
             <div class="c-account-landing__gradient"></div>
-            <img class="u-img-fluid" src="{$urls.img_url}account-placeholder.jpg" alt="Votre compte">
         </div>
 {/block}
 
