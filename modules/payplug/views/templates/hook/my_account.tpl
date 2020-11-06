@@ -21,7 +21,7 @@
 *}
 
 <!-- MODULE Payplug -->
-<a class="c-account-sidebar__row {if $urls.current_url == $urls.pages} is-active{/if}" id="savedcards-link"
+<a class="c-account-sidebar__link {if $urls.current_url == $urls.pages} is-active{/if}" id="savedcards-link"
    href="{$payplug_cards_url|escape:'htmlall':'UTF-8'}">
     {include file="_partials/icon.tpl" icon="credit-card" class="c-icon--16 u-mr-2"}
     {l s='Saved cards' mod='payplug'}

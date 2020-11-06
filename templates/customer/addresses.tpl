@@ -26,7 +26,7 @@
 {block name="accountImgBg"}{/block}
 
 {block name='page_title'}
-    {l s='Mes adresses' d='Shop.Theme.Customeraccount'}
+    {l s='Your addresses' d='Shop.Theme.Customeraccount'}
 {/block}
 
 {block name='page_content'}

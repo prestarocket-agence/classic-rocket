@@ -52,6 +52,7 @@
                         {block name='page_title' hide}
                             <h2 class="{block name='pageHeaderClass'}c-panel__head u-h2 {/block}">{$smarty.block.child}</h2>
                         {/block}
+
                     {/block}
                     {block name='page_content_top'}
                         {block name='customer_notifications'}
