@@ -103,12 +103,16 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 /*
 /* UTILITIES */
 @import "../../../classic-rocket/_dev/css/utilities/utilities.bg";
+@import "node_modules/bootstrap/scss/utilities/clearfix.scss";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.display";
+@import "node_modules/bootstrap/scss/utilities/embed.scss";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.flex";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.height";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.img";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.position";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.ratio";
+@import "node_modules/bootstrap/scss/utilities/screenreaders.scss";
+@import "node_modules/bootstrap/scss/utilities/stretched-link.scss";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.spacer";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.text";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.visible";
