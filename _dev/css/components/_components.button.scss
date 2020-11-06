@@ -23,3 +23,19 @@
     justify-content: center;
   }
 }
+.c-btn-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  line-height: 1;
+  height: calc(#{$btn-line-height*$btn-font-size+$btn-padding-y*2} + #{($btn-border-width*2)});
+  width: calc(#{$btn-line-height*$btn-font-size+$btn-padding-y*2} + #{($btn-border-width*2)});
+  &--lg{
+    height: calc(#{$btn-line-height*$btn-font-size-lg+$btn-padding-y-lg*2} + #{($btn-border-width*2)});
+    width: calc(#{$btn-line-height*$btn-font-size-lg+$btn-padding-y-lg*2} + #{($btn-border-width*2)});
+  }
+
+}
