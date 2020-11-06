@@ -25,7 +25,7 @@
 {extends 'customer/page.tpl'}
 {block name="accountImgBg"}{/block}
 {block name='page_title'}
-  {l s='Mes informations personnelles' d='Shop.Theme.Customeraccount'}
+  {l s='Your personal information' d='Shop.Theme.Customeraccount'}
 {/block}
 
 {block name='page_content'}

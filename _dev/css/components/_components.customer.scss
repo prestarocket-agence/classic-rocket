@@ -4,17 +4,25 @@
 }
 
 // Sidebar column
-.c-account-sidebar__col {
+.c-account-sidebar__block {
   margin-bottom: $spacer*.5;
 }
 
-.c-account-sidebar__row {
+.c-account-sidebar__link {
   position: relative;
   display: flex;
   align-items: center;
   padding: $spacer $spacer*2;
   color: $black;
   background-color: $white;
+
+  &:hover {
+    background-color: $light;
+  }
+
+  &:focus {
+    background-color: $gray-light;
+  }
 
   &.is-active {
     font-weight: bold;
@@ -43,6 +51,7 @@
   color: $white;
   background-color: $black;
   border-radius: 50%;
+  text-transform: uppercase;
 }
 
 // Main column
@@ -64,7 +73,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 500px;
+  height: 100%;
   overflow: hidden;
   z-index: 10;
 }

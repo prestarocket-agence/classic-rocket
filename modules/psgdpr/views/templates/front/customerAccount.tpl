@@ -17,7 +17,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<a class="c-account-sidebar__row {if $urls.current_url == {$link->getModuleLink('psgdpr', 'gdpr')}} is-active{/if}" id="psgdpr-link" href="{$front_controller}">
+<a class="c-account-sidebar__link {if $urls.current_url == {$link->getModuleLink('psgdpr', 'gdpr')}} is-active{/if}" id="psgdpr-link" href="{$front_controller}">
     {include file="_partials/icon.tpl" icon="lock" class="c-icon--16 u-mr-2"}
     {l s='GDPR - Personal data' mod='psgdpr'}
 </a>

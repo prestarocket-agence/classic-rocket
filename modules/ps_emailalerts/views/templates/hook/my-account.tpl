@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-<a class="c-account-sidebar__row {if $urls.current_url == $urls.pages} is-active{/if}" id="emailsalerts"
+<a class="c-account-sidebar__link {if $urls.current_url == $urls.pages} is-active{/if}" id="emailsalerts"
    href="{url entity='module' name='ps_emailalerts' controller='account'}"
    title="{l s='My alerts' d='Shop.Theme.Catalog'}">
     {include file="_partials/icon.tpl" icon="envelope" class="c-icon--16 u-mr-2"}
