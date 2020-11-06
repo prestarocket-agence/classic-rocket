@@ -40,10 +40,11 @@
             </p>
 
                 {if $step_is_reachable}
-                    <button class="btn btn-sm btn-link" data-toggle="collapse"
+                    <button class="step-edit text-muted btn btn-sm btn-link" data-toggle="collapse"
                             data-target="#content-{$identifier}"
                             aria-expanded="{if $step_is_current}true{else}false{/if}"
                             aria-controls="content-{$identifier}">
+                        {include file="_partials/icon.tpl" icon="pencil-square" class="c-icon--16 u-mr-1"}
                         {l s='Edit' d='Shop.Theme.Actions'}
                     </button>
                 {/if}

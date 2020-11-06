@@ -1,6 +1,7 @@
 .c-icon {
-  display: flex;
-  align-items: center;
+  & svg {
+    vertical-align: middle;
+  }
 }
 
 $sizes: 16, 20, 24, 28;
