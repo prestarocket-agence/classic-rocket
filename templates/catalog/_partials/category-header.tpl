@@ -15,6 +15,7 @@
     {*                         alt="{if !empty($category.image.legend)}{$category.image.legend}{else}{$category.name}{/if}">*}
     {*                </div>*}
     {*            {/if}*}
+    {/if}
+
 </div>
-{/if}
 <div class="_mobile_category_header"></div>
