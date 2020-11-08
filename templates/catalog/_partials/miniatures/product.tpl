@@ -25,7 +25,48 @@
 {block name='product_miniature_item'}
     <article class="{if isset($col)}{$col}{else}col-lg-3{/if} c-pdt-mini /js js-product-miniature"
              data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}">
-        <div class="c-pdt-mini__card">
+        <div class="c-pdt-mini__card u-p-rel">
+            <div class="c-pdt-mini__body">
+                {block name='product_brand'}
+                    <div>
+                        {block name='product_brand'}
+                            {if isset($product_manufacturer->id)}
+                                <p class="c-pdt-mini__brand">{$product_manufacturer->name}</p>
+                            {/if}
+                        {/block}
+                        {block name='product_name'}
+                            <p class="c-pdt-mini__name"><a href="{$product.canonical_url}" class="stretched-link">{$product.name}</a>
+                            </p>
+                        {/block}
+                    </div>
+                    <div>
+                        {block name='product_reviews'}
+                            {hook h='displayProductListReviews' product=$product}
+                        {/block}
+                        {block name='before_product_price_and_shipping'}{/block}
+                        {block name='product_price_and_shipping'}
+                            {if $product.show_price}
+                                <div class="">
+                                    {if !$product.has_discount}
+                                        {hook h='displayProductPriceBlock' product=$product type="before_price"}
+                                        <span class="c-price-sm c-price--current">{$product.price}</span>
+                                    {else}
+                                        {hook h='displayProductPriceBlock' product=$product type="before_price"}
+                                        <span class="c-price-sm c-price--discount">{$product.price}</span>
+                                        {hook h='displayProductPriceBlock' product=$product type="old_price"}
+                                        <span class="c-price-sm c-price--old">{$product.regular_price}</span>
+                                    {/if}
+
+                                    {hook h='displayProductPriceBlock' product=$product type='unit_price'}
+
+                                    {hook h='displayProductPriceBlock' product=$product type='weight'}
+                                </div>
+                            {/if}
+                        {/block}
+                        {block name='after_product_price_and_shipping'}{/block}
+                    </div>
+                {/block}
+            </div>
             <div class="c-pdt-mini__thumb">
                 {block name='product_thumbnail'}
                     <div class="u-rc u-rc--pdt">
@@ -62,49 +103,16 @@
                     {/if}
                 {/block}
                 {block name='quick_view'}
-                    <button class="btn btn-primary btn-quick-view c-btn-circle c-btn-circle--lg  quick-view" data-link-action="quickview">
-                        {include file="_partials/icon.tpl" icon="eye" class="c-icon--24"}
-                        <span class="sr-only">{l s='Quick view' d='Shop.Theme.Actions'}</span>
-              </button>
+                    <div class="c-pdt-mini__qv">
+                        <button class="btn btn-primary btn-quick-view c-btn-circle c-btn-circle--lg  quick-view"
+                                data-link-action="quickview">
+                            {include file="_partials/icon.tpl" icon="eye" class="c-icon--24"}
+                            <span class="sr-only">{l s='Quick view' d='Shop.Theme.Actions'}</span>
+                        </button>
+                    </div>
                 {/block}
             </div>
-            <div class="c-pdt-mini__body">
-                {block name='product_brand'}
 
-                    {block name='product_brand'}
-                        {if isset($product_manufacturer->id)}
-                            <p class="c-pdt-mini__brand">{$product_manufacturer->name}</p>
-                        {/if}
-                    {/block}
-                    {block name='product_name'}
-                        <p class="c-pdt-mini__name"><a href="{$product.canonical_url}" class="">{$product.name}</a></p>
-                    {/block}
-                    {block name='product_reviews'}
-                        {hook h='displayProductListReviews' product=$product}
-                    {/block}
-                    {block name='before_product_price_and_shipping'}{/block}
-                    {block name='product_price_and_shipping'}
-                        {if $product.show_price}
-                            <div class="">
-                                {if !$product.has_discount}
-                                    {hook h='displayProductPriceBlock' product=$product type="before_price"}
-                                    <span class="c-price-sm c-price--current">{$product.price}</span>
-                                {else}
-                                    {hook h='displayProductPriceBlock' product=$product type="before_price"}
-                                    <span class="c-price-sm c-price--discount">{$product.price}</span>
-                                    {hook h='displayProductPriceBlock' product=$product type="old_price"}
-                                    <span class="c-price-sm c-price--old">{$product.regular_price}</span>
-                                {/if}
-
-                                {hook h='displayProductPriceBlock' product=$product type='unit_price'}
-
-                                {hook h='displayProductPriceBlock' product=$product type='weight'}
-                            </div>
-                        {/if}
-                    {/block}
-                    {block name='after_product_price_and_shipping'}{/block}
-                {/block}
-            </div>
         </div>
     </article>
 {/block}

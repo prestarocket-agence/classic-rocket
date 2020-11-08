@@ -1,8 +1,15 @@
-$pdt-mini-margin-bottom: $spacer;
+$pm-margin-bottom: $spacer*3;
+
+
 $pm-card-bg-color : #fff;
 $pm-card-radius : null;
 
 $pm-card-thumb-margin-bottom : $spacer;
+$pm-card-thumb-radius : $spacer/2;
+$pm-card-thumb-bg : null;
+$pm-thumb-margin-bottom: $spacer;
+
+
 
 $pm-card-body-padding-x: 0;
 $pm-card-body-padding-y: 0;
@@ -13,17 +20,22 @@ $pm-card-img-border : null;
 $pm-card-img-radius : null;
 
 .c-pdt-list .c-pdt-mini {
-  margin-bottom: $pdt-mini-margin-bottom;
+  margin-bottom: $pm-margin-bottom;
 }
 .c-pdt-mini__card {
   background-color: $pm-card-bg-color;
   border-radius: $pm-card-radius;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
 }
 
-.c-pdt-mini__thumbnail {
+
+.c-pdt-mini__thumb {
   position: relative;
-  margin-bottom: $pm-card-thumb-margin-bottom;
+  margin-bottom: $pm-thumb-margin-bottom;
+  order: 1;
 }
 .c-pdt-mini__img {
   border-radius: $pm-card-img-radius;
@@ -35,9 +47,23 @@ $pm-card-img-radius : null;
 .c-pdt-mini__body {
   background-color:$pm-card-body-bg-color ;
   padding: $pm-card-body-padding-y $pm-card-body-padding-x;
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
 }
 
-.c-pdt-mini__tag {
+.c-pdt-mini__qv{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c-pdt-mini__flags {
   position: absolute;
   bottom: $spacer*.5;
   left: $spacer*.5;
