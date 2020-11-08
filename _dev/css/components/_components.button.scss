@@ -1,4 +1,4 @@
-.c-btn--nopad{
+.c-btn--nopad {
   @extend .btn-link;
   padding: 0;
 }
@@ -33,9 +33,29 @@
   line-height: 1;
   height: calc(#{$btn-line-height*$btn-font-size+$btn-padding-y*2} + #{($btn-border-width*2)});
   width: calc(#{$btn-line-height*$btn-font-size+$btn-padding-y*2} + #{($btn-border-width*2)});
-  &--lg{
+  &--lg {
     height: calc(#{$btn-line-height*$btn-font-size-lg+$btn-padding-y-lg*2} + #{($btn-border-width*2)});
     width: calc(#{$btn-line-height*$btn-font-size-lg+$btn-padding-y-lg*2} + #{($btn-border-width*2)});
   }
+}
 
+
+.c-btn--underline {
+  position: relative;
+  font-weight: $headings-font-weight;
+  color: $primary;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $primary;
+  }
 }
