@@ -29,7 +29,7 @@
 {/block}
 
 {block name='page_content'}
-    <div class="u-mb-6">
+    <div class="u-mb-5">
         {block name='order_infos'}
             <div class="c-history__item">
                 <div id="order-infos" class="c-history__infos">
@@ -90,7 +90,7 @@
                     {l s='Carrier' d='Shop.Theme.Checkout'}
                 </span>
                     {$order.carrier.name}</div>
-                <div class="col12 col-lg-6 c-history__data">
+                <div class="col-12 col-lg-6 c-history__data">
                 <span class="u-font-weight-bold u-mb-1">
                     {include file="_partials/icon.tpl" icon="credit-card" class="c-icon--16 u-mr-1"}
                     {l s='Payment method' d='Shop.Theme.Checkout'}
@@ -119,21 +119,21 @@
             </div>
         {/block}
     </div>
-
-
-    <p class="c-panel__head u-h4">{l s='Articles' d='Shop.Theme.Customeraccount'}</p>
-    {block name='order_detail'}
-        {if $order.details.is_returnable}
-            {include file='customer/_partials/order-detail-return.tpl'}
-        {else}
-            {include file='customer/_partials/order-detail-no-return.tpl'}
-        {/if}
-    {/block}
-
+    <div class="u-mb-5">
+        <p class="c-panel__head u-h4">{l s='Articles' d='Shop.Theme.Customeraccount'}</p>
+        {block name='order_detail'}
+            {if $order.details.is_returnable}
+                {include file='customer/_partials/order-detail-return.tpl'}
+            {else}
+                {include file='customer/_partials/order-detail-no-return.tpl'}
+            {/if}
+        {/block}
+    </div>
     {block name='order_carriers'}
         {if $order.shipping}
-            <div class="box">
-                <table class="table table-bordered table-striped visible--desktop">
+            <p class="c-panel__head u-h4">{l s='Livraison' d='Shop.Theme.Customeraccount'}</p>
+            <div class="u-d-desktop u-mb-5">
+                <table class="table table-bordered table-striped">
                     <thead class="thead-default">
                     <tr>
                         <th>{l s='Date' d='Shop.Theme.Global'}</th>
@@ -155,33 +155,32 @@
                     {/foreach}
                     </tbody>
                 </table>
-                <div class="visible--mobile shipping-lines">
-                    {foreach from=$order.shipping item=line}
-                        <div class="shipping-line">
-                            <ul>
-                                <li>
-                                    <strong>{l s='Date' d='Shop.Theme.Global'}</strong> {$line.shipping_date}
-                                </li>
-                                <li>
-                                    <strong>{l s='Carrier' d='Shop.Theme.Checkout'}</strong> {$line.carrier_name}
-                                </li>
-                                <li>
-                                    <strong>{l s='Weight' d='Shop.Theme.Checkout'}</strong> {$line.shipping_weight}
-                                </li>
-                                <li>
-                                    <strong>{l s='Shipping cost' d='Shop.Theme.Checkout'}</strong> {$line.shipping_cost}
-                                </li>
-                                <li>
-                                    <strong>{l s='Tracking number' d='Shop.Theme.Checkout'}</strong> {$line.tracking nofilter}
-                                </li>
-                            </ul>
-                        </div>
-                    {/foreach}
-                </div>
+            </div>
+            <div class="u-d-mobile u-mb-5 shipping-lines">
+                {foreach from=$order.shipping item=line}
+                    <div class="shipping-line">
+                        <ul>
+                            <li>
+                                <strong>{l s='Date' d='Shop.Theme.Global'}</strong> {$line.shipping_date}
+                            </li>
+                            <li>
+                                <strong>{l s='Carrier' d='Shop.Theme.Checkout'}</strong> {$line.carrier_name}
+                            </li>
+                            <li>
+                                <strong>{l s='Weight' d='Shop.Theme.Checkout'}</strong> {$line.shipping_weight}
+                            </li>
+                            <li>
+                                <strong>{l s='Shipping cost' d='Shop.Theme.Checkout'}</strong> {$line.shipping_cost}
+                            </li>
+                            <li>
+                                <strong>{l s='Tracking number' d='Shop.Theme.Checkout'}</strong> {$line.tracking nofilter}
+                            </li>
+                        </ul>
+                    </div>
+                {/foreach}
             </div>
         {/if}
     {/block}
-    <hr>
     {block name='order_messages'}
         {include file='customer/_partials/order-messages.tpl'}
     {/block}

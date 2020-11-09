@@ -42,6 +42,12 @@
   }
 }
 
+.c-cart__row--border {
+  border-bottom: solid 1px $gray-light;
+  margin-bottom: $spacer*.5;
+  padding-bottom: $spacer*.5;
+}
+
 .c-cart__caracts {
   display: flex;
 

@@ -9,3 +9,11 @@
     display: flex;
   }
 }
+
+.u-d-desktop {
+  display: none;
+
+  @include media-breakpoint-desktop {
+    display: flex;
+  }
+}
