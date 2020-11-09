@@ -47,21 +47,24 @@
                 {include file='customer/_partials/my-account-sidebar.tpl'}
             </div>
             <div class="col-md-8 col-lg-9">
-                <div class="c-panel c-panel--lg u-p-rel"{block name="accountImgBg"}{/block}>
-                    {block name='page_account_heading'}
-                        {block name='page_title' hide}
-                            <h2 class="{block name='pageHeaderClass'}c-panel__head u-h2 {/block}">{$smarty.block.child}</h2>
-                        {/block}
+                <div class="{block name='main_account_class'}c-panel c-panel--lg u-p-rel{/block}"{block name="accountImgBg"}{/block}>
+                    {block name='page_content_account'}
+                        {block name='page_account_heading'}
+                            {block name='page_title' hide}
+                                <h2 class="{block name='pageHeaderClass'}c-panel__head u-h2 {/block}">{$smarty.block.child}</h2>
+                            {/block}
 
-                    {/block}
-                    {block name='page_content_top'}
-                        {block name='customer_notifications'}
-                            {include file='_partials/notifications.tpl'}
+                        {/block}
+                        {block name='page_content_top'}
+                            {block name='customer_notifications'}
+                                {include file='_partials/notifications.tpl'}
+                            {/block}
+                        {/block}
+                        {block name='page_content'}
+                            <!-- Page content -->
                         {/block}
                     {/block}
-                    {block name='page_content'}
-                        <!-- Page content -->
-                    {/block}
+
                 </div>
             </div>
         </div>
