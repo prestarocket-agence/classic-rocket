@@ -55,7 +55,7 @@
                         <div class="c-history__img">
                             <a href="{$order.details.details_url}">
                                 <img class="u-img-fluid" src="{$order.products[0].cover.medium.url}"
-                                     alt="{$productproduct_name}">
+                                     alt="{$order.products[0].name}">
                             </a>
                         </div>
                         {if isset($order.products[1].product_id)}
