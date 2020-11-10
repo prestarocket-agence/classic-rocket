@@ -55,7 +55,7 @@
                                 id="{$option.id}-additional-information"
                                 class="/js js-additional-information{if $option.id != $selected_payment_option} ps-hidden {/if}"
                         >
-                            <div class="alert alert-info u-mb-0">
+                            <div class="alert alert-primary u-mb-2">
                                 {$option.additionalInformation nofilter}
                             </div>
                         </div>

@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='step'}
-  <section class="checkout-step -unreachable card" id="{$identifier}">
+  <section class="c-panel c-panel--border checkout-step -unreachable card" id="{$identifier}">
     <div class="card-header">
     <h1 class="step-title h3">
       <span class="step-number">{$position}</span> {$title}
