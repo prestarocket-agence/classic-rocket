@@ -27,12 +27,13 @@
 {block name='main_account_class'}
 {/block}
 
-{block name='page_title'}
-    {l s='Order details' d='Shop.Theme.Customeraccount'}
-{/block}
+{*{block name='page_title'}*}
+{*    {l s='Order details' d='Shop.Theme.Customeraccount'}*}
+{*{/block}*}
 
 {block name='page_content'}
     <div class="c-panel c-panel--lg">
+        <h2 class="c-panel__head u-h2">{l s='Order details' d='Shop.Theme.Customeraccount'}</h2>
         {block name='order_infos'}
             <div class="c-history__item">
                 <div id="order-infos" class="c-history__infos">
