@@ -3,17 +3,13 @@
 }
 
 .u-d-mobile {
-  display: none;
-
-  @include media-breakpoint-mobile {
-    display: flex;
+  @include media-breakpoint-desktop {
+    display: none;
   }
 }
 
 .u-d-desktop {
-  display: none;
-
-  @include media-breakpoint-desktop {
-    display: flex;
+  @include media-breakpoint-mobile {
+    display: none;
   }
 }
