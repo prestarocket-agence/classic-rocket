@@ -30,7 +30,7 @@
                     <div class="c-cart__row u-mb-3">
                         <div class="c-cart__caracts">
                             <div class="u-mr-3">
-                                <img src="{$product.cover.bySize.cart_default.url}"
+                                <img class="c-cart__img" src="{$product.cover.bySize.cart_default.url}"
                                      alt="{$product.name|escape:'quotes'}"
                                      width="{$product.cover.bySize.cart_default.width}"
                                      height="{$product.cover.bySize.cart_default.height}">
@@ -121,13 +121,13 @@
 
             {foreach $order.subtotals as $line}
                 {if $line.value}
-                    <div class="c-cart__row c-cart__row--border line-{$line.type}">
+                    <div class="o-layout c-cart__row--border line-{$line.type}">
                         <span>{$line.label}</span>
                         <span>{$line.value}</span>
                     </div>
                 {/if}
             {/foreach}
-            <div class="c-cart__row line-{$order.totals.total.type}">
+            <div class="o-layout line-{$order.totals.total.type}">
                 <span>{$order.totals.total.label}</span>
                 <span>{$order.totals.total.value|ucfirst}</span>
             </div>

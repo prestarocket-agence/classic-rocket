@@ -56,6 +56,13 @@
   }
 }
 
+.c-cart__img {
+  @include media-breakpoint-mobile {
+    width: 80px;
+    height: auto;
+  }
+}
+
 .c-cart__price {
   display: flex;
   align-items: center;

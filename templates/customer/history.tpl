@@ -72,11 +72,10 @@
                         {/if}
                     </div>
                 </div>
-
-                <div class="o-layout o-layout--center-y u-mb-4 {if !$order.shipping.url} o-layout--end{/if}">
-                    {if $order.shipping.url}
+                <div class="o-layout o-layout--center-y u-mb-4 {if !$order.shipping[0].url} o-layout--end{/if}">
+                    {if $order.shipping[0].url}
                         <a class="c-btn--underline"
-                           href="{$order.shipping.url}">{l s='Suivre la commande' d='Shop.Theme.Actions'}</a>
+                           href="{$order.shipping[0].url}">{l s='Suivre la commande' d='Shop.Theme.Actions'}</a>
                     {/if}
                     <a class="c-btn--underline" href="{$order.details.details_url}"
                        data-link-action="view-order-details">

@@ -23,62 +23,63 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='order_messages_table'}
-  {if $order.messages}
-    <div class="box messages">
-      <h3>{l s='Messages' d='Shop.Theme.Customeraccount'}</h3>
-      {foreach from=$order.messages item=message}
-        <div class="message row">
-          <div class="col-sm-4">
-            {$message.name}<br/>
-            {$message.message_date}
-          </div>
-          <div class="col-sm-8">
-            {$message.message nofilter}
-          </div>
+    {if $order.messages}
+        <div class="box messages">
+            <h3>{l s='Messages' d='Shop.Theme.Customeraccount'}</h3>
+            {foreach from=$order.messages item=message}
+                <div class="message row">
+                    <div class="col-sm-4">
+                        {$message.name}<br/>
+                        {$message.message_date}
+                    </div>
+                    <div class="col-sm-8">
+                        {$message.message nofilter}
+                    </div>
+                </div>
+            {/foreach}
         </div>
-      {/foreach}
-    </div>
-    <hr>
-  {/if}
+        <hr>
+    {/if}
 {/block}
 
 {block name='order_message_form'}
-  <section class="order-message-form box">
-    <form class="needs-validation" action="{$urls.pages.order_detail}" method="post" novalidate autocomplete="false">
+    <section class="order-message-form box">
+        <form class="needs-validation" action="{$urls.pages.order_detail}" method="post" novalidate
+              autocomplete="false">
 
-      <header>
-        <p class="c-panel__head u-h4">{l s='Add a message' d='Shop.Theme.Customeraccount'}</p>
-        <p>{l s='If you would like to add a comment about your order, please write it in the field below.' d='Shop.Theme.Customeraccount'}</p>
-      </header>
+            <header>
+                <p class="c-panel__head u-h4">{l s='Add a message' d='Shop.Theme.Customeraccount'}</p>
+                <p>{l s='If you would like to add a comment about your order, please write it in the field below.' d='Shop.Theme.Customeraccount'}</p>
+            </header>
 
-      <section class="form-fields">
-        <div class="form-group">
-          <label for="id_product_msg">{l s='Product' d='Shop.Forms.Labels'}</label>
-            <select id="id_product_msg" name="id_product" class="custom-select">
-              <option value="0">{l s='-- please choose --' d='Shop.Forms.Labels'}</option>
-              {foreach from=$order.products item=product}
-                <option value="{$product.id_product}">{$product.name}</option>
-              {/foreach}
-            </select>
-        </div>
+            <section class="form-fields">
+                <div class="form-group">
+                    <label for="id_product_msg">{l s='Product' d='Shop.Forms.Labels'}</label>
+                    <select id="id_product_msg" name="id_product" class="custom-select">
+                        <option value="0">{l s='-- please choose --' d='Shop.Forms.Labels'}</option>
+                        {foreach from=$order.products item=product}
+                            <option value="{$product.id_product}">{$product.name}</option>
+                        {/foreach}
+                    </select>
+                </div>
 
-        <div class="form-group ">
-          <label for="msgText">{l s='Message' d='Shop.Forms.Labels'}</label>
-          <div class="form-group">
-            <textarea rows="3" name="msgText" class="form-control" id="msgText" required></textarea>
-            <div class="invalid-feedback js-invalid-feedback-browser"></div>
-          </div>
-        </div>
+                <div class="form-group ">
+                    <label for="msgText">{l s='Message' d='Shop.Forms.Labels'}</label>
+                    <div class="form-group">
+                        <textarea rows="3" name="msgText" class="form-control" id="msgText" required></textarea>
+                        <div class="invalid-feedback js-invalid-feedback-browser"></div>
+                    </div>
+                </div>
 
-      </section>
+            </section>
 
-      <footer class="form-footer">
-        <input type="hidden" name="id_order" value="{$order.details.id}">
-        <button type="submit" name="submitMessage" class="btn btn-primary form-control-submit">
-          {l s='Send' d='Shop.Theme.Actions'}
-        </button>
-      </footer>
+            <footer class="form-footer">
+                <input type="hidden" name="id_order" value="{$order.details.id}">
+                <button type="submit" name="submitMessage" class="btn btn-primary form-control-submit">
+                    {l s='Send' d='Shop.Theme.Actions'}
+                </button>
+            </footer>
 
-    </form>
-  </section>
+        </form>
+    </section>
 {/block}
