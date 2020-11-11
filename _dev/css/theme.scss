@@ -15,12 +15,13 @@
 @import "../../../classic-rocket/_dev/css/settings/settings.product-mini";
 @import "../../../classic-rocket/_dev/css/settings/settings.search";
 @import "../../../classic-rocket/_dev/css/settings/settings.tags";
-@import "../../../classic-rocket/_dev/css/settings/settings.project";
+@import "./settings/settings.project";
 
 
 /*
 /*
 /* TOOLS */
+@import "node_modules/bootstrap/scss/mixins";
 @import "node_modules/bootstrap/scss/mixins";
 @import "../../../classic-rocket/_dev/css/tools/tools.mixins";
 /*

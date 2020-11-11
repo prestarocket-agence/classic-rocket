@@ -1,24 +1,3 @@
-$pm-margin-bottom: $spacer*3;
-
-
-$pm-card-bg-color : #fff;
-$pm-card-radius : null;
-
-$pm-card-thumb-margin-bottom : $spacer;
-$pm-card-thumb-radius : $spacer/2;
-$pm-card-thumb-bg : null;
-$pm-thumb-margin-bottom: $spacer;
-
-
-
-$pm-card-body-padding-x: 0;
-$pm-card-body-padding-y: 0;
-$pm-card-body-bg-color: null;
-
-
-$pm-card-img-border : null;
-$pm-card-img-radius : null;
-
 .c-pdt-list .c-pdt-mini {
   margin-bottom: $pm-margin-bottom;
 }
@@ -41,7 +20,6 @@ $pm-card-img-radius : null;
   border-radius: $pm-card-img-radius;
 
   $pm-card-img-border : null;
-  $pm-card-img-radius : null;
 }
 
 .c-pdt-mini__body {
@@ -52,6 +30,9 @@ $pm-card-img-radius : null;
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
+}
+.c-pdt-mini__body{
+
 }
 
 .c-pdt-mini__qv{
