@@ -1,7 +1,9 @@
+/* stylelint-disable */
+
 $spaces: 0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80;
 
 @each $space in $spaces {
-  $step: $space  / 8;
+  $step: $space / 8;
 
   [class].u-mt-#{$step} {
     margin-top: $spacer*($space/16);
@@ -33,3 +35,5 @@ $spaces: 0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80;
   //  margin-bottom: $spacer*($space/16);
   //}
 }
+/* stylelint-enable */
+
