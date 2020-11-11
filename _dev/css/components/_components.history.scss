@@ -19,7 +19,7 @@
   justify-content: space-between;
   margin-bottom: $spacer;
 
-  @include media-breakpoint-mobile {
+  @include media-breakpoint-mobile () {
     flex-direction: column;
   }
 }
@@ -29,7 +29,7 @@
   flex-direction: column;
   margin-bottom: $spacer*1.5;
 
-  @include media-breakpoint-mobile {
+  @include media-breakpoint-mobile () {
     &--right {
       text-align: right;
     }
@@ -40,11 +40,11 @@
   position: relative;
   width: 150px;
 
-  @include media-breakpoint-mobile {
+  @include media-breakpoint-mobile () {
     width: 50%;
   }
 
-  @include media-breakpoint-desktop {
+  @include media-breakpoint-desktop () {
     &:first-of-type {
       margin-left: $spacer;
     }
@@ -56,16 +56,16 @@
 
   &--watermark {
     position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
-    @extend .u-h2;
-    background-color: rgba(0, 0, 0, 0.5);
     color: $white;
+    background-color: rgba(0, 0, 0, .5);
+    @extend .u-h2;
   }
 }
 

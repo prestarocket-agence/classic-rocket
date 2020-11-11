@@ -4,15 +4,15 @@
 }
 
 .c-footer-item {
-  @include media-breakpoint-mobile {
+  @include media-breakpoint-mobile () {
     margin-bottom: $spacer;
   }
 }
 
 .c-footer-item__title {
-  color: $black;
-  font-weight: $headings-font-weight;
   margin-bottom: $spacer;
+  font-weight: $headings-font-weight;
+  color: $black;
 }
 
 .c-footer__newsletter {

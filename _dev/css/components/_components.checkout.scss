@@ -1,15 +1,15 @@
 .c-checkout-panel__head {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto $spacer*1.5;
   width: 100%;
   max-width: 500px;
+  margin: 0 auto $spacer*1.5;
 }
 
 .c-checkout-panel__form {
-  margin: auto;
   width: 100%;
   max-width: 320px;
+  margin: auto;
 
   &--lg {
     max-width: 520px;
@@ -18,17 +18,17 @@
 
 .c-checkout-card {
   padding: $spacer;
+  margin-bottom: $spacer;
   border: solid $gray-light 2px;
   border-radius: 4px;
-  margin-bottom: $spacer;
 }
 
 .c-checkout-card__head {
   display: flex;
   justify-content: space-between;
-  border-bottom: $gray-light solid 1px;
   padding-bottom: $spacer;
   margin-bottom: $spacer;
+  border-bottom: $gray-light solid 1px;
 }
 
 //Carriers estimation
@@ -50,7 +50,7 @@
     margin-right: $spacer;
   }
 
-  @include media-breakpoint-mobile {
+  @include media-breakpoint-mobile () {
     flex-direction: column;
 
     & div:first-of-type {
@@ -73,10 +73,10 @@
 
 .c-checkout-carrier__btn {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
-  @include media-breakpoint-mobile {
+  @include media-breakpoint-mobile () {
     flex-direction: column;
 
     & div {

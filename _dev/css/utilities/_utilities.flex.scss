@@ -29,7 +29,7 @@ $orders: 0, 1;
 }
 
 $orders-mobile: 2;
-@include media-breakpoint-mobile {
+@include media-breakpoint-mobile () {
   @each $order-mobile in $orders-mobile {
     .u-order-mobile-#{$order-mobile} {
       order: $order-mobile;

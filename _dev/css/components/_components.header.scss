@@ -5,7 +5,7 @@
   margin-bottom: $spacer*3;
   border-bottom: solid 1px $secondary;
 
-  @include media-breakpoint-mobile {
+  @include media-breakpoint-mobile () {
     padding-bottom: 0;
   }
 }
@@ -16,13 +16,13 @@
   padding-top: $spacer*.5;
   padding-bottom: $spacer*.5;
   font-size: $small-font-size;
-  background-color: $topheader-bg-color;
   color: $topheader-color;
+  background-color: $topheader-bg-color;
 }
 
 .c-top-header__contact {
   color: $black;
-  @include media-breakpoint-mobile {
+  @include media-breakpoint-mobile () {
     display: none;
   }
 }
@@ -34,7 +34,7 @@
 .c-top-header__selects {
   display: flex;
   align-items: center;
-  @include media-breakpoint-mobile {
+  @include media-breakpoint-mobile () {
     display: none;
   }
 }
@@ -52,16 +52,16 @@
   margin-top: $spacer*1.5;
   margin-bottom: $spacer*1.5;
 
-  @include media-breakpoint-mobile {
+  @include media-breakpoint-mobile () {
+    flex-wrap: wrap;
     margin-top: $spacer;
     margin-bottom: $spacer;
-    flex-wrap: wrap;
   }
 
   & > *:not(:last-child) {
     margin-right: $spacer*4;
 
-    @include media-breakpoint-mobile {
+    @include media-breakpoint-mobile () {
       margin-right: 0;
     }
   }
@@ -75,16 +75,16 @@
 .c-header__searchbar {
   flex: 1;
 
-  @include media-breakpoint-mobile {
-    margin-top: $spacer;
+  @include media-breakpoint-mobile () {
     flex: 0 0 100%;
+    margin-top: $spacer;
   }
 }
 
 .c-header__shortcut {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .c-header__shortcut-item {
@@ -108,11 +108,11 @@
 
 .c-header__cart-label {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   top: 0;
   right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: $spacer*1.5;
   height: $spacer*1.5;
   font-size: $small-font-size;
@@ -140,13 +140,14 @@
 
   &-signin {
     margin-bottom: 0;
-    font-size: $small-font-size;
     margin-left: $spacer*.5;
+    font-size: $small-font-size;
     color: $black;
   }
 
-  @include media-breakpoint-mobile {
-    &-name, &-account {
+  @include media-breakpoint-mobile () {
+    &-name,
+    &-account {
       display: none;
     }
   }
@@ -155,15 +156,15 @@
 //Nav
 
 .c-nav__link {
-  color: $black;
   margin-right: $spacer*2.5;
   font-weight: 700;
+  color: $black;
 }
 
 //Checkout
 
 .c-header-checkout {
   padding: $spacer*2 0;
-  border-bottom: solid 1px $gray-light;
   margin-bottom: $spacer*3;
+  border-bottom: solid 1px $gray-light;
 }

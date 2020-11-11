@@ -1,4 +1,5 @@
-.custom-control-label:after, .custom-control-label:before {
+.custom-control-label::after,
+.custom-control-label::before {
   top: 50%;
   transform: translateY(-50%);
 }

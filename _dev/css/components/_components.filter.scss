@@ -1,6 +1,6 @@
 .c-filter {
-  margin-bottom: $spacer;
   padding-bottom: $spacer;
+  margin-bottom: $spacer;
   border-bottom: solid 1px $secondary;
 }
 
@@ -8,8 +8,8 @@
   margin-bottom: $spacer*.5;
 
   & a {
-    color: $black;
     font-weight: $headings-font-weight;
+    color: $black;
   }
 }
 

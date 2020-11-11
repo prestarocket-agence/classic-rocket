@@ -26,8 +26,8 @@
   @each $column-base in $columns-base {
     .col-#{$column-base} {
       @include make-col($column-base);
-      padding-left: $col-gutter-width;
       padding-right: $col-gutter-width;
+      padding-left: $col-gutter-width;
     }
   }
 
@@ -35,11 +35,10 @@
     @each $column-lg in $columns-lg {
       .col-lg-#{$column-lg} {
         @include make-col($column-lg);
-        padding-left: $col-gutter-width;
         padding-right: $col-gutter-width;
+        padding-left: $col-gutter-width;
       }
     }
   }
 }
-
 

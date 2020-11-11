@@ -1,20 +1,20 @@
 .c-carousel__content {
   position: absolute;
-  left: $spacer*4;
   top: $spacer*4;
+  left: $spacer*4;
   font-weight: $font-weight-bold;
 }
 
 .c-carousel__title {
+  margin-bottom: $spacer*1.5;
   font-size: 80px;
   color: $white;
-  margin-bottom: $spacer*1.5;
-  text-shadow: 0 2px 48px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 48px rgba(0, 0, 0, .5);
 }
 
 .c-carousel__baseline > p {
   margin-bottom: $spacer*2.5;
   font-size: $h2-font-size;
   color: $white;
-  text-shadow: 0 2px 48px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 48px rgba(0, 0, 0, .5);
 }

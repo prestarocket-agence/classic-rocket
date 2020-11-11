@@ -1,7 +1,7 @@
 .c-catalog__header {
   padding: $spacer*2;
   color: $white;
- 
+
 }
 
 .c-catalog-breadcrumb {
@@ -9,9 +9,9 @@
 }
 
 .c-catalog-breadcrumb__item {
+  margin-bottom: 0;
   font-size: $small-font-size;
   color: $secondary;
-  margin-bottom: 0;
 }
 
 .c-result {
@@ -21,6 +21,6 @@
 
 .c-result__select {
   padding: $spacer*.375;
-  border-radius: 4px;
   border: solid 1px $gray;
+  border-radius: 4px;
 }

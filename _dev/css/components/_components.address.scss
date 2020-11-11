@@ -7,7 +7,7 @@
 .c-address__formated {
   margin-bottom: 0;
 
-  @include media-breakpoint-mobile {
+  @include media-breakpoint-mobile () {
     margin-bottom: $spacer;
   }
 }

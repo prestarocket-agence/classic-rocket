@@ -31,9 +31,9 @@
       position: absolute;
       top: 0;
       left: 0;
-      content: "";
       width: 3px;
       height: 100%;
+      content: "";
       background-color: $primary;
     }
   }
@@ -41,42 +41,42 @@
 
 .c-account-sidebar__avatar {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 48px;
   min-width: 48px;
   height: 48px;
   margin-right: $spacer;
-  font-weight: $headings-font-weight;
   font-size: $h4-font-size;
+  font-weight: $headings-font-weight;
   color: $white;
+  text-transform: uppercase;
   background-color: $black;
   border-radius: 50%;
-  text-transform: uppercase;
 }
 
 // Main column
 .c-account-landing {
   position: relative;
-  color: $white;
   z-index: 99;
+  color: $white;
 }
 
 .c-account-landing__title {
   @extend .u-h1;
-  color: $white;
-  margin-bottom: $spacer*1.5;
   max-width: 400px;
+  margin-bottom: $spacer*1.5;
+  color: $white;
 }
 
 .c-account-landing__img {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 10;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 10;
 }
 
 .c-account-landing__gradient {
@@ -85,5 +85,5 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0));
 }
