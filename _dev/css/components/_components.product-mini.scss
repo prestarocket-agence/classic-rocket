@@ -1,45 +1,41 @@
 .c-pdt-list .c-pdt-mini {
   margin-bottom: $pm-margin-bottom;
 }
+
 .c-pdt-mini__card {
-  background-color: $pm-card-bg-color;
-  border-radius: $pm-card-radius;
   display: flex;
   flex-direction: column;
   height: 100%;
+  background-color: $pm-card-bg-color;
+  border-radius: $pm-card-radius;
 
 }
-
 
 .c-pdt-mini__thumb {
   position: relative;
-  margin-bottom: $pm-thumb-margin-bottom;
   order: 1;
+  margin-bottom: $pm-thumb-margin-bottom;
 }
+
 .c-pdt-mini__img {
   border-radius: $pm-card-img-radius;
-
-  $pm-card-img-border : null;
 }
 
 .c-pdt-mini__body {
-  background-color:$pm-card-body-bg-color ;
-  padding: $pm-card-body-padding-y $pm-card-body-padding-x;
-  order: 2;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
+  order: 2;
+  padding: $pm-card-body-padding-y $pm-card-body-padding-x;
+  background-color: $pm-card-body-bg-color;
 }
-.c-pdt-mini__body{
 
-}
-
-.c-pdt-mini__qv{
-  display: none;
+.c-pdt-mini__qv {
   position: absolute;
   top: 0;
   left: 0;
+  display: none;
   width: 100%;
   height: 100%;
 }
@@ -49,22 +45,25 @@
   bottom: $spacer*.5;
   left: $spacer*.5;
 }
-/* TODO put in new component file*/
-.c-variants{
+
+/* TODO put in new component file */
+.c-variants {
   display: flex;
   align-items: center;
   font-size: $font-size-sm;
 }
-.c-variants__item{
+
+.c-variants__item {
   width: 20px;
   height: 20px;
-  border-radius: 50%;
   border: 1px solid $gray-light;
-  &:not(:first-child){
+  border-radius: 50%;
+  &:not(:first-child) {
     margin-left: $spacer/4;
   }
 }
-.c-variants__count{
+
+.c-variants__count {
   margin-left: $spacer/4;
 
 }

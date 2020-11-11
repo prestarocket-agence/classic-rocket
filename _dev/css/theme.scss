@@ -1,6 +1,9 @@
 /* ----------------------- */
+
 /*    TABLE OF CONTENTS    */
+
 /* ----------------------- */
+
 /*
 /* SETTINGS */
 @import "node_modules/bootstrap/scss/functions";
@@ -22,8 +25,8 @@
 /*
 /* TOOLS */
 @import "node_modules/bootstrap/scss/mixins";
-@import "node_modules/bootstrap/scss/mixins";
 @import "../../../classic-rocket/_dev/css/tools/tools.mixins";
+
 /*
 /*
 /* GENERICS */
@@ -52,8 +55,8 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 /*
 /* COMPONENTS */
 $theme-colors: (
-        "primary": $primary,
-        "secondary": $secondary
+  "primary": $primary,
+  "secondary": $secondary
 );
 @import "node_modules/bootstrap/scss/buttons";
 @import "node_modules/bootstrap/scss/custom-forms";
@@ -90,8 +93,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.select";
 @import "../../../classic-rocket/_dev/css/components/components.separator";
 @import "../../../classic-rocket/_dev/css/components/components.tags";
-@import "node_modules/bootstrap/scss/_transitions";
-
+@import "node_modules/bootstrap/scss/transitions";
 
 
 @import "../../../classic-rocket/_dev/css/components/components.project";
@@ -121,6 +123,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/utilities/utilities.width";
 
 //if you want to include BS utlities (not recommanded), uncomment this following line
+
 /*
 @import "node_modules/bootstrap/scss/utilities";
 
