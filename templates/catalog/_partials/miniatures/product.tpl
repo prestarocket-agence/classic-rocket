@@ -68,6 +68,13 @@
                         {/block}
                         {block name='after_product_price_and_shipping'}{/block}
                     </div>
+                    {block name='product_variants'}
+                        {if $product.main_variants}
+                            {include file='catalog/_partials/variant-links.tpl' variants=$product.main_variants}
+                        {/if}
+                    {/block}
+                    {block name='product_body_footer'}
+                    {/block}
                 {/block}
             </div>
             <div class="c-pdt-mini__thumb">
@@ -96,11 +103,7 @@
 
                     </ul>
                 {/block}
-                {block name='product_variants'}
-                    {if $product.main_variants}
-                        {include file='catalog/_partials/variant-links.tpl' variants=$product.main_variants}
-                    {/if}
-                {/block}
+
                 {block name='quick_view'}
                     <div class="c-pdt-mini__qv">
                         <button class="btn btn-primary btn-quick-view c-btn-circle c-btn-circle--lg  quick-view"

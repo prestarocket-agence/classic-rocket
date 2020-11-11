@@ -68,3 +68,22 @@ $pm-card-img-radius : null;
   bottom: $spacer*.5;
   left: $spacer*.5;
 }
+/* TODO put in new component file*/
+.c-variants{
+  display: flex;
+  align-items: center;
+  font-size: $font-size-sm;
+}
+.c-variants__item{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid $gray-light;
+  &:not(:first-child){
+    margin-left: $spacer/4;
+  }
+}
+.c-variants__count{
+  margin-left: $spacer/4;
+
+}
