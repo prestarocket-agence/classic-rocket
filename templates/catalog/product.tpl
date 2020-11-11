@@ -30,7 +30,7 @@
 
 
 {block name='content'}
-    <section id="main" class="row">
+    <section id="main" class="row /js product-container">
             <div class="col-lg-5 offset-lg-2 u-order-1">
                 {block name='page_content_container'}
                     <section class="page-content--product" id="content">
