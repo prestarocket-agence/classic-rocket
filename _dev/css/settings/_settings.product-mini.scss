@@ -4,6 +4,25 @@ $pm-margin-bottom: $spacer*3;
 $pm-card-bg-color: #fff;
 $pm-card-radius: null;
 
+//product name
+$pm-name-font-size : null;
+$pm-name-font-weight : null;
+$pm-name-font-family : null;
+
+$pm-name-color : $body-color;
+$pm-name-color-hover : null;
+$pm-name-text-transform : null;
+$pm-name-text-transform-hover : null;
+$pm-name-text-decoration : null;
+$pm-name-line-height : null;
+$pm-name-letter-spacing : null;
+
+$pm-name-margin-bottom : $spacer/2;
+//end product name
+
+
+
+//product thumb
 $pm-card-thumb-margin-bottom: $spacer;
 $pm-card-thumb-radius: $spacer/2;
 $pm-card-thumb-bg: null;

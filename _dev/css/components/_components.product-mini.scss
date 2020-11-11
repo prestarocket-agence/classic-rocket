@@ -11,6 +11,25 @@
 
 }
 
+.c-pdt-mini__name {
+  font-size: $pm-name-font-size;
+  font-weight: $pm-name-font-weight;
+  font-family: $pm-name-font-family;
+
+  color: $pm-name-color;
+  text-transform: $pm-name-text-transform;
+  text-decoration: $pm-name-text-decoration;
+  letter-spacing: $pm-name-letter-spacing;
+  line-height: $pm-name-line-height;
+  display: inline-block;
+  margin-bottom: $pm-name-margin-bottom;
+  &:hover {
+    color: $pm-name-color-hover;
+    text-transform: $pm-name-text-transform-hover;
+
+  }
+}
+
 .c-pdt-mini__thumb {
   position: relative;
   order: 1;
