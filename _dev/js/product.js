@@ -24,12 +24,10 @@
  */
 import $ from 'jquery';
 import prestashop from 'prestashop';
-import SlickSlider from './components/slick';
 
 $(document).ready(function () {
   createProductSpin();
   createInputFile();
-  let slickSlider = new SlickSlider();
 
   prestashop.on('updatedProduct', function (event) {
       createInputFile();
@@ -45,7 +43,6 @@ $(document).ready(function () {
     }
     $($('.tabs .nav-link.active').attr('href')).addClass('active').removeClass('fade');
     $('.js-product-images-modal').replaceWith(event.product_images_modal);
-    slickSlider.init();
 
 
 
@@ -86,9 +83,6 @@ $(document).ready(function () {
 
 });
 
-$(document).on('shown.bs.modal','#product-modal', function (e) {
-    $('#js-slick-product').resize();
-});
 
 //add to cart loader
 $(document).on('click','.js-add-to-cart:enabled:not(.is--loading)',function(){

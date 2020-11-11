@@ -24,7 +24,6 @@
  */
 import $ from 'jquery';
 import prestashop from 'prestashop';
-import SlickSlider from "./components/slick";
 
 
 $(document).ready(() => {
@@ -51,8 +50,6 @@ $(document).ready(() => {
   });
 
   var productConfig = (qv) => {
-      let slickSlider = new SlickSlider();
-      slickSlider.init();
     qv.find('#quantity_wanted').TouchSpin({
       buttondown_class: 'btn js-touchspin',
       buttonup_class: 'btn js-touchspin',

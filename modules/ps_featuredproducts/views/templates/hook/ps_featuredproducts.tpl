@@ -22,66 +22,50 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section class="o-wrapper c-featured-pdt /js clearfix">
+<section class="o-wrapper c-featured-pdt /js">
     <p class="u-h2 u-mb-2">
         {l s='Popular Products' d='Shop.Theme.Catalog'}
     </p>
     {assign var="productscount" value=$products|count}
-    <div class="row"
-         data-slick='{strip}
-    {ldelim}
-    "slidesToShow": 1,
-    "slidesToScroll": 1,
-    "mobileFirst":true,
-    "arrows":true,
-    "rows":0,
-    "responsive": [
-      {ldelim}
-        "breakpoint": 992,
-        "settings":
-        {if $productscount > 4}
+    <div class="row">
+    <div class="c-slider{if $productscount > 1} /js glider js-slider{/if}" data-glider='{strip}
         {ldelim}
-        "arrows":true,
-        "slidesToShow": 4,
-        "slidesToScroll": 4,
-        "arrows":true
-        {rdelim}
-        {else}
-        "unslick"
-        {/if}
-      {rdelim},
-      {ldelim}
-        "breakpoint": 720,
-        "settings":
-        {if $productscount > 3}
+        "slidesToShow":1.25,
+        "slidesToScroll":"auto",
+        "draggable":true,
+        "scrollLock":false,
+        "itemWidth":150,
+        "dots":"#fp-dots",
+        "arrows": {ldelim}
+
+            "prev": "#fp-arrow-prev",
+            "next": "#fp-arrow-next"
+
+        {rdelim},
+        "responsive": [
         {ldelim}
-        "arrows":true,
-        "slidesToShow": 3,
-        "slidesToScroll": 3
+            "breakpoint": 992,
+                "settings": {ldelim}
+                     "slidesToShow":4.25
+                {rdelim}
+            {rdelim},
+            {ldelim}
+            "breakpoint": 500,
+                "settings": {ldelim}
+                     "slidesToShow":2.25
+                {rdelim}
+            {rdelim}
+        ]
         {rdelim}
-        {else}
-        "unslick"
-        {/if}
-      {rdelim},
-      {ldelim}
-        "breakpoint": 540,
-        "settings":
-        {if $productscount > 2}
-        {ldelim}
-        "arrows":true,
-        "slidesToShow": 2,
-        "slidesToScroll": 2
-        {rdelim}
-        {else}
-        "unslick"
-        {/if}
-      {rdelim}
-    ]{rdelim}{/strip}'>
+        {/strip}'>
         {foreach from=$products item="product"}
-            {include file="catalog/_partials/miniatures/product.tpl" product=$product}
+            {include file="catalog/_partials/miniatures/product.tpl" product=$product col="col-lg-3 col-md-4 col-6"}
         {/foreach}
     </div>
-{*    <a class="all-product-link float-left float-md-right" href="{$allProductsLink}">*}
-{*        {l s='All products' d='Shop.Theme.Catalog'}<i class="material-icons">&#xE315;</i>*}
-{*    </a>*}
+    </div>
+    <div class="c-slider__dots" id="fp-dots"></div>
+    <button id="fp-arrow-prev" aria-label="{l s='Précédent' d='Shop.Theme.Global'}"
+            class="c-slider__arrow c-slider__arrow--left btn btn-link">{include file="_partials/icon.tpl" icon="chevron-left" class="c-icon--28"}</button>
+    <button id="fp-arrow-next" aria-label="{l s='Suivant' d='Shop.Theme.Global'}"
+            class="c-slider__arrow c-slider__arrow--right btn btn-link">{include file="_partials/icon.tpl" icon="chevron-right" class="c-icon--28"}</button>
 </section>

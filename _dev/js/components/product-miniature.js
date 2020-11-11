@@ -26,17 +26,23 @@ import $ from 'jquery';
 
 export default class ProductMinitature {
     init() {
-        $('.js-product-miniature').hoverIntent({
-            over: this.toggleClassPdtMini,
-            out: this.toggleClassPdtMini,
-            selector: '.js-hover-pdt',
-            timeout: 100
+        $(".js-product-miniature").hover(function(){
+
+            $(this).addClass("is-hover");  //Add the active class to the area is hovered
+        }, function () {
+            $(this).removeClass("is-hover");  //Add the active class to the area is hovered
         });
+        // $('.js-product-miniature').hoverIntent({
+        //     over: this.toggleClassPdtMini,
+        //     out: this.toggleClassPdtMini,
+        //     selector: '.js-hover-pdt',
+        //     timeout: 100
+        // });
     }
 
-    toggleClassPdtMini() {
-        let _item = $(this).parents('.js-product-miniature');
-        _item.toggleClass('is-hover');
-
-    }
+    // toggleClassPdtMini() {
+    //     let _item = $(this).parents('.js-product-miniature');
+    //     _item.toggleClass('is-hover');
+    //
+    // }
 }

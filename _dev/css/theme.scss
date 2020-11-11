@@ -77,6 +77,8 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.filter";
 @import "../../../classic-rocket/_dev/css/components/components.footer";
 @import "../../../classic-rocket/_dev/css/components/components.form";
+@import "../../../classic-rocket/_dev/css/components/components.glider";
+@import "../../../classic-rocket/_dev/css/components/components.glider-custom";
 @import "../../../classic-rocket/_dev/css/components/components.header";
 @import "../../../classic-rocket/_dev/css/components/components.history";
 @import "../../../classic-rocket/_dev/css/components/components.icon";
