@@ -27,12 +27,12 @@
              data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}">
         <div class="c-pdt-mini__card u-p-rel">
             <div class="c-pdt-mini__body">
-                {block name='product_brand'}
+                {block name='product_body'}
                     <div>
                         {block name='product_brand'}
-                            {if isset($product_manufacturer->id)}
-                                <p class="c-pdt-mini__brand">{$product_manufacturer->name}</p>
-                            {/if}
+                            {*{if $product.manufacturer_name}*}
+                                {*<p class="c-pdt-mini__brand">{$product.manufacturer_name}</p>*}
+                            {*{/if}*}
                         {/block}
                         {block name='product_name'}
                             <p class="c-pdt-mini__name"><a href="{$product.canonical_url}" class="stretched-link">{$product.name}</a>
@@ -55,6 +55,9 @@
                                         <span class="c-price-sm c-price--discount">{$product.price}</span>
                                         {hook h='displayProductPriceBlock' product=$product type="old_price"}
                                         <span class="c-price-sm c-price--old">{$product.regular_price}</span>
+                                    {/if}
+                                    {if $product.has_discount}
+                                            <span class="c-price--tagdiscount">{if $product.discount_type === 'percentage'}{$product.discount_percentage}{else}{$product.discount_amount_to_display}{/if}</span>
                                     {/if}
 
                                     {hook h='displayProductPriceBlock' product=$product type='unit_price'}
@@ -86,15 +89,11 @@
                 {block name='product_flags'}
                     <ul class="c-pdt-mini__flags u-mb-0">
                         {foreach from=$product.flags item=flag}
-                            <li class="c-flag c-flag--{$flag.type}">{$flag.label}</li>
-                        {/foreach}
-                        {if $product.has_discount}
-                            {if $product.discount_type === 'percentage'}
-                                <li class="c-flag c-flag--discount">{$product.discount_percentage}</li>
-                            {elseif $product.discount_type === 'amount'}
-                                <li class="c-flag c-flag--discount">{$product.discount_amount_to_display}</li>
+                            {if $flag.type !== "discount"}
+                                <li class="c-flag c-flag--{$flag.type}">{$flag.label}</li>
                             {/if}
-                        {/if}
+                        {/foreach}
+
                     </ul>
                 {/block}
                 {block name='product_variants'}
