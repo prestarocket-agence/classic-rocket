@@ -23,8 +23,9 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='product_miniature_item'}
-    <article class="{if isset($col)}{$col}{else}col-lg-3{/if} c-pdt-mini /js js-product-miniature"
+    <article class="{if isset($col)}{$col}{else}col-lg-3{/if} c-pdt-mini u-p-rel /js js-product-miniature"
              data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}">
+        {block name='after_opening_product_mini_tag'}{/block}
         <div class="c-pdt-mini__card u-p-rel">
             <div class="c-pdt-mini__body">
                 {block name='product_body'}
@@ -114,5 +115,6 @@
             </div>
 
         </div>
+        {block name='before_closing_product_mini_tag'}{/block}
     </article>
 {/block}
