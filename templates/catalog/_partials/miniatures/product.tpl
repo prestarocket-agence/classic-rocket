@@ -35,7 +35,7 @@
                             {*{/if}*}
                         {/block}
                         {block name='product_name'}
-                            <a href="{$product.canonical_url}" class="c-pdt-mini__name stretched-link">{$product.name}</a>
+                            <a href="{$product.canonical_url}" class="c-pdt-mini__name stretched-link /js js-hover-pdt">{$product.name}</a>
                         {/block}
                     </div>
                     <div>

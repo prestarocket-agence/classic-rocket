@@ -38,6 +38,8 @@ import './cart';
 
 import Form from './components/form';
 import TopMenu from './components/top-menu';
+import ProductMinitature from './components/product-miniature';
+
 
 import prestashop from 'prestashop';
 import EventEmitter from 'events';
@@ -53,16 +55,20 @@ for (var i in EventEmitter.prototype) {
 }
 
 $(document).ready(() => {
+
   const form = new Form();
   let slickSlider = new SlickSlider();
   let topMenuEl = $('#_desktop_top_menu #top-menu');
   let topMenu = new TopMenu(topMenuEl);
+  let productMinitature = new ProductMinitature();
 
   form.init();
   slickSlider.init();
   topMenu.init();
+  productMinitature.init();
 
-  //display input file content in custom file input BS
+
+//display input file content in custom file input BS
   $('.custom-file-input').on('change',function(){
       let fileName = $(this).val().split('\\').pop();
       $(this).next('.custom-file-label').addClass("selected").html(fileName);
