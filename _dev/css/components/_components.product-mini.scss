@@ -30,9 +30,26 @@
   }
 }
 
+.c-pdt-mini__brand {
+  font-size: $pm-brand-font-size;
+  font-weight: $pm-brand-font-weight;
+  font-family: $pm-brand-font-family;
+
+  color: $pm-brand-color;
+  text-transform: $pm-brand-text-transform;
+  text-decoration: $pm-brand-text-decoration;
+  letter-spacing: $pm-brand-letter-spacing;
+  line-height: $pm-brand-line-height;
+  margin-bottom: $pm-brand-margin-bottom;
+}
+
 .c-pdt-mini__thumb {
   position: relative;
   order: 1;
+  border:$pm-thumb-border;
+  border-radius: $pm-thumb-border-radius;
+  background-color: $pm-thumb-bg-color;
+  padding: $pm-thumb-padding-y $pm-thumb-padding-x;
   margin-bottom: $pm-thumb-margin-bottom;
 }
 

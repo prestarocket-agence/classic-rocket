@@ -20,13 +20,35 @@ $pm-name-letter-spacing : null;
 $pm-name-margin-bottom : $spacer/2;
 //end product name
 
+//product brand
+$pm-brand-font-size : $font-size-base * .75;
+$pm-brand-font-weight : null;
+$pm-brand-font-family : null;
+
+$pm-brand-color : $body-color;
+$pm-brand-text-transform : uppercase;
+$pm-brand-text-decoration : null;
+$pm-brand-line-height : null;
+$pm-brand-letter-spacing : null;
+
+$pm-brand-margin-bottom : $spacer/4;
+//end product brand
+
 
 
 //product thumb
-$pm-card-thumb-margin-bottom: $spacer;
-$pm-card-thumb-radius: $spacer/2;
-$pm-card-thumb-bg: null;
 $pm-thumb-margin-bottom: $spacer;
+$pm-thumb-radius: $spacer/2;
+$pm-thumb-bg-color: null;
+
+$pm-thumb-border: null;
+$pm-thumb-border-radius: null;
+
+$pm-thumb-padding-x: null;
+$pm-thumb-padding-y: null;
+$pm-thumb-margin-bottom: $spacer;
+
+
 
 
 $pm-card-body-padding-x: 0;
