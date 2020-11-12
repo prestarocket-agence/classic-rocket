@@ -13,10 +13,10 @@
   "author": "Prestarocket",
   "license": "AFL-3.0",
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
     "autoprefixer": "^9.8.6",
-    "babel-loader": "^8.1.0",
+    "babel-loader": "^8.2.1",
     "css-loader": "^3.6.0",
     "file-loader": "^5.1.0",
     "glider-js": "^1.7.3",
