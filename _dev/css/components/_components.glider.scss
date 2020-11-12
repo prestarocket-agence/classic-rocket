@@ -24,6 +24,9 @@
   cursor: -webkit-grab;
   cursor: grab;
 }
+.glider-slide img {
+  max-width: 100%;
+}
 .glider.draggable .glider-slide img {
   user-select: none;
   pointer-events: none;
@@ -37,9 +40,6 @@
   justify-content: center;
   align-content: center;
   width: 100%;
-}
-.glider-slide img {
-  max-width: 100%;
 }
 .glider::-webkit-scrollbar {
   opacity: 0;
