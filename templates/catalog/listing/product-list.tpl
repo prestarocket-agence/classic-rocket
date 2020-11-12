@@ -23,15 +23,14 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {extends file=$layout}
-
 {block name='content'}
-  <div id="main">
+  <div id="main" class="{block name='mainCategoryClass'}{/block}">
 
     {block name='product_list_header'}
       <h1 id="js-product-list-header">{$listing.label}</h1>
     {/block}
 
-    <section id="products">
+    <section id="products" class="">
       {if $listing.products|count}
 
         <div>
@@ -69,3 +68,7 @@
 
   </div>
 {/block}
+{block name='product_list_after_bottom'}
+{/block}
+
+

@@ -23,18 +23,23 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {if isset($breadcrumb.links[1])}
-    <nav data-depth="{$breadcrumb.count}" class="">
-        <div class="o-layout o-layout--start o-layout--center-y c-catalog-breadcrumb">
-            {foreach from=$breadcrumb.links item=path name=breadcrumb}
-                {block name='breadcrumb_item'}
-                    {if $smarty.foreach.breadcrumb.last}
-                        <p class="c-catalog-breadcrumb__item">{$path.title}</p>
+<nav data-depth="{$breadcrumb.count}"class="{if $breadcrumb.count == 2}visible--desktop{/if}">
+  <ol class="c-breadcrumb breadcrumb">
+    {foreach from=$breadcrumb.links item=path name=breadcrumb}
+        {block name='breadcrumb_item'}
+            {if $smarty.foreach.breadcrumb.last}
+                <li class="breadcrumb-item c-breadcrumb__item c-breadcrumb__item--{$smarty.foreach.breadcrumb.iteration} active">
                     {else}
-                        <a class="c-catalog-breadcrumb__item" itemprop="item" href="{$path.url}">{$path.title}</a>
-                        {include "_partials/icon.tpl" icon="chevron-right-sharp" class="c-icon--16 u-ml-1 u-mr-1"}
-                    {/if}
-                {/block}
-            {/foreach}
-        </div>
-    </nav>
+                <li class="breadcrumb-item c-breadcrumb__item c-breadcrumb__item--{$smarty.foreach.breadcrumb.iteration}">
+                <a href="{$path.url}">
+            {/if}
+            <span>{$path.title}</span>
+        {if !$smarty.foreach.breadcrumb.last}
+            </a>
+        {/if}
+            </li>
+        {/block}
+    {/foreach}
+  </ol>
+</nav>
 {/if}

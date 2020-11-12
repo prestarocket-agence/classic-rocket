@@ -1,6 +1,4 @@
 <div class="c-catalog__header">
-    {include file='_partials/breadcrumb.tpl'}
-
     <div id="_desktop_category_header">
         <p class="u-h1 u-mb-3">{$category.name}{if isset($smarty.get.page) && $smarty.get.page > 1} <span class="small"> -
                 Page {$smarty.get.page}</span>{/if}</p>
