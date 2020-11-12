@@ -54,46 +54,50 @@
 {block name='wrapper'}
     <div id="wrapper" class="{block name='wrapperClass'}o-wrapper{/block}">
         {hook h="displayWrapperTop"}
-                {block name='breadcrumb'}
-                    {include file='_partials/breadcrumb.tpl'}
-                {/block}
+        {block name='breadcrumb'}
+            {include file='_partials/breadcrumb.tpl'}
+        {/block}
         {block name="displayBeforeColumns"}
-            {* if need to wrap in row *}
-            <div class="row">
-        {/block}
+        {* if need to wrap in row *}
+        <div class="row">
+            {/block}
 
-        {block name="content_wrapper"}
-            <main id="content-wrapper" class="{block name='contentWrapperClass'}col-lg-6{/block}">
-                {hook h="displayContentWrapperTop"}
-                {block name="content"}
-                    <p>Hello world! This is HTML5 Boilerplate.</p>
-                {/block}
-                {hook h="displayContentWrapperBottom"}
-            </main>
-        {/block}
+            {block name="content_wrapper"}
+                <main id="content-wrapper" class="{block name='contentWrapperClass'}col-lg-6{/block}">
+                    {hook h="displayContentWrapperTop"}
+                    {block name="content"}
+                        <p>Hello world! This is HTML5 Boilerplate.</p>
+                    {/block}
+                    {hook h="displayContentWrapperBottom"}
+                </main>
+            {/block}
 
-        {block name="left_column"}
-            <aside id="left-column" class="{block name='leftColumnClass'}col-lg-3{/block}">
-                {if $page.page_name == 'product'}
-                    {hook h='displayLeftColumnProduct'}
-                {else}
-                    {hook h="displayLeftColumn"}
-                {/if}
-            </aside>
-        {/block}
+            {block name="left_column"}
+                <aside id="left-column" class="{block name='leftColumnClass'}col-lg-3{/block}">
+                    {if $page.page_name == 'product'}
+                        {hook h='displayLeftColumnProduct'}
+                    {else}
+                        {hook h="displayLeftColumn"}
+                    {/if}
+                </aside>
+            {/block}
 
-        {block name="right_column"}
-            <aside id="right-column" class="{block name='rightColumnClass'}col-lg-3{/block}">
-                {if $page.page_name == 'product'}
-                    {hook h='displayRightColumnProduct'}
-                {else}
-                    {hook h="displayRightColumn"}
-                {/if}
-            </aside>
-        {/block}
-        {block name="displayAfterColumns"}
+            {block name="right_column"}
+                <aside id="right-column" class="{block name='rightColumnClass'}col-lg-3{/block}">
+                    {if $page.page_name == 'product'}
+                        {hook h='displayRightColumnProduct'}
+                    {else}
+                        {hook h="displayRightColumn"}
+                    {/if}
+                </aside>
+            {/block}
+            {block name="displayAfterColumns"}
             {* if need to wrap in row => close div row*}
-            </div>
+        </div>
+
+        {block name='product_list_after_bottom'}
+        {/block}
+
         {/block}
         {hook h="displayWrapperBottom"}
     </div>
