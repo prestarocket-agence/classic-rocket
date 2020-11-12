@@ -1,4 +1,3 @@
 {
-  "extends": "stylelint-config-twbs-bootstrap/scss"
-
+"extends": "stylelint-config-recommended-scss"
 }

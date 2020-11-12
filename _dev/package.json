@@ -4,7 +4,7 @@
   "description": "Tools to help while developing the Classic theme",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p && stylelint \"css/**/*.scss\" --fix",
+    "build": "webpack -p",
     "start": "webpack -p -w",
     "debug": "webpack --mode development --devtool source-map --watch",
     "sass": "webpack --mode development --onlysass true --devtool source-map --watch",
