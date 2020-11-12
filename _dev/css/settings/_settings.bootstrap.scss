@@ -29,6 +29,7 @@ $font-family-sans-serif:      roboto, -apple-system, blinkmacsystemfont, "Segoe 
 $font-family-base:            $font-family-sans-serif;
 
 $font-size-base:              1rem;
+$font-size-sm:              $font-size-base * (14/16);
 
 $h1-font-size:                $font-size-base * 2.75;
 $h2-font-size:                $font-size-base * 1.75;
@@ -50,3 +51,17 @@ $extra-small-font-size:       $font-size-base * .75;
  */
 
 //$custom-checkbox-indicator-border-radius:       0;
+
+/*
+Breadcrumb
+*/
+$breadcrumb-font-size : $font-size-sm;
+
+$breadcrumb-padding-y:              null;
+$breadcrumb-padding-x:              null;
+
+$breadcrumb-margin-bottom:          2rem;
+
+$breadcrumb-bg:                      transparent;
+
+$breadcrumb-border-radius:          null;

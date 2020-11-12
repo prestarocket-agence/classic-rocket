@@ -1,0 +1,7 @@
+@import "node_modules/bootstrap/scss/breadcrumb";
+.c-breadcrumb__item a{
+  color: $breadcrumb-active-color;
+  &:hover{
+    text-decoration: underline;
+  }
+}
