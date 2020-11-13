@@ -52,7 +52,7 @@
 
                     <button type="button" class="modal-btn__close close" data-dismiss="modal"
                             aria-label="{l s='Close' d='Shop.Theme.Global'}">
-                        {include file="_partials/icon.tpl" icon="x"}
+                        {include file="_partials/icon.tpl" icon="x" class="c-icon--24"}
                     </button>
                 </div>
             </div>
