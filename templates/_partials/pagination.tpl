@@ -29,19 +29,19 @@
 {*    {/block}*}
 {*  </div>*}
 
-  <nav class="col-lg-4 c-pagination">
+  <nav class="c-pagination">
     {block name='pagination_page_list'}
      {if $pagination.should_be_displayed}
-        <ul class="o-layout o-layout--center-y o-layout--center-x">
+        <ul class="o-layout o-layout--center-y o-layout--center-x pagination">
           {foreach from=$pagination.pages item="page"}
-            <li class="c-pagination__item">
+            <li class="c-pagination__item page-item">
               {if $page.type === 'spacer'}
                 <span class="" aria-hidden="true">...</span>
               {else}
                 <a
                   rel="{if $page.type === 'previous'}prev{elseif $page.type === 'next'}next{else}nofollow{/if}"
                   href="{if $page.page == 1}{$page.url|replace:'?page=1':''|replace:'&page=1':''}{else}{$page.url}{/if}"
-                  class="u-txt-black u-txt-sm {if $page.type === 'previous'}previous {elseif $page.type === 'next'}next {/if}{['disabled' => !$page.clickable, 'js-search-link' => true]|classnames}"{if !$page.clickable} tabindex="-1"{/if}
+                  class="page-link u-txt-black u-txt-sm {if $page.type === 'previous'}previous {elseif $page.type === 'next'}next {/if}{['disabled' => !$page.clickable, 'js-search-link' => true]|classnames}"{if !$page.clickable} tabindex="-1"{/if}
                 >
                   {if $page.type === 'previous'}
                       {include '_partials/icon.tpl' icon="arrow-back-sharp" class="c-icon--16"}
