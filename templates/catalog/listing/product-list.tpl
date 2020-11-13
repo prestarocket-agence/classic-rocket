@@ -29,7 +29,10 @@
   <div id="main" class="{block name='mainListingClass'}{/block}">
 
     {block name='product_list_header'}
-      <h1 id="js-product-list-header">{$listing.label}</h1>
+      <div class="c-listing__heading">
+
+      <h1 id="js-product-list-header" class="c-listing__title">{$listing.label}</h1>
+      </div>
     {/block}
 
     <section id="products" class="">
