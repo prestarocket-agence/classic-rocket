@@ -23,8 +23,10 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {extends file=$layout}
+{block name='bodyClass'} s-listing{/block}
+
 {block name='content'}
-  <div id="main" class="{block name='mainCategoryClass'}{/block}">
+  <div id="main" class="{block name='mainListingClass'}{/block}">
 
     {block name='product_list_header'}
       <h1 id="js-product-list-header">{$listing.label}</h1>
