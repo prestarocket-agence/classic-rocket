@@ -2,6 +2,15 @@
   flex: auto;
 }
 
-.c-slider__arrow{
-  display: none;
+.glider-dot {
+  border: 2px solid $black;
+  background: none;
+
+  &.active {
+    background-color: $black;
+  }
+
+  &:hover {
+    background-color: $black;
+  }
 }
