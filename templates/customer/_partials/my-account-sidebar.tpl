@@ -44,6 +44,7 @@
         <a class="c-account-sidebar__link {if $urls.current_url == $urls.pages.address} is-active{/if}"
            id="address-link"
            href="{$urls.pages.address}">
+            {include file="_partials/icon.tpl" icon="geo-alt" class="c-icon--16 u-mr-2"}
             {l s='Add first address' d='Shop.Theme.Customeraccount'}
         </a>
     {/if}
