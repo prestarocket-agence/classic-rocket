@@ -22,63 +22,54 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="blockcart-modal" class="modal fade blockcart-modal" tabindex="-1" role="dialog" aria-labelledby="blockcart-modal-label" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title text-center text-success w-100" id="blockcart-modal-label"><i class="material-icons rtl-no-flip">&#xE876;</i>{l s='Product successfully added to your shopping cart' d='Shop.Theme.Checkout'}</h3>
+{*<div id="blockcart-modal" data-close-on-click="true">*}
+{*  <div>*}
+{*    <section>*}
+{*      <h1>{l s='Product Successfully Added to Your Shopping Cart' d='Shop.Theme.Checkout'}</h1>*}
+{*      {$product.name}*}
+{*      TODO: product image*}
+{*      TODO: cross-selling*}
+{*    </section>*}
+{*  </div>*}
+{*</div>*}
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="{l s='Close' d='Shop.Theme.Global'}">
-          <span aria-hidden="true">{include file="_partials/icon.tpl" icon="x" class=""}</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-lg-6 divide-right">
-            <div class="media">
-              <img class="product-image modal-cart__image" src="{$product.cover.medium.url}" alt="{$product.cover.legend}" width="{$product.cover.medium.width}" height="{$product.cover.medium.height}">
-              <div class="media-body">
-                <p class="h5 product-name modal-cart__name">{$product.name}</p>
-                <p class="product-price">{$product.price}</p>
-                  {hook h='displayProductPriceBlock' product=$product type="unit_price"}
-                  {foreach from=$product.attributes item="property_value" key="property"}
-                    <span>{l s='%label%:' sprintf=['%label%' => $property] d='Shop.Theme.Global'}<strong> {$property_value}</strong></span><br>
-                  {/foreach}
-                <p>
-                  <span>{l s='Quantity:' d='Shop.Theme.Checkout'}&nbsp;<strong>{$product.cart_quantity}</strong></span>
-                </p>
-              </div>
+<div id="blockcart-modal" class="modal fade blockcart-modal" tabindex="-1" role="dialog"
+     aria-labelledby="blockcart-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog__offcanvas modal-dialog__offcanvas--right" role="document">
+        <div class="modal-content">
+            <div class="modal-header modal-header--primary">
+                <div class="u-d-flex u-align-items-start">
+                    <div>
+                        <div class="u-mb-2">
+                            <p class="u-h4">{$product.name} (x{$product.cart_quantity})</p>
+                            <span>{l s='a été ajouté au panier' d='Shop.Theme.Global'}</span>
+                        </div>
+                        <a class="c-modal__btn-link--white" href="{$urls.pages.cart}?action=show">
+                            {l s='Voir mon panier' d='Shop.Theme.Global'}
+                            {include file="_partials/icon.tpl" icon="chevron-right" class="u-ml-1"}
+                        </a>
+                    </div>
+
+                    <button type="button" class="modal-btn__close close" data-dismiss="modal"
+                            aria-label="{l s='Close' d='Shop.Theme.Global'}">
+                        {include file="_partials/icon.tpl" icon="x"}
+                    </button>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="cart-content">
-                {if $cart.products_count > 1}
-                  <p class="cart-products-count">{l s='There are %products_count% items in your cart.' sprintf=['%products_count%' => $cart.products_count] d='Shop.Theme.Checkout'}</p>
-                {else}
-                  <p class="cart-products-count">{l s='There is %product_count% item in your cart.' sprintf=['%product_count%' =>$cart.products_count] d='Shop.Theme.Checkout'}</p>
-                {/if}
-              <p class="d--flex-between"><span>{l s='Subtotal:' d='Shop.Theme.Checkout'}</span>&nbsp;<span class="value">{$cart.subtotals.products.value}</span></p>
-              <p class="d--flex-between"><span>{l s='Shipping:' d='Shop.Theme.Checkout'}</span>&nbsp;<span class="value">{$cart.subtotals.shipping.value} {hook h='displayCheckoutSubtotalDetails' subtotal=$cart.subtotals.shipping}</span></p>
+            <div class="modal-body">
 
-                {if !$configuration.display_prices_tax_incl && $configuration.taxes_enabled}
-                  <p class="d--flex-between"><span>{$cart.totals.total.label}&nbsp;{$cart.labels.tax_short}</span>&nbsp;<span>{$cart.totals.total.value}</span></p>
-                  <p class="product-total d--flex-between"><span>{$cart.totals.total_including_tax.label}</span>&nbsp;<span class="value">{$cart.totals.total_including_tax.value}</span></p>
-                {else}
-                  <p class="product-total d--flex-between"><span>{$cart.totals.total.label}&nbsp;{if $configuration.taxes_enabled}{$cart.labels.tax_short}{/if}</span>&nbsp;<span class="value">{$cart.totals.total.value}</span></p>
-                {/if}
-
-                {if $cart.subtotals.tax}
-                  <p class="product-tax small">{l s='%label%:' sprintf=['%label%' => $cart.subtotals.tax.label] d='Shop.Theme.Global'}&nbsp;<span class="value">{$cart.subtotals.tax.value}</span></p>
-                {/if}
+                <div>
+                    {*          {widget name="rocketcrosselling" id_product=$product.id is_popup=true}*}
+                </div>
 
             </div>
-          </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link"
+                        data-dismiss="modal">{l s='Continue shopping' d='Shop.Theme.Actions'}</button>
+                <a href="{$cart_url}"
+                   class="btn btn-primary">{l s='Proceed to checkout' d='Shop.Theme.Actions'}</a>
+            </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">{l s='Continue shopping' d='Shop.Theme.Actions'}</button>
-        <a href="{$cart_url}" class="btn btn-primary">{include file="_partials/icon.tpl" icon="check" class=""}{l s='Proceed to checkout' d='Shop.Theme.Actions'}</a>
-      </div>
     </div>
-  </div>
 </div>
+
