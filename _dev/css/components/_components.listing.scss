@@ -1,3 +1,22 @@
-.c-listing__title{
+.c-cat__heading{
+margin-bottom : $listing-heading-margin-bottom;
+}
 
+.c-listing__title{
+  font-size: $listing-title-font-size;
+  font-weight: $listing-title-font-weight;
+  font-family: $listing-title-font-family;
+  color: $listing-title-color;
+  text-transform: $listing-title-text-transform;
+  text-decoration: $listing-title-text-decoration;
+  letter-spacing: $listing-title-letter-spacing;
+  line-height: $listing-title-line-height;
+  margin-bottom: $listing-title-margin-bottom;
+}
+
+
+.c-listing__subcatitem{
+  &:not(:first-child){
+    margin-left: $spacer;
+  }
 }

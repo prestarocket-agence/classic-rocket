@@ -30,24 +30,10 @@
 
 
 {block name='content'}
-    <section id="main" class="row /js product-container">
-            <div class="col-lg-5 offset-lg-2 u-order-1">
-                {block name='page_content_container'}
-                    <section class="page-content--product" id="content">
-                        {block name='page_content'}
-                            {*              {block name='product_flags'}*}
-                            {*                  {include file='catalog/_partials/product-flags.tpl'}*}
-                            {*              {/block}*}
+    <section id="main" class="/js product-container">
+        <div class="row">
 
-                            {block name='product_cover_thumbnails'}
-                                {include file='catalog/_partials/product-cover-thumbnails.tpl'}
-                            {/block}
-
-                        {/block}
-                    </section>
-                {/block}
-            </div>
-            <div class="col-lg-5 order-0">
+            <div class="col-lg-5 offset-lg-1 u-order-1">
                 {block name='page_header_container'}
                     {block name='page_header'}
                         <p class="u-h2 u-mb-2">{block name='page_title'}{$product.name}{/block}</p>
@@ -130,6 +116,23 @@
                 </div>
             </div>
 
+            <div class="col-lg-6 u-order-0">
+                {block name='page_content_container'}
+                    <section class="page-content--product u-sticky" id="content">
+                        {block name='page_content'}
+                            {*              {block name='product_flags'}*}
+                            {*                  {include file='catalog/_partials/product-flags.tpl'}*}
+                            {*              {/block}*}
+
+                            {block name='product_cover_thumbnails'}
+                                {include file='catalog/_partials/product-cover-thumbnails.tpl'}
+                            {/block}
+
+                        {/block}
+                    </section>
+                {/block}
+            </div>
+        </div>
         {block name='product_accessories'}
             {if $accessories}
                 <section class="product-accessories mt-3">

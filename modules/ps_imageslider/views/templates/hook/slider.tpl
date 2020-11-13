@@ -25,7 +25,7 @@
 {if $homeslider.slides}
 
     {assign var=paddingbottom value=($homeslider.slides[0]['sizes'][1]/$homeslider.slides[0]['sizes'][0]*100)}
-    <div id="carousel" class="o-wrapper u-mb-10 /js carousel slick__arrow-large" {if $homeslider.slides|count > 1}data-slick={strip}
+    <div id="carousel" class="o-wrapper u-mb-spacing-lg /js carousel slick__arrow-large" {if $homeslider.slides|count > 1}data-slick={strip}
     '{literal}{
 "autoplay": true,
 "slidesToShow": 1,
