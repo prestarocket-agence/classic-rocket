@@ -70,6 +70,10 @@
 .c-header__logo {
   max-width: 100%;
   height: auto;
+  @include media-breakpoint-mobile{
+    max-width: 50%;
+
+  }
 }
 
 .c-header__searchbar {
