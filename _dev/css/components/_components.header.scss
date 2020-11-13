@@ -90,6 +90,10 @@
 .c-header__shortcut-item {
   &:not(:first-child) {
     margin-left: $spacer*2;
+    @include media-breakpoint-mobile{
+      margin-left: $spacer*.75;
+
+    }
   }
 
   a {
