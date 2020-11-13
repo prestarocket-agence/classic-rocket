@@ -22,10 +22,12 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section class="o-wrapper c-featured-pdt /js">
-    <p class="u-h2 u-mb-2">
+<section class="c-pdtlistsection c-featured-pdt u-mb-spacing-lg">
+    <div class="c-pdtlistsection__heading">
+    <p class="c-pdtlistsection__title">
         {l s='Popular Products' d='Shop.Theme.Catalog'}
     </p>
+    </div>
     {assign var="productscount" value=$products|count}
     <div class="row">
     <div class="c-slider{if $productscount > 1} /js glider js-slider{/if}" data-glider='{strip}
