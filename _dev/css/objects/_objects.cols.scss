@@ -21,6 +21,7 @@
   $col-gutter-width: $grid-gutter-width/2;
 
   $columns-base: 6, 12;
+  $columns-md: 3,4,8;
   $columns-lg: 2, 3, 4, 5, 6, 7, 8, 9, 10;
 
   @each $column-base in $columns-base {
@@ -31,13 +32,33 @@
     }
   }
 
+
+
+  @include media-breakpoint-up(md) {
+    @each $column-md in $columns-md {
+      .col-md-#{$column-md} {
+        @include make-col($column-md);
+
+      }
+    }
+  }
+  @each $column-md in $columns-md {
+    .col-md-#{$column-md} {
+      @extend %grid-column;
+    }
+  }
+
   @include media-breakpoint-up(lg) {
     @each $column-lg in $columns-lg {
       .col-lg-#{$column-lg} {
         @include make-col($column-lg);
-        padding-right: $col-gutter-width;
-        padding-left: $col-gutter-width;
+
       }
+    }
+  }
+  @each $column-lg in $columns-lg {
+    .col-lg-#{$column-lg} {
+      @extend %grid-column;
     }
   }
 }
