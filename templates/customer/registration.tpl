@@ -27,7 +27,8 @@
     {include file="customer/_partials/header.tpl"}
 {/block}
 {block name='bodyClass'} u-bg-light{/block}
-{block name='contentWrapperClass'} c-panel c-panel--lg{/block}
+{block name='contentWrapperClass'} c-panel c-panel--lg c-panel--center u-mb-6{/block}
+{block name='pageHeaderClass'} u-h2 u-txt-center{/block}
 {block name='page_title'}
   {l s='Create an account' d='Shop.Theme.Customeraccount'}
 {/block}
@@ -36,7 +37,7 @@
     {block name='register_form_container'}
       {$hook_create_account_top nofilter}
       <section class="register-form">
-        <p>{l s='Already have an account?' d='Shop.Theme.Customeraccount'} <a href="{$urls.pages.authentication}">{l s='Log in instead!' d='Shop.Theme.Customeraccount'}</a></p>
+        <p class="u-txt-center">{l s='Already have an account?' d='Shop.Theme.Customeraccount'} <a class="u-font-weight-bold" href="{$urls.pages.authentication}">{l s='Log in instead!' d='Shop.Theme.Customeraccount'}</a></p>
         {render file='customer/_partials/customer-form.tpl' ui=$register_form class="c-form__mw-450"}
       </section>
     {/block}
