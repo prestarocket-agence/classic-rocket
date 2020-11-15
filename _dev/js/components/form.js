@@ -43,13 +43,15 @@ export default class Form {
 
   togglePasswordVisibility() {
     $('button[data-action="show-password"]').on('click', function () {
-      var elm = $(this).closest('.input-group').children('input.js-visible-password');
+        var elm = $(this).closest('.js-pwd-wrap').children('.js-visible-password');
+      var _btn = $(this);
+      _btn.toggleClass('is-pwd-txt');
       if (elm.attr('type') === 'password') {
         elm.attr('type', 'text');
-        $(this).text($(this).data('textHide'));
+        $('js-btn-pwd-text',_btn).text(_btn.data('textHide'));
       } else {
         elm.attr('type', 'password');
-        $(this).text($(this).data('textShow'));
+          $('js-btn-pwd-text',_btn).text(_btn.data('textShow'));
       }
 
     });
@@ -59,7 +61,7 @@ export default class Form {
       let forms = document.getElementsByClassName('needs-validation');
 
       if(forms.length > 0){
-          console.log(supportedValidity());
+          // console.log(supportedValidity());
           if(!supportedValidity()){
               return;
           }

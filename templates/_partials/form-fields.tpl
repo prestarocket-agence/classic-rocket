@@ -161,9 +161,10 @@
         {elseif $field.type === 'password'}
 
             {block name='form_field_item_password'}
-                <div class="/js input-group js-parent-focus">
+                <div class="/js js-parent-focus">
+                    <div class="c-inputadd c-inputadd--right /js js-pwd-wrap">
                     <input
-                            class="/js form-control js-child-focus js-visible-password{if !empty($field.errors)} is-invalid{/if}"
+                            class="c-inputadd__input c-inputadd__input--right form-control /js js-child-focus js-visible-password{if !empty($field.errors)} is-invalid{/if}"
                             name="{$field.name}"
                             id="f-{$field.name}_{$uniqId}"
                             type="password"
@@ -172,20 +173,19 @@
                             {if isset($autocomplete[$field.name])} autocomplete="{$autocomplete[$field.name]}"{/if}
                             {if $field.required}required{/if}
                     >
-
-                    <span class="o-layout o-layout--center-y">
+                    <button
+                            class="c-inputadd__btn btn btn-link"
+                            type="button"
+                            data-action="show-password"
+                            data-text-show="{l s='Show' d='Shop.Theme.Actions'}"
+                            data-text-hide="{l s='Hide' d='Shop.Theme.Actions'}"
+                    >
+                        <span class="sr-only /js js-btn-pwd-text">{l s='Show' d='Shop.Theme.Actions'}</span>
+                        {include file="_partials/icon.tpl" icon="eye-slash" class="c-icon--20 u-lh-1 c-icon--hide"}
+                        {include file="_partials/icon.tpl" icon="eye" class="c-icon--20 u-lh-1 c-icon--show"}
+                    </button>
+                    </div>
                         <span class="u-txt-sm /js form-text text-muted">{l s='At least 5 characters long' d='Shop.Forms.Help'}</span>
-                        <button
-                                class="c-btn--unstyled"
-                                type="button"
-                                data-action="show-password"
-                                data-text-show="{l s='Show' d='Shop.Theme.Actions'}"
-                                data-text-hide="{l s='Hide' d='Shop.Theme.Actions'}"
-                        >
-                            {include file="_partials/icon.tpl" icon="eye-slash" class="c-icon--20"}
-                        </button>
-                    </span>
-
                     {include file='_partials/form-errors.tpl' errors=$field.errors required=$field.required label=$field.label}
                 </div>
             {/block}

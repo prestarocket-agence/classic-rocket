@@ -23,3 +23,24 @@
     left: auto;
   }
 }
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid{
+  &.c-inputadd__input--right{
+    padding-right: ($btn-padding-x * 2 + 1.25rem);
+    background-position-x: calc(100% - #{($btn-padding-x * 2 + 1.25rem)});
+
+  }
+}
+
+.c-icon--hide{
+  display: none;
+}
+.is-pwd-txt{
+  .c-icon--hide{
+    display: inline-block;
+  }
+  .c-icon--show{
+    display: none;
+  }
+}
