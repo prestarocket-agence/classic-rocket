@@ -44,7 +44,7 @@
 
 {else}
     {assign var=uniqId value=10|mt_rand:100000}
-    <div class="form-group">
+    <div class="form-group{if $field.type === 'password'} c-form-group__pwd{/if}">
         {if $field.type == 'checkbox' || $field.type == 'radio-buttons'}
             {if $field.type == 'radio-buttons'}
                 <div class="c-form__label">{$field.label}</div>
@@ -185,7 +185,7 @@
                         {include file="_partials/icon.tpl" icon="eye" class="c-icon--20 u-lh-1 c-icon--show"}
                     </button>
                     </div>
-                        <span class="u-txt-sm /js form-text text-muted">{l s='At least 5 characters long' d='Shop.Forms.Help'}</span>
+                        <span class="u-txt-sm /js form-text">{l s='At least 5 characters long' d='Shop.Forms.Help'}</span>
                     {include file='_partials/form-errors.tpl' errors=$field.errors required=$field.required label=$field.label}
                 </div>
             {/block}
@@ -213,7 +213,7 @@
                         {if isset($autocomplete[$field.name])} autocomplete="{$autocomplete[$field.name]}"{/if}
                 >
                 {if isset($field.availableValues.comment)}
-                    <span class="u-txt-sm /js form-text text-muted">
+                    <span class="u-txt-sm form-text">
                         {$field.availableValues.comment}
                     </span>
                 {/if}

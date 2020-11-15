@@ -38,8 +38,8 @@
             {/block}
           {/foreach}
         {/block}
-        <div class="u-mb-2">
-            <a href="{$urls.pages.password}" rel="nofollow" class="u-txt-sm">
+        <div class="u-mb-3">
+            <a href="{$urls.pages.password}" rel="nofollow" class="c-txt-pwd-forgot u-txt-sm">
               {l s='Forgot your password?' d='Shop.Theme.Customeraccount'}
             </a>
         </div>

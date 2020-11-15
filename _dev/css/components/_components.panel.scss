@@ -6,6 +6,11 @@
   padding: $spacer*1.5 $spacer*2;
   background-color: $white;
 }
+.c-panel--center{
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .c-panel--border{
   border: solid 1px $gray-light;
 

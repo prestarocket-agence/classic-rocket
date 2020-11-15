@@ -123,6 +123,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/utilities/utilities.ratio";
 @import "node_modules/bootstrap/scss/utilities/screenreaders.scss";
 @import "node_modules/bootstrap/scss/utilities/stretched-link.scss";
+@import "../../../classic-rocket/_dev/css/utilities/utilities.shadow";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.spacer";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.text";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.visible";
