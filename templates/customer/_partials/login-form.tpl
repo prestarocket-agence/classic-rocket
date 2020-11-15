@@ -28,7 +28,7 @@
     {include file='_partials/form-errors.tpl' errors=$errors['']}
   {/block}
 
-  <form class="needs-validation" id="login-form" action="{block name='login_form_actionurl'}{$action}{/block}" method="post" novalidate autocomplete="false">
+  <form class="needs-validation {if isset($class)}{$class}{/if}" id="login-form" action="{block name='login_form_actionurl'}{$action}{/block}" method="post" novalidate autocomplete="false">
     {block name='login_form_fields'}
       <section class="form-fields">
         {block name='form_fields'}

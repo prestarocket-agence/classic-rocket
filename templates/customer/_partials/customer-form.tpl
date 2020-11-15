@@ -28,7 +28,7 @@
     {include file='_partials/form-errors.tpl' errors=$errors['']}
   {/block}
 
-  <form class="/js js-customer-form needs-validation" id="customer-form" action="{block name='customer_form_actionurl'}{$action}{/block}" method="post" novalidate autocomplete="false">
+  <form class="/js js-customer-form needs-validation {if isset($class)}{$class}{/if}" id="customer-form" action="{block name='customer_form_actionurl'}{$action}{/block}" method="post" novalidate autocomplete="false">
     {block name='customer_form_fields'}
       <section class="">
         {block name='form_fields'}

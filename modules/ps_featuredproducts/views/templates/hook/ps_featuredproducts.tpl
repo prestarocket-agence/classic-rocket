@@ -65,9 +65,11 @@
         {/foreach}
     </div>
     </div>
+    <div class="u-d-flex u-align-items-center">
     <div class="c-slider__dots" id="fp-dots"></div>
     <button id="fp-arrow-prev" aria-label="{l s='Précédent' d='Shop.Theme.Global'}"
-            class="c-slider__arrow c-slider__arrow--left btn btn-link">{include file="_partials/icon.tpl" icon="chevron-left" class="c-icon--28"}</button>
+            class="c-slider__arrow c-slider__arrow--left btn btn-link u-txt-black">{include file="_partials/icon.tpl" icon="chevron-left" class="c-icon--20"}</button>
     <button id="fp-arrow-next" aria-label="{l s='Suivant' d='Shop.Theme.Global'}"
-            class="c-slider__arrow c-slider__arrow--right btn btn-link">{include file="_partials/icon.tpl" icon="chevron-right" class="c-icon--28"}</button>
+            class="c-slider__arrow c-slider__arrow--right btn btn-link u-txt-black">{include file="_partials/icon.tpl" icon="chevron-right" class="c-icon--20"}</button>
+    </div>
 </section>
