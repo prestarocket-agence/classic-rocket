@@ -62,6 +62,13 @@ $theme-colors: (
 @import "node_modules/bootstrap/scss/buttons";
 @import "node_modules/bootstrap/scss/custom-forms";
 @import "node_modules/bootstrap/scss/button-group";
+
+$theme-colors: (
+        "success": $success,
+        "info": $info,
+        "warning": $warning,
+        "danger": $danger
+);
 @import "node_modules/bootstrap/scss/alert";
 $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "info", "warning", "danger", "light", "dark");
 

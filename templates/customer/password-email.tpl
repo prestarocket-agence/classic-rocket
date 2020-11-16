@@ -23,6 +23,14 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {extends file='page.tpl'}
+{block name="header"}
+    {include file="customer/_partials/header.tpl"}
+{/block}
+
+{block name='bodyClass'} u-bg-light{/block}
+{block name='contentWrapperClass'} c-panel c-panel--lg c-panel--center u-mb-6{/block}
+{block name='pageHeaderClass'} u-h2 u-txt-center{/block}
+
 
 {block name='page_title'}
   {l s='Forgot your password?' d='Shop.Theme.Customeraccount'}
@@ -65,8 +73,7 @@
 {/block}
 
 {block name='page_footer'}
-  <a href="{$urls.pages.my_account}" class="account-link">
-    <i class="material-icons">&#xE5CB;</i>
+  <a href="{$urls.pages.my_account}" class="btn btn-outline-primary btn-sm u-mt-4">
     <span>{l s='Back to login' d='Shop.Theme.Actions'}</span>
   </a>
 {/block}
