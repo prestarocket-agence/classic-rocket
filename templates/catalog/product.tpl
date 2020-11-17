@@ -36,7 +36,7 @@
             <div class="col-lg-5 offset-lg-1 u-order-1">
                 {block name='page_header_container'}
                     {block name='page_header'}
-                        <p class="u-h2 u-mb-2">{block name='page_title'}{$product.name}{/block}</p>
+                        <h1 class="c-pdt__title">{block name='page_title'}{$product.name}{/block}</h1>
                     {/block}
                 {/block}
 
