@@ -109,7 +109,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "node_modules/bootstrap/scss/transitions";
 
 
-@import "../../../classic-rocket/_dev/css/components/components.project";
+@import "./components/components.project";
 
 
 /*
