@@ -7,9 +7,10 @@
 /*
 /* SETTINGS */
 @import "node_modules/bootstrap/scss/functions";
-@import "../../../classic-rocket/_dev/css/../../../classic-rocket/_dev/css/settings/settings.colors";
 
-@import "../../../classic-rocket/_dev/css/../../../classic-rocket/_dev/css/settings/settings.bootstrap";
+@import "../../../classic-rocket/_dev/css/settings/settings.colors";
+@import "../../../classic-rocket/_dev/css/settings/settings.bootstrap";
+
 @import "node_modules/bootstrap/scss/variables";
 
 
@@ -19,6 +20,7 @@
 @import "../../../classic-rocket/_dev/css/settings/settings.product-mini";
 @import "../../../classic-rocket/_dev/css/settings/settings.search";
 @import "../../../classic-rocket/_dev/css/settings/settings.tags";
+@import "../../../classic-rocket/_dev/css/settings/settings.to_refacto";
 @import "./settings/settings.project";
 
 
