@@ -4,7 +4,7 @@
         {if $cart.products_count > 0}
         <a rel="nofollow" href="{$cart_url}">
             {/if}
-            {include file="_partials/icon.tpl" icon="cart" class="c-header__icon"}
+            {include file="_partials/icon.tpl" icon="cart" class="c-header__icon c-icon--28"}
             {*                <span class="visible--desktop blockcart__label small">{l s='Cart' d='Shop.Theme.Checkout'}</span>*}
             <span class="c-header__cart-label">{$cart.products_count}</span>
             {if $cart.products_count > 0}
