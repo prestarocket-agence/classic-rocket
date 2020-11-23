@@ -58,13 +58,13 @@
     margin-bottom: $spacer;
   }
 
-  & > *:not(:last-child) {
-    margin-right: $spacer*4;
-
-    @include media-breakpoint-mobile () {
-      margin-right: 0;
-    }
-  }
+  //& > *:not(:last-child) {
+  //  margin-right: $spacer*4;
+  //
+  //  @include media-breakpoint-mobile () {
+  //    margin-right: 0;
+  //  }
+  //}
 }
 
 .c-header__logo {
@@ -78,6 +78,8 @@
 
 .c-header__searchbar {
   flex: 1;
+  margin-right: $spacer*2;
+  margin-left: $spacer*2;
 
   @include media-breakpoint-mobile () {
     flex: 0 0 100%;
