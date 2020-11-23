@@ -142,10 +142,6 @@
     color: $black;
   }
 
-  &-icon {
-    color: $black;
-  }
-
   &-signin {
     margin-bottom: 0;
     margin-left: $spacer*.5;
@@ -160,7 +156,11 @@
     }
   }
 }
+//icons
 
+.c-header__icon{
+  color:$header-icon-color;
+}
 //Nav
 
 .c-nav__link {

@@ -30,7 +30,7 @@
                 title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
                 rel="nofollow"
         >
-            {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--28 u-mr-1"}
+            {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--28 c-header__icon u-mr-1"}
 
             <div class="u-hidden-mobile">
                 <p class="c-header__customer-name">{$customerName}</p>
@@ -48,7 +48,7 @@
                 title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
                 rel="nofollow"
         >
-            {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--28 c-header__customer-icon"}
+            {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--28 c-header__icon"}
         </a>
     {/if}
 </div>
