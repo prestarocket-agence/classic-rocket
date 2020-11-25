@@ -115,5 +115,5 @@
       </div>
       {/if}
   {/block}
-</div>
 {hook h='displayAfterProductThumbs'}
+</div>
