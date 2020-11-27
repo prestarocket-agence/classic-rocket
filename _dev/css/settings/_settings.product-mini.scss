@@ -3,7 +3,8 @@ $pm-margin-bottom: $spacer*3;
 
 $pm-card-bg-color: #fff;
 $pm-card-radius: null;
-
+$pm-card-border:1px solid $border-color;
+$enable-pm-hover-shadow: false;
 //product name
 $pm-name-font-size : null;
 $pm-name-font-weight : null;
@@ -37,18 +38,19 @@ $pm-brand-margin-bottom : $spacer/4;
 
 
 //product thumb
-$pm-thumb-margin-bottom: $spacer;
 $pm-thumb-radius: $spacer/2;
 $pm-thumb-bg-color: null;
 
 $pm-thumb-border: null;
-$pm-thumb-border-radius: null;
+$pm-card-img-top-radius: null;
+$pm-card-img-bottom-radius: null;
+
 
 $pm-thumb-padding-x: null;
 $pm-thumb-padding-y: null;
 $pm-thumb-margin-bottom: $spacer;
 
-
+$pm-thumb-border-radius : null;
 
 
 $pm-card-body-padding-x: 0;
