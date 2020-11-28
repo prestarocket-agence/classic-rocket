@@ -110,6 +110,8 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.search";
 @import "../../../classic-rocket/_dev/css/components/components.select";
 @import "../../../classic-rocket/_dev/css/components/components.separator";
+@import "node_modules/bootstrap/scss/nav";
+
 @import "../../../classic-rocket/_dev/css/components/components.tags";
 @import "node_modules/bootstrap/scss/transitions";
 
