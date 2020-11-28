@@ -13,7 +13,7 @@
 
 @import "node_modules/bootstrap/scss/variables";
 
-
+@import "../../../classic-rocket/_dev/css/settings/settings.alert";
 @import "../../../classic-rocket/_dev/css/settings/settings.fonts";
 @import "../../../classic-rocket/_dev/css/settings/settings.listing";
 @import "../../../classic-rocket/_dev/css/settings/settings.prices";
@@ -62,6 +62,7 @@ $theme-colors: (
   "secondary": $secondary
 );
 @import "node_modules/bootstrap/scss/buttons";
+//@import "node_modules/bootstrap/scss/close";
 @import "node_modules/bootstrap/scss/custom-forms";
 @import "node_modules/bootstrap/scss/button-group";
 
@@ -75,9 +76,11 @@ $theme-colors: (
 $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "info", "warning", "danger", "light", "dark");
 
 @import "../../../classic-rocket/_dev/css/components/components.address";
+@import "../../../classic-rocket/_dev/css/components/components.alert";
 @import "../../../classic-rocket/_dev/css/components/components.banner";
 @import "../../../classic-rocket/_dev/css/components/components.breadcrumb";
 @import "../../../classic-rocket/_dev/css/components/components.button";
+@import "../../../classic-rocket/_dev/css/components/components.button-close";
 @import "../../../classic-rocket/_dev/css/components/components.card";
 @import "../../../classic-rocket/_dev/css/components/components.cart";
 @import "../../../classic-rocket/_dev/css/components/components.carousel";
