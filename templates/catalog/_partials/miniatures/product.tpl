@@ -73,6 +73,12 @@
                         {/if}
                     {/block}
                     {block name='product_body_footer'}
+                        <form action="{$urls.pages.cart}" method="post" style="z-index:2" data-form-id-product="{$product.id}">
+                            <input type="hidden" value="{$product.id_product}" name="id_product">
+                            <input type="number" class="input-group form-control" name="qty" value="1">
+                            <button data-button-action="add-to-cart-list" {if !$product.add_to_cart_url}disabled{/if}{if $product.show_quantities} data-stock="{$product.quantity}"{/if} data-allow-oosp="{$product.allow_oosp}" data-min="{$product.minimal_quantity}" class="btn btn-primary">{l s='Add to cart' d='Shop.Theme.Actions'}</button>
+                            <div class="alert alert-danger"></div>
+                        </form>
                     {/block}
                 {/block}
             </div>
