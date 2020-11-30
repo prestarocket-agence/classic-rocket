@@ -30,62 +30,48 @@ var $body = $('body');
 
 $body.on(
     'click',
-    '[data-add-to-cart-list="add-to-cart"]',
+    '[data-button-action="add-to-cart-list"]',
     (event) => {
     event.preventDefault();
 
+let $form = $(event.target).closest('form');
+$form.addClass('is-adding');
+console.log(event);
+let $btn = $(event.currentTarget);
+let actionURL = $form.attr('action');
+let query = $form.serialize() + '&add=1&action=update&token='+prestashop.static_token;
 
 
+let minimalValue = parseInt($btn.data('min'), 10);
+let isOosp = $btn.data('allow-oosp');
+let $inputQty = $('[name="qty"]',$form);
+let qty = $inputQty.val();
+qty = parseInt(qty, 10);
+if(qty < 1){
+    qty = 1;
+}
 
+console.log(isOosp,qty);
 
-if ($('#quantity_wanted').val() > $('[data-stock]').data('stock') && $('[data-allow-oosp]').data('allow-oosp').length === 0) {
-    $('[data-button-action="add-to-cart"]').attr('disabled', 'disabled');
-} else {
-    let $form = $(event.target).closest('form');
-    let query = $form.serialize() + '&add=1&action=update';
-    let actionURL = $form.attr('action');
+$.post(actionURL, query, null, 'json').then((resp) => {
 
-    let isQuantityInputValid = ($input) => {
-        var validInput = true;
-
-        $input.each((index, input) => {
-            let $input = $(input);
-        let minimalValue = parseInt($input.attr('min'), 10);
-        if (minimalValue && $input.val() < minimalValue) {
-            onInvalidQuantity($input);
-            validInput = false;
-        }
-    });
-
-        return validInput;
-    };
-
-    let onInvalidQuantity = ($input) => {
-        $input.parents('.product-add-to-cart').first().find('.product-minimal-quantity').addClass('error');
-        $input.parent().find('label').addClass('error');
-    };
-
-    let $quantityInput = $form.find('input[min]' );
-    if (!isQuantityInputValid($quantityInput)) {
-        onInvalidQuantity($quantityInput);
-
-        return;
-    }
-
-    $.post(actionURL, query, null, 'json').then((resp) => {
-        prestashop.emit('updateCart', {
-        reason: {
-            idProduct: resp.id_product,
-            idProductAttribute: resp.id_product_attribute,
-            idCustomization: resp.id_customization,
-            linkAction: 'add-to-cart-list',
-            cart: resp.cart
-        },
-        resp: resp
-    });
-}).fail((resp) => {
-        prestashop.emit('handleError', {eventType: 'addProductToCart', resp: resp});
+    console.log(resp);
+    prestashop.emit('updateCart', {
+    reason: {
+        idProduct: resp.id_product,
+        idProductAttribute: resp.id_product_attribute,
+        idCustomization: resp.id_customization,
+        linkAction: 'add-to-cart-list',
+        cart: resp.cart
+    },
+    resp: resp
 });
-}
-}
-);
+}).fail((resp) => {
+    prestashop.emit('handleError', {eventType: 'addProductToCart', resp: resp});
+});
+
+
+
+
+
+});
