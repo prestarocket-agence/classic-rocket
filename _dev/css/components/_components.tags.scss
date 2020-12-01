@@ -3,6 +3,7 @@
   font-size: $tag-font-size;
   font-weight: $tag-font-weight;
   border-radius: $tag-radius;
+  color: $tag-color;
 
   @if ($tag-border-enable == false) {
     border: none !important;
