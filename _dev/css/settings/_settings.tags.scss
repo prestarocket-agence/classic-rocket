@@ -1,1 +1,54 @@
-$tag-font-size: $font-size-base * .875;
+
+// *** BASES TAGS ***
+
+//Font
+$tag-font-size: $font-size-base*.875;
+$tag-font-weight: null;
+$tag-font-family : null;
+
+//Text
+$tag-text-transform : null;
+$tag-text-decoration : null;
+$tag-line-height : null;
+$tag-letter-spacing : null;
+
+//Spacing
+$tag-padding-y: $spacer*.125;
+$tag-padding-x: $spacer*.25;
+
+//Radius
+$tag-radius: $spacer*.25;
+
+//Border
+$tag-border-enable: false;
+
+
+// *** TYPES TAGS ***
+
+//Discount
+$tag-discount-font-size: $tag-font-size;
+$tag-discount-font-weight: $tag-font-weight;
+$tag-discount-color: $white;
+$tag-discount-bg: $red;
+$tag-discount-border: $tag-discount-color;
+
+//Promo
+$tag-promo-font-size: $tag-font-size;
+$tag-promo-font-weight: $tag-font-weight;
+$tag-promo-color: $white;
+$tag-promo-bg: $red;
+$tag-promo-border: $tag-discount-color;
+
+//New
+$tag-new-font-size: $tag-font-size;
+$tag-new-font-weight: $tag-font-weight;
+$tag-new-color: $white;
+$tag-new-bg: $primary;
+$tag-new-border: $tag-discount-color;
+
+//Pack
+$tag-pack-font-size: $tag-font-size;
+$tag-pack-font-weight: $tag-font-weight;
+$tag-pack-color: $white;
+$tag-pack-bg: $primary;
+$tag-pack-border: $tag-discount-color;
