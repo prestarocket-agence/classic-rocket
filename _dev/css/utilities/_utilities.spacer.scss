@@ -35,5 +35,19 @@ $spaces: 0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80;
   //  margin-bottom: $spacer*($space/16);
   //}
 }
+
 /* stylelint-enable */
 
+
+$spaces: 0;
+
+@each $space in $spaces {
+  $step: $space / 8;
+
+  @include media-breakpoint-mobile {
+    [class].u-px-sm-#{$step} {
+      padding-left: $spacer*(-$space/16);
+      padding-right: $spacer*(-$space/16);
+    }
+  }
+}

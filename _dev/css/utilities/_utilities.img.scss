@@ -2,12 +2,3 @@
   width: 100%;
   height: auto;
 }
-
-.u-img--wider {
-  @include media-breakpoint-mobile {
-    &-mobile {
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
-}
