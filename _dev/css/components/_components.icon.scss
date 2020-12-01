@@ -1,7 +1,7 @@
 .c-icon {
   & svg {
-    display: inline-block;
-    vertical-align: text-bottom;
+    display: flex;
+    align-items: center;
   }
 }
 
