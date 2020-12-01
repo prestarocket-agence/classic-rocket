@@ -49,7 +49,7 @@
                 <a href="{$urls.base_url}" class="c-header__logo">
                     <img class="logo img-fluid" src="{if isset($modules.prestarockettheme.logo_svg)}{$modules.prestarockettheme.logo_svg}{else}{$shop.logo}{/if}" alt="{$shop.name}">
                 </a>
-                <div class="c-header__searchbar u-order-mobile-2">
+                <div class="c-header__searchbar u-order-2@mobile">
                     {hook h='displaySearch'}
                 </div>
                 <div class="c-header__shortcut">

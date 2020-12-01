@@ -31,7 +31,7 @@ $orders: 0, 1;
 $orders-mobile: 2;
 @include media-breakpoint-mobile () {
   @each $order-mobile in $orders-mobile {
-    .u-order-mobile-#{$order-mobile} {
+    .u-order-#{$order-mobile}\@mobile {
       order: $order-mobile;
     }
   }
