@@ -5,6 +5,13 @@
   }
 }
 
+.c-icon--center-y {
+  & svg {
+    display: flex;
+    align-items: center;
+  }
+}
+
 $sizes: 16, 20, 24, 28;
 
 @each $size in $sizes {
