@@ -5,16 +5,12 @@
   border-radius: $tag-radius;
   color: $tag-color;
 
-  @if ($tag-border-enable == false) {
-    border: none !important;
-  }
-
   &--discount {
     font-size: $tag-discount-font-size;
     font-weight: $tag-discount-font-weight;
     color: $tag-discount-color;
     background-color: $tag-discount-bg;
-    border: 1px solid $tag-discount-border;
+    border: $tag-border-width solid $tag-discount-border;
   }
 
   &--promo {
@@ -22,7 +18,7 @@
     font-weight: $tag-promo-font-weight;
     color: $tag-promo-color;
     background-color: $tag-promo-bg;
-    border: 1px solid $tag-promo-border;
+    border: $tag-border-width solid $tag-promo-border;
   }
 
   &--new {
@@ -30,7 +26,7 @@
     font-weight: $tag-new-font-weight;
     color: $tag-new-color;
     background-color: $tag-new-bg;
-    border: 1px solid $tag-new-border;
+    border: $tag-border-width solid $tag-new-border;
   }
 
   &--pack {
@@ -38,7 +34,7 @@
     font-weight: $tag-pack-font-weight;
     color: $tag-pack-color;
     background-color: $tag-pack-bg;
-    border: 1px solid $tag-pack-border;
+    border: $tag-border-width solid $tag-pack-border;
   }
 }
 

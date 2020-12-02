@@ -22,6 +22,12 @@ $tag-radius: $spacer*.25;
 //Border
 $tag-border-enable: false;
 
+$tag-border-width: 0;
+
+@if ($tag-border-enable == true) {
+  $tag-border-width: 1px;
+}
+
 //Color
 $tag-color: $white;
 
