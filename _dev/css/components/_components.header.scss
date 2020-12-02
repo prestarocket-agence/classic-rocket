@@ -3,7 +3,10 @@
 .c-header {
   padding-bottom: $spacer*2;
   margin-bottom: $spacer*3;
-  border-bottom: solid 1px $secondary;
+  background-color: $header-bg;
+  if($header-border-width){
+  border-bottom: solid $header-border-width $header-border-color;
+  }
 
   @include media-breakpoint-mobile () {
     padding-bottom: 0;
