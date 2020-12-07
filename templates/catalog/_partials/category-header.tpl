@@ -12,7 +12,7 @@
     {/if}
     {block name="subcategory__items"}
         {if $subcategories}
-            <div class="c-listing__subcat u-d-flex">
+            <div class="c-listing__subcat">
                 {block name="before_subcategory__items"}{/block}
                 {foreach from=$subcategories item=subcategory}
                     <a href="{$subcategory.url}"
