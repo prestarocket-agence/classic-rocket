@@ -9,6 +9,8 @@ import './customer';
 import './listing';
 import './product';
 import './cart';
+import './listing-add-to-cart';
+
 
 import Form from './components/form';
 import TopMenu from './components/top-menu';

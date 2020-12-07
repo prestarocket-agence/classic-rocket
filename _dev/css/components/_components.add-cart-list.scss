@@ -1,0 +1,11 @@
+.c-addcartlist{
+  z-index: 2;
+}
+.c-addcartlist__loading.spinner-border{
+  display: none;
+}
+.is-adding{
+  .c-addcartlist__loading{
+    display: inline-block;
+  }
+}

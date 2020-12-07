@@ -13,7 +13,10 @@ margin-bottom : $listing-heading-margin-bottom;
   line-height: $listing-title-line-height;
   margin-bottom: $listing-title-margin-bottom;
 }
-
+.c-listing__subcat{
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .c-listing__subcatitem{
   &:not(:first-child){
