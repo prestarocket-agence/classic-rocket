@@ -23,6 +23,10 @@ $touchspin-input-width: $font-size-base*2.5;
 $touchspin-input-padding-x: 0;
 $touchspin-input-padding-y: 0;
 
+//Text
+$touchspin-input-font-size: $font-size-base;
+$touchspin-input-font-weight: $font-weight-normal;
+
 //Colors
 $touchspin-input-color: null;
 $touchspin-input-bg: null;
@@ -40,11 +44,14 @@ $touchspin-input-order: null;
 // ***** BUTTONS ***** (minus & plus)
 
 //Sizes
-$touchspin-btn-size: $font-size-base;
 $touchspin-btn-width: 24px;
 $touchspin-btn-height: 24px;
 $touchspin-btn-padding-x: null;
 $touchspin-btn-padding-y: null;
+
+//Text
+$touchspin-btn-font-size: $font-size-base;
+$touchspin-btn-font-weight: $font-weight-normal;
 
 //Colors
 $touchspin-btn-color: $black;

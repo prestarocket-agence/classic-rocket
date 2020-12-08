@@ -16,6 +16,8 @@
 .c-touchspin__input {
   width: $touchspin-input-width;
   padding: $touchspin-input-padding-y $touchspin-input-padding-x;
+  font-size: $touchspin-input-font-size;
+  font-weight: $touchspin-input-font-weight;
   color: $touchspin-input-color;
   background: $touchspin-input-bg;
   border: $touchspin-input-border-color solid $touchspin-input-border-width;
@@ -41,7 +43,8 @@
   padding: $touchspin-btn-padding-y $touchspin-btn-padding-x;
   width: $touchspin-btn-width;
   height: $touchspin-btn-height;
-  font-size: $touchspin-btn-size;
+  font-size: $touchspin-btn-font-size;
+  font-weight: $touchspin-btn-font-weight;
   color: $touchspin-btn-color;
   background: $touchspin-btn-bg;
   border: $touchspin-btn-border-color solid $touchspin-btn-border-width;
