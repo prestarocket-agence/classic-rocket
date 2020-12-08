@@ -65,8 +65,8 @@ $(document).ready(function () {
         const $quantityInput = $('#quantity_wanted');
 
         $quantityInput.TouchSpin({
-            buttondown_class: '/js js-touchspin',
-            buttonup_class: '/js js-touchspin',
+            buttondown_class: 'c-touchspin__btn c-touchspin__btn-minus /js js-touchspin',
+            buttonup_class: 'c-touchspin__btn c-touchspin__btn-plus /js js-touchspin',
             min: parseInt($quantityInput.attr('min'), 10),
             max: 1000000
         });

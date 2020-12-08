@@ -28,13 +28,13 @@
         {block name='product_quantity'}
             <div class="row c-form__row">
                 <label class="col-lg-3 u-mb-0" for="quantity_wanted">{l s='Quantity' d='Shop.Theme.Catalog'}</label>
-                <div class="c-form__quantity">
+                <div class="c-touchspin__group">
                     <input
                             type="number"
                             name="qty"
                             id="quantity_wanted"
                             value="{$product.quantity_wanted}"
-                            class="col-lg-3"
+                            class="c-touchspin__input"
                             min="{$product.minimal_quantity}"
                             aria-label="{l s='Quantity' d='Shop.Theme.Actions'}"
                             {if isset($product.product_url)}data-update-url="{$product.product_url}"{/if}
