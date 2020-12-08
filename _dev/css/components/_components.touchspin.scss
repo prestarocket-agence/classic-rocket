@@ -8,6 +8,7 @@
 
   & > div {
     display: flex;
+    justify-content: space-between;
     align-items: center;
   }
 }
@@ -15,6 +16,7 @@
 
 .c-touchspin__input {
   width: $touchspin-input-width;
+  height: $touchspin-input-height;
   padding: $touchspin-input-padding-y $touchspin-input-padding-x;
   font-size: $touchspin-input-font-size;
   font-weight: $touchspin-input-font-weight;
