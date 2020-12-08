@@ -123,9 +123,9 @@
             {if isset($product.is_gift) && $product.is_gift}
                 <span>{$product.quantity}</span>
             {else}
-                <div class="c-cart-input__quantity">
+                <div class="c-touchspin__group">
                     <input
-                            class="/js js-cart-line-product-quantity"
+                            class="c-touchspin__input /js js-cart-line-product-quantity"
                             data-down-url="{$product.down_quantity_url}"
                             data-up-url="{$product.up_quantity_url}"
                             data-update-url="{$product.update_quantity_url}"
