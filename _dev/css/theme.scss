@@ -20,6 +20,7 @@
 @import "../../../classic-rocket/_dev/css/settings/settings.product-mini";
 @import "../../../classic-rocket/_dev/css/settings/settings.search";
 @import "../../../classic-rocket/_dev/css/settings/settings.tags";
+@import "../../../classic-rocket/_dev/css/settings/settings.touchspin";
 @import "../../../classic-rocket/_dev/css/settings/settings.to_refacto";
 @import "./settings/settings.project";
 
@@ -116,6 +117,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "node_modules/bootstrap/scss/spinners";
 
 @import "../../../classic-rocket/_dev/css/components/components.tags";
+@import "../../../classic-rocket/_dev/css/components/components.touchspin";
 @import "node_modules/bootstrap/scss/tooltip";
 @import "node_modules/bootstrap/scss/transitions";
 

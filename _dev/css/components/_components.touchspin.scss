@@ -1,0 +1,57 @@
+.c-touchspin__group {
+  width: $touchspin-width;
+  padding: $touchspin-padding-y $touchspin-padding-x;
+  color: $touchspin-color;
+  background: $touchspin-bg;
+  border: $touchspin-border-color solid $touchspin-border-width;
+  border-radius: $touchspin-radius;
+
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+.c-touchspin__input {
+  width: $touchspin-input-width;
+  padding: $touchspin-input-padding-y $touchspin-input-padding-x;
+  color: $touchspin-input-color;
+  background: $touchspin-input-bg;
+  border: $touchspin-input-border-color solid $touchspin-input-border-width;
+  border-radius: $touchspin-radius;
+  text-align: center;
+  order: $touchspin-input-order;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Chrome, Safari, Edge, Opera */
+  }
+
+  & {
+    -moz-appearance: textfield;  /* Firefox */
+  }
+}
+
+
+.c-touchspin__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $touchspin-btn-padding-y $touchspin-btn-padding-x;
+  width: $touchspin-btn-width;
+  height: $touchspin-btn-height;
+  font-size: $touchspin-btn-size;
+  color: $touchspin-btn-color;
+  background: $touchspin-btn-bg;
+  border: $touchspin-btn-border-color solid $touchspin-btn-border-width;
+  border-radius: $touchspin-btn-radius;
+
+  &-minus {
+    order: $touchspin-minus-order;
+  }
+
+  &-plus {
+    order: $touchspin-plus-order;
+  }
+}

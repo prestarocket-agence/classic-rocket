@@ -73,14 +73,3 @@
     align-items: flex-end;
   }
 }
-
-.c-cart-input__quantity {
-  & > div {
-    display: flex;
-    width: 150px;
-
-    @include media-breakpoint-mobile () {
-      margin-bottom: $spacer;
-    }
-  }
-}
