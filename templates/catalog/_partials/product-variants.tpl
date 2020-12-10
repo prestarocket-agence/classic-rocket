@@ -41,7 +41,7 @@
                 {elseif $group.group_type == 'color'}
                     <ul id="group_{$id_attribute_group}" class="u-d-flex">
                         {foreach from=$group.attributes key=id_attribute item=group_attribute}
-                            <li class="float-xs-left c-input-color__group">
+                            <li class="c-input-color__group">
                                 <label class="">
                                     <input class="input-color c-input-color__btn" type="radio"
                                            data-product-attribute="{$id_attribute_group}"
@@ -59,7 +59,7 @@
                 {elseif $group.group_type == 'radio'}
                     <ul id="group_{$id_attribute_group}">
                         {foreach from=$group.attributes key=id_attribute item=group_attribute}
-                            <li class="input-container float-xs-left">
+                            <li class="input-container">
                                 <label>
                                     <input class="input-radio" type="radio"
                                            data-product-attribute="{$id_attribute_group}"
