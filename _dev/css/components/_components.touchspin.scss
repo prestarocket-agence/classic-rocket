@@ -53,10 +53,12 @@
   border-radius: $touchspin-btn-radius;
 
   &-minus {
+    background: $touchspin-minus-bg;
     order: $touchspin-minus-order;
   }
 
   &-plus {
+    background: $touchspin-plus-bg;
     order: $touchspin-plus-order;
   }
 }
