@@ -15,6 +15,7 @@
 
 @import "../../../classic-rocket/_dev/css/settings/settings.alert";
 @import "../../../classic-rocket/_dev/css/settings/settings.fonts";
+@import "../../../classic-rocket/_dev/css/settings/settings.input-color";
 @import "../../../classic-rocket/_dev/css/settings/settings.listing";
 @import "../../../classic-rocket/_dev/css/settings/settings.prices";
 @import "../../../classic-rocket/_dev/css/settings/settings.product-mini";
@@ -98,6 +99,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.history";
 @import "../../../classic-rocket/_dev/css/components/components.icon";
 @import "../../../classic-rocket/_dev/css/components/components.inputadd";
+@import "../../../classic-rocket/_dev/css/components/components.input-color";
 @import "../../../classic-rocket/_dev/css/components/components.listing";
 @import "node_modules/bootstrap/scss/list-group";
 @import "../../../classic-rocket/_dev/css/components/components.media";
