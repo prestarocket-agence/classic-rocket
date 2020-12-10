@@ -5,8 +5,8 @@ $input-color-width: 28px;
 $input-color-height: 28px;
 
 //Spacing
-$input-color-margin-x: 8px;
-$input-color-margin-y: 8px;
+$input-color-margin-x: 4px;
+$input-color-margin-y: 4px;
 
 //Border
 $input-color-border-color: $gray;
@@ -17,8 +17,8 @@ $input-color-radius: 50%;
 // ***** HOVER *****
 
 //Sizes
-$input-color-hover-width: $input-color-width + $input-color-margin-x;
-$input-color-hover-height: $input-color-height + $input-color-margin-y;
+$input-color-hover-width: $input-color-width + $input-color-margin-x*2;
+$input-color-hover-height: $input-color-height + $input-color-margin-y*2;
 
 //Border
 $input-color-hover-border-color: $primary;
@@ -32,8 +32,8 @@ $input-color-hover-opacity: .5;
 // ***** SELECTED *****
 
 //Sizes
-$input-color-selected-width: $input-color-width + $input-color-margin-x;
-$input-color-selected-height: $input-color-height + $input-color-margin-y;
+$input-color-selected-width: $input-color-width + $input-color-margin-x*2;
+$input-color-selected-height: $input-color-height + $input-color-margin-y*2;
 
 //Border
 $input-color-selected-border-color: $primary;
