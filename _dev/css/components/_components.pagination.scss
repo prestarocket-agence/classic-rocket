@@ -1,11 +1,64 @@
 .c-pagination {
-  margin: $spacer*2 auto;
+  display: flex;
+  justify-content: center;
+  margin: $spacer*5 auto;
+
+  @include media-breakpoint-mobile {
+    margin: $spacer*3 auto;
+  }
 }
 
 .c-pagination__item {
-  margin-right: $spacer*2.5;
+  position: relative;
 
-  &:last-of-type {
-    margin-right: 0;
+  &:not(:last-of-type) {
+    margin-right: $pagination-margin-x;
+  }
+
+  @include media-breakpoint-mobile {
+    &:not(:last-of-type) {
+      margin-right: $pagination-margin-x-mobile;
+    }
   }
 }
+
+.c-pagination__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $pagination-width;
+  height: $pagination-height;
+  font-size: $pagination-font-size;
+  font-weight: $pagination-font-weight;
+  color: $pagination-color;
+  background: $pagination-background;
+  border: $pagination-border-color solid $pagination-border-width;
+  border-radius: $pagination-border-radius;
+}
+
+.c-pagination__link:hover {
+  color: $pagination-hover-color;
+  background: $pagination-hover-background;
+  border: $pagination-hover-border-color solid $pagination-hover-border-width;
+  border-radius: $pagination-hover-border-radius;
+}
+
+.active.c-pagination__link {
+  color: $pagination-active-color;
+  background: $pagination-active-background;
+  border: $pagination-active-border-color solid $pagination-active-border-width;
+  border-radius: $pagination-active-border-radius;
+}
+
+// *** Underline effect ***
+
+//.active.c-pagination__link:after {
+//  position: absolute;
+//  content: "";
+//  background-color: $primary;
+//  top: 100%;
+//  left: 50%;
+//  transform: translateX(-50%);
+//  width: 20px;
+//  height: 4px;
+//}

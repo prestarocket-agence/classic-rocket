@@ -1,0 +1,46 @@
+// /!\ This component is a complement of the bootstrap pagination. /!\
+// /!\ You could find missing settings in bootstrap settings variables. /!\
+
+// ***** PAGINATION *****
+
+//Sizes
+$pagination-width: 16px;
+$pagination-height: 16px;
+$pagination-font-size: $small-font-size;
+$pagination-font-weight: $font-weight-normal;
+
+//Spacing
+$pagination-margin-x: $spacer*2;
+$pagination-margin-x-mobile: $spacer;
+
+//Color
+$pagination-color: $black;
+$pagination-background: $white;
+
+//Border
+$pagination-border-color: null;
+$pagination-border-width: 0;
+$pagination-border-radius: null;
+
+// ***** HOVER *****
+
+//Color
+$pagination-hover-color: $black;
+$pagination-hover-background: null;
+
+//Border
+$pagination-hover-border-color: $pagination-border-color;
+$pagination-hover-border-width: $pagination-border-width;
+$pagination-hover-border-radius: $pagination-border-radius;
+
+
+// ***** ACTIVE *****
+
+//Color
+$pagination-active-color: $black;
+$pagination-active-background: null;
+
+//Border
+$pagination-active-border-color: $pagination-border-color;
+$pagination-active-border-width: $pagination-border-width;
+$pagination-active-border-radius: $pagination-border-radius;
