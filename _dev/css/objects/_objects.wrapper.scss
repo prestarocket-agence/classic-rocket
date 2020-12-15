@@ -10,9 +10,7 @@
   [class].o-wrapper {
     width: 100%;
     max-width: 100%;
-    @media (min-width: 1500px) {
-      max-width: 1440px;
-    }
+
     @extend .container;
   }
 
@@ -20,7 +18,9 @@
 
   .container {
     @include make-container();
-
+    @media (min-width: 1500px) {
+      max-width: 1440px;
+    }
     // Version 4.0
     //@include make-container-max-widths();
   }
