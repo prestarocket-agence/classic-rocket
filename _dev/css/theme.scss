@@ -91,6 +91,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.checkout";
 @import "../../../classic-rocket/_dev/css/components/components.custom";
 @import "../../../classic-rocket/_dev/css/components/components.customer";
+@import "node_modules/bootstrap/scss/dropdown";
 @import "../../../classic-rocket/_dev/css/components/components.filter";
 @import "../../../classic-rocket/_dev/css/components/components.footer";
 @import "../../../classic-rocket/_dev/css/components/components.form";
