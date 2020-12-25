@@ -104,7 +104,7 @@
 
                     </div>
 
-                    {block name='rocketsample'}
+                    {block name='block_after_product_action'}
                     {/block}
 
                     {block name='hook_display_reassurance'}
