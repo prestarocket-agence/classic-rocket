@@ -104,6 +104,9 @@
 
                     </div>
 
+                    {block name='rocketsample'}
+                    {/block}
+
                     {block name='hook_display_reassurance'}
                         {hook h='displayReassurance'}
                     {/block}
