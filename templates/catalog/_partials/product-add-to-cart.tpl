@@ -22,13 +22,13 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="">
+<div class="/js product-add-to-cart">
     {if !$configuration.is_catalog}
 
         {block name='product_quantity'}
             <div class="row c-form__row">
                 <label class="col-lg-3 u-mb-0" for="quantity_wanted">{l s='Quantity' d='Shop.Theme.Catalog'}</label>
-                <div class="c-touchspin__group">
+                <div class="c-touchspin__group qty">
                     <input
                             type="number"
                             name="qty"
@@ -41,6 +41,7 @@
                     >
                 </div>
             </div>
+            <div class="add">
             <button
                     class="btn btn-primary btn-lg /js js-add-to-cart"
                     data-button-action="add-to-cart"
@@ -51,7 +52,9 @@
             >
                 {l s='Add to cart' d='Shop.Theme.Actions'}
             </button>
+
             {hook h='displayProductActions' product=$product}
+            </div>
         {/block}
 
         {block name='product_availability'}
