@@ -55,6 +55,11 @@
   &-minus {
     background: $touchspin-minus-bg;
     order: $touchspin-minus-order;
+    &:disabled,
+    &.c-touchspin__btn--disabled{
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
   }
 
   &-plus {

@@ -133,7 +133,7 @@
                             type="number"
                             value="{$product.quantity}"
                             name="product-quantity-spin"
-                            min="{$product.minimal_quantity}"
+                            min="{if $product.minimal_quantity < 1}1{else}{$product.minimal_quantity}{/if}"
                     />
                 </div>
             {/if}

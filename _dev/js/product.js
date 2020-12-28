@@ -65,7 +65,7 @@ $(document).ready(function () {
         const $quantityInput = $('#quantity_wanted');
 
         $quantityInput.TouchSpin({
-            buttondown_class: 'c-touchspin__btn c-touchspin__btn-minus /js js-touchspin',
+            buttondown_class: 'c-touchspin__btn c-touchspin__btn-minus c-touchspin__btn--disabled /js js-touchspin',
             buttonup_class: 'c-touchspin__btn c-touchspin__btn-plus /js js-touchspin',
             min: parseInt($quantityInput.attr('min'), 10),
             max: 1000000
@@ -78,6 +78,22 @@ $(document).ready(function () {
                 event: e
             });
         });
+
+
+        $('body').on('touchspin.on.stopspin', '#quantity_wanted', (e) => {
+            let $input = $(e.currentTarget),
+            $parentInput = $($input).parent();
+
+            if($input.val() <= $input.attr('min') ){
+                $('.c-touchspin__btn-minus',$parentInput).prop('disabled', true);
+            }else{
+                $('.c-touchspin__btn-minus',$parentInput).prop('disabled', false).removeClass('c-touchspin__btn--disabled');
+
+            }
+
+        });
+
+
 
     }
 
