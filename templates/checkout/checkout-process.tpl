@@ -23,10 +23,20 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="checkout-process">
+    {if isset($modules.rocketfunnel.rocket_funnel_enable) && !$modules.rocketfunnel.guest_allowed}
+        {assign step_index_init 0}
+        {else}
+        {assign step_index_init 1}
+    {/if}
 {foreach from=$steps item="step" key="index"}
+
+    {if isset($modules.rocketfunnel.rocket_funnel_enable) && !$modules.rocketfunnel.guest_allowed && $step.identifier ==="checkout-personal-information-step" && $customer.is_logged}
+
+    {else}
   {render identifier  =  $step.identifier
-          position    =  ($index + 1)
+          position    =  ($index + $step_index_init)
           ui          =  $step.ui
   }
+    {/if}
 {/foreach}
 </div>
