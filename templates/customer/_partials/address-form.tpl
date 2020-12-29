@@ -46,9 +46,18 @@
           {block name='form_fields'}
             {foreach from=$formFields item="field"}
               {block name='form_field'}
-                {form_field field=$field}
+                  {if $field.name !== "alias"}
+                      {form_field field=$field}
+                  {/if}
               {/block}
             {/foreach}
+              {if $field.name eq "alias" and $customer.is_guest}
+                   {*we don't ask for alias here if customer is not registered*}
+              {else}
+                  {if isset($formFields['alias'])}
+                      {form_field field=$formFields['alias']}
+                  {/if}
+              {/if}
           {/block}
         </section>
       {/block}
