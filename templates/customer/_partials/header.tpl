@@ -8,7 +8,7 @@
             </a>
             {block name='page_title_account'}
             {/block}
-            <p class="u-mb-0 c-customer-header__item-center">{l s='Espace sécurisé' d='Shop.Theme.Global'}</p>
+
             {include file="_partials/icon.tpl" icon="shield-check" class="c-icon--28 c-icon--center-y"}
         </div>
     </div>

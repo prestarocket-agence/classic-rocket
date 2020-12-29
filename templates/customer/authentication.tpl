@@ -33,15 +33,15 @@
 {block name='page_title'}
     {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
     {else}
-    {l s='Log in to your account' d='Shop.Theme.Customeraccount'}
+        {l s='Log in to your account' d='Shop.Theme.Customeraccount'}
     {/if}
 {/block}
 {block name='page_title_account'}
-{if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
-    <div>
-    {l s='Secured step' d='Shop.Theme.Global'}
-    </div>
-{/if}
+    {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
+        <p class="u-mb-0 c-customer-header__item-center">
+            {l s='Secured step' d='Shop.Theme.Global'}
+        </p>
+    {/if}
 {/block}
 {block name='page_content'}
     {block name='login_form_container'}
@@ -63,34 +63,33 @@
                 </div>
                 <div class="col-lg-5{block name='class_panel_checkout_auth'}{/block}">
                     <div class="c-panel c-panel--lg u-h-100">
-                    <p class="c-panel__title c-panel__title--checkoutauth">{l s='Log in to your account' d='Shop.Theme.Customeraccount'}</p>
+                        <p class="c-panel__title c-panel__title--checkoutauth">{l s='Log in to your account' d='Shop.Theme.Customeraccount'}</p>
                         {block name='after_title_checkout_auth'}
                             <p class="">
-                            {l s='Sign in for faster checkout.' d='Shop.Theme.Global'}
+                                {l s='Sign in for faster checkout.' d='Shop.Theme.Global'}
                             </p>
                         {/block}
-                    <section class="login-form s-login-form-checkout">
-                        {render file='customer/_partials/login-form.tpl' ui=$login_form class="c-form__mw-450"}
-                        <div class="u-mb-3">
-                            <a href="{$urls.pages.password}" rel="nofollow" class="c-txt-pwd-forgot u-txt-sm">
-                                {l s='Forgot your password?' d='Shop.Theme.Customeraccount'}
-                            </a>
-                        </div>
-                    </section>
-                    {block name='display_after_login_form'}
-                        {hook h='displayCustomerLoginFormAfter'}
-                    {/block}
+                        <section class="login-form s-login-form-checkout">
+                            {render file='customer/_partials/login-form.tpl' ui=$login_form class="c-form__mw-450"}
+                            <div class="u-mb-3">
+                                <a href="{$urls.pages.password}" rel="nofollow" class="c-txt-pwd-forgot u-txt-sm">
+                                    {l s='Forgot your password?' d='Shop.Theme.Customeraccount'}
+                                </a>
+                            </div>
+                        </section>
+                        {block name='display_after_login_form'}
+                            {hook h='displayCustomerLoginFormAfter'}
+                        {/block}
                     </div>
                 </div>
             </div>
-
         {else}
-        <section class="login-form">
-        {render file='customer/_partials/login-form.tpl' ui=$login_form class="c-form__mw-450"}
-        </section>
-          {block name='display_after_login_form'}
-            {hook h='displayCustomerLoginFormAfter'}
-          {/block}
+            <section class="login-form">
+                {render file='customer/_partials/login-form.tpl' ui=$login_form class="c-form__mw-450"}
+            </section>
+            {block name='display_after_login_form'}
+                {hook h='displayCustomerLoginFormAfter'}
+            {/block}
         {/if}
     {/block}
 {/block}
@@ -98,10 +97,10 @@
     {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
 
     {else}
-    <div class="no-account u-txt-center">
-    <a class="btn btn-outline-primary" href="{$urls.pages.register}" data-link-action="display-register-form">
-        {l s='No account? Create one here' d='Shop.Theme.Customeraccount'}
-    </a>
-  </div>
+        <div class="no-account u-txt-center">
+            <a class="btn btn-outline-primary" href="{$urls.pages.register}" data-link-action="display-register-form">
+                {l s='No account? Create one here' d='Shop.Theme.Customeraccount'}
+            </a>
+        </div>
     {/if}
 {/block}
