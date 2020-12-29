@@ -1,0 +1,26 @@
+.c-funnel__separator {
+  position: relative;
+  height: 100%;
+
+  & > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:before, &:after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 45%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $gray;
+  }
+
+  &:after {
+    top: 55%;
+  }
+}

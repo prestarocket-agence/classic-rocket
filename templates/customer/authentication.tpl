@@ -46,7 +46,7 @@
 {block name='page_content'}
     {block name='login_form_container'}
         {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
-            <div class="row">
+            <div class="row o-layout">
                 <div class="col-lg-5{block name='class_panel_checkout_noaccount'}{/block}">
                     <div class="c-panel c-panel--lg u-h-100">
                         <p class="c-panel__title c-panel__title--checkoutauth">{l s='New Customers' d='Shop.Theme.Customeraccount'}</p>
@@ -58,9 +58,13 @@
                         </a>
                     </div>
                 </div>
+
                 <div class="col-lg-2">
-                    Ou
+                    <div class="c-funnel__separator">
+                        <span>ou</span>
+                    </div>
                 </div>
+
                 <div class="col-lg-5{block name='class_panel_checkout_auth'}{/block}">
                     <div class="c-panel c-panel--lg u-h-100">
                         <p class="c-panel__title c-panel__title--checkoutauth">{l s='Log in to your account' d='Shop.Theme.Customeraccount'}</p>
