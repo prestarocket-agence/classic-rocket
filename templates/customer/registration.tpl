@@ -33,6 +33,14 @@
   {l s='Create an account' d='Shop.Theme.Customeraccount'}
 {/block}
 
+{block name='page_title_account'}
+    {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
+        <div>
+            {l s='Secured step' d='Shop.Theme.Global'}
+        </div>
+    {/if}
+{/block}
+
 {block name='page_content'}
     {block name='register_form_container'}
       {$hook_create_account_top nofilter}

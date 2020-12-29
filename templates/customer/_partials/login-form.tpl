@@ -38,11 +38,14 @@
             {/block}
           {/foreach}
         {/block}
-        <div class="u-mb-3">
+          {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
+            {else}
+          <div class="u-mb-3">
             <a href="{$urls.pages.password}" rel="nofollow" class="c-txt-pwd-forgot u-txt-sm">
               {l s='Forgot your password?' d='Shop.Theme.Customeraccount'}
             </a>
         </div>
+          {/if}
       </section>
     {/block}
 
