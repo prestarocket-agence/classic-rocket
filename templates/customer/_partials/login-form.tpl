@@ -24,41 +24,43 @@
  *}
 {block name='login_form'}
 
-  {block name='login_form_errors'}
-    {include file='_partials/form-errors.tpl' errors=$errors['']}
-  {/block}
-
-  <form class="needs-validation {if isset($class)}{$class}{/if}" id="login-form" action="{block name='login_form_actionurl'}{$action}{/block}" method="post" novalidate autocomplete="false">
-    {block name='login_form_fields'}
-      <section class="form-fields">
-        {block name='form_fields'}
-          {foreach from=$formFields item="field"}
-            {block name='form_field'}
-              {form_field field=$field}
-            {/block}
-          {/foreach}
-        {/block}
-          {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
-            {else}
-          <div class="u-mb-3">
-            <a href="{$urls.pages.password}" rel="nofollow" class="c-txt-pwd-forgot u-txt-sm">
-              {l s='Forgot your password?' d='Shop.Theme.Customeraccount'}
-            </a>
-        </div>
-          {/if}
-      </section>
+    {block name='login_form_errors'}
+        {include file='_partials/form-errors.tpl' errors=$errors['']}
     {/block}
-
-    {block name='login_form_footer'}
-      <footer class="c-form__footer">
-        <input type="hidden" name="submitLogin" value="1">
-        {block name='form_buttons'}
-          <button class="btn btn-primary form-control-submit" id="submit-login" type="submit" data-link-action="sign-in">
-            {l s='Sign in' d='Shop.Theme.Actions'}
-          </button>
+    <form class="needs-validation {if isset($class)}{$class}{/if}" id="login-form"
+          action="{block name='login_form_actionurl'}{$action}{/block}" method="post" novalidate autocomplete="false">
+        {block name='login_form_fields'}
+            <section class="form-fields">
+                {block name='form_fields'}
+                    {foreach from=$formFields item="field"}
+                        {block name='form_field'}
+                            {form_field field=$field}
+                        {/block}
+                    {/foreach}
+                {/block}
+            </section>
         {/block}
-      </footer>
-    {/block}
-  </form>
 
+        {block name='login_form_footer'}
+            <footer class="c-form__footer u-flex-column">
+                <div class="u-d-flex u-justify-content-center">
+                    <input type="hidden" name="submitLogin" value="1">
+                    {block name='form_buttons'}
+                        <button class="btn btn-primary u-mb-2 form-control-submit" id="submit-login" type="submit"
+                                data-link-action="sign-in">
+                            {l s='Sign in' d='Shop.Theme.Actions'}
+                        </button>
+                    {/block}
+                </div>
+                {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
+                {else}
+                    <div class="u-d-flex u-justify-content-center u-mb-1">
+                        <a href="{$urls.pages.password}" rel="nofollow" class="c-txt-pwd-forgot u-txt-sm">
+                            {l s='Forgot your password?' d='Shop.Theme.Customeraccount'}
+                        </a>
+                    </div>
+                {/if}
+            </footer>
+        {/block}
+    </form>
 {/block}
