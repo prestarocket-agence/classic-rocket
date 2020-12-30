@@ -1,6 +1,6 @@
 {block name='product_cover'}
     <div class="c-snap">
-        <div class="c-snap__item">
+        <div class="c-snap__item c-snap__item--fullw">
 
             {if $product.cover}
                 <img class="img-fluid"
@@ -23,7 +23,7 @@
 
         {foreach from=$product.images item=image name="images"}
             {if $image.id_image != $product.cover.id_image}
-                <div class="c-snap__item">
+                <div class="c-snap__item c-snap__item--fullw">
                     <div class="u-rc u-rc--1_1">
 
 
