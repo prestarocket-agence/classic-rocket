@@ -30,24 +30,27 @@
 {block name='contentWrapperClass'} c-panel c-panel--lg c-panel--center u-mb-6{/block}
 {block name='pageHeaderClass'} u-h2 u-txt-center{/block}
 {block name='page_title'}
-  {l s='Create an account' d='Shop.Theme.Customeraccount'}
+    {l s='Create an account' d='Shop.Theme.Customeraccount'}
 {/block}
 
 {block name='page_title_account'}
     {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
-        <div>
+        <p class="u-mb-0">
             {l s='Secured step' d='Shop.Theme.Global'}
-        </div>
+        </p>
     {/if}
 {/block}
 
 {block name='page_content'}
     {block name='register_form_container'}
-      {$hook_create_account_top nofilter}
-      <section class="register-form">
-        <p class="u-txt-center">{l s='Already have an account?' d='Shop.Theme.Customeraccount'} <a class="u-font-weight-bold" href="{$urls.pages.authentication}">{l s='Log in instead!' d='Shop.Theme.Customeraccount'}</a></p>
-        {render file='customer/_partials/customer-form.tpl' ui=$register_form class="c-form__mw-450"}
-      </section>
+        {$hook_create_account_top nofilter}
+        <section class="register-form">
+            <p class="u-txt-center">{l s='Already have an account?' d='Shop.Theme.Customeraccount'} <a
+                        class="u-font-weight-bold"
+                        href="{$urls.pages.authentication}">{l s='Log in instead!' d='Shop.Theme.Customeraccount'}</a>
+            </p>
+            {render file='customer/_partials/customer-form.tpl' ui=$register_form class="c-form__mw-450"}
+        </section>
     {/block}
 {/block}
 {block name='page_footer_container'}

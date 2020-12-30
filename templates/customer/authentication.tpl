@@ -33,64 +33,69 @@
 {block name='page_title'}
     {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
     {else}
-    {l s='Log in to your account' d='Shop.Theme.Customeraccount'}
+        {l s='Log in to your account' d='Shop.Theme.Customeraccount'}
     {/if}
 {/block}
 {block name='page_title_account'}
-{if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
-    <div>
-    {l s='Secured step' d='Shop.Theme.Global'}
-    </div>
-{/if}
+    {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
+        <p class="u-mb-0">
+            {l s='Secured step' d='Shop.Theme.Global'}
+        </p>
+    {/if}
 {/block}
 {block name='page_content'}
     {block name='login_form_container'}
         {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
             <div class="row">
-                <div class="col-lg-5{block name='class_panel_checkout_noaccount'}{/block}">
-                    <div class="c-panel c-panel--lg u-h-100">
-                        <p class="c-panel__title c-panel__title--checkoutauth">{l s='New Customers' d='Shop.Theme.Customeraccount'}</p>
-                        {block name='after_title_checkout_noaccount'}
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, fugit mollitia necessitatibus officia quaerat sit vitae! Laudantium maiores pariatur voluptate. A ab dolore fuga quo voluptatem! Consectetur ea molestias totam.
-                        {/block}
-                        <a class="btn btn-outline-primary" href="{$urls.pages.register}">
-                            {l s='Continue' d='Shop.Theme.Actions'}
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    Ou
-                </div>
+
                 <div class="col-lg-5{block name='class_panel_checkout_auth'}{/block}">
-                    <div class="c-panel c-panel--lg u-h-100">
-                    <p class="c-panel__title c-panel__title--checkoutauth">{l s='Log in to your account' d='Shop.Theme.Customeraccount'}</p>
+                    <div class="c-panel c-panel--lg u-h-100 c-funnel__panel">
+                        <p class="u-h3 u-txt-center u-mb-3">{l s='Log in to your account' d='Shop.Theme.Customeraccount'}</p>
                         {block name='after_title_checkout_auth'}
-                            <p class="">
-                            {l s='Sign in for faster checkout.' d='Shop.Theme.Global'}
+                            <p class="u-txt-sm u-txt-center u-mb-3">
+                                {l s='Sign in for faster checkout.' d='Shop.Theme.Global'}
                             </p>
                         {/block}
-                    <section class="login-form s-login-form-checkout">
-                        {render file='customer/_partials/login-form.tpl' ui=$login_form class="c-form__mw-450"}
-                        <div class="u-mb-3">
-                            <a href="{$urls.pages.password}" rel="nofollow" class="c-txt-pwd-forgot u-txt-sm">
-                                {l s='Forgot your password?' d='Shop.Theme.Customeraccount'}
+                        <section class="login-form s-login-form-checkout">
+                            {render file='customer/_partials/login-form.tpl' ui=$login_form class="c-form__mw-450"}
+                            {include file="customer/_partials/login-pwd-forgotten.tpl"}
+                        </section>
+                        {block name='display_after_login_form'}
+                            {hook h='displayCustomerLoginFormAfter'}
+                        {/block}
+                    </div>
+                </div>
+
+                <div class="col-lg-2">
+                    <div class="c-funnel__separator">
+                        <span>ou</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-5{block name='class_panel_checkout_noaccount'}{/block}">
+                    <div class="c-panel c-panel--lg u-h-100 c-funnel__panel u-txt-center">
+                        <p class="u-h3 u-txt-center u-mb-3">{l s='New Customers' d='Shop.Theme.Customeraccount'}</p>
+                        {block name='after_title_checkout_noaccount'}
+                            <p class="u-txt-sm u-mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse,
+                                fugit mollitia
+                                necessitatibus officia quaerat sit vitae! Laudantium maiores pariatur voluptate. A ab
+                                dolore fuga quo voluptatem! Consectetur ea molestias totam.</p>
+                        {/block}
+                        <div class="u-txt-center">
+                            <a class="btn btn-outline-primary" href="{$urls.pages.register}">
+                                {l s='Continue' d='Shop.Theme.Actions'}
                             </a>
                         </div>
-                    </section>
-                    {block name='display_after_login_form'}
-                        {hook h='displayCustomerLoginFormAfter'}
-                    {/block}
                     </div>
                 </div>
             </div>
-
         {else}
-        <section class="login-form">
-        {render file='customer/_partials/login-form.tpl' ui=$login_form class="c-form__mw-450"}
-        </section>
-          {block name='display_after_login_form'}
-            {hook h='displayCustomerLoginFormAfter'}
-          {/block}
+            <section class="login-form">
+                {render file='customer/_partials/login-form.tpl' ui=$login_form class="c-form__mw-450"}
+            </section>
+            {block name='display_after_login_form'}
+                {hook h='displayCustomerLoginFormAfter'}
+            {/block}
         {/if}
     {/block}
 {/block}
@@ -98,10 +103,10 @@
     {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
 
     {else}
-    <div class="no-account u-txt-center">
-    <a class="btn btn-outline-primary" href="{$urls.pages.register}" data-link-action="display-register-form">
-        {l s='No account? Create one here' d='Shop.Theme.Customeraccount'}
-    </a>
-  </div>
+        <div class="no-account u-txt-center">
+            <a class="btn btn-outline-primary" href="{$urls.pages.register}" data-link-action="display-register-form">
+                {l s='No account? Create one here' d='Shop.Theme.Customeraccount'}
+            </a>
+        </div>
     {/if}
 {/block}

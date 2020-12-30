@@ -1,28 +1,36 @@
 .c-panel {
-  padding: $spacer*1.5;
-  margin-bottom: $spacer;
+  padding: $panel-padding-x $panel-padding-y;
+  margin-bottom: $panel-margin-bottom;
+  background-color: $panel-bg;
 }
-.c-panel--lg{
-  padding: $spacer*1.5 $spacer*2;
-  background-color: $white;
+
+//Modifiers
+.c-panel--sm {
+  padding: $panel-sm-padding-x $panel-sm-padding-y;
 }
-.c-panel--center{
-  max-width: 600px;
+
+.c-panel--lg {
+  padding: $panel-lg-padding-x $panel-lg-padding-y;
+}
+
+.c-panel--center {
+  max-width: $panel-max-width;
   margin-left: auto;
   margin-right: auto;
 }
-.c-panel--border{
-  border: solid 1px $gray-light;
 
+.c-panel--border {
+  border: $panel-border-width solid $panel-border-color;
 }
 
+//Header
 .c-panel__head {
-  padding-bottom: $spacer;
-  margin-bottom: $spacer*2;
-  border-bottom: $gray-light solid 1px;
+  padding-bottom: $panel-header-padding-bottom;
+  margin-bottom: $panel-header-margin-bottom;
+  border-bottom: $panel-header-border-color solid $panel-header-border-width;
 }
 
-// Tunnel completed step
+// Tunnel completed step header
 .-reachable > .c-panel__head {
   padding-bottom: 0;
   margin-bottom: 0;
@@ -30,7 +38,5 @@
 }
 
 .-current > .c-panel__head {
-  padding-bottom: $spacer;
-  margin-bottom: $spacer*2;
-  border-bottom: $gray-light solid 1px;
+  @extend .c-panel__head;
 }

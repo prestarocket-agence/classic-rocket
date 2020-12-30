@@ -1,6 +1,13 @@
 .c-customer-header {
   padding: $spacer*2 0;
   background-color: $gray-light;
+  text-align: center;
+}
+
+.c-customer-header__item-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 // Sidebar column

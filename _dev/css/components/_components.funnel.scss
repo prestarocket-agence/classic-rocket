@@ -1,0 +1,54 @@
+.c-funnel__panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.c-funnel__separator {
+  position: relative;
+  height: 100%;
+
+  @include media-breakpoint-mobile {
+    padding: $spacer 0;
+    text-align: center;
+  }
+
+  & > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include media-breakpoint-mobile {
+      position: static;
+    }
+  }
+
+  &:before, &:after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 45%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $gray;
+
+    @include media-breakpoint-mobile {
+      width: 40%;
+      height: 1px;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+    }
+  }
+
+  &:after {
+    top: 55%;
+
+    @include media-breakpoint-mobile {
+      top: 50%;
+      left: 60%;
+    }
+  }
+}
