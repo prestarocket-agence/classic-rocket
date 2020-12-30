@@ -43,23 +43,20 @@
 
         {block name='login_form_footer'}
             <footer class="c-form__footer u-flex-column">
-                <div class="u-d-flex u-justify-content-center">
+                <div class="u-txt-center">
                     <input type="hidden" name="submitLogin" value="1">
                     {block name='form_buttons'}
-                        <button class="btn btn-primary u-mb-2 form-control-submit" id="submit-login" type="submit"
+                        <button class="btn btn-primary form-control-submit u-mb-2" id="submit-login" type="submit"
                                 data-link-action="sign-in">
                             {l s='Sign in' d='Shop.Theme.Actions'}
                         </button>
                     {/block}
+
+{*                    {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}*}
+{*                    {else}*}
+                        {include file="customer/_partials/login-pwd-forgotten.tpl"}
+{*                    {/if}*}
                 </div>
-                {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
-                {else}
-                    <div class="u-d-flex u-justify-content-center u-mb-1">
-                        <a href="{$urls.pages.password}" rel="nofollow" class="c-txt-pwd-forgot u-txt-sm">
-                            {l s='Forgot your password?' d='Shop.Theme.Customeraccount'}
-                        </a>
-                    </div>
-                {/if}
             </footer>
         {/block}
     </form>
