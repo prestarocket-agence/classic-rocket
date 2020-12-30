@@ -28,7 +28,7 @@
     {include file="customer/_partials/header.tpl"}
 {/block}
 {block name='bodyClass'} u-bg-light{/block}
-{block name='contentWrapperClass'}{if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout} container u-mb-6{else} c-panel c-panel--lg c-panel--center u-mb-6{/if}{/block}
+{block name='contentWrapperClass'}{if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout} u-mb-6{else} c-panel c-panel--lg c-panel--center u-mb-6{/if}{/block}
 {block name='pageHeaderClass'} u-h2 u-txt-center{/block}
 {block name='page_title'}
     {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
@@ -58,7 +58,7 @@
                         {/block}
                         <section class="login-form s-login-form-checkout">
                             {render file='customer/_partials/login-form.tpl' ui=$login_form class="c-form__mw-450"}
-{*                            {include file="customer/_partials/login-pwd-forgotten.tpl"}*}
+                            {include file="customer/_partials/login-pwd-forgotten.tpl"}
                         </section>
                         {block name='display_after_login_form'}
                             {hook h='displayCustomerLoginFormAfter'}
