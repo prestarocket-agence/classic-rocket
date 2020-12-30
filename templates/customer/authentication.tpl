@@ -28,7 +28,7 @@
     {include file="customer/_partials/header.tpl"}
 {/block}
 {block name='bodyClass'} u-bg-light{/block}
-{block name='contentWrapperClass'}{if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout} container u-mb-6{else} c-panel c-panel--lg c-panel--center u-mb-6{/if}{/block}
+{block name='contentWrapperClass'}{if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout} u-mb-6{else} c-panel c-panel--lg c-panel--center u-mb-6{/if}{/block}
 {block name='pageHeaderClass'} u-h2 u-txt-center{/block}
 {block name='page_title'}
     {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
