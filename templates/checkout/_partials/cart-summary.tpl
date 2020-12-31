@@ -28,9 +28,9 @@
         <p class="u-h4 u-mb-0">{l s='Récapitulatif' d='Shop.Theme.Global'}</p>
     </div>
     <div class="">
-        {*        {block name='hook_checkout_summary_top'}*}
-        {*            {hook h='displayCheckoutSummaryTop'}*}
-        {*        {/block}*}
+        {block name='hook_checkout_summary_top'}
+            {hook h='displayCheckoutSummaryTop'}
+        {/block}
 
         {block name='cart_summary_products'}
             <div class="o-layout u-mb-3 /js cart-summary-products">
