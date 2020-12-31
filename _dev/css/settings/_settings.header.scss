@@ -1,0 +1,26 @@
+// *** HEADER ***
+
+$header-bg: null;
+$header-border-width: 1px;
+$header-border-color: $secondary;
+
+// *** SHORTCUTS ***
+
+//Icon
+$header-shortcut-icon-color: $black;
+$header-shortcut-icon-size: 28px;
+
+//Link
+$header-shortcut-color: $black;
+$header-shortcut-font-size: $font-size-base;
+
+//Customer
+$header-shortcut-customer-color: $dark;
+$header-shortcut-customer-font-size: $extra-small-font-size;
+
+//Cart
+$header-shortcut-cart-count-width: $spacer*1.5;
+$header-shortcut-cart-count-height: $spacer*1.5;
+
+$header-shortcut-cart-count-bg: $black;
+$header-shortcut-cart-count-color: $white;
