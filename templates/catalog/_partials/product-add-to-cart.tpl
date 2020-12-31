@@ -62,11 +62,11 @@
             <span id="product-availability">
                 {if $product.show_availability && $product.availability_message}
                     {if $product.availability == 'available'}
-                        <i class="material-icons rtl-no-flip product-available text-success">&#xE5CA;</i>
+                        {include file="_partials/icon.tpl" icon="check2" class="product-available text-success"}
                     {elseif $product.availability == 'last_remaining_items'}
-                        <i class="material-icons product-last-itemstext-warning">&#xE002;</i>
+                        {include file="_partials/icon.tpl" icon="exclamation-triangle-fill" class="product-last-itemstext-warning"}
                     {else}
-                        <i class="material-icons product-unavailable text-danger">&#xE14B;</i>
+                        {include file="_partials/icon.tpl" icon="slash-circle" class="product-unavailable text-danger"}
                     {/if}
                     {$product.availability_message}
                 {/if}
