@@ -17,8 +17,8 @@
             </a>
 
             <div class="u-d-flex u-align-items-center">
+                {include file="_partials/icon.tpl" icon="shield-check" class="c-icon--28 c-icon--center-y u-mr-1"}
                 {block name='page_title_account'}{/block}
-                {include file="_partials/icon.tpl" icon="shield-check" class="c-icon--28 c-icon--center-y u-ml-1"}
             </div>
         </div>
     </div>

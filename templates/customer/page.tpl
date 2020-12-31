@@ -33,7 +33,7 @@
 
 
 {block name='page_title_account'}
-    <h1 class="u-h3 u-mt-0"><a href="{$urls.pages.my_account}" class="account-link">
+    <h1 class="u-h3 u-mb-0"><a href="{$urls.pages.my_account}" class="u-txt-black account-link">
             {l s='Your account' d='Shop.Theme.Customeraccount'}</a></h1>
 {/block}
 {block name='notifications'}{/block}
