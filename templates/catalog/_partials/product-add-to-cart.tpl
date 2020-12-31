@@ -58,6 +58,7 @@
         {/block}
 
         {block name='product_availability'}
+            {*id use in js*}
             <span id="product-availability">
                 {if $product.show_availability && $product.availability_message}
                     {if $product.availability == 'available'}

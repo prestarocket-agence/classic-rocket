@@ -1,3 +1,4 @@
+{* id="product-details" is used in js *}
 <div class="tab-pane fade{if !$product.description} show active{/if}"
      id="product-details"
      data-product="{$product.embedded_attributes|json_encode}"

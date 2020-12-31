@@ -116,7 +116,7 @@
 
                 {block name='quick_view'}
                     <div class="c-pdt-mini__qv">
-                        <button class="btn btn-primary btn-quick-view c-btn-circle c-btn-circle--lg  quick-view"
+                        <button class="btn btn-primary btn-quick-view c-btn-circle c-btn-circle--lg /js quick-view"
                                 data-link-action="quickview">
                             {include file="_partials/icon.tpl" icon="eye" class="c-icon--24"}
                             <span class="sr-only">{l s='Quick view' d='Shop.Theme.Actions'}</span>

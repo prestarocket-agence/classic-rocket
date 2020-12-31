@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="product-variants">
+<div class="/js product-variants">
     {foreach from=$groups key=id_attribute_group item=group}
         {if !empty($group.attributes)}
             <div class="clearfix product-variants-item">

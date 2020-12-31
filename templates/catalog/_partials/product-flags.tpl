@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<ul class="product-flags">
+<ul class="/js product-flags">
     {foreach from=$product.flags item=flag}
         <li class="product-flag {$flag.type}{if $flag.type == "discount"} d--none{/if}">{$flag.label}</li>
     {/foreach}

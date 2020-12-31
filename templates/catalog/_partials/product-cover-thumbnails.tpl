@@ -1,5 +1,7 @@
 {block name='product_cover'}
-    <div class="c-snap">
+<div class="/js images-container">
+
+<div class="c-snap">
         <div class="c-snap__item c-snap__item--fullw">
 
             {if $product.cover}
@@ -45,5 +47,6 @@
             {/if}
         {/foreach}
     </div>
+</div>
 {/block}
 

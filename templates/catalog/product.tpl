@@ -51,7 +51,7 @@
                         {/block}
                     {/if}
 
-                    <div class="product-actions">
+                    <div class="/js product-actions">
                         {block name='product_buy'}
                             <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
                                 <input type="hidden" name="token" value="{$static_token}">
