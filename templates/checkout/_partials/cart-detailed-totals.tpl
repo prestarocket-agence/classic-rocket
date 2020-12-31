@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='cart_detailed_totals'}
-    <div class="cart-detailed-totals">
+    <div class="/js cart-detailed-totals">
 
         <div class="">
             {foreach from=$cart.subtotals item="subtotal"}
