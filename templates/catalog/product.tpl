@@ -65,9 +65,9 @@
                                 {/block}
 
 
-{*                                {block name='product_discounts'}*}
-{*                                    {include file='catalog/_partials/product-discounts.tpl'}*}
-{*                                {/block}*}
+                                {block name='product_discounts'}
+                                    {include file='catalog/_partials/product-discounts.tpl'}
+                                {/block}
 
                                 {block name='product_add_to_cart'}
                                     {include file='catalog/_partials/product-add-to-cart.tpl'}
@@ -111,9 +111,9 @@
                 {block name='page_content_container'}
                     <section class="page-content--product u-sticky" id="content">
                         {block name='page_content'}
-                            {*              {block name='product_flags'}*}
-                            {*                  {include file='catalog/_partials/product-flags.tpl'}*}
-                            {*              {/block}*}
+                          {block name='product_flags'}
+                              {include file='catalog/_partials/product-flags.tpl'}
+                          {/block}
 
                             {block name='product_cover_thumbnails'}
                                 {include file='catalog/_partials/product-cover-thumbnails.tpl'}
