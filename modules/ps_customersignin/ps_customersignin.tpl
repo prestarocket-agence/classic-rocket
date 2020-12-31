@@ -25,18 +25,18 @@
 <div class="c-header__shortcut-item">
     {if $logged}
         <a
-                class="o-layout o-layout--center-y"
+                class="o-layout o-layout--center-y u-txt-black"
                 href="{$my_account_url}"
                 title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
                 rel="nofollow"
         >
             {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--28 c-header__icon u-mr-1"}
 
-            <div class="u-hidden-mobile">
-                <p class="c-header__customer-name">{$customerName}</p>
+            <div class="u-d-desktop">
+                <p class="u-txt-xs u-txt-dark u-mb-0">{$customerName}</p>
 
                 <div class="o-layout o-layout--start o-layout--center-y">
-                    <p class="c-header__customer-account">{l s='Mon Compte' d='Shop.Theme.Customeraccount'}</p>
+                    <p class="u-txt-sm u-txt-black u-mb-0">{l s='Mon Compte' d='Shop.Theme.Customeraccount'}</p>
                     {include file="_partials/icon.tpl" icon="chevron-down-sharp"}
                 </div>
             </div>

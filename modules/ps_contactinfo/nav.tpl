@@ -36,7 +36,7 @@
         d='Shop.Theme.Global'
       }
     {else}
-      <a class="c-top-header__contact" href="{$urls.pages.contact}">{l s='Contact us' d='Shop.Theme.Global'}</a>
+      <a class="u-txt-black u-d-desktop" href="{$urls.pages.contact}">{l s='Contact us' d='Shop.Theme.Global'}</a>
     {/if}
   </div>
 </div>
