@@ -64,18 +64,6 @@
                                     {include file='catalog/_partials/product-variants.tpl'}
                                 {/block}
 
-                                {block name='product_pack'}
-                                    {if $packItems}
-                                        <section class="product-pack mb-4">
-                                            <p class="h4">{l s='This pack contains' d='Shop.Theme.Catalog'}</p>
-                                            {foreach from=$packItems item="product_pack"}
-                                                {block name='product_miniature'}
-                                                    {include file='catalog/_partials/miniatures/pack-product.tpl' product=$product_pack}
-                                                {/block}
-                                            {/foreach}
-                                        </section>
-                                    {/if}
-                                {/block}
 
 {*                                {block name='product_discounts'}*}
 {*                                    {include file='catalog/_partials/product-discounts.tpl'}*}
@@ -136,18 +124,16 @@
                 {/block}
             </div>
         </div>
+
+        {block name='product_pack'}
+            {if $packItems}
+                {include file='catalog/_partials/product-pack.tpl'}
+            {/if}
+
+        {/block}
         {block name='product_accessories'}
             {if $accessories}
-                <section class="product-accessories mt-3">
-                    <p class="products-section-title">{l s='You might also like' d='Shop.Theme.Catalog'}</p>
-                    <div class="products">
-                        {foreach from=$accessories item="product_accessory"}
-                            {block name='product_miniature'}
-                                {include file='catalog/_partials/miniatures/product.tpl' product=$product_accessory}
-                            {/block}
-                        {/foreach}
-                    </div>
-                </section>
+                {include file='catalog/_partials/product-accessories.tpl'}
             {/if}
         {/block}
 
