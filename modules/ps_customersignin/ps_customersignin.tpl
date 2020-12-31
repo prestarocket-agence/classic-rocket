@@ -30,13 +30,13 @@
                 title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
                 rel="nofollow"
         >
-            {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--28 c-header__icon u-mr-1"}
+            {include file="_partials/icon.tpl" icon="person-circle" class="c-header__shortcut-icon u-mr-1"}
 
             <div class="u-d-desktop">
-                <p class="u-txt-xs u-txt-dark u-mb-0">{$customerName}</p>
+                <p class="c-header__shortcut-link--customer-label u-mb-0">{$customerName}</p>
 
-                <div class="o-layout o-layout--start o-layout--center-y">
-                    <p class="u-txt-sm u-txt-black u-mb-0">{l s='Mon Compte' d='Shop.Theme.Customeraccount'}</p>
+                <div class="o-layout o-layout--start o-layout--center-y c-header__shortcut-link">
+                    <p class="u-mb-0">{l s='Mon Compte' d='Shop.Theme.Customeraccount'}</p>
                     {include file="_partials/icon.tpl" icon="chevron-down-sharp"}
                 </div>
             </div>
