@@ -36,21 +36,21 @@
             {include file='catalog/_partials/sort-orders.tpl' sort_orders=$listing.sort_orders}
         {/block}
 
-{*        {if !empty($listing.rendered_facets)}*}
-{*            <button type="button" id="search_filter_toggler" class="btn btn-secondary visible--mobile"*}
-{*                    data-target="#offcanvas_search_filter" data-toggle="modal">*}
-{*                {l s='Filter' d='Shop.Theme.Actions'}*}
-{*            </button>*}
-{*        {/if}*}
+        {if !empty($listing.rendered_facets)}
+            <button type="button" id="search_filter_toggler" class="btn btn-secondary visible--mobile"
+                    data-target="#offcanvas_search_filter" data-toggle="modal">
+                {l s='Filter' d='Shop.Theme.Actions'}
+            </button>
+        {/if}
     </div>
 
-{*    <div class="visible--mobile text-sm-center mt-1 col-12 ">*}
-{*        {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=[*}
-{*        '%from%' => $listing.pagination.items_shown_from ,*}
-{*        '%to%' => $listing.pagination.items_shown_to,*}
-{*        '%total%' => $listing.pagination.total_items*}
-{*        ]}*}
-{*    </div>*}
+    <div class="visible--mobile text-sm-center mt-1 col-12 ">
+        {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=[
+        '%from%' => $listing.pagination.items_shown_from ,
+        '%to%' => $listing.pagination.items_shown_to,
+        '%total%' => $listing.pagination.total_items
+        ]}
+    </div>
 </div>
 
 
