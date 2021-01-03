@@ -73,7 +73,7 @@
                 </div>
 
                 <div class="col-lg-5{block name='class_panel_checkout_noaccount'}{/block}">
-                    <div class="c-panel c-panel--lg u-txt-center">
+                    <div class="c-panel c-panel--lg u-txt-center u-h-100">
                         <p class="u-h3 u-txt-center u-mb-3">{l s='New Customers' d='Shop.Theme.Customeraccount'}</p>
                         {block name='after_title_checkout_noaccount'}
                             <p class="u-txt-sm u-mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse,
