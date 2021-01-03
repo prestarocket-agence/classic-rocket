@@ -111,3 +111,7 @@
         </div>
     {/if}
 {/block}
+
+{block name="footer"}
+{/block}
+
