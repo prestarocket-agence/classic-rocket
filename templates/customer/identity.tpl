@@ -29,5 +29,7 @@
 {/block}
 
 {block name='page_content'}
+    <div class="c-form__mw-630">
   {render file='customer/_partials/customer-form.tpl' ui=$customer_form}
+    </div>
 {/block}
