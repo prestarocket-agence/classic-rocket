@@ -49,7 +49,7 @@
             <div class="row">
 
                 <div class="col-lg-5{block name='class_panel_checkout_auth'}{/block}">
-                    <div class="c-panel c-panel--lg">
+                    <div class="c-panel c-panel--lg u-h-100">
                         <p class="u-h3 u-txt-center u-mb-3">{l s='Log in to your account' d='Shop.Theme.Customeraccount'}</p>
                         {block name='after_title_checkout_auth'}
                             <p class="u-txt-sm u-txt-center u-mb-3">
@@ -101,7 +101,8 @@
 {/block}
 {block name='page_footer'}
     {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
-
+        {block name='page_footer_auth_checkout'}
+        {/block}
     {else}
         <div class="no-account u-txt-center">
             <a class="btn btn-outline-primary" href="{$urls.pages.register}" data-link-action="display-register-form">
