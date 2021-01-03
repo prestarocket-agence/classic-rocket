@@ -23,22 +23,22 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div id="js-product-list">
-  <div class="row c-pdt-list products">
-    {foreach from=$listing.products item="product"}
-      {block name='product_miniature'}
-        {include file='catalog/_partials/miniatures/product.tpl' product=$product col="col-lg-3 col-md-4 col-6"}
-      {/block}
-    {/foreach}
-  </div>
+    <div class="row c-pdt-list products">
+        {foreach from=$listing.products item="product"}
+            {block name='product_miniature'}
+                {include file='catalog/_partials/miniatures/product.tpl' product=$product col="col-lg-3 col-md-4 col-6"}
+            {/block}
+        {/foreach}
+    </div>
 
-  {block name='pagination'}
-    {include file='_partials/pagination.tpl' pagination=$listing.pagination}
-  {/block}
+    {block name='pagination'}
+        {include file='_partials/pagination.tpl' pagination=$listing.pagination}
+    {/block}
 
-{*  <div class="visible--mobile text-right up">*}
-{*    <a href="#header" class="btn btn-secondary">*}
-{*      {l s='Back to top' d='Shop.Theme.Actions'}*}
-{*      <i class="material-icons">&#xE316;</i>*}
-{*    </a>*}
-{*  </div>*}
+    <div class="visible--mobile text-right up">
+        <a href="#header" class="btn btn-secondary">
+            {l s='Back to top' d='Shop.Theme.Actions'}
+            {include file="_partials/icon.tpl" icon="chevron-top" class="c-icon--center-y"}
+        </a>
+    </div>
 </div>

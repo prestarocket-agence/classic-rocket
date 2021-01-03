@@ -38,7 +38,7 @@
 {/block}
 {block name='page_title_account'}
     {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
-        <p class="u-mb-0">
+        <p class="u-mb-0 u-d-desktop">
             {l s='Secured step' d='Shop.Theme.Global'}
         </p>
     {/if}
@@ -49,7 +49,7 @@
             <div class="row">
 
                 <div class="col-lg-5{block name='class_panel_checkout_auth'}{/block}">
-                    <div class="c-panel c-panel--lg u-h-100 c-funnel__panel">
+                    <div class="c-panel c-panel--lg">
                         <p class="u-h3 u-txt-center u-mb-3">{l s='Log in to your account' d='Shop.Theme.Customeraccount'}</p>
                         {block name='after_title_checkout_auth'}
                             <p class="u-txt-sm u-txt-center u-mb-3">
@@ -73,7 +73,7 @@
                 </div>
 
                 <div class="col-lg-5{block name='class_panel_checkout_noaccount'}{/block}">
-                    <div class="c-panel c-panel--lg u-h-100 c-funnel__panel u-txt-center">
+                    <div class="c-panel c-panel--lg u-txt-center">
                         <p class="u-h3 u-txt-center u-mb-3">{l s='New Customers' d='Shop.Theme.Customeraccount'}</p>
                         {block name='after_title_checkout_noaccount'}
                             <p class="u-txt-sm u-mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse,
