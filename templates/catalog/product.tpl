@@ -74,7 +74,7 @@
                                 {/block}
 
                                 {block name='product_description_short'}
-                                    <div id="product-description-short-{$product.id}">{$product.description_short nofilter}</div>
+                                    <div id="product-description-short-{$product.id}" class="s-cms">{$product.description_short nofilter}</div>
                                 {/block}
 
                                 {block name='product_additional_info'}

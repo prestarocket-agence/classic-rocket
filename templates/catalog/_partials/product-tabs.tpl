@@ -45,7 +45,7 @@
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade{if $product.description} show active{/if}" id="description" role="tabpanel">
                 {block name='product_description'}
-                    <div class="product-description">{$product.description nofilter}</div>
+                    <div class="product-description s-cms">{$product.description nofilter}</div>
                 {/block}
             </div>
 

@@ -43,7 +43,7 @@
             {include file='catalog/_partials/product-prices.tpl'}
           {/block}
           {block name='product_description_short'}
-            <div id="product-description-short">{$product.description_short nofilter}</div>
+            <div id="product-description-short" class="s-cms">{$product.description_short nofilter}</div>
           {/block}
           {block name='product_buy'}
             <div class="/js product-actions">
