@@ -67,3 +67,6 @@
 
 
 </section>
+{block name='hook_checkout_summary_bottom'}
+    {hook h='displayCheckoutSummaryBottom' cart=$cart}
+{/block}
