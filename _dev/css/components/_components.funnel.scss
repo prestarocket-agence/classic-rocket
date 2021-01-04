@@ -1,6 +1,8 @@
 .c-funnel__separator {
   position: relative;
   height: 100%;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
 
   @include media-breakpoint-mobile {
     padding: $spacer 0;
