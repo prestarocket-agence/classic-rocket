@@ -50,8 +50,6 @@
           </div>
         {/block}
 
-{*          {widget name="rocketadsinlist" listing=$listing}*}
-
         <div>
           {block name='product_list'}
             {include file='catalog/_partials/products.tpl' listing=$listing}
