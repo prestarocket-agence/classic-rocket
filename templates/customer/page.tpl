@@ -33,10 +33,8 @@
 
 
 {block name='page_title_account'}
-    <p class="u-mb-0">
         <a href="{$urls.pages.my_account}" class="u-txt-black account-link">
-            {l s='Your account' d='Shop.Theme.Customeraccount'}</a>
-    </p>
+            {l s='Espace sécurisé' d='Shop.Theme.Customeraccount'}</a>
 {/block}
 {block name='notifications'}{/block}
 
@@ -49,7 +47,7 @@
                 {include file='customer/_partials/my-account-sidebar.tpl'}
             </div>
             <div class="col-md-8 col-lg-9">
-                <div class="{block name='main_account_class'}c-panel c-panel--lg u-p-rel{/block}"{block name="accountImgBg"}{/block}>
+                <div class="{block name='main_account_class'}c-panel c-panel--lg u-p-rel u-h-100{/block}"{block name="accountImgBg"}{/block}>
                     {block name='page_content_account'}
                         {block name='page_account_heading'}
                             {block name='page_title' hide}
