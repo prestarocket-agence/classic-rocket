@@ -28,7 +28,7 @@ $orders: 0, 1;
   }
 }
 
-$orders-mobile: 2;
+$orders-mobile: 1, 2;
 @include media-breakpoint-mobile () {
   @each $order-mobile in $orders-mobile {
     .u-order-#{$order-mobile}\@mobile {

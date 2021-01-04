@@ -38,7 +38,7 @@
     <div class="visible--mobile text-right up">
         <a href="#header" class="btn btn-secondary">
             {l s='Back to top' d='Shop.Theme.Actions'}
-            {include file="_partials/icon.tpl" icon="chevron-top" class="c-icon--center-y"}
+            {include file="_partials/icon.tpl" icon="chevron-up" class="c-icon--center-y"}
         </a>
     </div>
 </div>

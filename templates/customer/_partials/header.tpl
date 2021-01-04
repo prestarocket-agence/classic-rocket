@@ -8,6 +8,20 @@
                         {l s='Retour au panier' d='Shop.Theme.Global'}
                     </p>
                 </a>
+            {elseif ($page.page_name === "my-account")}
+                <a class="u-d-flex u-align-items-center u-txt-black" href="{$urls.base_url}">
+                    {include file="_partials/icon.tpl" icon="chevron-left" class="u-mr-1 c-icon--center-y"}
+                    <p class="u-d-desktop u-mb-0">
+                        {l s='Retour à l\'accueil' d='Shop.Theme.Global'}
+                    </p>
+                </a>
+            {else}
+                <a class="u-d-flex u-align-items-center u-txt-black" href="{$urls.pages.my_account}">
+                    {include file="_partials/icon.tpl" icon="chevron-left" class="u-mr-1 c-icon--center-y"}
+                    <p class="u-d-desktop u-mb-0">
+                        {l s='Retour au compte' d='Shop.Theme.Global'}
+                    </p>
+                </a>
             {/if}
 
             <a class="c-customer-header__item-center" href="{$urls.base_url}">
@@ -18,7 +32,7 @@
 
             <div class="u-d-flex u-align-items-center">
                 {include file="_partials/icon.tpl" icon="shield-check" class="c-icon--28 c-icon--center-y u-mr-1"}
-                {block name='page_title_account'}{/block}
+                <p class="u-mb-0 u-d-desktop">{block name='page_title_account'}{/block}</p>
             </div>
         </div>
     </div>
