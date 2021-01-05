@@ -4,24 +4,26 @@
             {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
                 <a class="u-d-flex u-align-items-center u-txt-dark" href="{$urls.pages.cart}?action=show">
                     {include file="_partials/icon.tpl" icon="chevron-left" class="u-mr-1 c-icon--center-y"}
-                    <p class="u-txt-sm u-d-desktop u-mb-0">
+                    <span class="u-txt-sm u-d-desktop">
                         {l s='Retour au panier' d='Shop.Theme.Global'}
-                    </p>
-                </a>
-            {elseif ($page.page_name === "my-account")}
-                <a class="u-d-flex u-align-items-center u-txt-black" href="{$urls.base_url}">
-                    {include file="_partials/icon.tpl" icon="chevron-left" class="u-mr-1 c-icon--center-y"}
-                    <p class="u-d-desktop u-mb-0">
-                        {l s='Retour à l\'accueil' d='Shop.Theme.Global'}
-                    </p>
+                    </span>
                 </a>
             {else}
-                <a class="u-d-flex u-align-items-center u-txt-black" href="{$urls.pages.my_account}">
-                    {include file="_partials/icon.tpl" icon="chevron-left" class="u-mr-1 c-icon--center-y"}
-                    <p class="u-d-desktop u-mb-0">
+                {if $customer.is_logged}
+                    <a class="u-d-flex u-align-items-center u-txt-black" href="{$urls.pages.my_account}">
+                        {include file="_partials/icon.tpl" icon="chevron-left" class="u-mr-1 c-icon--center-y"}
+                        <span class="u-d-desktop">
                         {l s='Retour au compte' d='Shop.Theme.Global'}
-                    </p>
-                </a>
+                    </span>
+                    </a>
+                    {else}
+                    <a class="u-d-flex u-align-items-center u-txt-black" href="{$urls.base_url}">
+                        {include file="_partials/icon.tpl" icon="chevron-left" class="u-mr-1 c-icon--center-y"}
+                        <span class="u-d-desktop">
+                        {l s='Retour à l\'accueil' d='Shop.Theme.Global'}
+                    </span>
+                    </a>
+                {/if}
             {/if}
 
             <a class="c-customer-header__item-center" href="{$urls.base_url}">
