@@ -52,10 +52,8 @@
                         </button>
                     {/block}
 
-                    {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
-                    {else}
-                        {include file="customer/_partials/login-pwd-forgotten.tpl"}
-                    {/if}
+                    {include file="customer/_partials/login-pwd-forgotten.tpl"}
+
                 </div>
             </footer>
         {/block}

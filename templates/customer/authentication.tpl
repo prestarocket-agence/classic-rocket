@@ -56,7 +56,6 @@
                         {/block}
                         <section class="login-form s-login-form-checkout">
                             {render file='customer/_partials/login-form.tpl' ui=$login_form class="c-form__mw-450"}
-                            {include file="customer/_partials/login-pwd-forgotten.tpl"}
                         </section>
                         {block name='display_after_login_form'}
                             {hook h='displayCustomerLoginFormAfter'}
