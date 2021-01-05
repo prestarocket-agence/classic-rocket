@@ -15,8 +15,13 @@
 //for full width item
 .c-snap__item--fullw{
   flex: 0 0 100%;
-  //img{
-  //  width: 100%;
-  //}
+  .img-fluid{
+    width: 100%;
+  }
 
+}
+
+//with glider active
+.c-snap.glider{
+  scroll-snap-type: none;
 }

@@ -89,6 +89,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.carousel";
 @import "../../../classic-rocket/_dev/css/components/components.category";
 @import "../../../classic-rocket/_dev/css/components/components.checkout";
+@import "../../../classic-rocket/_dev/css/components/components.coverpdt";
 @import "../../../classic-rocket/_dev/css/components/components.custom";
 @import "../../../classic-rocket/_dev/css/components/components.customer";
 @import "node_modules/bootstrap/scss/dropdown";
@@ -137,6 +138,8 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 /* SCOPES */
 @import "../../../classic-rocket/_dev/css/scopes/scopes.cms";
 
+
+@import "../../../classic-rocket/_dev/css/scopes/scopes.cms";
 
 /*
 /*
