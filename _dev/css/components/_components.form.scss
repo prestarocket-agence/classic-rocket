@@ -24,6 +24,13 @@
   display: flex;
   justify-content: center;
   margin: 0 auto $spacer*1.5;
+
+}
+.s-login-form-checkout{
+  .c-form__footer {
+    margin-bottom: 0;
+
+  }
 }
 
 
