@@ -64,6 +64,10 @@
     max-width: 200px;
 
   }
+
+
+
+
   .c-form-group__city{
     flex: 1;
   }
@@ -74,4 +78,15 @@
     flex: 1 1 100%;
     margin-right: 0;
   }
+}
+
+.c-form-group__phone_mobile,
+.c-form-group__phone
+{
+  max-width: 320px;
+
+}
+
+.c-form__label{
+  font-weight: $font-weight-bold;
 }
