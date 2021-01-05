@@ -34,7 +34,7 @@
         {ldelim}
         "slidesToShow":1.25,
         "slidesToScroll":"auto",
-        "draggable":true,
+        "draggable":false,
         "scrollLock":false,
         "itemWidth":150,
         "dots":"#fp-dots",
