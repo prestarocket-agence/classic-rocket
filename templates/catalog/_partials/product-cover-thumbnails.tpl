@@ -3,11 +3,12 @@
 {block name='product_cover'}
 <div class="c-coverpdt">
 {assign count_pdt_img $product.images|count}
-<div class="c-snap{if $count_pdt_img > 1} js-slider{/if}"{strip}{if $count_pdt_img > 1}  data-glider='
+<div id="js-pdtcover" data-name="js-pdtcover" class="c-snap{if $count_pdt_img > 1} js-slider{/if}"{strip}{if $count_pdt_img > 1}  data-glider='
             {ldelim}
             "slidesToShow":1,
             "slidesToScroll":1,
             "draggable":false,
+            "scrollLock": true,
             "dots":"#pdt-dots",
             "arrows": {ldelim}
                 "prev": "#pdt-arrow-prev",
@@ -15,7 +16,7 @@
             {rdelim}
             {rdelim}
             '{/strip}{/if}>
-        <div class="c-snap__item c-snap__item--fullw">
+        <div class="c-snap__item c-snap__item--fullw" data-imgindex="0">
 
             {if $product.cover}
                 <img class="img-fluid"
@@ -35,13 +36,11 @@
             {/if}
 
         </div>
-
+        {assign counter 1}
         {foreach from=$product.images item=image name="images"}
             {if $image.id_image != $product.cover.id_image}
-                <div class="c-snap__item c-snap__item--fullw">
+                <div class="c-snap__item c-snap__item--fullw" data-imgindex="{$counter}">
                     <div class="u-rc u-rc--1_1">
-
-
                         <img class="img-fluid lazyload"
                              {if !$smarty.foreach.images.first && !$product.cover}data-sizes="auto"{/if}
                              {if !$smarty.foreach.images.first && !$product.cover}data-{/if}srcset="{$image.bySize.medium_default.url} 452w,
@@ -57,6 +56,8 @@
                         </noscript>
                     </div>
                 </div>
+                {assign counter $counter+1}
+
             {/if}
         {/foreach}
     </div>
@@ -68,10 +69,10 @@
 {/block}
 
 {block name='product_images'}
-    <div class="u-p-rel">
+    <div class="u-p-rel u-visible-desktop">
     <div class="c-pdt__thumbs">
 
-        <div class="c-pdt__thumbs-list c-snap{if $count_pdt_img > 1} js-slider{/if}"{strip}{if $count_pdt_img > 1}  data-glider='
+        <div class="c-pdt__thumbs-list c-snap{if $count_pdt_img > 10} js-slider{/if}" data-name="js-pdtthumbs"{strip}{if $count_pdt_img > 1} data-glider='
             {ldelim}
             "slidesToShow":"auto",
             "itemWidth":82,
@@ -84,8 +85,13 @@
             {rdelim}
             {rdelim}
             '{/strip}{/if}>
-            {foreach from=$product.images item=image}
-                <div class="c-snap__item c-pdt__thumb{if $image.id_image == $product.cover.id_image} is-thumb-selected{/if}">
+            {assign counter 1}
+
+            {foreach from=$product.images item=image name="images"}
+                <div class="c-snap__item c-pdt__thumb /js js-thumb-pdt{if $image.id_image == $product.cover.id_image} is-thumb-selected{/if}" data-imgindex="{if $image.id_image != $product.cover.id_image}{$counter}{else}0{/if}">
+                    {if $image.id_image != $product.cover.id_image}
+                        {assign counter $counter+1}
+                    {/if}
                     <div class="u-rc u-rc--1_1">
 
                     <img
@@ -98,6 +104,7 @@
                     >
                     </div>
                 </div>
+
             {/foreach}
         </div>
 

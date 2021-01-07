@@ -1,6 +1,6 @@
 //thumb settings
 $thumb-wrap-margin: $spacer auto $spacer*3;
-$thumb-wrap-width: 70%;
+$thumb-wrap-width: 100%;
 
 $thumb-border-width: 1px;
 $thumb-border-color: $border-color;
@@ -9,7 +9,7 @@ $thumb-padding: 8px;
 $thumb-width:64px;
 $thumb-min-width-glider:$thumb-width + $thumb-padding * 2 + $thumb-border-width * 2;
 $thumb-margin-x: $spacer/8;
-
+$thumb-active-border-color: $primary;
 
 // products thumbs
 
@@ -31,6 +31,9 @@ $thumb-margin-x: $spacer/8;
   &[class].c-snap__item{
     margin-right: $thumb-margin-x;
     margin-left: $thumb-margin-x;
+  }
+  &.is-thumb-selected{
+    border-color:$thumb-active-border-color;
   }
 }
 .c-pdt__thumbimg{
