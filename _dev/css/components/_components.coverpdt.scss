@@ -3,4 +3,8 @@
   padding: 2.5*$spacer;
   background-color: $white;
   border-radius: $spacer;
+
+  .c-snap__item--fullw{
+    flex: 1;
+  }
 }
