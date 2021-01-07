@@ -1,0 +1,39 @@
+//thumb settings
+$thumb-wrap-margin: $spacer auto $spacer*3;
+$thumb-wrap-width: 70%;
+
+$thumb-border-width: 1px;
+$thumb-border-color: $border-color;
+$thumb-active-border-color: $border-color;
+$thumb-padding: 8px;
+$thumb-width:64px;
+$thumb-min-width-glider:$thumb-width + $thumb-padding * 2 + $thumb-border-width * 2;
+$thumb-margin-x: $spacer/8;
+
+
+// products thumbs
+
+.c-pdt__thumbs{
+  width:calc(#{$thumb-wrap-width} - #{$btn-arrow-width*2});
+  margin: $thumb-wrap-margin;
+}
+
+.c-pdt__thumbs-list{
+}
+
+
+.c-pdt__thumb{
+  border: $thumb-border-width solid $thumb-border-color;
+  padding: $thumb-padding;
+  &.glider-slide{
+    min-width: $thumb-min-width-glider;
+  }
+  &[class].c-snap__item{
+    margin-right: $thumb-margin-x;
+    margin-left: $thumb-margin-x;
+  }
+}
+.c-pdt__thumbimg{
+  width: $thumb-width;
+  height: auto;
+}
