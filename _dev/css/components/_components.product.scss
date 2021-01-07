@@ -25,6 +25,7 @@ $thumb-active-border-color: $primary;
 .c-pdt__thumb{
   border: $thumb-border-width solid $thumb-border-color;
   padding: $thumb-padding;
+  width: $thumb-min-width-glider;
   &.glider-slide{
     min-width: $thumb-min-width-glider;
   }

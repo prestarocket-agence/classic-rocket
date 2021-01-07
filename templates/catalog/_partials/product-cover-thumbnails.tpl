@@ -72,7 +72,7 @@
     <div class="u-p-rel u-visible-desktop">
     <div class="c-pdt__thumbs">
 
-        <div class="c-pdt__thumbs-list c-snap{if $count_pdt_img > 10} js-slider{/if}" data-name="js-pdtthumbs"{strip}{if $count_pdt_img > 1} data-glider='
+        <div class="c-pdt__thumbs-list c-snap{if $count_pdt_img > 4} js-slider{/if}" data-name="js-pdtthumbs"{strip}{if $count_pdt_img > 4} data-glider='
             {ldelim}
             "slidesToShow":"auto",
             "itemWidth":82,
@@ -109,8 +109,10 @@
         </div>
 
     </div>
+        {if $count_pdt_img > 4}
         <button id="js-pdt-thumb-arrow-prev" class="c-btn-arrow c-btn-arrow--prev c-btn-arrow--abs">{include file="_partials/icon.tpl" icon="chevron-left" class="c-icon--20"}</button>
         <button id="js-pdt-thumb-arrow-next" class="c-btn-arrow c-btn-arrow--next c-btn-arrow--abs">{include file="_partials/icon.tpl" icon="chevron-right" class="c-icon--20"}</button>
+        {/if}
 
 
     </div>
