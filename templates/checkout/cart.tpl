@@ -90,6 +90,10 @@
 
         </div>
     </section>
+
+    {block name='cart_footer'}
+    {/block}
+
     {block name='cart_summary_mobile'}
         <div class="c-cart-summary__mobile">
             <div class="o-layout u-font-weight-bold">

@@ -53,7 +53,7 @@
                     </div>
                     {if $order.details.reorder_url}
                         <a href="{$order.details.reorder_url}"
-                           class="c-btn--underline">{l s='Reorder' d='Shop.Theme.Actions'}</a>
+                           class="c-btn--underline u-mb-2">{l s='Reorder' d='Shop.Theme.Actions'}</a>
                     {/if}
                 </div>
             </div>

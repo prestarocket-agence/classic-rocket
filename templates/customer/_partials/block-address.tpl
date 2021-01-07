@@ -25,28 +25,20 @@
 {block name='address_block_item'}
     <article id="address-{$address.id}" class="c-address__row /js address" data-id-address="{$address.id}">
         <div class="o-layout o-layout--center-y u-mb-1">
-            <div class="o-layout o-layout--start o-layout--center-y">
                 <p class="u-font-weight-bold u-mb-0 u-mr-2">{$address.alias}</p>
-                <div id="_desktop_update_{$address.id}">
-                    <a class="u-d-flex" href="{url entity=address id=$address.id}" data-link-action="edit-address">
-                        {include file="_partials/icon.tpl" icon="pencil-square" class="c-icon--16 u-mr-1"}
-                        <span class="u-txt-sm">{l s='Update' d='Shop.Theme.Actions'}</span>
-                    </a>
-                </div>
-            </div>
-            <div id="_desktop_delete_{$address.id}">
-                <a href="{url entity=address id=$address.id params=['delete' => 1, 'token' => $token]}"
-                   data-link-action="delete-address">
-                    <span class="u-txt-sm">{l s='Delete' d='Shop.Theme.Actions'}</span>
-                </a>
-            </div>
         </div>
 
         <address class="c-address__formated">{$address.formatted nofilter}</address>
 
-        <div class="o-layout">
-            <div id="_mobile_update_{$address.id}"></div>
-            <div id="_mobile_delete_{$address.id}"></div>
+        <div class="u-d-flex u-align-items-center u-mt-2">
+            <a class="u-d-flex u-align-items-center u-mr-3" href="{url entity=address id=$address.id}" data-link-action="edit-address">
+                {include file="_partials/icon.tpl" icon="pencil-square" class="c-icon--16 c-icon--center-y u-mr-1"}
+                <span class="u-txt-sm">{l s='Update' d='Shop.Theme.Actions'}</span>
+            </a>
+            <a href="{url entity=address id=$address.id params=['delete' => 1, 'token' => $token]}"
+               data-link-action="delete-address">
+                <span class="u-txt-sm">{l s='Delete' d='Shop.Theme.Actions'}</span>
+            </a>
         </div>
     </article>
 {/block}
