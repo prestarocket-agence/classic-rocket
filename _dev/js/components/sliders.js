@@ -8,11 +8,13 @@ $(document).ready(() => {
 
     initAllSliders();
 prestashop.on('updatedProduct', function (event) {
-    // slickSlider.init();
+    initAllSliders();
+
 });
 prestashop.on('showProductQuickView', function (e) {
     // slickSlider.init();
     // console.log(e);
+    initAllSliders();
 });
 });
 
@@ -22,10 +24,9 @@ $(document).on('shown.bs.modal','#product-modal', function (e) {
 
 
 function initAllSliders(){
-    $('.js-slider').each(function (index) {
+    $('.js-slider:not(.js-slider-loaded)').each(function (index) {
         initSlider($(this));
     });
-    // console.log(slidersGlider);
 }
 function initSlider(_el){
     var _options = _el.data('glider');
@@ -43,24 +44,24 @@ function initSlider(_el){
 
 //
 //product page
-$(document).on('glider-slide-visible',function(e){
-    var _index = parseInt(e.detail.slide);
-    $('#js-img-count').text(_index + 1);
-    // .scrollItem(_index);
-    if($('#js-pdt-thumbs').hasClass('js-slider-loaded')){
-        // slidersGlider['pdt-thumbs'].scrollItem(_index);
-    }
-        $('.js-pdt-thumb').removeClass('is-active');
-        $('.js-pdt-thumb[data-index="'+ _index +'"]').addClass('is-active');
-
-
-});
-$(document).on('click','.js-pdt-thumb',function(e){
-    var _index = parseInt($(this).data('index'));
-    //check if slidersGlider exist => if one img=>no exists
-    slidersGlider['pdt-cover'].scrollItem(_index);
-
-});
+// $(document).on('glider-slide-visible',function(e){
+//     var _index = parseInt(e.detail.slide);
+//     $('#js-img-count').text(_index + 1);
+//     // .scrollItem(_index);
+//     if($('#js-pdt-thumbs').hasClass('js-slider-loaded')){
+//         // slidersGlider['pdt-thumbs'].scrollItem(_index);
+//     }
+//         $('.js-pdt-thumb').removeClass('is-active');
+//         $('.js-pdt-thumb[data-index="'+ _index +'"]').addClass('is-active');
+//
+//
+// });
+// $(document).on('click','.js-pdt-thumb',function(e){
+//     var _index = parseInt($(this).data('index'));
+//     //check if slidersGlider exist => if one img=>no exists
+//     slidersGlider['pdt-cover'].scrollItem(_index);
+//
+// });
 
 
 //
