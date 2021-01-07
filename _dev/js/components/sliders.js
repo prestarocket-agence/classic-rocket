@@ -1,7 +1,9 @@
 
 import prestashop from 'prestashop';
 import $ from 'jquery';
-import Glider from 'glider-js';
+// import Glider from 'glider-js/glider.js';
+import './../lib/glider.min';
+
 
 let slidersGlider = {};
 $(document).ready(() => {
