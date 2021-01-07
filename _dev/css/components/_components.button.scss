@@ -59,3 +59,23 @@
     background-color: $primary;
   }
 }
+
+//button for carousels / sliders
+$btn-arrow-width:40px;
+$btn-arrow-height:40px;
+.c-btn-arrow{
+  width: $btn-arrow-width;
+  //for flex child item
+  min-width: $btn-arrow-width;
+  height: $btn-arrow-height;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+.c-btn-arrow--abs{
+  position: absolute;
+  top: calc(50% - #{$btn-arrow-height/2});
+  &.c-btn-arrow--next{
+    right: 0;
+  }
+}
+
