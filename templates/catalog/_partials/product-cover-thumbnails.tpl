@@ -1,5 +1,7 @@
+<div class="/js images-container">
+
 {block name='product_cover'}
-<div class="c-coverpdt /js images-container">
+<div class="c-coverpdt">
 {assign count_pdt_img $product.images|count}
 <div class="c-snap{if $count_pdt_img > 1} js-slider{/if}"{strip}{if $count_pdt_img > 1}  data-glider='
             {ldelim}
@@ -66,25 +68,47 @@
 {/block}
 
 {block name='product_images'}
-    <div class="js-qv-mask mask">
-        <ul class="product-images js-qv-product-images">
+    <div class="u-p-rel">
+    <div class="c-pdt__thumbs">
+
+        <div class="c-pdt__thumbs-list c-snap{if $count_pdt_img > 1} js-slider{/if}"{strip}{if $count_pdt_img > 1}  data-glider='
+            {ldelim}
+            "slidesToShow":"auto",
+            "itemWidth":82,
+            "slidesToScroll":"auto",
+            "scrollLock":true,
+            "draggable":false,
+            "arrows": {ldelim}
+                "prev": "#js-pdt-thumb-arrow-prev",
+                "next": "#js-pdt-thumb-arrow-next"
+            {rdelim}
+            {rdelim}
+            '{/strip}{/if}>
             {foreach from=$product.images item=image}
-                <li class="thumb-container">
+                <div class="c-snap__item c-pdt__thumb{if $image.id_image == $product.cover.id_image} is-thumb-selected{/if}">
+                    <div class="u-rc u-rc--1_1">
+
                     <img
-                            class="thumb js-thumb {if $image.id_image == $product.cover.id_image} selected {/if}"
-                            data-image-medium-src="{$image.bySize.medium_default.url}"
-                            data-image-large-src="{$image.bySize.large_default.url}"
-                            src="{$image.bySize.home_default.url}"
+                            class="c-pdt__thumbimg img-fluid lazyload"
+                            src="{$image.bySize.cart_default.url}"
                             alt="{$image.legend}"
                             title="{$image.legend}"
-                            width="100"
-                            itemprop="image"
+                            width="{$image.bySize.cart_default.width}"
+                            height="{$image.bySize.cart_default.height}"
                     >
-                </li>
+                    </div>
+                </div>
             {/foreach}
-        </ul>
+        </div>
+
+    </div>
+        <button id="js-pdt-thumb-arrow-prev" class="c-btn-arrow c-btn-arrow--prev c-btn-arrow--abs">{include file="_partials/icon.tpl" icon="chevron-left" class="c-icon--20"}</button>
+        <button id="js-pdt-thumb-arrow-next" class="c-btn-arrow c-btn-arrow--next c-btn-arrow--abs">{include file="_partials/icon.tpl" icon="chevron-right" class="c-icon--20"}</button>
+
+
     </div>
 {/block}
+</div>
 {hook h='displayAfterProductThumbs'}
 
 
