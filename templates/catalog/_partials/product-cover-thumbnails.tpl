@@ -9,11 +9,7 @@
             "slidesToScroll":1,
             "draggable":false,
             "scrollLock": true,
-            "dots":"#pdt-dots",
-            "arrows": {ldelim}
-                "prev": "#pdt-arrow-prev",
-                "next": "#pdt-arrow-next"
-            {rdelim}
+            "dots":"#pdt-dots"
             {rdelim}
             '{/strip}{/if}>
         <div class="c-snap__item c-snap__item--fullw" data-imgindex="0">
