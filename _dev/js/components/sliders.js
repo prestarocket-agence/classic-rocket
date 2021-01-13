@@ -32,16 +32,70 @@ function initAllSliders(){
 }
 function initSlider(_el){
     var _options = _el.data('glider');
-    // console.log(_el.data());
+
     if (typeof _options !== "undefined") {
+        var slider = new Glider(_el[0], _options);
         if(_el.data('name') !== 'undefined'){
-            slidersGlider[_el.data('name')] = new Glider(_el[0], _options);
-        }else{
-            new Glider(_el[0], _options);
+            slidersGlider[_el.data('name')] = slider;
         }
         _el.addClass('js-slider-loaded');
+
     }
 }
+
+$(document).on('glider-refresh glider-loaded','.js-slider',function(e) {
+
+
+    var _options = $(e.target).data('glider'),
+        _arrows = false,
+        _dots = false;
+    if(typeof _options.arrows !== "undefined"){
+        _arrows = _options.arrows;
+    }
+    if(typeof _options.dots !== "undefined"){
+        _dots = _options.dots;
+    }
+    //hide or display dots nav
+    if(_dots){
+        var _dotslength = $('.glider-dot',_dots).length;
+        if(_dotslength > 1){
+            $(_dots).removeClass('is-dots-hidden');
+        }else{
+            $(_dots).addClass('is-dots-hidden');
+
+        }
+    }
+
+    //hide or display arrow nav
+    if(_arrows){
+        console.log(_arrows);
+        var _nextarrow = $(_arrows['next']),
+        _prevarrow = $(_arrows['prev']);
+        if(_nextarrow.hasClass('disabled') && _prevarrow.hasClass('disabled')){
+            _prevarrow.addClass('is-arrow-hidden');
+            _nextarrow.addClass('is-arrow-hidden');
+        }else{
+            _prevarrow.removeClass('is-arrow-hidden');
+            _nextarrow.removeClass('is-arrow-hidden');
+        }
+    }
+
+    return;
+    var _slider = $(e.target),
+        _parent = _slider.parents('.c-slider__container'),
+        _nbDots = $('.c-slider__dots .glider-dot',_parent).length;
+
+
+// console.log(_slider);
+    if(_nbDots === 1){
+        _parent.addClass('has-no-nav');
+        $('.glider-track',_parent).css('min-width','100%');
+
+    }else if(_nbDots > 1){
+        _parent.removeClass('has-no-nav');
+        $('.glider-track',_parent).css('min-width','unset');
+    }
+});
 
 
 //
@@ -50,19 +104,6 @@ $(document).on('glider-slide-visible','#js-pdtcover',function(e){
 
     var imgindex = $('.glider-slide.active').data('imgindex');
     refreshPdtThumbs(imgindex);
-
-
-
-    // var _index = parseInt(e.detail.slide);
-    // $('#js-img-count').text(_index + 1);
-    // // .scrollItem(_index);
-    // if($('#js-pdt-thumbs').hasClass('js-slider-loaded')){
-    //     // slidersGlider['pdt-thumbs'].scrollItem(_index);
-    // }
-    //     $('.js-pdt-thumb').removeClass('is-active');
-    //     $('.js-pdt-thumb[data-index="'+ _index +'"]').addClass('is-active');
-
-
 });
 
 
@@ -76,6 +117,7 @@ $(document).on('click','.js-thumb-pdt:not(.is-thumb-selected)',function(e){
     }
 });
 
+// on scroll in main slider,
 function refreshPdtThumbs(imgindex){
     if(typeof imgindex === "undefined"){
         return;
@@ -85,6 +127,7 @@ function refreshPdtThumbs(imgindex){
     toggleStateThumbPdt(thumb_to_update);
 }
 
+//on click thumb, manage thumb selected for extra class
 function toggleStateThumbPdt(el){
     if(el.length > 0){
         $('.js-thumb-pdt').removeClass('is-thumb-selected');
@@ -93,6 +136,7 @@ function toggleStateThumbPdt(el){
     }
 }
 
+// if click on thumb, scroll main slider
 function scrollThumbNav(el){
     if(!el.hasClass('visible') && slidersGlider.hasOwnProperty('js-pdtthumbs')){
         slidersGlider['js-pdtthumbs'].scrollItem(el.data('gslide'));
@@ -102,22 +146,9 @@ function scrollThumbNav(el){
 
 
 
-$(document).on('glider-refresh glider-loaded',function(e) {
-var _slider = $(e.target),
-    _parent = _slider.parents('.c-slider__container'),
-    _nbDots = $('.c-slider__dots .glider-dot',_parent).length;
 
 
-// console.log(_slider);
-    if(_nbDots === 1){
-        _parent.addClass('has-no-nav');
-        $('.glider-track',_parent).css('min-width','100%');
 
-    }else if(_nbDots > 1){
-        _parent.removeClass('has-no-nav');
-        $('.glider-track',_parent).css('min-width','unset');
-    }
-});
 
 // prestashop.on('responsive update', function(e){
 //     if(e.mobile) {

@@ -18,14 +18,12 @@ $thumb-active-border-color: $primary;
   margin: $thumb-wrap-margin;
 }
 
-.c-pdt__thumbs-list{
-}
-
 
 .c-pdt__thumb{
   border: $thumb-border-width solid $thumb-border-color;
   padding: $thumb-padding;
   width: $thumb-min-width-glider;
+  cursor: pointer;
   &.glider-slide{
     min-width: $thumb-min-width-glider;
   }
@@ -35,6 +33,7 @@ $thumb-active-border-color: $primary;
   }
   &.is-thumb-selected{
     border-color:$thumb-active-border-color;
+    cursor: auto;
   }
 }
 .c-pdt__thumbimg{
