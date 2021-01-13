@@ -27,9 +27,7 @@
             {/if}
 
             <a class="c-customer-header__item-center" href="{$urls.base_url}">
-                <img class="u-img-fluid"
-                     src="{if isset($modules.prestarockettheme.logo_svg)}{$modules.prestarockettheme.logo_svg}{else}{$shop.logo}{/if}"
-                     alt="{$shop.name}">
+                <img class="u-img-fluid" src="{if isset($modules.prestarockettheme.logo)}{$modules.prestarockettheme.logo.url}{else}{$shop.logo}{/if}" alt="{$shop.name}"{if isset($modules.prestarockettheme.logo)} width="{$modules.prestarockettheme.logo.width}" height="{$modules.prestarockettheme.logo.height}"{/if}>
             </a>
 
             <div class="u-d-flex u-align-items-center">
