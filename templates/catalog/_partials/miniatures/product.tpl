@@ -27,6 +27,7 @@
              data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}">
         {block name='after_opening_product_mini_tag'}{/block}
         <div class="c-pdt-mini__card u-p-rel">
+            {block name='after_opening_product_mini_card'}{/block}
             <div class="c-pdt-mini__body">
                 {block name='product_body'}
                     <div>
@@ -124,7 +125,7 @@
                     </div>
                 {/block}
             </div>
-
+            {block name='before_opening_product_mini_card'}{/block}
         </div>
         {block name='before_closing_product_mini_tag'}{/block}
     </article>
