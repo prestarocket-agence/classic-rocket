@@ -63,7 +63,9 @@ $.post(actionURL, dataForm, null, 'json').then((resp) => {
 
     $btn.attr("disabled", false);
     $form.removeClass('is-adding');
-
+    if(resp.success){
+        $btn.addClass('is-add-success');
+    }
 prestashop.emit('updateCart', {
     reason: {
         idProduct: resp.id_product,
