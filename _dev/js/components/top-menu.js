@@ -43,7 +43,7 @@ export default class TopMenu {
         let expanded = _item.attr('aria-expanded');
         if(typeof expanded !=="undefined"){
          expanded = (expanded.toLowerCase() === 'true');
-        _item.toggleClass('menu__item--active').attr('aria-expanded',!expanded);
+        _item.toggleClass('is-menu-show').attr('aria-expanded',!expanded);
         $('.menu-sub',_item).attr('aria-expanded',!expanded).attr('aria-hidden',expanded);
         }
 
