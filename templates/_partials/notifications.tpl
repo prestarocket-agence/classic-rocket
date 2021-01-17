@@ -24,7 +24,7 @@
  *}
 
 {if isset($notifications)}
-<aside id="notifications" class="notifications-container">
+<aside id="notifications" class="/js notifications-container">{strip}
     {if $notifications.error}
       {block name='notifications_error'}
         <article class="alert alert-danger" role="alert" data-alert="danger">
@@ -72,5 +72,6 @@
         </article>
       {/block}
     {/if}
+    {/strip}
 </aside>
 {/if}
