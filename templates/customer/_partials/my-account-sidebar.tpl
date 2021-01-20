@@ -1,10 +1,12 @@
 <div class="c-account-sidebar__block">
-    <a class="c-account-sidebar__link" href="{$urls.pages.my_account}">
+    <a class="c-account-sidebar__link c-account-sidebar__heading" href="{$urls.pages.my_account}">
         <div class="c-account-sidebar__avatar">
             {$customer.firstname|substr:0:1}{$customer.lastname|substr:0:1}
         </div>
-        <p class="u-mb-0">{l s='Bonjour' d='Shop.Theme.Global'},
-            <br><span class="u-font-weight-bold">{$customer.firstname} {$customer.lastname}</span></p>
+        <p class="c-account-sidebar__customer u-mb-0">
+            <span>{l s='Bonjour' d='Shop.Theme.Global'},&nbsp;</span>
+            <span class="u-font-weight-bold">{$customer.firstname} {$customer.lastname}</span>
+        </p>
     </a>
 </div>
 

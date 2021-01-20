@@ -46,6 +46,13 @@
   }
 }
 
+.c-account-sidebar__heading {
+  @include media-breakpoint-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .c-account-sidebar__avatar {
   display: flex;
   align-items: center;
@@ -60,6 +67,19 @@
   text-transform: uppercase;
   background-color: $black;
   border-radius: 50%;
+
+  @include media-breakpoint-mobile {
+    margin: 0 0 $spacer*.5 0;
+  }
+}
+
+.c-account-sidebar__customer {
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-mobile {
+    flex-direction: row;
+  }
 }
 
 // Main column

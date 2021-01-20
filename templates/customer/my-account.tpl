@@ -38,9 +38,9 @@
         <p class="c-account-landing__title">{l s='Bienvenue dans votre espace' d='Shop.Theme.Global'}</p>
         <p>{l s='Consultez et ajustez vos informations personnelles' d='Shop.Theme.Global'}</p>
     </div>
-        <div class="c-account-landing__img">
-            <div class="c-account-landing__gradient"></div>
-        </div>
+    <div class="c-account-landing__img" {block name="accountImgBg"}{/block}>
+        <div class="c-account-landing__gradient"></div>
+    </div>
 {/block}
 
 {block name='page_footer'}
