@@ -85,7 +85,7 @@ if($header-border-width) {
 
 .c-header__shortcut-icon--cart {
   position: relative;
-  padding-right: $header-shortcut-cart-count-width / 2;
+  padding-right: $header-shortcut-cart-count-padding-right;
 
   &-label {
     position: absolute;
@@ -94,9 +94,10 @@ if($header-border-width) {
     justify-content: center;
     width: $header-shortcut-cart-count-width;
     height: $header-shortcut-cart-count-height;
-    top: -25%;
-    right: 0;
-    font-size: $small-font-size;
+    top: $header-shortcut-cart-count-top;
+    right: $header-shortcut-cart-count-right;
+    font-size: $header-shortcut-cart-count-font-size;
+    font-weight: $header-shortcut-cart-count-font-weight;
     color: $header-shortcut-cart-count-color;
     background-color: $header-shortcut-cart-count-bg;
     border-radius: 50%;
