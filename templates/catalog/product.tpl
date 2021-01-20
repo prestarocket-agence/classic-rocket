@@ -30,7 +30,12 @@
 
 
 {block name='content'}
-    <section id="main" class="/js product-container">
+    {if !isset($modules.prestarockettheme.product.product_layout)}
+        {assign var="product_layout" value="collapse"}
+    {else}
+        {assign var="product_layout" value=$modules.prestarockettheme.product.product_layout}
+    {/if}
+    <section id="main" class="s-product-layout-{$product_layout} /js product-container">
         <div class="row">
 
             <div class="col-lg-5 offset-lg-1 u-order-1">
@@ -101,6 +106,11 @@
 
 
                 </div>
+                {if $product_layout == "collapse"}
+                    {block name='product_tabs'}
+                        {include file='catalog/_partials/product-tabs.tpl'}
+                    {/block}
+                {/if}
             </div>
 
             <div class="col-lg-6 u-order-0">
@@ -126,9 +136,11 @@
                 {include file='catalog/_partials/product-pack.tpl'}
             {/if}
         {/block}
-        {block name='product_tabs'}
-            {include file='catalog/_partials/product-tabs.tpl'}
-        {/block}
+        {if $product_layout != "collapse"}
+            {block name='product_tabs'}
+                {include file='catalog/_partials/product-tabs.tpl'}
+            {/block}
+        {/if}
         {block name='product_accessories'}
             {if $accessories}
                 {include file='catalog/_partials/product-accessories.tpl'}

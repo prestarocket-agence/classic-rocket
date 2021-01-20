@@ -1,9 +1,11 @@
 <div class="tabs product-tabs">
+    {if $product_layout !== "collapse"}
         {include file='catalog/_partials/product-tabs-nav.tpl'}
+    {/if}
 
 
 
-        <div class="tab-content" id="tab-content">
+        <div class="tab-content">
             <div class="tab-pane fade{if $product.description} show active{/if}" id="description" role="tabpanel">
                 {block name='product_description'}
                     <div class="product-description s-cms">{$product.description nofilter}</div>
