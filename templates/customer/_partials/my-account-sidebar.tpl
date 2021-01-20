@@ -16,13 +16,13 @@
             {l s='Order history and details' d='Shop.Theme.Customeraccount'}
         </a>
 
-        {*            {if $configuration.return_enabled && !$configuration.is_catalog}*}
-        <a class="c-account-sidebar__link {if $urls.current_url == $urls.pages.order_follow} is-active{/if}"
-           id="returns-link" href="{$urls.pages.order_follow}">
-            {include file="_partials/icon.tpl" icon="arrow-return-left" class="c-icon--16 c-icon--center-y u-mr-2"}
-            {l s='Merchandise returns' d='Shop.Theme.Customeraccount'}
-        </a>
-        {*            {/if}*}
+        {if $configuration.return_enabled && !$configuration.is_catalog}
+            <a class="c-account-sidebar__link {if $urls.current_url == $urls.pages.order_follow} is-active{/if}"
+               id="returns-link" href="{$urls.pages.order_follow}">
+                {include file="_partials/icon.tpl" icon="arrow-return-left" class="c-icon--16 c-icon--center-y u-mr-2"}
+                {l s='Merchandise returns' d='Shop.Theme.Customeraccount'}
+            </a>
+        {/if}
     </div>
 {/if}
 
