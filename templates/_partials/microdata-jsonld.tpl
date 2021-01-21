@@ -57,7 +57,7 @@
 {/if}
 <script type="application/ld+json">
 {
-    "@context" : "http://schema.org",
+    "@context" : "https://schema.org",
     "@type" : "Organization",
     "name" : "{$shop.name}",
     "url" : "{$urls.pages.index}",
@@ -66,12 +66,11 @@
         "url":"{$urls.shop_domain_url}{$shop.logo}"
     }
 }
-
 </script>
 
 <script type="application/ld+json">
 {
-    "@context":"http://schema.org",
+    "@context":"https://schema.org",
     "@type":"WebPage",
     "isPartOf": {
         "@type":"WebSite",
@@ -81,13 +80,11 @@
     "name": "{$page.meta.title}",
     "url":  "{$urls.current_url}"
 }
-
-
 </script>
 {if $page.page_name =='index'}
     <script type="application/ld+json">
 {
-	"@context":	"http://schema.org",
+	"@context":	"https://schema.org",
 	"@type": "WebSite",
     "url" : "{$urls.pages.index}",
 	"image": {
@@ -100,29 +97,19 @@
      "query-input": "required name=search_term_string"
 	 }
 }
-
-
     </script>
 {/if}
 {if isset($product) && $page.page_name == 'product'}
     <script type="application/ld+json">
     {
-    "@context": "http://schema.org/",
+    "@context": "https://schema.org/",
     "@type": "Product",
     "name": "{$product.name}",
-    "description": "{$page.meta.description}",
+    "description": "{$page.meta.description|regex_replace:"/[\r\n]/" : " "}",
     "category": "{$product.category_name}",
     {if isset($product.cover)}"image" :"{$product.cover.bySize.home_default.url}",{/if}
-    {if $product.reference}"sku": "{$product.reference}",{/if}
-    {if $product.ean13}
-      "gtin13": "{$product.ean13}",
-    {else if $product.upc}
-      "gtin13": "0{$product.upc}",
-    {else if $product.isbn}
-      "isbn": "{$product.isbn}",
-    {else if $product.reference}
-      "mpn": "{$product.reference}",
-    {/if}
+    {if $product.reference}"sku": "{$product.reference}",{else}"sku": "{$product.id}",{/if}
+    "mpn": {if $product.reference}"{$product.reference}"{else}"{$product.id}"{/if},
     {if $product_manufacturer->name OR $shop.name}"brand": {
         "@type": "Thing",
         "name": "{if $product_manufacturer->name}{$product_manufacturer->name|escape:'html':'UTF-8'}{else}{$shop.name}{/if}"
@@ -139,9 +126,9 @@
         "value": "{$product.weight}",
         "unitCode": "{$product.weight_unit}"
     },{/if}
-    {*{if empty($combinations)}*}
   {if $product.show_price}
-    "offers": {
+    {if $product.id_product_attribute == 0}
+      "offers": {
         "@type": "Offer",
         "priceCurrency": "{$currency.iso_code}",
         "name": "{$product.name|strip_tags:false}",
@@ -155,32 +142,60 @@
         {/foreach}
         ]{/strip},
         {/if}
-        {if $product.ean13}
-        "gtin13": "{$product.ean13}",
-        {else if $product.upc}
-        "gtin13": "0{$product.upc}",
-        {else if $product.isbn}
-          "isbn": "{$product.isbn}",
-        {else if $product.reference}
-          "mpn": "{$product.reference}",
-        {/if}
-        "sku": "{$product.reference}",
-        {if $product.condition == 'new'}"itemCondition": "http://schema.org/NewCondition",{/if}
+        "mpn": {if $product.reference}"{$product.reference}"{else}"{$product.id}"{/if},
+        "sku": {if $product.reference}"{$product.reference}"{else}"{$product.id}"{/if},
+        {if $product.condition == 'new'}"itemCondition": "https://schema.org/NewCondition",{/if}
         {if $product.show_condition > 0}
-        {if $product.condition == 'used'}"itemCondition": "http://schema.org/UsedCondition",{/if}
-        {if $product.condition == 'refurbished'}"itemCondition": "http://schema.org/RefurbishedCondition",{/if}
+        {if $product.condition == 'used'}"itemCondition": "https://schema.org/UsedCondition",{/if}
+        {if $product.condition == 'refurbished'}"itemCondition": "https://schema.org/RefurbishedCondition",{/if}
         {/if}
-        "availability":{if $product.quantity > 0 || $product.allow_oosp > 0} "http://schema.org/InStock"{else} "http://schema.org/OutOfStock"{/if},
+        "availability":{if $product.quantity > 0 || $product.allow_oosp > 0} "https://schema.org/InStock"{else} "https://schema.org/OutOfStock"{/if},
         "seller": {
             "@type": "Organization",
             "name": "{$shop.name}"
         }
-    }
+      }
+    {else}
+     "offers": [
+      {foreach key=id_product_combination item=combination from=$combinations}
+        {
+        "@type": "Offer",
+        "priceCurrency": "{$currency.iso_code}",
+        "name": "{$product.name|strip_tags:false} - {foreach item=attr from=$combination.attributes_values}{$attr|strip_tags:false}{if !$attr@last} {/if}{/foreach}",
+        "price": "{Product::getPriceStatic($product->id, true, $id_product_combination)|round:'2'}",
+        "url": "{$product.url}",
+        "priceValidUntil": "{($smarty.now + (int) (60*60*24*15))|date_format:"%Y-%m-%d"}",
+        "image": "{if $combination.id_image > 0}{$link->getImageLink($product->link_rewrite, $combination.id_image, 'home_default')|escape:'html':'UTF-8'}{else}{$product.cover.bySize.home_default.url}{/if}",
+        "mpn": "{$combination.reference}",
+        "sku": "{$combination.reference}",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability":{if $combination.quantity > 0} "https://schema.org/InStock"{else}"https://schema.org/OutOfStock"{/if},
+        "seller": {
+            "@type": "Organization",
+            "name": "{$shop.name}"}
+        } {if !$combination@last},{/if}
+     {/foreach}
+    ]
     {/if}
-
+  {/if}
 }
-
-
+    </script>
+{/if}
+{if $page.page_name == 'category' || $page.page_name == 'prices-drop' || $page.page_name == 'new-products' || $page.page_name == 'best-sales'}
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+    {foreach from=$listing.products item=item key="position" name=producttmp}
+    {
+    "@type": "ListItem",
+    "position": {$position},
+    "name": "{$item.name}",
+    "url": "{$item.url}"
+    }{if !$smarty.foreach.producttmp.last},{/if}
+    {/foreach}]
+    }
     </script>
 {/if}
 {if isset($breadcrumb.links[1])}
