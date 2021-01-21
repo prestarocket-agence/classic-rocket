@@ -14,7 +14,7 @@
     {if $product_layout === "tabs"}
         {assign classPdtTab "tab-pane fade"}
     {elseif $product_layout === "columns"}
-        {assign classPdtTab "tab-pane fade"}
+        {assign classPdtTab ""}
         {assign classPdtTabActive ""}
     {/if}
 
