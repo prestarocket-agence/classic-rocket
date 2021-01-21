@@ -1,15 +1,4 @@
-//thumb settings
-$thumb-wrap-margin: $spacer auto $spacer*3;
-$thumb-wrap-width: 100%;
 
-$thumb-border-width: 1px;
-$thumb-border-color: $border-color;
-$thumb-active-border-color: $border-color;
-$thumb-padding: 8px;
-$thumb-width:64px;
-$thumb-min-width-glider:$thumb-width + $thumb-padding * 2 + $thumb-border-width * 2;
-$thumb-margin-x: $spacer/8;
-$thumb-active-border-color: $primary;
 
 // products thumbs
 
@@ -39,4 +28,35 @@ $thumb-active-border-color: $primary;
 .c-pdt__thumbimg{
   width: $thumb-width;
   height: auto;
+}
+
+//buton for collapse
+.c-pdt__sections{
+  border-top: 1px solid $pdt-btn-collapse-border-color;
+}
+.btn.c-pdt__btncollapse{
+  font-family: $pdt-btn-collapse-font-family;
+  padding-left: 0;
+  font-size: $pdt-btn-collapse-font-size;
+  font-weight: $pdt-btn-collapse-font-weight;
+  color: $pdt-btn-collapse-color;
+  width: 100%;
+  text-align: left;
+  //border-top: 1px solid red;
+  border-bottom: 1px solid $pdt-btn-collapse-border-color;
+  border-radius: 0;
+  &:hover{
+    text-decoration: none;
+  }
+  &:focus{
+    box-shadow: none;
+  }
+  &[aria-expanded="true"]{
+    border-bottom: transparent;
+  }
+
+}
+
+.c-pdt__bodycollapse{
+  border-bottom: 1px solid $pdt-btn-collapse-border-color;
 }

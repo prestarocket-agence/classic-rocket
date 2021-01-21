@@ -41,7 +41,7 @@ $(document).ready(function () {
       // @see http://www.virtuosoft.eu/code/bootstrap-touchspin/ about Bootstrap TouchSpin
       quantityInput.trigger('touchspin.updatesettings', {min: minimalProductQuantity});
     }
-    $($('.tabs .nav-link.active').attr('href')).addClass('active').removeClass('fade');
+    // $($('.tabs .nav-link.active').attr('href')).addClass('active').removeClass('fade');
     $('.js-product-images-modal').replaceWith(event.product_images_modal);
 
 
