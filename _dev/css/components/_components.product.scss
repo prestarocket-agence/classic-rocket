@@ -1,5 +1,3 @@
-
-
 // products thumbs
 
 .c-pdt__thumbs{
@@ -34,3 +32,18 @@
 .c-pdt__sections--collapse{
   border-top: 1px solid $pdt-btn-collapse-border-color;
 }
+
+/* see _settings.product.scss */
+.c-pdt__title {
+  @include font-size($pdt-name-font-size);
+  font-weight: $pdt-name-font-weight;
+  font-family: $pdt-name-font-family;
+  color: $pdt-name-color;
+  text-transform: $pdt-name-text-transform;
+  text-decoration: $pdt-name-text-decoration;
+  letter-spacing: $pdt-name-letter-spacing;
+  line-height: $pdt-name-line-height;
+  margin-bottom: $pdt-name-margin-bottom;
+
+}
+

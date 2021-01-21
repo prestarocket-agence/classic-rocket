@@ -45,7 +45,8 @@
 }
 
 .c-pdt-mini__name {
-  font-size: $pm-name-font-size;
+
+  @include font-size($pm-name-font-size);
   font-weight: $pm-name-font-weight;
   font-family: $pm-name-font-family;
 
@@ -64,7 +65,8 @@
 }
 
 .c-pdt-mini__brand {
-  font-size: $pm-brand-font-size;
+  @include font-size($pm-brand-font-size);
+
   font-weight: $pm-brand-font-weight;
   font-family: $pm-brand-font-family;
 
