@@ -1,2 +1,20 @@
+// *** PRICES ***
+
+//Current
+$price-current-font-size: $font-size-base;
+$price-current-font-weight: $font-weight-bold;
+$price-current-color: $black;
+
+//Discount
+$price-discount-font-size: $font-size-base;
+$price-discount-font-weight: $font-weight-bold;
+$price-discount-color: $red;
+
+//Old
+$price-old-font-size: $font-size-base;
+$price-old-font-weight: $font-weight-bold;
+$price-old-color: $dark;
+
+//Size modifiers
 $price-sm-font-size: $font-size-base*.875;
 $price-lg-font-size: $font-size-base*1.125;

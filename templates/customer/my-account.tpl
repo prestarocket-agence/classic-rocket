@@ -35,12 +35,12 @@
 
 {block name='page_content'}
     <div class="c-account-landing">
-        <p class="c-account-landing__title">{l s='Bienvenue dans votre espace' d='Shop.Theme.Global'}</p>
-        <p>{l s='Consultez et ajustez vos informations personnelles' d='Shop.Theme.Global'}</p>
+        <p class="c-account-landing__title">{$modules.prestarockettheme.account.title_account}</p>
+        <p>{$modules.prestarockettheme.account.description_account}</p>
     </div>
-        <div class="c-account-landing__img">
-            <div class="c-account-landing__gradient"></div>
-        </div>
+    <div class="c-account-landing__img" {block name="accountImgBg"}{/block}>
+        <div class="c-account-landing__gradient"></div>
+    </div>
 {/block}
 
 {block name='page_footer'}

@@ -1,10 +1,12 @@
 <div class="c-account-sidebar__block">
-    <a class="c-account-sidebar__link" href="{$urls.pages.my_account}">
+    <a class="c-account-sidebar__link c-account-sidebar__heading" href="{$urls.pages.my_account}">
         <div class="c-account-sidebar__avatar">
             {$customer.firstname|substr:0:1}{$customer.lastname|substr:0:1}
         </div>
-        <p class="u-mb-0">{l s='Bonjour' d='Shop.Theme.Global'},
-            <br><span class="u-font-weight-bold">{$customer.firstname} {$customer.lastname}</span></p>
+        <p class="c-account-sidebar__customer u-mb-0">
+            <span>{l s='Bonjour' d='Shop.Theme.Global'},&nbsp;</span>
+            <span class="u-font-weight-bold">{$customer.firstname} {$customer.lastname}</span>
+        </p>
     </a>
 </div>
 
@@ -16,13 +18,13 @@
             {l s='Order history and details' d='Shop.Theme.Customeraccount'}
         </a>
 
-        {*            {if $configuration.return_enabled && !$configuration.is_catalog}*}
-        <a class="c-account-sidebar__link {if $urls.current_url == $urls.pages.order_follow} is-active{/if}"
-           id="returns-link" href="{$urls.pages.order_follow}">
-            {include file="_partials/icon.tpl" icon="arrow-return-left" class="c-icon--16 c-icon--center-y u-mr-2"}
-            {l s='Merchandise returns' d='Shop.Theme.Customeraccount'}
-        </a>
-        {*            {/if}*}
+        {if $configuration.return_enabled && !$configuration.is_catalog}
+            <a class="c-account-sidebar__link {if $urls.current_url == $urls.pages.order_follow} is-active{/if}"
+               id="returns-link" href="{$urls.pages.order_follow}">
+                {include file="_partials/icon.tpl" icon="arrow-return-left" class="c-icon--16 c-icon--center-y u-mr-2"}
+                {l s='Merchandise returns' d='Shop.Theme.Customeraccount'}
+            </a>
+        {/if}
     </div>
 {/if}
 
