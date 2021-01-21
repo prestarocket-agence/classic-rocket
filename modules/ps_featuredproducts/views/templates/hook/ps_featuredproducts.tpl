@@ -30,7 +30,7 @@
     </div>
     {assign var="productscount" value=$products|count}
     <div class="row">
-    <div class="c-slider{if $productscount > 1} /js glider js-slider{/if}" data-glider='{strip}
+    <div class="c-snap{if $productscount > 1} /js glider js-slider{/if}" data-glider='{strip}
         {ldelim}
         "slidesToShow":1.25,
         "slidesToScroll":"auto",
@@ -61,7 +61,7 @@
         {rdelim}
         {/strip}'>
         {foreach from=$products item="product"}
-            {include file="catalog/_partials/miniatures/product.tpl" product=$product col="col-lg-3 col-md-4 col-6"}
+            {include file="catalog/_partials/miniatures/product.tpl" product=$product col="col-lg-3 col-md-4 col-6 c-snap__item"}
         {/foreach}
     </div>
     </div>
