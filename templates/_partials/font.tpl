@@ -1,3 +1,5 @@
+
+{*
 {literal}
 <link rel="preconnect" href="//fonts.gstatic.com/" crossorigin>
 <link rel="preconnect" href="//ajax.googleapis.com" crossorigin>
@@ -14,3 +16,4 @@
         s.parentNode.insertBefore(wf, s);
     })(); </script>
 {/literal}
+*}

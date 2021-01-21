@@ -26,7 +26,7 @@
     <div class="language-selector-wrapper">
         {*    <span id="language-selector-label" class="d-inline-block d-md-none">{l s='Language:' d='Shop.Theme.Global'}</span>*}
         <div class="language-selector dropdown js-dropdown">
-            <button data-toggle="dropdown" class="c-top-header__btn /js dropdown-toggle" aria-haspopup="true" aria-expanded="false"
+            <button data-toggle="dropdown" class="c-btn--unstyled u-txt-black u-txt-sm /js dropdown-toggle" aria-haspopup="true" aria-expanded="false"
                     aria-label="{l s='Language dropdown' d='Shop.Theme.Global'}">
                 {$current_language.name_simple}
                 {include file="_partials/icon.tpl" icon="chevron-down-sharp" class="u-ml-1"}

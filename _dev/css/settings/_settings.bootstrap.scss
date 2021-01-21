@@ -1,6 +1,8 @@
 /* Override Bootstrap settings
   ========================================================================== */
 
+$enable-responsive-font-sizes : true;
+
 /**
 * Enable grid classes
 */
@@ -51,6 +53,19 @@ $extra-small-font-size:       $font-size-base * .75;
  */
 
 //$custom-checkbox-indicator-border-radius:       0;
+$component-active-bg:         $primary !default;
+$stretched-link-z-index:  1;
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+$input-btn-focus-width:         .25rem !default;
+$input-btn-focus-color-opacity: .25 !default;
+
+$input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity) !default;
+
+$input-btn-focus-box-shadow:    0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+
+
 
 /*
 Breadcrumb
@@ -68,3 +83,57 @@ $breadcrumb-border-radius:          null;
 
 
 $offcanvas-width: 500px;
+
+
+// Close
+
+$btn-close-width:            1em !default;
+$btn-close-height:           $btn-close-width !default;
+$btn-close-padding-x:        .25em !default;
+$btn-close-padding-y:        $btn-close-padding-x !default;
+$btn-close-color:            $black !default;
+$btn-close-bg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>") !default;
+$btn-close-focus-shadow:     $input-btn-focus-box-shadow !default;
+$btn-close-opacity:          null;
+$btn-close-hover-opacity:    .75 !default;
+$btn-close-focus-opacity:    1 !default;
+$btn-close-disabled-opacity: .25 !default;
+$btn-close-white-filter:     invert(1) grayscale(100%) brightness(200%) !default;
+
+
+//Pagination
+
+// Pagination
+
+$pagination-padding-y:              .5rem !default;
+$pagination-padding-x:              .75rem !default;
+$pagination-padding-y-sm:           .25rem !default;
+$pagination-padding-x-sm:           .5rem !default;
+$pagination-padding-y-lg:           .75rem !default;
+$pagination-padding-x-lg:           1.5rem !default;
+$pagination-line-height:            1.25 !default;
+
+$pagination-color:                  $black !default;
+$pagination-bg:                     $white !default;
+$pagination-border-width:           0 !default;
+$pagination-border-color:           $white !default;
+
+$pagination-focus-box-shadow:       0 !default;
+$pagination-focus-outline:          0 !default;
+
+$pagination-hover-color:            $black !default;
+$pagination-hover-bg:               $white !default;
+$pagination-hover-border-color:     $white !default;
+
+$pagination-active-color:           $black !default;
+$pagination-active-bg:              $white !default;
+$pagination-active-border-color:    $white !default;
+
+$pagination-disabled-color:         $black !default;
+$pagination-disabled-bg:            $white !default;
+$pagination-disabled-border-color:  $black !default;
+
+
+// Forms
+$form-group-margin-bottom:              1.25rem;
+$label-margin-bottom: .25rem;

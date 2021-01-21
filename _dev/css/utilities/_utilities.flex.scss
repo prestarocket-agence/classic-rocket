@@ -28,10 +28,10 @@ $orders: 0, 1;
   }
 }
 
-$orders-mobile: 2;
+$orders-mobile: 1, 2;
 @include media-breakpoint-mobile () {
   @each $order-mobile in $orders-mobile {
-    .u-order-mobile-#{$order-mobile} {
+    .u-order-#{$order-mobile}\@mobile {
       order: $order-mobile;
     }
   }
@@ -49,3 +49,7 @@ $orders-mobile: 2;
 //    }
 //  }
 //}
+
+.u-flex-1 {
+  flex: 1;
+}

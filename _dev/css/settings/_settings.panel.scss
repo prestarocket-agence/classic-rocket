@@ -1,0 +1,37 @@
+// *** PANEL BASE ***
+
+//Spacing
+$panel-padding-x: $spacer*1.5;
+$panel-padding-y: $panel-padding-x;
+$panel-margin-bottom: $spacer;
+
+//Colors
+$panel-bg: $white;
+
+
+// *** PANEL MODIFIERS ***
+
+//Small size
+$panel-sm-padding-x: $spacer;
+$panel-sm-padding-y:  $spacer;
+
+//Long size
+$panel-lg-padding-x: $spacer*1.5;
+$panel-lg-padding-y:  $spacer*2;
+
+//Restricted width
+$panel-max-width: 600px;
+
+//Bordered
+$panel-border-width: 1px;
+$panel-border-color: $gray-light;
+$panel-border-radius: $border-radius;
+
+
+// *** PANEL HEADER ***
+
+$panel-header-padding-bottom: $spacer;
+$panel-header-margin-bottom: $spacer*2;
+
+$panel-header-border-width: $panel-border-width;
+$panel-header-border-color: $panel-border-color;

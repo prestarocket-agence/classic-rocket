@@ -1,0 +1,10 @@
+.c-coverpdt{
+  border: 1px solid $border-color;
+  padding: 2.5*$spacer;
+  background-color: $white;
+  border-radius: $spacer;
+
+  .c-snap__item--fullw.glider-slide{
+    flex: 1;
+  }
+}

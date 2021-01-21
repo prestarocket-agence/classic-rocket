@@ -1,17 +1,20 @@
 .c-price {
   &--current {
-    font-weight: 700;
-    color: $black;
+    font-size: $price-current-font-size;
+    font-weight: $price-current-font-weight;
+    color: $price-current-color;
   }
 
   &--discount {
-    font-weight: 700;
-    color: $red;
+    font-size: $price-discount-font-size;
+    font-weight: $price-discount-font-weight;
+    color: $price-discount-color;
   }
 
   &--old {
-    font-weight: 400;
-    color: $dark;
+    font-size: $price-old-font-size;
+    font-weight: $price-old-font-weight;
+    color: $price-old-color;
     text-decoration: line-through;
   }
 }

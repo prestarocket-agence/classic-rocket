@@ -34,8 +34,8 @@
                             {if $node.children}
                                 <div class="/js navbar-toggler" data-toggle="collapse"
                                      data-target="#exCollapsingNavbar{$node.id}">
-                                    <i class="material-icons add">&#xE145;</i>
-                                    <i class="material-icons remove">&#xE15B;</i>
+                                    {include file="_partials/icon.tpl" icon="chevron-down" class="add"}
+                                    {include file="_partials/icon.tpl" icon="chevron-up" class="remove"}
                                 </div>
                                 <div class="collapse float-left clearfix w-100" id="exCollapsingNavbar{$node.id}">
                                     {categories nodes=$node.children depth=$depth+1}
@@ -45,7 +45,9 @@
                             <a class="category-sub-link" href="{$node.link}">{$node.name}</a>
                             {if $node.children}
                                 <i class="material-icons icon-collapse cursor-pointer" data-toggle="collapse"
-                                   data-target="#exCollapsingNavbar{$node.id}">&#xE313;</i>
+                                   data-target="#exCollapsingNavbar{$node.id}">
+                                    {include file="_partials/icon.tpl" icon="chevron-down"}
+                                </i>
                                 <div class="collapse float-left clearfix w-100" id="exCollapsingNavbar{$node.id}">
                                     {categories nodes=$node.children depth=$depth+1}
                                 </div>

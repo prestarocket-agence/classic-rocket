@@ -1,3 +1,57 @@
-.u-shadow--block{
-  
+/* stylelint-disable */
+
+$spaces: 0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80;
+
+@each $space in $spaces {
+  $step: $space / 8;
+
+  [class].u-mt-#{$step} {
+    margin-top: $spacer*($space/16);
+  }
+
+  [class].u-mb-#{$step} {
+    margin-bottom: $spacer*($space/16);
+  }
+
+  [class].u-ml-#{$step} {
+    margin-left: $spacer*($space/16);
+  }
+
+  [class].u-mr-#{$step} {
+    margin-right: $spacer*($space/16);
+  }
+
+  [class].u-mx-auto {
+    margin: auto;
+  }
+
+  [class].u-mt-auto {
+    margin-top: auto;
+  }
+
+  //[class].u-mx-#{$step} {
+  //  margin-left: $spacer*($space/16);
+  //  margin-right: $spacer*($space/16);
+  //}
+  //
+  //[class].u-my-#{$step} {
+  //  margin-top: $spacer*($space/16);
+  //  margin-bottom: $spacer*($space/16);
+  //}
+}
+
+/* stylelint-enable */
+
+
+$spaces: 0;
+
+@each $space in $spaces {
+  $step: $space / 8;
+
+  @include media-breakpoint-mobile {
+    [class].u-px-sm-#{$step} {
+      padding-left: $spacer*(-$space/16);
+      padding-right: $spacer*(-$space/16);
+    }
+  }
 }

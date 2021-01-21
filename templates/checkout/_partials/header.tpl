@@ -27,11 +27,11 @@
         <div class="o-wrapper">
             <div class="o-layout o-layout--center-y">
                 <div class="u-d-flex u-align-items-center">
-                    {include file="_partials/icon.tpl" icon="shield-check" class="c-icon--24 u-mr-2"}
+                    {include file="_partials/icon.tpl" icon="shield-check" class="c-icon--24 c-icon--center-y u-mr-2"}
                     <p class="u-mb-0">{l s='Espace sécurisé' d='Shop.Theme.Global'}</p>
                 </div>
                 <a href="{$urls.base_url}">
-                    <img class="u-img-fluid" src="{if isset($modules.prestarockettheme.logo_svg)}{$modules.prestarockettheme.logo_svg}{else}{$shop.logo}{/if}" alt="{$shop.name}">
+                    <img class="u-img-fluid" src="{if isset($modules.prestarockettheme.logo)}{$modules.prestarockettheme.logo.url}{else}{$shop.logo}{/if}" alt="{$shop.name}"{if isset($modules.prestarockettheme.logo)} width="{$modules.prestarockettheme.logo.width}" height="{$modules.prestarockettheme.logo.height}"{/if}>
                 </a>
                 <div>
                     {widget name="ps_contactinfo" hook="displayNav"}

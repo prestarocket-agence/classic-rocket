@@ -1,0 +1,32 @@
+// Megamenu
+
+.c-mainnav__list{
+  display: flex;
+  position: relative;
+}
+
+
+//submenu
+.c-mainnav__sub{
+@include media-breakpoint-desktop(){
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  padding: $spacer;
+  .is-menu-show &{
+    display: block;
+  }
+}
+
+}
+
+.c-mainnav__sublist{
+  @include media-breakpoint-desktop() {
+    display: flex;
+    flex-wrap: wrap;
+    //debug
+    background-color: #efefef;
+  }
+  }

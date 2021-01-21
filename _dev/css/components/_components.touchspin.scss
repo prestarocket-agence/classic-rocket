@@ -1,0 +1,69 @@
+.c-touchspin__group {
+  width: $touchspin-width;
+  padding: $touchspin-padding-y $touchspin-padding-x;
+  color: $touchspin-color;
+  background: $touchspin-bg;
+  border: $touchspin-border-color solid $touchspin-border-width;
+  border-radius: $touchspin-radius;
+
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
+.c-touchspin__input {
+  width: $touchspin-input-width;
+  height: $touchspin-input-height;
+  padding: $touchspin-input-padding-y $touchspin-input-padding-x;
+  font-size: $touchspin-input-font-size;
+  font-weight: $touchspin-input-font-weight;
+  color: $touchspin-input-color;
+  background: $touchspin-input-bg;
+  border: $touchspin-input-border-color solid $touchspin-input-border-width;
+  border-radius: $touchspin-input-radius;
+  text-align: center;
+  order: $touchspin-input-order;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Chrome, Safari, Edge, Opera */
+  }
+
+  & {
+    -moz-appearance: textfield;  /* Firefox */
+  }
+}
+
+
+.c-touchspin__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $touchspin-btn-padding-y $touchspin-btn-padding-x;
+  width: $touchspin-btn-width;
+  height: $touchspin-btn-height;
+  font-size: $touchspin-btn-font-size;
+  font-weight: $touchspin-btn-font-weight;
+  color: $touchspin-btn-color;
+  background: $touchspin-btn-bg;
+  border: $touchspin-btn-border-color solid $touchspin-btn-border-width;
+  border-radius: $touchspin-btn-radius;
+
+  &-minus {
+    background: $touchspin-minus-bg;
+    order: $touchspin-minus-order;
+    &:disabled,
+    &.c-touchspin__btn--disabled{
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  &-plus {
+    background: $touchspin-plus-bg;
+    order: $touchspin-plus-order;
+  }
+}

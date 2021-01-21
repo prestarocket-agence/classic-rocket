@@ -18,6 +18,6 @@
  *}
 
 <a class="c-account-sidebar__link {if $urls.current_url == {$link->getModuleLink('psgdpr', 'gdpr')}} is-active{/if}" id="psgdpr-link" href="{$front_controller}">
-    {include file="_partials/icon.tpl" icon="lock" class="c-icon--16 u-mr-2"}
+    {include file="_partials/icon.tpl" icon="lock" class="c-icon--16 c-icon--center-y u-mr-2"}
     {l s='GDPR - Personal data' mod='psgdpr'}
 </a>

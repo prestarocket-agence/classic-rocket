@@ -44,7 +44,7 @@
 
 {else}
     {assign var=uniqId value=10|mt_rand:100000}
-    <div class="form-group{if $field.type === 'password'} c-form-group__pwd{/if}">
+    <div class="form-group c-form-group__{$field.name}">
         {if $field.type == 'checkbox' || $field.type == 'radio-buttons'}
             {if $field.type == 'radio-buttons'}
                 <div class="c-form__label">{$field.label}</div>
@@ -207,7 +207,7 @@
                         type="{if $field.name === "phone" || $field.name === "phone_mobile"}tel{else}{$field.type}{/if}"
                         value="{$field.value}"
                         id="f-{$field.name}_{$uniqId}"
-                        {if isset($field.availableValues.placeholder)}placeholder="{$field.availableValues.placeholder}"{/if}
+                        placeholder="{if isset($field.availableValues.placeholder)}{$field.availableValues.placeholder}{else}{$field.label}{/if}"
                         {if $field.maxLength}maxlength="{$field.maxLength}"{/if}
                         {if $field.required}required{/if}
                         {if isset($autocomplete[$field.name])} autocomplete="{$autocomplete[$field.name]}"{/if}

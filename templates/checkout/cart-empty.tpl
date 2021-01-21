@@ -29,8 +29,9 @@
 {/block}
 
 {block name='continue_shopping' append}
-  <a class="label" href="{$urls.pages.index}">
-    <i class="material-icons">chevron_left</i>{l s='Continue shopping' d='Shop.Theme.Actions'}
+  <a class="btn btn-link u-mb-2 u-d-flex u-align-items-center" href="{$urls.pages.index}">
+    {include file="_partials/icon.tpl" icon="chevron-left" class="c-icon--center-y u-mr-1"}
+    {l s='Continue shopping' d='Shop.Theme.Actions'}
   </a>
 {/block}
 

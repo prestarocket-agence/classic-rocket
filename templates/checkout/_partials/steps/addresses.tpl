@@ -67,15 +67,10 @@
                     interactive = !$show_delivery_address_form and !$show_invoice_address_form
                     }
                     <a class="u-d-flex u-justify-content-center" href="{$new_address_delivery_url}">
-{*                        <div class="btn btn-primary c-btn-add u-mx-auto">*}
-{*                            {include file="_partials/icon.tpl" icon="plus" class="c-icon--28"}*}
-{*                        </div>*}
-{*                        {l s='Ajouter une nouvelle adresse' d='Shop.Theme.Actions'}*}
                         <div class="btn btn-sm btn-primary">
                             {include file="_partials/icon.tpl" icon="plus" class=""}
                             {l s='Ajouter une nouvelle adresse' d='Shop.Theme.Actions'}
                         </div>
-
                     </a>
 
                 </div>

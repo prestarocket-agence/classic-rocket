@@ -32,7 +32,7 @@
     {block name='address_form_url'}
     <form
       method="POST"
-      class="/js needs-validation"
+      class="{if isset($formFields.id_state)}c-form--withstates {/if}/js needs-validation"
       action="{url entity='address' params=['id_address' => $id_address]}"
       data-id-address="{$id_address}"
       data-refresh-url="{url entity='address' params=['ajax' => 1, 'action' => 'addressForm']}"
@@ -46,9 +46,39 @@
           {block name='form_fields'}
             {foreach from=$formFields item="field"}
               {block name='form_field'}
-                {form_field field=$field}
+                  {if $field.name !== "alias"}
+                      {* input firstname & lastname in a row*}
+                      {if isset($modules.rocketfunnel.rocket_funnel_enable) && $field.name === "firstname" && isset($formFields['lastname'])}
+                          <div class="c-form__inputrow">
+                      {/if}
+
+                      {* we close a div before phone for row input city cp and country*}
+
+                      {if isset($modules.rocketfunnel.rocket_funnel_enable) && $field.name === "phone" && isset($formFields['address2'])}
+                          </div>
+                      {/if}
+
+                      {form_field field=$field}
+                      {* we open a div after address2 for row input city cp and country*}
+                      {if isset($modules.rocketfunnel.rocket_funnel_enable) && $field.name === "address2"}
+                      <div class="c-form__inputrow">
+                          {/if}
+
+
+                      {if isset($modules.rocketfunnel.rocket_funnel_enable) && $field.name === "lastname" && isset($formFields['firstname'])}
+                          </div>
+                      {/if}
+
+                  {/if}
               {/block}
             {/foreach}
+              {if $field.name eq "alias" and $customer.is_guest}
+                   {*we don't ask for alias here if customer is not registered*}
+              {else}
+                  {if isset($formFields['alias'])}
+                      {form_field field=$formFields['alias']}
+                  {/if}
+              {/if}
           {/block}
         </section>
       {/block}

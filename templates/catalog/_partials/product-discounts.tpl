@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {if $product.quantity_discounts}
-<section class="product-discounts">
+<section class="/js product-discounts">
     <p class="h4 product-discounts-title">{l s='Volume discounts' d='Shop.Theme.Catalog'}</p>
     {block name='product_discount_table'}
       <table class="table-product-discounts table table-bordered text-center">

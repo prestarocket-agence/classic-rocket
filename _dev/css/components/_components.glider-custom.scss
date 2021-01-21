@@ -1,16 +1,19 @@
 .c-pdt-mini.glider-slide {
   flex: auto;
 }
-
-.glider-dot {
-  border: 2px solid $black;
-  background: none;
-
-  &.active {
-    background-color: $black;
-  }
-
-  &:hover {
-    background-color: $black;
-  }
+.is-dots-hidden,
+.is-arrow-hidden{
+  display: none;
 }
+//.glider-dot {
+//  border: 2px solid $black;
+//  background: none;
+//
+//  &.active {
+//    background-color: $black;
+//  }
+//
+//  &:hover {
+//    background-color: $black;
+//  }
+//}

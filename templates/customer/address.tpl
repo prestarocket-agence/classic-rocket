@@ -34,7 +34,7 @@
 {/block}
 
 {block name='page_content'}
-  <div class="address-form">
+  <div class="address-form c-form__mw-630">
     {render template="customer/_partials/address-form.tpl" ui=$address_form}
   </div>
 {/block}

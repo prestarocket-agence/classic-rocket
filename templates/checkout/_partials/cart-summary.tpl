@@ -28,9 +28,9 @@
         <p class="u-h4 u-mb-0">{l s='Récapitulatif' d='Shop.Theme.Global'}</p>
     </div>
     <div class="">
-        {*        {block name='hook_checkout_summary_top'}*}
-        {*            {hook h='displayCheckoutSummaryTop'}*}
-        {*        {/block}*}
+        {block name='hook_checkout_summary_top'}
+            {hook h='displayCheckoutSummaryTop'}
+        {/block}
 
         {block name='cart_summary_products'}
             <div class="o-layout u-mb-3 /js cart-summary-products">
@@ -40,15 +40,15 @@
                     <span class="u-txt-sm">{l s='Afficher les détails' d='Shop.Theme.Actions'}</span>
                     {*                    {include file="_partials/icon.tpl" icon="chevron-bottom" class="c-icon--16"}*}
                 </a>
-                {*                {block name='cart_summary_product_list'}*}
-                {*                    <div class="collapse" id="cart-summary-product-list">*}
-                {*                        <ul class="media-list">*}
-                {*                            {foreach from=$cart.products item=product}*}
-                {*                                <li class="media media-list__item">{include file='checkout/_partials/cart-summary-product-line.tpl' product=$product}</li>*}
-                {*                            {/foreach}*}
-                {*                        </ul>*}
-                {*                    </div>*}
-                {*                {/block}*}
+                                {block name='cart_summary_product_list'}
+                                    <div class="collapse" id="cart-summary-product-list">
+                                        <ul class="media-list">
+                                            {foreach from=$cart.products item=product}
+                                                <li class="media media-list__item">{include file='checkout/_partials/cart-summary-product-line.tpl' product=$product}</li>
+                                            {/foreach}
+                                        </ul>
+                                    </div>
+                                {/block}
             </div>
         {/block}
 
@@ -56,9 +56,9 @@
             {include file='checkout/_partials/cart-summary-subtotals.tpl' cart=$cart}
         {/block}
 
-        {*        {block name='cart_summary_voucher'}*}
-        {*            {include file='checkout/_partials/cart-voucher.tpl'}*}
-        {*        {/block}*}
+                {block name='cart_summary_voucher'}
+                    {include file='checkout/_partials/cart-voucher.tpl'}
+                {/block}
 
         {block name='cart_summary_totals'}
             {include file='checkout/_partials/cart-summary-totals.tpl' cart=$cart}
@@ -67,3 +67,6 @@
 
 
 </section>
+{block name='hook_checkout_summary_bottom'}
+    {hook h='displayCheckoutSummaryBottom' cart=$cart}
+{/block}

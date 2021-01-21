@@ -16,9 +16,15 @@ let errorMsg = '';
 function createSpin()
 {
   $.each($(spinnerSelector), function (index, spinner) {
-     $(spinner).TouchSpin({
-         buttondown_class: 'btn js-touchspin',
-         buttonup_class: 'btn js-touchspin',
+      let $spinner = $(spinner),
+          extraclass = '';
+      if($spinner.val() <= $spinner.attr('min') ){
+          extraclass = ' c-touchspin__btn--disabled'
+      }
+
+      $spinner.TouchSpin({
+         buttondown_class: 'c-touchspin__btn c-touchspin__btn-minus /js js-touchspin'+extraclass,
+         buttonup_class: 'c-touchspin__btn c-touchspin__btn-plus /js js-touchspin',
          min: parseInt($(spinner).attr('min'), 10),
          max: 1000000
     });
@@ -178,7 +184,18 @@ $(document).ready(() => {
   );
 
   $body.on('touchspin.on.startdownspin', spinnerSelector, handleCartAction);
-  $body.on('touchspin.on.startupspin', spinnerSelector, handleCartAction);
+$body.on('touchspin.on.startupspin', spinnerSelector, handleCartAction);
+$body.on('touchspin.on.stopspin', spinnerSelector, function(e){
+    let $input = $(e.currentTarget),
+        $parentInput = $($input).parent();
+  console.log($input.attr('min'));
+    if($input.val() <= $input.attr('min') ){
+        $('.c-touchspin__btn-minus',$parentInput).prop('disabled', true);
+    }else{
+        $('.c-touchspin__btn-minus',$parentInput).prop('disabled', false).removeClass('c-touchspin__btn--disabled');
+
+    }
+});
 
   function sendUpdateQuantityInCartRequest(updateQuantityInCartUrl, requestData, $target) {
     abortPreviousRequests();

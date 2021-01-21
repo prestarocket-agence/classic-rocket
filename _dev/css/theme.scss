@@ -7,18 +7,26 @@
 /*
 /* SETTINGS */
 @import "node_modules/bootstrap/scss/functions";
-@import "../../../classic-rocket/_dev/css/../../../classic-rocket/_dev/css/settings/settings.colors";
 
-@import "../../../classic-rocket/_dev/css/../../../classic-rocket/_dev/css/settings/settings.bootstrap";
+@import "../../../classic-rocket/_dev/css/settings/settings.colors";
+@import "../../../classic-rocket/_dev/css/settings/settings.bootstrap";
+
 @import "node_modules/bootstrap/scss/variables";
 
-
+@import "../../../classic-rocket/_dev/css/settings/settings.alert";
+@import "../../../classic-rocket/_dev/css/settings/settings.collapse";
 @import "../../../classic-rocket/_dev/css/settings/settings.fonts";
+@import "../../../classic-rocket/_dev/css/settings/settings.header";
+@import "../../../classic-rocket/_dev/css/settings/settings.input-color";
 @import "../../../classic-rocket/_dev/css/settings/settings.listing";
+@import "../../../classic-rocket/_dev/css/settings/settings.pagination";
+@import "../../../classic-rocket/_dev/css/settings/settings.panel";
 @import "../../../classic-rocket/_dev/css/settings/settings.prices";
 @import "../../../classic-rocket/_dev/css/settings/settings.product-mini";
+@import "../../../classic-rocket/_dev/css/settings/settings.product";
 @import "../../../classic-rocket/_dev/css/settings/settings.search";
 @import "../../../classic-rocket/_dev/css/settings/settings.tags";
+@import "../../../classic-rocket/_dev/css/settings/settings.touchspin";
 @import "./settings/settings.project";
 
 
@@ -71,50 +79,68 @@ $theme-colors: (
 );
 @import "node_modules/bootstrap/scss/alert";
 $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "info", "warning", "danger", "light", "dark");
-
+@import "../../../classic-rocket/_dev/css/components/components.add-cart-list";
 @import "../../../classic-rocket/_dev/css/components/components.address";
+@import "../../../classic-rocket/_dev/css/components/components.alert";
 @import "../../../classic-rocket/_dev/css/components/components.banner";
 @import "../../../classic-rocket/_dev/css/components/components.breadcrumb";
 @import "../../../classic-rocket/_dev/css/components/components.button";
+@import "../../../classic-rocket/_dev/css/components/components.button-close";
 @import "../../../classic-rocket/_dev/css/components/components.card";
 @import "../../../classic-rocket/_dev/css/components/components.cart";
 @import "../../../classic-rocket/_dev/css/components/components.carousel";
 @import "../../../classic-rocket/_dev/css/components/components.category";
 @import "../../../classic-rocket/_dev/css/components/components.checkout";
+@import "../../../classic-rocket/_dev/css/components/components.collapse";
+@import "../../../classic-rocket/_dev/css/components/components.coverpdt";
 @import "../../../classic-rocket/_dev/css/components/components.custom";
 @import "../../../classic-rocket/_dev/css/components/components.customer";
+@import "node_modules/bootstrap/scss/dropdown";
 @import "../../../classic-rocket/_dev/css/components/components.filter";
 @import "../../../classic-rocket/_dev/css/components/components.footer";
 @import "../../../classic-rocket/_dev/css/components/components.form";
+@import "../../../classic-rocket/_dev/css/components/components.funnel";
 @import "../../../classic-rocket/_dev/css/components/components.glider";
 @import "../../../classic-rocket/_dev/css/components/components.glider-custom";
 @import "../../../classic-rocket/_dev/css/components/components.header";
 @import "../../../classic-rocket/_dev/css/components/components.history";
 @import "../../../classic-rocket/_dev/css/components/components.icon";
 @import "../../../classic-rocket/_dev/css/components/components.inputadd";
+@import "../../../classic-rocket/_dev/css/components/components.input-color";
 @import "../../../classic-rocket/_dev/css/components/components.listing";
 @import "node_modules/bootstrap/scss/list-group";
 @import "../../../classic-rocket/_dev/css/components/components.media";
 @import "node_modules/bootstrap/scss/modal";
+@import "node_modules/bootstrap/scss/nav";
+@import "../../../classic-rocket/_dev/css/components/components.nav";
+
 @import "../../../classic-rocket/_dev/css/components/components.offcanvas";
 @import "../../../classic-rocket/_dev/css/components/components.pagination";
 @import "../../../classic-rocket/_dev/css/components/components.panel";
+@import "node_modules/bootstrap/scss/popover";
 @import "../../../classic-rocket/_dev/css/components/components.prices";
+@import "../../../classic-rocket/_dev/css/components/components.product";
 @import "../../../classic-rocket/_dev/css/components/components.product-mini";
 @import "../../../classic-rocket/_dev/css/components/components.reassurance";
 @import "../../../classic-rocket/_dev/css/components/components.search";
 @import "../../../classic-rocket/_dev/css/components/components.select";
 @import "../../../classic-rocket/_dev/css/components/components.separator";
+@import "../../../classic-rocket/_dev/css/components/components.snap";
+@import "node_modules/bootstrap/scss/spinners";
+
 @import "../../../classic-rocket/_dev/css/components/components.tags";
+@import "../../../classic-rocket/_dev/css/components/components.touchspin";
+@import "node_modules/bootstrap/scss/tooltip";
 @import "node_modules/bootstrap/scss/transitions";
 
 
-@import "../../../classic-rocket/_dev/css/components/components.project";
+@import "./components/components.project";
 
 
 /*
 /*
 /* SCOPES */
+@import "../../../classic-rocket/_dev/css/scopes/scopes.cms";
 
 /*
 /*

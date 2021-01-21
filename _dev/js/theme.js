@@ -9,6 +9,8 @@ import './customer';
 import './listing';
 import './product';
 import './cart';
+import './listing-add-to-cart';
+
 
 import Form from './components/form';
 import TopMenu from './components/top-menu';
@@ -42,6 +44,7 @@ $(document).ready(() => {
 
 
 //display input file content in custom file input BS
+// @todo still need ?
   $('.custom-file-input').on('change',function(){
       let fileName = $(this).val().split('\\').pop();
       $(this).next('.custom-file-label').addClass("selected").html(fileName);

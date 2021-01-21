@@ -1,0 +1,53 @@
+.c-input-color__group {
+  position: relative;
+  width: $input-color-width;
+  height: $input-color-height;
+  margin: $input-color-margin-y $input-color-margin-x;
+}
+
+.c-input-color__btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $input-color-width;
+  height: $input-color-height;
+  border-radius: $input-color-radius;
+  opacity: 0;
+}
+
+.c-input-color__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $input-color-width;
+  height: $input-color-height;
+  border: $input-color-border-color solid $input-color-border-width;
+  border-radius: $input-color-radius;
+  cursor: pointer;
+}
+
+.c-input-color__mark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.c-input-color__btn:checked ~ .c-input-color__mark:after {
+  display: block;
+  width: $input-color-selected-width;
+  height: $input-color-selected-height;
+  border-radius: $input-color-selected-radius;
+  border: $input-color-selected-border-color solid $input-color-selected-border-width;
+}
+
+.c-input-color__mark:hover:after {
+  display: block;
+  width: $input-color-hover-width;
+  height: $input-color-hover-height;
+  border-radius: $input-color-hover-radius;
+  border: $input-color-hover-border-color solid $input-color-hover-border-width;
+  opacity: $input-color-hover-opacity;
+}

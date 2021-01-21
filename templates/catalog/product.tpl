@@ -30,7 +30,12 @@
 
 
 {block name='content'}
-    <section id="main" class="/js product-container">
+    {if !isset($modules.prestarockettheme.product.product_layout)}
+        {assign var="product_layout" value="collapse"}
+    {else}
+        {assign var="product_layout" value=$modules.prestarockettheme.product.product_layout}
+    {/if}
+    <section id="main" class="s-product-layout-{$product_layout} /js product-container">
         <div class="row">
 
             <div class="col-lg-5 offset-lg-1 u-order-1">
@@ -51,7 +56,7 @@
                         {/block}
                     {/if}
 
-                    <div class="product-actions">
+                    <div class="/js product-actions">
                         {block name='product_buy'}
                             <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
                                 <input type="hidden" name="token" value="{$static_token}">
@@ -64,29 +69,17 @@
                                     {include file='catalog/_partials/product-variants.tpl'}
                                 {/block}
 
-                                {block name='product_pack'}
-                                    {if $packItems}
-                                        <section class="product-pack mb-4">
-                                            <p class="h4">{l s='This pack contains' d='Shop.Theme.Catalog'}</p>
-                                            {foreach from=$packItems item="product_pack"}
-                                                {block name='product_miniature'}
-                                                    {include file='catalog/_partials/miniatures/pack-product.tpl' product=$product_pack}
-                                                {/block}
-                                            {/foreach}
-                                        </section>
-                                    {/if}
-                                {/block}
 
-{*                                {block name='product_discounts'}*}
-{*                                    {include file='catalog/_partials/product-discounts.tpl'}*}
-{*                                {/block}*}
+                                {block name='product_discounts'}
+                                    {include file='catalog/_partials/product-discounts.tpl'}
+                                {/block}
 
                                 {block name='product_add_to_cart'}
                                     {include file='catalog/_partials/product-add-to-cart.tpl'}
                                 {/block}
 
                                 {block name='product_description_short'}
-                                    <div id="product-description-short-{$product.id}">{$product.description_short nofilter}</div>
+                                    <div id="product-description-short-{$product.id}" class="s-cms">{$product.description_short nofilter}</div>
                                 {/block}
 
                                 {block name='product_additional_info'}
@@ -104,25 +97,29 @@
 
                     </div>
 
+                    {block name='block_after_product_action'}
+                    {/block}
+
                     {block name='hook_display_reassurance'}
                         {hook h='displayReassurance'}
                     {/block}
 
+
+                </div>
+                {if $product_layout == "collapse"}
                     {block name='product_tabs'}
                         {include file='catalog/_partials/product-tabs.tpl'}
                     {/block}
-
-
-                </div>
+                {/if}
             </div>
 
             <div class="col-lg-6 u-order-0">
                 {block name='page_content_container'}
                     <section class="page-content--product u-sticky" id="content">
                         {block name='page_content'}
-                            {*              {block name='product_flags'}*}
-                            {*                  {include file='catalog/_partials/product-flags.tpl'}*}
-                            {*              {/block}*}
+                          {block name='product_flags'}
+                              {include file='catalog/_partials/product-flags.tpl'}
+                          {/block}
 
                             {block name='product_cover_thumbnails'}
                                 {include file='catalog/_partials/product-cover-thumbnails.tpl'}
@@ -133,18 +130,20 @@
                 {/block}
             </div>
         </div>
+
+        {block name='product_pack'}
+            {if $packItems}
+                {include file='catalog/_partials/product-pack.tpl'}
+            {/if}
+        {/block}
+        {if $product_layout != "collapse"}
+            {block name='product_tabs'}
+                {include file='catalog/_partials/product-tabs.tpl'}
+            {/block}
+        {/if}
         {block name='product_accessories'}
             {if $accessories}
-                <section class="product-accessories mt-3">
-                    <p class="products-section-title">{l s='You might also like' d='Shop.Theme.Catalog'}</p>
-                    <div class="products">
-                        {foreach from=$accessories item="product_accessory"}
-                            {block name='product_miniature'}
-                                {include file='catalog/_partials/miniatures/product.tpl' product=$product_accessory}
-                            {/block}
-                        {/foreach}
-                    </div>
-                </section>
+                {include file='catalog/_partials/product-accessories.tpl'}
             {/if}
         {/block}
 

@@ -34,7 +34,14 @@
         {block name='form_fields'}
           {foreach from=$formFields item="field"}
             {block name='form_field'}
+          {* input firstname & lastname in a row*}
+          {if isset($modules.rocketfunnel.rocket_funnel_enable) && $field.name === "firstname" && isset($formFields['lastname'])}
+          <div class="c-form__rowname">
+              {/if}
               {form_field field=$field}
+                {if isset($modules.rocketfunnel.rocket_funnel_enable) && $field.name === "lastname" && isset($formFields['firstname'])}
+                    </div>
+                {/if}
             {/block}
           {/foreach}
           {$hook_create_account_form nofilter}

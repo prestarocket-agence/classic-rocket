@@ -11,6 +11,36 @@
   height: 100%;
   background-color: $pm-card-bg-color;
   border-radius: $pm-card-radius;
+  border: $pm-card-border;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  @if $enable-pm-hover-shadow {
+      &:after {
+        content:"";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: $pm-card-radius;
+        box-shadow: $box-shadow;
+        opacity: 0;
+        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        .is-hover &{
+          opacity: 1;
+          z-index: 0;
+
+        }
+
+      }
+    &:hover{
+      //transform: scale(1.02, 1.02);
+
+
+    }
+
+
+  }
 
 }
 
@@ -57,7 +87,11 @@
 }
 
 .c-pdt-mini__img {
-  border-radius: $pm-card-img-radius;
+  border-top-left-radius: $pm-card-img-top-radius;
+  border-top-right-radius: $pm-card-img-top-radius;
+  border-top-left-radius: $pm-card-img-bottom-radius;
+  border-top-right-radius: $pm-card-img-bottom-radius;
+
 }
 
 .c-pdt-mini__body {

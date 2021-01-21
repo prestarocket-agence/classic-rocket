@@ -47,8 +47,8 @@
                 </div>
 
                 {block name='continue_shopping'}
-                    <a class="btn btn-link u-mb-2" href="{$urls.pages.index}">
-                        {include file="_partials/icon.tpl" icon="chevron-left"}
+                    <a class="btn btn-link u-mb-2 u-d-flex u-align-items-center" href="{$urls.pages.index}">
+                        {include file="_partials/icon.tpl" icon="chevron-left" class="c-icon--center-y u-mr-1"}
                         {l s='Continue shopping' d='Shop.Theme.Actions'}
                     </a>
                 {/block}
@@ -90,6 +90,10 @@
 
         </div>
     </section>
+
+    {block name='cart_footer'}
+    {/block}
+
     {block name='cart_summary_mobile'}
         <div class="c-cart-summary__mobile">
             <div class="o-layout u-font-weight-bold">

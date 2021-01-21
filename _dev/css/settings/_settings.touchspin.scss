@@ -1,0 +1,72 @@
+// ***** CONTAINER *****
+
+//Size
+$touchspin-width: null;
+$touchspin-padding-x: null;
+$touchspin-padding-y: null;
+
+//Colors
+$touchspin-color: null;
+$touchspin-bg: null;
+
+//Border
+$touchspin-border-color: $gray-light;
+$touchspin-border-width: 1px;
+$touchspin-radius: 4px;
+
+
+
+// ***** INPUT ***** (quantity)
+
+//Size
+$touchspin-input-width: $font-size-base*2.5;
+$touchspin-input-height: null;
+$touchspin-input-padding-x: 0;
+$touchspin-input-padding-y: 0;
+
+//Text
+$touchspin-input-font-size: $font-size-base;
+$touchspin-input-font-weight: $font-weight-normal;
+
+//Colors
+$touchspin-input-color: null;
+$touchspin-input-bg: null;
+
+//Border
+$touchspin-input-border-color: null;
+$touchspin-input-border-width: 0;
+$touchspin-input-radius: null;
+
+//Orders
+$touchspin-input-order: null;
+
+
+
+// ***** BUTTONS ***** (minus & plus)
+
+//Sizes
+$touchspin-btn-width: 24px;
+$touchspin-btn-height: 24px;
+$touchspin-btn-padding-x: null;
+$touchspin-btn-padding-y: null;
+
+//Text
+$touchspin-btn-font-size: $font-size-base;
+$touchspin-btn-font-weight: $font-weight-normal;
+
+//Colors
+$touchspin-btn-color: $black;
+$touchspin-btn-bg: none;
+
+//Border
+$touchspin-btn-border-color: null;
+$touchspin-btn-border-width: 0;
+$touchspin-btn-radius: null;
+
+//Minus
+$touchspin-minus-bg: null;
+$touchspin-minus-order: null;
+
+//Plus
+$touchspin-plus-bg: null;
+$touchspin-plus-order: null;

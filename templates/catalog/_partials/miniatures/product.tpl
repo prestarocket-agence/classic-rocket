@@ -27,6 +27,7 @@
              data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}">
         {block name='after_opening_product_mini_tag'}{/block}
         <div class="c-pdt-mini__card u-p-rel">
+            {block name='after_opening_product_mini_card'}{/block}
             <div class="c-pdt-mini__body">
                 {block name='product_body'}
                     <div>
@@ -73,6 +74,17 @@
                         {/if}
                     {/block}
                     {block name='product_body_footer'}
+                        {*
+                        add data-show-modal to btn if you want to show modal add to cart
+                        <form class="c-addcartlist" action="{$urls.pages.cart}" method="post" data-form-id-product="{$product.id}">*}
+                            {*<input type="hidden" value="{$product.id_product}" name="id_product">*}
+                            {*<input type="text" class="input-group form-control" name="qty" value="{if $product.minimal_quantity < 1}1{else}{$product.minimal_quantity}{/if}">*}
+                            {*<button data-button-action="add-to-cart-list" data-show-modal {if !$product.add_to_cart_url}disabled{/if}{if $product.show_quantities} data-stock="{$product.quantity}"{/if} data-allow-oosp="{$product.allow_oosp}" data-min="{$product.minimal_quantity}" data-id_product="{$product.id}" class="btn btn-primary c-addcartlist__btn /js js-btn-addcartlist">*}
+                                {*<span class="spinner-border spinner-border-sm c-addcartlist__loading u-mr-1" role="status">*}
+                                    {*<span class="sr-only">{l s='Loading...' d='Shop.Theme.Global'}</span>*}
+                                {*</span>{l s='Add to cart' d='Shop.Theme.Actions'}*}
+                            {*</button>*}
+                        {*</form>*}
                     {/block}
                 {/block}
             </div>
@@ -105,7 +117,7 @@
 
                 {block name='quick_view'}
                     <div class="c-pdt-mini__qv">
-                        <button class="btn btn-primary btn-quick-view c-btn-circle c-btn-circle--lg  quick-view"
+                        <button class="btn btn-primary btn-quick-view c-btn-circle c-btn-circle--lg /js quick-view"
                                 data-link-action="quickview">
                             {include file="_partials/icon.tpl" icon="eye" class="c-icon--24"}
                             <span class="sr-only">{l s='Quick view' d='Shop.Theme.Actions'}</span>
@@ -113,7 +125,7 @@
                     </div>
                 {/block}
             </div>
-
+            {block name='before_opening_product_mini_card'}{/block}
         </div>
         {block name='before_closing_product_mini_tag'}{/block}
     </article>

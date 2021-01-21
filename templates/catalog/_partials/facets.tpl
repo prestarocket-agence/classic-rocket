@@ -32,7 +32,7 @@
             {if $activeFilters|count}
                 <div id="_desktop_search_filters_clear_all" class="visible-desktop clear-all-wrapper">
                     <button data-search-url="{$clear_all_link}" class="btn btn-tertiary js-search-filters-clear-all">
-                        <i class="material-icons">&#xE14C;</i>
+                        {include file="_partials/icon.tpl" icon="x"}
                         {l s='Clear all' d='Shop.Theme.Actions'}
                     </button>
                 </div>
@@ -52,8 +52,8 @@
                     <p class="h6 facet-title">{$facet.label}</p>
                     <span class="float-xs-right">
             <span class="navbar-toggler collapse-icons">
-              <i class="material-icons add">&#xE313;</i>
-              <i class="material-icons remove">&#xE316;</i>
+                {include file="_partials/icon.tpl" icon="chevron-down" class="add"}
+                {include file="_partials/icon.tpl" icon="chevron-up" class="remove"}
             </span>
           </span>
                 </div>
@@ -81,7 +81,9 @@
                         {elseif isset($filter.properties.texture)}
                           <span class="color texture" style="background-image:url({$filter.properties.texture})"></span>
                         {else}
-                          <span {if !$js_enabled} class="ps-shown-by-js" {/if}><i class="material-icons rtl-no-flip checkbox-checked">&#xE5CA;</i></span>
+                          <span {if !$js_enabled} class="ps-shown-by-js" {/if}>
+                                                    {include file="_partials/icon.tpl" icon="check2" class="checkbox-checked"}
+                                                </span>
                                                 {/if}
                       </span>
                                         {else}
@@ -134,7 +136,7 @@
                                                 {l s='(no filter)' d='Shop.Theme.Global'}
                                             {/if}
                     </span>
-                                        <i class="material-icons float-xs-right">&#xE5C5;</i>
+                                        {include file="_partials/icon.tpl" file="chevron-down"}
                                     </a>
                                     <div class="dropdown-menu">
                                         {foreach from=$facet.filters item="filter"}

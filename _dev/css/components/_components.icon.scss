@@ -5,10 +5,28 @@
   }
 }
 
+.c-icon--center-y {
+  & svg {
+    display: flex;
+    align-items: center;
+  }
+}
+
 $sizes: 16, 20, 24, 28;
 
 @each $size in $sizes {
   .c-icon--#{$size} {
     font-size: $font-size-base*($size/16);
   }
+}
+
+.c-icon--white{
+  color: $white;
+}
+
+.c-icon--primary{
+  color: $primary;
+}
+.c-icon--cart{
+  font-size: $font-size-base*(28/16);
 }

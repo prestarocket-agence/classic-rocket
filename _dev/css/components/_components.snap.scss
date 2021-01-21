@@ -1,0 +1,29 @@
+.c-snap{
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Important for iOS devices */
+  width: 100%;
+
+
+}
+.c-snap__item{
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  //&:not(:first-child){
+  //  margin-left: $spacer;
+  //}
+}
+//for full width item
+.c-snap__item--fullw{
+  flex: 0 0 100%;
+  .img-fluid{
+    width: 100%;
+  }
+
+}
+
+//with glider active
+.c-snap.glider{
+  scroll-snap-type: none;
+}

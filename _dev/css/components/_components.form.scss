@@ -24,6 +24,13 @@
   display: flex;
   justify-content: center;
   margin: 0 auto $spacer*1.5;
+
+}
+.s-login-form-checkout{
+  .c-form__footer {
+    margin-bottom: 0;
+
+  }
 }
 
 
@@ -31,5 +38,62 @@
 
 .c-form__mw-450 {
   max-width: 450px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.c-form__mw-630{
+  max-width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-form__inputrow{
+  display: flex;
+  flex-wrap: wrap;
+  .form-group{
+    margin-right: $spacer;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  .c-form-group__firstname,
+  .c-form-group__lastname{
+    width: calc(50% - #{$spacer/2});
+    min-width: 300px;
+    max-width: 100%;
+  }
+  .c-form-group__postcode{
+    max-width: 150px;
+
+  }
+  .c-form-group__id_country{
+    max-width: 200px;
+
+  }
+
+
+
+
+  .c-form-group__city{
+    flex: 1;
+  }
+
+}
+.c-form--withstates{
+  .c-form-group__city{
+    flex: 1 1 100%;
+    margin-right: 0;
+  }
+}
+
+.c-form-group__phone_mobile,
+.c-form-group__phone
+{
+  max-width: 320px;
+
+}
+
+.c-form__label{
+  font-weight: $font-weight-bold;
 }
