@@ -31,32 +31,6 @@
 }
 
 //buton for collapse
-.c-pdt__sections{
+.c-pdt__sections--collapse{
   border-top: 1px solid $pdt-btn-collapse-border-color;
-}
-.btn.c-pdt__btncollapse{
-  font-family: $pdt-btn-collapse-font-family;
-  padding-left: 0;
-  font-size: $pdt-btn-collapse-font-size;
-  font-weight: $pdt-btn-collapse-font-weight;
-  color: $pdt-btn-collapse-color;
-  width: 100%;
-  text-align: left;
-  //border-top: 1px solid red;
-  border-bottom: 1px solid $pdt-btn-collapse-border-color;
-  border-radius: 0;
-  &:hover{
-    text-decoration: none;
-  }
-  &:focus{
-    box-shadow: none;
-  }
-  &[aria-expanded="true"]{
-    border-bottom: transparent;
-  }
-
-}
-
-.c-pdt__bodycollapse{
-  border-bottom: 1px solid $pdt-btn-collapse-border-color;
 }

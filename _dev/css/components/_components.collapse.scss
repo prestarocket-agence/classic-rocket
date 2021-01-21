@@ -1,0 +1,35 @@
+.c-collapse__btn{
+  @extend .btn;
+  @extend .btn-link;
+  padding-left: 0;
+  color: $body-color;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid $collapse-border-color;
+  border-radius: 0;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+  &:focus{
+    box-shadow: none;
+  }
+  &[aria-expanded="true"]{
+    border-bottom: transparent;
+  }
+}
+
+
+.c-collapse__btn--pdtsection{
+  font-family: $pdt-btn-collapse-font-family;
+  font-size: $pdt-btn-collapse-font-size;
+  font-weight: $pdt-btn-collapse-font-weight;
+  color: $pdt-btn-collapse-color;
+  //border-top: 1px solid red;
+  border-bottom-color: $pdt-btn-collapse-border-color;
+}
+
+
+.c-collapse__body{
+  border-bottom: 1px solid $pdt-btn-collapse-border-color;
+}

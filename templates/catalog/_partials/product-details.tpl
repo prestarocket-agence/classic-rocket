@@ -1,7 +1,7 @@
 {* id="product-details" is used in js *}
 <div class="c-pdt__section">
     {if $product_layout === "collapse"}
-      <button class="c-pdt__btncollapse btn btn-link" type="button" data-toggle="collapse"
+      <button class="c-collapse__btn c-collapse__btn--pdtsection" type="button" data-toggle="collapse"
               data-target="#product-details" aria-expanded="false" aria-controls="product-details">
           {l s='Data sheet' d='Shop.Theme.Catalog'}
       </button>

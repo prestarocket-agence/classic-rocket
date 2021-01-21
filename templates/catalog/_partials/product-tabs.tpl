@@ -3,7 +3,7 @@
         {include file='catalog/_partials/product-tabs-nav.tpl'}
     {/if}
 
-    {assign classPdtTab "collapse c-pdt__bodycollapse"}
+    {assign classPdtTab "c-collapse__body /js collapse"}
     {assign classPdtTabActive " show"}
 
     {if $product_layout === "tabs"}
@@ -14,11 +14,11 @@
     {/if}
 
 
-    <div class="c-pdt__sections">
+    <div class="c-pdt__sections c-pdt__sections--{$product_layout}">
         {if $product.description}
         <div class="c-pdt__section c-pdt__section--{$product_layout}">
             {if $product_layout === "collapse"}
-                <button class="c-pdt__btncollapse btn btn-link" type="button" data-toggle="collapse" data-target="#description" aria-expanded="true" aria-controls="description">
+                <button class="c-collapse__btn c-collapse__btn--pdtsection" type="button" data-toggle="collapse" data-target="#description" aria-expanded="true" aria-controls="description">
                     {l s='Description' d='Shop.Theme.Catalog'}
                 </button>
             {/if}
@@ -37,9 +37,9 @@
 
         {block name='product_attachments'}
         {if $product.attachments}
-        <div class="c-pdt__section">
+        <div class="c-pdt__section c-pdt__section--{$product_layout}">
             {if $product_layout === "collapse"}
-                <button class="c-pdt__btncollapse btn btn-link" type="button" data-toggle="collapse" data-target="#attachments" aria-expanded="false" aria-controls="attachments">
+                <button class="c-collapse__btn c-collapse__btn--pdtsection" type="button" data-toggle="collapse" data-target="#attachments" aria-expanded="false" aria-controls="attachments">
                     {l s='Download' d='Shop.Theme.Actions'}
                 </button>
             {/if}
@@ -64,9 +64,9 @@
         {/block}
 
             {foreach from=$product.extraContent item=extra key=extraKey}
-                <div class="c-pdt__section">
+                <div class="c-pdt__section c-pdt__section--{$product_layout}">
                     {if $product_layout === "collapse"}
-                    <button class="c-pdt__btncollapse btn btn-link" type="button" data-toggle="collapse"
+                    <button class="c-collapse__btn c-collapse__btn--pdtsection" type="button" data-toggle="collapse"
                             data-target="#extra-{$extraKey}" aria-expanded="true" aria-controls="extra-{$extraKey}">
                         {$extra.title}
                     </button>

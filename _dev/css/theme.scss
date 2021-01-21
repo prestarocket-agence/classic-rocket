@@ -14,6 +14,7 @@
 @import "node_modules/bootstrap/scss/variables";
 
 @import "../../../classic-rocket/_dev/css/settings/settings.alert";
+@import "../../../classic-rocket/_dev/css/settings/settings.collapse";
 @import "../../../classic-rocket/_dev/css/settings/settings.fonts";
 @import "../../../classic-rocket/_dev/css/settings/settings.header";
 @import "../../../classic-rocket/_dev/css/settings/settings.input-color";
@@ -90,6 +91,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.carousel";
 @import "../../../classic-rocket/_dev/css/components/components.category";
 @import "../../../classic-rocket/_dev/css/components/components.checkout";
+@import "../../../classic-rocket/_dev/css/components/components.collapse";
 @import "../../../classic-rocket/_dev/css/components/components.coverpdt";
 @import "../../../classic-rocket/_dev/css/components/components.custom";
 @import "../../../classic-rocket/_dev/css/components/components.customer";
