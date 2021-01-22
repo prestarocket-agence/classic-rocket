@@ -28,6 +28,10 @@
   color: $pdt-btn-collapse-color;
   //border-top: 1px solid red;
   border-bottom-color: $pdt-btn-collapse-border-color;
+
+  &:hover {
+    color: $pdt-btn-collapse-color-hover;
+  }
 }
 
 
