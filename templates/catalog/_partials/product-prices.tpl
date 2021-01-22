@@ -23,6 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {if $product.show_price}
+{block name="product_info_price"}
 <div class="u-d-flex u-align-items-center /js product-prices">
     {block name='product_price'}
         <div class="o-layout o-layout--start o-layout--center-y u-mb-3">
@@ -98,5 +99,6 @@
             {/if}
         {/if}
     </div>
+    {/block}
     {/if}
 </div>
