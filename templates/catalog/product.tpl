@@ -44,9 +44,12 @@
                         <h1 class="c-pdt__title">{block name='page_title'}{$product.name}{/block}</h1>
                     {/block}
                 {/block}
-
+                {block name='after_product_title'}
+                {/block}
                 {block name='product_prices'}
                     {include file='catalog/_partials/product-prices.tpl'}
+                {/block}
+                {block name='after_product_price'}
                 {/block}
 
                 <div class="product-information">
