@@ -24,42 +24,43 @@
  *}
 <div class="/js product-add-to-cart">
     {if !$configuration.is_catalog}
+        {block name='product_add_to_cart_container'}
 
-        {block name='product_quantity'}
-            <div class="row c-form__row">
-                <label class="col-lg-3 u-mb-0" for="quantity_wanted">{l s='Quantity' d='Shop.Theme.Catalog'}</label>
-                <div class="c-touchspin__group qty">
-                    <input
-                            type="number"
-                            name="qty"
-                            id="quantity_wanted"
-                            value="{$product.quantity_wanted}"
-                            class="c-touchspin__input"
-                            min="{$product.minimal_quantity}"
-                            aria-label="{l s='Quantity' d='Shop.Theme.Actions'}"
-                            {if isset($product.product_url)}data-update-url="{$product.product_url}"{/if}
-                    >
+            {block name='product_quantity'}
+                <div class="row c-form__row">
+                    <label class="col-lg-3 u-mb-0" for="quantity_wanted">{l s='Quantity' d='Shop.Theme.Catalog'}</label>
+                    <div class="c-touchspin__group qty">
+                        <input
+                                type="number"
+                                name="qty"
+                                id="quantity_wanted"
+                                value="{$product.quantity_wanted}"
+                                class="c-touchspin__input"
+                                min="{$product.minimal_quantity}"
+                                aria-label="{l s='Quantity' d='Shop.Theme.Actions'}"
+                                {if isset($product.product_url)}data-update-url="{$product.product_url}"{/if}
+                        >
+                    </div>
                 </div>
-            </div>
-            <div class="add">
-            <button
-                    class="btn btn-primary btn-lg /js js-add-to-cart"
-                    data-button-action="add-to-cart"
-                    type="submit"
-                    {if !$product.add_to_cart_url}
-                        disabled
-                    {/if}
-            >
-                {l s='Add to cart' d='Shop.Theme.Actions'}
-            </button>
+                <div class="add">
+                    <button
+                            class="btn btn-primary btn-lg /js js-add-to-cart"
+                            data-button-action="add-to-cart"
+                            type="submit"
+                            {if !$product.add_to_cart_url}
+                                disabled
+                            {/if}
+                    >
+                        {l s='Add to cart' d='Shop.Theme.Actions'}
+                    </button>
 
-            {hook h='displayProductActions' product=$product}
-            </div>
-        {/block}
+                    {hook h='displayProductActions' product=$product}
+                </div>
+            {/block}
 
-        {block name='product_availability'}
-            {*id use in js*}
-            <span id="product-availability">
+            {block name='product_availability'}
+                {*id use in js*}
+                <span id="product-availability">
                 {if $product.show_availability && $product.availability_message}
                     {if $product.availability == 'available'}
                         {include file="_partials/icon.tpl" icon="check2" class="product-available text-success"}
@@ -71,18 +72,19 @@
                     {$product.availability_message}
                 {/if}
             </span>
-        {/block}
+            {/block}
 
-        {block name='product_minimal_quantity'}
-            <p class="product-minimal-quantity">
-                {if $product.minimal_quantity > 1}
-                    {l
-                    s='The minimum purchase order quantity for the product is %quantity%.'
-                    d='Shop.Theme.Checkout'
-                    sprintf=['%quantity%' => $product.minimal_quantity]
-                    }
-                {/if}
-            </p>
+            {block name='product_minimal_quantity'}
+                <p class="product-minimal-quantity">
+                    {if $product.minimal_quantity > 1}
+                        {l
+                        s='The minimum purchase order quantity for the product is %quantity%.'
+                        d='Shop.Theme.Checkout'
+                        sprintf=['%quantity%' => $product.minimal_quantity]
+                        }
+                    {/if}
+                </p>
+            {/block}
         {/block}
     {/if}
 </div>
