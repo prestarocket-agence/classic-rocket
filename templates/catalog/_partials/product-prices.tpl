@@ -29,11 +29,11 @@
         <div class="o-layout o-layout--start o-layout--center-y u-mb-3">
             {block name='product_discount'}
                 {if !$product.has_discount}
-                    <span class="c-price-lg c-price--current u-mr-2">{$product.price}</span>
+                    <span class="c-price-lg c-price--current u-mr-2">{splitprice price=$product.price}</span>
                 {else}
-                    <span class="c-price-lg c-price--discount u-mr-2">{$product.price}</span>
+                    <span class="c-price-lg c-price--discount u-mr-2">{splitprice price=$product.price}</span>
                     {hook h='displayProductPriceBlock' product=$product type="old_price"}
-                    <span class="c-price-lg c-price--old u-mr-2">{$product.regular_price}</span>
+                    <span class="c-price-lg c-price--old u-mr-2">{splitprice price=$product.regular_price}</span>
                     {if $product.discount_type === 'percentage'}
                         <span class="c-tag c-tag--discount">{l s='Save %percentage%' d='Shop.Theme.Catalog' sprintf=['%percentage%' => $product.discount_percentage_absolute]}</span>
                     {else}
