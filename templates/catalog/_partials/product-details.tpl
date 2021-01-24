@@ -6,10 +6,10 @@
           {l s='Data sheet' d='Shop.Theme.Catalog'}
       </button>
     {/if}
-
+{* #product-detail use in js *}
 <div class="{$classPdtTab}{if !$product.description}{$classPdtTabActive}{/if}"
      id="product-details"
-     data-product="{$product.embedded_attributes|json_encode}"
+     data-product="{$product.embedded_attributes|json_encode}"{if isset($product.reference_to_display) && $product.reference_to_display neq ''} data-reference_to_display="{$product.reference_to_display}"{/if}
     {if $product_layout === "tabs"} role="tabpanel"{/if}
   >
 
