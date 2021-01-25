@@ -1,20 +1,63 @@
 // *** PRICES ***
 
 //Current
-$price-current-font-size: $font-size-base;
-$price-current-font-weight: $font-weight-bold;
-$price-current-color: $black;
+$price-current-font-size: $font-size-base !default;
+$price-current-font-weight: $font-weight-bold !default;
+$price-current-color: $black !default;
+$price-current-line-height: null !default;
+
 
 //Discount
-$price-discount-font-size: $font-size-base;
-$price-discount-font-weight: $font-weight-bold;
-$price-discount-color: $red;
+$price-discount-font-size: $font-size-base !default;
+$price-discount-font-weight: $font-weight-bold !default;
+$price-discount-color: $red !default;
+$price-discount-line-height: null !default;
+
 
 //Old
-$price-old-font-size: $font-size-base;
-$price-old-font-weight: $font-weight-bold;
-$price-old-color: $dark;
+$price-old-font-size: $font-size-base !default;
+$price-old-font-weight: $font-weight-bold !default;
+$price-old-color: $dark !default;
+$price-old-line-height: null !default;
 
-//Size modifiers
-$price-sm-font-size: $font-size-base*.875;
-$price-lg-font-size: $font-size-base*1.125;
+//Size sm
+$price-sm-font-size: $font-size-base*.875 !default;
+$price-sm-font-weight: null !default;
+$price-sm-line-height: null !default;
+$price-sm-color: null !default;
+
+//Size lg
+$price-lg-font-size: $font-size-base*1.125 !default;
+$price-lg-font-weight: null !default;
+$price-lg-line-height: null !default;
+$price-lg-color: null !default;
+
+//Discount lg
+$price-lg-discount-font-size: null !default;
+$price-lg-discount-font-weight: null !default;
+$price-lg-discount-line-height: null !default;
+
+
+//decimal (if split price)
+$price-decimal-font-size: null !default;
+$price-decimal-font-weight: null !default;
+$price-decimal-line-height: null !default;
+$price-decimal-color: null !default;
+
+//decimal lg (if split price)
+$price-lg-decimal-font-size: null !default;
+$price-lg-decimal-font-weight: null !default;
+$price-lg-decimal-line-height: null !default;
+$price-lg-decimal-color: null !default;
+
+//tax (if split price)
+$price-tax-font-size: null !default;
+$price-tax-font-weight: null !default;
+$price-tax-line-height: null !default;
+$price-tax-color: null !default;
+
+//tax lg (if split price)
+$price-lg-tax-font-size: null !default;
+$price-lg-tax-font-weight: null !default;
+$price-lg-tax-line-height: null !default;
+$price-lg-tax-color: null !default;

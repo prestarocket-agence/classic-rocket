@@ -27,13 +27,11 @@
 <div class="u-d-flex u-align-items-center /js product-prices">
     {block name='product_price'}
         <div class="o-layout o-layout--start o-layout--center-y u-mb-3">
+            <span class="c-price--lg c-price--current{if $product.has_discount} c-price--discount{/if} u-mr-2">{splitprice price=$product.price}</span>
             {block name='product_discount'}
-                {if !$product.has_discount}
-                    <span class="c-price-lg c-price--current u-mr-2">{splitprice price=$product.price}</span>
-                {else}
-                    <span class="c-price-lg c-price--discount u-mr-2">{splitprice price=$product.price}</span>
+                {if $product.has_discount}
                     {hook h='displayProductPriceBlock' product=$product type="old_price"}
-                    <span class="c-price-lg c-price--old u-mr-2">{splitprice price=$product.regular_price}</span>
+                    <span class="c-price--lg c-price--old u-mr-2">{$product.regular_price}</span>
                     {if $product.discount_type === 'percentage'}
                         <span class="c-tag c-tag--discount">{l s='Save %percentage%' d='Shop.Theme.Catalog' sprintf=['%percentage%' => $product.discount_percentage_absolute]}</span>
                     {else}
@@ -53,9 +51,7 @@
     {/block}
 
     {block name='product_without_taxes'}
-        {if $priceDisplay == 2}
-            <p class="product-without-taxes">{l s='%price% tax excl.' d='Shop.Theme.Catalog' sprintf=['%price%' => $product.price_tax_exc]}</p>
-        {/if}
+
     {/block}
 
     {block name='product_pack_price'}
