@@ -42,7 +42,7 @@
 
             <div class="{if $product.has_discount} has-discount{/if}">
                 {if $product.has_discount}
-                    <span>{$product.regular_price}</span>
+                    <span>{splitprice price=$product.regular_price}</span>
                     {if $product.discount_type === 'percentage'}
                         <span class="discount discount-percentage">
                                 -{$product.discount_percentage_absolute}
@@ -142,7 +142,7 @@
                 {if isset($product.is_gift) && $product.is_gift}
                     <span class="gift">{l s='Gift' d='Shop.Theme.Checkout'}</span>
                 {else}
-                    {$product.total}
+                    {splitprice price=$product.total}
                 {/if}
             </span>
         </div>

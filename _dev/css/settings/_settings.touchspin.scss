@@ -1,72 +1,72 @@
 // ***** CONTAINER *****
 
 //Size
-$touchspin-width: null;
-$touchspin-padding-x: null;
-$touchspin-padding-y: null;
+$touchspin-width: null !default;
+$touchspin-padding-x: null !default;
+$touchspin-padding-y: null !default;
 
 //Colors
-$touchspin-color: null;
-$touchspin-bg: null;
+$touchspin-color: null !default;
+$touchspin-bg: null !default;
 
 //Border
-$touchspin-border-color: $gray-light;
-$touchspin-border-width: 1px;
-$touchspin-radius: 4px;
+$touchspin-border-color: $gray-light !default;
+$touchspin-border-width: 1px !default;
+$touchspin-radius: 4px !default;
 
 
 
 // ***** INPUT ***** (quantity)
 
 //Size
-$touchspin-input-width: $font-size-base*2.5;
-$touchspin-input-height: null;
-$touchspin-input-padding-x: 0;
-$touchspin-input-padding-y: 0;
+$touchspin-input-width: $font-size-base*2.5 !default;
+$touchspin-input-height: null !default;
+$touchspin-input-padding-x: 0 !default;
+$touchspin-input-padding-y: 0 !default;
 
 //Text
-$touchspin-input-font-size: $font-size-base;
-$touchspin-input-font-weight: $font-weight-normal;
+$touchspin-input-font-size: $font-size-base !default;
+$touchspin-input-font-weight: $font-weight-normal !default;
 
 //Colors
-$touchspin-input-color: null;
-$touchspin-input-bg: null;
+$touchspin-input-color: null !default;
+$touchspin-input-bg: null !default;
 
 //Border
-$touchspin-input-border-color: null;
-$touchspin-input-border-width: 0;
-$touchspin-input-radius: null;
+$touchspin-input-border-color: null !default;
+$touchspin-input-border-width: 0 !default;
+$touchspin-input-radius: null !default;
 
 //Orders
-$touchspin-input-order: null;
+$touchspin-input-order: null !default;
 
 
 
 // ***** BUTTONS ***** (minus & plus)
 
 //Sizes
-$touchspin-btn-width: 24px;
-$touchspin-btn-height: 24px;
-$touchspin-btn-padding-x: null;
-$touchspin-btn-padding-y: null;
+$touchspin-btn-width: 24px !default;
+$touchspin-btn-height: 24px !default;
+$touchspin-btn-padding-x: null !default;
+$touchspin-btn-padding-y: null !default;
 
 //Text
-$touchspin-btn-font-size: $font-size-base;
-$touchspin-btn-font-weight: $font-weight-normal;
+$touchspin-btn-font-size: $font-size-base !default;
+$touchspin-btn-font-weight: $font-weight-normal !default;
 
 //Colors
-$touchspin-btn-color: $black;
-$touchspin-btn-bg: none;
+$touchspin-btn-color: $black !default;
+$touchspin-btn-bg: none !default;
 
 //Border
-$touchspin-btn-border-color: null;
-$touchspin-btn-border-width: 0;
-$touchspin-btn-radius: null;
+$touchspin-btn-border-color: null !default;
+$touchspin-btn-border-width: 0 !default;
+$touchspin-btn-radius: null !default;
 
 //Minus
-$touchspin-minus-bg: null;
-$touchspin-minus-order: null;
+$touchspin-minus-bg: null !default;
+$touchspin-minus-order: null !default;
 
 //Plus
-$touchspin-plus-bg: null;
-$touchspin-plus-order: null;
+$touchspin-plus-bg: null !default;
+$touchspin-plus-order: null !default;

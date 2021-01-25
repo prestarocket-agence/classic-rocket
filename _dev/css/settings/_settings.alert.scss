@@ -16,18 +16,18 @@ $alert-color-scale:                 40% !default;
 $alert-dismissible-padding-r:       $alert-padding-x * 3 !default; // 3x covers width of x plus default padding on either side
 
 //alert variants
-$alert-warning-bg:#FFF9DB;
-$alert-warning-border-color:#FFE066;
-$alert-warning-color:$black;
+$alert-warning-bg:#FFF9DB !default;
+$alert-warning-border-color:#FFE066 !default;
+$alert-warning-color:$black !default;
 
-$alert-danger-bg:#FFDBDB;
-$alert-danger-border-color:#A82424;
-$alert-danger-color:$black;
+$alert-danger-bg:#FFDBDB !default;
+$alert-danger-border-color:#A82424 !default;
+$alert-danger-color:$black !default;
 
-$alert-success-bg:#D9FFE0;
-$alert-success-border-color:#2B8A3E;
-$alert-success-color:$black;
+$alert-success-bg:#D9FFE0 !default;
+$alert-success-border-color:#2B8A3E !default;
+$alert-success-color:$black !default;
 
-$alert-info-bg:#D9EDFF;
-$alert-info-border-color:#1864AB;
-$alert-info-color:$black;
+$alert-info-bg:#D9EDFF !default;
+$alert-info-border-color:#1864AB !default;
+$alert-info-color:$black !default;

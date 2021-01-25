@@ -34,9 +34,9 @@
                                 type="number"
                                 name="qty"
                                 id="quantity_wanted"
-                                value="{$product.quantity_wanted}"
+                                value="{if $product.quantity_wanted > 0}{$product.quantity_wanted}{else}1{/if}"
                                 class="c-touchspin__input"
-                                min="{$product.minimal_quantity}"
+                                min="{if $product.minimal_quantity > 0}{$product.minimal_quantity}{else}1{/if}"
                                 aria-label="{l s='Quantity' d='Shop.Theme.Actions'}"
                                 {if isset($product.product_url)}data-update-url="{$product.product_url}"{/if}
                         >

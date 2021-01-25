@@ -111,7 +111,7 @@
                 </div>
                 {if $product_layout == "collapse"}
                     {block name='product_tabs'}
-                        {include file='catalog/_partials/product-tabs.tpl'}
+                        {include file='catalog/_partials/product-tabs.tpl' product_layout=$product_layout}
                     {/block}
                 {/if}
             </div>
@@ -141,7 +141,7 @@
         {/block}
         {if $product_layout != "collapse"}
             {block name='product_tabs'}
-                {include file='catalog/_partials/product-tabs.tpl'}
+                {include file='catalog/_partials/product-tabs.tpl' product_layout=$product_layout}
             {/block}
         {/if}
         {block name='product_accessories'}
