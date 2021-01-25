@@ -1,9 +1,9 @@
-$red: #e02020;
-$gray: #b3b3b3;
-$gray-light: #ecedee;
-$black: #000;
-$white: #fff;
+$red: #e02020 !default;
+$gray: #b3b3b3 !default;
+$gray-light: #ecedee !default;
+$black: #000 !default;
+$white: #fff !default;
 
 /* TOP HEADER */
-$topheader-color: $black;
-$topheader-bg-color: $gray-light;
+$topheader-color: $black !default;
+$topheader-bg-color: $gray-light !default;
