@@ -4,43 +4,43 @@
 // ***** PAGINATION *****
 
 //Sizes
-$pagination-width: 16px;
-$pagination-height: 16px;
-$pagination-font-size: $small-font-size;
-$pagination-font-weight: $font-weight-normal;
+$pagination-width: 16px !default;
+$pagination-height: 16px !default;
+$pagination-font-size: $small-font-size !default;
+$pagination-font-weight: $font-weight-normal !default;
 
 //Spacing
-$pagination-margin-x: $spacer*2;
-$pagination-margin-x-mobile: $spacer;
+$pagination-margin-x: $spacer*2 !default;
+$pagination-margin-x-mobile: $spacer !default;
 
 //Color
-$pagination-color: $black;
-$pagination-background: $white;
+$pagination-color: $black !default;
+$pagination-background: $white !default;
 
 //Border
-$pagination-border-color: null;
-$pagination-border-width: 0;
-$pagination-border-radius: null;
+$pagination-border-color: null !default;
+$pagination-border-width: 0 !default;
+$pagination-border-radius: null !default;
 
 // ***** HOVER *****
 
 //Color
-$pagination-hover-color: $black;
-$pagination-hover-background: null;
+$pagination-hover-color: $black !default;
+$pagination-hover-background: null !default;
 
 //Border
-$pagination-hover-border-color: $pagination-border-color;
-$pagination-hover-border-width: $pagination-border-width;
-$pagination-hover-border-radius: $pagination-border-radius;
+$pagination-hover-border-color: $pagination-border-color !default;
+$pagination-hover-border-width: $pagination-border-width !default;
+$pagination-hover-border-radius: $pagination-border-radius !default;
 
 
 // ***** ACTIVE *****
 
 //Color
-$pagination-active-color: $black;
-$pagination-active-background: null;
+$pagination-active-color: $black !default;
+$pagination-active-background: null !default;
 
 //Border
-$pagination-active-border-color: $pagination-border-color;
-$pagination-active-border-width: $pagination-border-width;
-$pagination-active-border-radius: $pagination-border-radius;
+$pagination-active-border-color: $pagination-border-color !default;
+$pagination-active-border-width: $pagination-border-width !default;
+$pagination-active-border-radius: $pagination-border-radius !default;

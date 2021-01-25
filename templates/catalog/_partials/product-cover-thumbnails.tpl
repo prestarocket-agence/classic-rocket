@@ -59,7 +59,7 @@
     </div>
 </div>
 
-    <div id="pdt-dots">put btn glider visible hidden</div>
+    <div id="pdt-dots" class="c-dots"></div>
     <div id="pdt-arrow-prev"></div>
     <div id="pdt-arrow-next"></div>
 {/block}

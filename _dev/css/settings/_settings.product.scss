@@ -1,14 +1,27 @@
 //thumb settings
-$thumb-wrap-margin: $spacer auto $spacer*3;
-$thumb-wrap-width: 100%;
+$thumb-wrap-margin: $spacer auto $spacer*3 !default;
+$thumb-wrap-width: 100% !default;
 
-$thumb-border-width: 1px;
-$thumb-border-color: $border-color;
-$thumb-active-border-color: $border-color;
-$thumb-padding: 8px;
-$thumb-width:64px;
-$thumb-min-width-glider:$thumb-width + $thumb-padding * 2 + $thumb-border-width * 2;
-$thumb-margin-x: $spacer/8;
-$thumb-active-border-color: $primary;
+$thumb-border-width: 1px !default;
+$thumb-border-color: $border-color !default;
+$thumb-active-border-color: $border-color !default;
+$thumb-padding: 8px !default;
+$thumb-width:64px !default;
+$thumb-min-width-glider:$thumb-width + $thumb-padding * 2 + $thumb-border-width * 2 !default;
+$thumb-margin-x: $spacer/8 !default;
+$thumb-active-border-color: $primary !default;
 
 
+//product name
+$pdt-name-font-size : null !default;
+$pdt-name-font-weight : null !default;
+$pdt-name-font-family : null !default;
+
+$pdt-name-color : null !default;
+$pdt-name-text-transform : null !default;
+$pdt-name-text-decoration : null !default;
+$pdt-name-line-height : null !default;
+$pdt-name-letter-spacing : null !default;
+
+$pdt-name-margin-bottom : $spacer/2 !default;
+//end product name

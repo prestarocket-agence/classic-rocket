@@ -21,12 +21,17 @@
 
 
 .c-collapse__btn--pdtsection{
+  padding: $pdt-btn-collapse-padding-y $pdt-btn-collapse-padding-x;
   font-family: $pdt-btn-collapse-font-family;
   font-size: $pdt-btn-collapse-font-size;
   font-weight: $pdt-btn-collapse-font-weight;
   color: $pdt-btn-collapse-color;
   //border-top: 1px solid red;
   border-bottom-color: $pdt-btn-collapse-border-color;
+
+  &:hover {
+    color: $pdt-btn-collapse-color-hover;
+  }
 }
 
 

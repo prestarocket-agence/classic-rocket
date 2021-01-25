@@ -1,41 +1,41 @@
 // ***** INPUT *****
 
 //Sizes
-$input-color-width: 28px;
-$input-color-height: 28px;
+$input-color-width: 28px !default;
+$input-color-height: 28px !default;
 
 //Spacing
-$input-color-margin-x: 4px;
-$input-color-margin-y: 4px;
+$input-color-margin-x: 4px !default;
+$input-color-margin-y: 4px !default;
 
 //Border
-$input-color-border-color: $gray;
-$input-color-border-width: 1px;
-$input-color-radius: 50%;
+$input-color-border-color: $gray !default;
+$input-color-border-width: 1px !default;
+$input-color-radius: 50% !default;
 
 
 // ***** HOVER *****
 
 //Sizes
-$input-color-hover-width: $input-color-width + $input-color-margin-x*2;
-$input-color-hover-height: $input-color-height + $input-color-margin-y*2;
+$input-color-hover-width: $input-color-width + $input-color-margin-x*2 !default;
+$input-color-hover-height: $input-color-height + $input-color-margin-y*2 !default;
 
 //Border
-$input-color-hover-border-color: $primary;
-$input-color-hover-border-width: $input-color-border-width;
-$input-color-hover-radius: $input-color-radius;
+$input-color-hover-border-color: $primary !default;
+$input-color-hover-border-width: $input-color-border-width !default;
+$input-color-hover-radius: $input-color-radius !default;
 
 //Opacity
-$input-color-hover-opacity: .5;
+$input-color-hover-opacity: .5 !default;
 
 
 // ***** SELECTED *****
 
 //Sizes
-$input-color-selected-width: $input-color-width + $input-color-margin-x*2;
-$input-color-selected-height: $input-color-height + $input-color-margin-y*2;
+$input-color-selected-width: $input-color-width + $input-color-margin-x*2 !default;
+$input-color-selected-height: $input-color-height + $input-color-margin-y*2 !default;
 
 //Border
-$input-color-selected-border-color: $primary;
-$input-color-selected-border-width: $input-color-border-width;
-$input-color-selected-radius: $input-color-radius;
+$input-color-selected-border-color: $primary !default;
+$input-color-selected-border-width: $input-color-border-width !default;
+$input-color-selected-radius: $input-color-radius !default;

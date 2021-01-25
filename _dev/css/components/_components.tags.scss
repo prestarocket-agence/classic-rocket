@@ -37,12 +37,3 @@
     border: $tag-border-width solid $tag-pack-border;
   }
 }
-
-//$labels: 'discount', 'new', '';
-//
-//@each $label in $labels {
-//  .c-tag--#{$label} {
-//    color: $tag-#{$label}-color;
-//    background-color: $tag-#{$label}-bg;
-//  }
-//}

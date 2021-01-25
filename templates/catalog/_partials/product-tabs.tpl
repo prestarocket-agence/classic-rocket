@@ -14,11 +14,11 @@
     {if $product_layout === "tabs"}
         {assign classPdtTab "tab-pane fade"}
     {elseif $product_layout === "columns"}
-        {assign classPdtTab "tab-pane fade"}
+        {assign classPdtTab ""}
         {assign classPdtTabActive ""}
     {/if}
 
-
+    {block name="pdt-tabs"}
     <div class="c-pdt__sections c-pdt__sections--{$product_layout}">
         {if $product.description}
             <div class="c-pdt__section c-pdt__section--{$product_layout}">
@@ -85,6 +85,7 @@
         </div>
     </div>
     {/foreach}
+    {/block}
 </div>
 {block name='before_pdt-tabs_closing_tag'}
 {/block}

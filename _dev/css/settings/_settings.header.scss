@@ -1,32 +1,33 @@
 // *** HEADER ***
 
-$header-bg: null;
-$header-border-width: 1px;
-$header-border-color: $secondary;
+$header-bg: null !default;
+$header-border-width: 1px !default;
+$header-border-color: $secondary !default;
 
 // *** SHORTCUTS ***
 
 //Icon
-$header-shortcut-icon-color: $black;
-$header-shortcut-icon-size: 28px;
+$header-shortcut-icon-color: $black !default;
+$header-shortcut-icon-size: 28px !default;
 
 //Link
-$header-shortcut-color: $black;
-$header-shortcut-font-size: $font-size-base;
+$header-shortcut-color: $black !default;
+$header-shortcut-font-size: $font-size-base !default;
 
 //Customer
-$header-shortcut-customer-color: $dark;
-$header-shortcut-customer-font-size: $extra-small-font-size;
+$header-shortcut-customer-color: $dark !default;
+$header-shortcut-customer-font-size: $extra-small-font-size !default;
 
 //Cart
-$header-shortcut-cart-count-width: $spacer*1.5;
-$header-shortcut-cart-count-padding-right: $header-shortcut-cart-count-width / 2;
-$header-shortcut-cart-count-height: $spacer*1.5;
-$header-shortcut-cart-count-top: -50%;
-$header-shortcut-cart-count-right: 0;
+$header-shortcut-cart-count-width: $spacer*1.5 !default;
 
-$header-shortcut-cart-count-font-size: $extra-small-font-size;
-$header-shortcut-cart-count-font-weight: $font-weight-normal;
+$header-shortcut-cart-count-padding-right: $header-shortcut-cart-count-width / 2 !default;
+$header-shortcut-cart-count-height: $spacer*1.5 !default;
+$header-shortcut-cart-count-top: -50% !default;
+$header-shortcut-cart-count-right: 0 !default;
 
-$header-shortcut-cart-count-bg: $black;
-$header-shortcut-cart-count-color: $white;
+$header-shortcut-cart-count-font-size: $extra-small-font-size !default;
+$header-shortcut-cart-count-font-weight: $font-weight-normal !default;
+
+$header-shortcut-cart-count-bg: $black !default;
+$header-shortcut-cart-count-color: $white !default;

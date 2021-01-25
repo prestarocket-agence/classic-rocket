@@ -2,12 +2,14 @@
   &--current {
     font-size: $price-current-font-size;
     font-weight: $price-current-font-weight;
+    line-height: $price-current-line-height;
     color: $price-current-color;
   }
 
   &--discount {
     font-size: $price-discount-font-size;
     font-weight: $price-discount-font-weight;
+    line-height: $price-discount-line-height;
     color: $price-discount-color;
   }
 
@@ -15,15 +17,38 @@
     font-size: $price-old-font-size;
     font-weight: $price-old-font-weight;
     color: $price-old-color;
+    line-height: $price-old-line-height;
     text-decoration: line-through;
   }
 }
 
-.c-price-sm {
+.c-price--sm {
   font-size: $price-sm-font-size;
+  font-weight: $price-sm-font-weight;
+  color: $price-sm-color;
+  line-height: $price-sm-line-height;
 }
 
-.c-price-lg {
+.c-price--lg {
   font-size: $price-lg-font-size;
+  font-weight: $price-lg-font-weight;
+  color: $price-lg-color;
+  line-height: $price-lg-line-height;
 }
+
+.c-price__decimal{
+  font-size: $price-decimal-font-size;
+  font-weight: $price-decimal-font-weight;
+  color: $price-decimal-color;
+  line-height: $price-decimal-line-height;
+}
+
+.c-price__tax{
+  font-size: $price-tax-font-size;
+  font-weight: $price-tax-font-weight;
+  color: $price-tax-color;
+  line-height: $price-tax-line-height;
+}
+
+
 
