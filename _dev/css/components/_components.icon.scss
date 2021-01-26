@@ -8,7 +8,9 @@
 .c-icon--center-y {
   & svg {
     display: flex;
+    display: -webkit-flex; //Safari fix
     align-items: center;
+    -webkit-align-items: center; //Safari fix
   }
 }
 
