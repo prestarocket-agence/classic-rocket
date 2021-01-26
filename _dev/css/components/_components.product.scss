@@ -28,6 +28,11 @@
   height: auto;
 }
 
+.c-pdt__video {
+  display: block;
+  max-width:100%;
+}
+
 //buton for collapse
 .c-pdt__sections--collapse{
   border-top: 1px solid $pdt-btn-collapse-border-color;
