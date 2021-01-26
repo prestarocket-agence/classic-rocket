@@ -19,6 +19,8 @@ margin-bottom : $listing-heading-margin-bottom;
 }
 
 .c-listing__subcatitem{
+  margin-bottom: $spacer;
+
   &:not(:last-child){
     margin-right: $spacer;
   }
