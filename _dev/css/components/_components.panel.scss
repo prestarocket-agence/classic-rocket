@@ -30,13 +30,16 @@
   border-bottom: $panel-header-border-color solid $panel-header-border-width;
 }
 
-// Tunnel completed step header
-.-reachable > .c-panel__head {
+// Tunnel step header
+.js-checkout-step-header.c-panel__head {
   padding-bottom: 0;
   margin-bottom: 0;
   border-bottom: none;
 }
 
+//complete
 .-current > .c-panel__head {
-  @extend .c-panel__head;
+  padding-bottom: $panel-header-padding-bottom;
+  margin-bottom: $panel-header-margin-bottom;
+  border-bottom: $panel-header-border-color solid $panel-header-border-width;
 }
