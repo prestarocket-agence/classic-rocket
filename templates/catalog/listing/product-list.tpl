@@ -72,8 +72,9 @@
     </section>
 
   </div>
-{/block}
-{block name='product_list_after_bottom'}
+
+    {block name='product_list_after_bottom'}
+    {/block}
 {/block}
 
 
