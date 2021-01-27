@@ -1,40 +1,53 @@
 // products thumbs
 
-.c-pdt__thumbs{
-  width:calc(#{$thumb-wrap-width} - #{$btn-arrow-width*2});
+.c-pdt__thumbs {
+  width: calc(#{$thumb-wrap-width} - #{$btn-arrow-width*2});
   margin: $thumb-wrap-margin;
 }
 
 
-.c-pdt__thumb{
+.c-pdt__thumb {
   border: $thumb-border-width solid $thumb-border-color;
+  border-radius: $thumb-border-radius;
   padding: $thumb-padding;
   width: $thumb-min-width-glider;
   cursor: pointer;
-  &.glider-slide{
+  overflow: hidden;
+
+  &.glider-slide {
     min-width: $thumb-min-width-glider;
   }
-  &[class].c-snap__item{
+
+  &[class].c-snap__item {
     margin-right: $thumb-margin-x;
     margin-left: $thumb-margin-x;
   }
-  &.is-thumb-selected{
-    border-color:$thumb-active-border-color;
+
+  //thumbnail selected
+  &.is-thumb-selected {
+    border-color: $thumb-active-border-color;
     cursor: auto;
+    box-shadow: $thumb-active-box-shadow;
+  }
+
+  //thumbnails not selected
+  &:not(.is-thumb-selected) {
+    opacity: $thumb-inactive-opacity;
   }
 }
-.c-pdt__thumbimg{
+
+.c-pdt__thumbimg {
   width: $thumb-width;
   height: auto;
 }
 
 .c-pdt__video {
   display: block;
-  max-width:100%;
+  max-width: 100%;
 }
 
 //buton for collapse
-.c-pdt__sections--collapse{
+.c-pdt__sections--collapse {
   border-top: 1px solid $pdt-btn-collapse-border-color;
 }
 
