@@ -5,7 +5,6 @@
   margin: $thumb-wrap-margin;
 }
 
-
 .c-pdt__thumb {
   border: $thumb-border-width solid $thumb-border-color;
   border-radius: $thumb-border-radius;
@@ -19,8 +18,14 @@
   }
 
   &[class].c-snap__item {
-    margin-right: $thumb-margin-x;
-    margin-left: $thumb-margin-x;
+    margin: $thumb-margin-y $thumb-margin-x;
+
+    &:first-of-type {
+      margin-left: $thumb-extremist-margin-x;
+    }
+    &:last-of-type {
+      margin-right: $thumb-extremist-margin-x;
+    }
   }
 
   //thumbnail selected

@@ -1,6 +1,6 @@
 //thumb settings
-$thumb-wrap-margin: $spacer auto $spacer*3 !default;
 $thumb-wrap-width: 100% !default;
+$thumb-wrap-margin: $spacer auto $spacer*3 !default;
 
 $thumb-border-width: 1px !default;
 $thumb-border-color: $border-color !default;
@@ -9,6 +9,8 @@ $thumb-padding: 8px !default;
 $thumb-width:64px !default;
 $thumb-min-width-glider:$thumb-width + $thumb-padding * 2 + $thumb-border-width * 2 !default;
 $thumb-margin-x: $spacer/8 !default;
+$thumb-margin-y: null !default;
+$thumb-extremist-margin-x: $thumb-margin-x !default;
 
 $thumb-active-border-color: $gray-light !default;
 $thumb-active-box-shadow: null !default;
