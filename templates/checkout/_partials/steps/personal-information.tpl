@@ -46,7 +46,7 @@
 
         </div>
     {else}
-        <ul class="c-checkout-panel__head /js nav nav-tabs" role="tablist">
+        <ul class="c-checkout-panel__head /js nav nav-tabs u-mb-3" role="tablist">
             <li class="/js nav-item">
                 <a
                         class="btn btn-link /js nav-link {if !$show_login_form}active{/if}"
