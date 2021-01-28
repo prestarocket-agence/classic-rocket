@@ -87,21 +87,7 @@
         {/foreach}
 
         {block name="product_pack"}
-            <div class="c-pdt__section c-pdt__section--{$product_layout}">
-                {if $product_layout === "collapse"}
-                    <button class="c-collapse__btn c-collapse__btn--pdtsection" type="button" data-toggle="collapse"
-                            data-target="#pdt_pack" aria-expanded="false" aria-controls="pdt_pack">
-                    <span class="o-layout o-layout--center-y">
-                        {l s='Contenu du pack' d='Shop.Theme.Global'}
-                        {include file="_partials/icon.tpl" icon="chevron-down" class="c-icon--center-y"}
-                    </span>
-                    </button>
-                {/if}
-                <div class="c-collapse__body /js collapse"
-                     id="pdt_pack"{if $product_layout === "tabs"} role="tabpanel"{/if}>
-                    {include file="catalog/_partials/product-pack.tpl"}
-                </div>
-            </div>
+            {include file="catalog/_partials/product-pack.tpl"}
         {/block}
     {/block}
 </div>
