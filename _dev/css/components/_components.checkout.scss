@@ -4,6 +4,11 @@
   width: 100%;
   max-width: 500px;
   margin: 0 auto $spacer*1.5;
+  border: none;
+
+  & .nav-link.active {
+    border: none;
+  }
 }
 
 .c-checkout-panel__form {

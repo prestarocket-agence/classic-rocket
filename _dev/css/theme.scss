@@ -79,6 +79,8 @@ $theme-colors: (
 );
 @import "node_modules/bootstrap/scss/alert";
 $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "info", "warning", "danger", "light", "dark");
+@import "node_modules/bootstrap/scss/nav";
+
 @import "../../../classic-rocket/_dev/css/components/components.add-cart-list";
 @import "../../../classic-rocket/_dev/css/components/components.address";
 @import "../../../classic-rocket/_dev/css/components/components.alert";
@@ -111,7 +113,6 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "node_modules/bootstrap/scss/list-group";
 @import "../../../classic-rocket/_dev/css/components/components.media";
 @import "node_modules/bootstrap/scss/modal";
-@import "node_modules/bootstrap/scss/nav";
 @import "../../../classic-rocket/_dev/css/components/components.nav";
 @import "../../../classic-rocket/_dev/css/components/components.offcanvas";
 @import "../../../classic-rocket/_dev/css/components/components.pagination";
