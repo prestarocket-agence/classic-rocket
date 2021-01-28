@@ -1,6 +1,7 @@
 .c-pdt-mini {
   margin-bottom: $pm-margin-bottom;
 }
+
 //.c-pdt-list .c-pdt-mini {
 //  margin-bottom: $pm-margin-bottom;
 //}
@@ -14,42 +15,35 @@
   border: $pm-card-border;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   @if $enable-pm-hover-shadow {
-      &:after {
-        content:"";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        border-radius: $pm-card-radius;
-        box-shadow: $box-shadow;
-        opacity: 0;
-        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-        .is-hover &{
-          opacity: 1;
-          z-index: 0;
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: $pm-card-radius;
+      box-shadow: $box-shadow;
+      opacity: 0;
+      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 
-        }
-
+      .is-hover & {
+        opacity: 1;
+        z-index: 0;
       }
-    &:hover{
-      //transform: scale(1.02, 1.02);
-
-
     }
 
-
+    &:hover {
+      //transform: scale(1.02, 1.02);
+    }
   }
-
 }
 
 .c-pdt-mini__name {
-
   @include font-size($pm-name-font-size);
   font-weight: $pm-name-font-weight;
   font-family: $pm-name-font-family;
-
   color: $pm-name-color;
   text-transform: $pm-name-text-transform;
   text-decoration: $pm-name-text-decoration;
@@ -57,6 +51,7 @@
   line-height: $pm-name-line-height;
   display: inline-block;
   margin-bottom: $pm-name-margin-bottom;
+
   &:hover {
     color: $pm-name-color-hover;
     text-transform: $pm-name-text-transform-hover;
@@ -66,10 +61,8 @@
 
 .c-pdt-mini__brand {
   @include font-size($pm-brand-font-size);
-
   font-weight: $pm-brand-font-weight;
   font-family: $pm-brand-font-family;
-
   color: $pm-brand-color;
   text-transform: $pm-brand-text-transform;
   text-decoration: $pm-brand-text-decoration;
@@ -81,7 +74,7 @@
 .c-pdt-mini__thumb {
   position: relative;
   order: 1;
-  border:$pm-thumb-border;
+  border: $pm-thumb-border;
   border-radius: $pm-thumb-border-radius;
   background-color: $pm-thumb-bg-color;
   padding: $pm-thumb-padding-y $pm-thumb-padding-x;
@@ -89,11 +82,7 @@
 }
 
 .c-pdt-mini__img {
-  border-top-left-radius: $pm-card-img-top-radius;
-  border-top-right-radius: $pm-card-img-top-radius;
-  border-top-left-radius: $pm-card-img-bottom-radius;
-  border-top-right-radius: $pm-card-img-bottom-radius;
-
+  border-radius: $pm-card-img-top-radius $pm-card-img-top-radius $pm-card-img-bottom-radius $pm-card-img-bottom-radius;
 }
 
 .c-pdt-mini__body {
@@ -117,8 +106,10 @@
 
 .c-pdt-mini__flags {
   position: absolute;
-  bottom: $spacer*.5;
-  left: $spacer*.5;
+  top: $pm-card-flags-top;
+  bottom: $pm-card-flags-bottom;
+  left: $pm-card-flags-left;
+  right: $pm-card-flags-right;
 }
 
 /* TODO put in new component file */
@@ -133,6 +124,7 @@
   height: 20px;
   border: 1px solid $gray-light;
   border-radius: 50%;
+
   &:not(:first-child) {
     margin-left: $spacer/4;
   }
@@ -140,5 +132,4 @@
 
 .c-variants__count {
   margin-left: $spacer/4;
-
 }

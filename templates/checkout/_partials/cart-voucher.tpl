@@ -44,37 +44,45 @@
                     {/block}
                 {/if}
 
-                <p class="promo-code-button display-promo{if $cart.discounts|count > 0} with-discounts{/if}">
-                    <a class="collapse-button" href="#promo-code" data-toggle="collapse"{if $cart.discounts|count > 0} aria-expanded="true"{/if}>
+                <p class="u-txt-center promo-code-button display-promo{if $cart.discounts|count > 0} with-discounts{/if}">
+                    <a class="collapse-button" href="#promo-code"
+                       data-toggle="collapse"{if $cart.discounts|count > 0} aria-expanded="true"{/if}>
                         {l s='Have a promo code?' d='Shop.Theme.Checkout'}
                     </a>
                 </p>
 
                 <div id="promo-code" class="promo-code collapse{if $cart.discounts|count > 0} show{/if}">
-                    <div class="promo-code__content">
+                    <div class="promo-code promo-code__content u-mb-2">
                         {block name='cart_voucher_form'}
-                            <form class="form__add-voucher" action="{$urls.pages.cart}" data-link-action="add-voucher" method="post">
+                            <form class="form__add-voucher" action="{$urls.pages.cart}" data-link-action="add-voucher"
+                                  method="post">
                                 <input type="hidden" name="token" value="{$static_token}">
                                 <input type="hidden" name="addDiscount" value="1">
                                 <div class="input-group">
-                                    <input class="form-control" type="text" name="discount_name" placeholder="{l s='Promo code' d='Shop.Theme.Checkout'}">
-                                    <div class="input-group-append">
-                                        <button type="submit" class="btn btn-primary">{l s='Add' d='Shop.Theme.Actions'}</button>
+                                    <input class="form-control u-mb-1" type="text" name="discount_name"
+                                           placeholder="{l s='Promo code' d='Shop.Theme.Checkout'}">
+                                    <div class="u-txt-center u-mb-1 input-group-append">
+                                        <button type="submit"
+                                                class="btn btn-primary">{l s='Add' d='Shop.Theme.Actions'}</button>
                                     </div>
                                 </div>
                             </form>
                         {/block}
 
                         {block name='cart_voucher_notifications'}
-                            <div class="alert alert-danger js-error promo-code-alert" role="alert">
+                            <div class="alert alert-danger u-txt-red u-mb-1 /js js-error" role="alert">
                                 {include file="_partials/icon.tpl" icon="exclamation-circle"}
-                                <span class="ml-1 js-error-text"></span>
+                                <span class="u-ml-1 /js js-error-text"></span>
                             </div>
                         {/block}
 
-                        <a class="collapse-button promo-code-button cancel-promo" role="button" data-toggle="collapse" href ="#promo-code" aria-expanded="true" aria-controls="promo-code">
-                            {l s='Close' d='Shop.Theme.Checkout'}
-                        </a>
+                        <div class="u-txt-center">
+                            <a class="collapse-button promo-code-button cancel-promo" role="button"
+                               data-toggle="collapse" href="#promo-code" aria-expanded="true"
+                               aria-controls="promo-code">
+                                {l s='Close' d='Shop.Theme.Checkout'}
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -85,7 +93,7 @@
                     <ul class="js-discount promo-discounts">
                         {foreach from=$cart.discounts item=discount}
                             <li>
-                <span class="label"><span class="code">{$discount.code}</span> - {$discount.name}</span>
+                                <span class="label"><span class="code">{$discount.code}</span> - {$discount.name}</span>
                             </li>
                         {/foreach}
                     </ul>

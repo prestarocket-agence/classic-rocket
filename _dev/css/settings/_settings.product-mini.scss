@@ -60,3 +60,9 @@ $pm-card-body-bg-color: null !default;
 
 $pm-card-img-border: null !default;
 $pm-card-img-radius: null !default;
+
+//Flags
+$pm-card-flags-top: null !default;
+$pm-card-flags-bottom: $spacer*.5 !default;
+$pm-card-flags-left: $spacer*.5 !default;
+$pm-card-flags-right: null !default;

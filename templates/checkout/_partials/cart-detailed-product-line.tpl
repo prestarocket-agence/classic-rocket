@@ -30,7 +30,7 @@
                  height="{$product.cover.bySize.cart_default.height}">
         </div>
         <div>
-            <a class="u-h5" href="{$product.url}"
+            <a class="u-h5 u-txt-primary" href="{$product.url}"
                data-id_customization="{$product.id_customization|intval}">{$product.name}</a>
 
             {foreach from=$product.attributes key="attribute" item="value"}
@@ -55,19 +55,19 @@
                 {/if}
             </div>
 
-            <a {*id="_desktop_cart_delete_{$product.id_product}"*}
-                    class="u-txt-sm remove-from-cart"
-                    rel="nofollow"
-                    href="{$product.remove_from_cart_url}"
-                    data-link-action="delete-from-cart"
-                    data-id-product="{$product.id_product|escape:'javascript'}"
-                    data-id-product-attribute="{$product.id_product_attribute|escape:'javascript'}"
-                    data-id-customization="{$product.id_customization|escape:'javascript'}"
-            >
-                {if !isset($product.is_gift) || !$product.is_gift}
-                    {l s='Supprimer' d='Shop.Theme.Checkout'}
-                {/if}
-            </a>
+            {if !isset($product.is_gift) || !$product.is_gift}
+                <a {*id="_desktop_cart_delete_{$product.id_product}"*}
+                        class="u-txt-sm u-txt-primary remove-from-cart"
+                        rel="nofollow"
+                        href="{$product.remove_from_cart_url}"
+                        data-link-action="delete-from-cart"
+                        data-id-product="{$product.id_product|escape:'javascript'}"
+                        data-id-product-attribute="{$product.id_product_attribute|escape:'javascript'}"
+                        data-id-customization="{$product.id_customization|escape:'javascript'}"
+                >
+                    <p class="u-mt-2 u-txt-primary">{l s='Supprimer' d='Shop.Theme.Checkout'}</p>
+                </a>
+            {/if}
         </div>
 
 
@@ -119,7 +119,7 @@
         {*<div id="_mobile_cart_delete_{$product.id_product}"></div>*}
     </div>
     <div>
-        <div class="c-cart__price">
+        <div class="c-cart__price u-ml-1">
             {if isset($product.is_gift) && $product.is_gift}
                 <span>{$product.quantity}</span>
             {else}

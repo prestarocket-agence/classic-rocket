@@ -59,3 +59,7 @@
 .alert-warning {
   @include alert-variant($alert-warning-bg, $alert-warning-border-color, $alert-warning-color);
 }
+
+.block-promo .promo-code .alert-danger {
+  display: none;
+}

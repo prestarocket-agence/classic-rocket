@@ -3,7 +3,7 @@
 {block name='product_cover'}
 <div class="c-coverpdt">
 {assign count_pdt_img $product.images|count}
-<div id="js-pdtcover" data-name="js-pdtcover" class="c-snap{if $count_pdt_img > 1} js-slider{/if}"{strip}{if $count_pdt_img > 1}  data-glider='
+<div id="js-pdtcover" data-name="js-pdtcover" class="c-snap{if $count_pdt_img > 1} js-slider{/if}" {if $count_pdt_img > 1}{strip}data-glider='
             {ldelim}
             "slidesToShow":1,
             "slidesToScroll":1,

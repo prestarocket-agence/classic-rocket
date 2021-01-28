@@ -118,7 +118,7 @@
 
             <div class="col-lg-6 u-order-0">
                 {block name='page_content_container'}
-                    <section class="page-content--product u-sticky" id="content">
+                    <section class="page-content--product u-sticky u-mb-4" id="content">
                         {block name='page_content'}
                           {block name='product_flags'}
                               {include file='catalog/_partials/product-flags.tpl'}
