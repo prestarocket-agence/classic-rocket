@@ -48,7 +48,9 @@ $(document).on('glider-refresh glider-loaded','.js-slider',function(e) {
 
     var _options = $(e.target).data('glider'),
         _arrows = false,
-        _dots = false;
+        _dots = false,
+        _slidesToShow = _options.slidesToShow;
+    console.log($(e.target));
     if(typeof _options.arrows !== "undefined"){
         _arrows = _options.arrows;
     }
@@ -60,41 +62,41 @@ $(document).on('glider-refresh glider-loaded','.js-slider',function(e) {
         var _dotslength = $('.glider-dot',_dots).length;
         if(_dotslength > 1){
             $(_dots).removeClass('is-dots-hidden');
+
+                $('.glider-track', e.target).css('min-width', 'auto');
+
         }else{
             $(_dots).addClass('is-dots-hidden');
+            if(_slidesToShow != 1) {
+
+                $('.glider-track', e.target).css('min-width', '100%');
+            }
+
 
         }
     }
 
     //hide or display arrow nav
     if(_arrows){
-        console.log(_arrows);
         var _nextarrow = $(_arrows['next']),
         _prevarrow = $(_arrows['prev']);
         if(_nextarrow.hasClass('disabled') && _prevarrow.hasClass('disabled')){
             _prevarrow.addClass('is-arrow-hidden');
             _nextarrow.addClass('is-arrow-hidden');
+            if(!_dots && _slidesToShow != 1){
+                $('.glider-track',e.target).css('min-width','100%');
+            }
         }else{
             _prevarrow.removeClass('is-arrow-hidden');
             _nextarrow.removeClass('is-arrow-hidden');
+            if(!_dots){
+                $('.glider-track',e.target).css('min-width','unset');
+            }
+
         }
     }
 
-    return;
-    var _slider = $(e.target),
-        _parent = _slider.parents('.c-slider__container'),
-        _nbDots = $('.c-slider__dots .glider-dot',_parent).length;
 
-
-// console.log(_slider);
-    if(_nbDots === 1){
-        _parent.addClass('has-no-nav');
-        $('.glider-track',_parent).css('min-width','100%');
-
-    }else if(_nbDots > 1){
-        _parent.removeClass('has-no-nav');
-        $('.glider-track',_parent).css('min-width','unset');
-    }
 });
 
 

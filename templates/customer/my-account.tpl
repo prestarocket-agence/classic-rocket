@@ -32,12 +32,14 @@
 
 {block name='page_account_heading'}{/block}
 
+{block name="accountImgBg"} style="background:url('{$modules.prestarockettheme.account.image_account}') no-repeat center right; background-size: cover;"{/block}
+
 {block name='page_content'}
     <div class="c-account-landing">
         <p class="c-account-landing__title">{$modules.prestarockettheme.account.title_account}</p>
         <p>{$modules.prestarockettheme.account.description_account}</p>
     </div>
-    <div class="c-account-landing__img" {block name="accountImgBg"}style="background:url('{$modules.prestarockettheme.account.image.url}') no-repeat center right; background-size: cover;"{/block}>
+    <div class="c-account-landing__img" {block name="accountImgBg"}{/block}>
         <div class="c-account-landing__gradient"></div>
     </div>
 {/block}
