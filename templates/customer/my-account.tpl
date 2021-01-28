@@ -32,6 +32,7 @@
 
 {block name='page_account_heading'}{/block}
 
+{block name="accountImgBg"} style="background:url('{$modules.prestarockettheme.account.image_account}') no-repeat center right; background-size: cover;"{/block}
 
 {block name='page_content'}
     <div class="c-account-landing">
