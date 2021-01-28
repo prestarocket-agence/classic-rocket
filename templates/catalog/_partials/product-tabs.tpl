@@ -87,7 +87,7 @@
         {/foreach}
 
         {block name="product_pack"}
-            {block name="product_pack"}
+            {if $product.pack == 1}
                 <div class="c-pdt__section c-pdt__section--{$product_layout}">
                     {if $product_layout === "collapse"}
                         <button class="c-collapse__btn c-collapse__btn--pdtsection" type="button" data-toggle="collapse"
@@ -95,12 +95,12 @@
                             {l s='Contenu du pack' d='Shop.Theme.Catalog'}
                         </button>
                     {/if}
-                    <div class="{$classPdtTab}{if $product.description}{$classPdtTabActive}{/if}"
+                    <div class="{$classPdtTab}{if $product.pack}{$classPdtTabActive}{/if}"
                          id="pdt_pack"{if $product_layout === "tabs"} role="tabpanel"{/if}>
                         {include file="catalog/_partials/product-pack.tpl"}
                     </div>
                 </div>
-            {/block}
+            {/if}
         {/block}
     {/block}
 </div>
