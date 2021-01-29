@@ -8,7 +8,9 @@
   display: flex;
   flex-direction: column;
 
+
   &:not(:last-child) {
+    padding-bottom: $spacer*2;
     margin-bottom: $spacer*2;
     border-bottom: solid 1px $gray-light;
   }
@@ -17,7 +19,7 @@
 .c-history__infos {
   display: flex;
   justify-content: space-between;
-  margin-bottom: $spacer;
+  margin-bottom: $spacer*2;
 
   @include media-breakpoint-mobile () {
     flex-direction: column;

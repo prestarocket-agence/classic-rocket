@@ -28,9 +28,9 @@
                 <p class="u-font-weight-bold u-mb-0 u-mr-2">{$address.alias}</p>
         </div>
 
-        <address class="c-address__formated">{$address.formatted nofilter}</address>
+        <address class="u-mb-2">{$address.formatted nofilter}</address>
 
-        <div class="u-d-flex u-align-items-center u-mt-2">
+        <div class="u-d-flex u-align-items-center">
             <a class="u-d-flex u-align-items-center u-mr-3" href="{url entity=address id=$address.id}" data-link-action="edit-address">
                 {include file="_partials/icon.tpl" icon="pencil-square" class="c-icon--16 c-icon--center-y u-mr-1"}
                 <span class="u-txt-sm">{l s='Update' d='Shop.Theme.Actions'}</span>
