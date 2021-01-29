@@ -73,20 +73,22 @@
                             {/if}
                         </div>
                     </div>
-                    <div class="o-layout o-layout--center-y u-mb-4 {if !$order.shipping[0].url} o-layout--end{/if}">
-                        {if $order.shipping[0].url}
-                            <a class="c-btn--underline"
-                               href="{$order.shipping[0].url}">{l s='Suivre la commande' d='Shop.Theme.Actions'}</a>
-                        {/if}
+                    <div class="o-layout o-layout--center-y {if !$order.shipping[0].url} o-layout--end{/if}">
                         <a class="c-btn--underline" href="{$order.details.details_url}"
                            data-link-action="view-order-details">
                             {l s='Details' d='Shop.Theme.Customeraccount'}
                         </a>
-                        {if $order.details.reorder_url}
-                            <a class="c-btn--underline" href="{$order.details.reorder_url}"
-                               title="{l s='Reorder' d='Shop.Theme.Actions'}">
-                            </a>
-                        {/if}
+                        <div class="u-d-flex">
+                            {if $order.shipping[0].url}
+                                <a class="c-btn--underline"
+                                   href="{$order.shipping[0].url}">{l s='Suivre la commande' d='Shop.Theme.Actions'}</a>
+                            {/if}
+                            {if $order.details.reorder_url}
+                                <a class="c-btn--underline u-ml-2" href="{$order.details.reorder_url}">
+                                    {l s='Reorder' d='Shop.Theme.Actions'}
+                                </a>
+                            {/if}
+                        </div>
                     </div>
                 </div>
             {/foreach}
