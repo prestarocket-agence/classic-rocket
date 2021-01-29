@@ -1,16 +1,16 @@
 {extends file='page.tpl'}
 {block name='pageWrapperClass'}{/block}
 {block name='page_content_container' prepend}
-    <section id="content-hook_order_confirmation" class="mb-3 text-white bg-success">
+    <section id="content-hook_order_confirmation" class="u-mb-3">
 
         {block name='order_confirmation_header'}
-            <p class="u-h3">
-                {include file="_partials/icon.tpl" icon="check" class="c-icon--28"}
+            <p class="u-h3 u-d-flex u-align-items-center u-mb-2 u-txt-success">
+                {include file="_partials/icon.tpl" icon="check" class="c-icon--28 c-icon--center-y u-mr-1"}
                 {l s='Your order is confirmed' d='Shop.Theme.Checkout'}
             </p>
         {/block}
 
-        <p>
+        <p class="u-mb-0 u-ml-4">
             {l s='An email has been sent to your mail address %email%.' d='Shop.Theme.Checkout' sprintf=['%email%' => $customer.email]}
             {if $order.details.invoice_url}
                 {* [1][/1] is for a HTML tag. *}
@@ -47,8 +47,8 @@
             </div>
         {/block}
         {block name='order_details'}
-            <div id="order-details">
-                <h3 class="h3 card-title">{l s='Order details' d='Shop.Theme.Checkout'}:</h3>
+            <div id="order-details" class="c-panel c-panel--border">
+                <h3 class="u-h3 c-panel__head">{l s='Order details' d='Shop.Theme.Checkout'}:</h3>
                 <ul>
                     <li>{l s='Order reference: %reference%' d='Shop.Theme.Checkout' sprintf=['%reference%' => $order.details.reference]}</li>
                     <li>{l s='Payment method: %method%' d='Shop.Theme.Checkout' sprintf=['%method%' => $order.details.payment]}</li>
@@ -66,14 +66,8 @@
     </section>
     {block name='hook_payment_return'}
         {if ! empty($HOOK_PAYMENT_RETURN)}
-            <section id="content-hook_payment_return" class="card mb-3 definition-list">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            {$HOOK_PAYMENT_RETURN nofilter}
-                        </div>
-                    </div>
-                </div>
+            <section id="content-hook_payment_return" class="c-panel c-panel--border u-mb-4">
+                {$HOOK_PAYMENT_RETURN nofilter}
             </section>
         {/if}
     {/block}

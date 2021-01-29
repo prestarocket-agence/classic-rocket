@@ -20,9 +20,9 @@
 
   $col-gutter-width: $grid-gutter-width/2;
 
-  $columns-base: 6, 12;
-  $columns-md: 3,4,8;
-  $columns-lg: 1,2, 3, 4, 5, 6, 7, 8, 9, 10,11;
+  $columns-base: 2, 4, 6, 12;
+  $columns-md: 3, 4, 8;
+  $columns-lg: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11;
 
   @each $column-base in $columns-base {
     .col-#{$column-base} {
@@ -31,8 +31,6 @@
       padding-left: $col-gutter-width;
     }
   }
-
-
 
   @include media-breakpoint-up(md) {
     @each $column-md in $columns-md {
