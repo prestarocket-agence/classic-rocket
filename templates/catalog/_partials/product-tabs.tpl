@@ -39,7 +39,7 @@
         {/if}
 
         {block name='product_details'}
-            {include file='catalog/_partials/product-details.tpl'}
+            {include file='catalog/_partials/product-details.tpl' product_layout=$product_layout}
         {/block}
 
         {block name='product_attachments'}
