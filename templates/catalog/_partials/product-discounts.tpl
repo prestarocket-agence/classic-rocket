@@ -24,7 +24,7 @@
  *}
 {if $product.quantity_discounts}
 <section class="u-mt-2 u-mb-4 /js product-discounts">
-    <p class="u-h5 product-discounts-title u-mb-1">{l s='Volume discounts' d='Shop.Theme.Catalog'}</p>
+    <p class="u-font-weight-bold u-mb-1">{l s='Volume discounts' d='Shop.Theme.Catalog'}</p>
     {block name='product_discount_table'}
       <table class="u-txt-sm table-product-discounts table table-bordered u-txt-center">
         <thead class="thead-light">
