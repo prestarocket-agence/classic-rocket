@@ -13,34 +13,18 @@ $pagination-font-weight: $font-weight-normal !default;
 $pagination-margin-x: $spacer*2 !default;
 $pagination-margin-x-mobile: $spacer !default;
 
-//Color
-$pagination-color: $black !default;
-$pagination-background: $white !default;
-
 //Border
-$pagination-border-color: null !default;
-$pagination-border-width: 0 !default;
 $pagination-border-radius: null !default;
+
+//Icons
+$pagination-icon-color: null !default;
 
 // ***** HOVER *****
 
-//Color
-$pagination-hover-color: $black !default;
-$pagination-hover-background: null !default;
-
 //Border
-$pagination-hover-border-color: $pagination-border-color !default;
-$pagination-hover-border-width: $pagination-border-width !default;
 $pagination-hover-border-radius: $pagination-border-radius !default;
-
 
 // ***** ACTIVE *****
 
-//Color
-$pagination-active-color: $black !default;
-$pagination-active-background: null !default;
-
 //Border
-$pagination-active-border-color: $pagination-border-color !default;
-$pagination-active-border-width: $pagination-border-width !default;
 $pagination-active-border-radius: $pagination-border-radius !default;
