@@ -34,8 +34,11 @@
       <h1 id="js-product-list-header" class="c-listing__title">{$listing.label}</h1>
       </div>
     {/block}
+      {block name='before_products'}
+      {/block}
 
-    <section id="products" class="">
+
+      <section id="products" class="">
       {if $listing.products|count}
 
         <div>
