@@ -30,24 +30,19 @@
   height: $pagination-height;
   font-size: $pagination-font-size;
   font-weight: $pagination-font-weight;
-  color: $pagination-color;
-  background: $pagination-background;
-  border: $pagination-border-color solid $pagination-border-width;
   border-radius: $pagination-border-radius;
 }
 
 .c-pagination__link:hover {
-  color: $pagination-hover-color;
-  background: $pagination-hover-background;
-  border: $pagination-hover-border-color solid $pagination-hover-border-width;
   border-radius: $pagination-hover-border-radius;
 }
 
 .active.c-pagination__link {
-  color: $pagination-active-color;
-  background: $pagination-active-background;
-  border: $pagination-active-border-color solid $pagination-active-border-width;
   border-radius: $pagination-active-border-radius;
+}
+
+.c-pagination__icon {
+  color: $pagination-icon-color;
 }
 
 // *** Underline effect ***
