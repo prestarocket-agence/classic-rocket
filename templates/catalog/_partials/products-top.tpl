@@ -22,8 +22,8 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="js-product-list-top" class="o-layout o-layout--center-y c-result">
-    <div class="visible--desktop">
+<div id="js-product-list-top" class="o-layout o-layout--center-y">
+    <div class="u-visible-desktop">
         {if $listing.pagination.total_items > 1}
             <p class="u-txt-sm u-mb-0">{l s='%product_count% Products' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}</p>
         {elseif $listing.pagination.total_items > 0}
@@ -44,7 +44,7 @@
         {/if}
     </div>
 
-    <div class="visible--mobile text-sm-center mt-1 col-12 ">
+    <div class="u-visible-mobile text-sm-center u-mt-1">
         {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=[
         '%from%' => $listing.pagination.items_shown_from ,
         '%to%' => $listing.pagination.items_shown_to,
