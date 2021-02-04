@@ -43,9 +43,9 @@
                                 class="page-link c-pagination__link {if $page.current === true}active {/if}{if $page.type === 'previous'}previous {elseif $page.type === 'next'}next {/if}{['disabled' => !$page.clickable, 'js-search-link' => true]|classnames}"{if !$page.clickable} tabindex="-1"{/if}
                         >
                             {if $page.type === 'previous'}
-                                <span class="c-icon c-icon--20">{include '_partials/icons/custom/arrow-back-sharp.svg'}</span>
+                                <span class="c-pagination__icon c-icon c-icon--32 c-icon--center-y u-mr-2">{include '_partials/icons/arrow-left-circle-fill.svg'}</span>
                             {elseif $page.type === 'next'}
-                                <span class="c-icon c-icon--20">{include '_partials/icons/custom/arrow-back-sharp.svg'}</span>
+                                <span class="c-pagination__icon c-icon c-icon--32 c-icon--center-y u-ml-2">{include '_partials/icons/arrow-right-circle-fill.svg'}</span>
                             {else}
                                 {$page.page}
                             {/if}

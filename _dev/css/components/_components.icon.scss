@@ -14,7 +14,7 @@
   }
 }
 
-$sizes: 16, 20, 24, 28;
+$sizes: 16, 20, 24, 28, 32, 40;
 
 @each $size in $sizes {
   .c-icon--#{$size} {
