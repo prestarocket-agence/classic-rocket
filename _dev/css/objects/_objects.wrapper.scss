@@ -35,7 +35,13 @@
       max-width: 1440px;
     }
   }
-
-
 }
 
+.o-wrapper--fullbleed {
+  width: 100vw;
+  max-width: 100vw;
+  @media (min-width: 1440px) {
+    margin-left: calc((-100vw / 2 + 1440px / 2) - 15px);
+    margin-right: calc((-100vw / 2 + 1440px / 2) - 15px);
+  }
+}
