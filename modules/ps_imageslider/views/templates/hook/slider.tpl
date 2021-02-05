@@ -22,7 +22,6 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-{$homeslider|dump}
 {if $homeslider.slides}
     <div class="row">
         <div class="c-snap{if $homeslider.slides|count > 1} /js glider js-slider{/if}" data-glider='{strip}
@@ -30,10 +29,9 @@
         "slidesToShow":1,
         "slidesToScroll":"auto",
         "draggable":false,
-        "scrollLock":false,
-        "itemWidth":150,
-        "dots":"#cp-dots",
-        duration:"{$homeslider.speed}",
+        "scrollLock":true,
+        "dots":"#hs-dots",
+{*        duration:"{$homeslider.speed}",*}
         "arrows": {ldelim}
             "prev": "#hs-arrow-prev",
             "next": "#hs-arrow-next"
@@ -41,12 +39,9 @@
         {rdelim}
         {/strip}'>
             {foreach from=$homeslider.slides item=slide name='homeslider'}
+                <div class="u-p-rel">
                 <a href="{$slide.url}">
-                    <div class="u-p-rel">
                         <img data-src="{$slide.image_url}" alt="{$slide.legend|escape}" class="u-img-fluid lazyload"/>
-                        <noscript>
-                            <img src="{$slide.image_url}" alt="{$slide.legend|escape}">
-                        </noscript>
                         {if $slide.title || $slide.description}
                             <div class="c-carousel__content">
                                 <p class="c-carousel__title">{$slide.title}</p>
@@ -55,16 +50,16 @@
                                    href="{$slide.url}">{l s='Découvrir plus de détails' d='Shop.Theme.Global'}</a>
                             </div>
                         {/if}
-                    </div>
                 </a>
+                    </div>
             {/foreach}
         </div>
     </div>
-    <div class="u-d-flex u-align-items-center">
-        <div class="c-slider__dots" id="hs-dots"></div>
+    <div class="u-d-flex u-align-items-center u-mt-2 u-mb-2">
         <button id="hs-arrow-prev" aria-label="{l s='Précédent' d='Shop.Theme.Global'}"
-                class="c-slider__arrow c-slider__arrow--left btn btn-link u-txt-black">{include file="_partials/icon.tpl" icon="chevron-left" class="c-icon--20"}</button>
+                class="c-btn--unstyled glider-prev">{include file="_partials/icon.tpl" icon="chevron-left" class="c-icon--20"}</button>
         <button id="hs-arrow-next" aria-label="{l s='Suivant' d='Shop.Theme.Global'}"
-                class="c-slider__arrow c-slider__arrow--right btn btn-link u-txt-black">{include file="_partials/icon.tpl" icon="chevron-right" class="c-icon--20"}</button>
+                class="c-btn--unstyled glider-next">{include file="_partials/icon.tpl" icon="chevron-right" class="c-icon--20"}</button>
+        <div class="c-slider__dots glider-dots glider-dots--right" id="hs-dots"></div>
     </div>
 {/if}
