@@ -166,7 +166,8 @@ $(document).ready(() => {
 
       // Refresh cart preview
       prestashop.emit('updateCart', {
-        reason: dataset
+        reason: dataset,
+        resp: resp
       });
     }).fail((resp) => {
       prestashop.emit('handleError', {
@@ -222,7 +223,8 @@ $body.on('touchspin.on.stopspin', spinnerSelector, function(e){
 
       // Refresh cart preview
       prestashop.emit('updateCart', {
-        reason: dataset
+        reason: dataset,
+        resp: resp
       });
     }).fail((resp) => {
       prestashop.emit('handleError', {eventType: 'updateProductQuantityInCart', resp: resp})
