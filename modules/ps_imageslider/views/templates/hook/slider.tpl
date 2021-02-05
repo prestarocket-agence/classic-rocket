@@ -23,8 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {if $homeslider.slides}
-    <div class="row">
-        <div class="c-snap{if $homeslider.slides|count > 1} /js glider js-slider{/if}" data-glider='{strip}
+    <div class="c-snap{if $homeslider.slides|count > 1} /js glider js-slider{/if}" data-glider='{strip}
         {ldelim}
         "slidesToShow":1,
         "slidesToScroll":"auto",
@@ -38,22 +37,21 @@
         {rdelim}
         {rdelim}
         {/strip}'>
-            {foreach from=$homeslider.slides item=slide name='homeslider'}
-                <div class="u-p-rel">
+        {foreach from=$homeslider.slides item=slide name='homeslider'}
+            <div class="u-p-rel">
                 <a href="{$slide.url}">
-                        <img data-src="{$slide.image_url}" alt="{$slide.legend|escape}" class="u-img-fluid lazyload"/>
-                        {if $slide.title || $slide.description}
-                            <div class="c-carousel__content">
-                                <p class="c-carousel__title">{$slide.title}</p>
-                                <div class="c-carousel__baseline">{$slide.description nofilter}</div>
-                                <a class="btn btn-lg btn-primary"
-                                   href="{$slide.url}">{l s='Découvrir plus de détails' d='Shop.Theme.Global'}</a>
-                            </div>
-                        {/if}
+                    <img data-src="{$slide.image_url}" alt="{$slide.legend|escape}" class="u-img-fluid lazyload"/>
+                    {if $slide.title || $slide.description}
+                        <div class="c-carousel__content">
+                            <p class="c-carousel__title">{$slide.title}</p>
+                            <div class="c-carousel__baseline">{$slide.description nofilter}</div>
+                            <a class="btn btn-lg btn-primary"
+                               href="{$slide.url}">{l s='Découvrir plus de détails' d='Shop.Theme.Global'}</a>
+                        </div>
+                    {/if}
                 </a>
-                    </div>
-            {/foreach}
-        </div>
+            </div>
+        {/foreach}
     </div>
     <div class="u-d-flex u-align-items-center u-mt-2 u-mb-2">
         <button id="hs-arrow-prev" aria-label="{l s='Précédent' d='Shop.Theme.Global'}"
