@@ -63,8 +63,8 @@
           <div class="invalid-feedback js-invalid-feedback-browser"></div>
       </div>
       <button class="form-control-submit btn btn-primary" name="submit" type="submit">
-        <span class="visible--desktop">{l s='Send reset link' d='Shop.Theme.Actions'}</span>
-        <span class="visible--mobile">{l s='Send' d='Shop.Theme.Actions'}</span>
+        <span class="u-d-desktop">{l s='Send reset link' d='Shop.Theme.Actions'}</span>
+        <span class="u-d-mobile">{l s='Send' d='Shop.Theme.Actions'}</span>
       </button>
 
     </section>
