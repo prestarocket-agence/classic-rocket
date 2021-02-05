@@ -36,7 +36,7 @@
   </div>
 
   <div class="col-sm-9 comment-content">
-    <p class="h4 comment__title">@COMMENT_TITLE@</ph4>
+    <p class="h4 comment__title">@COMMENT_TITLE@</p>
     <p>@COMMENT_COMMENT@</p>
     <div class="comment-buttons btn-group btn-group-sm">
       {if $usefulness_enabled}
