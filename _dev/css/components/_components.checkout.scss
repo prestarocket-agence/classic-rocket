@@ -101,5 +101,6 @@
 }
 
 .colissimo-front-widget .close {
+  @extend .c-btn--underline;
   order: 2;
 }
