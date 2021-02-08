@@ -23,30 +23,43 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {if $homeslider.slides}
-
-    {assign var=paddingbottom value=($homeslider.slides[0]['sizes'][1]/$homeslider.slides[0]['sizes'][0]*100)}
-    <div id="carousel" class="o-wrapper u-mb-spacing-lg /js carousel slick__arrow-large" {if $homeslider.slides|count > 1}data-slick={strip}
-    '{literal}{
-"autoplay": true,
-"slidesToShow": 1,
-"autoplaySpeed":{/literal}{$homeslider.speed}{literal}
-}{/literal}'{/strip}{/if}>
-        {foreach from=$homeslider.slides item=slide name='homeslider'}
-            <a href="{$slide.url}">
+    <div class="c-carousel">
+        <div class="c-snap{if $homeslider.slides|count > 1} /js glider js-slider{/if}" data-glider='{strip}
+        {ldelim}
+        "slidesToShow":1,
+        "slidesToScroll":"auto",
+        "draggable":false,
+        "scrollLock":true,
+        "dots":"#hs-dots",
+{*        duration:"{$homeslider.speed}",*}
+        "arrows": {ldelim}
+            "prev": "#hs-arrow-prev",
+            "next": "#hs-arrow-next"
+        {rdelim}
+        {rdelim}
+        {/strip}'>
+            {foreach from=$homeslider.slides item=slide name='homeslider'}
                 <div class="u-p-rel">
-                    <img data-src="{$slide.image_url}" alt="{$slide.legend|escape}" class="u-img-fluid lazyload">
-                    <noscript>
-                        <img src="{$slide.image_url}" alt="{$slide.legend|escape}">
-                    </noscript>
-                    {if $slide.title || $slide.description}
-                        <div class="c-carousel__content">
-                            <p class="c-carousel__title">{$slide.title}</p>
-                            <div class="c-carousel__baseline">{$slide.description nofilter}</div>
-                            <a class="btn btn-lg btn-primary" href="{$slide.url}">{l s='Découvrir plus de détails' d='Shop.Theme.Global'}</a>
-                        </div>
-                    {/if}
+                    <a href="{$slide.url}">
+                        <img data-src="{$slide.image_url}" alt="{$slide.legend|escape}" class="u-img-fluid lazyload"/>
+                        {if $slide.title || $slide.description}
+                            <div class="c-carousel__content">
+                                <p class="c-carousel__title">{$slide.title}</p>
+                                <div class="c-carousel__baseline">{$slide.description nofilter}</div>
+                                <a class="btn btn-lg btn-primary"
+                                   href="{$slide.url}">{l s='Découvrir plus de détails' d='Shop.Theme.Global'}</a>
+                            </div>
+                        {/if}
+                    </a>
                 </div>
-            </a>
-        {/foreach}
+            {/foreach}
+        </div>
+        <div class="u-d-flex u-align-items-center u-mt-2 u-mb-2">
+            <button id="hs-arrow-prev" aria-label="{l s='Précédent' d='Shop.Theme.Global'}"
+                    class="c-btn--unstyled glider-prev">{include file="_partials/icon.tpl" icon="chevron-left" class="c-icon--20"}</button>
+            <button id="hs-arrow-next" aria-label="{l s='Suivant' d='Shop.Theme.Global'}"
+                    class="c-btn--unstyled glider-next">{include file="_partials/icon.tpl" icon="chevron-right" class="c-icon--20"}</button>
+            <div class="c-slider__dots glider-dots glider-dots--right" id="hs-dots"></div>
+        </div>
     </div>
 {/if}

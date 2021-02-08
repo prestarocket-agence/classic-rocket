@@ -125,7 +125,7 @@
     {/if}
     {if $product_manufacturer->name OR $shop.name}"brand": {
         "@type": "Thing",
-        "name": "{if $product_manufacturer->name}{$product_manufacturer->name|escape:'html':'UTF-8'}{else}$shop.name{/if}"
+        "name": "{if $product_manufacturer->name}{$product_manufacturer->name|escape:'html':'UTF-8'}{else}{$shop.name}{/if}"
     },{/if}
     {if isset($nbComments) && $nbComments && $ratings.avg}"aggregateRating": {
         "@type": "AggregateRating",
