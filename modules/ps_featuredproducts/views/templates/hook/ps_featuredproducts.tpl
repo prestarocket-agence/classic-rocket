@@ -24,13 +24,13 @@
  *}
 <section class="c-pdtlistsection c-featured-pdt u-mb-spacing-lg">
     <div class="c-pdtlistsection__heading">
-    <p class="c-pdtlistsection__title">
-        {l s='Popular Products' d='Shop.Theme.Catalog'}
-    </p>
+        <p class="c-pdtlistsection__title">
+            {l s='Popular Products' d='Shop.Theme.Catalog'}
+        </p>
     </div>
     {assign var="productscount" value=$products|count}
     <div class="row">
-    <div class="c-snap{if $productscount > 1} /js glider js-slider{/if}" data-glider='{strip}
+        <div class="c-snap{if $productscount > 1} /js glider js-slider{/if}" data-glider='{strip}
         {ldelim}
         "slidesToShow":1.25,
         "slidesToScroll":"auto",
@@ -60,14 +60,16 @@
         ]
         {rdelim}
         {/strip}'>
-        {foreach from=$products item="product"}
-            {include file="catalog/_partials/miniatures/product.tpl" product=$product col="col-lg-3 col-md-4 col-6 c-snap__item"}
-        {/foreach}
+            {foreach from=$products item="product"}
+                {include file="catalog/_partials/miniatures/product.tpl" product=$product col="col-lg-3 col-md-4 col-6 c-snap__item"}
+            {/foreach}
+        </div>
     </div>
-    </div>
-    <div class="u-d-flex u-align-items-center">
-    <div class="c-slider__dots" id="fp-dots"></div>
-            <button id="fp-arrow-prev" class="c-btn-arrow c-btn-arrow--prev">{include file="_partials/icon.tpl" icon="chevron-left" class="c-icon--20"}</button>
-            <button id="fp-arrow-prev" class="c-btn-arrow c-btn-arrow--next">{include file="_partials/icon.tpl" icon="chevron-right" class="c-icon--20"}</button>
+    <div class="u-d-flex u-align-items-center u-mb-2">
+        <button id="fp-arrow-prev" aria-label="{l s='Précédent' d='Shop.Theme.Global'}"
+                class="c-btn--unstyled glider-prev">{include file="_partials/icon.tpl" icon="chevron-left" class="c-icon--20"}</button>
+        <button id="fp-arrow-next" aria-label="{l s='Suivant' d='Shop.Theme.Global'}"
+                class="c-btn--unstyled glider-next">{include file="_partials/icon.tpl" icon="chevron-right" class="c-icon--20"}</button>
+        <div class="c-slider__dots glider-dots glider-dots--right" id="fp-dots"></div>
     </div>
 </section>
