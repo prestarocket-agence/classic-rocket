@@ -24,7 +24,7 @@
  *}
 <section class="c-pdtlistsection c-featured-pdt u-mb-spacing-lg">
     <div class="c-pdtlistsection__heading">
-        <p class="c-pdtlistsection__title">
+        <p class="c-pdtlistsection__title u-h2 u-mb-2">
             {l s='Popular Products' d='Shop.Theme.Catalog'}
         </p>
     </div>
