@@ -37,10 +37,4 @@
 
 .c-collapse__body{
   border-bottom: 1px solid $pdt-btn-collapse-border-color;
-
-  & ul {
-    list-style: inherit;
-    padding-left: $spacer*1.25;
-    margin-bottom: $spacer;
-  }
 }
