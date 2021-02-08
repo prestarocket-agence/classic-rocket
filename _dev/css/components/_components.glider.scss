@@ -130,6 +130,7 @@
 .glider-dot:focus,
 .glider-dot.active {
   background: $black;
+  outline: none;
 }
 
 @media(max-width: 36em) {
