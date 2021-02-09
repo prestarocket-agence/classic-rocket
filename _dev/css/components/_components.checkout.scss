@@ -59,7 +59,7 @@
     margin-right: $spacer;
   }
 
-  @include media-breakpoint-mobile () {
+  @include media-breakpoint-mobile() {
     flex-direction: column;
 
     & div:first-of-type {
@@ -85,7 +85,7 @@
   align-items: center;
   justify-content: center;
 
-  @include media-breakpoint-mobile () {
+  @include media-breakpoint-mobile() {
     flex-direction: column;
 
     & div {
@@ -98,9 +98,10 @@
 //Modal
 .modal-body #colissimo-widget-container {
   height: 100% !important;
+  padding-right: 0 !important;
 }
 
-#colissimo-container .colissimo_widget_h340 {
+.colissimo_widget_widget .colissimo_widget_h340 {
   width: 100%;
 }
 
