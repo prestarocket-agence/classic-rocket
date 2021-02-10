@@ -48,15 +48,17 @@
                                                    id="delivery_option_{$carrier.id}"
                                                    value="{$carrier_id}"{if $delivery_option == $carrier_id} checked{/if}>
                                             <label class="/js custom-control-label"
-                                                   for="delivery_option_{$carrier.id}"><span
-                                                        class="sr-only">{$carrier.name}</span></label>
+                                                   for="delivery_option_{$carrier.id}">
+                                                <span class="sr-only">{$carrier.name}</span>
+                                            </label>
                                         </div>
                                         <label for="delivery_option_{$carrier.id}" class="o-layout u-mb-0">
                                             <div>
                                                 <div class="o-layout o-layout--start o-layout--center-y u-mb-1">
                                                     {if $carrier.logo}
                                                         <div>
-                                                            <img class="u-mr-1" src="{$carrier.logo}" alt="{$carrier.name}"/>
+                                                            <img class="u-mr-1" src="{$carrier.logo}"
+                                                                 alt="{$carrier.name}"/>
                                                         </div>
                                                     {/if}
                                                     <div>
@@ -76,7 +78,8 @@
                     {/block}
                     <div class="c-checkout-panel__form u-mt-4">
                         <div id="delivery" class="form-group">
-                            <label class="c-form__label" for="delivery_message">{l s='Laisser un message au transporteur' d='Shop.Theme.Checkout'}</label>
+                            <label class="c-form__label"
+                                   for="delivery_message">{l s='Laisser un message au transporteur' d='Shop.Theme.Checkout'}</label>
                             <textarea class="form-control" rows="2" cols="120" id="delivery_message"
                                       name="delivery_message">{$delivery_message}</textarea>
                         </div>

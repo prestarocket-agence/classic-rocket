@@ -47,7 +47,7 @@
                         {block name='before_product_price_and_shipping'}{/block}
                         {block name='product_price_and_shipping'}
                             {if $product.show_price}
-                                <div class="c-pdt-mini__prices">
+                                <div class="c-pdt-mini__prices u-mb-1">
                                     {if !$product.has_discount}
                                         {hook h='displayProductPriceBlock' product=$product type="before_price"}
                                         <span class="c-price c-price--current">{splitprice price=$product.price}</span>
@@ -58,7 +58,7 @@
                                         <span class="c-price c-price--old">{splitprice price=$product.regular_price}</span>
                                     {/if}
                                     {if $product.has_discount}
-                                            <span class="c-price--tagdiscount">{if $product.discount_type === 'percentage'}{$product.discount_percentage}{else}{$product.discount_amount_to_display}{/if}</span>
+                                            <span class="c-tag c-price--tagdiscount">{if $product.discount_type === 'percentage'}{$product.discount_percentage}{else}{$product.discount_amount_to_display}{/if}</span>
                                     {/if}
                                 </div>
                                 {hook h='displayProductPriceBlock' product=$product type='unit_price'}

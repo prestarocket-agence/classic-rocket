@@ -106,6 +106,10 @@
   margin: 0 auto;
   padding: 0;
 
+  &--left {
+    margin: 0 auto 0 0;
+  }
+
   &--right {
     margin: 0 0 0 auto;
   }
@@ -130,6 +134,7 @@
 .glider-dot:focus,
 .glider-dot.active {
   background: $black;
+  outline: none;
 }
 
 @media(max-width: 36em) {

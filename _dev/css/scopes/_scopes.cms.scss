@@ -6,3 +6,9 @@
     height: auto;
   }
 }
+
+.s-cms-list {
+  list-style: inherit;
+  padding-left: $spacer*1.25;
+  margin-bottom: $spacer;
+}

@@ -18,4 +18,8 @@
 .c-footer__newsletter {
   padding: $spacer*2;
   background-color: $gray-light;
+
+  @include media-breakpoint-desktop {
+    margin-bottom: $spacer*4;
+  }
 }

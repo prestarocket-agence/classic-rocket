@@ -37,7 +37,7 @@
                     <li class="u-mb-1">
                         <a
                                 id="{$link.id}-{$linkBlock.id}"
-                                class="{$link.class} u-txt-black"
+                                class="{$link.class} u-txt-dark"
                                 href="{$link.url}"
                                 title="{$link.description}"
                                 {if !empty($link.target)} target="{$link.target}" {/if}
