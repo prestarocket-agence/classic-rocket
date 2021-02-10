@@ -1,4 +1,6 @@
 {if $product.grouped_features}
+    {include file='catalog/_partials/product-vars-layout.tpl'}
+
     {* id="product-details" is used in js *}
     <div class="c-pdt__section">
         {if $product_layout === "collapse"}
