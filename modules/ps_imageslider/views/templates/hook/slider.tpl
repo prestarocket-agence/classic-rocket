@@ -39,9 +39,10 @@
         {rdelim}
         {/strip}'>
             {foreach from=$homeslider.slides item=slide name='homeslider'}
-                <div class="u-p-rel">
+                <div class="u-rc u-p-rel">
                     <a href="{$slide.url}">
-                        <img data-src="{$slide.image_url}" alt="{$slide.legend|escape}" class="u-img-fluid lazyload"/>
+                        <img class="u-img-fluid lazyload u-rc--homeslider" data-src="{$slide.image_url}" alt="{$slide.legend|escape}"
+                             width="{$slide.sizes.0}" height="{$slide.sizes.1}"/>
                         {if $slide.title || $slide.description}
                             <div class="c-carousel__content">
                                 <p class="c-carousel__title">{$slide.title}</p>
