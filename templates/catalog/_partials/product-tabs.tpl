@@ -1,6 +1,8 @@
 {block name='before_pdt-tabs'}
 {/block}
 <div class="product-tabs">
+    {include file='catalog/_partials/product-vars-layout.tpl'}
+
     {block name='after_pdt-tabs_opening_tag'}
     {/block}
 
@@ -8,15 +10,7 @@
         {include file='catalog/_partials/product-tabs-nav.tpl'}
     {/if}
 
-    {assign classPdtTab "c-collapse__body /js collapse"}
-    {assign classPdtTabActive " show"}
 
-    {if $product_layout === "tabs"}
-        {assign classPdtTab "tab-pane fade"}
-    {elseif $product_layout === "columns"}
-        {assign classPdtTab ""}
-        {assign classPdtTabActive ""}
-    {/if}
 
     {block name="pdt-tabs"}
     <div class="c-pdt__sections c-pdt__sections--{$product_layout}">
@@ -39,7 +33,7 @@
         {/if}
 
         {block name='product_details'}
-            {include file='catalog/_partials/product-details.tpl' product_layout=$product_layout}
+            {include file='catalog/_partials/product-details.tpl'}
         {/block}
 
         {block name='product_attachments'}
