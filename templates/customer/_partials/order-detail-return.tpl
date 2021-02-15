@@ -26,7 +26,6 @@
     <form id="order-return-form" action="{$urls.pages.order_follow}" method="post" novalidate autocomplete="false">
         <div id="order-products">
             {foreach from=$order.products item=product name=products}
-              {$product|dump}
           <div class="c-cart__row u-mb-3">
             <div class="c-cart__caracts">
               <div class="u-mr-3">
