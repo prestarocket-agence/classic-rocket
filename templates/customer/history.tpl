@@ -55,14 +55,26 @@
                         <div class="u-d-flex">
                             <div class="c-history__img">
                                 <a href="{$order.details.details_url}">
-                                    <img class="u-img-fluid" src="{$order.products[0].cover.medium.url}"
-                                         alt="{$order.products[0].name}">
+                                    {if $order.products[0].cover}
+                                        <img class="u-img-fluid" src="{$order.products[0].cover.medium.url}"
+                                             alt="{$order.products[0].name}">
+                                        {else}
+                                        <img src="{$urls.no_picture_image.bySize.home_default.url}" alt="{$order.products[0].name}"/>
+
+                                    {/if}
+
                                 </a>
                             </div>
                             {if isset($order.products[1].product_id)}
                                 <div class="c-history__img">
                                     <a href="{$order.details.details_url}">
-                                        <img class="u-img-fluid" src="{$order.products[1].cover.medium.url}" alt="">
+                                        {if $order.products[0].cover}
+                                            <img class="u-img-fluid" src="{$order.products[1].cover.medium.url}"
+                                                 alt="{$order.products[0].name}">
+                                        {else}
+                                            <img src="{$urls.no_picture_image.bySize.home_default.url}" alt="{$order.products[1].name}"/>
+
+                                        {/if}
                                         {if $order.products|count > 2}
                                             <div class="c-history__img--watermark">
                                                 +{math equation="x - y" x=$order.products|count y=2}
