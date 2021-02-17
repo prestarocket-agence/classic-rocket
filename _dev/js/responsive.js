@@ -29,7 +29,9 @@ prestashop.responsive = prestashop.responsive || {};
 
 prestashop.responsive.current_width = window.innerWidth;
 prestashop.responsive.min_width = 992;
+prestashop.responsive.max_width_mobilexs = 576;
 prestashop.responsive.mobile = prestashop.responsive.current_width < prestashop.responsive.min_width;
+prestashop.responsive.mobilexs = prestashop.responsive.current_width < prestashop.responsive.max_width_mobilexs;
 
 function swapChildren(obj1, obj2)
 {
@@ -67,13 +69,14 @@ function toggleMobileStyles()
 	});
 }
 
-$(window).on('resize', function() {
+$(window).on('debouncedresize', function() {
 	var _cw = prestashop.responsive.current_width;
 	var _mw = prestashop.responsive.min_width;
 	var _w = window.innerWidth;
 	var _toggle = (_cw >= _mw && _w < _mw) || (_cw < _mw && _w >= _mw);
 	prestashop.responsive.current_width = _w;
-  prestashop.responsive.mobile = prestashop.responsive.current_width < prestashop.responsive.min_width;
+    prestashop.responsive.mobile = prestashop.responsive.current_width < prestashop.responsive.min_width;
+    prestashop.responsive.mobilexs = prestashop.responsive.current_width < prestashop.responsive.max_width_mobilexs;
 	if (_toggle) {
 		toggleMobileStyles();
 	}

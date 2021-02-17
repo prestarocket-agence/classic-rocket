@@ -1,6 +1,6 @@
 import './bootstrap/bootstrap-lib';
 import '../node_modules/bootstrap-touchspin';
-
+import './lib/debouncedresize';
 import './lib/jquery.hoverIntent.min';
 
 import './responsive';
