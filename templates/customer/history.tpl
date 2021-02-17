@@ -32,6 +32,7 @@
     {if $orders}
         <div class="c-history">
             {foreach from=$orders item=order}
+
                 <div class="c-history__item">
                     <div class="c-history__infos">
                         <div class="row">
@@ -55,7 +56,7 @@
                         <div class="u-d-flex">
                             <div class="c-history__img">
                                 <a href="{$order.details.details_url}">
-                                    {if $order.products[0].cover}
+                                    {if isset($order.products[0].cover) && $order.products[0].cover}
                                         <img class="u-img-fluid" src="{$order.products[0].cover.medium.url}"
                                              alt="{$order.products[0].name}">
                                         {else}
@@ -68,9 +69,9 @@
                             {if isset($order.products[1].product_id)}
                                 <div class="c-history__img">
                                     <a href="{$order.details.details_url}">
-                                        {if $order.products[0].cover}
+                                        {if isset($order.products[1].cover) && $order.products[1].cover}
                                             <img class="u-img-fluid" src="{$order.products[1].cover.medium.url}"
-                                                 alt="{$order.products[0].name}">
+                                                 alt="{$order.products[1].name}">
                                         {else}
                                             <img src="{$urls.no_picture_image.bySize.home_default.url}" alt="{$order.products[1].name}"/>
 
