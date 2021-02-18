@@ -17,3 +17,9 @@
 .u-d-none{
 display: none;
 }
+
+[class].u-d-mobilexs {
+  @include media-breakpoint-up (sm) {
+    display: none;
+  }
+}
