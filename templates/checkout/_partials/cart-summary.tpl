@@ -35,20 +35,10 @@
         {block name='cart_summary_products'}
             <div class="o-layout u-mb-3 /js cart-summary-products">
                 <p class="u-mb-0">{$cart.summary_string}</p>
-                <a class="" href="#" data-toggle="collapse"
-                   data-target="#cart-summary-product-list">
+                <a class="" href="#js-cart-summary-product-list" data-toggle="modal">
                     <span class="u-txt-sm">{l s='Afficher les détails' d='Shop.Theme.Actions'}</span>
-                    {*                    {include file="_partials/icon.tpl" icon="chevron-bottom" class="c-icon--16"}*}
                 </a>
-                                {block name='cart_summary_product_list'}
-                                    <div class="collapse" id="cart-summary-product-list">
-                                        <ul class="media-list">
-                                            {foreach from=$cart.products item=product}
-                                                <li class="media media-list__item">{include file='checkout/_partials/cart-summary-product-line.tpl' product=$product}</li>
-                                            {/foreach}
-                                        </ul>
-                                    </div>
-                                {/block}
+
             </div>
         {/block}
 
