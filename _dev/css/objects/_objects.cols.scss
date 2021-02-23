@@ -35,7 +35,7 @@
 
   @include media-breakpoint-up(sm) {
     @each $column-sm in $columns-sm {
-      .col-md-#{$column-sm} {
+      .col-sm-#{$column-sm} {
         @include make-col($column-sm);
 
       }
