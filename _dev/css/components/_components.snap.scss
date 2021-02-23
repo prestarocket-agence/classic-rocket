@@ -11,6 +11,7 @@
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
+    margin: 0;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch; /* Important for iOS devices */
