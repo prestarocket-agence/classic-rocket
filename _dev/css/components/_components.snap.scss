@@ -1,9 +1,20 @@
 .c-snap {
   display: flex;
+  width: 100%;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch; /* Important for iOS devices */
-  width: 100%;
+}
+
+@include media-breakpoint-mobile {
+  .c-snap--mobile {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Important for iOS devices */
+  }
 }
 
 .c-snap__item {
