@@ -78,6 +78,21 @@ jQuery(document).ready(function () {
     $('#post-product-comment-form').submit(submitCommentForm);
   }
 
+  // Productcomments 4.2.1 and newer return json. older return html string
+  // which is parsed, helper method for checking if the response is json and
+  // should not be parsed
+  function isJson(str) {
+    if (typeof str !== 'string') return false;
+    try {
+        const result = JSON.parse(str);
+        const type = Object.prototype.toString.call(result);
+        return type === '[object Object]'
+            || type === '[object Array]';
+    } catch (err) {
+        return false;
+    }
+  }
+
   function submitCommentForm(event) {
     event.preventDefault();
     var formData = $(this).serializeArray();
@@ -85,10 +100,11 @@ jQuery(document).ready(function () {
       return;
     }
     $.post($(this).attr('action'), $(this).serialize(), function(jsonResponse) {
-      var jsonData = false;
-      try {
+      let jsonData;
+      if (isJson(jsonResponse)) {
         jsonData = JSON.parse(jsonResponse);
-      } catch (e) {
+      } else {
+        jsonData = jsonResponse;
       }
       if (jsonData) {
         if (jsonData.success) {
