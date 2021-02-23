@@ -1,18 +1,14 @@
 /* Offsets
   ========================================================================== */
 
-
 @if not $enable-grid-classes {
 
-  %grid-column {
+  .offset {
+    //@extend %grid-column;
     position: relative;
     width: 100%;
     padding-right: $grid-gutter-width / 2;
     padding-left: $grid-gutter-width / 2;
-  }
-
-  .offset {
-    @extend %grid-column;
   }
 
   $offsets: 0;
@@ -21,7 +17,10 @@
   @each $offset in $offsets {
     .offset-#{$offset} {
       @include make-col-offset($offset);
-      @extend .offset;
+      position: relative;
+      width: 100%;
+      padding-right: $grid-gutter-width / 2;
+      padding-left: $grid-gutter-width / 2;
     }
   }
 
@@ -29,7 +28,10 @@
     @each $offset-lg in $offsets-lg {
       .offset-lg-#{$offset-lg} {
         @include make-col-offset($offset-lg);
-        @extend .offset;
+        position: relative;
+        width: 100%;
+        padding-right: $grid-gutter-width / 2;
+        padding-left: $grid-gutter-width / 2;
       }
     }
   }
