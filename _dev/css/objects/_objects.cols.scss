@@ -21,7 +21,8 @@
   $col-gutter-width: $grid-gutter-width/2;
 
   $columns-base: 2, 4, 6, 12;
-  $columns-md: 3, 4, 8;
+  $columns-sm: 3;
+  $columns-md: 3, 4, 8,11;
   $columns-lg: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11;
 
   @each $column-base in $columns-base {
@@ -29,6 +30,20 @@
       @include make-col($column-base);
       padding-right: $col-gutter-width;
       padding-left: $col-gutter-width;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    @each $column-sm in $columns-sm {
+      .col-sm-#{$column-sm} {
+        @include make-col($column-sm);
+
+      }
+    }
+  }
+  @each $column-sm in $columns-sm {
+    .col-sm-#{$column-sm} {
+      @extend %grid-column;
     }
   }
 

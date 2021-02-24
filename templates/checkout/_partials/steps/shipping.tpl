@@ -38,7 +38,7 @@
             >
                 <div class="form-fields">
                     {block name='delivery_options'}
-                        <div class="c-checkout-panel__form c-checkout-panel__form--lg">
+                        <div class="c-checkout-panel__form c-checkout-panel__form--lg /js delivery-options">
                             {foreach from=$delivery_options item=carrier key=carrier_id}
                                 <div class="/js delivery-option">
                                     <div class="c-checkout-card">

@@ -66,12 +66,13 @@
                     type        = "delivery"
                     interactive = !$show_delivery_address_form and !$show_invoice_address_form
                     }
-                    <a class="u-d-flex u-justify-content-center" href="{$new_address_delivery_url}">
-                        <div class="btn btn-sm btn-primary">
+                    <div class="u-txt-center">
+                        <a class="btn btn-sm btn-outline-primary" href="{$new_address_delivery_url}">
                             {include file="_partials/icon.tpl" icon="plus" class=""}
                             {l s='Ajouter une nouvelle adresse' d='Shop.Theme.Actions'}
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+
 
                 </div>
                 {if isset($delivery_address_error)}
@@ -117,13 +118,13 @@
                         interactive = !$show_delivery_address_form and !$show_invoice_address_form
                         }
 
-
-                        <a class="u-d-flex" href="{$new_address_invoice_url}">
-                            <div class="btn btn-sm btn-primary">
+                        <div class="u-txt-center">
+                        <a class="btn btn-sm btn-primary" href="{$new_address_invoice_url}">
                                 {include file="_partials/icon.tpl" icon="plus" class=""}
                                 {l s='Ajouter une nouvelle adresse' d='Shop.Theme.Actions'}
-                            </div>
                         </a>
+                        </div>
+
                     </div>
                     {if isset($invoice_address_error)}
                         <p class="alert alert-danger js-address-error" name="alert-invoice"
