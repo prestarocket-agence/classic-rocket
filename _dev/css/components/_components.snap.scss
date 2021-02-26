@@ -5,6 +5,9 @@
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch; /* Important for iOS devices */
 }
+.c-snap.row{
+  flex-wrap: nowrap;
+}
 
 @include media-breakpoint-mobile {
   .c-snap--mobile {
