@@ -82,6 +82,10 @@ $btn-arrow-height:40px;
   &.c-btn-arrow--next{
     right: 0;
   }
+  &.disabled{
+    opacity: .7;
+    cursor: not-allowed;
+  }
 }
 
 
