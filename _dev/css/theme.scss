@@ -8,14 +8,15 @@
 /* SETTINGS */
 @import "node_modules/bootstrap/scss/functions";
 
-@import "../../../classic-rocket/_dev/css/settings/settings.colors";
-@import "../../../classic-rocket/_dev/css/settings/settings.bootstrap";
+@import "./settings/settings.colors";
+@import "./settings/settings.bootstrap";
+
 
 @import "node_modules/bootstrap/scss/variables";
 
 @import "../../../classic-rocket/_dev/css/settings/settings.alert";
 @import "../../../classic-rocket/_dev/css/settings/settings.collapse";
-@import "../../../classic-rocket/_dev/css/settings/settings.fonts";
+@import "./settings/settings.fonts";
 @import "../../../classic-rocket/_dev/css/settings/settings.header";
 @import "../../../classic-rocket/_dev/css/settings/settings.input-color";
 @import "../../../classic-rocket/_dev/css/settings/settings.listing";
