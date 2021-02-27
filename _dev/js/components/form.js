@@ -79,6 +79,8 @@ export default class Form {
                            divToScroll = _parent;
                        }
                   });
+                  $(this).data('disabled', false);
+                  $('button[type="submit"]', form).removeClass('disabled');
               }
               form.classList.add('was-validated');
               if(divToScroll){
@@ -96,5 +98,3 @@ const supportedValidity = function () {
     var input = document.createElement('input');
     return ('validity' in input && 'badInput' in input.validity && 'patternMismatch' in input.validity && 'rangeOverflow' in input.validity && 'rangeUnderflow' in input.validity && 'tooLong' in input.validity && 'tooShort' in input.validity && 'typeMismatch' in input.validity && 'valid' in input.validity && 'valueMissing' in input.validity);
 };
-
-
