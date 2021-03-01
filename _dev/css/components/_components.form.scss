@@ -4,9 +4,16 @@
   margin-bottom: $spacer*1.5;
 }
 
-.c-form__label {
-  //margin-bottom: $spacer*.5;
-  //color: $dark;
+.c-form__label,
+.form-group > label{
+
+
+  @include font-size($form-label-font-size);
+  color: $form-label-color;
+  font-weight: $form-label-font-weight;
+  font-family: $form-label-font-family;
+  text-transform: $form-label-text-transform;
+
 
   &--sm {
     font-size: $font-size-sm;
@@ -95,6 +102,3 @@
 
 }
 
-.c-form__label{
-  font-weight: $font-weight-bold;
-}

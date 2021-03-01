@@ -52,6 +52,12 @@
   text-transform: capitalize;
 }
 
+//font family
+[class].u-font-heading {
+  font-family: $headings-font-family;
+}
+
+
 // Weight and italics
 //[class].u-font-weight-light   { font-weight: $font-weight-light}
 //[class].u-font-weight-lighter { font-weight: $font-weight-lighter}
