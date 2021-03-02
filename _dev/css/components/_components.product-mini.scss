@@ -107,8 +107,6 @@
 .c-pdt-mini__flags {
   position: absolute;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   top: $pm-card-flags-top;
   bottom: $pm-card-flags-bottom;
   left: $pm-card-flags-left;
