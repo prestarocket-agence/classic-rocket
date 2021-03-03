@@ -33,14 +33,14 @@
     {if $pagination.should_be_displayed}
         <ul class="pagination c-pagination">
             {foreach from=$pagination.pages item="page"}
-                <li class="page-item c-pagination__item">
+                <li class="page-item c-pagination__item {if $page.current === true}active {/if}">
                     {if $page.type === 'spacer'}
                         <span class="" aria-hidden="true">...</span>
                     {else}
                         <a
                                 rel="{if $page.type === 'previous'}prev{elseif $page.type === 'next'}next{else}nofollow{/if}"
                                 href="{if $page.page == 1}{$page.url|replace:'?page=1':''|replace:'&page=1':''}{else}{$page.url}{/if}"
-                                class="page-link c-pagination__link {if $page.current === true}active {/if}{if $page.type === 'previous'}previous {elseif $page.type === 'next'}next {/if}{['disabled' => !$page.clickable, 'js-search-link' => true]|classnames}"{if !$page.clickable} tabindex="-1"{/if}
+                                class="page-link c-pagination__link {if $page.type === 'previous'}previous {elseif $page.type === 'next'}next {/if}{['disabled' => !$page.clickable, 'js-search-link' => true]|classnames}"{if !$page.clickable} tabindex="-1"{/if}
                         >
                             {if $page.type === 'previous'}
                                 <span class="c-pagination__icon c-icon c-icon--32 c-icon--center-y u-mr-2">{include '_partials/icons/arrow-left-circle-fill.svg'}</span>
