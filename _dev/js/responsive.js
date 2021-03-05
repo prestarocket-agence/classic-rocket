@@ -32,6 +32,7 @@ prestashop.responsive.min_width = 992;
 prestashop.responsive.max_width_mobilexs = 576;
 prestashop.responsive.mobile = prestashop.responsive.current_width < prestashop.responsive.min_width;
 prestashop.responsive.mobilexs = prestashop.responsive.current_width < prestashop.responsive.max_width_mobilexs;
+setConnection();
 
 function swapChildren(obj1, obj2)
 {
@@ -69,6 +70,19 @@ function toggleMobileStyles()
 	});
 }
 
+//test bandwidth
+function setConnection()
+{
+    const connection_support = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    prestashop.responsive.connection = "slow";
+    //if browser not support connection api, we assume that connection is fast
+    if(!connection_support || !(/\slow-2g|2g|3g/).test(connection_support.effectiveType)) {
+        prestashop.responsive.connection = "fast";
+    };
+    const htmltag = document.getElementsByTagName( 'html' )[0];
+    htmltag.className += ' js-connection-'+prestashop.responsive.connection;
+}
+
 $(window).on('debouncedresize', function() {
 	var _cw = prestashop.responsive.current_width;
 	var _mw = prestashop.responsive.min_width;
@@ -81,6 +95,7 @@ $(window).on('debouncedresize', function() {
 		toggleMobileStyles();
 	}
 });
+
 
 $(document).ready(function() {
 	if (prestashop.responsive.mobile) {
