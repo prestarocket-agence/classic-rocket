@@ -4,8 +4,17 @@
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch; /* Important for iOS devices */
+
+
+  /* Hide scrollbar */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
-.c-snap.row{
+
+.c-snap.row {
   flex-wrap: nowrap;
 }
 
