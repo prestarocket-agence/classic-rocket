@@ -1,3 +1,4 @@
+import './lib/modernizr-custom';
 import './bootstrap/bootstrap-lib';
 import '../node_modules/bootstrap-touchspin';
 import './lib/debouncedresize';
