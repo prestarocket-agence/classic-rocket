@@ -35,12 +35,14 @@ for (var i in EventEmitter.prototype) {
 $(document).ready(() => {
 
   const form = new Form();
-  let topMenuEl = $('#_desktop_top_menu #top-menu');
-  let topMenu = new TopMenu(topMenuEl);
   let productMinitature = new ProductMinitature();
 
   form.init();
-  topMenu.init();
+    let topMenuEl = $('#_desktop_top_menu #top-menu');
+    if(topMenuEl.length > 0) {
+        let topMenu = new TopMenu(topMenuEl);
+        topMenu.init();
+    }
   productMinitature.init();
 
 
