@@ -29,7 +29,7 @@
                     class="c-checkout-card /js address-item{if $address.id == $selected} is-selected{/if}"
                     id="{$name|classname}-address-{$address.id}"
             >
-                <label for="r-{$name|classname}-address-{$address.id}" class="u-mb-0 u-w-100">
+                <label for="r-{$name|classname}-address-{$address.id}" class="u-mb-2">
                 <span class="u-mb-1 u-d-flex /js custom-control custom-radio">
                     <span class="o-layout o-layout--start o-layout--center-y">
                         <input
@@ -50,7 +50,7 @@
                 </span>
                 </label>
                 {if $interactive}
-                    <div class="u-mt-2">
+                    <div>
                 <span class="u-mr-2">
                     <a class="u-txt-sm /js edit-address text-muted"
                        data-link-action="edit-address"
