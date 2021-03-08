@@ -90,7 +90,7 @@
                     <p class="block-promo promo-highlighted">
                         {l s='Take advantage of our exclusive offers:' d='Shop.Theme.Actions'}
                     </p>
-                    <ul class="js-discount promo-discounts">
+                    <ul class="js-discount promo-discounts u-mb-3">
                         {foreach from=$cart.discounts item=discount}
                             <li>
                                 <span class="label"><span class="code">{$discount.code}</span> - {$discount.name}</span>
