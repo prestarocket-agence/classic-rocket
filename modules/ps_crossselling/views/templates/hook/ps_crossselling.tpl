@@ -44,7 +44,7 @@
   <div class="u-d-flex u-align-items-center">
     <div class="c-slider__dots" id="cs-dots"></div>
     <button id="cs-arrow-prev" class="c-btn-arrow c-btn-arrow--prev">{include file="_partials/icon.tpl" icon="chevron-left" class="c-icon--20"}</button>
-    <button id="cs-arrow-prev" class="c-btn-arrow c-btn-arrow--next">{include file="_partials/icon.tpl" icon="chevron-right" class="c-icon--20"}</button>
+    <button id="cs-arrow-next" class="c-btn-arrow c-btn-arrow--next">{include file="_partials/icon.tpl" icon="chevron-right" class="c-icon--20"}</button>
   </div>
 </section>
 
