@@ -24,11 +24,12 @@
  *}
 {block name='address_selector_blocks'}
     {foreach $addresses as $address}
-        <article
-                class="c-checkout-card /js address-item{if $address.id == $selected} is-selected{/if}"
-                id="{$name|classname}-address-{$address.id}"
-        >
-            <label for="r-{$name|classname}-address-{$address.id}" class="u-mb-0 u-w-100">
+        <div class="col-lg-6">
+            <article
+                    class="c-checkout-card /js address-item{if $address.id == $selected} is-selected{/if}"
+                    id="{$name|classname}-address-{$address.id}"
+            >
+                <label for="r-{$name|classname}-address-{$address.id}" class="u-mb-0 u-w-100">
                 <span class="u-mb-1 u-d-flex /js custom-control custom-radio">
                     <span class="o-layout o-layout--start o-layout--center-y">
                         <input
@@ -40,37 +41,36 @@
                                 {if $address.id == $selected}checked{/if}
                         >
                         <span class="u-h6 u-mr-2 /js custom-control-label">{$address.alias}</span>
-                        {if $interactive}
-                            <a
-                                    class="u-txt-sm /js edit-address text-muted"
-                                    data-link-action="edit-address"
-                                    href="{url entity='order' params=['id_address' => $address.id, 'editAddress' => $type, 'token' => $token]}"
-                            >
-                            {l s='Edit' d='Shop.Theme.Actions'}
-                        </a>
-                        {/if}
                     </span>
-                    {if $interactive}
-                        <span>
-                    <a
-                            class="u-txt-sm /js delete-address text-muted"
-                            data-link-action="delete-address"
-                            href="{url entity='order' params=['id_address' => $address.id, 'deleteAddress' => true, 'token' => $token]}"
-                    >
-                        {l s='Delete' d='Shop.Theme.Actions'}
-                    </a>
-                        </span>
-                    {/if}
                 </span>
 
 
-                <span class="u-txt-sm">
+                    <span class="u-txt-sm">
                     {$address.formatted nofilter}
                 </span>
-
-
-            </label>
-        </article>
+                </label>
+                {if $interactive}
+                    <div class="u-mt-2">
+                <span class="u-mr-2">
+                    <a class="u-txt-sm /js edit-address text-muted"
+                       data-link-action="edit-address"
+                       href="{url entity='order' params=['id_address' => $address.id, 'editAddress' => $type, 'token' => $token]}">
+                        {include file="_partials/icon.tpl" icon="pencil-square" class="u-icon--center-y u-mr-1"}
+                        {l s='Edit' d='Shop.Theme.Actions'}
+                    </a>
+                </span>
+                <span>
+                    <a class="u-txt-sm /js delete-address text-muted"
+                       data-link-action="delete-address"
+                       href="{url entity='order' params=['id_address' => $address.id, 'deleteAddress' => true, 'token' => $token]}">
+                        {include file="_partials/icon.tpl" icon="trash-fill" class="u-icon--center-y u-mr-1"}
+                        {l s='Delete' d='Shop.Theme.Actions'}
+                    </a>
+                </span>
+                    </div>
+                {/if}
+            </article>
+        </div>
     {/foreach}
     {if $interactive}
         <p>
