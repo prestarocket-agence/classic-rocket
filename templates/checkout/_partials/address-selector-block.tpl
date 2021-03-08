@@ -25,7 +25,7 @@
 {block name='address_selector_blocks'}
     {foreach $addresses as $address}
         <article
-                class="c-checkout-card {if $address.id == $selected}/js selected{/if}"
+                class="c-checkout-card /js address-item{if $address.id == $selected} is-selected{/if}"
                 id="{$name|classname}-address-{$address.id}"
         >
             <label for="r-{$name|classname}-address-{$address.id}" class="u-mb-0 u-w-100">
@@ -36,7 +36,7 @@
                                 name="{$name}"
                                 value="{$address.id}"
                                 id="r-{$name|classname}-address-{$address.id}"
-                                class="custom-control-input"
+                                class="custom-control-input /js js-input-delivery"
                                 {if $address.id == $selected}checked{/if}
                         >
                         <span class="u-h6 u-mr-2 /js custom-control-label">{$address.alias}</span>
