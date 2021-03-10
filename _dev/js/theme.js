@@ -62,7 +62,6 @@ for (var i in EventEmitter.prototype) {
 }
 
 $(document).ready(() => {
-  const test = 270479;
   const form = new Form();
   let slickSlider = new SlickSlider();
   let topMenuEl = $('#_desktop_top_menu #top-menu');
