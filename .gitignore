@@ -3,6 +3,8 @@
 *.log
 npm-debug.log.*
 .sass-cache/
+/prestashop/*
+
 # Created by https://www.gitignore.io/api/linux,osx,windows,sublimetext,phpstorm
 
 ### Linux ###

@@ -1,0 +1,50 @@
+version: '2'
+
+services:
+  classic-rocket-db:
+    image: 'mysql:5'
+    container_name: 'classic-rocket-db'
+    environment:
+        - MYSQL_ROOT_PASSWORD=admin
+        - MYSQL_DATABASE=prestashop
+    ports:
+        - 3306:3306
+
+  classic-rocket:
+    image: 'prestashop/prestashop:1.7.7.2-apache'
+    container_name: 'classic-rocket'
+    ports:
+        - 80:80
+    environment:
+        - PS_DEV_MODE=1
+        - PS_INSTALL_AUTO=1
+        #- PS_ERASE_DB=1
+        - PS_DOMAIN=localhost:3000
+        - DB_SERVER=classic-rocket-db
+        - DB_PASSWD=admin
+        - DB_USER=root
+        - DB_NAME=prestashop
+        - ADMIN_MAIL=admin@example.com
+        - ADMIN_PASSWD=admin
+        - PS_DOMAIN=localhost
+        - PS_FOLDER_ADMIN=admin-dev
+        - PS_FOLDER_INSTALL=install-dev
+        - PS_THEME_NAME=classic-rocket
+    volumes:
+        - ./prestashop:/var/www/html:delegated
+        - ./:/var/www/html/themes/classic-rocket:delegated
+        # required for the autoinstall to work
+        - ./dependencies/modules/ps_searchbarjqauto:/var/www/html/modules/ps_searchbarjqauto:delegated
+
+    depends_on:
+        - classic-rocket-db
+
+  # there is no way of setting mailcatcher as the default smtp settings yet
+  # see: https://github.com/PrestaShop/docker/issues/254
+  # you have to set the smtp settings manually after starting the container
+  classic-rocket-mailcatcher:
+    image: 'schickling/mailcatcher'
+    container_name: 'classic-rocket-mailcatcher'
+    ports:
+      - "1080:1080"
+      - "1025:1025"
