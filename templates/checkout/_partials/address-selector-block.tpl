@@ -24,9 +24,9 @@
  *}
 {block name='address_selector_blocks'}
     {foreach $addresses as $address}
-        <div class="col-lg-6">
+        <div class="col-lg-6 u-d-flex">
             <article
-                    class="c-checkout-card /js address-item{if $address.id == $selected} is-selected{/if}"
+                    class="c-checkout-card /js address-item{if $address.id == $selected} selected{/if}"
                     id="{$name|classname}-address-{$address.id}"
             >
                 <label for="r-{$name|classname}-address-{$address.id}" class="u-mb-2">
@@ -50,23 +50,23 @@
                 </span>
                 </label>
                 {if $interactive}
-                    <div>
-                <span class="u-mr-2">
-                    <a class="u-txt-sm /js edit-address text-muted"
-                       data-link-action="edit-address"
-                       href="{url entity='order' params=['id_address' => $address.id, 'editAddress' => $type, 'token' => $token]}">
-                        {include file="_partials/icon.tpl" icon="pencil-square" class="u-icon--center-y u-mr-1"}
-                        {l s='Edit' d='Shop.Theme.Actions'}
-                    </a>
-                </span>
-                <span>
-                    <a class="u-txt-sm /js delete-address text-muted"
-                       data-link-action="delete-address"
-                       href="{url entity='order' params=['id_address' => $address.id, 'deleteAddress' => true, 'token' => $token]}">
-                        {include file="_partials/icon.tpl" icon="trash-fill" class="u-icon--center-y u-mr-1"}
-                        {l s='Delete' d='Shop.Theme.Actions'}
-                    </a>
-                </span>
+                    <div class="u-mt-auto u-d-flex u-justify-content-between">
+                        <span class="u-mr-2">
+                            <a class="u-txt-sm /js edit-address text-muted"
+                               data-link-action="edit-address"
+                               href="{url entity='order' params=['id_address' => $address.id, 'editAddress' => $type, 'token' => $token]}">
+                                {include file="_partials/icon.tpl" icon="pencil-square" class="u-icon--center-y u-mr-1"}
+                                {l s='Edit' d='Shop.Theme.Actions'}
+                            </a>
+                        </span>
+                        <span>
+                            <a class="u-txt-sm /js delete-address text-muted"
+                               data-link-action="delete-address"
+                               href="{url entity='order' params=['id_address' => $address.id, 'deleteAddress' => true, 'token' => $token]}">
+                                {include file="_partials/icon.tpl" icon="trash-fill" class="u-icon--center-y u-mr-1"}
+                                {l s='Delete' d='Shop.Theme.Actions'}
+                            </a>
+                        </span>
                     </div>
                 {/if}
             </article>
