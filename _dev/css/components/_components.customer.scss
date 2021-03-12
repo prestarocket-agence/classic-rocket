@@ -65,7 +65,7 @@
   font-weight: $headings-font-weight;
   color: $white;
   text-transform: uppercase;
-  background-color: $black;
+  background-color: $customer-avatar-color;
   border-radius: 50%;
 
   @include media-breakpoint-mobile {
