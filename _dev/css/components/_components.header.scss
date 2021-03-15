@@ -18,7 +18,8 @@ if($header-border-width) {
 .c-header-top {
   padding-top: $spacer*.5;
   padding-bottom: $spacer*.5;
-  font-size: $small-font-size;
+  font-size: $topheader-font-size;
+  font-family: $topheader-font-family;
   color: $topheader-color;
   background-color: $topheader-bg-color;
 }
