@@ -68,6 +68,11 @@ if($header-border-width) {
 .c-header__shortcut-link {
   color: $header-shortcut-color;
   font-size: $header-shortcut-font-size;
+  font-family: $header-shortcut-font-family;
+
+  &:hover {
+    color: $header-shortcut-color-hover;
+  }
 }
 
 .c-header__shortcut-icon {
