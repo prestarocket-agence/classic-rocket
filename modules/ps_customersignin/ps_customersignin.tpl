@@ -48,7 +48,7 @@
                 title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
                 rel="nofollow"
         >
-            {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--28 c-header__icon"}
+            {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--28 c-header__shortcut-icon"}
         </a>
     {/if}
 </div>
