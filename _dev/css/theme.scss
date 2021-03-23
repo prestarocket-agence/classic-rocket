@@ -16,6 +16,7 @@
 
 @import "../../../classic-rocket/_dev/css/settings/settings.alert";
 @import "../../../classic-rocket/_dev/css/settings/settings.collapse";
+@import "../../../classic-rocket/_dev/css/settings/settings.customer";
 @import "./settings/settings.fonts";
 @import "../../../classic-rocket/_dev/css/settings/settings.form";
 @import "../../../classic-rocket/_dev/css/settings/settings.header";
@@ -155,6 +156,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/utilities/utilities.flex";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.height";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.img";
+@import "../../../classic-rocket/_dev/css/utilities/utilities.link";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.position";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.ratio";
 @import "node_modules/bootstrap/scss/utilities/screenreaders.scss";

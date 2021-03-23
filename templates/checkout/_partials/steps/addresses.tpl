@@ -57,7 +57,7 @@
                     }
                 </div>
             {elseif $customer.addresses|count > 0}
-                <div id="delivery-addresses" class="u-mb-4 /js js-address-selector">
+                <div id="delivery-addresses" class="row u-mb-4 /js js-address-selector">
 
                     {include  file        = 'checkout/_partials/address-selector-block.tpl'
                     addresses   = $customer.addresses
@@ -66,7 +66,7 @@
                     type        = "delivery"
                     interactive = !$show_delivery_address_form and !$show_invoice_address_form
                     }
-                    <div class="u-txt-center">
+                    <div class="col-12 u-txt-center">
                         <a class="btn btn-sm btn-outline-primary" href="{$new_address_delivery_url}">
                             {include file="_partials/icon.tpl" icon="plus" class=""}
                             {l s='Ajouter une nouvelle adresse' d='Shop.Theme.Actions'}

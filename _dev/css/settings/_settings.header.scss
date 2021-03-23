@@ -1,3 +1,10 @@
+// *** TOP HEADER ***
+
+$topheader-font-size: $small-font-size !default;
+$topheader-font-family: $font-family-base !default;
+$topheader-color: $black !default;
+$topheader-bg-color: $gray-light !default;
+
 // *** HEADER ***
 
 $header-bg: null !default;
@@ -13,6 +20,9 @@ $header-shortcut-icon-size: 28px !default;
 //Link
 $header-shortcut-color: $black !default;
 $header-shortcut-font-size: $font-size-base !default;
+$header-shortcut-font-family: $font-family-base !default;
+
+$header-shortcut-color-hover: $black !default;
 
 //Customer
 $header-shortcut-customer-color: $dark !default;

@@ -30,9 +30,9 @@
                 title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
                 rel="nofollow"
         >
-            {include file="_partials/icon.tpl" icon="person-circle" class="c-header__shortcut-icon u-mr-1"}
+            {include file="_partials/icon.tpl" icon="person-circle" class="c-header__shortcut-icon"}
 
-            <div class="u-d-desktop">
+            <div class="u-d-desktop u-ml-1">
                 <p class="c-header__shortcut-link--customer-label u-mb-0">{$customerName}</p>
 
                 <div class="o-layout o-layout--start o-layout--center-y c-header__shortcut-link">
@@ -48,7 +48,7 @@
                 title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
                 rel="nofollow"
         >
-            {include file="_partials/icon.tpl" icon="person-circle" class="c-icon--28 c-header__icon"}
+            {include file="_partials/icon.tpl" icon="person-circle" class="c-header__shortcut-icon"}
         </a>
     {/if}
 </div>

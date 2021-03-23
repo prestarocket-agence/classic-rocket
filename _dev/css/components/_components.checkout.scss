@@ -22,10 +22,17 @@
 }
 
 .c-checkout-card {
+  display: flex;
+  flex-direction: column;
   padding: $spacer;
   margin-bottom: $spacer;
   border: solid $gray-light 2px;
   border-radius: 4px;
+  transition: .2s;
+
+  &.selected {
+    border-color: $green;
+  }
 
   & label {
     float: none;

@@ -13,13 +13,14 @@
     color: $price-discount-color;
   }
 
-  &--old {
-    font-size: $price-old-font-size;
-    font-weight: $price-old-font-weight;
-    color: $price-old-color;
-    line-height: $price-old-line-height;
-    text-decoration: line-through;
-  }
+
+}
+[class].c-price--old {
+  font-size: $price-old-font-size;
+  font-weight: $price-old-font-weight;
+  color: $price-old-color;
+  line-height: $price-old-line-height;
+  text-decoration: line-through;
 }
 
 .c-price--sm {

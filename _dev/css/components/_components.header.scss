@@ -18,7 +18,8 @@ if($header-border-width) {
 .c-header-top {
   padding-top: $spacer*.5;
   padding-bottom: $spacer*.5;
-  font-size: $small-font-size;
+  font-size: $topheader-font-size;
+  font-family: $topheader-font-family;
   color: $topheader-color;
   background-color: $topheader-bg-color;
 }
@@ -68,6 +69,11 @@ if($header-border-width) {
 .c-header__shortcut-link {
   color: $header-shortcut-color;
   font-size: $header-shortcut-font-size;
+  font-family: $header-shortcut-font-family;
+
+  &:hover {
+    color: $header-shortcut-color-hover;
+  }
 }
 
 .c-header__shortcut-icon {
