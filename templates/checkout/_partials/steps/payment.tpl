@@ -42,7 +42,7 @@
                                     </button>
                                 {/if}
                             </form>
-                            <label class="/js custom-control-label" for="{$option.id}">
+                            <label class="c-checkout-card__paymt-label /js custom-control-label" for="{$option.id}">
                                 {$option.call_to_action_text}
                                 {if $option.logo}
                                     <img src="{$option.logo}">

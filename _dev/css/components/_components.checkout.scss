@@ -33,10 +33,14 @@
   &.selected {
     border-color: $green;
   }
-
-  & label {
+  label{
     float: none;
   }
+}
+.c-checkout-card__paymt-label{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .c-checkout-card__head {
