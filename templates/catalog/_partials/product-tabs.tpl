@@ -44,7 +44,17 @@
         {/if}
 
         {block name='product_details'}
+
+        {* id="product-details" is used in js *}
+        <div class="c-pdt__section">
+            {if $product_layout === "collapse"}
+                <button class="c-collapse__btn c-collapse__btn--pdtsection" type="button" data-toggle="collapse"
+                        data-target="#product-details" aria-expanded="false" aria-controls="product-details">
+                    {l s='Data sheet' d='Shop.Theme.Catalog'}
+                </button>
+            {/if}
             {include file='catalog/_partials/product-details.tpl'}
+        </div>
         {/block}
 
         {block name='product_attachments'}
