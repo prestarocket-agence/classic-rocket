@@ -1,4 +1,3 @@
-{if $product.grouped_features}
     {if !isset($modules.prestarockettheme.product.product_layout)}{assign var="product_layout" value="collapse"}
     {else}
         {assign var="product_layout" value=$modules.prestarockettheme.product.product_layout}
@@ -12,13 +11,7 @@
         {assign classPdtTabActive ""}
     {/if}
     {* id="product-details" is used in js *}
-    <div class="c-pdt__section">
-        {if $product_layout === "collapse"}
-            <button class="c-collapse__btn c-collapse__btn--pdtsection" type="button" data-toggle="collapse"
-                    data-target="#product-details" aria-expanded="false" aria-controls="product-details">
-                {l s='Data sheet' d='Shop.Theme.Catalog'}
-            </button>
-        {/if}
+
         {* #product-detail use in js *}
         <div class="{$classPdtTab}{if !$product.description}{$classPdtTabActive}{/if}"
              id="product-details"
@@ -26,6 +19,7 @@
                 {if $product_layout === "tabs"} role="tabpanel"{/if}
         >
 
+            {if $product.grouped_features}
 
             {block name='product_features'}
                 <section class="product-features">
@@ -40,6 +34,6 @@
                     </dl>
                 </section>
             {/block}
+            {/if}
         </div>
-    </div>
-{/if}
+
