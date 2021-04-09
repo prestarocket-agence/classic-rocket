@@ -70,19 +70,19 @@ $input-btn-focus-box-shadow:    0 0 0 $input-btn-focus-width $input-btn-focus-co
 /*
 Breadcrumb
 */
-$breadcrumb-font-size : $font-size-sm;
+$breadcrumb-font-size : $font-size-sm !default;
 
-$breadcrumb-padding-y:              null;
-$breadcrumb-padding-x:              null;
+$breadcrumb-padding-y:              null !default;
+$breadcrumb-padding-x:              null !default;
 
-$breadcrumb-margin-bottom:          2rem;
+$breadcrumb-margin-bottom:          2rem !default;
 
-$breadcrumb-bg:                      transparent;
+$breadcrumb-bg:                      transparent !default;
 
-$breadcrumb-border-radius:          null;
+$breadcrumb-border-radius:          null !default;
 
 
-$offcanvas-width: 500px;
+$offcanvas-width: 500px !default;
 
 
 // Close
@@ -94,7 +94,7 @@ $btn-close-padding-y:        $btn-close-padding-x !default;
 $btn-close-color:            $black !default;
 $btn-close-bg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>") !default;
 $btn-close-focus-shadow:     $input-btn-focus-box-shadow !default;
-$btn-close-opacity:          null;
+$btn-close-opacity:          null !default;
 $btn-close-hover-opacity:    .75 !default;
 $btn-close-focus-opacity:    1 !default;
 $btn-close-disabled-opacity: .25 !default;
@@ -135,5 +135,5 @@ $pagination-disabled-border-color:  $black !default;
 
 
 // Forms
-$form-group-margin-bottom:              1.25rem;
-$label-margin-bottom: .25rem;
+$form-group-margin-bottom:              1.25rem !default;
+$label-margin-bottom: .25rem !default;
