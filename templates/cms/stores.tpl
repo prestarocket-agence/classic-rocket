@@ -30,8 +30,9 @@
 
 {block name='page_content_container'}
   <section id="content" class="page-content page-stores">
-
-    {foreach $stores as $store}
+      {block name='page_content_top_stores'}
+      {/block}
+      {foreach $stores as $store}
       <article id="store-{$store.id}" class="store-item card mb-3">
         <div class="store-item-container card-body">
           <div class="row">
