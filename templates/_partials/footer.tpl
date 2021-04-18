@@ -43,8 +43,8 @@
     </div>
     <p class="text-center mb-0 pb-3">
       {block name='copyright_link'}
-        <a class="_blank" href="https://prestarocket.com/" target="_blank" rel="nofollow">
-          {l s='%copyright% %year% - Theme by %prestashop%' sprintf=['%prestashop%' => 'Prestarocket™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
+        <a class="_blank" href="https://velezenterprises.ca" target="_blank" rel="nofollow">
+          {l s='%copyright% %year% - %prestashop%' sprintf=['%prestashop%' => 'Velez Enterprises', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
         </a>
       {/block}
     </p>
