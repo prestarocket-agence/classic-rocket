@@ -3,7 +3,7 @@ margin-bottom : $listing-heading-margin-bottom;
 }
 
 .c-listing__title{
-  font-size: $listing-title-font-size;
+  @include font-size($listing-title-font-size);
   font-weight: $listing-title-font-weight;
   font-family: $listing-title-font-family;
   color: $listing-title-color;
