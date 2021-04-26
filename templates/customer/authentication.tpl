@@ -74,7 +74,7 @@
                         <p class="u-h3 u-txt-center u-mb-3">{l s='New Customers' d='Shop.Theme.Customeraccount'}</p>
                         {block name='after_title_checkout_noaccount'}
                             <p class="u-txt-sm u-mb-3">
-                                {l s='Create an account on our site to place your order and access our services.' d='Shop.theme.Global'}
+                                {l s='Create an account on our site to place your order and access our services.' d='Shop.Theme.Global'}
                             </p>
                         {/block}
                         <div class="u-txt-center">
