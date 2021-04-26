@@ -73,10 +73,9 @@
                     <div class="c-panel c-panel--lg u-txt-center u-h-100">
                         <p class="u-h3 u-txt-center u-mb-3">{l s='New Customers' d='Shop.Theme.Customeraccount'}</p>
                         {block name='after_title_checkout_noaccount'}
-                            <p class="u-txt-sm u-mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse,
-                                fugit mollitia
-                                necessitatibus officia quaerat sit vitae! Laudantium maiores pariatur voluptate. A ab
-                                dolore fuga quo voluptatem! Consectetur ea molestias totam.</p>
+                            <p class="u-txt-sm u-mb-3">
+                                {l s='Create an account on our site to place your order and access our services.' d='Shop.theme.Global'}
+                            </p>
                         {/block}
                         <div class="u-txt-center">
                             <a class="btn btn-outline-primary" href="{$urls.pages.register}">
