@@ -117,3 +117,11 @@ if($header-border-width) {
   margin-bottom: $spacer*3;
   border-bottom: solid 1px $gray-light;
 }
+
+.c-header-checkout__logo{
+  max-width: 300px;
+  height: auto;
+  @include media-breakpoint-mobile{
+    max-width: calc(100vw - 100px);
+  }
+}
