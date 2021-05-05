@@ -67,9 +67,11 @@
 
       {else}
           <div id="js-product-list-top"></div>
+          {block name="product_list_no_pdt"}
           <div id="js-product-list">
               {include file='errors/not-found.tpl'}
           </div>
+          {/block}
           <div id="js-product-list-bottom"></div>
       {/if}
     </section>
