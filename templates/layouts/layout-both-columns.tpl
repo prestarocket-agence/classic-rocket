@@ -103,7 +103,7 @@
     </div>
 {/block}
 
-<footer id="footer" class="c-footer">
+<footer id="footer" class="c-footer{block name='footerClass'}{/block}">
     {block name="footer"}
         {include file="_partials/footer.tpl"}
     {/block}
