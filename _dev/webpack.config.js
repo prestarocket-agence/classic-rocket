@@ -100,7 +100,7 @@ module.exports = (env, argv) => {
                     }
                 },
                 {
-                    test: /\.(png|jp(e)g|gif|svg|webp)$/,
+                    test: /\.(png|jpe?g|gif|svg|webp)$/,
                     use: [
                         {
                             loader: 'file-loader',
