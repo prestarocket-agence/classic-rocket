@@ -361,7 +361,7 @@
 
 .products-selection{
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
 }
 .pack-miniature-item{
   margin-bottom: $spacer / 2;
@@ -450,4 +450,23 @@
 }
 .nav-tabs{
   justify-content: center;
+}
+#product-details {
+  > div > label, dt {
+    font-weight: 500;
+    min-width: 6em;
+  }
+  .h6 {
+    font-weight: bold;
+  }
+  dt {
+    display: inline-block;
+  }
+  dd {
+    display: inline;
+    &::after{
+      display: block;
+      content: '';
+    }
+  }
 }
