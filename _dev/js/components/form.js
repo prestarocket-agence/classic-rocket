@@ -81,13 +81,16 @@ export default class Form {
                            divToScroll = _parent;
                        }
                   });
+
                 if(divToScroll){
                   $('html, body').animate({ scrollTop: divToScroll.offset().top}, 300);
                   divToScroll = false;
                 }
+                $(form).data("disabled", false);
                 $('[type=submit]', form).removeClass('disabled');
                 form.classList.add('was-validated');
-                return false;
+              } else {
+                form.classList.add('was-validated');
               }
           }, false);
       });
