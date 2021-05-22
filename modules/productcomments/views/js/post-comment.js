@@ -1,13 +1,12 @@
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * 2007-2019 PrestaShop SA and Contributors
  *
  * NOTICE OF LICENSE
  *
- * This source file is subject to the Academic Free License 3.0 (AFL-3.0)
- * that is bundled with this package in the file LICENSE.md.
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
  * It is also available through the world-wide-web at this URL:
- * https://opensource.org/licenses/AFL-3.0
+ * http://opensource.org/licenses/afl-3.0.php
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
  * to license@prestashop.com so we can send you a copy immediately.
@@ -16,11 +15,12 @@
  *
  * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
  * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://devdocs.prestashop.com/ for more information.
+ * needs please refer to http://www.prestashop.com for more information.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
- * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
+ * @author    PrestaShop SA <contact@prestashop.com>
+ * @copyright 2007-2019 PrestaShop SA and Contributors
+ * @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * International Registered Trademark & Property of PrestaShop SA
  */
 
 jQuery(document).ready(function () {
@@ -78,13 +78,34 @@ jQuery(document).ready(function () {
     $('#post-product-comment-form').submit(submitCommentForm);
   }
 
+  // Productcomments 4.2.1 and newer return json. older return html string
+  // which is parsed, helper method for checking if the response is json and
+  // should not be parsed
+  function isJson(str) {
+    if (typeof str !== 'string') return false;
+    try {
+        const result = JSON.parse(str);
+        const type = Object.prototype.toString.call(result);
+        return type === '[object Object]'
+            || type === '[object Array]';
+    } catch (err) {
+        return false;
+    }
+  }
+
   function submitCommentForm(event) {
     event.preventDefault();
     var formData = $(this).serializeArray();
     if (!validateFormData(formData)) {
       return;
     }
-    $.post($(this).attr('action'), $(this).serialize(), function(jsonData) {
+    $.post($(this).attr('action'), $(this).serialize(), function(jsonResponse) {
+      let jsonData;
+      if (isJson(jsonResponse)) {
+        jsonData = JSON.parse(jsonResponse);
+      } else {
+        jsonData = jsonResponse;
+      }
       if (jsonData) {
         if (jsonData.success) {
           clearPostCommentForm();
@@ -115,12 +136,12 @@ jQuery(document).ready(function () {
     formData.forEach(function(formField) {
       const fieldSelector = '#post-product-comment-form [name="'+formField.name+'"]';
       if (!formField.value) {
-        $(fieldSelector).addClass('error');
-        $(fieldSelector).removeClass('valid');
+        $(fieldSelector).addClass('is-invalid');
+        $(fieldSelector).removeClass('is-valid');
         isValid = false;
       } else {
-        $(fieldSelector).removeClass('error');
-        $(fieldSelector).addClass('valid');
+        $(fieldSelector).removeClass('is-invalid');
+        $(fieldSelector).addClass('is-valid');
       }
     });
 
