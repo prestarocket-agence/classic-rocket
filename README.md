@@ -4,164 +4,29 @@ Classic Rocket is a rework of "classic theme". It has been built keeping in  min
 
 Contributed by [Prestarocket](//www.prestarocket.com/blog/) (Twitter: [@prestarocket](https://twitter.com/prestarocket))
 
-Demo : [https://demoprestashop.prestarocket.com/](https://demoprestashop.prestarocket.com/)
+Demo v4 : [https://crv2.prestarocket.com/](https://crv2.prestarocket.com/)
 
-Main features :
-- last version of Twitter Bootstrap
-- lazy loading images
-- offcanvas for main menu and filter menu
-- less css and less js
-- form accessibility and better validation
-- SEO: Hn, rel prev/next for pagination...
-- font performance
-- better responsive
-
-We use [Dareboost](https://www.dareboost.com/) to test and improve our work.
-## Contributing
-PR on branch develop please
-
-## Main differences with Classic Theme
-### Performance
-With the same server (gzip, PrestaShop performance settings properly adjusted)
-- CSS: from 80 Ko (with Classic theme) to 33 Ko
-- JS: 155 Ko (with Classic theme) to 86 Ko
-
-You can also see the web quality and performance comparison report on [Dareboost](https://www.dareboost.com/en/comparison/d_5b51dc70e967906045fd3683/d_5b51dc70e967906045fd3684)
-### Twitter Bootstrap 4.3.x
-
-- Almost all tpl files are edited to use new BS classes (ex: col-xs-12 => col-12)
-- For retrocompatibility and third modules, we keep some important old classes in bs_alpha.scss
-- Scss variables are split in 2 files: 1 file for overriding default Twitter Bootstrap variables and 1 file for custom scss variables for Classic Rocket theme (ex: $regular-price-font-size)
-- Only usefull BS plugin are added individually in _dev/theme.js (carousel and scrollspy are not loaded).
-
-
-### New Js files
-- [Lazysizes](https://github.com/aFarkas/lazysizes) is a fast, SEO-friendly and self-initializing lazyloader for images
-- [Slick Carousel](http://kenwheeler.github.io/slick/) is used for homepage slider and product images in product detail page; it's ligther than owl carousel and offers a lots of interesting features (touch, responsive options, data attribute settings)
-- [HoverIntent](https://github.com/briancherne/jquery-hoverIntent) is a plug-in that attempts to determine the user's intent (for main menu)
-
-
-### Js file deleted (in _dev folder)
-- tether.js (we use popper with last version of BS)
-- velocity.js (we use slick)
-- bootstrap-filestyle.min.js (BS provide a custom file input)
-- drop-down.js (done with BS dropdown)
-- product-miniature.js (done with css)
-- product-select.js (we use slick)
-- jquery.scrollbox.min.js
-
-
-### New module(s)
-- ps_searchbarjqauto (for use jQuery autoComplete v1.0.7 )
-
-### New smarty blocks
-- layoutWrapperClass
-- contentWrapperClass
-- pageHeaderClass
-- pageContentClass
-- pageFooterClass
-
-### New image sizes
-We use srcset in product-cover-thumbnails.tpl for responsive images.
-
-    pdt_180:
-      width: 180
-      height: 180
-      scope: [products]
-    pdt_300:
-      width: 300
-      height: 300
-      scope: [products]
-    pdt_360:
-      width: 360
-      height: 360
-      scope: [products]
-    pdt_540:
-      width: 540
-      height: 540
-      scope: [products]
-
-## SEO
-- Better pagination with link rel next/prev (in templates/_partials/pagination-seo.tpl)
-- name="robots" content="none" for ordered listing page
-- Open Graph and JSON-LD structured data (in templates/_partials/microdata-jsonld.tpl)
-- font load from Google (in templates/_partials/font.tpl)
-
-## Offcanvas menu
-We simply extend bootstrap modal with custom class:
-- .modal-dialog__offcanvas class in modal-dialog
-- add .modal-dialog__offcanvas--right for right offcanvas
-
-```html
-<!-- Button trigger offcanvas -->
-<button type="button" id="search_filter_toggler" class="btn btn-secondary d-md-none" data-target="#offcanvas_search_filter" data-toggle="modal">
-Filter
-</button>
-<!-- Modal Offcanvas-->
-<div class="modal fade" id="offcanvas_search_filter" tabindex="-1" role="dialog" data-modal-hide-mobile>
-    <div class="modal-dialog modal-dialog__offcanvas modal-dialog__offcanvas--right" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div id="_mobile_search_filters_wrapper"></div>
-            </div>
-        </div>
-    </div>
-</div>
-```
+## What's new in v4
+- New design
+- offcanvas add to cart
+- new my account pages
+- new heading checkout
+- no more material icons => inline svg [BS icons](https://icons.getbootstrap.com/)
+- small js optimizations : use debouncedresize vs window resize, modernizr for detect slow/fast connection
+- **BEMIT** for CSS architecture
+- new module : [prestarockettheme](https://github.com/prestarocket-agence/prestarockettheme) :
+    - svg logo
+    - show subcategories option
+    - my account page option
+    - product page layout option
+- more smarty blocks
+- replace Slick Slider with [Glider.js](https://nickpiscitelli.github.io/Glider.js/)
+## Classic rocket v4 installation
+- add manually ps_searchbarjqauto and prestarockettheme modules in modules folder
+## Todo in v4
+- refacto modules : menu, image slider home page, product comments...
+- test Bootstrap 5
+- documentation (how to use scss settings, override css component, child theme example etc..)
 
 ## Compatibility
 PrestaShop 1.7.3.2 to 1.7.6.x
-
-## Download
-- [classic-rocket](https://github.com/PrestaShop/classic-rocket/releases)
-
-## Getting started with developing
-
-We have a `docker-compose.yml` file which helps you get started. Just install [docker-compose](https://docs.docker.com/compose/install/) and fire up your dev environment up with:
-
-```
-docker-compose up
-```
-
-NOTE: the first start will take a while as it fetches the required images and installs a new shiny prestashop for you.
-
-After you see something like this in the console
-```
-classic-rocket                | [Wed Mar 10 18:10:46.027329 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
-```
-
-You are ready to open http://localhost/ on your machine. This will show you prestashop version `1.7.7.2` with the classic-rocket theme already activated.
-
-This is also the perfect way to test any problems you have with the theme. If you can replicate your problem with the provided docker environment fixing the problem becomes much easier. Please remember to provide steps on how to replicate the problem when writing new issues.
-
-### Next steps
-
-Now that you have your dev environment up and running you can start making changes
-
-in `_dev` folder make your changes and run
-
-```
-npm install --also=dev
-npm run build
-```
-
-And test your changes. Remember to make pull requests against `develop` branch.
-
-Admin can be accessed with: http://localhost/admin-dev/ and the default username is `admin@example.com` and password is `admin`
-
-Of course you can also install your own environment the way you wish.
-
-## Misc
-You can also use gulp to work faster during development (gulpfile.js => gulp watch)
-
-## To do (you can help!):
-- test rtl
-- more BEM
-- add more custom scss variables
-- more data in jsonld
-- PWA
