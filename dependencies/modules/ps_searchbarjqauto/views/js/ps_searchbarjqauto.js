@@ -23,6 +23,7 @@ $(document).ready(function () {
                 '</div>';
         },
         onSelect: function (e, term, item) {
+            e.preventDefault();
             window.location.href = item.data('url');
         }
     });
