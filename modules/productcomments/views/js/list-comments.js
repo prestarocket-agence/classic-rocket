@@ -51,9 +51,30 @@ jQuery(document).ready(function () {
     reportCommentPostErrorModal.modal('show');
   }
 
+  // Productcomments 4.2.1 and newer return json. older return html string
+  // which is parsed, helper method for checking if the response is json and
+  // should not be parsed
+  function isJson(str) {
+    if (typeof str !== 'string') return false;
+    try {
+        const result = JSON.parse(str);
+        const type = Object.prototype.toString.call(result);
+        return type === '[object Object]'
+            || type === '[object Array]';
+    } catch (err) {
+        return false;
+    }
+  }
+
+
   function paginateComments(page) {
     $.get(commentsListUrl, {page: page}, function(result) {
-      const jsonResponse = JSON.parse(result);
+      let jsonResponse;
+      if(isJson(result)) {
+        jsonResponse = JSON.parse(result);
+      } else {
+        jsonResponse = result;
+      }
       if (jsonResponse.comments && jsonResponse.comments.length > 0) {
         populateComments(jsonResponse.comments);
         if (jsonResponse.comments_nb > jsonResponse.comments_per_page) {
@@ -130,10 +151,11 @@ jQuery(document).ready(function () {
 
   function updateCommentUsefulness($comment, commentId, usefulness) {
     $.post(updateCommentUsefulnessUrl, {id_product_comment: commentId, usefulness: usefulness}, function(jsonResponse){
-      var jsonData = false;
-      try {
-        jsonData = JSON.parse(jsonResponse);
-      } catch (e) {
+      let jsonData;
+      if(isJson(jsonResponse)) {
+         jsonData = JSON.parse(jsonResponse);
+      } else {
+         jsonData = jsonResponse;
       }
       if (jsonData) {
         if (jsonData.success) {
@@ -158,10 +180,11 @@ jQuery(document).ready(function () {
         return;
       }
       $.post(reportCommentUrl, {id_product_comment: commentId}, function(jsonResponse){
-        var jsonData = false;
-        try {
+        let jsonData;
+        if(isJson(jsonResponse)) {
           jsonData = JSON.parse(jsonResponse);
-        } catch (e) {
+        } else {
+          jsonData = jsonResponse;
         }
         if (jsonData) {
           if (jsonData.success) {

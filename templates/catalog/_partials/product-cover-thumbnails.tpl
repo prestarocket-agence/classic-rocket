@@ -28,16 +28,16 @@
   <div class="products-imagescover mb-2" data-slick='{literal}{"asNavFor":"[data-slick].product-thumbs","rows": 0,"slidesToShow": 1,"arrows":false}{/literal}' data-count="{$product.images|count}">
    <div class="product-img">
        <div class="">
-           {if $product.cover}
+           {if $product.default_image}
 
            <img class="img-fluid"
-         srcset="{$product.cover.bySize.medium_default.url} 452w,
-           {$product.cover.bySize.pdt_180.url} 180w,
-           {$product.cover.bySize.pdt_300.url} 300w,
-           {$product.cover.bySize.pdt_360.url} 360w,
-           {$product.cover.bySize.pdt_540.url} 540w"
-         src="{$product.cover.bySize.medium_default.url}"
-         alt="{$product.cover.legend}" title="{$product.cover.legend}">
+         srcset="{$product.default_image.bySize.medium_default.url} 452w,
+           {$product.default_image.bySize.pdt_180.url} 180w,
+           {$product.default_image.bySize.pdt_300.url} 300w,
+           {$product.default_image.bySize.pdt_360.url} 360w,
+           {$product.default_image.bySize.pdt_540.url} 540w"
+         src="{$product.default_image.bySize.medium_default.url}"
+         alt="{$product.default_image.legend}" title="{$product.default_image.legend}">
            {elseif isset($urls.no_picture_image)}
            <img class="img-fluid" src="{$urls.no_picture_image.bySize.large_default.url}">
            {else}
@@ -47,25 +47,25 @@
 
 
         <noscript>
-            <img class="img-fluid" src="{$product.cover.bySize.medium_default.url}" alt="{$product.cover.legend}">
+            <img class="img-fluid" src="{$product.default_image.bySize.medium_default.url}" alt="{$product.default_image.legend}">
         </noscript>
        </div>
    </div>
 
       {foreach from=$product.images item=image name="images"}
-          {if $image.id_image != $product.cover.id_image}
+          {if $image.id_image != $product.default_image.id_image}
 
       <div class="product-img">
           <div class="rc">
               <img
                       class="img-fluid lazyload"
-                      {if !$smarty.foreach.images.first && !$product.cover}data-sizes="auto"{/if}
-                      {if !$smarty.foreach.images.first && !$product.cover}data-{/if}srcset="{$image.bySize.medium_default.url} 452w,
+                      {if !$smarty.foreach.images.first && !$product.default_image}data-sizes="auto"{/if}
+                      {if !$smarty.foreach.images.first && !$product.default_image}data-{/if}srcset="{$image.bySize.medium_default.url} 452w,
                    {$image.bySize.pdt_180.url} 180w,
                    {$image.bySize.pdt_300.url} 300w,
                    {$image.bySize.pdt_360.url} 360w,
                    {$image.bySize.pdt_540.url} 540w"
-                      {if !$smarty.foreach.images.first && !$product.cover}data-{/if}src="{$image.bySize.medium_default.url}"
+                      {if !$smarty.foreach.images.first && !$product.default_image}data-{/if}src="{$image.bySize.medium_default.url}"
                       alt="{$image.legend}"
                       title="{$image.legend}">
               <noscript>
@@ -76,7 +76,7 @@
           {/if}
       {/foreach}
   </div>
-      {if $product.cover}
+      {if $product.default_image}
       <button type="button" class="btn btn-link btn-zoom visible-desktop product-layer-zoom" data-toggle="modal" data-target="#product-modal">
           <i class="material-icons zoom-in">&#xE8FF;</i>
       </button>
@@ -91,14 +91,14 @@
               <div class="rc">
                   <img
                       class="thumb js-thumb lazyload img-fluid"
-                      data-src="{$product.cover.bySize.small_default.url}"
-                      alt="{$product.cover.legend}" title="{$product.cover.legend}"
+                      data-src="{$product.default_image.bySize.small_default.url}"
+                      alt="{$product.default_image.legend}" title="{$product.default_image.legend}"
 
               >
               </div>
           </div>
           {foreach from=$product.images item=image}
-              {if $image.id_image != $product.cover.id_image}
+              {if $image.id_image != $product.default_image.id_image}
           <div class="product-thumb">
               <div class="rc">
               <img

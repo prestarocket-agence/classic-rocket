@@ -100,7 +100,7 @@ module.exports = (env, argv) => {
                     }
                 },
                 {
-                    test: /\.(png|jp(e)g|gif|svg|webp)$/,
+                    test: /\.(png|jpe?g|gif|svg|webp)$/,
                     use: [
                         {
                             loader: 'file-loader',
@@ -158,7 +158,14 @@ module.exports = (env, argv) => {
                         }
                     }
                 }),
-                new OptimizeCSSAssetsPlugin({})
+                new OptimizeCSSAssetsPlugin({
+                    cssProcessorOptions: {
+                        map: {
+                            annotation: true,
+                            inline: IS_DEV
+                        }
+                    }
+               }),
             ]
         },
         plugins: [

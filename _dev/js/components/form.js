@@ -79,6 +79,8 @@ export default class Form {
                            divToScroll = _parent;
                        }
                   });
+                  $(this).data('disabled', false);
+                  $('button[type="submit"]', form).removeClass('disabled');
               }
               form.classList.add('was-validated');
               if(divToScroll){
