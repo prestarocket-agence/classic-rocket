@@ -1,6 +1,6 @@
 name: classic-rocket
 display_name: Classic Rocket
-version: 3.0.4
+version: 3.1.0
 author:
   name: "Prestarocket"
   email: "contact@prestarocket.com"
@@ -8,7 +8,7 @@ author:
 
 meta:
   compatibility:
-      from: 1.7.6.5
+      from: 1.7.7.x
       to: ~
 
   available_layouts:
