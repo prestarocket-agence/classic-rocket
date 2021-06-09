@@ -29,18 +29,24 @@ function setUpCheckout() {
 
   $('.js-terms a').on('click', (event) => {
     event.preventDefault();
+    let $modal = $('#modal');
     var url = $(event.target).attr('href');
     if (url) {
       // TODO: Handle request if no pretty URL
       url += `?content_only=1`;
       $.get(url, (content) => {
-        $('#modal').find('.js-modal-content').html($(content).find('.page-content--cms').contents());
+        $modal.find('.js-modal-content').html($(content).find('.page-content--cms').contents());
+        if (!$modal.hasClass('show')) {
+          $modal.modal('show');
+        }
       }).fail((resp) => {
         prestashop.emit('handleError', {eventType: 'clickTerms', resp: resp});
       });
     }
 
-    $('#modal').modal('show');
+    if ($modal.find('.js-modal-content').html()) {
+      $modal.modal('show');
+    }
   });
 
   $('.js-gift-checkbox').on('click', (event) => {
