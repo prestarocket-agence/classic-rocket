@@ -1,17 +1,12 @@
 /* ----------------------- */
-
 /*    TABLE OF CONTENTS    */
-
 /* ----------------------- */
 
 /*
 /* SETTINGS */
 @import "node_modules/bootstrap/scss/functions";
-
 @import "./settings/settings.colors";
 @import "./settings/settings.bootstrap";
-
-
 @import "node_modules/bootstrap/scss/variables";
 
 @import "../../../classic-rocket/_dev/css/settings/settings.alert";
@@ -31,7 +26,6 @@
 @import "../../../classic-rocket/_dev/css/settings/settings.tags";
 @import "../../../classic-rocket/_dev/css/settings/settings.touchspin";
 @import "./settings/settings.project";
-
 
 /*
 /*
@@ -120,7 +114,6 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.offcanvas";
 @import "../../../classic-rocket/_dev/css/components/components.pagination";
 @import "node_modules/bootstrap/scss/pagination";
-
 @import "../../../classic-rocket/_dev/css/components/components.panel";
 @import "node_modules/bootstrap/scss/popover";
 @import "../../../classic-rocket/_dev/css/components/components.prices";
@@ -137,9 +130,8 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.touchspin";
 @import "node_modules/bootstrap/scss/transitions";
 
-
+//Custom project components
 @import "./components/components.project";
-
 
 /*
 /*
@@ -168,8 +160,5 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/utilities/utilities.visible";
 
 //if you want to include BS utlities (not recommanded), uncomment this following line
+//@import "node_modules/bootstrap/scss/utilities";
 
-/*
-@import "node_modules/bootstrap/scss/utilities";
-
-*/
