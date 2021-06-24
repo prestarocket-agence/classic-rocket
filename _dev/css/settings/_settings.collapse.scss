@@ -1,12 +1,13 @@
-$collapse-border-color: $border-color !default;
+// *** Collapse ***
 
+$collapse-border-color:         $border-color !default;
 
 //btn collapse product section (usefull if product page with collapse layout)
-$pdt-btn-collapse-padding-x: null !default;
-$pdt-btn-collapse-padding-y: null !default;
-$pdt-btn-collapse-color : $black !default;
-$pdt-btn-collapse-color-hover: null !default;
-$pdt-btn-collapse-font-family : $headings-font-family !default;
-$pdt-btn-collapse-font-size : 1.125 * $font-size-base !default;
-$pdt-btn-collapse-font-weight : $font-weight-bold !default;
-$pdt-btn-collapse-border-color : $border-color !default;
+$pdt-btn-collapse-padding-x:    null !default;
+$pdt-btn-collapse-padding-y:    null !default;
+$pdt-btn-collapse-color:        $black !default;
+$pdt-btn-collapse-color-hover:  null !default;
+$pdt-btn-collapse-font-family:  $headings-font-family !default;
+$pdt-btn-collapse-font-size:    1.125 * $font-size-base !default;
+$pdt-btn-collapse-font-weight:  $font-weight-bold !default;
+$pdt-btn-collapse-border-color: $border-color !default;

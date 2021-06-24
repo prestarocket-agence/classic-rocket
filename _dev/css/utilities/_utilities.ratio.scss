@@ -1,40 +1,51 @@
-
-.u-rc{
+//Ratio image
+.u-rc {
   position: relative;
-  width: 100%;
+  width:    100%;
 }
+
 .u-rc > img,
 .u-rc > picture {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  bottom:   0;
+  left:     0;
+  width:    100%;
+  height:   100%;
 }
+
 .u-rc > a {
   display: block;
 }
-.u-rc--2_1{
+
+.u-rc--2_1 {
   padding-top: 50%;
 }
-.u-rc--1_2{
+
+.u-rc--1_2 {
   padding-top: 200%;
 }
-.u-rc--4_3{
+
+.u-rc--4_3 {
   padding-top: 75%;
 }
-.u-rc--3_4{
+
+.u-rc--3_4 {
   padding-top: percentage(1-(4/3));
 }
-.u-rc--16_9{
+
+.u-rc--16_9 {
   padding-top: percentage(9/16);
 }
-.u-rc--1_1{
+
+.u-rc--1_1 {
   padding-top: 100%;
 }
-.u-rc--3_2{
-  padding-top: percentage(1-(2/3));
+
+.u-rc--3_2 {
+  padding-top: percentage(2/3);
 }
-.u-rc--pdt{
+
+//Product img square
+.u-rc--pdt {
   @extend .u-rc--1_1;
 }

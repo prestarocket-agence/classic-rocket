@@ -1,139 +1,145 @@
 /* Override Bootstrap settings
   ========================================================================== */
 
-$enable-responsive-font-sizes : true !default;
+$enable-responsive-font-sizes:     true !default;
 
 /**
 * Enable grid classes
 */
 
-$enable-grid-classes: false !default;
+$enable-grid-classes:              false !default;
 
 /**
 * Colors
 */
-$body-color: #000 !default;
+$body-color:                       #000 !default;
 
-$primary: #007bff !default;
-$secondary: #ecedee !default;
-$dark: #595959 !default;
+$primary:                          #007bff !default;
+$secondary:                        #ecedee !default;
+
+$white:                            #fff !default;
+$gray-light:                       #ecedee !default;
+$gray:                             #b3b3b3 !default;
+$dark:                             #595959 !default;
+$black:                            #000 !default;
+
+$red:                              #e02020 !default;
 
 /**
 * Spacing
 **/
-$spacer: 1rem !default;
+$spacer:                           1rem !default;
 
 /**
 * Typography
  */
 
-$font-family-sans-serif:      roboto, -apple-system, blinkmacsystemfont, "Segoe UI", "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-base:            $font-family-sans-serif !default;
+$font-family-sans-serif:           roboto, -apple-system, blinkmacsystemfont, "Segoe UI", "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-base:                 $font-family-sans-serif !default;
 
-$font-size-base:              1rem;
-$font-size-sm:              $font-size-base * (14/16) !default;
+$font-size-base:                   1rem;
+$font-size-sm:                     $font-size-base * (14/16) !default;
 
-$h1-font-size:                $font-size-base * 2.75 !default;
-$h2-font-size:                $font-size-base * 1.75 !default;
-$h3-font-size:                $font-size-base * 1.5 !default;
-$h4-font-size:                $font-size-base * 1.25 !default;
-$h5-font-size:                $font-size-base * 1.125 !default;
-$h6-font-size:                $font-size-base !default;
+$h1-font-size:                     $font-size-base * 2.75 !default;
+$h2-font-size:                     $font-size-base * 1.75 !default;
+$h3-font-size:                     $font-size-base * 1.5 !default;
+$h4-font-size:                     $font-size-base * 1.25 !default;
+$h5-font-size:                     $font-size-base * 1.125 !default;
+$h6-font-size:                     $font-size-base !default;
 
-$headings-font-weight:        700 !default;
+$headings-font-weight:             700 !default;
 
-$lead-font-size:              $font-size-base * 1.25 !default;
-$lead-font-weight:            400 !default;
+$lead-font-size:                   $font-size-base * 1.25 !default;
+$lead-font-weight:                 400 !default;
 
-$small-font-size:             $font-size-base * .875 !default;
-$extra-small-font-size:       $font-size-base * .75 !default;
+$small-font-size:                  $font-size-base * .875 !default;
+$extra-small-font-size:            $font-size-base * .75 !default;
 
 /**
 * Checkbox
  */
 
 //$custom-checkbox-indicator-border-radius:       0;
-$component-active-bg:         $primary !default;
-$stretched-link-z-index:  1;
+$component-active-bg:              $primary !default;
+$stretched-link-z-index:           1;
 // Buttons + Forms
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
-$input-btn-focus-width:         .25rem !default;
-$input-btn-focus-color-opacity: .25 !default;
+$input-btn-focus-width:            .25rem !default;
+$input-btn-focus-color-opacity:    .25 !default;
 
-$input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity) !default;
+$input-btn-focus-color:            rgba($component-active-bg, $input-btn-focus-color-opacity) !default;
 
-$input-btn-focus-box-shadow:    0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
-
+$input-btn-focus-box-shadow:       0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
 
 /*
 Breadcrumb
 */
-$breadcrumb-font-size : $font-size-sm !default;
+$breadcrumb-font-size:             $font-size-sm !default;
 
-$breadcrumb-padding-y:              null !default;
-$breadcrumb-padding-x:              null !default;
+$breadcrumb-padding-y:             null !default;
+$breadcrumb-padding-x:             null !default;
 
-$breadcrumb-margin-bottom:          2rem !default;
+$breadcrumb-margin-bottom:         2rem !default;
 
-$breadcrumb-bg:                      transparent !default;
+$breadcrumb-bg:                    transparent !default;
 
-$breadcrumb-border-radius:          null !default;
+$breadcrumb-border-radius:         null !default;
 
 
-$offcanvas-width: 500px !default;
+$offcanvas-width:                  500px !default;
 
 
 // Close
 
-$btn-close-width:            1em !default;
-$btn-close-height:           $btn-close-width !default;
-$btn-close-padding-x:        .25em !default;
-$btn-close-padding-y:        $btn-close-padding-x !default;
-$btn-close-color:            $black !default;
-$btn-close-bg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>") !default;
-$btn-close-focus-shadow:     $input-btn-focus-box-shadow !default;
-$btn-close-opacity:          null !default;
-$btn-close-hover-opacity:    .75 !default;
-$btn-close-focus-opacity:    1 !default;
-$btn-close-disabled-opacity: .25 !default;
-$btn-close-white-filter:     invert(1) grayscale(100%) brightness(200%) !default;
+$btn-close-width:                  1em !default;
+$btn-close-height:                 $btn-close-width !default;
+$btn-close-padding-x:              .25em !default;
+$btn-close-padding-y:              $btn-close-padding-x !default;
+$btn-close-color:                  $black !default;
+$btn-close-bg:                     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>") !default;
+$btn-close-focus-shadow:           $input-btn-focus-box-shadow !default;
+$btn-close-opacity:                null !default;
+$btn-close-hover-opacity:          .75 !default;
+$btn-close-focus-opacity:          1 !default;
+$btn-close-disabled-opacity:       .25 !default;
+$btn-close-white-filter:           invert(1) grayscale(100%) brightness(200%) !default;
 
 
 //Pagination
 
 // Pagination
 
-$pagination-padding-y:              .5rem !default;
-$pagination-padding-x:              .75rem !default;
-$pagination-padding-y-sm:           .25rem !default;
-$pagination-padding-x-sm:           .5rem !default;
-$pagination-padding-y-lg:           .75rem !default;
-$pagination-padding-x-lg:           1.5rem !default;
-$pagination-line-height:            1.25 !default;
+$pagination-padding-y:             .5rem !default;
+$pagination-padding-x:             .75rem !default;
+$pagination-padding-y-sm:          .25rem !default;
+$pagination-padding-x-sm:          .5rem !default;
+$pagination-padding-y-lg:          .75rem !default;
+$pagination-padding-x-lg:          1.5rem !default;
+$pagination-line-height:           1.25 !default;
 
-$pagination-color:                  $black !default;
-$pagination-bg:                     $white !default;
-$pagination-border-width:           0 !default;
-$pagination-border-color:           $white !default;
+$pagination-color:                 $black !default;
+$pagination-bg:                    $white !default;
+$pagination-border-width:          0 !default;
+$pagination-border-color:          $white !default;
 
-$pagination-focus-box-shadow:       0 !default;
-$pagination-focus-outline:          0 !default;
+$pagination-focus-box-shadow:      0 !default;
+$pagination-focus-outline:         0 !default;
 
-$pagination-hover-color:            $black !default;
-$pagination-hover-bg:               $white !default;
-$pagination-hover-border-color:     $white !default;
+$pagination-hover-color:           $black !default;
+$pagination-hover-bg:              $white !default;
+$pagination-hover-border-color:    $white !default;
 
-$pagination-active-color:           $black !default;
-$pagination-active-bg:              $white !default;
-$pagination-active-border-color:    $white !default;
+$pagination-active-color:          $black !default;
+$pagination-active-bg:             $white !default;
+$pagination-active-border-color:   $white !default;
 
-$pagination-disabled-color:         $black !default;
-$pagination-disabled-bg:            $white !default;
-$pagination-disabled-border-color:  $black !default;
+$pagination-disabled-color:        $black !default;
+$pagination-disabled-bg:           $white !default;
+$pagination-disabled-border-color: $black !default;
 
 
 // Forms
-$form-group-margin-bottom:              1.25rem !default;
-$label-margin-bottom: .25rem !default;
+$form-group-margin-bottom:         1.25rem !default;
+$label-margin-bottom:              .25rem !default;

@@ -1,5 +1,4 @@
-// Sizes
-
+//Hn font
 .u-h1 {
   @extend h1;
 }
@@ -24,6 +23,7 @@
   @extend h6;
 }
 
+//Body font
 .u-txt-lead {
   @extend .lead;
 }
@@ -38,8 +38,7 @@
   font-size: $extra-small-font-size;
 }
 
-// Transformation
-
+//Transformation
 [class].u-txt-lowercase {
   text-transform: lowercase;
 }
@@ -52,15 +51,20 @@
   text-transform: capitalize;
 }
 
-//font family
+//Font family
 [class].u-font-heading {
   font-family: $headings-font-family;
 }
 
-
 // Weight and italics
-//[class].u-font-weight-light   { font-weight: $font-weight-light}
-//[class].u-font-weight-lighter { font-weight: $font-weight-lighter}
+//[class].u-font-weight-light {
+//  font-weight: $font-weight-light
+//}
+
+//[class].u-font-weight-lighter {
+//  font-weight: $font-weight-lighter
+//}
+
 [class].u-font-weight-normal {
   font-weight: $font-weight-normal;
 }
@@ -69,23 +73,25 @@
   font-weight: $font-weight-bold;
 }
 
-//[class].u-font-weight-bolder  { font-weight: $font-weight-bolder}
+//[class].u-font-weight-bolder {
+//  font-weight: $font-weight-bolder
+//}
+
 [class].u-font-italic {
   font-style: italic;
 }
 
-//line height
+//Line height
 [class].u-lh-1 {
   line-height: 1;
 }
 
-//State
+//Align
 .u-txt-center {
   text-align: center;
 }
 
 //Colors
-
 .u-txt-primary {
   color: $primary;
 }

@@ -1,42 +1,39 @@
 // *** TOP HEADER ***
-
-$topheader-font-size: $small-font-size !default;
-$topheader-font-family: $font-family-base !default;
-$topheader-color: $black !default;
-$topheader-bg-color: $gray-light !default;
+$topheader-font-size:                      $small-font-size !default;
+$topheader-font-family:                    $font-family-base !default;
+$topheader-color:                          $black !default;
+$topheader-bg-color:                       $gray-light !default;
 
 // *** HEADER ***
-
-$header-bg: null !default;
-$header-border-width: 1px !default;
-$header-border-color: $secondary !default;
+$header-bg:                                null !default;
+$header-border-width:                      1px !default;
+$header-border-color:                      $secondary !default;
 
 // *** SHORTCUTS ***
-
 //Icon
-$header-shortcut-icon-color: $black !default;
-$header-shortcut-icon-size: 28px !default;
+$header-shortcut-icon-color:               $black !default;
+$header-shortcut-icon-size:                28px !default;
 
 //Link
-$header-shortcut-color: $black !default;
-$header-shortcut-font-size: $font-size-base !default;
-$header-shortcut-font-family: $font-family-base !default;
+$header-shortcut-color:                    $black !default;
+$header-shortcut-font-size:                $font-size-base !default;
+$header-shortcut-font-family:              $font-family-base !default;
 
-$header-shortcut-color-hover: $black !default;
+$header-shortcut-color-hover:              $black !default;
 
 //Customer
-$header-shortcut-customer-color: $dark !default;
-$header-shortcut-customer-font-size: $extra-small-font-size !default;
+$header-shortcut-customer-color:           $dark !default;
+$header-shortcut-customer-font-size:       $extra-small-font-size !default;
 
 //Cart
-$header-shortcut-cart-count-width: $spacer*1.5 !default;
-$header-shortcut-cart-count-height: $spacer*1.5 !default;
+$header-shortcut-cart-count-width:         $spacer*1.5 !default;
+$header-shortcut-cart-count-height:        $spacer*1.5 !default;
 $header-shortcut-cart-count-padding-right: $header-shortcut-cart-count-width / 2 !default;
-$header-shortcut-cart-count-top: -50% !default;
-$header-shortcut-cart-count-right: 0 !default;
+$header-shortcut-cart-count-top:           -50% !default;
+$header-shortcut-cart-count-right:         0 !default;
 
-$header-shortcut-cart-count-font-size: $extra-small-font-size !default;
-$header-shortcut-cart-count-font-weight: $font-weight-normal !default;
+$header-shortcut-cart-count-font-size:     $extra-small-font-size !default;
+$header-shortcut-cart-count-font-weight:   $font-weight-normal !default;
 
-$header-shortcut-cart-count-bg: $black !default;
-$header-shortcut-cart-count-color: $white !default;
+$header-shortcut-cart-count-bg:            $black !default;
+$header-shortcut-cart-count-color:         $white !default;

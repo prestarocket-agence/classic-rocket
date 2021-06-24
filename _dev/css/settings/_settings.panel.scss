@@ -1,37 +1,33 @@
 // *** PANEL BASE ***
-
 //Spacing
-$panel-padding-x: $spacer*1.5 !default;
-$panel-padding-y: $panel-padding-x !default;
-$panel-margin-bottom: $spacer !default;
+$panel-padding-x:             $spacer*1.5 !default;
+$panel-padding-y:             $panel-padding-x !default;
+$panel-margin-bottom:         $spacer !default;
 
 //Colors
-$panel-bg: $white !default;
-
+$panel-bg:                    $white !default;
 
 // *** PANEL MODIFIERS ***
-
 //Small size
-$panel-sm-padding-x: $spacer !default;
-$panel-sm-padding-y:  $spacer !default;
+$panel-sm-padding-x:          $spacer !default;
+$panel-sm-padding-y:          $spacer !default;
 
 //Long size
-$panel-lg-padding-x: $spacer*1.5 !default;
-$panel-lg-padding-y:  $spacer*2 !default;
+$panel-lg-padding-x:          $spacer*1.5 !default;
+$panel-lg-padding-y:          $spacer*2 !default;
 
 //Restricted width
-$panel-max-width: 600px !default;
+$panel-max-width:             600px !default;
 
 //Bordered
-$panel-border-width: 1px !default;
-$panel-border-color: $gray-light !default;
-$panel-border-radius: $border-radius !default;
+$panel-border-width:          1px !default;
+$panel-border-color:          $gray-light !default;
+$panel-border-radius:         $border-radius !default;
 
 
 // *** PANEL HEADER ***
-
 $panel-header-padding-bottom: $spacer !default;
-$panel-header-margin-bottom: $spacer*2 !default;
+$panel-header-margin-bottom:  $spacer*2 !default;
 
-$panel-header-border-width: $panel-border-width !default;
-$panel-header-border-color: $panel-border-color !default;
+$panel-header-border-width:   $panel-border-width !default;
+$panel-header-border-color:   $panel-border-color !default;

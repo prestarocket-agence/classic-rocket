@@ -1,7 +1,17 @@
+//Flex
+.u-flex-1 {
+  flex: 1;
+}
+
+.u-flex-wrap {
+  flex-wrap: wrap;
+}
+
 .u-flex-column {
   flex-direction: column;
 }
 
+//Justify-content
 .u-justify-content-center {
   justify-content: center;
 }
@@ -14,6 +24,7 @@
   justify-content: flex-end;
 }
 
+//Align-items
 .u-align-items-center {
   align-items: center;
 }
@@ -24,44 +35,4 @@
 
 .u-align-items-end {
   align-items: flex-end;
-}
-
-/* Orders
-  ========================================================================== */
-
-$orders: 0, 1;
-@each $order in $orders {
-  .u-order-#{$order} {
-    order: $order;
-  }
-}
-
-$orders-mobile: 0,1, 2;
-@include media-breakpoint-mobile () {
-  @each $order-mobile in $orders-mobile {
-    .u-order-#{$order-mobile}\@mobile {
-      order: $order-mobile;
-    }
-  }
-}
-
-//$order-suffixes: '', 'sm', 'md', 'lg';
-//$order-positions: 0, 1, 2;
-//
-//@each $order-suffix in $order-suffixes {
-//  @include media-breakpoint-down($order-suffix) {
-//    @each $order-position in $order-positions {
-//      .u-order-#{$order-suffix}-#{$order-position} {
-//        order: $order-position;
-//      }
-//    }
-//  }
-//}
-
-.u-flex-1 {
-  flex: 1;
-}
-
-.u-flex-wrap {
-  flex-wrap: wrap;
 }
