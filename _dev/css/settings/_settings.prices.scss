@@ -17,12 +17,28 @@ $price-old-font-weight:         $font-weight-bold !default;
 $price-old-color:               $dark !default;
 $price-old-line-height:         null !default;
 
+
+// *** Small ***
 //Size sm
 $price-sm-font-size:            $font-size-base*.875 !default;
 $price-sm-font-weight:          null !default;
 $price-sm-line-height:          null !default;
 $price-sm-color:                null !default;
 
+//Discount sm
+$price-sm-discount-font-size:   null !default;
+$price-sm-discount-font-weight: null !default;
+$price-sm-discount-line-height: null !default;
+$price-sm-discount-color:       null !default;
+
+//Old sm
+$price-sm-old-font-size:        null !default;
+$price-sm-old-font-weight:      null !default;
+$price-sm-old-color:            null !default;
+$price-sm-old-line-height:      null !default;
+
+
+// *** Large ***
 //Size lg
 $price-lg-font-size:            $font-size-base*1.125 !default;
 $price-lg-font-weight:          null !default;
@@ -33,7 +49,16 @@ $price-lg-color:                null !default;
 $price-lg-discount-font-size:   null !default;
 $price-lg-discount-font-weight: null !default;
 $price-lg-discount-line-height: null !default;
+$price-lg-discount-color:       null !default;
 
+//Old lg
+$price-lg-old-font-size:        null !default;
+$price-lg-old-font-weight:      null !default;
+$price-lg-old-color:            null !default;
+$price-lg-old-line-height:      null !default;
+
+
+// *** Split price ***
 //Decimal (if split price)
 $price-decimal-font-size:       null !default;
 $price-decimal-font-weight:     null !default;
