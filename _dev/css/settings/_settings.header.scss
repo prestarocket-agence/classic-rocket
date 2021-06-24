@@ -13,6 +13,7 @@ $header-border-color:                      $secondary !default;
 //Icon
 $header-shortcut-icon-color:               $black !default;
 $header-shortcut-icon-size:                28px !default;
+$header-shortcut-icon-line-height:         1 !default;
 
 //Link
 $header-shortcut-color:                    $black !default;
@@ -37,3 +38,4 @@ $header-shortcut-cart-count-font-weight:   $font-weight-normal !default;
 
 $header-shortcut-cart-count-bg:            $black !default;
 $header-shortcut-cart-count-color:         $white !default;
+$header-shortcut-cart-count-radius:        50% !default;
