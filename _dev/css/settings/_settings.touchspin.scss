@@ -1,4 +1,4 @@
-// ***** CONTAINER *****
+// *** TOUCHSPIN CONTAINER ***
 //Size
 $touchspin-width:              null !default;
 $touchspin-padding-x:          null !default;
@@ -13,7 +13,7 @@ $touchspin-border-color:       $gray-light !default;
 $touchspin-border-width:       1px !default;
 $touchspin-radius:             4px !default;
 
-// ***** INPUT ***** (quantity)
+// *** INPUT *** (quantity)
 //Size
 $touchspin-input-width:        $font-size-base*2.5 !default;
 $touchspin-input-height:       null !default;
@@ -36,7 +36,7 @@ $touchspin-input-radius:       null !default;
 //Orders
 $touchspin-input-order:        null !default;
 
-// ***** BUTTONS ***** (minus & plus)
+// *** BUTTONS *** (minus & plus)
 //Sizes
 $touchspin-btn-width:          24px !default;
 $touchspin-btn-height:         24px !default;

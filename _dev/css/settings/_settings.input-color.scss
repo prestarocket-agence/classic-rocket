@@ -1,5 +1,4 @@
 // ***** INPUT *****
-
 //Sizes
 $input-color-width:                 28px !default;
 $input-color-height:                28px !default;
@@ -13,9 +12,7 @@ $input-color-border-color:          $gray !default;
 $input-color-border-width:          1px !default;
 $input-color-radius:                50% !default;
 
-
 // ***** HOVER *****
-
 //Sizes
 $input-color-hover-width:           $input-color-width + $input-color-margin-x*2 !default;
 $input-color-hover-height:          $input-color-height + $input-color-margin-y*2 !default;
@@ -28,9 +25,7 @@ $input-color-hover-radius:          $input-color-radius !default;
 //Opacity
 $input-color-hover-opacity:         .5 !default;
 
-
 // ***** SELECTED *****
-
 //Sizes
 $input-color-selected-width:        $input-color-width + $input-color-margin-x*2 !default;
 $input-color-selected-height:       $input-color-height + $input-color-margin-y*2 !default;
