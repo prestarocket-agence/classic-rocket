@@ -51,11 +51,6 @@
   max-width: 100%;
 }
 
-//buton for collapse
-.c-pdt__sections--collapse {
-  border-top: 1px solid $pdt-btn-collapse-border-color;
-}
-
 /* see _settings.product.scss */
 .c-pdt__title {
   @include font-size($pdt-name-font-size);
