@@ -92,36 +92,22 @@
 }
 
 //Colors
-.u-txt-primary {
-  color: $primary;
-}
+$txt-colors: (
+        'primary': $primary,
+        'secondary': $secondary,
+        'body': $body-color,
+        'white': $white,
+        'gray': $gray,
+        'dark': $dark,
+        'black': $black,
+        'success': $success,
+        'danger': $danger
+);
 
-.u-txt-secondary {
-  color: $secondary;
-}
-
-.u-txt-body {
-  color: $body-color;
-}
-
-.u-txt-black {
-  color: $black;
-}
-
-.u-txt-white {
-  color: $white;
-}
-
-.u-txt-dark {
-  color: $dark;
-}
-
-.u-txt-gray {
-  color: $gray;
-}
-
-.u-txt-success {
-  color: $success;
+@each $name, $color in $txt-colors {
+  .u-txt-#{$name} {
+    color: $color;
+  }
 }
 
 //Decoration
