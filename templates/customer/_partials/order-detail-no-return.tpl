@@ -51,14 +51,14 @@
                                 <div>
                                     <span class="u-txt-dark">{l s='Quantity' d='Shop.Theme.Catalog'} : </span>
                                     <span>
-                                {if $product.customizations}
-                                    {foreach $product.customizations as $customization}
-                                        {$customization.quantity}
-                                    {/foreach}
-                                {else}
-                                    {$product.quantity}
-                                {/if}
-                            </span>
+                                        {if $product.customizations}
+                                            {foreach $product.customizations as $customization}
+                                                {$customization.quantity}
+                                            {/foreach}
+                                        {else}
+                                            {$product.quantity}
+                                        {/if}
+                                    </span>
                                 </div>
 
                                 {if $product.customizations}
@@ -123,7 +123,7 @@
                 {if $line.value}
                     <div class="o-layout c-cart__row--border line-{$line.type}">
                         <span>{$line.label}</span>
-                        <span>{$line.value}</span>
+                        <span>{$line.value|ucfirst}</span>
                     </div>
                 {/if}
             {/foreach}
