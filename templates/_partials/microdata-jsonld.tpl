@@ -53,7 +53,7 @@
 {elseif $page.page_name === 'category' && isset($category) && $category.image.large.url}
     <meta property="og:image" content="{$category.image.large.url}"/>
 {else}
-    <meta property="og:image" content="{$urls.shop_domain_url}{$shop.logo}"/>
+    <meta property="og:image" content="{$shop.logo}"/>
 {/if}
 <script type="application/ld+json">
 {
