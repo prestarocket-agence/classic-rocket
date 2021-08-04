@@ -50,10 +50,10 @@ $(document).ready(() => {
 // @todo still need ?
   $('.custom-file-input').on('change',function(){
       let fileName = $(this).val().split('\\').pop();
-      $(this).next('.custom-file-label').addClass("selected").html(fileName);
+      $(this).next('.custom-file-label').addClass("selected").text(fileName);
   })
-
 });
+
 document.addEventListener('lazyloaded', function(e){
     $(e.target).parent().addClass('rc--lazyload');
 });
