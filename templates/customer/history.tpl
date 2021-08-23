@@ -55,30 +55,33 @@
                         </div>
                         <div class="u-d-flex">
                             <div class="c-history__img">
+                                {assign var=products value=$order.products}
+                                {assign var=first value=$products|@key}
+                                {assign var=product value=$products|@next}
+                                {assign var=second value=$products|@key}
+
                                 <a href="{$order.details.details_url}">
-                                    {if isset($order.products[0].cover) && $order.products[0].cover}
-                                        <img class="u-img-fluid" src="{$order.products[0].cover.medium.url}"
-                                             alt="{$order.products[0].name}">
+                                    {if isset($products[$first].cover) && $products[$first].cover}
+                                        <img class="u-img-fluid" src="{$products[$first].cover.medium.url}"
+                                             alt="{$products[$first].name}">
                                         {else}
-                                        <img src="{$urls.no_picture_image.bySize.home_default.url}" alt="{$order.products[0].name}"/>
-
+                                        <img class="u-img-fluid" src="{$urls.no_picture_image.bySize.home_default.url}" alt="{$products[$first].name}"/>
                                     {/if}
-
                                 </a>
                             </div>
-                            {if isset($order.products[1].product_id)}
+
+                            {if isset($products[$second].product_id)}
                                 <div class="c-history__img">
                                     <a href="{$order.details.details_url}">
-                                        {if isset($order.products[1].cover) && $order.products[1].cover}
-                                            <img class="u-img-fluid" src="{$order.products[1].cover.medium.url}"
-                                                 alt="{$order.products[1].name}">
+                                        {if isset($products[$second].cover) && $products[$second].cover}
+                                            <img class="u-img-fluid" src="{$products[$second].cover.medium.url}"
+                                                 alt="{$products[$second].name}">
                                         {else}
-                                            <img src="{$urls.no_picture_image.bySize.home_default.url}" alt="{$order.products[1].name}"/>
-
+                                            <img src="{$urls.no_picture_image.bySize.home_default.url}" alt="{$products[$second].name}"/>
                                         {/if}
-                                        {if $order.products|count > 2}
+                                        {if $products|count > 2}
                                             <div class="c-history__img--watermark">
-                                                +{math equation="x - y" x=$order.products|count y=2}
+                                                +{math equation="x - y" x=$products|count y=2}
                                             </div>
                                         {/if}
                                     </a>
