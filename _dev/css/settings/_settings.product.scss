@@ -1,33 +1,32 @@
-//thumb settings
-$thumb-wrap-width: 100% !default;
-$thumb-wrap-margin: $spacer auto $spacer*3 !default;
+//*** PRODUCT PAGE ***
+//Product thumbs
+$thumb-wrap-width:          100% !default;
+$thumb-wrap-margin:         $spacer auto $spacer*3 !default;
 
-$thumb-border-width: 1px !default;
-$thumb-border-color: $border-color !default;
-$thumb-border-radius: null !default;
-$thumb-padding: 8px !default;
-$thumb-width:64px !default;
-$thumb-min-width-glider:$thumb-width + $thumb-padding * 2 + $thumb-border-width * 2 !default;
-$thumb-margin-x: $spacer/8 !default;
-$thumb-margin-y: null !default;
-$thumb-extremist-margin-x: $thumb-margin-x !default;
+$thumb-border-width:        1px !default;
+$thumb-border-color:        $border-color !default;
+$thumb-border-radius:       null !default;
+$thumb-padding:             8px !default;
+$thumb-width:               64px !default;
+$thumb-min-width-glider:    $thumb-width + $thumb-padding * 2 + $thumb-border-width * 2 !default;
+$thumb-margin-x:            $spacer/8 !default;
+$thumb-margin-y:            null !default;
+$thumb-extremist-margin-x:  $thumb-margin-x !default;
 
 $thumb-active-border-color: $gray-light !default;
-$thumb-active-box-shadow: null !default;
+$thumb-active-box-shadow:   null !default;
 
-$thumb-inactive-opacity: null !default;
+$thumb-inactive-opacity:    null !default;
 
+//Product name
+$pdt-name-font-size:        null !default;
+$pdt-name-font-weight:      null !default;
+$pdt-name-font-family:      null !default;
 
-//product name
-$pdt-name-font-size : null !default;
-$pdt-name-font-weight : null !default;
-$pdt-name-font-family : null !default;
+$pdt-name-color:            null !default;
+$pdt-name-text-transform:   null !default;
+$pdt-name-text-decoration:  null !default;
+$pdt-name-line-height:      null !default;
+$pdt-name-letter-spacing:   null !default;
 
-$pdt-name-color : null !default;
-$pdt-name-text-transform : null !default;
-$pdt-name-text-decoration : null !default;
-$pdt-name-line-height : null !default;
-$pdt-name-letter-spacing : null !default;
-
-$pdt-name-margin-bottom : $spacer/2 !default;
-//end product name
+$pdt-name-margin-bottom:    $spacer/2 !default;

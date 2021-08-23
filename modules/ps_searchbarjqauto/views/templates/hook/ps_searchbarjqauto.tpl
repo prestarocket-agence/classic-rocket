@@ -26,7 +26,7 @@
 <form method="get" action="{$search_controller_url}" class="c-search /js search-widget" data-search-widget
       data-search-controller-url="{$search_controller_url}">
     <input type="hidden" name="controller" value="search">
-    <div class="c-inputadd c-inputadd--right">
+    <div class="c-inputadd {*c-inputadd--right*}">
         <label class="sr-only" for="header-searchbar">{l s='Rechercher un produit' d='Shop.Theme.Catalog'}</label>
         <input class="c-inputadd__input c-search__input form-control" type="text" name="s" value="{$search_string}"
                placeholder="{l s='Rechercher un produit' d='Shop.Theme.Catalog'}"

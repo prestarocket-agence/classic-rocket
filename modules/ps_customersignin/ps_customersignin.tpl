@@ -24,17 +24,14 @@
  *}
 <div class="c-header__shortcut-item">
     {if $logged}
-        <a
-                class="o-layout o-layout--center-y u-txt-black"
-                href="{$my_account_url}"
-                title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
-                rel="nofollow"
-        >
+        <a class="o-layout o-layout--center-y u-txt-black"
+           href="{$my_account_url}"
+           title="{l s='View my customer account' d='Shop.Theme.Customeraccount'}"
+           rel="nofollow">
             {include file="_partials/icon.tpl" icon="person-circle" class="c-header__shortcut-icon"}
 
             <div class="u-d-desktop u-ml-1">
                 <p class="c-header__shortcut-link--customer-label u-mb-0">{$customerName}</p>
-
                 <div class="o-layout o-layout--start o-layout--center-y c-header__shortcut-link">
                     <p class="u-mb-0">{l s='Mon Compte' d='Shop.Theme.Customeraccount'}</p>
                     {include file="_partials/icon.tpl" icon="chevron-down-sharp" class="c-icon--center-y u-ml-1"}
@@ -42,12 +39,10 @@
             </div>
         </a>
     {else}
-        <a
-                href="{$my_account_url}"
-                class="c-btn--nopad u-lh-1"
-                title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
-                rel="nofollow"
-        >
+        <a href="{$my_account_url}"
+           class="c-btn--nopad u-lh-1"
+           title="{l s='Log in to your customer account' d='Shop.Theme.Customeraccount'}"
+           rel="nofollow">
             {include file="_partials/icon.tpl" icon="person-circle" class="c-header__shortcut-icon"}
         </a>
     {/if}

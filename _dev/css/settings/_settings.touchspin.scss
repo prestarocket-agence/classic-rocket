@@ -1,72 +1,65 @@
-// ***** CONTAINER *****
-
+// *** TOUCHSPIN CONTAINER ***
 //Size
-$touchspin-width: null !default;
-$touchspin-padding-x: null !default;
-$touchspin-padding-y: null !default;
+$touchspin-width:              null !default;
+$touchspin-padding-x:          null !default;
+$touchspin-padding-y:          null !default;
 
 //Colors
-$touchspin-color: null !default;
-$touchspin-bg: null !default;
+$touchspin-color:              null !default;
+$touchspin-bg:                 null !default;
 
 //Border
-$touchspin-border-color: $gray-light !default;
-$touchspin-border-width: 1px !default;
-$touchspin-radius: 4px !default;
+$touchspin-border-color:       $gray-light !default;
+$touchspin-border-width:       1px !default;
+$touchspin-radius:             4px !default;
 
-
-
-// ***** INPUT ***** (quantity)
-
+// *** INPUT *** (quantity)
 //Size
-$touchspin-input-width: $font-size-base*2.5 !default;
-$touchspin-input-height: null !default;
-$touchspin-input-padding-x: 0 !default;
-$touchspin-input-padding-y: 0 !default;
+$touchspin-input-width:        $font-size-base*2.5 !default;
+$touchspin-input-height:       null !default;
+$touchspin-input-padding-x:    0 !default;
+$touchspin-input-padding-y:    0 !default;
 
 //Text
-$touchspin-input-font-size: $font-size-base !default;
-$touchspin-input-font-weight: $font-weight-normal !default;
+$touchspin-input-font-size:    $font-size-base !default;
+$touchspin-input-font-weight:  $font-weight-normal !default;
 
 //Colors
-$touchspin-input-color: null !default;
-$touchspin-input-bg: null !default;
+$touchspin-input-color:        null !default;
+$touchspin-input-bg:           null !default;
 
 //Border
 $touchspin-input-border-color: null !default;
 $touchspin-input-border-width: 0 !default;
-$touchspin-input-radius: null !default;
+$touchspin-input-radius:       null !default;
 
 //Orders
-$touchspin-input-order: null !default;
+$touchspin-input-order:        null !default;
 
-
-
-// ***** BUTTONS ***** (minus & plus)
-
+// *** BUTTONS *** (minus & plus)
 //Sizes
-$touchspin-btn-width: 24px !default;
-$touchspin-btn-height: 24px !default;
-$touchspin-btn-padding-x: null !default;
-$touchspin-btn-padding-y: null !default;
+$touchspin-btn-width:          24px !default;
+$touchspin-btn-height:         24px !default;
+$touchspin-btn-padding-x:      null !default;
+$touchspin-btn-padding-y:      null !default;
 
 //Text
-$touchspin-btn-font-size: $font-size-base !default;
-$touchspin-btn-font-weight: $font-weight-normal !default;
+$touchspin-btn-font-size:      $font-size-base !default;
+$touchspin-btn-font-weight:    $font-weight-normal !default;
 
 //Colors
-$touchspin-btn-color: $black !default;
-$touchspin-btn-bg: none !default;
+$touchspin-btn-color:          $black !default;
+$touchspin-btn-bg:             none !default;
 
 //Border
-$touchspin-btn-border-color: null !default;
-$touchspin-btn-border-width: 0 !default;
-$touchspin-btn-radius: null !default;
+$touchspin-btn-border-color:   null !default;
+$touchspin-btn-border-width:   0 !default;
+$touchspin-btn-radius:         null !default;
 
 //Minus
-$touchspin-minus-bg: null !default;
-$touchspin-minus-order: null !default;
+$touchspin-minus-bg:           null !default;
+$touchspin-minus-order:        null !default;
 
 //Plus
-$touchspin-plus-bg: null !default;
-$touchspin-plus-order: null !default;
+$touchspin-plus-bg:            null !default;
+$touchspin-plus-order:         null !default;

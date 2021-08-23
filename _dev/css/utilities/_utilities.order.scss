@@ -1,0 +1,29 @@
+//Orders
+$orders:        0, 1;
+@each $order in $orders {
+  .u-order-#{$order} {
+    order: $order;
+  }
+}
+
+$orders-mobile: 0, 1, 2;
+@include media-breakpoint-mobile() {
+  @each $order-mobile in $orders-mobile {
+    .u-order-#{$order-mobile}\@mobile {
+      order: $order-mobile;
+    }
+  }
+}
+
+//$order-suffixes: '', 'sm', 'md', 'lg';
+//$order-positions: 0, 1, 2;
+//
+//@each $order-suffix in $order-suffixes {
+//  @include media-breakpoint-down($order-suffix) {
+//    @each $order-position in $order-positions {
+//      .u-order-#{$order-suffix}-#{$order-position} {
+//        order: $order-position;
+//      }
+//    }
+//  }
+//}

@@ -1,11 +1,13 @@
-.c-addcartlist{
+.c-addcartlist {
   z-index: 2;
 }
-.c-addcartlist__loading.spinner-border{
+
+.c-addcartlist__loading.spinner-border {
   display: none;
 }
-.is-adding{
-  .c-addcartlist__loading{
+
+.is-adding {
+  .c-addcartlist__loading {
     display: inline-block;
   }
 }

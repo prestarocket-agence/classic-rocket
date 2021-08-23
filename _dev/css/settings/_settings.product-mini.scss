@@ -1,69 +1,62 @@
-$pm-margin-bottom: $spacer*3 !default;
+//*** PRODUCT MINIATURE ***
+$pm-margin-bottom:             $spacer*3 !default;
+$pm-card-bg-color:             #fff !default;
+$pm-card-radius:               null !default;
+$pm-card-border:               0 solid $border-color !default;
+$enable-pm-hover-shadow:       false !default;
+$pm-card-shadow:               null !default;
 
+//Product name
+$pm-name-font-size:            null !default;
+$pm-name-font-weight:          null !default;
+$pm-name-font-family:          null !default;
 
-$pm-card-bg-color: #fff !default;
-$pm-card-radius: null !default;
-$pm-card-border: 0 solid $border-color !default;
-$enable-pm-hover-shadow: false !default;
-$pm-card-shadow: null !default;
-//product name
-$pm-name-font-size : null !default;
-$pm-name-font-weight : null !default;
-$pm-name-font-family : null !default;
+$pm-name-color:                $body-color !default;
+$pm-name-color-hover:          null !default;
+$pm-name-text-transform:       null !default;
+$pm-name-text-transform-hover: null !default;
+$pm-name-text-decoration:      null !default;
+$pm-name-line-height:          null !default;
+$pm-name-letter-spacing:       null !default;
 
-$pm-name-color : $body-color !default;
-$pm-name-color-hover : null !default;
-$pm-name-text-transform : null !default;
-$pm-name-text-transform-hover : null !default;
-$pm-name-text-decoration : null !default;
-$pm-name-line-height : null !default;
-$pm-name-letter-spacing : null !default;
+$pm-name-margin-bottom:        $spacer/2 !default;
 
-$pm-name-margin-bottom : $spacer/2 !default;
-//end product name
+//Product brand
+$pm-brand-font-size:           $font-size-base * .75 !default;
+$pm-brand-font-weight:         null !default;
+$pm-brand-font-family:         null !default;
 
-//product brand
-$pm-brand-font-size : $font-size-base * .75 !default;
-$pm-brand-font-weight : null !default;
-$pm-brand-font-family : null !default;
+$pm-brand-color:               $body-color !default;
+$pm-brand-text-transform:      uppercase !default;
+$pm-brand-text-decoration:     null !default;
+$pm-brand-line-height:         null !default;
+$pm-brand-letter-spacing:      null !default;
 
-$pm-brand-color : $body-color !default;
-$pm-brand-text-transform : uppercase !default;
-$pm-brand-text-decoration : null !default;
-$pm-brand-line-height : null !default;
-$pm-brand-letter-spacing : null !default;
+$pm-brand-margin-bottom:       $spacer/4 !default;
 
-$pm-brand-margin-bottom : $spacer/4 !default;
-//end product brand
+//Product thumb
+$pm-thumb-radius:              $spacer/2 !default;
+$pm-thumb-bg-color:            null !default;
 
+$pm-thumb-border:              null !default;
+$pm-card-img-top-radius:       null !default;
+$pm-card-img-bottom-radius:    null !default;
 
+$pm-thumb-padding-x:           null !default;
+$pm-thumb-padding-y:           null !default;
+$pm-thumb-margin-bottom:       $spacer !default;
 
-//product thumb
-$pm-thumb-radius: $spacer/2 !default;
-$pm-thumb-bg-color: null !default;
+$pm-thumb-border-radius:       null !default;
 
-$pm-thumb-border: null !default;
-$pm-card-img-top-radius: null !default;
-$pm-card-img-bottom-radius: null !default;
+$pm-card-body-padding-x:       0 !default;
+$pm-card-body-padding-y:       0 !default;
+$pm-card-body-bg-color:        null !default;
 
-
-$pm-thumb-padding-x: null !default;
-$pm-thumb-padding-y: null !default;
-$pm-thumb-margin-bottom: $spacer !default;
-
-$pm-thumb-border-radius : null !default;
-
-
-$pm-card-body-padding-x: 0 !default;
-$pm-card-body-padding-y: 0 !default;
-$pm-card-body-bg-color: null !default;
-
-
-$pm-card-img-border: null !default;
-$pm-card-img-radius: null !default;
+$pm-card-img-border:           null !default;
+$pm-card-img-radius:           null !default;
 
 //Flags
-$pm-card-flags-top: null !default;
-$pm-card-flags-bottom: $spacer*.5 !default;
-$pm-card-flags-left: $spacer*.5 !default;
-$pm-card-flags-right: null !default;
+$pm-card-flags-top:            null !default;
+$pm-card-flags-bottom:         $spacer*.5 !default;
+$pm-card-flags-left:           $spacer*.5 !default;
+$pm-card-flags-right:          null !default;

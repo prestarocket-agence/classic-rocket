@@ -31,6 +31,7 @@
                     <button class="c-collapse__btn c-collapse__btn--pdtsection" type="button" data-toggle="collapse"
                             data-target="#description" aria-expanded="true" aria-controls="description">
                         {l s='Description' d='Shop.Theme.Catalog'}
+                        {include file="_partials/icon.tpl" class="c-icon--center-y" icon="chevron-up"}
                     </button>
                 {/if}
                 <div class="{$classPdtTab}{if $product.description}{$classPdtTabActive}{/if}"
@@ -51,6 +52,7 @@
                 <button class="c-collapse__btn c-collapse__btn--pdtsection" type="button" data-toggle="collapse"
                         data-target="#product-details" aria-expanded="false" aria-controls="product-details">
                     {l s='Data sheet' d='Shop.Theme.Catalog'}
+                    {include file="_partials/icon.tpl" class="c-icon--center-y" icon="chevron-up"}
                 </button>
             {/if}
             {include file='catalog/_partials/product-details.tpl'}
@@ -64,6 +66,7 @@
                         <button class="c-collapse__btn c-collapse__btn--pdtsection" type="button" data-toggle="collapse"
                                 data-target="#attachments" aria-expanded="false" aria-controls="attachments">
                             {l s='Download' d='Shop.Theme.Actions'}
+                            {include file="_partials/icon.tpl" class="c-icon--center-y" icon="chevron-up"}
                         </button>
                     {/if}
                     <div class="{$classPdtTab}" id="attachments"{if $product_layout === "tabs"} role="tabpanel"{/if}>
@@ -92,6 +95,7 @@
                 <button class="c-collapse__btn c-collapse__btn--pdtsection" type="button" data-toggle="collapse"
                         data-target="#extra-{$extraKey}" aria-expanded="true" aria-controls="extra-{$extraKey}">
                     {$extra.title}
+                    {include file="_partials/icon.tpl" class="c-icon--center-y" icon="chevron-up"}
                 </button>
                 {/if}
                 <div class="{$classPdtTab} {$extra.attr.class}" id="extra-{$extraKey}"{if $product_layout === "tabs"}
@@ -108,6 +112,7 @@
                         <button class="c-collapse__btn c-collapse__btn--pdtsection" type="button" data-toggle="collapse"
                                 data-target="#pdt_pack" aria-expanded="true" aria-controls="pdt_pack">
                             {l s='Contenu du pack' d='Shop.Theme.Catalog'}
+                            {include file="_partials/icon.tpl" class="c-icon--center-y" icon="chevron-up"}
                         </button>
                     {/if}
                     <div class="{$classPdtTab}{if $product.pack}{$classPdtTabActive}{/if}"

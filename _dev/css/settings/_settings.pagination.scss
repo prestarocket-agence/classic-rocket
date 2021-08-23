@@ -2,29 +2,26 @@
 // /!\ You could find missing settings in bootstrap settings variables. /!\
 
 // ***** PAGINATION *****
-
 //Sizes
-$pagination-width: 16px !default;
-$pagination-height: 16px !default;
-$pagination-font-size: $small-font-size !default;
-$pagination-font-weight: $font-weight-normal !default;
+$pagination-width:                16px !default;
+$pagination-height:               16px !default;
+$pagination-font-size:            $small-font-size !default;
+$pagination-font-weight:          $font-weight-normal !default;
 
 //Spacing
-$pagination-margin-x: $spacer*2 !default;
-$pagination-margin-x-mobile: $spacer !default;
+$pagination-margin-x:             $spacer*2 !default;
+$pagination-margin-x-mobile:      $spacer !default;
 
 //Border
-$pagination-border-radius: null !default;
+$pagination-border-radius:        null !default;
 
 //Icons
-$pagination-icon-color: null !default;
+$pagination-icon-color:           null !default;
 
 // ***** HOVER *****
-
 //Border
-$pagination-hover-border-radius: $pagination-border-radius !default;
+$pagination-hover-border-radius:  $pagination-border-radius !default;
 
 // ***** ACTIVE *****
-
 //Border
 $pagination-active-border-radius: $pagination-border-radius !default;

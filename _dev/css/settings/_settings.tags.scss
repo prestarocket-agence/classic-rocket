@@ -1,63 +1,59 @@
-
-// *** TAGS BASICS ***
-
+// *** TAGS BASIS ***
 //Font
-$tag-font-size: $font-size-base*.875 !default;
-$tag-font-weight: null !default;
-$tag-font-family : null !default;
+$tag-font-size:            $font-size-base*.875 !default;
+$tag-font-weight:          null !default;
+$tag-font-family:          null !default;
 
 //Text
-$tag-text-transform : null !default;
-$tag-text-decoration : null !default;
-$tag-line-height : null !default;
-$tag-letter-spacing : null !default;
+$tag-text-transform:       null !default;
+$tag-text-decoration:      null !default;
+$tag-line-height:          null !default;
+$tag-letter-spacing:       null !default;
 
 //Spacing
-$tag-padding-y: $spacer*.125 !default;
-$tag-padding-x: $spacer*.25 !default;
+$tag-padding-y:            $spacer*.125 !default;
+$tag-padding-x:            $spacer*.25 !default;
 
 //Radius
-$tag-radius: $spacer*.25 !default;
+$tag-radius:               $spacer*.25 !default;
 
 //Border
-$tag-border-enable: false !default;
+$tag-border-enable:        false !default;
 
-$tag-border-width: 0 !default;
+$tag-border-width:         0 !default;
 
 @if ($tag-border-enable == true) {
   $tag-border-width: 1px !default;
 }
 
 //Color
-$tag-color: $white !default;
-
+$tag-color:                $white !default;
 
 // *** TAGS TYPES ***
-
 //Discount
-$tag-discount-font-size: null !default;
+$tag-discount-font-size:   null !default;
 $tag-discount-font-weight: null !default;
-$tag-discount-color: null !default;
-$tag-discount-bg: $red !default;
-$tag-discount-border: null !default;
+$tag-discount-color:       null !default;
+$tag-discount-bg:          $red !default;
+$tag-discount-border:      null !default;
 
 //Promo
-$tag-promo-font-size: null !default;
-$tag-promo-font-weight: null !default;
-$tag-promo-color: null !default;
-$tag-promo-bg: $red !default;
-$tag-promo-border: null !default;
+$tag-promo-font-size:      null !default;
+$tag-promo-font-weight:    null !default;
+$tag-promo-color:          null !default;
+$tag-promo-bg:             $red !default;
+$tag-promo-border:         null !default;
 
 //New
-$tag-new-font-size: null !default;
-$tag-new-font-weight: null !default;
-$tag-new-color: null !default;
-$tag-new-bg: $primary !default;
-$tag-new-border: null !default;
+$tag-new-font-size:        null !default;
+$tag-new-font-weight:      null !default;
+$tag-new-color:            null !default;
+$tag-new-bg:               $primary !default;
+$tag-new-border:           null !default;
 
 //Pack
-$tag-pack-font-size: null !default;
-$tag-pack-font-weight: null !default;
-$tag-pack-color: null !default;
-$tag-pack-bg: $primary !default;
-$tag-pack-border: null !default;
+$tag-pack-font-size:       null !default;
+$tag-pack-font-weight:     null !default;
+$tag-pack-color:           null !default;
+$tag-pack-bg:              $primary !default;
+$tag-pack-border:          null !default;

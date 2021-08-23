@@ -1,33 +1,31 @@
-// Alerts
-//
+// *** ALERTS ***
 // Define alert colors, border radius, and padding.
+$alert-padding-y:             $spacer !default;
+$alert-padding-x:             $spacer !default;
+$alert-margin-bottom:         1rem !default;
+$alert-border-radius:         $border-radius !default;
+$alert-link-font-weight:      $font-weight-bold !default;
+$alert-border-width:          $border-width !default;
 
-$alert-padding-y:                   $spacer !default;
-$alert-padding-x:                   $spacer !default;
-$alert-margin-bottom:               1rem !default;
-$alert-border-radius:               $border-radius !default;
-$alert-link-font-weight:            $font-weight-bold !default;
-$alert-border-width:                $border-width !default;
+$alert-bg-scale:              -80% !default;
+$alert-border-scale:          -70% !default;
+$alert-color-scale:           40% !default;
 
-$alert-bg-scale:                    -80% !default;
-$alert-border-scale:                -70% !default;
-$alert-color-scale:                 40% !default;
+$alert-dismissible-padding-r: $alert-padding-x * 3 !default; // 3x covers width of x plus default padding on either side
 
-$alert-dismissible-padding-r:       $alert-padding-x * 3 !default; // 3x covers width of x plus default padding on either side
+//Variants
+$alert-warning-bg:            #FFF9DB !default;
+$alert-warning-border-color:  #FFE066 !default;
+$alert-warning-color:         $black !default;
 
-//alert variants
-$alert-warning-bg:#FFF9DB !default;
-$alert-warning-border-color:#FFE066 !default;
-$alert-warning-color:$black !default;
+$alert-danger-bg:             #FFDBDB !default;
+$alert-danger-border-color:   #A82424 !default;
+$alert-danger-color:          $black !default;
 
-$alert-danger-bg:#FFDBDB !default;
-$alert-danger-border-color:#A82424 !default;
-$alert-danger-color:$black !default;
+$alert-success-bg:            #D9FFE0 !default;
+$alert-success-border-color:  #2B8A3E !default;
+$alert-success-color:         $black !default;
 
-$alert-success-bg:#D9FFE0 !default;
-$alert-success-border-color:#2B8A3E !default;
-$alert-success-color:$black !default;
-
-$alert-info-bg:#D9EDFF !default;
-$alert-info-border-color:#1864AB !default;
-$alert-info-color:$black !default;
+$alert-info-bg:               #D9EDFF !default;
+$alert-info-border-color:     #1864AB !default;
+$alert-info-color:            $black !default;

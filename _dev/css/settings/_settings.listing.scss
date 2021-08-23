@@ -1,14 +1,15 @@
-//listing heading
-$listing-heading-margin-bottom : $spacer * 4 !default;
+// *** Listing ***
+//Heading
+$listing-heading-margin-bottom: $spacer * 4 !default;
 
-//listing title
-$listing-title-font-size : null !default;
-$listing-title-font-weight : null !default;
-$listing-title-font-family : null !default;
+//Title
+$listing-title-font-size:       null !default;
+$listing-title-font-weight:     null !default;
+$listing-title-font-family:     null !default;
 
-$listing-title-color : null !default;
-$listing-title-text-transform : null !default;
-$listing-title-text-decoration : null !default;
-$listing-title-line-height : null !default;
-$listing-title-letter-spacing : null !default;
-$listing-title-margin-bottom : null !default;
+$listing-title-color:           null !default;
+$listing-title-text-transform:  null !default;
+$listing-title-text-decoration: null !default;
+$listing-title-line-height:     null !default;
+$listing-title-letter-spacing:  null !default;
+$listing-title-margin-bottom:   null !default;
