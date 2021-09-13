@@ -24,8 +24,8 @@ if($header-border-width) {
 
 //Header core
 .c-header__content {
-  margin-top: $spacer*1.5;
-  margin-bottom: $spacer*1.5;
+  padding-top: $spacer*1.5;
+  padding-bottom: $spacer*1.5;
 
   @include media-breakpoint-mobile() {
     flex-wrap: wrap;
