@@ -103,11 +103,11 @@
     </div>
 {/block}
 
-<footer id="footer" class="c-footer{block name='footerClass'}{/block}">
-    {block name="footer"}
+{block name="footer"}
+    <footer id="footer" class="c-footer{block name='footerClass'}{/block}">
         {include file="_partials/footer.tpl"}
-    {/block}
-</footer>
+    </footer>
+{/block}
 
 {block name='offcanvas_modals'}
     {* offcanvas search filter *}
