@@ -44,8 +44,10 @@
                         >
                             {if $page.type === 'previous'}
                                 <span class="c-pagination__icon c-icon c-icon--32 c-icon--center-y u-mr-2">{include '_partials/icons/arrow-left-circle-fill.svg'}</span>
+                                <span class="sr-only">{l s='Précédent' d='Shop.Theme.Global'}</span>
                             {elseif $page.type === 'next'}
                                 <span class="c-pagination__icon c-icon c-icon--32 c-icon--center-y u-ml-2">{include '_partials/icons/arrow-right-circle-fill.svg'}</span>
+                                <span class="sr-only">{l s='Suivant' d='Shop.Theme.Global'}</span>
                             {else}
                                 {$page.page}
                             {/if}
