@@ -53,7 +53,7 @@
 {elseif $page.page_name === 'category' && isset($category) && $category.image.large.url}
     <meta property="og:image" content="{$category.image.large.url}"/>
 {else}
-    <meta property="og:image" content="{$urls.shop_domain_url}{$shop.logo}"/>
+    <meta property="og:image" content="{$shop.logo}"/>
 {/if}
 <script type="application/ld+json">
 {
@@ -63,7 +63,7 @@
     "url" : "{$urls.pages.index}",
     "logo" : {
         "@type":"ImageObject",
-        "url":"{$urls.shop_domain_url}{$shop.logo}"
+        "url":"{$shop.logo}"
     }
 }
 
@@ -92,7 +92,7 @@
     "url" : "{$urls.pages.index}",
 	"image": {
 	"@type": "ImageObject",
-    "url":"{$urls.shop_domain_url}{$shop.logo}"
+    "url":"{$shop.logo}"
 	},
     "potentialAction": {
     "@type": "SearchAction",
@@ -110,7 +110,6 @@
     "@context": "http://schema.org/",
     "@type": "Product",
     "name": "{$product.name}",
-    "description": "{$page.meta.description}",
     "category": "{$product.category_name}",
     {if isset($product.cover)}"image" :"{$product.cover.bySize.home_default.url}",{/if}
     {if $product.reference}"sku": "{$product.reference}",{/if}
@@ -175,9 +174,9 @@
             "@type": "Organization",
             "name": "{$shop.name}"
         }
-    }
+    },
     {/if}
-
+    "description": "{$page.meta.description}"
 }
 
 
