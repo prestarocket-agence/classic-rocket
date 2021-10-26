@@ -22,16 +22,21 @@
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    margin: 0;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch; /* Important for iOS devices */
-
     /* Hide scrollbar */
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
     &::-webkit-scrollbar {
       display: none;
+    }
+
+    &:not(.row) {
+      margin: 0;
+    }
+    &.row {
+      width: 100vw;
     }
   }
 }
