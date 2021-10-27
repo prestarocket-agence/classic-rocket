@@ -32,69 +32,71 @@
     {if $orders}
         <div class="c-history">
             {foreach from=$orders item=order}
-
                 <div class="c-history__item">
-                    <div class="c-history__infos">
-                        <div class="row">
-                            <div class="col-6 col-lg-3 c-history__data">
-                                <span class="u-txt-sm u-txt-dark u-mb-1">{l s='Order reference' d='Shop.Theme.Checkout'}</span>
-                                <span class="u-font-weight-bold">{$order.details.reference}</span>
-                            </div>
-                            <div class="col-6 col-lg-3 c-history__data c-history__data--right">
-                                <span class="u-txt-sm u-txt-dark u-mb-1">{l s='Date' d='Shop.Theme.Checkout'}</span>
-                                <span class="u-font-weight-bold">{$order.details.order_date}</span>
-                            </div>
-                            <div class="col-6 col-lg-3 c-history__data">
-                                <span class="u-txt-sm u-txt-dark u-mb-1">{l s='Total price' d='Shop.Theme.Checkout'}</span>
-                                <span class="u-font-weight-bold">{$order.totals.total.value}</span>
-                            </div>
-                            <div class="col-6 col-lg-3 c-history__data c-history__data--right">
-                                <span class="u-txt-sm u-txt-dark u-mb-1">{l s='Status' d='Shop.Theme.Checkout'}</span>
-                                <span class="u-font-weight-bold">{$order.history.current.ostate_name}</span>
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="row">
+                                <div class="col-6 c-history__data">
+                                    <span class="u-txt-sm u-txt-dark u-mb-1">{l s='Order reference' d='Shop.Theme.Checkout'}</span>
+                                    <span class="u-font-weight-bold">{$order.details.reference}</span>
+                                </div>
+                                <div class="col-6 c-history__data c-history__data--right">
+                                    <span class="u-txt-sm u-txt-dark u-mb-1">{l s='Date' d='Shop.Theme.Checkout'}</span>
+                                    <span class="u-font-weight-bold">{$order.details.order_date}</span>
+                                </div>
+                                <div class="col-6 c-history__data">
+                                    <span class="u-txt-sm u-txt-dark u-mb-1">{l s='Total price' d='Shop.Theme.Checkout'}</span>
+                                    <span class="u-font-weight-bold">{$order.totals.total.value}</span>
+                                </div>
+                                <div class="col-6 c-history__data c-history__data--right">
+                                    <span class="u-txt-sm u-txt-dark u-mb-1">{l s='Status' d='Shop.Theme.Checkout'}</span>
+                                    <span class="c-history__data-status u-font-weight-bold"
+                                          style="background-color:{$order.history.current.color}">{$order.history.current.ostate_name}</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="u-d-flex">
-                            <div class="c-history__img">
-                                {assign var=products value=$order.products}
-                                {assign var=first value=$products|@key}
-                                {assign var=product value=$products|@next}
-                                {assign var=second value=$products|@key}
-
-                                <a href="{$order.details.details_url}">
-                                    {if isset($products[$first].cover) && $products[$first].cover}
-                                        <img class="u-img-fluid" src="{$products[$first].cover.medium.url}"
-                                             alt="{$products[$first].name}">
-                                        {else}
-                                        <img class="u-img-fluid" src="{$urls.no_picture_image.bySize.home_default.url}" alt="{$products[$first].name}"/>
-                                    {/if}
-                                </a>
-                            </div>
-
-                            {if isset($products[$second].product_id)}
+                        <div class="col-lg-5 c-history__thumbnails">
+                            {foreach from=$order.products item=product name=products}
+                                {if $smarty.foreach.products.iteration < 3}
                                 <div class="c-history__img">
-                                    <a href="{$order.details.details_url}">
-                                        {if isset($products[$second].cover) && $products[$second].cover}
-                                            <img class="u-img-fluid" src="{$products[$second].cover.medium.url}"
-                                                 alt="{$products[$second].name}">
-                                        {else}
-                                            <img src="{$urls.no_picture_image.bySize.home_default.url}" alt="{$products[$second].name}"/>
-                                        {/if}
-                                        {if $products|count > 2}
-                                            <div class="c-history__img--watermark">
-                                                +{math equation="x - y" x=$products|count y=2}
-                                            </div>
-                                        {/if}
-                                    </a>
+                                    {if $smarty.foreach.products.first}
+                                        <a href="{$order.details.details_url}">
+                                            {if $smarty.foreach.products.first.cover}
+                                                <img class="u-img-fluid" src="{$product.cover.medium.url}"
+                                                     alt="{$product.name}">
+                                            {else}
+                                                <img class="u-img-fluid" src="{$urls.no_picture_image.bySize.home_default.url}"
+                                                     alt="{$product.name}"/>
+                                            {/if}
+                                        </a>
+                                    {else}
+                                        <a href="{$order.details.details_url}">
+                                            {if isset($product.cover) && $product.cover}
+                                                <img class="u-img-fluid"
+                                                     src="{$product.cover.medium.url}"
+                                                     alt="{$product.name}">
+                                            {else}
+                                                <img class="u-img-fluid" src="{$urls.no_picture_image.bySize.home_default.url}"
+                                                     alt="{$product.name}"/>
+                                            {/if}
+                                            {if $order.products|count >= 3}
+                                                <div class="c-history__img--watermark">
+                                                    +{math equation="x - y" x=$order.products|count y=2}
+                                                </div>
+                                            {/if}
+                                        </a>
+                                    {/if}
                                 </div>
-                            {/if}
+                                {/if}
+                            {/foreach}
                         </div>
                     </div>
-                    <div class="o-layout o-layout--center-y {if !$order.shipping[0].url} o-layout--end{/if}">
-                        <a class="c-btn--underline" href="{$order.details.details_url}"
+                    <div class="o-layout o-layout--center-y{if !$order.shipping[0].url} o-layout--end{/if} u-flex-wrap">
+                        <a class="u-mt-2 c-btn--underline" href="{$order.details.details_url}"
                            data-link-action="view-order-details">
                             {l s='Details' d='Shop.Theme.Customeraccount'}
                         </a>
-                        <div class="u-d-flex">
+                        <div class="u-mt-2 u-d-flex">
                             {if $order.shipping[0].url}
                                 <a class="c-btn--underline"
                                    href="{$order.shipping[0].url}">{l s='Suivre la commande' d='Shop.Theme.Actions'}</a>
