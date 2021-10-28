@@ -1,1 +1,8 @@
+<<<<<<< HEAD
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 62" aria-hidden="true">
+    <path d="M33.216 0L64 30.77 33.216 61.537l-5.872-5.869 20.76-20.75H0v-8.3h48.104l-20.76-20.75L33.216 0z"
+          fill="#FFF"/>
+</svg>
+=======
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 62" aria-hidden="true"><path d="M33.216 0L64 30.77 33.216 61.537l-5.872-5.869 20.76-20.75H0v-8.3h48.104l-20.76-20.75L33.216 0z" fill="#FFF"/></svg>
+>>>>>>> parent of edd4fd3... Update bs icons
