@@ -37,8 +37,6 @@
         {block name='before_products'}
         {/block}
 
-        <<<<<<< HEAD
-
         <section id="products">
             {if $listing.products|count}
 
