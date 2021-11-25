@@ -1,5 +1,6 @@
 .c-cart-summary {
   background-color: $white;
+  z-index: 1;
 
   @media (min-width: 992px) {
     position: -webkit-sticky;
