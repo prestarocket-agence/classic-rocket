@@ -40,19 +40,15 @@
                     {block name='delivery_options'}
                         <div class="delivery-options">
                             {foreach from=$delivery_options item=carrier key=carrier_id}
-                                <div class="c-checkout-card row /js delivery-option">
-                                    <div class="col-1">
-                      <span class="custom-radio float-xs-left">
-                        <input type="radio" name="delivery_option[{$id_address}]" id="delivery_option_{$carrier.id}"
-                               value="{$carrier_id}"{if $delivery_option == $carrier_id} checked{/if}>
-                        <span></span>
-                      </span>
-                                    </div>
-                                    <label for="delivery_option_{$carrier.id}"
-                                           class="col-xs-9 col-sm-11 delivery-option-2">
-                                        <div class="row">
+                                <div class="c-checkout-card">
+                                    <div class="/js custom-control custom-radio">
+                                        <input type="radio" name="delivery_option[{$id_address}]"
+                                               id="delivery_option_{$carrier.id}" class="custom-control-input"
+                                               value="{$carrier_id}"{if $delivery_option == $carrier_id} checked{/if}>
+                                        <label for="delivery_option_{$carrier.id}"
+                                               class="u-ml-0 row delivery-option-2 custom-control-label /js delivery-option">
                                             <div class="col-sm-5 col-xs-12">
-                                                <div class="row carrier{if $carrier.logo} carrier-hasLogo{/if}">
+                                                <div class="u-d-flex carrier{if $carrier.logo} carrier-hasLogo{/if}">
                                                     {if $carrier.logo}
                                                         <div class="col-xs-12 col-md-4 carrier-logo u-txt-center">
                                                             <img src="{$carrier.logo}" alt="{$carrier.name}"/>
@@ -69,8 +65,8 @@
                                             <div class="col-sm-3 col-xs-12">
                                                 <span class="carrier-price">{$carrier.price}</span>
                                             </div>
-                                        </div>
-                                    </label>
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="row carrier-extra-content"{if $delivery_option != $carrier_id} style="display:none;"{/if}>
                                     {$carrier.extraContent nofilter}
@@ -81,7 +77,8 @@
                     {/block}
                     <div class="order-options">
                         <div id="delivery" class="form-group">
-                            <label class="u-mb-2" for="delivery_message">{l s='If you would like to add a comment about your order, please write it in the field below.' d='Shop.Theme.Checkout'}</label>
+                            <label class="u-mb-2"
+                                   for="delivery_message">{l s='If you would like to add a comment about your order, please write it in the field below.' d='Shop.Theme.Checkout'}</label>
                             <textarea class="form-control" rows="2" cols="120" id="delivery_message"
                                       name="delivery_message">{$delivery_message}</textarea>
                         </div>
@@ -110,7 +107,7 @@
 
                     </div>
                 </div>
-                <button type="submit" class="u-mb-2 continue btn btn-primary float-xs-right" name="confirmDeliveryOption"
+                <button type="submit" class="u-mb-2 continue btn btn-primary" name="confirmDeliveryOption"
                         value="1">
                     {l s='Continue' d='Shop.Theme.Actions'}
                 </button>
