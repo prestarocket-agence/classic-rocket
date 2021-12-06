@@ -85,7 +85,8 @@
                                 {/block}
 
                                 {block name='product_description_short'}
-                                    <div id="product-description-short-{$product.id}" class="s-cms">{$product.description_short nofilter}</div>
+                                    <div id="product-description-short-{$product.id}"
+                                         class="s-cms">{$product.description_short nofilter}</div>
                                 {/block}
 
                                 {block name='product_additional_info'}
@@ -100,7 +101,6 @@
                                 {/block}
                             </form>
                         {/block}
-
                     </div>
 
                     {block name='block_after_product_action'}
@@ -109,8 +109,6 @@
                     {block name='hook_display_reassurance'}
                         {hook h='displayReassurance'}
                     {/block}
-
-
                 </div>
                 {if $product_layout == "collapse"}
                     {block name='product_tabs'}
@@ -123,14 +121,13 @@
                 {block name='page_content_container'}
                     <section class="page-content--product u-sticky u-mb-4" id="content">
                         {block name='page_content'}
-                          {block name='product_flags'}
-                              {include file='catalog/_partials/product-flags.tpl'}
-                          {/block}
-
                             {block name='product_cover_thumbnails'}
                                 {include file='catalog/_partials/product-cover-thumbnails.tpl'}
                             {/block}
 
+                            {block name='product_flags'}
+                                {include file='catalog/_partials/product-flags.tpl'}
+                            {/block}
                         {/block}
                     </section>
                 {/block}
