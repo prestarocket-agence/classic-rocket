@@ -27,8 +27,8 @@
         {block name='product_add_to_cart_container'}
 
             {block name='product_quantity'}
-                <div class="row c-form__row">
-                    <label class="col-lg-3 u-mb-0" for="quantity_wanted">{l s='Quantity' d='Shop.Theme.Catalog'}</label>
+                <div class="u-d-flex u-align-items-center u-mb-2">
+                    <label class="u-mr-2 u-mb-0" for="quantity_wanted">{l s='Quantity' d='Shop.Theme.Catalog'}</label>
                     <div class="c-touchspin__group qty">
                         <input
                                 type="number"
