@@ -59,12 +59,12 @@
 }
 
 //with glider active
-.c-snap.glider {
-  scroll-snap-type: none;
-
-  overflow: -moz-scrollbars-none; //FF
-  -ms-overflow-style: none; //IE, Edge
-  &::-webkit-scrollbar {
-    width: 0; //Chrome, Safari, Opera
-  }
-}
+//.c-snap.glider {
+//  scroll-snap-type: none;
+//
+//  overflow: -moz-scrollbars-none; //FF
+//  -ms-overflow-style: none; //IE, Edge
+//  &::-webkit-scrollbar {
+//    width: 0; //Chrome, Safari, Opera
+//  }
+//}
