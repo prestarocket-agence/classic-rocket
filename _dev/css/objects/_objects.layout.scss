@@ -44,3 +44,9 @@
 .o-layout--end {
   justify-content: flex-end;
 }
+
+.o-layout--col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
