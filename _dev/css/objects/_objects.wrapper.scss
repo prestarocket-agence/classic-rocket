@@ -42,7 +42,7 @@
   max-width: 100vw;
   margin-left: -15px;
   margin-right: -15px;
-  @media (min-width: 1440px) {
+  @media (min-width: 1500px) {
     margin-left: calc((-100vw / 2 + 1440px / 2) - 15px);
     margin-right: calc((-100vw / 2 + 1440px / 2) - 15px);
   }

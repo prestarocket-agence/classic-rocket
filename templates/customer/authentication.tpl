@@ -65,7 +65,7 @@
 
                 <div class="col-lg-2">
                     <div class="c-funnel__separator">
-                        <span>ou</span>
+                        <span>{l s='ou' d='Shop.Theme.Global'}</span>
                     </div>
                 </div>
 
