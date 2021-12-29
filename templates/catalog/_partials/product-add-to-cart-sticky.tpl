@@ -3,11 +3,10 @@
         <div class="o-wrapper">
             <div class="c-addcartsticky__container">
                 <div class="c-addcartsticky__leftside u-d-desktop">
-                    <a href="{$urls.base_url}" class="c-header__logo">
-                        <img
-                             src="{if isset($modules.prestarockettheme.logo)}{$modules.prestarockettheme.logo.url}{else}{$shop.logo}{/if}"
-                             alt="{$shop.name}" width="80" height="50">
-                    </a>
+                    {*                    <a href="{$urls.base_url}" class="c-header__logo">*}
+                    {*                        <img src="{if isset($modules.prestarockettheme.logo)}{$modules.prestarockettheme.logo.url}{else}{$shop.logo}{/if}"*}
+                    {*                             alt="{$shop.name}" width="80" height="50">*}
+                    {*                    </a>*}
                     <div class="c-addcartsticky__img">
                         {if $product.cover}
                             <img class="u-img-fluid lazyload"
@@ -42,22 +41,20 @@
                 <div class="c-addcartsticky__rightside">
                     <div class="c-addcartsticky__rightside-wrapper">
                         <p class="u-d-mobile u-h3 u-mb-0 u-d-desktop">{$product.name}</p>
-                        <div class="c-addcartsticky__rightside-price">
-                            {if $product.show_price}
-                                <div class="o-layout o-layout--start o-layout--center-y u-flex-wrap">
-                                    <span class="c-price--lg u-mr-2 u-d-desktop">{$product.price}</span>
-                                    <span class="c-price--current u-mr-2 u-d-mobile">{$product.price}</span>
-                                    {if $product.has_discount}
-                                        {hook h='displayProductPriceBlock' product=$product type="old_price"}
-                                        <span class="c-price--lg--old">{$product.regular_price}</span>
-                                    {/if}
-                                </div>
-                            {/if}
-                        </div>
+                        {if $product.show_price}
+                            <div class="o-layout o-layout--start o-layout--center-y u-flex-wrap">
+                                <span class="c-price--lg {if !$product.has_discount} c-price--lg--current{else} c-price--lg--discount{/if} u-mr-2">{$product.price}</span>
+                                {if $product.has_discount}
+                                    {hook h='displayProductPriceBlock' product=$product type="old_price"}
+                                    <span class="c-price--old u-mr-2">{$product.regular_price}</span>
+                                {/if}
+                            </div>
+                        {/if}
                     </div>
 
                     {if $product.add_to_cart_url}
-                        <form class="c-addcartsticky__rightside-addtocart" action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
+                        <form class="c-addcartsticky__rightside-addtocart" action="{$urls.pages.cart}" method="post"
+                              id="add-to-cart-or-refresh">
                             <input type="hidden" name="token" value="{$static_token}">
                             <input type="hidden" name="id_product" value="{$product.id}"
                                    id="product_page_product_id">
@@ -65,7 +62,7 @@
                                    id="product_customization_id">
                             <div class="add">
                                 <button
-                                        class="btn btn-primary btn-lg u-w-100 /js js-add-to-cart"
+                                        class="btn btn-primary u-w-100 /js js-add-to-cart"
                                         data-button-action="add-to-cart"
                                         type="submit"
                                         {if !$product.add_to_cart_url}

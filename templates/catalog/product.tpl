@@ -101,6 +101,9 @@
                                 {/block}
                             </form>
                         {/block}
+
+                        {include file='catalog/_partials/product-add-to-cart-sticky.tpl'}
+
                     </div>
 
                     {block name='block_after_product_action'}
