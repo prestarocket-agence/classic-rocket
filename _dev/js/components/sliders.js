@@ -168,15 +168,7 @@ $(document).on('glider-slide-visible', '.glider', function (event) {
 });
 
 function loadImages(callback) {
-    [].forEach.call(this.querySelectorAll('img'), function (img) {
-        var _img = new Image,
-            _src = $(img).data('src');
-
-        _img.onload = function () {
-            img.src = _src;
-            img.classList.add('loaded');
-            callback && callback(img);
-        };
-        if (img.src !== _src) _img.src = _src;
+    [].forEach.call(this.querySelectorAll('.js-glider-lazyload'), function (img) {
+        $(img).addClass('lazyload');
     });
 }
