@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="/js product-add-to-cart">
+<div id="pdt_addtocart" class="/js product-add-to-cart js-observe">
     {if !$configuration.is_catalog}
         {block name='product_add_to_cart_container'}
 
