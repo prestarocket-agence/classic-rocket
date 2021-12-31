@@ -50,8 +50,8 @@
                                             <div class="col-sm-5 col-xs-12">
                                                 <div class="u-d-flex carrier{if $carrier.logo} carrier-hasLogo{/if}">
                                                     {if $carrier.logo}
-                                                        <div class="col-xs-12 col-md-4 carrier-logo u-txt-center">
-                                                            <img src="{$carrier.logo}" alt="{$carrier.name}"/>
+                                                        <div class="col-xs-12 col-md-3 carrier-logo u-txt-center">
+                                                            <img class="u-img-fluid" src="{$carrier.logo}" alt="{$carrier.name}"/>
                                                         </div>
                                                     {/if}
                                                     <div class="col-xs-12 carriere-name-container{if $carrier.logo} col-md-8{/if}">
