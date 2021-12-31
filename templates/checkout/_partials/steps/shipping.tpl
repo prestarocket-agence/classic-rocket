@@ -50,7 +50,7 @@
                                             <div class="col-sm-5 col-xs-12">
                                                 <div class="u-d-flex carrier{if $carrier.logo} carrier-hasLogo{/if}">
                                                     {if $carrier.logo}
-                                                        <div class="col-xs-12 col-md-3 carrier-logo u-txt-center">
+                                                        <div class="col-xs-12 col-md-4 carrier-logo u-txt-center">
                                                             <img class="c-checkout-card__img" src="{$carrier.logo}" alt="{$carrier.name}"/>
                                                         </div>
                                                     {/if}
