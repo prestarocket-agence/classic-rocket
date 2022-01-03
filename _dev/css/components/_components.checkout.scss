@@ -37,6 +37,12 @@
     float: none;
   }
 }
+
+.c-checkout-card__img {
+  max-width: 100%;
+  height: auto;
+}
+
 .c-checkout-card__paymt-label{
   display: flex;
   justify-content: space-between;
@@ -54,7 +60,6 @@
 }
 
 //Carriers estimation
-
 .c-checkout-carrier {
   overflow: auto;
 

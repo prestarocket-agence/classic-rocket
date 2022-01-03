@@ -145,13 +145,6 @@ function scrollThumbNav(el){
     }
 }
 
-
-
-
-
-
-
-
 // prestashop.on('responsive update', function(e){
 //     if(e.mobile) {
 //         $('.js-glider-mobile:not(".glider")').each(function (index) {
@@ -159,3 +152,23 @@ function scrollThumbNav(el){
 //         });
 //     }
 // });
+
+$(document).on('glider-slide-visible', '.glider', function (event) {
+    var imgs_to_anticipate = 2;
+    var glider = Glider(this);
+
+    for (var i = 0; i <= imgs_to_anticipate; ++i) {
+        var index = Math.min(event.detail.slide + i, glider.slides.length - 1),
+            glider = glider;
+
+        loadImages.call(glider.slides[index], function () {
+            glider.refresh(true);
+        })
+    }
+});
+
+function loadImages(callback) {
+    [].forEach.call(this.querySelectorAll('.js-glider-lazyload'), function (img) {
+        $(img).addClass('lazyload');
+    });
+}
