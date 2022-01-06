@@ -19,15 +19,20 @@ $spaces: 0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80;
   [class].u-mr-#{$step} {
     margin-right: $spacer*($space/16);
   }
+}
 
-  [class].u-mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-  }
+[class].u-mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  [class].u-mt-auto {
-    margin-top: auto;
-  }
+[class].u-my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+[class].u-mt-auto {
+  margin-top: auto;
 }
 
 /* stylelint-enable */
