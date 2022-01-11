@@ -84,20 +84,17 @@
                         </div>
 
                         {if $recyclablePackAllowed}
-                            <span class="custom-checkbox">
-                <input type="checkbox" id="input_recyclable" name="recyclable" value="1" {if $recyclable} checked {/if}>
-                <span><i class="material-icons rtl-no-flip checkbox-checked">&#xE5CA;</i></span>
-                <label for="input_recyclable">{l s='I would like to receive my order in recycled packaging.' d='Shop.Theme.Checkout'}</label>
-              </span>
+                            <div class="custom-control custom-checkbox">
+                                <input class="custom-control-input" id="recyclable" name="input_recyclable" type="checkbox" value="1"{if $recyclable} checked="checked"{/if}>
+                                <label class="custom-control-label" for="input_recyclable">{l s='I would like to receive my order in recycled packaging.' d='Shop.Theme.Checkout'}</label>
+                            </div>
                         {/if}
 
                         {if $gift.allowed}
-                            <span class="custom-checkbox">
-                                <input class="js-gift-checkbox" id="input_gift" name="gift" type="checkbox" value="1"
-                                       {if $gift.isGift}checked="checked"{/if}>
-                                <span><i class="material-icons rtl-no-flip checkbox-checked">&#xE5CA;</i></span>
-                                <label for="input_gift">{$gift.label}</label>
-                            </span>
+                            <div class="custom-control custom-checkbox">
+                                <input class="custom-control-input /js js-gift-checkbox" id="input_gift" name="gift" type="checkbox" value="1"{if $gift.isGift} checked="checked"{/if}>
+                                <label class="custom-control-label" for="input_gift">{$gift.label}</label>
+                            </div>
                             <div id="gift" class="form-group collapse{if $gift.isGift} in{/if}">
                                 <label for="gift_message">{l s='If you\'d like, you can add a note to the gift:' d='Shop.Theme.Checkout'}</label>
                                 <textarea class="form-control" rows="2" cols="120" id="gift_message"
