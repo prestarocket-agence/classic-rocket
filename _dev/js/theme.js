@@ -16,8 +16,8 @@ import './listing-add-to-cart';
 import Form from './components/form';
 import TopMenu from './components/top-menu';
 import ProductMinitature from './components/product-miniature';
-// import './components/addcartsticky';
-// import './components/appearanceObserver';
+import './components/addcartsticky';
+import './components/appearanceObserver';
 import './components/sliders';
 
 
