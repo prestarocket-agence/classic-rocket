@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="pdt_addtocart" class="/js product-add-to-cart js-observe">
+<div id="pdt_addtocart" class="u-mb-4 /js product-add-to-cart js-observe">
     {if !$configuration.is_catalog}
         {block name='product_add_to_cart_container'}
 
@@ -75,15 +75,15 @@
             {/block}
 
             {block name='product_minimal_quantity'}
-                <p class="product-minimal-quantity">
-                    {if $product.minimal_quantity > 1}
+                {if $product.minimal_quantity > 1}
+                    <p class="product-minimal-quantity">
                         {l
                         s='The minimum purchase order quantity for the product is %quantity%.'
                         d='Shop.Theme.Checkout'
                         sprintf=['%quantity%' => $product.minimal_quantity]
                         }
-                    {/if}
-                </p>
+                    </p>
+                {/if}
             {/block}
         {/block}
     {/if}

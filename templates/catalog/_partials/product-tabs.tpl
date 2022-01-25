@@ -38,7 +38,7 @@
                      id="description"{if $product_layout === "tabs"} role="tabpanel"{/if}>
 
                     {block name='product_description'}
-                        <div class="product-description s-cms">{$product.description nofilter}</div>
+                        <div class="product-description s-cms u-txt-sm">{$product.description nofilter}</div>
                     {/block}
                 </div>
             </div>
