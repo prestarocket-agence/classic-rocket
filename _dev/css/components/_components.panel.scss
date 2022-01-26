@@ -2,7 +2,6 @@
   padding: $panel-padding-x $panel-padding-y;
   margin-bottom: $panel-margin-bottom;
   background-color: $panel-bg;
-  border-radius: $panel-border-radius;
 }
 
 //Modifiers
@@ -22,6 +21,10 @@
 
 .c-panel--border {
   border: $panel-border-width solid $panel-border-color;
+}
+
+.c-panel--rounded {
+  border-radius: $panel-border-radius;
 }
 
 .c-panel--overflow {
