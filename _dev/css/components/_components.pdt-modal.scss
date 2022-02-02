@@ -1,0 +1,41 @@
+.c-pdtmodal {
+  position: relative;
+  display: flex;
+  padding-bottom: $spacer*1.5;
+  margin-bottom: $spacer*1.5;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $gray-300;
+  }
+
+  &:not(:first-child) {
+    margin-top: $spacer*1.5;
+  }
+}
+
+.c-pdtmodal__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.c-pdtmodal__media {
+  width: 100%;
+  max-width: 160px;
+  padding-right: $spacer*1.5;
+
+  @include media-breakpoint-mobile {
+    max-width: 120px;
+  }
+}
+
+.c-pdtmodal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-left: auto;
+  padding-left: $spacer;
+  padding-right: $spacer;
+}
