@@ -75,6 +75,6 @@
 <div>
     <a class="c-account-sidebar__link" href="{$urls.actions.logout}">
         {include file="_partials/icon.tpl" icon="box-arrow-left" class="c-icon--16 c-icon--center-y u-mr-2"}
-        {l s='Logout' d='Shop.Theme.Customeraccount'}
+        {l s='Déconnexion' d='Shop.Theme.Customeraccount'}
     </a>
 </div>
