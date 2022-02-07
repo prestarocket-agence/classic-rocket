@@ -44,13 +44,31 @@
       {block name='address_form_fields'}
         <section class="u-mb-3 form-fields">
           {block name='form_fields'}
+              {assign var="lastnameisdisplay" value=false}
+              {assign var="firstnameisdisplay" value=false}
+              {assign var="beginingfieldname" value="firstname"}
+              {assign var="endingfieldname" value="lastname"}
             {foreach from=$formFields item="field"}
               {block name='form_field'}
                   {if $field.name !== "alias"}
+                      {if $field.name === "firstname"}
+                          {assign var="firstnameisdisplay" value=true}
+                      {/if}
+                      {if $field.name === "lastname"}
+                          {assign var="lastnameisdisplay" value=true}
+                      {/if}
+                      {if $field.name === "lastname" && !$firstnameisdisplay}
+                          {assign var="beginingfieldname" value="lastname"}
+                          {assign var="endingfieldname" value="firstname"}
+                      {/if}
+
+
+
                       {* input firstname & lastname in a row*}
-                      {if isset($modules.rocketfunnel.rocket_funnel_enable) && $field.name === "firstname" && isset($formFields['lastname'])}
+                      {if isset($modules.rocketfunnel.rocket_funnel_enable) && $field.name === $beginingfieldname && isset($formFields[$endingfieldname])}
                           <div class="c-form__inputrow">
                       {/if}
+
 
                       {* we close a div before phone for row input city cp and country*}
 
@@ -65,9 +83,10 @@
                           {/if}
 
 
-                      {if isset($modules.rocketfunnel.rocket_funnel_enable) && $field.name === "lastname" && isset($formFields['firstname'])}
+                      {if isset($modules.rocketfunnel.rocket_funnel_enable) && $field.name === $endingfieldname && isset($formFields[$beginingfieldname])}
                           </div>
                       {/if}
+
 
                   {/if}
               {/block}
