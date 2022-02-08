@@ -63,7 +63,7 @@
     "url" : "{$urls.pages.index}",
     "logo" : {
         "@type":"ImageObject",
-        "url":"{$urls.shop_domain_url}{$shop.logo}"
+        "url":"{$shop.logo}"
     }
 }
 
@@ -92,7 +92,7 @@
     "url" : "{$urls.pages.index}",
 	"image": {
 	"@type": "ImageObject",
-    "url":"{$urls.shop_domain_url}{$shop.logo}"
+    "url":"{$shop.logo}"
 	},
     "potentialAction": {
     "@type": "SearchAction",
@@ -110,7 +110,6 @@
     "@context": "http://schema.org/",
     "@type": "Product",
     "name": "{$product.name}",
-    "description": "{$page.meta.description}",
     "category": "{$product.category_name}",
     {if isset($product.cover)}"image" :"{$product.cover.bySize.home_default.url}",{/if}
     {if $product.reference}"sku": "{$product.reference}",{/if}
@@ -175,9 +174,9 @@
             "@type": "Organization",
             "name": "{$shop.name}"
         }
-    }
+    },
     {/if}
-
+    "description": "{$page.meta.description}"
 }
 
 
