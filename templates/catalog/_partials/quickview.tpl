@@ -35,7 +35,7 @@
       <div class="row">
         <div class="col col-sm-6 visible--desktop">
           {block name='product_cover_thumbnails'}
-            {include file='catalog/_partials/product-cover-thumbnails.tpl'}
+            {include file='catalog/_partials/product-cover-thumbnails.tpl' quickview=true}
           {/block}
         </div>
         <div class="col col-sm-6">
