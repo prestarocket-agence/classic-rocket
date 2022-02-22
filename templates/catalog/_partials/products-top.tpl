@@ -25,9 +25,9 @@
 <div id="js-product-list-top" class="o-layout o-layout--center-y u-mb-2">
     <div class="u-visible-desktop">
         {if $listing.pagination.total_items > 1}
-            <p class="u-txt-sm u-mb-0">{l s='%product_count% Products' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}</p>
+            <p class="u-txt-sm u-mb-0">{l s='%product_count% Produits' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}</p>
         {elseif $listing.pagination.total_items > 0}
-            <p class="u-txt-sm u-mb-0">{l s='1 Product' d='Shop.Theme.Catalog'}</p>
+            <p class="u-txt-sm u-mb-0">{l s='1 Produit' d='Shop.Theme.Catalog'}</p>
         {/if}
     </div>
 

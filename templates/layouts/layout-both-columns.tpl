@@ -110,6 +110,10 @@
 {/block}
 
 {block name='offcanvas_modals'}
+    {if $page.page_name == 'product'}
+        {* for add to cart mobile sticky*}
+        <div id="js-addcartsticky-bottom"></div>
+    {/if}
     {* offcanvas search filter *}
     <div class="modal fade" id="offcanvas_search_filter" tabindex="-1" role="dialog" data-modal-hide-mobile>
         <div class="modal-dialog modal-dialog__offcanvas modal-dialog__offcanvas--right" role="document">
