@@ -33,7 +33,7 @@
                     </div>
                 {/block}
                 {block name='header_checkout_logo'}
-                    <a href="{$urls.pages.cart}" class="c-header-checkout__logo">
+                    <a href="{$urls.pages.cart}?action=show" class="c-header-checkout__logo">
                         <img class="u-img-fluid c-header-checkout__img"
                              src="{if isset($modules.prestarockettheme.logo)}{$modules.prestarockettheme.logo.url}{else}{$shop.logo}{/if}"
                              alt="{$shop.name}"{if isset($modules.prestarockettheme.logo)} width="{$modules.prestarockettheme.logo.width}" height="{$modules.prestarockettheme.logo.height}"{/if}>
