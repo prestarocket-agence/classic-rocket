@@ -50,7 +50,7 @@ $(document).on('glider-refresh glider-loaded','.js-slider',function(e) {
         _arrows = false,
         _dots = false,
         _slidesToShow = _options.slidesToShow;
-    console.log($(e.target));
+    // console.log($(e.target));
     if(typeof _options.arrows !== "undefined"){
         _arrows = _options.arrows;
     }
