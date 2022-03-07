@@ -101,6 +101,7 @@
             {/block}
         </div>
         <div class="modal-footer">
+          <a href="{$urls.pages.cart}?action=show" class="btn u-txt-primary" >{l s='Voir mon panier' d='Shop.Theme.Global'}</a>
           <button type="button" class="btn btn-primary" data-dismiss="modal">{l s='Close' d='Shop.Theme.Global'}</button>
         </div>
 
