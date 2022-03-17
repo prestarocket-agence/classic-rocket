@@ -17,15 +17,11 @@
 
                     {if $product.cover}
                         <img class="img-fluid"
-                             srcset="{$product.cover.bySize.medium_default.url} 452w,
-                                   {$product.cover.bySize.pdt_180.url} 180w,
-                                   {$product.cover.bySize.pdt_300.url} 300w,
-                                   {$product.cover.bySize.pdt_360.url} 360w,
-                                   {$product.cover.bySize.pdt_540.url} 540w"
+                             srcset="{$product.cover.bySize.medium_default.url}"
                              src="{$product.cover.bySize.medium_default.url}"
                              alt="{$product.cover.legend}" title="{$product.cover.legend}"
-                             width="{$product.cover.bySize.pdt_540.width}"
-                             height="{$product.cover.bySize.pdt_540.height}">
+                             width="{$product.cover.bySize.medium_default.width}"
+                             height="{$product.cover.bySize.medium_default.height}">
                         <noscript>
                             <img class="img-fluid" src="{$product.cover.bySize.medium_default.url}"
                                  alt="{$product.cover.legend}">
@@ -42,15 +38,11 @@
                             <div class="u-rc u-rc--1_1">
                                 <img class="img-fluid lazyload"
                                      {if !$smarty.foreach.images.first && !$product.cover}data-sizes="auto"{/if}
-                                     {if !$smarty.foreach.images.first && !$product.cover}data-{/if}srcset="{$image.bySize.medium_default.url} 452w,
-                   {$image.bySize.pdt_180.url} 180w,
-                   {$image.bySize.pdt_300.url} 300w,
-                   {$image.bySize.pdt_360.url} 360w,
-                   {$image.bySize.pdt_540.url} 540w"
+                                     {if !$smarty.foreach.images.first && !$product.cover}data-{/if}srcset="{$image.bySize.medium_default.url}"
                                      {if !$smarty.foreach.images.first && !$product.cover}data-{/if}src="{$image.bySize.medium_default.url}"
                                      alt="{$image.legend}"
-                                     title="{$image.legend}" width="{$image.bySize.pdt_540.width}"
-                                     height="{$image.bySize.pdt_540.height}">
+                                     title="{$image.legend}" width="{$image.bySize.medium_default.width}"
+                                     height="{$image.bySize.medium_default.height}">
                                 <noscript>
                                     <img class="img-fluid" src="{$image.bySize.medium_default.url}"
                                          alt="{$image.legend}">
