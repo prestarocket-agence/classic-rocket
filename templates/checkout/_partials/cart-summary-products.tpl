@@ -22,27 +22,26 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section id="js-checkout-summary" class="card js-cart mb-5" data-refresh-url="{$urls.pages.cart}?ajax=1&action=refresh">
-  <div class="card-body card__summary">
-    {block name='hook_checkout_summary_top'}
-      {include file='checkout/_partials/cart-summary-top.tpl' cart=$cart}
-    {/block}
 
-    {block name='cart_summary_products'}
-      {include file='checkout/_partials/cart-summary-products.tpl' cart=$cart}
-    {/block}
+<div class="cart-summary-products">
 
-    {block name='cart_summary_subtotals'}
-        {include file='checkout/_partials/cart-summary-subtotals.tpl' cart=$cart}
-    {/block}
+  <p class="mb-0">{$cart.summary_string}</p>
 
-    {block name='cart_summary_voucher'}
-        {include file='checkout/_partials/cart-voucher.tpl'}
-    {/block}
-  </div>
-  {block name='cart_summary_totals'}
-      <div class="card-footer">
-    {include file='checkout/_partials/cart-summary-totals.tpl' cart=$cart}
+  <p>
+    <a class="link__showsummary" href="#" data-toggle="collapse" data-target="#cart-summary-product-list">
+      <span class="small">{l s='show details' d='Shop.Theme.Actions'} </span><i class="material-icons">expand_more</i>
+
+    </a>
+  </p>
+
+
+    {block name='cart_summary_product_list'}
+      <div class="collapse" id="cart-summary-product-list">
+        <ul class="media-list">
+            {foreach from=$cart.products item=product}
+              <li class="media media-list__item">{include file='checkout/_partials/cart-summary-product-line.tpl' product=$product}</li>
+            {/foreach}
+        </ul>
       </div>
-  {/block}
-</section>
+    {/block}
+</div>
