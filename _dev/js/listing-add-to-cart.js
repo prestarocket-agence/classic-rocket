@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import prestashop from 'prestashop';
 
-
 var $body = $('body');
 
 $body.on(
@@ -10,57 +9,42 @@ $body.on(
     (event) => {
         event.preventDefault();
 
-        let $form = $(event.target).closest('form');
-        let $btn = $(event.currentTarget);
-
+        let $form = $(event.target).closest('form'),
+            $btn = $(event.currentTarget),
+            actionURL = $form.attr('action'),
+            dataForm = {},
+            id_product = parseInt($('[name="id_product"]', $form).val());
 
         $form.addClass('is-adding');
         $btn.attr("disabled", true);
-
-        let actionURL = $form.attr('action');
-        let dataForm = {};
-
         dataForm.add = 1;
         dataForm.action = "update";
         dataForm.token = prestashop.static_token;
-        let id_product = parseInt($('[name="id_product"]', $form).val());
         dataForm.id_product = id_product;
 
-        let showModalAddToCart = $btn.data('show-modal');
-        let linkAction = "add-to-cart-list";
-        if (typeof showModalAddToCart !== "undefined") {
-            linkAction = "add-to-cart";
-        }
+        let showModalAddToCart = $btn.data('show-modal'),
+            linkAction = "add-to-cart-list";
+        if (typeof showModalAddToCart !== "undefined") linkAction = "add-to-cart";
 
-//check minimal qty to order
+        //check minimal qty to order
         let minimalValue = $btn.data('min');
-        if (typeof minimalValue === "undefined") {
-            minimalValue = 1;
-        } else {
-            minimalValue = parseInt($btn.data('min'), 10);
-        }
+        typeof minimalValue === "undefined" ? minimalValue = 1 : minimalValue = parseInt($btn.data('min'), 10);
 
-        let isOosp = $btn.data('allow-oosp');
-        console.log(isOosp, 'oosp');
-//add quantity info
-        let $inputQty = $('[name="qty"]', $form);
+        //add quantity info
+        let $inputQty = $('[name="qty"]', $form),
+            qty = $inputQty.val();
 
-        let qty = $inputQty.val();
         qty = parseInt(qty, 10);
-        if (!(qty > 0)) {
-            qty = 1;
-        }
+        if (!(qty > 0)) qty = 1;
+
         dataForm.qty = qty;
 
-
         $.post(actionURL, dataForm, null, 'json').then((resp) => {
-
-
             $btn.attr("disabled", false);
             $form.removeClass('is-adding');
-            if (resp.success) {
-                $btn.addClass('is-add-success');
-            }
+
+            if (resp.success) $btn.addClass('is-add-success');
+
             prestashop.emit('updateCart', {
                 reason: {
                     idProduct: resp.id_product,
@@ -78,8 +62,6 @@ $body.on(
             $btn.attr("disabled", false);
             $form.removeClass('is-adding');
         });
-
-
     });
 
 $(document).ready(() => {
@@ -92,18 +74,14 @@ $(document).ready(() => {
                 } else {
                     confirmAddToCartList(reason.idProductAddList);
                 }
-
             }
-
         }
-
     });
-
 });
 
 function showErrorAddToCartList(errors, id_product) {
-
     let $btn = $('.js-btn-addcartlist[data-id_product="' + id_product + '"]');
+
     $btn.tooltip({
         title: errors[0],
         html: true,
@@ -118,14 +96,13 @@ function showErrorAddToCartList(errors, id_product) {
 }
 
 function confirmAddToCartList(id_product) {
-
     let $btn = $('.js-btn-addcartlist[data-id_product="' + id_product + '"]');
+
     $btn.tooltip({
-        title: stringAddedToCart ? stringAddedToCart : 'Produit ajouté au panier !',
+        title: typeof stringAddedToCart !== 'undefined' ? stringAddedToCart : 'Produit ajouté au panier !',
         html: true,
         placement: 'top',
         trigger: 'manual'
-
     }).tooltip('show');
 
     setTimeout(function () {
