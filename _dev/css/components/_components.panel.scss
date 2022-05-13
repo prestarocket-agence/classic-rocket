@@ -23,6 +23,14 @@
   border: $panel-border-width solid $panel-border-color;
 }
 
+.c-panel--rounded {
+  border-radius: $panel-border-radius;
+}
+
+.c-panel--overflow {
+  overflow-x: auto;
+}
+
 //Header
 .c-panel__head {
   padding-bottom: $panel-header-padding-bottom;

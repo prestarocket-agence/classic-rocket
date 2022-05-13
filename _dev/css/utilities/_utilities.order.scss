@@ -1,5 +1,5 @@
 //Orders
-$orders:        0, 1;
+$orders:        0, 1, 2;
 @each $order in $orders {
   .u-order-#{$order} {
     order: $order;
@@ -7,7 +7,7 @@ $orders:        0, 1;
 }
 
 $orders-mobile: 0, 1, 2;
-@include media-breakpoint-mobile() {
+@include media-breakpoint-mobile {
   @each $order-mobile in $orders-mobile {
     .u-order-#{$order-mobile}\@mobile {
       order: $order-mobile;

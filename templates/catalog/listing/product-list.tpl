@@ -26,58 +26,50 @@
 {block name='bodyClass'} s-listing{/block}
 
 {block name='content'}
-  <div id="main" class="{block name='mainListingClass'}{/block}">
+    <div id="main" class="{block name='mainListingClass'}{/block}">
 
-    {block name='product_list_header'}
-      <div class="c-listing__heading">
-
-      <h1 id="js-product-list-header" class="c-listing__title">{$listing.label}</h1>
-      </div>
-    {/block}
-      {block name='before_products'}
-      {/block}
-
-
-      <section id="products" class="">
-      {if $listing.products|count}
-
-        <div>
-          {block name='product_list_top'}
-            {include file='catalog/_partials/products-top.tpl' listing=$listing}
-          {/block}
-        </div>
-
-        {block name='product_list_active_filters'}
-          <div class="visible--desktop">
-            {$listing.rendered_active_filters nofilter}
-          </div>
+        {block name='product_list_header'}
+            <div class="c-listing__heading">
+                <h1 id="js-product-list-header" class="c-listing__title">{$listing.label}</h1>
+            </div>
+        {/block}
+        {block name='before_products'}
         {/block}
 
-        <div>
-          {block name='product_list'}
-            {include file='catalog/_partials/products.tpl' listing=$listing}
-          {/block}
-        </div>
+        <section id="products">
+            {if $listing.products|count}
 
-        <div id="js-product-list-bottom">
-          {block name='product_list_bottom'}
-            {include file='catalog/_partials/products-bottom.tpl' listing=$listing}
-          {/block}
-        </div>
+                {block name='product_list_top'}
+                    {include file='catalog/_partials/products-top.tpl' listing=$listing}
+                {/block}
 
-      {else}
-          <div id="js-product-list-top"></div>
-          {block name="product_list_no_pdt"}
-          <div id="js-product-list">
-              {include file='errors/not-found.tpl'}
-          </div>
-          {/block}
-          <div id="js-product-list-bottom"></div>
-      {/if}
-    </section>
+                {block name='product_list_active_filters'}
+                    <div class="visible--desktop">
+                        {$listing.rendered_active_filters nofilter}
+                    </div>
+                {/block}
+                <div>
+                    {block name='product_list'}
+                        {include file='catalog/_partials/products.tpl' listing=$listing}
+                    {/block}
+                </div>
+                <div id="js-product-list-bottom">
+                    {block name='product_list_bottom'}
+                        {include file='catalog/_partials/products-bottom.tpl' listing=$listing}
+                    {/block}
+                </div>
+            {else}
+                <div id="js-product-list-top"></div>
+                {block name="product_list_no_pdt"}
+                    <div id="js-product-list">
+                        {include file='errors/not-found.tpl'}
+                    </div>
+                {/block}
+                <div id="js-product-list-bottom"></div>
+            {/if}
+        </section>
 
-  </div>
-
+    </div>
     {block name='product_list_after_bottom'}
     {/block}
 {/block}

@@ -33,10 +33,10 @@
 {* For adsinlist module without JS *}
 {*        {foreach from=$listing.products item="product" name="listproduct"}*}
 {*            {block name='product_miniature'}*}
-{*                {include file='catalog/_partials/miniatures/product.tpl' product=$product}*}
+{*                {include file='catalog/_partials/miniatures/product.tpl' product=$product col="col-lg-3 col-md-4 col-6"}*}
 {*                {assign var=i value=$smarty.foreach.listproduct.iteration}*}
-{*                {if isset($rocket_ads[$i])}*}
-{*                    {$rocket_ads[$smarty.foreach.listproduct.iteration] nofilter}*}
+{*                {if isset($ads[$i])}*}
+{*                    {$ads[$smarty.foreach.listproduct.iteration] nofilter}*}
 {*                {/if}*}
 {*            {/block}*}
 {*        {/foreach}*}

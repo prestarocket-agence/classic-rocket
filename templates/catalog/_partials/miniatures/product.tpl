@@ -92,11 +92,11 @@
                 {block name='product_thumbnail'}
                     <div class="u-rc u-rc--pdt">
                         {if $product.cover}
-                            <img data-src="{$product.cover.bySize.pdt_540.url}"
+                            <img data-src="{$product.cover.bySize.medium_default.url}"
                                  alt="{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
                                  class="c-pdt-mini__img u-img-fluid /js lazyload"
-                                 width="{$product.cover.bySize.pdt_540.width}"
-                                 height="{$product.cover.bySize.pdt_540.height}">
+                                 width="{$product.cover.bySize.medium_default.width}"
+                                 height="{$product.cover.bySize.medium_default.height}">
                         {else}
                             <img data-src="{$urls.no_picture_image.bySize.home_default.url}"
                                  alt="{$product.name|truncate:30:'...'}"

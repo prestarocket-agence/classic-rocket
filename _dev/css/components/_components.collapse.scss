@@ -1,17 +1,9 @@
 .c-collapse__btn {
-  @extend .btn;
-  @extend .btn-link;
-  padding-left: 0;
+  @extend .c-btn--unstyled;
   color: $body-color;
   width: 100%;
-  text-align: left;
-  border-radius: 0;
-  border-bottom: none;
-  text-decoration: none;
 
   &:hover, &:focus {
-    text-decoration: none;
-    box-shadow: none;
     color: inherit;
   }
 

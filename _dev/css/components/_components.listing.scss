@@ -1,8 +1,8 @@
-.c-cat__heading{
-margin-bottom : $listing-heading-margin-bottom;
+.c-listing__heading {
+  margin-bottom: $listing-heading-margin-bottom;
 }
 
-.c-listing__title{
+.c-listing__title {
   @include font-size($listing-title-font-size);
   font-weight: $listing-title-font-weight;
   font-family: $listing-title-font-family;
@@ -13,15 +13,16 @@ margin-bottom : $listing-heading-margin-bottom;
   line-height: $listing-title-line-height;
   margin-bottom: $listing-title-margin-bottom;
 }
-.c-listing__subcat{
+
+.c-listing__subcat {
   display: flex;
   flex-wrap: wrap;
 }
 
-.c-listing__subcatitem{
+.c-listing__subcatitem {
   margin-bottom: $spacer;
 
-  &:not(:last-child){
+  &:not(:last-child) {
     margin-right: $spacer;
   }
 }

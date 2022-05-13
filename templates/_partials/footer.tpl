@@ -37,9 +37,6 @@
         {/block}
     </div>
     <div class="o-layout o-layout--center-y">
-
-        {* To call CMS links block *}
-
         {block name='copyright_link'}
             <a class="u-txt-xs u-txt-dark" href="https://prestarocket.com/" target="_blank" rel="nofollow">
                 {l s='%copyright% %year% - Theme by %prestashop%' sprintf=['%prestashop%' => 'Prestarocket™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}

@@ -79,6 +79,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "node_modules/bootstrap/scss/nav";
 
 @import "../../../classic-rocket/_dev/css/components/components.add-cart-list";
+//@import "../../../classic-rocket/_dev/css/components/components.addcartsticky";
 @import "../../../classic-rocket/_dev/css/components/components.address";
 @import "../../../classic-rocket/_dev/css/components/components.alert";
 @import "../../../classic-rocket/_dev/css/components/components.banner";
@@ -154,6 +155,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "node_modules/bootstrap/scss/utilities/screenreaders.scss";
 @import "node_modules/bootstrap/scss/utilities/stretched-link.scss";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.list";
+@import "../../../classic-rocket/_dev/css/utilities/utilities.order";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.sizes";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.spacer";
 @import "../../../classic-rocket/_dev/css/utilities/utilities.text";

@@ -38,7 +38,7 @@
         <p class="c-account-landing__title">{if isset($modules.prestarockettheme.account.title_account)}{$modules.prestarockettheme.account.title_account}{/if}</p>
         <p>{if isset($modules.prestarockettheme.account.description_account)}{$modules.prestarockettheme.account.description_account}{/if}</p>
     </div>
-    <div class="c-account-landing__img" style="background:url('{if isset($modules.prestarockettheme.account.image_url)}{$modules.prestarockettheme.account.image.url}{/if}') no-repeat center right; background-size: cover;">
+    <div class="c-account-landing__img" style="background:url('{if isset($modules.prestarockettheme.account.image.url)}{$modules.prestarockettheme.account.image.url}{/if}') no-repeat center right; background-size: cover;">
         <div class="c-account-landing__gradient"></div>
     </div>
 {/block}
