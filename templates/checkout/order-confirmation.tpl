@@ -1,16 +1,15 @@
 {extends file='page.tpl'}
 {block name='pageWrapperClass'}{/block}
 {block name='page_content_container' prepend}
-    <section id="content-hook_order_confirmation" class="u-mb-3">
+    <section id="content-hook_order_confirmation"
+             class="c-panel c-panel--center alert alert-success u-txt-center u-mb-4">
 
         {block name='order_confirmation_header'}
-            <p class="u-h3 u-d-flex u-align-items-center u-mb-2 u-txt-success">
-                {include file="_partials/icon.tpl" icon="check" class="c-icon--28 c-icon--center-y u-mr-1"}
-                {l s='Your order is confirmed' d='Shop.Theme.Checkout'}
-            </p>
+            {include file="_partials/icon.tpl" icon="check-circle-fill" class="c-icon--32 u-txt-success"}
+            <p class="u-h3 u-mt-2 u-mb-3">{l s='Your order is confirmed' d='Shop.Theme.Checkout'}</p>
         {/block}
 
-        <p class="u-mb-0 u-ml-4">
+        <p class="u-mb-0">
             {l s='An email has been sent to your mail address %email%.' d='Shop.Theme.Checkout' sprintf=['%email%' => $customer.email]}
             {if $order.details.invoice_url}
                 {* [1][/1] is for a HTML tag. *}
@@ -28,12 +27,35 @@
         {block name='hook_order_confirmation'}
             {$HOOK_ORDER_CONFIRMATION nofilter}
         {/block}
-
     </section>
 {/block}
 
 {block name='page_content_container'}
-    <section id="content" class="page-content page-order-confirmation mb-3">
+    <section id="content" class="page-content page-order-confirmation">
+        {block name='order_details'}
+            <div id="order-details" class="c-panel c-panel--lg c-panel--border u-mb-4">
+                <div class="c-history__item">
+                    <div class="row">
+                        <div class="col-md-4 u-mb-2@mob">
+                            <p class="u-txt-dark u-txt-sm u-mb-1">{l s='Order reference' d='Shop.Theme.Checkout'}</p>
+                            <p class="u-h5 u-font-weight-bold u-mb-1">{$order.details.reference}</p>
+                        </div>
+                        <div class="col-md-4 u-mb-2@mob">
+                            <p class="u-txt-dark u-txt-sm u-mb-1">{l s='Payment method' d='Shop.Theme.Checkout'}</p>
+                            <p class="u-h5 u-font-weight-bold u-mb-1">{$order.details.payment}</p>
+                        </div>
+                        <div class="col-md-4">
+                            {if !$order.details.is_virtual}
+                                <p class="u-txt-dark u-txt-sm u-mb-1">{l s='Shipping method' d='Shop.Theme.Checkout'}</p>
+                                <p class="u-h5 u-font-weight-bold u-mb-1">{$order.carrier.name}</p>
+                                <p class="u-mb-0">{$order.carrier.delay}</p>
+                            {/if}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {/block}
+
         {block name='order_confirmation_table'}
             <div>
                 {include
@@ -46,23 +68,6 @@
                 }
             </div>
         {/block}
-        {block name='order_details'}
-            <div id="order-details" class="c-panel c-panel--border">
-                <h3 class="u-h3 c-panel__head">{l s='Order details' d='Shop.Theme.Checkout'}:</h3>
-                <ul>
-                    <li>{l s='Order reference: %reference%' d='Shop.Theme.Checkout' sprintf=['%reference%' => $order.details.reference]}</li>
-                    <li>{l s='Payment method: %method%' d='Shop.Theme.Checkout' sprintf=['%method%' => $order.details.payment]}</li>
-                    {if !$order.details.is_virtual}
-                        <li>
-                            {l s='Shipping method: %method%' d='Shop.Theme.Checkout' sprintf=['%method%' => $order.carrier.name]}
-                            <br>
-                            <em>{$order.carrier.delay}</em>
-                        </li>
-                    {/if}
-                </ul>
-            </div>
-        {/block}
-
     </section>
     {block name='hook_payment_return'}
         {if ! empty($HOOK_PAYMENT_RETURN)}
@@ -86,6 +91,11 @@
     {block name='hook_order_confirmation_1'}
         {hook h='displayOrderConfirmation1'}
     {/block}
+
+    <div class="u-txt-center u-mt-3 u-mb-3">
+        <a class="btn btn-primary u-mb-2 u-ml-1 u-mr-1" href="{$urls.pages.my_account}">{l s='Accéder à mon compte' d='Shop.Theme.Checkout'}</a>
+        <a class="btn btn-secondary u-mb-2 u-ml-1 u-mr-1" href="{$urls.base_url}">{l s='Retour à la boutique' d='Shop.Theme.Checkout'}</a>
+    </div>
 
     {block name='hook_order_confirmation_2'}
         <section id="content-hook-order-confirmation-footer">

@@ -4,6 +4,7 @@ $spaces: 0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80;
 @each $space in $spaces {
   $step: $space / 8;
 
+  //Regular
   [class].u-mt-#{$step} {
     margin-top: $spacer*($space/16);
   }
@@ -20,14 +21,19 @@ $spaces: 0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80;
     margin-right: $spacer*($space/16);
   }
 
-  [class].u-mx-auto {
-    margin-left: auto;
-    margin-right: auto;
+  //For mobile device
+  [class].u-mb-#{$step}\@mob {
+    margin-bottom: $spacer*($space/16);
   }
+}
 
-  [class].u-mt-auto {
-    margin-top: auto;
-  }
+[class].u-mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[class].u-mt-auto {
+  margin-top: auto;
 }
 
 /* stylelint-enable */
