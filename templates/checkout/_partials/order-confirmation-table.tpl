@@ -22,8 +22,8 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="order-items" class="c-panel c-panel--lg c-panel--border u-mb-4">
-    <p class="c-panel__head u-h2">{l s='Your order' d='Shop.Theme.Checkout'}</p>
+<div id="order-items" class="c-panel c-panel--lg c-panel--border c-panel--center c-panel--rounded u-mb-4">
+    <p class="c-panel__head u-h3">{l s='Articles' d='Shop.Theme.Catalog'}</p>
     <div class="order-confirmation-table">
         {block name='order_confirmation_table'}
             <div class="c-cart__row--border">
@@ -109,10 +109,9 @@
                                 {/if}
                             </div>
                         </div>
-
                         <div>
-                            <div class="c-cart__price">
-                                <span class="u-ml-4">{l s='Unité :' d='Shop.Theme.Catalog'} {$product.price}</span>
+                            <div class="u-d-flex u-align-items-end u-flex-column">
+                                <span class="u-ml-4 u-mb-1">{$product.price}</span>
                                 <span class="u-font-weight-bold u-ml-4">{l s='Total :' d='Shop.Theme.Catalog'} {$product.total}</span>
                             </div>
                         </div>

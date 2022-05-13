@@ -2,7 +2,7 @@
 {block name='pageWrapperClass'}{/block}
 {block name='page_content_container' prepend}
     <section id="content-hook_order_confirmation"
-             class="c-panel c-panel--center alert alert-success u-txt-center u-mb-4">
+             class="c-panel c-panel--center alert alert-success u-txt-center c-panel--rounded u-mb-4">
 
         {block name='order_confirmation_header'}
             {include file="_partials/icon.tpl" icon="check-circle-fill" class="c-icon--32 u-txt-success"}
@@ -33,18 +33,18 @@
 {block name='page_content_container'}
     <section id="content" class="page-content page-order-confirmation">
         {block name='order_details'}
-            <div id="order-details" class="c-panel c-panel--lg c-panel--border u-mb-4">
+            <div id="order-details" class="c-panel c-panel--lg c-panel--border c-panel--rounded c-panel--center u-mb-4">
                 <div class="c-history__item">
                     <div class="row">
-                        <div class="col-md-4 u-mb-2@mob">
+                        <div class="col-md-6 u-mb-3">
                             <p class="u-txt-dark u-txt-sm u-mb-1">{l s='Order reference' d='Shop.Theme.Checkout'}</p>
                             <p class="u-h5 u-font-weight-bold u-mb-1">{$order.details.reference}</p>
                         </div>
-                        <div class="col-md-4 u-mb-2@mob">
+                        <div class="col-md-6 u-mb-3@mob">
                             <p class="u-txt-dark u-txt-sm u-mb-1">{l s='Payment method' d='Shop.Theme.Checkout'}</p>
                             <p class="u-h5 u-font-weight-bold u-mb-1">{$order.details.payment}</p>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-12">
                             {if !$order.details.is_virtual}
                                 <p class="u-txt-dark u-txt-sm u-mb-1">{l s='Shipping method' d='Shop.Theme.Checkout'}</p>
                                 <p class="u-h5 u-font-weight-bold u-mb-1">{$order.carrier.name}</p>
@@ -71,7 +71,7 @@
     </section>
     {block name='hook_payment_return'}
         {if ! empty($HOOK_PAYMENT_RETURN)}
-            <section id="content-hook_payment_return" class="c-panel c-panel--border u-mb-4">
+            <section id="content-hook_payment_return" class="c-panel c-panel--border c-panel--center c-panel--rounded u-mb-4">
                 {$HOOK_PAYMENT_RETURN nofilter}
             </section>
         {/if}
