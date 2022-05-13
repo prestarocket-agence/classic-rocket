@@ -36,6 +36,7 @@
             {block name='order_details'}
                 <div id="order-details"
                      class="c-panel c-panel--lg c-panel--border c-panel--rounded">
+                    <p class="c-panel__head u-h3">{l s='Récapitulatif' d='Shop.Theme.Catalog'}</p>
                     <div class="c-history__item">
                         <div class="row">
                             <div class="col-md-6 u-mb-3">
@@ -84,14 +85,11 @@
             {/block}
         </div>
     </section>
-
     {block name='customer_registration_form'}
         {if $customer.is_guest}
             <div id="registration-form" class="card mb-3">
-                <div class="card-body">
-                    <h4 class="h4">{l s='Save time on your next order, sign up now' d='Shop.Theme.Checkout'}</h4>
-                    {render file='customer/_partials/customer-form.tpl' ui=$register_form}
-                </div>
+                <h4 class="h4">{l s='Save time on your next order, sign up now' d='Shop.Theme.Checkout'}</h4>
+                {render file='customer/_partials/customer-form.tpl' ui=$register_form}
             </div>
         {/if}
     {/block}
