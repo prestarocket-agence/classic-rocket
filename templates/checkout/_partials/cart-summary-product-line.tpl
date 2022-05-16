@@ -43,54 +43,39 @@
 {*  </div>*}
 {*{/block}*}
 
-<div class="c-pdtmodal">
-    {block name='product_thumbnail_mini'}
-        <div class="c-pdtmodal__media">
-            {if $product.cover}
-                <a href="{$product.canonical_url}">
-                    <img
-                            src="{$product.cover.bySize.home_default.url}"
-                            alt="{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
-                            data-full-size-image-url="{$product.cover.large.url}"
-                            class="u-img-fluid"
-                    >
-                </a>
-            {elseif isset($urls.no_picture_image)}
-                <img src="{$urls.no_picture_image.bySize.home_default.url}" class="u-img-fluid">
-            {else}
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
+<div class="c-pdtmodal__card">
+    <div class="c-pdtmodal__core">
+        <div class="c-pdt-mini__body">
+            {if $product.manufacturer_name}
+                <p class="c-pdt-mini__brand">{$product.manufacturer_name}</p>
             {/if}
-        </div>
-    {/block}
-    <div class="c-pdtmodal__body">
-        <div>
-            <a class="u-mb-1 product-title" href="{$product.canonical_url}">{$product.name}</a>
-            {block name='product_reviews_mini'}
-                {hook h='displayProductListReviews' product=$product}
-            {/block}
-            {if $product.show_price}
-                {block name='product_price'}
-                    <div class="u-d-flex u-align-items-center u-mb-1">
-                        <span class="c-price--current{if $product.has_discount} c-price--discount{/if} u-mr-2">{splitprice price=$product.price}</span>
-                        {block name='product_discount'}
-                            {if $product.has_discount}
-                                {hook h='displayProductPriceBlock' product=$product type="old_price"}
-                                <span class="c-price--old">{$product.regular_price}</span>
-                            {/if}
-                        {/block}
-                    </div>
-                {/block}
-            {/if}
-            <div class="product-line-info product-line-info-secondary text-muted small">
-                <span class="label">{l s='Quantité: ' d='Shop.Theme.Checkout'}</span>
-                <span class="value">{$product.quantity}</span>
+            <p class="c-pdt-mini__name">{$product.name}</p>
+            <div class="c-pdt-mini__prices u-mb-0">
+                {if !$product.has_discount}
+                    {hook h='displayProductPriceBlock' product=$product type="before_price"}
+                    <span class="c-price--current">{$product.price}</span>
+                {else}
+                    {hook h='displayProductPriceBlock' product=$product type="old_price"}
+                    <span class="c-price--old u-mr-1">{$product.regular_price}</span>
+                    {hook h='displayProductPriceBlock' product=$product type="before_price"}
+                    <span class="c-price--discount">{$product.price}</span>
+                {/if}
             </div>
-            {foreach from=$product.attributes key="attribute" item="value"}
-                <div class="product-line-info product-line-info-secondary text-muted small">
-                    <span class="label">{$attribute}:</span>
-                    <span class="value">{$value}</span>
-                </div>
-            {/foreach}
+        </div>
+        <div class="c-pdtmodal__thumb">
+            <div class="u-rc u-rc--pdt">
+                {if $product.cover}
+                    <img data-src="{$product.cover.bySize.medium_default.url}"
+                         alt="{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
+                         class="u-img-fluid /js lazyload"
+                         width="{$product.cover.bySize.medium_default.width}"
+                         height="{$product.cover.bySize.medium_default.height}">
+                {else}
+                    <img data-src="{$urls.no_picture_image.bySize.home_default.url}"
+                         alt="{$product.name|truncate:30:'...'}"
+                         class="u-img-fluid /js lazyload">
+                {/if}
+            </div>
         </div>
     </div>
 </div>
