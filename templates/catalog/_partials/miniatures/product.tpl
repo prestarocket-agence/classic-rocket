@@ -41,7 +41,6 @@
                                class="c-pdt-mini__name stretched-link /js js-hover-pdt">{$product.name}</a>
                         {/block}
                     </div>
-                    {$product.specific_prices|dump}
                     {block name='product_reviews'}
                         {hook h='displayProductListReviews' product=$product}
                     {/block}
