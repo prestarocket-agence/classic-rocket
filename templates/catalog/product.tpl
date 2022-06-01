@@ -158,7 +158,12 @@
         {/block}
 
         {block name='product_images_modal'}
-            {include file='catalog/_partials/product-images-modal.tpl'}
+            {*    <script src="{$urls.js_url}photoswipe.min.js" data-keepinline defer></script>*}
+            {*    <script src="{$urls.js_url}photoswipe-ui-default.min.js" data-keepinline defer></script>*}
+
+            <div class="/js js-product-images-modal">
+                {include file='catalog/_partials/product-images-modal.tpl'}
+            </div>
         {/block}
 
         {block name='page_footer_container'}

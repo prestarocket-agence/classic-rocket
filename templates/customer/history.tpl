@@ -91,15 +91,15 @@
                             {/foreach}
                         </div>
                     </div>
-                    <div class="o-layout o-layout--center-y{if !$order.shipping[0].url} o-layout--end{/if} u-flex-wrap">
+                    <div class="o-layout o-layout--center-y{if !$order.shipping[0].tracking_number} o-layout--end{/if} u-flex-wrap">
                         <a class="u-mt-2 c-btn--underline" href="{$order.details.details_url}"
                            data-link-action="view-order-details">
                             {l s='Details' d='Shop.Theme.Customeraccount'}
                         </a>
                         <div class="u-mt-2 u-d-flex">
-                            {if $order.shipping[0].url}
+                            {if $order.shipping[0].tracking_number}
                                 <a class="c-btn--underline"
-                                   href="{$order.shipping[0].url}">{l s='Suivre la commande' d='Shop.Theme.Actions'}</a>
+                                   href="{$order.shipping[0].url|replace:'@':$order.shipping[0].tracking_number}">{l s='Suivre la commande' d='Shop.Theme.Actions'}</a>
                             {/if}
                             {if $order.details.reorder_url}
                                 <a class="c-btn--underline u-ml-2" href="{$order.details.reorder_url}">

@@ -3,7 +3,7 @@
   padding-bottom: $spacer*2;
   margin-bottom: $spacer*3;
   background-color: $header-bg;
-if($header-border-width) {
+@if($header-border-width) {
   border-bottom: solid $header-border-width $header-border-color;
 }
 
