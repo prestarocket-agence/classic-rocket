@@ -104,16 +104,8 @@
                     </div>
                 {/block}
                 {block name='product_flags'}
-                    <ul class="c-pdt-mini__flags u-mb-0">
-                        {foreach from=$product.flags item=flag}
-                            {if $flag.type !== "discount"}
-                                <li class="c-tag c-tag--{$flag.type}">{$flag.label}</li>
-                            {/if}
-                        {/foreach}
-
-                    </ul>
+                    {include file='catalog/_partials/product-flags.tpl'}
                 {/block}
-
                 {block name='quick_view'}
                     <div class="c-pdt-mini__qv">
                         <button class="btn btn-primary btn-quick-view c-btn-circle c-btn-circle--lg /js quick-view"

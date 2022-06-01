@@ -24,6 +24,6 @@
  *}
 <ul class="c-pdt-mini__flags /js product-flags">
     {foreach from=$product.flags item=flag}
-        <li class="product-flag c-tag c-tag--{$flag.type}{if $flag.type == "discount"} u-d-none{/if}">{$flag.label}</li>
+        <li class="c-tag c-tag--{$flag.type}{if $flag.type == "discount"} u-d-none{/if}">{$flag.label}</li>
     {/foreach}
 </ul>
