@@ -1,6 +1,7 @@
 .c-pagination {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: $spacer*5 auto;
 
   @include media-breakpoint-mobile {
