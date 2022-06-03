@@ -15,16 +15,16 @@
             '{/strip}{/if}>
                 <div class="c-snap__item c-snap__item--fullw" data-imgindex="0">
 
-                    {if $product.cover}
+                    {if $product.default_image}
                         <img class="u-img-fluid"
-                             srcset="{$product.cover.bySize.medium_default.url}"
-                             src="{$product.cover.bySize.medium_default.url}"
-                             alt="{$product.cover.legend}" title="{$product.cover.legend}"
-                             width="{$product.cover.bySize.medium_default.width}"
-                             height="{$product.cover.bySize.medium_default.height}">
+                             srcset="{$product.default_image.bySize.medium_default.url}"
+                             src="{$product.default_image.bySize.medium_default.url}"
+                             alt="{$product.default_image.legend}" title="{$product.default_image.legend}"
+                             width="{$product.default_image.bySize.medium_default.width}"
+                             height="{$product.default_image.bySize.medium_default.height}">
                         <noscript>
-                            <img class="u-img-fluid" src="{$product.cover.bySize.medium_default.url}"
-                                 alt="{$product.cover.legend}">
+                            <img class="u-img-fluid" src="{$product.default_image.bySize.medium_default.url}"
+                                 alt="{$product.default_image.legend}">
                         </noscript>
                     {elseif isset($urls.no_picture_image)}
                         <img class="u-img-fluid" src="{$urls.no_picture_image.bySize.large_default.url}">
@@ -33,13 +33,13 @@
                 </div>
                 {assign counter 1}
                 {foreach from=$product.images item=image name="images"}
-                    {if $image.id_image != $product.cover.id_image}
+                    {if $image.id_image != $product.default_image.id_image}
                         <div class="c-snap__item c-snap__item--fullw" data-imgindex="{$counter}">
                             <div class="u-rc u-rc--1_1">
                                 <img class="u-img-fluid lazyload"
-                                     {if !$smarty.foreach.images.first && !$product.cover}data-sizes="auto"{/if}
-                                     {if !$smarty.foreach.images.first && !$product.cover}data-{/if}srcset="{$image.bySize.medium_default.url}"
-                                     {if !$smarty.foreach.images.first && !$product.cover}data-{/if}src="{$image.bySize.medium_default.url}"
+                                     {if !$smarty.foreach.images.first && !$product.default_image}data-sizes="auto"{/if}
+                                     {if !$smarty.foreach.images.first && !$product.default_image}data-{/if}srcset="{$image.bySize.medium_default.url}"
+                                     {if !$smarty.foreach.images.first && !$product.default_image}data-{/if}src="{$image.bySize.medium_default.url}"
                                      alt="{$image.legend}"
                                      title="{$image.legend}" width="{$image.bySize.medium_default.width}"
                                      height="{$image.bySize.medium_default.height}">
@@ -81,9 +81,9 @@
                     {assign counter 1}
 
                     {foreach from=$product.images item=image name="images"}
-                        <div class="c-snap__item c-pdt__thumb /js js-thumb-pdt{if $image.id_image == $product.cover.id_image} is-thumb-selected{/if}"
-                             data-imgindex="{if $image.id_image != $product.cover.id_image}{$counter}{else}0{/if}">
-                            {if $image.id_image != $product.cover.id_image}
+                        <div class="c-snap__item c-pdt__thumb /js js-thumb-pdt{if $image.id_image == $product.default_image.id_image} is-thumb-selected{/if}"
+                             data-imgindex="{if $image.id_image != $product.default_image.id_image}{$counter}{else}0{/if}">
+                            {if $image.id_image != $product.default_image.id_image}
                                 {assign counter $counter+1}
                             {/if}
                             <div class="u-rc u-rc--1_1">
