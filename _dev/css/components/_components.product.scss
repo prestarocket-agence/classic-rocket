@@ -31,8 +31,9 @@
   //thumbnail selected
   &.is-thumb-selected {
     border-color: $thumb-active-border-color;
-    cursor: auto;
+    border-width: $thumb-active-border-width;
     box-shadow: $thumb-active-box-shadow;
+    cursor: auto;
   }
 
   //thumbnails not selected
