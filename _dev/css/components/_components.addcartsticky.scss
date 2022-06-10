@@ -55,6 +55,7 @@
   align-items: center;
 
   @include media-breakpoint-mobile {
+    flex-direction: column;
     width: 100%;
   }
 
