@@ -54,7 +54,7 @@
                                                 {if $group_attribute.texture}class="color texture c-input-color__mark" style="background-image: url({$group_attribute.texture})" {/if}></span>
                                     </label>
                                 </div>
-{*                                <span class="u-mr-2">{$group_attribute.name}</span>*}
+                                <span class="sr-only">{$group_attribute.name}</span>
                             </li>
                         {/foreach}
                     </ul>
