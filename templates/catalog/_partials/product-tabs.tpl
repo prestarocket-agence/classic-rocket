@@ -3,7 +3,7 @@
 <div class="product-tabs">
     {if !isset($modules.prestarockettheme.product.product_layout)}{assign var="product_layout" value="collapse"}
     {else}
-    {assign var="product_layout" value=$modules.prestarockettheme.product.product_layout}
+        {assign var="product_layout" value=$modules.prestarockettheme.product.product_layout}
     {/if}
     {assign classPdtTab "c-collapse__body /js collapse"}
     {assign classPdtTabActive " show"}
@@ -45,18 +45,19 @@
         {/if}
 
         {block name='product_details'}
-
-        {* id="product-details" is used in js *}
-        <div class="c-pdt__section">
-            {if $product_layout === "collapse"}
-                <button class="c-collapse__btn c-collapse__btn--pdtsection" type="button" data-toggle="collapse"
-                        data-target="#product-details" aria-expanded="false" aria-controls="product-details">
-                    {l s='Data sheet' d='Shop.Theme.Catalog'}
-                    {include file="_partials/icon.tpl" class="c-icon--center-y" icon="chevron-up"}
-                </button>
+            {if $product.grouped_features}
+                {* id="product-details" is used in js *}
+                <div class="c-pdt__section">
+                    {if $product_layout === "collapse"}
+                        <button class="c-collapse__btn c-collapse__btn--pdtsection" type="button" data-toggle="collapse"
+                                data-target="#product-details" aria-expanded="false" aria-controls="product-details">
+                            {l s='Data sheet' d='Shop.Theme.Catalog'}
+                            {include file="_partials/icon.tpl" class="c-icon--center-y" icon="chevron-up"}
+                        </button>
+                    {/if}
+                    {include file='catalog/_partials/product-details.tpl'}
+                </div>
             {/if}
-            {include file='catalog/_partials/product-details.tpl'}
-        </div>
         {/block}
 
         {block name='product_attachments'}
