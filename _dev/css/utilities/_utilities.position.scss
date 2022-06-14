@@ -2,3 +2,9 @@
 .u-p-rel {
   position: relative;
 }
+
+.u-p-sticky {
+  position: sticky;
+  top: $spacer*1.5;
+  bottom: $spacer*1.5;
+}
