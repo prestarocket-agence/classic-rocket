@@ -57,11 +57,7 @@
                 </div>
             </div>
             <div class="modal-body">
-
-                <div>
-                    {*          {widget name="rocketcrosselling" id_product=$product.id is_popup=true}*}
-                </div>
-
+{*                {widget name="rocketcrosselling" id_product=$product.id type="highlighted_products" tpl_name='offcanvas'}*}
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-link"
