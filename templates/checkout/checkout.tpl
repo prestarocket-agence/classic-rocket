@@ -82,7 +82,7 @@
   <div class="modal fade" id="js-cart-summary-product-list" tabindex="-1" role="dialog" data-modal-hide-mobile>
     <div class="modal-dialog modal-dialog__offcanvas modal-dialog__offcanvas--right" role="document">
       <div class="modal-content">
-        <div class="modal-header modal-header--primary">
+        <div class="modal-header c-modal-header u-bg-primary">
           <div class="u-d-flex u-align-items-center">
           <p class="h3 u-mb-0 u-txt-white">{$cart.summary_string}</p>
           <button type="button" class="modal-btn__close close" data-dismiss="modal"

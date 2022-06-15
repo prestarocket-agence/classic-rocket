@@ -37,7 +37,7 @@
      aria-labelledby="blockcart-modal-label" aria-hidden="true">
     <div class="modal-dialog modal-dialog__offcanvas modal-dialog__offcanvas--right" role="document">
         <div class="modal-content">
-            <div class="modal-header modal-header--primary">
+            <div class="modal-header c-modal-header u-bg-primary">
                 <div class="u-d-flex u-align-items-start">
                     <div>
                         <div class="u-mb-2">
