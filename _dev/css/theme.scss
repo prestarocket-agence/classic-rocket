@@ -118,6 +118,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.panel";
 @import "node_modules/bootstrap/scss/popover";
 @import "../../../classic-rocket/_dev/css/components/components.prices";
+@import "../../../classic-rocket/_dev/css/components/components.pdt-modal";
 @import "../../../classic-rocket/_dev/css/components/components.product";
 @import "../../../classic-rocket/_dev/css/components/components.product-mini";
 @import "../../../classic-rocket/_dev/css/components/components.reassurance";
