@@ -5,6 +5,8 @@
 * Page-level constraining and wrapping elements.
 */
 
+$wrapper-width: 1440px;
+
 @if $enable-grid-classes {
 
   [class].o-wrapper {
@@ -15,11 +17,10 @@
   }
 
 } @else {
-
   .container {
     @include make-container();
-    @media (min-width: 1500px) {
-      max-width: 1440px;
+    @media (min-width: $wrapper-width) {
+      max-width: $wrapper-width;
     }
     // Version 4.0
     //@include make-container-max-widths();
@@ -31,8 +32,8 @@
   }
   .o-wrapper {
     @extend .container;
-    @media (min-width: 1440px) {
-      max-width: 1440px;
+    @media (min-width: $wrapper-width) {
+      max-width: $wrapper-width;
     }
   }
 }
@@ -42,7 +43,7 @@
   max-width: 100vw;
   margin-left: -15px;
   margin-right: -15px;
-  @media (min-width: 1440px) {
+  @media (min-width: $wrapper-width) {
     margin-left: calc((-100vw / 2 + 1440px / 2) - 15px);
     margin-right: calc((-100vw / 2 + 1440px / 2) - 15px);
   }
