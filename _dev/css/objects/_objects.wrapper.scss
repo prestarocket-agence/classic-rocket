@@ -28,13 +28,11 @@ $wrapper-width: 1440px;
   }
   .o-wrapper {
     @extend .container;
-    @media (min-width: 1500px) {
-      max-width: 1440px;
-    }
   }
 }
 
 .o-wrapper--fullbleed {
+  position: relative;
   width: 100vw;
   max-width: 100vw;
   margin-left: -15px;
