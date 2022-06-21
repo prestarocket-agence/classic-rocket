@@ -52,10 +52,15 @@
 
 //
 
-.modal-dialog__offcanvas .c-modal-header {
+.modal-dialog__offcanvas .c-modal-header, .modal-dialog__offcanvas .modal-header--primary {
   display: inline; // fix Safari
   padding: $spacer*2;
   border: none;
+}
+
+.modal-dialog__offcanvas .modal-header--primary {
+  background: $primary;
+  color: $white;
 }
 
 .modal-dialog__offcanvas .modal-btn__close {
