@@ -8,22 +8,18 @@
 $wrapper-width: 1440px;
 
 @if $enable-grid-classes {
-
   [class].o-wrapper {
     width: 100%;
     max-width: 100%;
 
     @extend .container;
   }
-
 } @else {
   .container {
     @include make-container();
-    @media (min-width: $wrapper-width) {
-      max-width: $wrapper-width;
+    @media (min-width: 1500px) {
+      max-width: 1440px;
     }
-    // Version 4.0
-    //@include make-container-max-widths();
   }
 
   // 100% wide container at all breakpoints
@@ -32,8 +28,8 @@ $wrapper-width: 1440px;
   }
   .o-wrapper {
     @extend .container;
-    @media (min-width: $wrapper-width) {
-      max-width: $wrapper-width;
+    @media (min-width: 1500px) {
+      max-width: 1440px;
     }
   }
 }
@@ -43,7 +39,7 @@ $wrapper-width: 1440px;
   max-width: 100vw;
   margin-left: -15px;
   margin-right: -15px;
-  @media (min-width: $wrapper-width) {
+  @media (min-width: 1440px) {
     margin-left: calc((-100vw / 2 + 1440px / 2) - 15px);
     margin-right: calc((-100vw / 2 + 1440px / 2) - 15px);
   }
