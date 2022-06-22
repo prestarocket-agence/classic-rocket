@@ -114,6 +114,9 @@
             </form>
         {else}
             <p class="alert alert-danger">{l s='Unfortunately, there are no carriers available for your delivery address.' d='Shop.Theme.Checkout'}</p>
+            <div id="hook-display-after-carrier">
+                {$hookDisplayAfterCarrier nofilter}
+            </div>
         {/if}
     </div>
     <div id="extra_carrier"></div>
