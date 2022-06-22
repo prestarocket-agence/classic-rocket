@@ -104,6 +104,9 @@
 
                     </div>
                 </div>
+                <div id="hook-display-after-carrier">
+                    {$hookDisplayAfterCarrier nofilter}
+                </div>
                 <button type="submit" class="u-mb-2 continue btn btn-primary" name="confirmDeliveryOption"
                         value="1">
                     {l s='Continue' d='Shop.Theme.Actions'}
@@ -112,9 +115,6 @@
         {else}
             <p class="alert alert-danger">{l s='Unfortunately, there are no carriers available for your delivery address.' d='Shop.Theme.Checkout'}</p>
         {/if}
-    </div>
-    <div id="hook-display-after-carrier">
-        {$hookDisplayAfterCarrier nofilter}
     </div>
     <div id="extra_carrier"></div>
 {/block}
