@@ -77,9 +77,9 @@
                               <span class="color texture" style="background-image:url({$filter.properties.texture})"></span>
                           {/if}
                           <span class="color__label">{$filter.label}
-                          {*{if $filter.magnitude and $show_quantities}*}
-                              {*<span class="magnitude">({$filter.magnitude})</span>*}
-                          {*{/if}*}
+                          {if $filter.magnitude and $show_quantities}
+                              <span class="magnitude">({$filter.magnitude})</span>
+                          {/if}
                           </span>
                       </label>
                   </div>
