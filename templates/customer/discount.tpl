@@ -30,9 +30,9 @@
 
 {block name='page_content'}
     {if $cart_rules}
-        <div class="c-panel--overflow">
-            <table class="table table-striped visible--desktop">
-                <thead class="thead-default">
+        <div class="c-panel--overflow u-d-desktop">
+            <table class="table table-striped table-borderless">
+                <thead>
                 <tr>
                     <th>{l s='Code' d='Shop.Theme.Checkout'}</th>
                     <th>{l s='Description' d='Shop.Theme.Checkout'}</th>
@@ -58,35 +58,38 @@
                 </tbody>
             </table>
         </div>
-        <div class="cart-rules visible--mobile">
-            {foreach from=$cart_rules item=cart_rule}
+        <div class="cart-rules u-d-mobile">
+            {foreach from=$cart_rules item=cart_rule name='cart_rules'}
+                {if !$smarty.foreach.cart_rules.first}
+                    <hr>
+                {/if}
                 <div class="cart-rule">
                     <ul>
-                        <li>
+                        <li class="o-layout">
                             <strong>{l s='Code' d='Shop.Theme.Checkout'}</strong>
                             {$cart_rule.code}
                         </li>
-                        <li>
+                        <li class="o-layout">
                             <strong>{l s='Description' d='Shop.Theme.Checkout'}</strong>
                             {$cart_rule.name}
                         </li>
-                        <li>
+                        <li class="o-layout">
                             <strong>{l s='Quantity' d='Shop.Theme.Checkout'}</strong>
                             {$cart_rule.quantity_for_user}
                         </li>
-                        <li>
+                        <li class="o-layout">
                             <strong>{l s='Value' d='Shop.Theme.Checkout'}</strong>
                             {$cart_rule.value}
                         </li>
-                        <li>
+                        <li class="o-layout">
                             <strong>{l s='Minimum' d='Shop.Theme.Checkout'}</strong>
                             {$cart_rule.voucher_minimal}
                         </li>
-                        <li>
+                        <li class="o-layout">
                             <strong>{l s='Cumulative' d='Shop.Theme.Checkout'}</strong>
                             {$cart_rule.voucher_cumulable}
                         </li>
-                        <li>
+                        <li class="o-layout">
                             <strong>{l s='Expiration date' d='Shop.Theme.Checkout'}</strong>
                             {$cart_rule.voucher_date}
                         </li>
