@@ -32,7 +32,7 @@
 
     {if $ordersReturn && count($ordersReturn)}
         <h6>{l s='Here is a list of pending merchandise returns' d='Shop.Theme.Customeraccount'}</h6>
-        <div class="c-panel--overflow">
+        <div class="c-panel--overflow u-d-desktop">
             <table class="table table-striped visible--desktop">
                 <thead class="thead-default">
                 <tr>
@@ -62,7 +62,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="order-returns visible--mobile">
+        <div class="order-returns u-d-mobile">
             {foreach from=$ordersReturn item=return}
                 <div class="order-return">
                     <ul>
