@@ -64,26 +64,27 @@
         </div>
         <div class="order-returns u-d-mobile">
             {foreach from=$ordersReturn item=return}
+                <hr>
                 <div class="order-return">
                     <ul>
-                        <li>
+                        <li class="o-layout u-mb-0">
                             <strong>{l s='Order' d='Shop.Theme.Customeraccount'}</strong>
                             <a href="{$return.details_url}">{$return.reference}</a>
                         </li>
-                        <li>
+                        <li class="o-layout u-mb-0">
                             <strong>{l s='Return' d='Shop.Theme.Customeraccount'}</strong>
                             <a href="{$return.return_url}">{$return.return_number}</a>
                         </li>
-                        <li>
+                        <li class="o-layout u-mb-0">
                             <strong>{l s='Package status' d='Shop.Theme.Customeraccount'}</strong>
                             {$return.state_name}
                         </li>
-                        <li>
+                        <li class="o-layout u-mb-0">
                             <strong>{l s='Date issued' d='Shop.Theme.Customeraccount'}</strong>
                             {$return.return_date}
                         </li>
                         {if $return.print_url}
-                            <li>
+                            <li class="o-layout u-mb-0">
                                 <strong>{l s='Returns form' d='Shop.Theme.Customeraccount'}</strong>
                                 <a href="{$return.print_url}">{l s='Print out' d='Shop.Theme.Actions'}</a>
                             </li>
