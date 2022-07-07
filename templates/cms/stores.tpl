@@ -25,67 +25,71 @@
 {extends file='page.tpl'}
 
 {block name='page_title'}
-  {l s='Our stores' d='Shop.Theme.Global'}
+    {l s='Our stores' d='Shop.Theme.Global'}
 {/block}
 
 {block name='page_content_container'}
-  <section id="content" class="page-content page-stores">
-      {block name='page_content_top_stores'}
-      {/block}
-      {foreach $stores as $store}
-      <article id="store-{$store.id}" class="store-item card mb-3">
-        <div class="store-item-container card-body">
-          <div class="row">
-          <div class="col-md-3 col-lg-4 store-picture visible--desktop">
-            <img src="{$store.image.bySize.stores_default.url}" alt="{$store.image.legend}" title="{$store.image.legend}" class="img-fluid">
-          </div>
-          <div class="col-md-5 col-sm-7 col-12 col-lg-4 store-description">
-            <p class="h3 card-title">{$store.name}</p>
-            <address>{$store.address.formatted nofilter}</address>
-            {if $store.note || $store.phone || $store.fax || $store.email}
-              <a data-toggle="collapse" href="#about-{$store.id}" aria-expanded="false" aria-controls="about-{$store.id}"><strong>{l s='About and Contact' d='Shop.Theme.Global'}</strong>{include file="_partials/icon.tpl" icon="chevron-right" class=""}</a>
-            {/if}
-          </div>
-          <div class="col-md-4 col-sm-5 col-12 col-lg-3 border-left">
-            <table class="table table-borderless table-sm">
-              {foreach $store.business_hours as $day}
-              <tr>
-                <th>{$day.day|truncate:4:'.'}</th>
-                <td>
-                  <ul>
-                  {foreach $day.hours as $h}
-                    <li>{$h}</li>
-                  {/foreach}
-                  </ul>
-                </td>
-              </tr>
-              {/foreach}
-            </table>
-          </div>
-        </div>
-        <footer id="about-{$store.id}" class="collapse">
-          <div class="store-item-footer divide-top">
-            <div class="card-block">
-              {if $store.note}
-                <p class="text-justify">{$store.note}<p>
-              {/if}
-            </div>
-            <ul class="card-block">
-              {if $store.phone}
-                <li>{include file="_partials/icon.tpl" icon="telephone-fill" class=""}{$store.phone}</li>
-              {/if}
-              {if $store.fax}
-                <li>{include file="_partials/icon.tpl" icon="printer" class=""}{$store.fax}</li>
-              {/if}
-              {if $store.email}
-                <li>{include file="_partials/icon.tpl" icon="envelope" class=""}{$store.email}</li>
-              {/if}
-            </ul>
-          </div>
-        </div>
-        </footer>
-      </article>
-    {/foreach}
+    <section id="content" class="page-content page-stores">
+        {block name='page_content_top_stores'}
+        {/block}
+        {foreach $stores as $store}
+            <article id="store-{$store.id}" class="c-panel c-panel--rounded">
+                <div class="">
+                    <div class="row">
+                        <div class="col-md-3 store-picture u-d-desktop">
+                            <img src="{$store.image.bySize.stores_default.url}" alt="{$store.image.legend}"
+                                 title="{$store.image.legend}" class="u-img-fluid">
+                        </div>
+                        <div class="col-md-5 col-sm-7 col-12 col-lg-4 store-description">
+                            <p class="h3 card-title">{$store.name}</p>
+                            <address>{$store.address.formatted nofilter}</address>
+                            {if $store.note || $store.phone || $store.fax || $store.email}
+                                <div class="c-panel c-panel--sm c-panel--rounded c-panel--border">
+                                    <p class="u-font-weight-bold u-mb-1">{l s='About and Contact' d='Shop.Theme.Global'}</p>
+                                    <div id="about-{$store.id}">
+                                        {if $store.note}
+                                        <p class="u-txt-center">{$store.note}<p>
+                                            {/if}
+                                        <ul>
+                                            {if $store.phone}
+                                                <li>
+                                                    <a class="u-txt-black u-txt-underline" href="tel:+{$store.phone}">{include file="_partials/icon.tpl" icon="telephone-fill" class='u-mr-1'}{$store.phone}</a>
+                                                </li>
+                                            {/if}
+                                            {if $store.fax}
+                                                <li>
+                                                    <a class="u-txt-black u-txt-underline" href="fax:+{$store.fax}">{include file="_partials/icon.tpl" icon="printer" class='u-mr-1'}{$store.fax}</a>
+                                                </li>
+                                            {/if}
+                                            {if $store.email}
+                                                <li>
+                                                    <a class="u-txt-black u-txt-underline" href="mailto:{$store.email}">{include file="_partials/icon.tpl" icon="envelope" class='u-mr-1'}{$store.email}</a>
+                                                </li>
+                                            {/if}
+                                        </ul>
+                                    </div>
+                                </div>
+                            {/if}
+                        </div>
+                        <div class="col-md-4 col-sm-5 col-12 col-lg-3 border-left">
+                            <table class="table table-borderless table-sm">
+                                {foreach $store.business_hours as $day}
+                                    <tr>
+                                        <th>{$day.day|truncate:4:'.'}</th>
+                                        <td>
+                                            <ul>
+                                                {foreach $day.hours as $h}
+                                                    <li>{$h}</li>
+                                                {/foreach}
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                {/foreach}
+                            </table>
+                        </div>
+                    </div>
+            </article>
+        {/foreach}
 
-  </section>
+    </section>
 {/block}
