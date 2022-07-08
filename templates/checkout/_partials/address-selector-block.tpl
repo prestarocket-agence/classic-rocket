@@ -26,7 +26,7 @@
     {foreach $addresses as $address}
         <div class="col-lg-6 u-d-flex">
             <article
-                    class="c-checkout-card /js address-item{if $address.id == $selected} selected{/if}"
+                    class="c-checkout-card u-w-100 /js address-item{if $address.id == $selected} selected{/if}"
                     id="{$name|classname}-address-{$address.id}"
             >
                 <label for="r-{$name|classname}-address-{$address.id}" class="u-mb-2">
