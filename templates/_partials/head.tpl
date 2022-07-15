@@ -84,4 +84,12 @@
     {$HOOK_HEADER nofilter}
 {/block}
 
-{block name='hook_extra'}{/block}
+{block name='hook_extra'}
+    {if $page.page_name == 'product'}
+        <link rel="preload" as="image" href="{$product.default_image.bySize.medium_default.url}"
+              imagesrcset="{$product.default_image.bySize.medium_default.url} 452w,
+                           {$product.default_image.bySize.medium_default.url} 250w,
+                           {$product.default_image.bySize.large_default.url} 800w"
+              imagesizes="(max-width: 992px) 100vw, 50w">
+    {/if}
+{/block}
