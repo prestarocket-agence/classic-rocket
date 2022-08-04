@@ -125,6 +125,7 @@ $theme-colors: map-remove($theme-colors, "primary", "secondary", "success", "inf
 @import "../../../classic-rocket/_dev/css/components/components.search";
 @import "../../../classic-rocket/_dev/css/components/components.select";
 @import "../../../classic-rocket/_dev/css/components/components.separator";
+@import "../../../classic-rocket/_dev/css/components/components.slider";
 @import "../../../classic-rocket/_dev/css/components/components.snap";
 @import "node_modules/bootstrap/scss/spinners";
 @import "../../../classic-rocket/_dev/css/components/components.tags";
