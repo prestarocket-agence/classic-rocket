@@ -45,10 +45,10 @@
         <meta name="robots" content="none">
     {/if}
 
-    {if $page.page_name == 'product'}
-        <link rel="canonical" href="{$product.canonical_url}">
-    {elseif $page.canonical}
+    {if $page.page_name !== 'product'}
         <link rel="canonical" href="{$page.canonical}">
+    {elseif $page.canonical}
+        <link rel="canonical" href="{$product.canonical_url}">
     {/if}
     {block name='head_hreflang'}
         {if isset($urls.alternative_langs) && $urls.alternative_langs|count > 1}
