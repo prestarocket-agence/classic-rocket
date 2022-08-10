@@ -51,7 +51,7 @@
                         <p class="u-h3 u-txt-center u-mb-3">{l s='Log in to your account' d='Shop.Theme.Customeraccount'}</p>
                         {block name='after_title_checkout_auth'}
                             <p class="u-txt-sm u-txt-center u-mb-3">
-                                {l s='Sign in for faster checkout.' d='Shop.Theme.Global'}
+                                {l s='Connectez-vous pour passer commande plus rapidement.' d='Shop.Theme.Global'}
                             </p>
                         {/block}
                         <section class="login-form s-login-form-checkout">
@@ -71,10 +71,10 @@
 
                 <div class="col-lg-5{block name='class_panel_checkout_noaccount'}{/block}">
                     <div class="c-panel c-panel--lg u-txt-center u-h-100">
-                        <p class="u-h3 u-txt-center u-mb-3">{l s='New Customers' d='Shop.Theme.Customeraccount'}</p>
+                        <p class="u-h3 u-txt-center u-mb-3">{l s='Nouveau client' d='Shop.Theme.Customeraccount'}</p>
                         {block name='after_title_checkout_noaccount'}
                             <p class="u-txt-sm u-mb-3">
-                                {l s='Create an account on our site to place your order and access our services.' d='Shop.Theme.Global'}
+                                {l s='Créez un compte pour commander et accéder à nos services.' d='Shop.Theme.Global'}
                             </p>
                         {/block}
                         <div class="u-txt-center">
