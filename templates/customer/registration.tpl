@@ -35,7 +35,7 @@
 
 {block name='page_title_account'}
     {if isset($modules.rocketfunnel.cookie_redirect_checkout) && $modules.rocketfunnel.cookie_redirect_checkout}
-            {l s='Secured step' d='Shop.Theme.Global'}
+            {l s='Étape sécurisée' d='Shop.Theme.Global'}
     {/if}
 {/block}
 
