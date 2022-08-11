@@ -47,12 +47,12 @@
     {include file='_partials/header.tpl'}
 {/block}
 
-
-{block name='notifications'}
-    {include file='_partials/notifications.tpl'}
-{/block}
 {block name='wrapper'}
     <div id="wrapper" class="{block name='wrapperClass'}o-wrapper{/block}">
+        {block name='notifications'}
+            {include file='_partials/notifications.tpl'}
+        {/block}
+
         {hook h="displayWrapperTop"}
         {block name='breadcrumb'}
             {include file='_partials/breadcrumb.tpl'}
