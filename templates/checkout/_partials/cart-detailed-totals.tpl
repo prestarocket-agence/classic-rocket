@@ -24,39 +24,34 @@
  *}
 {block name='cart_detailed_totals'}
     <div class="/js cart-detailed-totals">
-
-        <div class="">
-            {foreach from=$cart.subtotals item="subtotal"}
-                {if $subtotal && $subtotal.value && $subtotal.type !== 'tax'}
-                    <div class="c-cart-summary__row" id="cart-subtotal-{$subtotal.type}">
-          <span class="label{if 'products' === $subtotal.type} js-subtotal{/if}">
-            {if 'products' == $subtotal.type}
-                {$cart.summary_string}
-            {else}
-                {$subtotal.label}
-            {/if}
-          </span>
-                        <div>
-          <span class="value">
-              {if 'discount' == $subtotal.type}-&nbsp;{/if}{$subtotal.value}
-          </span>
-                            {if $subtotal.type === 'shipping'}
-                                <small class="value">{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}</small>
-                            {/if}
-                        </div>
+        {foreach from=$cart.subtotals item="subtotal"}
+            {if $subtotal && $subtotal.value && $subtotal.type !== 'tax'}
+                <div class="c-cart-summary__row u-txt-sm" id="cart-subtotal-{$subtotal.type}">
+                      <span class="u-font-weight-bold label{if 'products' === $subtotal.type} js-subtotal{/if}">
+                        {if 'products' == $subtotal.type}
+                            {$cart.summary_string}
+                        {else}
+                            {$subtotal.label}
+                        {/if}
+                      </span>
+                    <div>
+                            <span class="value">
+                                {if 'discount' == $subtotal.type}-&nbsp;{/if}{$subtotal.value}
+                            </span>
+                        {if $subtotal.type === 'shipping'}
+                            <small class="value">{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}</small>
+                        {/if}
                     </div>
-                {/if}
-            {/foreach}
-        </div>
-
-        {block name='cart_summary_totals'}
-            {include file='checkout/_partials/cart-summary-totals.tpl' cart=$cart}
-        {/block}
-
+                </div>
+            {/if}
+        {/foreach}
         <hr>
-
         {block name='cart_voucher'}
             {include file='checkout/_partials/cart-voucher.tpl'}
         {/block}
+        {block name='cart_summary_totals'}
+            {include file='checkout/_partials/cart-summary-totals.tpl' cart=$cart}
+        {/block}
+        <hr>
     </div>
 {/block}
