@@ -25,7 +25,7 @@
 {block name='step'}
   <section class="c-panel c-panel--border checkout-step -unreachable card" id="{$identifier}">
     <div class="card-header">
-    <h1 class="step-title h3">
+    <h1 class="step-title u-h3 u-mb-0">
       <span class="step-number">{$position}</span> {$title}
     </h1>
     </div>
