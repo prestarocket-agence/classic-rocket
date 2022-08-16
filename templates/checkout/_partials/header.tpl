@@ -27,20 +27,22 @@
         <div class="o-wrapper">
             <div class="o-layout o-layout--center-y">
                 {block name='header_checkout_left'}
-                    <div class="u-d-flex u-align-items-center">
+                    <div class="u-d-flex u-align-items-center u-flex-1">
                         {include file="_partials/icon.tpl" icon="shield-check" class="c-icon--24 c-icon--center-y u-mr-2"}
                         <p class="u-mb-0 u-visible-desktop">{l s='Espace sécurisé' d='Shop.Theme.Global'}</p>
                     </div>
                 {/block}
                 {block name='header_checkout_logo'}
-                    <a href="{$urls.pages.cart}?action=show" class="c-header-checkout__logo">
-                        <img class="u-img-fluid c-header-checkout__img"
-                             src="{if isset($modules.prestarockettheme.logo)}{$modules.prestarockettheme.logo.url}{else}{$shop.logo}{/if}"
-                             alt="{$shop.name}"{if isset($modules.prestarockettheme.logo)} width="{$modules.prestarockettheme.logo.width}" height="{$modules.prestarockettheme.logo.height}"{/if}>
-                    </a>
+                    <div class="u-flex-1">
+                        <a href="{$urls.pages.cart}?action=show" class="c-header-checkout__logo u-d-flex u-mx-auto">
+                            <img class="u-img-fluid"
+                                 src="{if isset($modules.prestarockettheme.logo)}{$modules.prestarockettheme.logo.url}{else}{$shop.logo}{/if}"
+                                 alt="{$shop.name}"{if isset($modules.prestarockettheme.logo)} width="{$modules.prestarockettheme.logo.width}" height="{$modules.prestarockettheme.logo.height}"{/if}>
+                        </a>
+                    </div>
                 {/block}
                 {block name='header_checkout_right'}
-                    <div>
+                    <div class="u-flex-1">
                         {widget name="ps_contactinfo" hook="displayNav"}
                     </div>
                 {/block}
