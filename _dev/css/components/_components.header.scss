@@ -27,10 +27,10 @@
   padding-top: $spacer*1.5;
   padding-bottom: $spacer*1.5;
 
-  @include media-breakpoint-mobile() {
+  @include media-breakpoint-mobile {
     flex-wrap: wrap;
-    margin-top: $spacer;
-    margin-bottom: $spacer;
+    padding-top: $spacer;
+    padding-bottom: $spacer;
   }
 }
 
