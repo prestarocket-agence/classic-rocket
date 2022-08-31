@@ -109,7 +109,7 @@
                         }
                     </div>
                 {else}
-                    <div id="invoice-addresses" class="u-mb-3 /js js-address-selector">
+                    <div id="invoice-addresses" class="row u-mb-4 /js js-address-selector">
                         {include  file        = 'checkout/_partials/address-selector-block.tpl'
                         addresses   = $customer.addresses
                         name        = "id_address_invoice"
@@ -118,13 +118,12 @@
                         interactive = !$show_delivery_address_form and !$show_invoice_address_form
                         }
 
-                        <div class="u-txt-center">
-                        <a class="btn btn-sm btn-primary" href="{$new_address_invoice_url}">
+                        <div class="col-12 u-txt-center">
+                            <a class="btn btn-sm btn-outline-primary" href="{$new_address_invoice_url}">
                                 {include file="_partials/icon.tpl" icon="plus" class=""}
                                 {l s='Ajouter une nouvelle adresse' d='Shop.Theme.Actions'}
-                        </a>
+                            </a>
                         </div>
-
                     </div>
                     {if isset($invoice_address_error)}
                         <p class="alert alert-danger js-address-error" name="alert-invoice"
