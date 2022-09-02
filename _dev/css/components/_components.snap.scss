@@ -44,9 +44,6 @@
 .c-snap__item {
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  //&:not(:first-child){
-  //  margin-left: $spacer;
-  //}
 }
 
 //for full width item
