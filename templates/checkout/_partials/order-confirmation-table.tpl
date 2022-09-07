@@ -27,7 +27,7 @@
     {block name='order_confirmation_table'}
         <div class="c-cart__row--border">
             {foreach from=$products item=product}
-                <div class="c-cart__row u-mb-3">
+                <div class="c-cart__row u-justify-content-between u-mb-3">
                     <div class="c-cart__caracts">
                         <div class="u-mr-3">
                             <img class="c-cart__img" src="{$product.cover.bySize.cart_default.url}"
