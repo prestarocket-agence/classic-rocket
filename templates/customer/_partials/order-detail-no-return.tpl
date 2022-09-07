@@ -110,7 +110,7 @@
                         </div>
 
                         <div>
-                            <div class="c-cart__price">
+                            <div class="c-cart__price u-txt-right">
                                 <p class="u-mb-0">{$product.price}</p>
                                 <p class="u-font-weight-bold u-ml-4 u-mb-0">{l s='Total' d='Shop.Theme.Catalog'} : {$product.total}</p>
                             </div>
