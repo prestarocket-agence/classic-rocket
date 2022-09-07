@@ -93,11 +93,9 @@
         </div>
         <div class="modal-body">
             {block name='cart_summary_product_list'}
-                <ul class="media-list">
                     {foreach from=$cart.products item=product}
-                      <li class="media media-list__item">{include file='checkout/_partials/cart-summary-product-line.tpl' product=$product}</li>
+                      {include file='checkout/_partials/cart-summary-product-line.tpl' product=$product}
                     {/foreach}
-                </ul>
             {/block}
         </div>
         <div class="modal-footer">
