@@ -27,7 +27,7 @@
         <div id="order-products">
             <div class="c-cart__row--border">
                 {foreach from=$order.products item=product name=products}
-                    <div class="c-cart__row u-mb-3">
+                    <div class="c-cart__row u-justify-content-between u-mb-3">
                         <div class="c-cart__caracts">
                             {if !$product.customizations}
                                 <span id="_desktop_product_line_{$product.id_order_detail}" class="">
@@ -165,8 +165,8 @@
 
                         <div>
                             <div class="c-cart__price">
-                                <span>{$product.price}</span>
-                                <span class="u-font-weight-bold u-ml-4">{l s='Total' d='Shop.Theme.Catalog'} : {$product.total}</span>
+                                <p class="u-mb-0">{$product.price}</p>
+                                <p class="u-font-weight-bold u-ml-4 u-mb-0">{l s='Total' d='Shop.Theme.Catalog'} : {$product.total}</p>
                             </div>
                         </div>
                     </div>
