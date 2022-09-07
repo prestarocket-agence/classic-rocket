@@ -51,7 +51,8 @@
                                                 <div class="u-d-flex carrier{if $carrier.logo} carrier-hasLogo{/if}">
                                                     {if $carrier.logo}
                                                         <div class="col-xs-12 col-md-4 carrier-logo u-txt-center">
-                                                            <img class="c-checkout-card__img" src="{$carrier.logo}" alt="{$carrier.name}"/>
+                                                            <img class="c-checkout-card__img" src="{$carrier.logo}"
+                                                                 alt="{$carrier.name}"/>
                                                         </div>
                                                     {/if}
                                                     <div class="col-xs-12 carriere-name-container{if $carrier.logo} col-md-8{/if}">
@@ -85,14 +86,17 @@
 
                         {if $recyclablePackAllowed}
                             <div class="custom-control custom-checkbox">
-                                <input class="custom-control-input" id="recyclable" name="input_recyclable" type="checkbox" value="1"{if $recyclable} checked="checked"{/if}>
-                                <label class="custom-control-label" for="input_recyclable">{l s='I would like to receive my order in recycled packaging.' d='Shop.Theme.Checkout'}</label>
+                                <input class="custom-control-input" id="recyclable" name="input_recyclable"
+                                       type="checkbox" value="1"{if $recyclable} checked="checked"{/if}>
+                                <label class="custom-control-label"
+                                       for="input_recyclable">{l s='I would like to receive my order in recycled packaging.' d='Shop.Theme.Checkout'}</label>
                             </div>
                         {/if}
 
                         {if $gift.allowed}
                             <div class="custom-control custom-checkbox">
-                                <input class="custom-control-input /js js-gift-checkbox" id="input_gift" name="gift" type="checkbox" value="1"{if $gift.isGift} checked="checked"{/if}>
+                                <input class="custom-control-input /js js-gift-checkbox" id="input_gift" name="gift"
+                                       type="checkbox" value="1"{if $gift.isGift} checked="checked"{/if}>
                                 <label class="custom-control-label" for="input_gift">{$gift.label}</label>
                             </div>
                             <div id="gift" class="form-group collapse{if $gift.isGift} in{/if}">
@@ -107,10 +111,12 @@
                 <div id="hook-display-after-carrier">
                     {$hookDisplayAfterCarrier nofilter}
                 </div>
-                <button type="submit" class="u-mb-2 continue btn btn-primary" name="confirmDeliveryOption"
-                        value="1">
-                    {l s='Continue' d='Shop.Theme.Actions'}
-                </button>
+                <div class="u-txt-center">
+                    <button type="submit" class="u-mb-2 continue btn btn-primary" name="confirmDeliveryOption"
+                            value="1">
+                        {l s='Continue' d='Shop.Theme.Actions'}
+                    </button>
+                </div>
             </form>
         {else}
             <p class="alert alert-danger">{l s='Unfortunately, there are no carriers available for your delivery address.' d='Shop.Theme.Checkout'}</p>
