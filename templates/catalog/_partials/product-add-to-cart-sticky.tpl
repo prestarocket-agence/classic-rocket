@@ -45,7 +45,6 @@
                             <div class="o-layout o-layout--start o-layout--center-y u-flex-wrap">
                                 <span class="c-price--lg {if !$product.has_discount} c-price--lg--current{else} c-price--lg--discount u-mr-2{/if}">{$product.price}</span>
                                 {if $product.has_discount}
-                                    {hook h='displayProductPriceBlock' product=$product type="old_price"}
                                     <span class="c-price--old u-mr-2">{$product.regular_price}</span>
                                 {/if}
                             </div>
