@@ -27,7 +27,7 @@
         <div id="order-products">
             <div class="c-cart__row--border">
                 {foreach from=$order.products item=product}
-                    <div class="c-cart__row u-mb-3">
+                    <div class="c-cart__row u-justify-content-between u-mb-3">
                         <div class="c-cart__caracts">
                             <div class="u-mr-3">
                                 <img class="c-cart__img" src="{$product.cover.bySize.cart_default.url}"
@@ -110,9 +110,9 @@
                         </div>
 
                         <div>
-                            <div class="c-cart__price">
-                                <span>{$product.price}</span>
-                                <span class="u-font-weight-bold u-ml-4">{l s='Total' d='Shop.Theme.Catalog'} : {$product.total}</span>
+                            <div class="c-cart__price u-txt-right">
+                                <p class="u-mb-0">{$product.price}</p>
+                                <p class="u-font-weight-bold u-ml-4 u-mb-0">{l s='Total' d='Shop.Theme.Catalog'} : {$product.total}</p>
                             </div>
                         </div>
                     </div>
