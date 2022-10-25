@@ -65,7 +65,7 @@
             <div class="c-pdt__thumbs">
 
                 <div class="c-pdt__thumbs-list c-snap{if $count_pdt_img > 4} js-slider{/if}"
-                     data-name="js-pdtthumbs"{strip}{if $count_pdt_img > 4} data-glider='
+                     data-name="js-pdtthumbs"{if $count_pdt_img > 4} {strip}data-glider='
             {ldelim}
             "slidesToShow":"auto",
             "itemWidth":82,
