@@ -35,7 +35,7 @@
     box-shadow: $box-shadow;
   }
   .menu__item--active .menu-sub {
-    z-index: 2;
+    z-index: 3;
     opacity: 1;
   }
   .menu-sub__list--1 {
