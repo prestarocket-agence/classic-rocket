@@ -44,7 +44,7 @@
        data-list-comments-url="{$list_comments_url nofilter}"
        data-update-comment-usefulness-url="{$update_comment_usefulness_url nofilter}"
        data-report-comment-url="{$report_comment_url nofilter}"
-       data-comment-item-prototype="{$comment_prototype|escape:'html_attr'}">
+       data-comment-item-prototype="{$comment_prototype|escape:'html'}">
   </div>
 </div>
   <div class="text--center" id="product-comments-list-footer">
