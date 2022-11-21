@@ -43,7 +43,7 @@
 
 
         <div class="row">
-            <div class="col-12 col-md-4 col-lg-3 u-mb-2 u-order-2@mobile">
+            <div class="col-md-4 col-lg-3 u-mb-2 u-order-2@mobile">
                 {include file='customer/_partials/my-account-sidebar.tpl'}
             </div>
             <div class="col-md-8 col-lg-9 u-mb-2">
