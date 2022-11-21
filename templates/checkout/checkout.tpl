@@ -60,7 +60,7 @@
               {/block}
           </div>
 
-          <div class="col-12 col-lg-4">
+          <div class="col-lg-4">
               {block name='cart_summary'}
                   {include file='checkout/_partials/cart-summary.tpl' cart = $cart}
               {/block}
