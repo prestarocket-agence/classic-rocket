@@ -29,7 +29,7 @@
     <form
       method="POST"
       action="{url entity='order' params=['id_address' => $id_address]}"
-      data-refresh-url="{url entity='order' params=['ajax' => 1, 'action' => 'addressForm']}"
+      data-refresh-url="{url entity='order' params=['ajax' => 1, 'action' => 'addressForm', 'id_address' => $id_address]}"
       {if $show_delivery_address_form || ($show_invoice_address_form && !$use_same_address)}class="needs-validation" autocomplete="false" novalidate{/if}
     >
       {if !$use_same_address}
