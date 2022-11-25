@@ -24,7 +24,7 @@
  *}
 {block name='product_miniature_item'}
     <article class="product-miniature js-product-miniature mb-3" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}">
-        <div class="card card-product">
+        <div class="card card-product thumbnail-container js-thumbnail-container">
 
             <div class="card-img-top product__card-img">
                 {block name='product_thumbnail'}
