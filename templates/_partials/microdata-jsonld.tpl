@@ -50,7 +50,7 @@
     <meta property="product:brand" content="{$product_manufacturer->name|escape:'html':'UTF-8'}" />
   {/if}
   <meta property="og:availability" content="{if $product.quantity_all_versions > 0 || $product.allow_oosp > 0}instock{else}out of stock{/if}" />
-{elseif $page.page_name === 'category' && isset($category) && $category.image.large.url}
+{elseif $page.page_name === 'category' && isset($category) && !empty($category.image.large.url)}
     <meta property="og:image" content="{$category.image.large.url}"/>
 {else}
     <meta property="og:image" content="{$shop.logo}"/>
@@ -111,7 +111,7 @@
     "@type": "Product",
     "name": "{$product.name}",
     "category": "{$product.category_name}",
-    {if isset($product.cover)}"image" :"{$product.cover.bySize.home_default.url}",{/if}
+    {if isset($product.cover.bySize.home_default.url)}"image" :"{$product.cover.bySize.home_default.url}",{/if}
     {if $product.reference}"sku": "{$product.reference}",{/if}
     {if $product.ean13}
       "gtin13": "{$product.ean13}",

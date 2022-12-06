@@ -26,8 +26,8 @@
   {block name='product_cover'}
       <div class="position-relative">
   <div class="products-imagescover mb-2" data-slick='{literal}{"asNavFor":"[data-slick].product-thumbs","rows": 0,"slidesToShow": 1,"arrows":false}{/literal}' data-count="{$product.images|count}">
-   <div class="product-img">
-       <div class="">
+    <div class="product-img">
+        <div class="">
            {if $product.default_image}
 
            <img class="img-fluid"
@@ -45,11 +45,12 @@
            {/if}
 
 
-
-        <noscript>
-            <img class="img-fluid" src="{$product.default_image.bySize.medium_default.url}" alt="{$product.default_image.legend}">
-        </noscript>
-       </div>
+          {if $product.default_image}
+            <noscript>
+              <img class="img-fluid" src="{$product.default_image.bySize.medium_default.url}" alt="{$product.default_image.legend}">
+            </noscript>
+          {/if}
+        </div>
    </div>
 
       {foreach from=$product.images item=image name="images"}
