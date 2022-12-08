@@ -44,11 +44,13 @@
     <meta name="robots" content="none">
   {/if}
 
-  {if $page.canonical}
-    <link rel="canonical" href="{$page.canonical}{if isset($smarty.get.page) && $smarty.get.page > 1}?page={$smarty.get.page}{/if}">
+  {if $page.page_name == 'product'}
+    <link rel="canonical" href="{$product.canonical_url}">
+  {elseif $page.canonical}
+    <link rel="canonical" href="{$page.canonical}">
   {/if}
   {block name='head_hreflang'}
-      {if isset($urls.alternative_langs)}
+      {if isset($urls.alternative_langs) && $urls.alternative_langs|count > 1}
       {foreach from=$urls.alternative_langs item=pageUrl key=code}
         <link rel="alternate" href="{$pageUrl}" hreflang="{$code}">
       {/foreach}

@@ -37,7 +37,7 @@
 
   <div class="row">
     <div class="col-md-6">
-      <div class="card noshadow">
+      <div class="card">
         <div class="card-header">
           <h4 class="h5 black addresshead">{l s='Your Delivery Address' d='Shop.Theme.Checkout'}</h4>
 
@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="col-md-6">
-      <div class="card noshadow">
+      <div class="card">
         <div class="card-header">
         <h4 class="h5 black addresshead">{l s='Your Invoice Address' d='Shop.Theme.Checkout'}</h4>
         </div>

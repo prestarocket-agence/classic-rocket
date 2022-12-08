@@ -1,4 +1,4 @@
-<div class="block-category card-block d-none d-md-block">
+<div class="block-category card-block visible--desktop">
     <div id="_desktop_category_header">
         <h1 class="h1">{$category.name}{if isset($smarty.get.page) && $smarty.get.page > 1} <span class="small"> - Page {$smarty.get.page}</span>{/if}</h1>
     </div>
@@ -9,7 +9,7 @@
             {/if}
             {if $category.image.large.url}
                 <div class="category-cover">
-                    <img src="{$category.image.large.url}" alt="{if !empty($category.image.legend)}{$category.image.legend}{else}{$category.name}{/if}">
+                    <img src="{$category.image.large.url}" class="lazyload" alt="{if !empty($category.image.legend)}{$category.image.legend}{else}{$category.name}{/if}">
                 </div>
             {/if}
         </div>

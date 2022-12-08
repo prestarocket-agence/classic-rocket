@@ -25,14 +25,14 @@
 
 <div class="block_newsletter col-lg-8 col-12">
   <div class="row">
-    <p id="block-newsletter-label" class="col-md-5 col-12">{l s='Get our latest news and special sales' d='Shop.Theme.Global'}</p>
-    <div class="col-md-7 col-12">
-      <form action="{$urls.pages.index}#footer" method="post">
+    <p id="block-newsletter-label" class="col-lg-5 col-12">{l s='Get our latest news and special sales' d='Shop.Theme.Global'}</p>
+    <div class="col-lg-7 col-12">
+      <form action="{$urls.pages.index}#footer" method="post" class="needs-validation">
         <input type="hidden" name="action" value="0">
         <div class="input-group">
           <input
                   name="email"
-                  class="form-control{if isset($nw_error)} is-invalid{/if}"
+                  class="form-control{if isset($nw_error) and $nw_error} is-invalid{/if}"
                   type="email"
                   value="{$value}"
                   placeholder="{l s='Your email address' d='Shop.Forms.Labels'}"

@@ -1,4 +1,4 @@
-<div class="variant-links d-flex justify-content-center">
+<div class="variant-links">
     {foreach from=$variants item=variant name="variantslist"}
         {if $smarty.foreach.variantslist.iteration < 6}
             <a href="{$variant.url}"

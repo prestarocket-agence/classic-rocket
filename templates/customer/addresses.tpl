@@ -31,7 +31,7 @@
 {block name='page_content'}
   <div class="row">
   {foreach $customer.addresses as $address}
-    <div class="col-lg-4 col-md-6 col-sm-6 mb-3">
+    <div class="col-lg-4 col-sm-6 mb-3">
     {block name='customer_address'}
       {include file='customer/_partials/block-address.tpl' address=$address}
     {/block}

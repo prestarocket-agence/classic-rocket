@@ -1,19 +1,24 @@
-# PrestaShop Classic Rocket
 
+# PrestaShop Classic Rocket
 Classic Rocket is a rework of "classic theme". It has been built keeping in  mind : performance, accessibility and SEO.
 
 Contributed by [Prestarocket](//www.prestarocket.com/blog/) (Twitter: [@prestarocket](https://twitter.com/prestarocket))
+
+Demo : [https://demoprestashop.prestarocket.com/](https://demoprestashop.prestarocket.com/)
 
 Main features :
 - last version of Twitter Bootstrap
 - lazy loading images
 - offcanvas for main menu and filter menu
 - less css and less js
-- form accessibility
+- form accessibility and better validation
 - SEO: Hn, rel prev/next for pagination...
 - font performance
+- better responsive
 
 We use [Dareboost](https://www.dareboost.com/) to test and improve our work.
+## Contributing
+PR on branch develop please
 
 ## Main differences with Classic Theme
 ### Performance
@@ -22,7 +27,7 @@ With the same server (gzip, PrestaShop performance settings properly adjusted)
 - JS: 155 Ko (with Classic theme) to 86 Ko
 
 You can also see the web quality and performance comparison report on [Dareboost](https://www.dareboost.com/en/comparison/d_5b51dc70e967906045fd3683/d_5b51dc70e967906045fd3684)
-### Twitter Bootstrap 4.1.x
+### Twitter Bootstrap 4.4.x
 
 - Almost all tpl files are edited to use new BS classes (ex: col-xs-12 => col-12)
 - For retrocompatibility and third modules, we keep some important old classes in bs_alpha.scss      
@@ -110,15 +115,16 @@ Filter
 ```
 
 ## Compatibility
-PrestaShop 1.7.3.2 to 1.7.4.x
+PrestaShop 1.7.3.2 to 1.7.6.x
 
 ## Download
-- For PrestaShop 1.7.3.x (version 1.0.0): [classic-rocket](https://github.com/PrestaShop/classic-rocket/releases/download/1.0.0/classic-rocket.zip)
+- [classic-rocket](https://github.com/PrestaShop/classic-rocket/releases)
 
+## Misc
+You can also use gulp to work faster during development (gulpfile.js => gulp watch)
 
 ## To do (you can help!):
 - test rtl
-- form validation
 - more BEM
 - add more custom scss variables
 - more data in jsonld

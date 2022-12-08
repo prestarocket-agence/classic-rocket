@@ -33,7 +33,7 @@
      </div>
      <div class="modal-body">
       <div class="row">
-        <div class="col col-sm-6 d-none d-sm-block">
+        <div class="col col-sm-6 visible--desktop">
           {block name='product_cover_thumbnails'}
             {include file='catalog/_partials/product-cover-thumbnails.tpl'}
           {/block}
@@ -43,7 +43,7 @@
             {include file='catalog/_partials/product-prices.tpl'}
           {/block}
           {block name='product_description_short'}
-            <div id="product-description-short" itemprop="description">{$product.description_short nofilter}</div>
+            <div id="product-description-short">{$product.description_short nofilter}</div>
           {/block}
           {block name='product_buy'}
             <div class="product-actions">

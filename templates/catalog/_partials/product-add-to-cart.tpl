@@ -27,10 +27,10 @@
 
     {block name='product_quantity'}
       <div class="product-quantity row align-items-center no-gutters">
-        <label for="quantity_wanted" class="mb-0 col-auto mt-2">{l s='Quantity' d='Shop.Theme.Catalog'}</label>
-        <div class="qty mx-3 col-auto mt-2">
+        <label for="quantity_wanted" class="quantity__label col-auto">{l s='Quantity' d='Shop.Theme.Catalog'}</label>
+        <div class="qty col-auto">
           <input
-            type="text"
+            type="number"
             name="qty"
             id="quantity_wanted"
             value="{$product.quantity_wanted}"
@@ -41,19 +41,20 @@
           >
         </div>
 
-        <div class="add col mt-2">
+        <div class="add col-auto">
           <button
-            class="btn btn-primary add-to-cart btn-lg btn-block btn-add-to-cart"
+            class="btn btn-primary add-to-cart btn-lg btn-block btn-add-to-cart js-add-to-cart"
             data-button-action="add-to-cart"
             type="submit"
             {if !$product.add_to_cart_url}
               disabled
             {/if}
           >
-            <i class="material-icons shopping-cart">&#xE547;</i>
+            <i class="material-icons shopping-cart btn-add-to-cart__icon">&#xE547;</i><span class="btn-add-to-cart__spinner" role="status" aria-hidden="true"></span>
             {l s='Add to cart' d='Shop.Theme.Actions'}
           </button>
         </div>
+          {hook h='displayProductActions' product=$product}
       </div>
     {/block}
 
@@ -71,7 +72,7 @@
         {/if}
       </span>
     {/block}
-    
+
     {block name='product_minimal_quantity'}
       <p class="product-minimal-quantity">
         {if $product.minimal_quantity > 1}

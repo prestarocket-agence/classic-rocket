@@ -34,19 +34,19 @@
     <section id="products">
       {if $listing.products|count}
 
-        <div id="">
+        <div>
           {block name='product_list_top'}
             {include file='catalog/_partials/products-top.tpl' listing=$listing}
           {/block}
         </div>
 
         {block name='product_list_active_filters'}
-          <div id="" class="d-none d-md-block">
+          <div class="visible--desktop">
             {$listing.rendered_active_filters nofilter}
           </div>
         {/block}
 
-        <div id="">
+        <div>
           {block name='product_list'}
             {include file='catalog/_partials/products.tpl' listing=$listing}
           {/block}
@@ -59,9 +59,11 @@
         </div>
 
       {else}
-
-        {include file='errors/not-found.tpl'}
-
+          <div id="js-product-list-top"></div>
+          <div id="js-product-list">
+              {include file='errors/not-found.tpl'}
+          </div>
+          <div id="js-product-list-bottom"></div>
       {/if}
     </section>
 

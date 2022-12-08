@@ -1,0 +1,23 @@
+//color
+
+$bg-dark :                      #dededd;
+$tertiary:                      #f39d72;
+
+//option
+$enable-fluid-layout:            false;
+
+
+/* HEADER */
+$header-bg:                     $white;
+$header-box-shadow:             0 2px 6px 0 rgba(0,0,0,.2);
+$header-nav-bg-color:           null;
+$header-nav-color:              $body-color;
+$header-nav-padding-y:          null;
+$header-nav-border-color:       $border-color;
+$header-top-border-color:       $header-nav-border-color;
+/* MAIN */
+$spacer-y : $spacer*2;
+$wrapper-bg:                    #f1f1f1;
+/* FOOTER */
+$footer-bg:                     $white;
+$footer-container-margin-top:   $spacer;

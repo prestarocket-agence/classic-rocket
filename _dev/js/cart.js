@@ -34,10 +34,16 @@ $(document).ready(() => {
 
   prestashop.on('updateCart', () => {
     $('.quickview').modal('hide');
+    $('.js-cart__card-body').addClass('is--loading');
   });
 
   prestashop.on('updatedCart', () => {
     createSpin();
+    $('.js-cart__card-body.is--loading').removeClass('is--loading');
+  });
+
+  prestashop.on('handleError', function (event) {
+      $('.js-cart__card-body.is--loading').removeClass('is--loading');
   });
 
   createSpin();
@@ -154,7 +160,8 @@ $(document).ready(() => {
 
       // Refresh cart preview
       prestashop.emit('updateCart', {
-        reason: dataset
+        reason: dataset,
+        resp: resp
       });
     }).fail((resp) => {
       prestashop.emit('handleError', {
@@ -199,7 +206,8 @@ $(document).ready(() => {
 
       // Refresh cart preview
       prestashop.emit('updateCart', {
-        reason: dataset
+        reason: dataset,
+        resp: resp
       });
     }).fail((resp) => {
       prestashop.emit('handleError', {eventType: 'updateProductQuantityInCart', resp: resp})
@@ -270,7 +278,7 @@ $(document).ready(() => {
           const $discountInput = $('[name=discount_name]');
 
           $discountInput.val($code.text());
-
+          $('#promo-code').collapse('show');
           return false;
       }
   )
@@ -289,7 +297,7 @@ const CheckUpdateQuantityOperations = {
 
     if ('' !== errorMsg) {
       let strError = ' <article class="alert alert-danger" role="alert" data-alert="danger"><ul><li>' + errorMsg + '</li></ul></article>';
-      $('#notifications .container').html(strError);
+      $('#notifications.notifications-container').html(strError);
       errorMsg = '';
       isUpdateOperation = false;
       if (hasError) {
@@ -299,7 +307,7 @@ const CheckUpdateQuantityOperations = {
     } else if (!hasError && isUpdateOperation) {
       hasError = false;
       isUpdateOperation = false;
-      $('#notifications .container').html('');
+      $('#notifications.notifications-container').html('');
       $checkoutBtn.removeClass('disabled');
     }
   },

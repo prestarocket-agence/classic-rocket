@@ -23,55 +23,42 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='header_banner'}
-  <div class="header-banner">
-      {hook h='displayBanner'}
-  </div>
+    <div class="header-banner">
+        {hook h='displayBanner'}
+    </div>
 {/block}
 
 {block name='header_nav'}
-  <nav class="header-nav border-bottom">
-    <div class="container header__container">
-      <div class="row d-none d-md-flex align-items-center">
-        <div class="col-md-4">
-            {hook h='displayNav1'}
+    <div class="header-nav u-bor-bot">
+        <div class="header__container container">
+            <div class="u-a-i-c d--flex-between visible--desktop">
+                <div class="small">
+                    {hook h='displayNav1'}
+                </div>
+                <div class="header-nav__right">
+                    {hook h='displayNav2'}
+                </div>
+            </div>
         </div>
-        <div class="col-md-8 d-flex align-items-center justify-content-end right-nav">
-            {hook h='displayNav2'}
-        </div>
-      </div>
-      <div class="d-md-none d-flex justify-content-between align-items-center w-100 mobile no-gutters">
-        <div class="col-4">
-          <button id="menu-icon" class="btn" data-toggle="modal" data-target="#mobile_top_menu_wrapper">
-            <i class="material-icons d-inline">&#xE5D2;</i>
-          </button>
-        </div>
-        <div class="col-4">
-          <div class="top-logo text-center" id="_mobile_logo"></div>
-        </div>
-        <div class="col-4 d-flex align-items-center justify-content-end right-nav">
-          <div id="_mobile_user_info"></div>
-          <div id="_mobile_cart" class="mobile-cart"></div>
-        </div>
-
-      </div>
     </div>
-  </nav>
 {/block}
 
 {block name='header_top'}
-  <div class="header-top border-bottom">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-2 d-none d-md-block" id="_desktop_logo">
-          <a href="{$urls.base_url}">
+    <div class="container header-top d--flex-between u-a-i-c">
+        <button class="visible--mobile btn" id="menu-icon" data-toggle="modal" data-target="#mobile_top_menu_wrapper">
+            <i class="material-icons d-inline">&#xE5D2;</i>
+        </button>
+        <a href="{$urls.base_url}" class="header__logo header-top__col">
             <img class="logo img-fluid" src="{$shop.logo}" alt="{$shop.name}">
-          </a>
+        </a>
+        <div class="header__search">
+            {hook h='displaySearch'}
         </div>
-        <div class="col-md-10 col-sm-12 d-flex justify-content-between position-static">
+        <div class="header__right header-top__col">
             {hook h='displayTop'}
         </div>
-      </div>
     </div>
-  </div>
-    {hook h='displayNavFullWidth'}
+    <div class="container">
+        {hook h='displayNavFullWidth'}
+    </div>
 {/block}

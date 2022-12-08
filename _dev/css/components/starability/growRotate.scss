@@ -1,0 +1,39 @@
+@import '../variables';
+@import '../starability-base';
+@import '../starability-result';
+
+@keyframes grow-rotate {
+
+  0% {
+    transform: scale(1,1) rotate(0deg);
+  }
+
+  99% {
+    transform: scale(4,4) rotate(90deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1,1) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+.starability-growRotate {
+  @include starability-base;
+  will-change: contents;
+
+  > label::after {
+    @include starability-animation-base;
+    bottom: 0;
+    left: 0;
+  }
+
+  > input:checked + label::after {
+    background-position: 0 (-$star-size);
+    opacity: 1;
+    animation-duration: 1s;
+    animation-name: grow-rotate;
+    animation-fill-mode: forwards;
+  }
+}

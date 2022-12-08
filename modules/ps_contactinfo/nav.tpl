@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div id="_desktop_contact_link">
-  <div id="contact-link" class="small">
+  <div id="contact-link">
     {if $contact_infos.phone}
       {* [1][/1] is for a HTML tag. *}
       {l
@@ -36,7 +36,7 @@
         d='Shop.Theme.Global'
       }
     {else}
-      <a href="{$urls.pages.contact}" class="text-body">{l s='Contact us' d='Shop.Theme.Global'}</a>
+      <a href="{$urls.pages.contact}" class="u-link-body">{l s='Contact us' d='Shop.Theme.Global'}</a>
     {/if}
   </div>
 </div>

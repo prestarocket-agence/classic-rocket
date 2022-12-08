@@ -1,0 +1,122 @@
+@include media-breakpoint-desktop {
+  .product-comment-modal .modal-dialog{
+    max-width: 774px;
+  }
+}
+.product-comment-modal{
+  .modal-footer{
+    margin-right: -$modal-inner-padding;
+    margin-left: -$modal-inner-padding;
+  }
+  .modal-body{
+    padding-bottom: 0;
+  }
+}
+.modal--product-comment-posted-modal,
+.modal--report-comment-posted{
+  .modal-header{
+    color:$success
+  }
+}
+.product-comment-post-error-message{
+  .modal-header{
+    color:$danger
+  }
+}
+.grade-stars,
+.comments-note{
+  display: flex;
+}
+.star{
+  color: #f1ab00;
+}
+
+/** product list **/
+
+.product-list-reviews{
+  .grade-stars{
+ justify-content: center;
+  }
+  .star{
+    .material-icons{
+      font-size: $font-size-base;
+    }
+  }
+}
+/** product page **/
+.product-comments{
+  margin-top: $spacer*2;
+  margin-bottom: $spacer*2;
+}
+.product-comments-additional-info{
+  margin: $spacer 0;
+}
+.comments-note{
+  .grade-stars{
+    margin-left: $spacer/4;
+  }
+  margin-bottom: $spacer/2;
+}
+.comments__header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.product-comment-list-item{
+  background: $white;
+  margin-bottom: $spacer;
+  padding: $spacer;
+}
+.comment-infos{
+  .grade-stars{
+    margin-bottom: $spacer;
+  }
+  .comment-date,
+  .comment-author{
+    font-size: $font-size-sm;
+  }
+}
+
+/* comment list */
+.product-comments__pagination{
+  ul{
+    @extend .pagination;
+    @extend .pagination-sm;
+  }
+    li{
+      @extend .page-item;
+      span{
+        @extend .page-link;
+      }
+      &:not(.disabled){
+        span:not(.current){
+          cursor: pointer;
+        }
+      }
+    }
+}
+/* MODAL COMMENT */
+/* radio input star ratig */
+@import 'starability/starability-base';
+
+.starability-basic {
+  @include starability-base;
+  min-height: auto;
+}
+
+.product-criterion{
+  display: flex;
+  justify-items: center;
+  justify-content: flex-end;
+  margin-bottom: $spacer;
+  &__name{
+    width: auto;
+    font-size: $font-size-base;
+    margin-bottom: 0;
+    margin-right: $spacer/4;
+  }
+  label{
+    margin-bottom: 0;
+  }
+}
+

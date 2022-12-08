@@ -23,13 +23,9 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {if isset($listing.rendered_facets)}
-<div id="_desktop_search_filters_wrapper" class="d-none d-md-block">
-  <div id="search_filter_controls" class="d-md-none mb-3">
+<div id="_desktop_search_filters_wrapper" class="visible--desktop">
+  <div id="search_filter_controls" class="visible--mobile">
       <span id="_mobile_search_filters_clear_all"></span>
-      <button class="btn btn-outline-success btn-block ok" data-dismiss="modal" aria-label="{l s='Close' d='Shop.Theme.Global'}">
-        <i class="material-icons rtl-no-flip">&#xE876;</i>
-        {l s='OK' d='Shop.Theme.Actions'}
-      </button>
   </div>
   {$listing.rendered_facets nofilter}
 </div>

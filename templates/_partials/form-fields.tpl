@@ -177,18 +177,17 @@
                 {l s='Show' d='Shop.Theme.Actions'}
               </button>
             </span>
-                        <small class="form-text text-muted">{l s='Your password must be at least %min% characters long.' d='Shop.Forms.Help' sprintf=['%min%' => 5]}</small>
-
-
                         {include file='_partials/form-errors.tpl' errors=$field.errors required=$field.required label=$field.label}
 
                     </div>
+                    <small class="form-text text-muted">{l s='At least 5 characters long' d='Shop.Forms.Help'}</small>
+
                 {/block}
 
             {elseif $field.type === 'file'}
                 <div class="custom-file">
                     <input name="{$field.name}" type="file" class="custom-file-input{if !empty($field.errors)} is-invalid{/if}" id="f-{$field.name}_{$uniqId}"{if $field.required} required{/if}>
-                    <label class="custom-file-label" for="f-{$field.name}_{$uniqId}">{l s='Choose file' d='Shop.Theme.Actions'}</label>
+                    <label class="custom-file-label" for="f-{$field.name}_{$uniqId}" data-browse="{l s='Choose file' d='Shop.Theme.Actions'}">{l s='Choose file' d='Shop.Theme.Actions'}</label>
                 </div>
             {else}
 
@@ -196,7 +195,7 @@
                     <input
                             class="form-control{if !empty($field.errors)} is-invalid{/if}"
                             name="{$field.name}"
-                            type="{if $field.name === "phone"}tel{else}{$field.type}{/if}"
+                            type="{if $field.name === "phone" || $field.name === "phone_mobile"}tel{else}{$field.type}{/if}"
                             value="{$field.value}"
                             id="f-{$field.name}_{$uniqId}"
                             {if isset($field.availableValues.placeholder)}placeholder="{$field.availableValues.placeholder}"{/if}

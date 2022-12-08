@@ -1,0 +1,20 @@
+.search-widget{
+  max-width: 450px;
+  margin: 0 auto;
+}
+.search-widget__group{
+  position: relative;
+}
+.search-widget__input-right{
+  padding-right: 50px ;
+}
+.search-widget__btn{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+@include media-breakpoint-mobile{
+  .search-widget{
+    max-width: unset;
+  }
+}

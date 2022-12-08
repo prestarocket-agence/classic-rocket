@@ -25,6 +25,7 @@
 import 'bootstrap/js/src/util';
 import 'bootstrap/js/src/alert';
 import 'bootstrap/js/src/button';
+import  '../node_modules/bootstrap/js/src/collapse.js';
 import 'bootstrap/js/src/collapse';
 import 'bootstrap/js/src/dropdown';
 import 'bootstrap/js/src/modal';
@@ -76,4 +77,7 @@ $(document).ready(() => {
       $(this).next('.custom-file-label').addClass("selected").html(fileName);
   })
 
+});
+document.addEventListener('lazyloaded', function(e){
+    $(e.target).parent().addClass('rc--lazyload');
 });

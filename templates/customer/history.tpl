@@ -32,14 +32,14 @@
   <h6>{l s='Here are the orders you\'ve placed since your account was created.' d='Shop.Theme.Customeraccount'}</h6>
 
   {if $orders}
-    <table class="table table-striped table-bordered d-none d-md-table">
+    <table class="table table-striped table-bordered visible--desktop">
       <thead class="thead-default">
         <tr>
           <th>{l s='Order reference' d='Shop.Theme.Checkout'}</th>
           <th>{l s='Date' d='Shop.Theme.Checkout'}</th>
           <th>{l s='Total price' d='Shop.Theme.Checkout'}</th>
-          <th class="d-none d-lg-table-cell">{l s='Payment' d='Shop.Theme.Checkout'}</th>
-          <th class="d-none d-lg-table-cell">{l s='Status' d='Shop.Theme.Checkout'}</th>
+          <th class="">{l s='Payment' d='Shop.Theme.Checkout'}</th>
+          <th class="">{l s='Status' d='Shop.Theme.Checkout'}</th>
           <th>{l s='Invoice' d='Shop.Theme.Checkout'}</th>
           <th>&nbsp;</th>
         </tr>
@@ -50,7 +50,7 @@
             <th scope="row">{$order.details.reference}</th>
             <td>{$order.details.order_date}</td>
             <td class="text-right">{$order.totals.total.value}</td>
-            <td class="d-none d-none d-lg-table-cell">{$order.details.payment}</td>
+            <td class="">{$order.details.payment}</td>
             <td>
               <span
                 class="badge badge-pill {$order.history.current.contrast}"
@@ -59,7 +59,7 @@
                 {$order.history.current.ostate_name}
               </span>
             </td>
-            <td class="text-sm-center d-none d-lg-table-cell">
+            <td class="text-sm-center">
               {if $order.details.invoice_url}
                 <a href="{$order.details.invoice_url}"><i class="material-icons">&#xE415;</i></a>
               {else}
@@ -79,9 +79,9 @@
       </tbody>
     </table>
 
-    <div class="orders d-md-none">
+    <div class="orders visible--mobile">
       {foreach from=$orders item=order}
-        <div class="order">
+        <div class="order mb-4">
           <div class="row">
             <div class="col-10">
               <a href="{$order.details.details_url}"><h3>{$order.details.reference}</h3></a>
@@ -89,7 +89,7 @@
               <div class="total">{$order.totals.total.value}</div>
               <div class="status">
                 <span
-                  class="label label-pill {$order.history.current.contrast}"
+                  class="badge label-badge {$order.history.current.contrast}"
                   style="background-color:{$order.history.current.color}"
                 >
                   {$order.history.current.ostate_name}

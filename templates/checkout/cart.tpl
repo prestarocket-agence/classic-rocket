@@ -33,9 +33,10 @@
       <div class="cart-grid-body col-12 col-lg-8">
 
         <!-- cart products detailed -->
-        <div class="card cart-container shadow mb-3">
+        <div class="card cart-container mb-3">
             <h1 class="card-header">{l s='Shopping Cart' d='Shop.Theme.Checkout'}</h1>
-          <div class="card-body">
+          <div class="card-body cart__card-body js-cart__card-body">
+            <div class="cart__card-loader"><div class="spinner-border" role="status"><span class="sr-only">{l s='Loading...' d='Shop.Theme.Global'}</span></div></div>
           {block name='cart_overview'}
             {include file='checkout/_partials/cart-detailed.tpl' cart=$cart}
           {/block}
@@ -58,8 +59,8 @@
       <div class="cart-grid-right col-12 col-lg-4 mt-3 mt-lg-0">
 
         {block name='cart_summary'}
-          <div class="card cart-summary shadow mb-5">
-            <div class="card-body">
+          <div class="card cart-summary mb-5">
+            <div class="card-body card-body--summary">
             {block name='hook_shopping_cart'}
               {hook h='displayShoppingCart'}
             {/block}

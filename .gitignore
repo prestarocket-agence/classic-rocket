@@ -128,3 +128,7 @@ nb-configuration.xml
 ### Release creation ###
 tools/build/releases/*
 !tools/build/releases/.gitkeep
+/assets/css/theme.css.map
+/assets/js/theme.js.map
+/assets/js/theme.js.LICENSE.txt
+/assets/cache

@@ -1,0 +1,106 @@
+@import "variables/layout";
+@import "variables/product-miniature";
+@import "variables/searchbar";
+
+//BS touchspin
+$bs-touchspin-boxshadow:        2px 2px 4px 0 rgba(0,0,0,.2);
+
+//cart
+$promo-code-bg:                 darken($body-bg,10%);
+
+//offcanvas
+$zindex-offcanvas :             $zindex-modal;
+$offcanvas-width :              300px;
+
+//product slider
+$product-thumb-margin:          5px;
+$product-thumb-width:           100px;
+$product-thumb-height:          100px;
+$product-to-show:               3;//if you edit this, you have to add centerPadding ppy in data-slick with same value
+$product-thumb-wrap-width:      $product-to-show * ($product-thumb-width + 2 * $product-thumb-margin) - 2 * $product-thumb-margin;
+$product-thumb-wrap-width-2:    2 * ($product-thumb-width + 2 * $product-thumb-margin) - 2 * $product-thumb-margin;
+$product-thumb-wrap-height:     $product-thumb-height + $product-thumb-margin * 2;
+
+//prices
+$product-price-current-color:             null;
+$product-price-current-font-size:         null;
+$product-price-current-font-weight:       700;
+$product-price-current-font-family:       null;
+
+$product-price-regular-color:             #7a7a7a;
+$product-price-regular-font-size:         $font-size-base * .875;
+$product-price-regular-font-weight:       700;
+$product-price-regular-font-family:       null;
+
+
+$product-price-discount-color:         $tertiary;
+$product-price-discount-font-size:         null;
+$product-price-discount-font-weight:       700;
+$product-price-discount-font-family:       null;
+
+
+
+
+//product color box
+$colorbox-border-color:         #232323;
+
+//product add to cart spinner
+$spinner-width-addtocart:$btn-font-size-lg;
+$spinner-height-addtocart:$btn-font-size-lg;
+$spinner-borderwidth-addtocart:2px;
+
+
+//social share
+$social-share-size:             2.5 * $font-size-base;
+$social-share-bg-color:         $gray-300;
+
+//main menu
+$menu-topitem-font-size:            $font-size-base;
+$menu-topitem-font-weight:            600;
+$menu-topitem-color:            $gray-800;
+$menu-topitem-text-transform:   uppercase;
+$menu-topitem-padding:          $spacer/2;
+$menu-topitem-margin-left:          $spacer*2;
+
+$menu-sub-top: 60px;
+
+  //main menu mobile
+$menu-item-padding:             $spacer/2;
+$menu-item-border-color:        $border-color;
+$menu-sub-mobile-bg-color:      $wrapper-bg;
+
+//heading
+$h1-text-transform: uppercase;
+
+//footer
+$footer-margin-top:             $spacer;
+$footer-padding-top:             $spacer;
+
+//util
+//$card-box-shadow : $box-shadow !default;
+$card-box-shadow : null !default;
+
+//product section
+
+$section-title-font-family: null;
+$section-title-color: null;
+$section-title-size: null;
+$section-title-font-weight: null;
+$section-title-text-align: center;
+$section-title-text-transform: uppercase;
+$section-title-margin-bottom: $spacer;
+
+//blockcart
+$blockcart-color: null;
+$blockcart-background-color: null;
+$blockcart-inactive-color: null;
+$blockcart-inactive-background-color: null;
+$blockcart-padding:null;
+
+
+//block left column
+$block-border-color: null;
+
+
+
+

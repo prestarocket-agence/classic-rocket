@@ -28,8 +28,11 @@
     {if isset($smarty.get.page)}
         {assign page_nb $smarty.get.page|intval}
     {/if}
+    {$queryPage = '?page='|cat:$page_nb}
+    {$page.canonical = $page.canonical|replace:$queryPage:''}
 
-        {assign var="prev" value=false}
+
+    {assign var="prev" value=false}
         {assign var="next" value=false}
     {if ($page_nb - 1) == 1}
         {assign prev $page.canonical}
