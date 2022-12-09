@@ -138,6 +138,7 @@ global_settings:
       width: 540
       height: 540
       scope: [products]
+  new_password_policy_feature: true
 
 theme_settings:
   default_layout: layout-full-width

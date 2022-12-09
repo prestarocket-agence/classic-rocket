@@ -37,6 +37,7 @@ import 'bootstrap-touchspin';
 import './lib/slick.min';
 import './lib/jquery.hoverIntent.min';
 import SlickSlider from './components/slick';
+import './selectors';
 
 import './responsive';
 import './checkout';
@@ -46,6 +47,7 @@ import './product';
 import './cart';
 
 import Form from './components/form';
+import usePasswordPolicy from './components/usePasswordPolicy';
 import TopMenu from './components/top-menu';
 
 import prestashop from 'prestashop';
@@ -70,6 +72,7 @@ $(document).ready(() => {
   form.init();
   slickSlider.init();
   topMenu.init();
+  usePasswordPolicy('.field-password-policy');
 
   //display input file content in custom file input BS
   $('.custom-file-input').on('change',function(){
