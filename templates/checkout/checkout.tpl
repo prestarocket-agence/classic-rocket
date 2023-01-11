@@ -117,6 +117,7 @@
     {* end offcanvas menu *}
 {/block}
 {block name='javascript_bottom'}
+    {include file="_partials/password-policy-template.tpl"}
     {include file="_partials/javascript.tpl" javascript=$javascript.bottom}
 {/block}
 
