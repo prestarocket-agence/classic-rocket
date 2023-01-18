@@ -61,7 +61,7 @@
             </div>
 
             <!-- Right Block: cart subtotal & cart total -->
-            <div class="col-12 col-lg-4">
+            <div class="col-lg-4">
 
                 {block name='cart_summary'}
                     <div class="c-cart-summary c-panel c-panel--border u-mb-2">

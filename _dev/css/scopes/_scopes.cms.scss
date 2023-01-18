@@ -1,9 +1,14 @@
 /* Content entered by WYSIWYG [component]
 ========================================================================== */
-.s-cms{
-  img{
+.s-cms {
+  ul {
+    list-style: inherit;
+    padding-left: $spacer*1.25;
+    margin-bottom: $spacer;
+  }
+
+  img, iframe {
     max-width: 100%;
-    height: auto;
   }
 }
 
