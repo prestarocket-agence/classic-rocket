@@ -18,6 +18,7 @@ import TopMenu from './components/top-menu';
 import ProductMinitature from './components/product-miniature';
 import './components/appearanceObserver';
 import './components/sliders';
+import './components/touchspin';
 
 
 import prestashop from 'prestashop';
