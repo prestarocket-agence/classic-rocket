@@ -68,6 +68,8 @@ export default class Form {
 
           let validation = Array.prototype.filter.call(forms, function(form) {
           form.addEventListener('submit', function(event) {
+              divToScroll = false;
+              form.classList.remove('was-validated');
               if (form.checkValidity() === false) {
                   event.preventDefault();
                   event.stopPropagation();
@@ -79,13 +81,16 @@ export default class Form {
                            divToScroll = _parent;
                        }
                   });
-                  $(this).data('disabled', false);
-                  $('button[type="submit"]', form).removeClass('disabled');
-              }
-              form.classList.add('was-validated');
-              if(divToScroll){
+
+                if(divToScroll){
                   $('html, body').animate({ scrollTop: divToScroll.offset().top}, 300);
                   divToScroll = false;
+                }
+                $(form).data("disabled", false);
+                $('[type=submit]', form).removeClass('disabled');
+                form.classList.add('was-validated');
+              } else {
+                form.classList.add('was-validated');
               }
           }, false);
       });
