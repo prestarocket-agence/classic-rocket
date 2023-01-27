@@ -45,7 +45,7 @@
 {else}
     {assign var=uniqId value=10|mt_rand:100000}
 
-    <div class="form-group">
+    <div class="form-group js-input-column">
         {if $field.type == 'checkbox' || $field.type == 'radio-buttons'}
             {if $field.type == 'radio-buttons'}
                 <div class="label mr-3">{$field.label}</div>
@@ -157,13 +157,17 @@
                 {block name='form_field_item_password'}
                     <div class="input-group js-parent-focus">
                         <input
-                                class="form-control js-child-focus js-visible-password{if !empty($field.errors)} is-invalid{/if}"
+                          id="field-{$field.name}"
+                                class="form-control js-child-focus js-visible-password"
                                 name="{$field.name}"
-                                id="f-{$field.name}_{$uniqId}"
+                                aria-label="{l s='Password input' d='Shop.Forms.Help'}"
                                 type="password"
+                                {if isset($configuration.password_policy.minimum_length)}data-minlength="{$configuration.password_policy.minimum_length}"{/if}
+                                {if isset($configuration.password_policy.maximum_length)}data-maxlength="{$configuration.password_policy.maximum_length}"{/if}
+                                {if isset($configuration.password_policy.minimum_score)}data-minscore="{$configuration.password_policy.minimum_score}"{/if}
+                                {if isset($autocomplete[$field.name])} autocomplete="{$autocomplete[$field.name]}"{/if}
                                 value=""
                                 pattern=".{literal}{{/literal}5,{literal}}{/literal}"
-                                {if isset($autocomplete[$field.name])} autocomplete="{$autocomplete[$field.name]}"{/if}
                                 {if $field.required}required{/if}
                         >
                         <span class="input-group-btn">
@@ -180,7 +184,6 @@
                         {include file='_partials/form-errors.tpl' errors=$field.errors required=$field.required label=$field.label}
 
                     </div>
-                    <small class="form-text text-muted">{l s='At least 5 characters long' d='Shop.Forms.Help'}</small>
 
                 {/block}
 

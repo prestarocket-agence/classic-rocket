@@ -61,7 +61,7 @@ module.exports = (env, argv) => {
                         path.join(__dirname, '')
                     ],
                   use: {
-                    loader: 'babel-loader'
+                    loader: 'esbuild-loader'
                   }
                 },
                 {

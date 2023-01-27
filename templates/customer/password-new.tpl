@@ -51,29 +51,53 @@
             sprintf=['%email%' => $customer_email|stripslashes]}
         </div>
 
-          <div class="form-group">
+        <div class="field-password-policy">
+          <div class="form-group js-input-column">
             <label for="new_password">{l s='New password' d='Shop.Forms.Labels'}</label>
-              <input id="new_password" class="form-control" type="password" data-validate="isPasswd" name="passwd" value="" required pattern=".{literal}{{/literal}5,{literal}}{/literal}">
-            <small class="form-text text-muted">{l s='Your password must be at least %min% characters long.' d='Shop.Forms.Help' sprintf=['%min%' => 5]}</small>
-            <div class="invalid-feedback js-invalid-feedback-browser"></div>
-
-
+            <div class="input-group js-parent-focus">
+              <input
+                id="new_password"
+                class="form-control js-child-focus js-visible-password"
+                name="passwd"
+                aria-label="{l s='New password' d='Shop.Forms.Labels'}"
+                type="password"
+                {if isset($configuration.password_policy.minimum_length)}data-minlength="{$configuration.password_policy.minimum_length}"{/if}
+                {if isset($configuration.password_policy.maximum_length)}data-maxlength="{$configuration.password_policy.maximum_length}"{/if}
+                {if isset($configuration.password_policy.minimum_score)}data-minscore="{$configuration.password_policy.minimum_score}"{/if}
+                autocomplete="off"
+                value=""
+                pattern=".{literal}{5,}{/literal}"
+                required
+              >
+              <span class="input-group-append">
+                  <button
+                    class="btn btn-outline-primary"
+                    type="button"
+                    data-action="show-password"
+                    data-icon-show="visibility"
+                    data-icon-hide="visibility_off"
+                  >
+                      <i class="material-icons">visibility</i>
+                  </button>
+              </span>
+            </div>
           </div>
+        </div>
 
-          <div class="form-group">
-            <label for="new_password_validation">{l s='Confirmation' d='Shop.Forms.Labels'}</label>
-              <input id="new_password_validation" class="form-control" type="password" data-validate="isPasswd" name="confirmation" value="" required pattern=".{literal}{{/literal}5,{literal}}{/literal}">
-            <small class="form-text text-muted">{l s='Your password must be at least %min% characters long.' d='Shop.Forms.Help' sprintf=['%min%' => 5]}</small>
-            <div class="invalid-feedback js-invalid-feedback-browser"></div>
-          </div>
+        <div class="form-group">
+          <label for="new_password_validation">{l s='Confirmation' d='Shop.Forms.Labels'}</label>
+            <input id="new_password_validation" class="form-control" type="password" data-validate="isPasswd" name="confirmation" value="" required pattern=".{literal}{{/literal}5,{literal}}{/literal}">
+          <small class="form-text text-muted">{l s='Your password must be at least %min% characters long.' d='Shop.Forms.Help' sprintf=['%min%' => 5]}</small>
+          <div class="invalid-feedback js-invalid-feedback-browser"></div>
+        </div>
 
-          <input type="hidden" name="token" id="token" value="{$customer_token}">
-          <input type="hidden" name="id_customer" id="id_customer" value="{$id_customer}">
-          <input type="hidden" name="reset_token" id="reset_token" value="{$reset_token}">
+        <input type="hidden" name="token" id="token" value="{$customer_token}">
+        <input type="hidden" name="id_customer" id="id_customer" value="{$id_customer}">
+        <input type="hidden" name="reset_token" id="reset_token" value="{$reset_token}">
 
-          <button class="btn btn-primary" type="submit" name="submit">
-            {l s='Change Password' d='Shop.Theme.Actions'}
-          </button>
+        <button class="btn btn-primary" type="submit" name="submit">
+          {l s='Change Password' d='Shop.Theme.Actions'}
+        </button>
 
       </section>
     </form>

@@ -32,10 +32,10 @@ $(document).ready(function () {
   let slickSlider = new SlickSlider();
 
   prestashop.on('updatedProduct', function (event) {
-      createInputFile();
+    createInputFile();
 
 
-      if (event && event.product_minimal_quantity) {
+    if (event && event.product_minimal_quantity) {
       const minimalProductQuantity = parseInt(event.product_minimal_quantity, 10);
       const quantityInputSelector = '#quantity_wanted';
       let quantityInput = $(quantityInputSelector);
@@ -63,47 +63,46 @@ $(document).ready(function () {
     });
   }
 
-    function createProductSpin()
-    {
-        const $quantityInput = $('#quantity_wanted');
+  function createProductSpin()
+  {
+      const $quantityInput = $('#quantity_wanted');
 
-        $quantityInput.TouchSpin({
-            buttondown_class: 'btn js-touchspin',
-            buttonup_class: 'btn js-touchspin',
-            min: parseInt($quantityInput.attr('min'), 10),
-            max: 1000000
-        });
+      $quantityInput.TouchSpin({
+          buttondown_class: 'btn js-touchspin',
+          buttonup_class: 'btn js-touchspin',
+          min: parseInt($quantityInput.attr('min'), 10),
+          max: 1000000
+      });
 
-        $('body').on('change keyup', '#quantity_wanted', (e) => {
-            $(e.currentTarget).trigger('touchspin.stopspin');
-            prestashop.emit('updateProduct', {
-                eventType: 'updatedProductQuantity',
-                event: e
-            });
-        });
+      $('body').on('change keyup', '#quantity_wanted', (e) => {
+          $(e.currentTarget).trigger('touchspin.stopspin');
+          prestashop.emit('updateProduct', {
+              eventType: 'updatedProductQuantity',
+              event: e
+          });
+      });
 
-    }
+  }
 
+  $(document).on('shown.bs.modal','#product-modal', function (e) {
+      $('#js-slick-product').resize();
+  });
+
+  //add to cart loader
+  $(document).on('click','.js-add-to-cart:enabled:not(.is--loading)',function(){
+      $(this).addClass('is--loading').attr("disabled", true);
+  });
+  prestashop.on('updateCart', function (event) {
+      removeAddToCartLoader();
+
+  });
+  prestashop.on('handleError', function (event) {
+      removeAddToCartLoader();
+      $('.js-add-to-cart').attr("disabled", false);
+
+  });
+  function removeAddToCartLoader(){
+      $('.js-add-to-cart.is--loading').removeClass('is--loading');
+
+  }
 });
-
-$(document).on('shown.bs.modal','#product-modal', function (e) {
-    $('#js-slick-product').resize();
-});
-
-//add to cart loader
-$(document).on('click','.js-add-to-cart:enabled:not(.is--loading)',function(){
-    $(this).addClass('is--loading').attr("disabled", true);
-});
-prestashop.on('updateCart', function (event) {
-    removeAddToCartLoader();
-
-});
-prestashop.on('handleError', function (event) {
-    removeAddToCartLoader();
-    $('.js-add-to-cart').attr("disabled", false);
-
-});
-function removeAddToCartLoader(){
-    $('.js-add-to-cart.is--loading').removeClass('is--loading');
-
-}
