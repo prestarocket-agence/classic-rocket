@@ -32,10 +32,10 @@ $(document).ready(function () {
   let slickSlider = new SlickSlider();
 
   prestashop.on('updatedProduct', function (event) {
-      createInputFile();
+    createInputFile();
 
 
-      if (event && event.product_minimal_quantity) {
+    if (event && event.product_minimal_quantity) {
       const minimalProductQuantity = parseInt(event.product_minimal_quantity, 10);
       const quantityInputSelector = '#quantity_wanted';
       let quantityInput = $(quantityInputSelector);
