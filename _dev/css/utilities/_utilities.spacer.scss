@@ -51,34 +51,26 @@ $spaces: 0;
 }
 
 //
-.u-pt-md {
-  padding-top: $spacer*4;
+$paddings: (
+        'sm' $spacer*2.5 $spacer*1.5,
+        'md' $spacer*4 $spacer*2.5,
+        'lg' $spacer*5 $spacer*2
+);
 
-  @include media-breakpoint-mobile {
-    padding-top: $spacer*2;
+@each $name, $media-desktop, $media-mobile in $paddings {
+  .u-pt-#{$name} {
+    padding-top: $media-desktop;
+
+    @include media-breakpoint-mobile {
+      padding-top: $media-mobile;
+    }
   }
-}
 
-.u-pb-md {
-  padding-bottom: $spacer*4;
+  .u-pb-#{$name} {
+    padding-bottom: $media-desktop;
 
-  @include media-breakpoint-mobile {
-    padding-bottom: $spacer*2;
-  }
-}
-
-.u-pt-lg {
-  padding-top: $spacer*5;
-
-  @include media-breakpoint-mobile {
-    padding-top: $spacer*2.5;
-  }
-}
-
-.u-pb-lg {
-  padding-bottom: $spacer*5;
-
-  @include media-breakpoint-mobile {
-    padding-bottom: $spacer*2.5;
+    @include media-breakpoint-mobile {
+      padding-bottom: $media-mobile;
+    }
   }
 }

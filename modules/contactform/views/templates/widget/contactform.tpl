@@ -22,9 +22,8 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section class="contact-form">
+<section class="contact-form u-pb-md">
   <form class="js-customer-form needs-validation" action="{$urls.pages.contact}" method="post" {if $contact.allow_file_upload}enctype="multipart/form-data"{/if} novalidate autocomplete="false">
-
       {if $notifications}
         <div class="notifications-container alert {if $notifications.nw_error}alert-danger{else}alert-success{/if}">
           <ul>
