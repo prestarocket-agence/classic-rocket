@@ -30,9 +30,9 @@ You can also see the web quality and performance comparison report on [Dareboost
 ### Twitter Bootstrap 4.4.x
 
 - Almost all tpl files are edited to use new BS classes (ex: col-xs-12 => col-12)
-- For retrocompatibility and third modules, we keep some important old classes in bs_alpha.scss      
+- For retrocompatibility and third modules, we keep some important old classes in bs_alpha.scss
 - Scss variables are split in 2 files: 1 file for overriding default Twitter Bootstrap variables and 1 file for custom scss variables for Classic Rocket theme (ex: $regular-price-font-size)
-- Only usefull BS plugin are added individually in _dev/theme.js (carousel and scrollspy are not loaded). 
+- Only usefull BS plugin are added individually in _dev/theme.js (carousel and scrollspy are not loaded).
 
 
 ### New Js files
@@ -53,7 +53,7 @@ You can also see the web quality and performance comparison report on [Dareboost
 
 ### New module(s)
 - ps_searchbarjqauto (for use jQuery autoComplete v1.0.7 )
-    
+
 ### New smarty blocks
 - layoutWrapperClass
 - contentWrapperClass
@@ -119,6 +119,40 @@ PrestaShop 1.7.3.2 to 1.7.6.x
 
 ## Download
 - [classic-rocket](https://github.com/PrestaShop/classic-rocket/releases)
+
+## Getting started with developing
+
+We have a `docker-compose.yml` file which helps you get started. Just install [docker-compose](https://docs.docker.com/compose/install/) and fire up your dev environment up with:
+
+```
+docker-compose up
+```
+
+NOTE: the first start will take a while as it fetches the required images and installs a new shiny prestashop for you.
+
+After you see something like this in the console
+```
+classic-rocket                | [Wed Mar 10 18:10:46.027329 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+```
+
+You are ready to open http://localhost/ on your machine. This will show you prestashop version `1.7.7.2` with the classic-rocket theme already activated.
+
+This is also the perfect way to test any problems you have with the theme. If you can replicate your problem with the provided docker environment fixing the problem becomes much easier. Please remember to provide steps on how to replicate the problem when writing new issues.
+
+### Next steps
+
+Now that you have your dev environment up and running you can start making changes
+
+in `_dev` folder make your changes and run
+
+```
+npm install --also=dev
+npm run build
+```
+
+And test your changes. Remember to make pull requests against `develop` branch.
+
+Admin can be accessed with: http://localhost/admin-dev/ and the default username is `admin@example.com` and password is `admin`
 
 ## Misc
 You can also use gulp to work faster during development (gulpfile.js => gulp watch)
