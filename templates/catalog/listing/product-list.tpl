@@ -34,6 +34,7 @@
             </div>
         {/block}
         {block name='before_products'}
+            <div id="js-product-list-facets"></div>
         {/block}
 
         <section id="products">
