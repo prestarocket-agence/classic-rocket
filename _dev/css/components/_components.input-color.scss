@@ -35,7 +35,7 @@
   transform: translate(-50%, -50%);
 }
 
-.c-input-color__btn:checked ~ .c-input-color__mark:after, .c-input-color__btn.is-active ~ .c-input-color__mark:after {
+.c-input-color__btn:checked ~ .c-input-color__mark:after, .c-input-color__mark.is-active:after {
   display: block;
   width: $input-color-selected-width;
   height: $input-color-selected-height;
