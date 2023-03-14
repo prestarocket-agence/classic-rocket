@@ -58,35 +58,40 @@
                         <div class="col-lg-5 c-history__thumbnails">
                             {foreach from=$order.products item=product name=products}
                                 {if $smarty.foreach.products.iteration < 3}
-                                <div class="c-history__img">
-                                    {if $smarty.foreach.products.first}
-                                        <a href="{$order.details.details_url}">
-                                            {if $smarty.foreach.products.first.cover}
-                                                <img class="u-img-fluid" src="{$product.cover.medium.url}"
-                                                     alt="{$product.name}">
-                                            {else}
-                                                <img class="u-img-fluid" src="{$urls.no_picture_image.bySize.home_default.url}"
-                                                     alt="{$product.name}"/>
-                                            {/if}
-                                        </a>
-                                    {else}
-                                        <a href="{$order.details.details_url}">
-                                            {if isset($product.cover) && $product.cover}
-                                                <img class="u-img-fluid"
-                                                     src="{$product.cover.medium.url}"
-                                                     alt="{$product.name}">
-                                            {else}
-                                                <img class="u-img-fluid" src="{$urls.no_picture_image.bySize.home_default.url}"
-                                                     alt="{$product.name}"/>
-                                            {/if}
-                                            {if $order.products|count >= 3}
-                                                <div class="c-history__img--watermark">
-                                                    +{math equation="x - y" x=$order.products|count y=2}
-                                                </div>
-                                            {/if}
-                                        </a>
-                                    {/if}
-                                </div>
+                                    <div class="c-history__img">
+                                        {if $smarty.foreach.products.first}
+                                            <a href="{$order.details.details_url}">
+                                                {if $product.default_image}
+                                                    {if $smarty.foreach.products.first.cover}
+                                                        <img class="u-img-fluid"
+                                                             src="{$product.default_image.bySize.small_default.url}"
+                                                             alt="{$product.name}">
+                                                    {else}
+                                                        <img class="u-img-fluid"
+                                                             src="{$urls.no_picture_image.bySize.home_default.url}"
+                                                             alt="{$product.name}"/>
+                                                    {/if}
+                                                {/if}
+                                            </a>
+                                        {else}
+                                            <a href="{$order.details.details_url}">
+                                                {if isset($product.cover) && $product.cover}
+                                                    <img class="u-img-fluid"
+                                                         src="{$product.cover.medium.url}"
+                                                         alt="{$product.name}">
+                                                {else}
+                                                    <img class="u-img-fluid"
+                                                         src="{$urls.no_picture_image.bySize.home_default.url}"
+                                                         alt="{$product.name}"/>
+                                                {/if}
+                                                {if $order.products|count >= 3}
+                                                    <div class="c-history__img--watermark">
+                                                        +{math equation="x - y" x=$order.products|count y=2}
+                                                    </div>
+                                                {/if}
+                                            </a>
+                                        {/if}
+                                    </div>
                                 {/if}
                             {/foreach}
                         </div>

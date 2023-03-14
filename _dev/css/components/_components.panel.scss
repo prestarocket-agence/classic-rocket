@@ -1,16 +1,16 @@
 .c-panel {
-  padding: $panel-padding-x $panel-padding-y;
+  padding: $panel-padding-y $panel-padding-x;
   margin-bottom: $panel-margin-bottom;
   background-color: $panel-bg;
 }
 
 //Modifiers
 .c-panel--sm {
-  padding: $panel-sm-padding-x $panel-sm-padding-y;
+  padding: $panel-sm-padding-y $panel-sm-padding-x;
 }
 
 .c-panel--lg {
-  padding: $panel-lg-padding-x $panel-lg-padding-y;
+  padding: $panel-lg-padding-y $panel-lg-padding-x;
 }
 
 .c-panel--center {

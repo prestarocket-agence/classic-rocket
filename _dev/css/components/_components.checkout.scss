@@ -29,6 +29,7 @@
   border: solid $gray-light 2px;
   border-radius: 4px;
   transition: .2s;
+  word-wrap: break-word;
 
   &.selected {
     border-color: $green;
