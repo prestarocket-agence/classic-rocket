@@ -24,7 +24,7 @@
  *}
 
 <script type="text/javascript">
-    var productCommentPostErrorMessage = '{l s='Sorry, your review cannot be posted.' d='Modules.Productcomments.Shop' js=1}';
+    var productCommentPostErrorMessage = '{l|escape:'javascript' s='Sorry, your review cannot be posted.' d='Modules.Productcomments.Shop'}';
 </script>
 
 <div id="post-product-comment-modal" class="modal fade product-comment-modal" role="dialog" aria-hidden="true">
