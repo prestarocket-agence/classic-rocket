@@ -53,7 +53,9 @@
 {elseif $page.page_name === 'category' && isset($category) && $category.image.large.url}
     <meta property="og:image" content="{$category.image.large.url}"/>
 {else}
-    <meta property="og:image" content="{$urls.shop_domain_url}{$shop.logo}"/>
+  {if $shop.logo}
+    <meta property="og:image" content="{$shop.logo}"/>
+  {/if}
 {/if}
 <script type="application/ld+json">
 {
@@ -61,10 +63,12 @@
     "@type" : "Organization",
     "name" : "{$shop.name}",
     "url" : "{$urls.pages.index}",
-    "logo" : {
-        "@type":"ImageObject",
-        "url":"{$urls.shop_domain_url}{$shop.logo}"
-    }
+    {if $shop.logo}
+      "logo" : {
+          "@type":"ImageObject",
+          "url":"{$shop.logo}"
+      }
+    {/if}
 }
 
 </script>
@@ -87,18 +91,20 @@
 {if $page.page_name =='index'}
     <script type="application/ld+json">
 {
-	"@context":	"http://schema.org",
-	"@type": "WebSite",
-    "url" : "{$urls.pages.index}",
-	"image": {
-	"@type": "ImageObject",
-    "url":"{$urls.shop_domain_url}{$shop.logo}"
-	},
-    "potentialAction": {
+  "@context":	"http://schema.org",
+  "@type": "WebSite",
+  "url" : "{$urls.pages.index}",
+  {if $shop.logo}
+    "image": {
+      "@type": "ImageObject",
+      "url":"{$shop.logo}"
+    },
+  {/if}
+  "potentialAction": {
     "@type": "SearchAction",
     "target": "{'--search_term_string--'|str_replace:'{search_term_string}':$link->getPageLink('search',true,null,['search_query'=>'--search_term_string--'])}",
-     "query-input": "required name=search_term_string"
-	 }
+    "query-input": "required name=search_term_string"
+  }
 }
 
 
