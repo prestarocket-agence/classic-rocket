@@ -33,8 +33,8 @@
               <a href="{$node.link}" {if $node.children}class="float-left"{/if}>{$node.name}</a>
               {if $node.children}
                 <div class="float-right navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar{$node.id}">
-                  <i class="material-icons add">&#xE145;</i>
-                  <i class="material-icons remove">&#xE15B;</i>
+                  <i class="material-icons add cursor-pointer">&#xE145;</i>
+                  <i class="material-icons remove cursor-pointer">&#xE15B;</i>
                 </div>
                 <div class="collapse float-left clearfix w-100" id="exCollapsingNavbar{$node.id}">
                   {categories nodes=$node.children depth=$depth+1}
