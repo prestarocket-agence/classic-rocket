@@ -32,37 +32,31 @@ $product-price-regular-font-size:         $font-size-base * .875;
 $product-price-regular-font-weight:       700;
 $product-price-regular-font-family:       null;
 
-
-$product-price-discount-color:         $tertiary;
-$product-price-discount-font-size:         null;
-$product-price-discount-font-weight:       700;
-$product-price-discount-font-family:       null;
-
-
-
+$product-price-discount-color:            $tertiary;
+$product-price-discount-font-size:        null;
+$product-price-discount-font-weight:      700;
+$product-price-discount-font-family:      null;
 
 //product color box
 $colorbox-border-color:         #232323;
 
 //product add to cart spinner
-$spinner-width-addtocart:$btn-font-size-lg;
-$spinner-height-addtocart:$btn-font-size-lg;
-$spinner-borderwidth-addtocart:2px;
-
+$spinner-width-addtocart:       $btn-font-size-lg;
+$spinner-height-addtocart:      $btn-font-size-lg;
+$spinner-borderwidth-addtocart: 2px;
 
 //social share
 $social-share-size:             2.5 * $font-size-base;
 $social-share-bg-color:         $gray-300;
 
 //main menu
-$menu-topitem-font-size:            $font-size-base;
-$menu-topitem-font-weight:            600;
+$menu-topitem-font-size:        $font-size-base;
+$menu-topitem-font-weight:      600;
 $menu-topitem-color:            $gray-800;
 $menu-topitem-text-transform:   uppercase;
 $menu-topitem-padding:          $spacer/2;
-$menu-topitem-margin-left:          $spacer*2;
-
-$menu-sub-top: 60px;
+$menu-topitem-margin-left:      $spacer*2;
+$menu-sub-top:                  60px;
 
   //main menu mobile
 $menu-item-padding:             $spacer/2;
@@ -70,37 +64,31 @@ $menu-item-border-color:        $border-color;
 $menu-sub-mobile-bg-color:      $wrapper-bg;
 
 //heading
-$h1-text-transform: uppercase;
+$h1-text-transform:             uppercase;
 
 //footer
 $footer-margin-top:             $spacer;
-$footer-padding-top:             $spacer;
+$footer-padding-top:            $spacer;
 
 //util
-//$card-box-shadow : $box-shadow !default;
-$card-box-shadow : null !default;
+//$card-box-shadow:              $box-shadow !default;
+$card-box-shadow:               null !default;
 
 //product section
-
-$section-title-font-family: null;
-$section-title-color: null;
-$section-title-size: null;
-$section-title-font-weight: null;
-$section-title-text-align: center;
-$section-title-text-transform: uppercase;
-$section-title-margin-bottom: $spacer;
+$section-title-font-family:     null;
+$section-title-color:           null;
+$section-title-size:            null;
+$section-title-font-weight:     null;
+$section-title-text-align:      center;
+$section-title-text-transform:  uppercase;
+$section-title-margin-bottom:   $spacer;
 
 //blockcart
-$blockcart-color: null;
-$blockcart-background-color: null;
-$blockcart-inactive-color: null;
+$blockcart-color:                     null;
+$blockcart-background-color:          null;
+$blockcart-inactive-color:            null;
 $blockcart-inactive-background-color: null;
-$blockcart-padding:null;
-
+$blockcart-padding:                   null;
 
 //block left column
 $block-border-color: null;
-
-
-
-
