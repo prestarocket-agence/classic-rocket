@@ -28,7 +28,7 @@
 {if $nb_comments != 0}
 {* Rich snippet rating is displayed via php/smarty meaning it will be cached (for example on homepage) *}
 <div>
-  <div id="product-list-reviews-{$product.id}" class="product-list-reviews">
+  <div class="product-list-reviews" data-id="{$product.id}" data-url="{$product_comment_grade_url nofilter}">
     <div class="grade-stars small-stars">
       {** full icon **}
         {section name="i" start=0 loop=5 step=1}
