@@ -54,13 +54,13 @@ class Ps_Searchbarjqauto extends Module implements WidgetInterface
     public function install()
     {
         return parent::install()
-            && $this->registerHook('top')
+            && $this->registerHook('displayTop')
             && $this->registerHook('displaySearch')
-            && $this->registerHook('header')
+            && $this->registerHook('displayHeader')
             ;
     }
 
-    public function hookHeader()
+    public function hookDisplayHeader()
     {
         $this->context->controller->registerStylesheet('modules-ps_searchbarjqauto', 'modules/'.$this->name.'/views/css/jquery.auto-complete.css', ['media' => 'all', 'priority' => 150]);
         $this->context->controller->registerJavascript('modules-autocomplete', 'modules/'.$this->name.'/views/js/jquery.auto-complete.min.js', ['position' => 'bottom', 'priority' => 150]);
