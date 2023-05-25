@@ -51,7 +51,7 @@
     <section class="form-fields">
       <div class="form-group">
         <label for="email">{l s='Email address' d='Shop.Forms.Labels'}</label>
-          <input type="email" name="email" id="email" value="{if isset($smarty.post.email)}{$smarty.post.email|stripslashes}{/if}" class="form-control" required autocomplete="email">
+          <input type="email" name="email" id="email" value="{if isset($smarty.post.email)}{stripslashes($smarty.post.email)}{/if}" class="form-control" required autocomplete="email">
           <div class="invalid-feedback js-invalid-feedback-browser"></div>
       </div>
       <button class="form-control-submit btn btn-primary" name="submit" type="submit">
