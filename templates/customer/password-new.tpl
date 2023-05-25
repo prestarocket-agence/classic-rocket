@@ -48,7 +48,7 @@
           {l
             s='Email address: %email%'
             d='Shop.Theme.Customeraccount'
-            sprintf=['%email%' => $customer_email|stripslashes]}
+            sprintf=['%email%' => stripslashes($customer_email)]}
         </div>
 
           <div class="form-group">
