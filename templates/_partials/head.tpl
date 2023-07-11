@@ -85,7 +85,7 @@
 {/block}
 
 {block name='hook_extra'}
-    {if $page.page_name == 'product'}
+    {if $page.page_name == 'product' && isset($product)}
         <link rel="preload" as="image" href="{$product.default_image.bySize.medium_default.url}"
               imagesrcset="{$product.default_image.bySize.medium_default.url} 452w,
                            {$product.default_image.bySize.medium_default.url} 250w,
