@@ -26,42 +26,39 @@ import $ from 'jquery';
 import prestashop from 'prestashop';
 
 $(document).ready(function () {
-  createProductSpin();
-  createInputFile();
+    createProductSpin();
+    createInputFile();
 
-  prestashop.on('updatedProduct', function (event) {
-      createInputFile();
-
-
-      if (event && event.product_minimal_quantity) {
-      const minimalProductQuantity = parseInt(event.product_minimal_quantity, 10);
-      const quantityInputSelector = '#quantity_wanted';
-      let quantityInput = $(quantityInputSelector);
-
-      // @see http://www.virtuosoft.eu/code/bootstrap-touchspin/ about Bootstrap TouchSpin
-      quantityInput.trigger('touchspin.updatesettings', {min: minimalProductQuantity});
-    }
-    // $($('.tabs .nav-link.active').attr('href')).addClass('active').removeClass('fade');
-    $('.js-product-images-modal').replaceWith(event.product_images_modal);
+    prestashop.on('updatedProduct', function (event) {
+        createInputFile();
 
 
+        if (event && event.product_minimal_quantity) {
+            const minimalProductQuantity = parseInt(event.product_minimal_quantity, 10);
+            const quantityInputSelector = '#quantity_wanted';
+            let quantityInput = $(quantityInputSelector);
 
-  });
+            // @see http://www.virtuosoft.eu/code/bootstrap-touchspin/ about Bootstrap TouchSpin
+            quantityInput.trigger('touchspin.updatesettings', {min: minimalProductQuantity});
+        }
+        // $($('.tabs .nav-link.active').attr('href')).addClass('active').removeClass('fade');
+        $('.js-product-images-modal').replaceWith(event.product_images_modal);
 
 
-  function createInputFile()
-  {
-    $('.js-file-input').on('change', (event) => {
-      let target, file;
-
-      if ((target = $(event.currentTarget)[0]) && (file = target.files[0])) {
-        $(target).prev().text(file.name);
-      }
     });
-  }
 
-    function createProductSpin()
-    {
+
+    function createInputFile() {
+        $('.js-file-input').on('change', (event) => {
+            let target, file;
+
+            if ((target = $(event.currentTarget)[0]) && (file = target.files[0])) {
+                $(target).prev().text(file.name);
+            }
+        });
+    }
+
+    function createProductSpin() {
         const $quantityInput = $('#quantity_wanted');
 
         $quantityInput.TouchSpin({
@@ -82,38 +79,35 @@ $(document).ready(function () {
 
         $('body').on('touchspin.on.stopspin', '#quantity_wanted', (e) => {
             let $input = $(e.currentTarget),
-            $parentInput = $($input).parent();
+                $parentInput = $($input).parent();
 
-            if($input.val() <= $input.attr('min') ){
-                $('.c-touchspin__btn-minus',$parentInput).prop('disabled', true);
-            }else{
-                $('.c-touchspin__btn-minus',$parentInput).prop('disabled', false).removeClass('c-touchspin__btn--disabled');
+            if ($input.val() <= $input.attr('min')) {
+                $('.c-touchspin__btn-minus', $parentInput).prop('disabled', true);
+            } else {
+                $('.c-touchspin__btn-minus', $parentInput).prop('disabled', false).removeClass('c-touchspin__btn--disabled');
 
             }
 
         });
 
 
-
     }
-
-});
 
 
 //add to cart loader
-$(document).on('click','.js-add-to-cart:enabled:not(.is--loading)',function(){
-    $(this).addClass('is--loading').attr("disabled", true);
-});
-prestashop.on('updateCart', function (event) {
-    removeAddToCartLoader();
+    $(document).on('click', '.js-add-to-cart:enabled:not(.is--loading)', function () {
+        $(this).addClass('is--loading').attr("disabled", true);
+    });
+    prestashop.on('updateCart', function (event) {
+        removeAddToCartLoader();
+        $('.js-add-to-cart').attr("disabled", false);
+    });
+    prestashop.on('handleError', function (event) {
+        removeAddToCartLoader();
+        $('.js-add-to-cart').attr("disabled", false);
+    });
 
+    function removeAddToCartLoader() {
+        $('.js-add-to-cart.is--loading').removeClass('is--loading');
+    }
 });
-prestashop.on('handleError', function (event) {
-    removeAddToCartLoader();
-    $('.js-add-to-cart').attr("disabled", false);
-
-});
-function removeAddToCartLoader(){
-    $('.js-add-to-cart.is--loading').removeClass('is--loading');
-
-}
