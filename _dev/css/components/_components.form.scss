@@ -67,7 +67,7 @@
   .c-form-group__firstname,
   .c-form-group__lastname{
     width: calc(50% - #{$spacer/2});
-    min-width: 300px;
+    //min-width: 300px;
     max-width: 100%;
   }
   .c-form-group__postcode{
