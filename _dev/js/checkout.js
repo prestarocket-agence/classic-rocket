@@ -45,15 +45,8 @@ function setUpCheckout() {
 
     $('.js-gift-checkbox').on('click', (event) => {
         $('#gift').collapse('toggle');
+        $(event.target) === checked ? $('#gift').addClass('show') : $('#gift').removeClass('show');
     });
-
-    $('#gift').on('shown.bs.collapse', () => {
-        $('#gift').addClass('show');
-    })
-
-    $('#gift').on('hidden.bs.collapse', () => {
-        $('#gift').removeClass('show');
-    })
 }
 
 $(document).ready(() => {
