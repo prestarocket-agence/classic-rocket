@@ -48,7 +48,7 @@ function setUpCheckout() {
     });
 
     $('#gift').on('shown.bs.collapse', () => {
-        $('#gift').showClass('show');
+        $('#gift').addClass('show');
     })
 
     $('#gift').on('hidden.bs.collapse', () => {
