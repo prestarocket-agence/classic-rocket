@@ -48,11 +48,11 @@ function setUpCheckout() {
     });
 
     $('#gift').on('shown.bs.collapse', () => {
-        $('#gift').removeClass('show');
+        $('#gift').showClass('show');
     })
-    
+
     $('#gift').on('hidden.bs.collapse', () => {
-        $('#gift').addClass('show');
+        $('#gift').removeClass('show');
     })
 }
 
