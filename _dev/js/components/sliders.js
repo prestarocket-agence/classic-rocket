@@ -7,7 +7,7 @@ import './../lib/glider.min';
 let slidersGlider = {};
 $(document).ready(() => {
     initAllSliders();
-    prestashop.on('updatedProduct showProductQuickView updateProductList', function (event) {
+    prestashop.on('updatedProduct updateFacets updateProductList showProductQuickView', function (event) {
         initAllSliders();
     });
 });
