@@ -92,9 +92,17 @@ $(document).on('click', '.js-checkout-step-header', (event) => {
 
 //UI process checkout
 $(document).ready(function () {
+    removeCurrentStep();
+
+    $(document).on('shown.bs.collapse show.bs.collapse', () => {
+        removeCurrentStep();
+    });
+});
+
+function removeCurrentStep() {
     $('.-current').each(function () {
         if ($(this).find('.collapse').length > 0 && !$(this).find('.collapse').hasClass('show')) {
             $(this).removeClass('-current');
         }
     });
-});
+}
