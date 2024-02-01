@@ -90,4 +90,11 @@ $(document).on('click', '.js-checkout-step-header', (event) => {
     $('#content-' + stepIdentifier).collapse('show').scrollTop();
 });
 
-
+//UI process checkout
+$(document).ready(function () {
+    $('.-current').each(function () {
+        if ($(this).find('.collapse').length > 0 && !$(this).find('.collapse').hasClass('show')) {
+            $(this).removeClass('-current');
+        }
+    });
+});
