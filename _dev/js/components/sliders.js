@@ -10,6 +10,9 @@ $(document).ready(() => {
     prestashop.on('updatedProduct updateFacets updateProductList showProductQuickView', function (event) {
         initAllSliders();
     });
+    document.addEventListener("DOMSubtreeModified", function (event) {
+        initAllSliders();
+    });
 });
 
 function initAllSliders() {
