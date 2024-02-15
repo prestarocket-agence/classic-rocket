@@ -138,7 +138,8 @@
         "@type": "QuantitativeValue",
         "value": "{$product.weight}",
         "unitCode": "{$product.weight_unit}"
-    },{/if}
+    }{/if}
+    {if isset($product.weight) && ($product.weight != 0) && $product.show_price},{/if}
     {*{if empty($combinations)}*}
   {if $product.show_price}
     "offers": {
