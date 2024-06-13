@@ -34,6 +34,8 @@ function initSlider(_el) {
 }
 
 $(document).on('glider-refresh glider-loaded', '.js-slider', function (e) {
+    if (!$(e.target).data('glider')) return;
+
     var _options = $(e.target).data('glider'),
         _arrows = false,
         _dots = false,
