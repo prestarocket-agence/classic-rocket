@@ -29,7 +29,7 @@
 <meta property="og:url" content="{$urls.current_url}"/>
 <meta property="og:site_name" content="{$shop.name}"/>
 
-{if isset($product) && $page.page_name == 'product'}
+{if isset($product) && $product && $page.page_name == 'product'}
   <meta property="og:type" content="product"/>
   {if $product.images|count > 0}
     {foreach from=$product.images item=p_img name="p_img_list"}
@@ -104,7 +104,7 @@
 
     </script>
 {/if}
-{if isset($product) && $page.page_name == 'product'}
+{if isset($product) && $product && $page.page_name == 'product'}
     <script type="application/ld+json">
     {
     "@context": "http://schema.org/",

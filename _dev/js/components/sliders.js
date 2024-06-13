@@ -1,41 +1,31 @@
-
 import prestashop from 'prestashop';
 import $ from 'jquery';
-// import Glider from 'glider-js/glider.js';
 import './../lib/glider.min';
 
 
 let slidersGlider = {};
 $(document).ready(() => {
-
     initAllSliders();
-prestashop.on('updatedProduct', function (event) {
-    initAllSliders();
-
-});
-prestashop.on('showProductQuickView', function (e) {
-    // slickSlider.init();
-    // console.log(e);
-    initAllSliders();
-});
+    prestashop.on('updatedProduct updateFacets updateProductList showProductQuickView', function (event) {
+        initAllSliders();
+    });
+    document.addEventListener("DOMSubtreeModified", function (event) {
+        initAllSliders();
+    });
 });
 
-$(document).on('shown.bs.modal','#product-modal', function (e) {
-    // $('#js-slick-product').resize();
-});
-
-
-function initAllSliders(){
+function initAllSliders() {
     $('.js-slider:not(.js-slider-loaded):visible').each(function (index) {
         initSlider($(this));
     });
 }
-function initSlider(_el){
+
+function initSlider(_el) {
     var _options = _el.data('glider');
 
     if (typeof _options !== "undefined") {
         var slider = new Glider(_el[0], _options);
-        if(_el.data('name') !== 'undefined'){
+        if (_el.data('name') !== 'undefined') {
             slidersGlider[_el.data('name')] = slider;
         }
         _el.addClass('js-slider-loaded');
@@ -43,32 +33,30 @@ function initSlider(_el){
     }
 }
 
-$(document).on('glider-refresh glider-loaded','.js-slider',function(e) {
-    if ($(e.target).data('glider')) return;
-
+$(document).on('glider-refresh glider-loaded', '.js-slider', function (e) {
     var _options = $(e.target).data('glider'),
         _arrows = false,
         _dots = false,
         _slidesToShow = _options.slidesToShow;
 
-    if(typeof _options.arrows !== "undefined"){
+    if (typeof _options.arrows !== "undefined") {
         _arrows = _options.arrows;
     }
-    if(typeof _options.dots !== "undefined"){
+    if (typeof _options.dots !== "undefined") {
         _dots = _options.dots;
     }
 
     //Hide or display dots nav
-    if(_dots){
-        var _dotslength = $('.glider-dot',_dots).length;
-        if(_dotslength > 1){
+    if (_dots) {
+        var _dotslength = $('.glider-dot', _dots).length;
+        if (_dotslength > 1) {
             $(_dots).removeClass('is-dots-hidden');
 
-                $('.glider-track', e.target).css('min-width', 'auto');
+            $('.glider-track', e.target).css('min-width', 'auto');
 
-        }else{
+        } else {
             $(_dots).addClass('is-dots-hidden');
-            if(_slidesToShow != 1) {
+            if (_slidesToShow != 1) {
 
                 $('.glider-track', e.target).css('min-width', '100%');
             }
@@ -77,82 +65,69 @@ $(document).on('glider-refresh glider-loaded','.js-slider',function(e) {
         }
     }
 
-    //hide or display arrow nav
-    if(_arrows){
+    //Hide or display arrow nav
+    if (_arrows) {
         var _nextarrow = $(_arrows['next']),
-        _prevarrow = $(_arrows['prev']);
-        if(_nextarrow.hasClass('disabled') && _prevarrow.hasClass('disabled')){
+            _prevarrow = $(_arrows['prev']);
+        if (_nextarrow.hasClass('disabled') && _prevarrow.hasClass('disabled')) {
             _prevarrow.addClass('is-arrow-hidden');
             _nextarrow.addClass('is-arrow-hidden');
-            if(!_dots && _slidesToShow != 1){
-                $('.glider-track',e.target).css('min-width','100%');
+            if (!_dots && _slidesToShow != 1) {
+                $('.glider-track', e.target).css('min-width', '100%');
             }
-        }else{
+        } else {
             _prevarrow.removeClass('is-arrow-hidden');
             _nextarrow.removeClass('is-arrow-hidden');
-            if(!_dots){
-                $('.glider-track',e.target).css('min-width','unset');
+            if (!_dots) {
+                $('.glider-track', e.target).css('min-width', 'unset');
             }
-
         }
     }
-
-
 });
 
-
-//
-//product page
-$(document).on('glider-slide-visible','#js-pdtcover',function(e){
+//Product page
+$(document).on('glider-slide-visible', '#js-pdtcover', function (e) {
 
     var imgindex = $('.glider-slide.active').data('imgindex');
     refreshPdtThumbs(imgindex);
 });
 
 
-$(document).on('click','.js-thumb-pdt:not(.is-thumb-selected)',function(e){
+$(document).on('click', '.js-thumb-pdt:not(.is-thumb-selected)', function (e) {
     var _el = $(this);
     toggleStateThumbPdt(_el);
     var imgindex_thumb = _el.data('imgindex'),
-        position_to_scroll = $('[data-imgindex="'+  imgindex_thumb+'"]','#js-pdtcover').data('gslide');
-    if(position_to_scroll > -1){
-    slidersGlider['js-pdtcover'].scrollItem(position_to_scroll);
+        position_to_scroll = $('[data-imgindex="' + imgindex_thumb + '"]', '#js-pdtcover').data('gslide');
+    if (position_to_scroll > -1) {
+        slidersGlider['js-pdtcover'].scrollItem(position_to_scroll);
     }
 });
 
-// on scroll in main slider,
-function refreshPdtThumbs(imgindex){
-    if(typeof imgindex === "undefined"){
+//On scroll in main slider,
+function refreshPdtThumbs(imgindex) {
+    if (typeof imgindex === "undefined") {
         return;
     }
-    var thumb_to_update = $('.js-thumb-pdt[data-imgindex="'+ imgindex +'"]:not(.is-thumb-selected)');
+    var thumb_to_update = $('.js-thumb-pdt[data-imgindex="' + imgindex + '"]:not(.is-thumb-selected)');
 
     toggleStateThumbPdt(thumb_to_update);
 }
 
-//on click thumb, manage thumb selected for extra class
-function toggleStateThumbPdt(el){
-    if(el.length > 0){
+//On click thumb, manage thumb selected for extra class
+function toggleStateThumbPdt(el) {
+    if (el.length > 0) {
         $('.js-thumb-pdt').removeClass('is-thumb-selected');
         el.addClass('is-thumb-selected');
         scrollThumbNav(el);
     }
 }
 
-// if click on thumb, scroll main slider
-function scrollThumbNav(el){
-    if(!el.hasClass('visible') && slidersGlider.hasOwnProperty('js-pdtthumbs')){
+//If click on thumb, scroll main slider
+function scrollThumbNav(el) {
+    if (!el.hasClass('visible') && slidersGlider.hasOwnProperty('js-pdtthumbs')) {
         slidersGlider['js-pdtthumbs'].scrollItem(el.data('gslide'));
     }
 }
-
-// prestashop.on('responsive update', function(e){
-//     if(e.mobile) {
-//         $('.js-glider-mobile:not(".glider")').each(function (index) {
-//             initGlider($(this));
-//         });
-//     }
-// });
 
 $(document).on('glider-slide-visible', '.glider', function (event) {
     var imgs_to_anticipate = 2;
