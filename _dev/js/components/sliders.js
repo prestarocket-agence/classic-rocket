@@ -44,20 +44,21 @@ function initSlider(_el){
 }
 
 $(document).on('glider-refresh glider-loaded','.js-slider',function(e) {
-
+    if ($(e.target).data('glider')) return;
 
     var _options = $(e.target).data('glider'),
         _arrows = false,
         _dots = false,
         _slidesToShow = _options.slidesToShow;
-    // console.log($(e.target));
+
     if(typeof _options.arrows !== "undefined"){
         _arrows = _options.arrows;
     }
     if(typeof _options.dots !== "undefined"){
         _dots = _options.dots;
     }
-    //hide or display dots nav
+
+    //Hide or display dots nav
     if(_dots){
         var _dotslength = $('.glider-dot',_dots).length;
         if(_dotslength > 1){
