@@ -4,13 +4,46 @@ import './../lib/glider.min';
 
 
 let slidersGlider = {};
+let mutationObserver = null;
+
 $(document).ready(() => {
     initAllSliders();
     prestashop.on('updatedProduct updateFacets updateProductList showProductQuickView', function (event) {
         initAllSliders();
     });
-    document.addEventListener("DOMSubtreeModified", function (event) {
-        initAllSliders();
+    // Replace deprecated DOMSubtreeModified with MutationObserver
+    if (mutationObserver) {
+        mutationObserver.disconnect();
+    }
+
+    mutationObserver = new MutationObserver(function(mutations) {
+        let shouldInit = false;
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                // Check if any added nodes contain sliders
+                for (let node of mutation.addedNodes) {
+                    if (node.nodeType === Node.ELEMENT_NODE) {
+                        if ((node.classList && node.classList.contains('js-slider')) ||
+                            (node.querySelector && node.querySelector('.js-slider'))) {
+                            shouldInit = true;
+                            break;
+                        }
+                    }
+                }
+            }
+        });
+
+        if (shouldInit) {
+            // Use a small delay to avoid excessive calls
+            clearTimeout(window.sliderInitTimeout);
+            window.sliderInitTimeout = setTimeout(initAllSliders, 100);
+        }
+    });
+
+    // Start observing
+    mutationObserver.observe(document.body, {
+        childList: true,
+        subtree: true
     });
 });
 
